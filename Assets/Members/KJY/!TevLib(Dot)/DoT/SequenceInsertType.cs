@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Members.KJY.Scripts.DoT
+namespace Members.KJY._TevLib_Dot_.DoT
 {
     [Serializable]
     public enum SequenceInsertType

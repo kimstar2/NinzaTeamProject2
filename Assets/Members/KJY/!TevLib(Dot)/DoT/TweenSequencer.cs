@@ -1,15 +1,17 @@
-using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using Members.KJY._TevLib_Dot_.HashDataSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Members.KJY.Scripts.DoT
+namespace Members.KJY._TevLib_Dot_.DoT
 {
 
     public class TweenSequencer : MonoBehaviour
     {
+        [SerializeField] public bool debugMode = false;
         [field:SerializeField] public bool IsCanvas {get; private set;}
+        [field: SerializeField] public Transform targetTrm;
         [SerializeField] private List<TweenStep> sequenceStep;
         [Header("Tween Options")]
         [SerializeField] private UpdateType updateType;
@@ -17,6 +19,7 @@ namespace Members.KJY.Scripts.DoT
         
         [SerializeField] private bool targetLink;
         [SerializeField] private LinkBehaviour linkType;
+        [SerializeField] private AnimHashSO id;
         public UnityEvent onSeqComplete;
         
         public bool HasTween =>
@@ -32,16 +35,21 @@ namespace Members.KJY.Scripts.DoT
         
         private void Awake()
         {
+            CacheComponents();
+        }
+
+        private void CacheComponents()
+        {
             if (IsCanvas)
             {
                 _rectTrm = GetComponent<RectTransform>();
                 _canvasGroup = GetComponent<CanvasGroup>();
             }
             else
-                _transform = GetComponent<Transform>();
+                _transform = targetTrm;
         }
 
-        public bool Sequence()
+        public bool SequenceAndResult()
         {
             KillTween();
             
@@ -53,9 +61,8 @@ namespace Members.KJY.Scripts.DoT
             foreach (TweenStep step in sequenceStep)
             {
                 Tween myTween = MakeTween(step);
-                if (myTween == null)
-                    continue;
-                InsertTween(_activeSequence , myTween , step);
+                if (myTween == null) continue;
+                InsertTween(_activeSequence,myTween,step);
                 myTween.SetEase(step.EaseType);
                 hasTween = true;
             }
@@ -65,13 +72,49 @@ namespace Members.KJY.Scripts.DoT
                 KillTween();
                 return false;
             }
-
+            
+            if (id != null)
+                _activeSequence.SetId(id.HashValue);
+            
             _activeSequence
                 .SetLink(gameObject
                     , linkType)
                 .OnComplete(HandleCompleteTween);
-            
+
             return true;
+        }
+        
+        public void Sequence()
+        {
+            KillTween();
+            
+            _activeSequence = DOTween.Sequence();
+            _activeSequence.SetUpdate(updateType, independentTime);
+
+            bool hasTween = false;
+            
+            foreach (TweenStep step in sequenceStep)
+            {
+                Tween myTween = MakeTween(step);
+                if (myTween == null) continue;
+                InsertTween(_activeSequence,myTween,step);
+                myTween.SetEase(step.EaseType);
+                hasTween = true;
+            }
+
+            if (!hasTween)
+            {
+                KillTween();
+                return;
+            }
+
+            if (id != null)
+                _activeSequence.SetId(id.HashValue);
+            
+            _activeSequence
+                .SetLink(gameObject
+                    , linkType)
+                .OnComplete(HandleCompleteTween);
         }
 
         private void HandleCompleteTween()
@@ -118,26 +161,35 @@ namespace Members.KJY.Scripts.DoT
         {
             switch (step.ActionType)
             {
-                case SequenceActionType.DOAnchoredPosition:
+                case SequenceActionType.DoNone:
+                    return NoneTween(step);
+                case SequenceActionType.DoAnchoredPosition:
                     return CreateAnchoredPositionTween(step); 
-                case SequenceActionType.DOCanvasAlpha:
+                case SequenceActionType.DoCanvasAlpha:
                     return CreateCanvasAlpha(step);
-                case SequenceActionType.DOLocalScale:
+                case SequenceActionType.DoLocalScale:
                     return CreateLocalScaleTween(step);
-                case SequenceActionType.DOMove:
+                case SequenceActionType.DoMove:
                     return CreateMoveTween(step);
-                case SequenceActionType.DOLocalRotation:
+                case SequenceActionType.DoLocalRotation:
                     return CreateLocalRotationTween(step);
             }
 
             return null;
         }
 
+        private Tween NoneTween(TweenStep step)
+        {
+            GameObject forgetGo = new GameObject();
+            return forgetGo.transform.DOScale(Vector2.zero, step.Duration)
+                .OnComplete(() => Destroy(forgetGo));
+        }
+        
         private Tween CreateMoveTween(TweenStep step)
-            => (IsCanvas ? _rectTrm : transform).DOMove(step.TransformValue, step.Duration);
+            => (IsCanvas ? _rectTrm : _transform).DOMove(step.TransformValue, step.Duration);
 
         private Tween CreateLocalScaleTween(TweenStep step)
-            => (IsCanvas ? _rectTrm : transform).DOScale(step.TransformValue, step.Duration);
+            => (IsCanvas ? _rectTrm : _transform).DOScale(step.TransformValue, step.Duration);
 
         private Tween CreateCanvasAlpha(TweenStep step)
         {
@@ -160,11 +212,13 @@ namespace Members.KJY.Scripts.DoT
         }
 
         private Tween CreateLocalRotationTween(TweenStep step)
-            => (IsCanvas ? _rectTrm : transform).DOLocalRotate(step.TransformValue, step.Duration);
+            => (IsCanvas ? _rectTrm : _transform).DOLocalRotate(step.TransformValue, step.Duration);
         
         private void KillTween()
         {
-            transform.DOKill();
+            if (id != null)
+                DOTween.Kill(id.HashValue);
+            _activeSequence.Kill();
             _activeSequence = null;
         }
         #endregion
