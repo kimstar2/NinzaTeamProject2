@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using DG.Tweening;
-using Members.KJY._TevLib_Dot_.HashDataSystem;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
-namespace Members.KJY._TevLib_Dot_.DoT
+namespace _TevLib.Extension.DoT
 {
 
     public class TweenSequencer : MonoBehaviour
@@ -19,7 +19,7 @@ namespace Members.KJY._TevLib_Dot_.DoT
         
         [SerializeField] private bool targetLink;
         [SerializeField] private LinkBehaviour linkType;
-        [SerializeField] private AnimHashSO id;
+        [SerializeField] private Transform id;
         public UnityEvent onSeqComplete;
         
         public bool HasTween =>
@@ -30,6 +30,9 @@ namespace Members.KJY._TevLib_Dot_.DoT
         private Transform _transform;
         private RectTransform _rectTrm;
         private CanvasGroup _canvasGroup;
+        private Graphic _graphic;
+        private Image _image;
+        private SpriteRenderer _spriteRenderer;
         
         private Sequence _activeSequence;
         
@@ -44,9 +47,14 @@ namespace Members.KJY._TevLib_Dot_.DoT
             {
                 _rectTrm = targetTrm.GetComponent<RectTransform>();
                 _canvasGroup = targetTrm.GetComponent<CanvasGroup>();
+                _graphic = targetTrm.GetComponent<Graphic>();
+                _image = targetTrm.GetComponent<Image>();
             }
             else
+            {
                 _transform = targetTrm;
+                _spriteRenderer = targetTrm.GetComponent<SpriteRenderer>();
+            }
         }
 
         public bool SequenceAndResult()
@@ -68,7 +76,7 @@ namespace Members.KJY._TevLib_Dot_.DoT
             }
             
             if (id != null)
-                _activeSequence.SetId(id.HashValue);
+                _activeSequence.SetId(id.GetHashCode());
             
             _activeSequence
                 .SetLink(gameObject
@@ -78,6 +86,7 @@ namespace Members.KJY._TevLib_Dot_.DoT
             return true;
         }
         
+        [ContextMenu("Sequence")]
         public void Sequence()
         {
             KillTween();
@@ -97,7 +106,7 @@ namespace Members.KJY._TevLib_Dot_.DoT
             }
 
             if (id != null)
-                _activeSequence.SetId(id.HashValue);
+                _activeSequence.SetId(id.GetHashCode());
             
             _activeSequence
                 .SetLink(gameObject
@@ -118,11 +127,11 @@ namespace Members.KJY._TevLib_Dot_.DoT
             switch (step.InsertType)
             {
                 case SequenceInsertType.PrependInterval:
-                    sequence.PrependInterval(Mathf.Max(0f, step.Interval));
+                    sequence.PrependInterval(Mathf.Max(0f, step.Duration));
                     return true;
 
                 case SequenceInsertType.AppendInterval:
-                    sequence.AppendInterval(Mathf.Max(0f, step.Interval));
+                    sequence.AppendInterval(Mathf.Max(0f, step.Duration));
                     return true;
 
                 case SequenceInsertType.PrependCallback:
@@ -180,16 +189,28 @@ namespace Members.KJY._TevLib_Dot_.DoT
                     return CreateMoveTween(step);
                 case SequenceActionType.DoLocalRotation:
                     return CreateLocalRotationTween(step);
+                case SequenceActionType.DoColor:
+                    return CreateColorTween(step);
+                case SequenceActionType.DoFade:
+                    return CreateFadeTween(step);
+                case SequenceActionType.DoLocalMove:
+                    return CreateLocalMoveTween(step);
+                case SequenceActionType.DoRotate:
+                    return CreateRotationTween(step);
+                case SequenceActionType.DoSizeDelta:
+                    return CreateSizeDeltaTween(step);
+                case SequenceActionType.DoFillAmount:
+                    return CreateFillAmountTween(step);
             }
 
             return null;
         }
         
         private Tween CreateMoveTween(TweenStep step)
-            => (IsCanvas ? _rectTrm : _transform).DOMove(step.TransformValue, step.Duration);
+            => (IsCanvas ? _rectTrm : _transform).DOMove(step.GetTransformValue(), step.Duration);
 
         private Tween CreateLocalScaleTween(TweenStep step)
-            => (IsCanvas ? _rectTrm : _transform).DOScale(step.TransformValue, step.Duration);
+            => (IsCanvas ? _rectTrm : _transform).DOScale(step.GetTransformValue(), step.Duration);
 
         private Tween CreateCanvasAlpha(TweenStep step)
         {
@@ -208,19 +229,88 @@ namespace Members.KJY._TevLib_Dot_.DoT
                 Debug.Log("Canvas not found");
                 return null;
             }
-            return _rectTrm.DOAnchorPos(step.TransformValue, step.Duration);
+            return _rectTrm.DOAnchorPos(step.GetTransformValue(), step.Duration);
         }
 
         private Tween CreateLocalRotationTween(TweenStep step)
-            => (IsCanvas ? _rectTrm : _transform).DOLocalRotate(step.TransformValue, step.Duration);
+            => (IsCanvas ? _rectTrm : _transform).DOLocalRotate(step.GetTransformValue(), step.Duration,
+                step.UsingFastBeyond ?
+                RotateMode.FastBeyond360 :
+                RotateMode.Fast);
+
+        private Tween CreateLocalMoveTween(TweenStep step)
+            => (IsCanvas ? _rectTrm : _transform).DOLocalMove(step.GetTransformValue(), step.Duration);
+
+        private Tween CreateRotationTween(TweenStep step)
+            => (IsCanvas ? _rectTrm : _transform).DORotate(step.GetTransformValue(), step.Duration,
+                step.UsingFastBeyond ?
+                    RotateMode.FastBeyond360 :
+                    RotateMode.Fast);
+
+        private Tween CreateColorTween(TweenStep step)
+        {
+            if (IsCanvas)
+            {
+                if (_graphic == null)
+                    return LogMissingComponent<Graphic>(step.ActionType);
+
+                return _graphic.DOColor(step.ColorValue, step.Duration);
+            }
+
+            if (_spriteRenderer == null)
+                return LogMissingComponent<SpriteRenderer>(step.ActionType);
+
+            return _spriteRenderer.DOColor(step.ColorValue, step.Duration);
+        }
+
+        private Tween CreateFadeTween(TweenStep step)
+        {
+            float alpha = Mathf.Clamp01(step.FadeValue);
+
+            if (IsCanvas)
+            {
+                if (_graphic == null)
+                    return LogMissingComponent<Graphic>(step.ActionType);
+
+                return _graphic.DOFade(alpha, step.Duration);
+            }
+
+            if (_spriteRenderer == null)
+                return LogMissingComponent<SpriteRenderer>(step.ActionType);
+
+            return _spriteRenderer.DOFade(alpha, step.Duration);
+        }
+
+        private Tween CreateSizeDeltaTween(TweenStep step)
+        {
+            if (_rectTrm == null)
+                return LogMissingComponent<RectTransform>(step.ActionType);
+
+            return _rectTrm.DOSizeDelta(step.GetTransformValue(), step.Duration);
+        }
+
+        private Tween CreateFillAmountTween(TweenStep step)
+        {
+            if (_image == null)
+                return LogMissingComponent<Image>(step.ActionType);
+
+            return _image.DOFillAmount(Mathf.Clamp01(step.FadeValue), step.Duration);
+        }
+
+        private Tween LogMissingComponent<T>(SequenceActionType actionType) where T : Component
+        {
+            Debug.LogWarning($"{name}: {actionType} requires {typeof(T).Name} on {targetTrm.name}.", this);
+            return null;
+        }
         
         private void KillTween()
         {
             if (id != null)
-                DOTween.Kill(id.HashValue);
+                DOTween.Kill(id.GetHashCode());
             _activeSequence.Kill();
             _activeSequence = null;
         }
+        
         #endregion
     }
 }
