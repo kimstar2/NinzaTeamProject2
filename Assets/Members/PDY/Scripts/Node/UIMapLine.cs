@@ -5,62 +5,104 @@ namespace Members.PDY.Scripts.Node
     using UnityEngine;
     using UnityEngine.UI;
 
-    public class UIMapLine : MonoBehaviour
+    public class UIMapLine : MaskableGraphic
     {
-        // 선을 몇 개의 조각으로 쪼개서 부드럽게 만들지 결정 (숫자가 클수록 부드러움)
+        // --- [에러가 났던 변수들 선언부] ---
+        private Vector2 startPoint;
+        private Vector2 endPoint;
+        
+        // 선의 두께 (이 변수가 없어서 두 번째 사진에서 에러가 났습니다)
+        private float thickness = 5f; 
+        
+        // 곡선의 부드러움 정도
         private int segmentCount = 20; 
 
-        public void DrawLine(Vector2 startPos, Vector2 endPos, float thickness = 5f)
+        // 노드의 반지름 크기만큼 선을 잘라낼 오프셋 값 (이 변수가 없어서 첫 번째 사진에서 에러가 났습니다)
+        public float nodePadding = 40f; 
+
+        // 맵 진행 방향 저장용 변수
+        private MapDirection mapDirection = MapDirection.Horizontal; 
+        // ------------------------------------
+
+        public void DrawLine(Vector2 start, Vector2 end, MapDirection mapDir, float lineThickness = 5f)
         {
-            // 1. 기존 프리팹에 달려있던 직선 Image 비활성화 (곡선 조각들로 대체하기 위함)
-            Image baseImage = GetComponent<Image>();
-            if (baseImage != null) baseImage.enabled = false;
+            mapDirection = mapDir;
+            Vector2 dir = (end - start).normalized;
+            
+            // 노드의 반지름 크기만큼 바깥으로 밀어내어 선 긋기 시작
+            startPoint = start + (dir * nodePadding);
+            endPoint = end - (dir * nodePadding);
+            
+            thickness = lineThickness;
+            SetVerticesDirty(); 
+        }
 
-            // 2. 곡선의 제어점(Control Points) 설정
-            // X축 방향으로 거리가 멀수록 선이 가로로 먼저 뻗어나가도록 '장력'을 줍니다.
-            float distanceX = Mathf.Abs(endPos.x - startPos.x);
-            Vector2 p0 = startPos;
-            Vector2 p3 = endPos;
-            Vector2 p1 = p0 + new Vector2(distanceX * 0.5f, 0); // 시작점에서 가로로 뻗는 점
-            Vector2 p2 = p3 - new Vector2(distanceX * 0.5f, 0); // 끝점에서 가로로 뻗는 점
+        protected override void OnPopulateMesh(VertexHelper vh)
+        {
+            vh.Clear(); // 이전 메쉬 초기화
 
-            Vector2 previousPoint = p0;
+            if (startPoint == endPoint) return;
 
-            // 3. 곡선을 여러 개의 짧은 직선 조각(Segment)으로 쪼개서 동적으로 생성합니다.
+            Vector2 p0 = startPoint;
+            Vector2 p3 = endPoint;
+            Vector2 p1, p2;
+
+            // 맵 방향에 따라 곡선이 뻗어나가는 축(장력)을 변경합니다.
+            if (mapDirection == MapDirection.Horizontal)
+            {
+                float deltaX = (p3.x - p0.x) * 0.5f;
+                p1 = p0 + new Vector2(deltaX, 0);
+                p2 = p3 - new Vector2(deltaX, 0);
+            }
+            else // Vertical (세로 진행)
+            {
+                float deltaY = (p3.y - p0.y) * 0.5f;
+                p1 = p0 + new Vector2(0, deltaY); 
+                p2 = p3 - new Vector2(0, deltaY);
+            }
+
+            Vector2 prevPoint = p0;
+
             for (int i = 1; i <= segmentCount; i++)
             {
                 float t = i / (float)segmentCount;
-                Vector2 currentPoint = CalculateCubicBezierPoint(t, p0, p1, p2, p3);
+                Vector2 currPoint = CalculateCubicBezierPoint(t, p0, p1, p2, p3);
 
-                CreateStraightSegment(previousPoint, currentPoint, thickness);
-                previousPoint = currentPoint;
+                DrawSegment(vh, prevPoint, currPoint);
+                prevPoint = currPoint;
             }
         }
 
-        // 짧은 선 조각을 생성하는 함수
-        private void CreateStraightSegment(Vector2 start, Vector2 end, float thickness)
+        private void DrawSegment(VertexHelper vh, Vector2 start, Vector2 end)
         {
-            GameObject segment = new GameObject("CurveSegment");
-            segment.transform.SetParent(transform, false);
+            Vector2 dir = (end - start).normalized;
             
-            Image img = segment.AddComponent<Image>();
-            img.color = new Color(1f, 1f, 1f, 0.6f); // 곡선의 투명도를 살짝 낮춰 자연스럽게
+            // 선의 두께를 만들기 위한 수직 벡터 계산
+            Vector2 normal = new Vector2(-dir.y, dir.x) * (thickness / 2f); 
 
-            RectTransform rect = segment.GetComponent<RectTransform>();
-            rect.anchorMin = new Vector2(0.5f, 0.5f);
-            rect.anchorMax = new Vector2(0.5f, 0.5f);
-            rect.pivot = new Vector2(0.5f, 0.5f);
+            int startIndex = vh.currentVertCount;
 
-            Vector2 dir = end - start;
-            float distance = dir.magnitude;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            UIVertex vertex = UIVertex.simpleVert;
+            vertex.color = color; // Inspector에서 설정한 Color 적용
 
-            rect.sizeDelta = new Vector2(distance, thickness);
-            rect.anchoredPosition = start + (dir / 2f);
-            rect.localRotation = Quaternion.Euler(0, 0, angle);
+            // 사각형을 이루는 4개의 꼭짓점(Vertex) 세팅
+            vertex.position = start - normal;
+            vh.AddVert(vertex);
+
+            vertex.position = start + normal;
+            vh.AddVert(vertex);
+
+            vertex.position = end + normal;
+            vh.AddVert(vertex);
+
+            vertex.position = end - normal;
+            vh.AddVert(vertex);
+
+            // 4개의 꼭짓점을 이어 2개의 삼각형(Triangle)으로 만듦
+            vh.AddTriangle(startIndex, startIndex + 1, startIndex + 2);
+            vh.AddTriangle(startIndex, startIndex + 2, startIndex + 3);
         }
 
-        // 3차 베지어 곡선 수학 공식
         private Vector2 CalculateCubicBezierPoint(float t, Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3)
         {
             float u = 1 - t;
