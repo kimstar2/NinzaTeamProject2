@@ -42,8 +42,8 @@ namespace Members.KJY._TevLib_Dot_.DoT
         {
             if (IsCanvas)
             {
-                _rectTrm = GetComponent<RectTransform>();
-                _canvasGroup = GetComponent<CanvasGroup>();
+                _rectTrm = targetTrm.GetComponent<RectTransform>();
+                _canvasGroup = targetTrm.GetComponent<CanvasGroup>();
             }
             else
                 _transform = targetTrm;
@@ -56,18 +56,12 @@ namespace Members.KJY._TevLib_Dot_.DoT
             _activeSequence = DOTween.Sequence();
             _activeSequence.SetUpdate(updateType, independentTime);
 
-            bool hasTween = false;
-            
-            foreach (TweenStep step in sequenceStep)
-            {
-                Tween myTween = MakeTween(step);
-                if (myTween == null) continue;
-                InsertTween(_activeSequence,myTween,step);
-                myTween.SetEase(step.EaseType);
-                hasTween = true;
-            }
+            bool hasStep = false;
 
-            if (!hasTween)
+            foreach (TweenStep step in sequenceStep)
+                hasStep |= AddStep(_activeSequence, step);
+
+            if (!hasStep)
             {
                 KillTween();
                 return false;
@@ -91,18 +85,12 @@ namespace Members.KJY._TevLib_Dot_.DoT
             _activeSequence = DOTween.Sequence();
             _activeSequence.SetUpdate(updateType, independentTime);
 
-            bool hasTween = false;
-            
-            foreach (TweenStep step in sequenceStep)
-            {
-                Tween myTween = MakeTween(step);
-                if (myTween == null) continue;
-                InsertTween(_activeSequence,myTween,step);
-                myTween.SetEase(step.EaseType);
-                hasTween = true;
-            }
+            bool hasStep = false;
 
-            if (!hasTween)
+            foreach (TweenStep step in sequenceStep)
+                hasStep |= AddStep(_activeSequence, step);
+
+            if (!hasStep)
             {
                 KillTween();
                 return;
@@ -125,35 +113,56 @@ namespace Members.KJY._TevLib_Dot_.DoT
 
         #region TweenHelper
         
-        private void InsertTween(Sequence seq ,Tween tween ,TweenStep step)
+        private bool AddStep(Sequence sequence, TweenStep step)
         {
             switch (step.InsertType)
             {
-                case SequenceInsertType.Prepend:
-                    seq.Prepend(tween);
-                    break;
-                case SequenceInsertType.PrependCallback:
-                    seq.PrependCallback(() => step.Callback?.Invoke());
-                    break;
                 case SequenceInsertType.PrependInterval:
-                    seq.PrependInterval(step.Interval);
-                    break;
-                case SequenceInsertType.Append:
-                    seq.Append(tween);
-                    break;
-                case SequenceInsertType.AppendCallback:
-                    seq.AppendCallback(() => step.Callback?.Invoke());
-                    break;
+                    sequence.PrependInterval(Mathf.Max(0f, step.Interval));
+                    return true;
+
                 case SequenceInsertType.AppendInterval:
-                    seq.AppendInterval(step.Interval);
-                    break;
-                case SequenceInsertType.Join:
-                    seq.Join(tween);
-                    break;
+                    sequence.AppendInterval(Mathf.Max(0f, step.Interval));
+                    return true;
+
+                case SequenceInsertType.PrependCallback:
+                    sequence.PrependCallback(() => step.Callback?.Invoke());
+                    return true;
+
+                case SequenceInsertType.AppendCallback:
+                    sequence.AppendCallback(() => step.Callback?.Invoke());
+                    return true;
+
                 case SequenceInsertType.JoinCallback:
-                    seq.JoinCallback(() => step.Callback?.Invoke());
-                    break;
+                    sequence.JoinCallback(() => step.Callback?.Invoke());
+                    return true;
             }
+
+            Tween tween = MakeTween(step);
+            if (tween == null)
+                return false;
+
+            tween.SetEase(step.EaseType);
+
+            switch (step.InsertType)
+            {
+                case SequenceInsertType.Prepend:
+                    sequence.Prepend(tween);
+                    break;
+
+                case SequenceInsertType.Append:
+                    sequence.Append(tween);
+                    break;
+
+                case SequenceInsertType.Join:
+                    sequence.Join(tween);
+                    break;
+
+                default:
+                    return false;
+            }
+
+            return true;
         }
 
         
@@ -161,8 +170,6 @@ namespace Members.KJY._TevLib_Dot_.DoT
         {
             switch (step.ActionType)
             {
-                case SequenceActionType.DoNone:
-                    return NoneTween(step);
                 case SequenceActionType.DoAnchoredPosition:
                     return CreateAnchoredPositionTween(step); 
                 case SequenceActionType.DoCanvasAlpha:
@@ -176,13 +183,6 @@ namespace Members.KJY._TevLib_Dot_.DoT
             }
 
             return null;
-        }
-
-        private Tween NoneTween(TweenStep step)
-        {
-            GameObject forgetGo = new GameObject();
-            return forgetGo.transform.DOScale(Vector2.zero, step.Duration)
-                .OnComplete(() => Destroy(forgetGo));
         }
         
         private Tween CreateMoveTween(TweenStep step)

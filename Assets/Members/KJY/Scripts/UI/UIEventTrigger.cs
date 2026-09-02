@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace Members.KJY.Scripts
+namespace Members.KJY.Scripts.UI
 {
     public class UIEventTrigger : MonoBehaviour , IPointerEnterHandler , IPointerExitHandler
     {
