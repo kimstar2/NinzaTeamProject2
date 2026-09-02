@@ -1,93 +1,106 @@
-﻿using UnityEngine;
+using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Members.PDY.Scripts.Node
 {
-    using System;
-    using UnityEngine;
-    using UnityEngine.UI;
-
     public class UIMapNode : MonoBehaviour
     {
-        public Node nodeData;
-        public Action<UIMapNode> OnClicked; 
-
         [Header("UI Components")]
         [SerializeField] private Image _nodeImage;
         [SerializeField] private Button _nodeButton;
 
         [Header("Node Type Colors")]
-        public Color colorEnemy = Color.white;
-        public Color colorElite = Color.red;
-        public Color colorRest = Color.cyan;
-        public Color colorMerchant = Color.yellow;
-        public Color colorTreasure = Color.magenta;
-        public Color colorEvent = Color.blue;
-        public Color colorBoss = new Color(0.8f, 0f, 0f); 
-        public Color colorStart = Color.green;
+        [SerializeField] private Color colorEnemy = Color.white;
+        [SerializeField] private Color colorElite = Color.red;
+        [SerializeField] private Color colorRest = Color.cyan;
+        [SerializeField] private Color colorMerchant = Color.yellow;
+        [SerializeField] private Color colorTreasure = Color.magenta;
+        [SerializeField] private Color colorEvent = Color.blue;
+        [SerializeField] private Color colorBoss = new(0.8f, 0f, 0f);
+        [SerializeField] private Color colorStart = Color.green;
+
+        public Node NodeData { get; private set; }
+
+        public event Action<UIMapNode> OnClicked;
 
         public void Initialize(Node data)
         {
-            nodeData = data;
-            _nodeButton.onClick.AddListener(() => OnClicked?.Invoke(this));
-            
-            SetTypeColor(); 
-        }
+            NodeData = data ?? throw new ArgumentNullException(nameof(data));
 
-        private void SetTypeColor()
-        {
-            // 1. 설정된 색상을 가져옵니다.
-            switch (nodeData.type)
-            {
-                case NodeType.Enemy: _nodeImage.color = colorEnemy; break;
-                case NodeType.Elite: _nodeImage.color = colorElite; break;
-                case NodeType.Rest: _nodeImage.color = colorRest; break;
-                case NodeType.Merchant: _nodeImage.color = colorMerchant; break;
-                case NodeType.Treasure: _nodeImage.color = colorTreasure; break;
-                case NodeType.Event: _nodeImage.color = colorEvent; break;
-                case NodeType.Boss: _nodeImage.color = colorBoss; break;
-                case NodeType.Start: _nodeImage.color = colorStart; break;
-            }
+            _nodeButton.onClick.RemoveListener(HandleButtonClicked);
+            _nodeButton.onClick.AddListener(HandleButtonClicked);
 
-            // 2. [핵심] 인스펙터에서 투명도를 낮게 설정했더라도 무조건 완전 불투명하게 만듭니다.
-            Color c = _nodeImage.color;
-            c.a = 1f; 
-            _nodeImage.color = c;
+            SetTypeColor();
         }
 
         public void SetState(NodeState state)
         {
-            SetTypeColor(); 
+            SetTypeColor();
             Color baseColor = _nodeImage.color;
 
             switch (state)
             {
                 case NodeState.Unreachable:
-                    // 갈 수 없는 곳: 검은색(Color.black)과 60% 섞어서 탁하고 어둡게 만듭니다. (알파는 무조건 1f)
-                    _nodeImage.color = Color.Lerp(baseColor, Color.black, 0.6f);
-                    _nodeImage.color = new Color(_nodeImage.color.r, _nodeImage.color.g, _nodeImage.color.b, 1f);
+                    SetColor(Color.Lerp(baseColor, Color.black, 0.6f));
                     _nodeButton.interactable = false;
                     break;
-                    
+
                 case NodeState.Selectable:
-                    // 선택 가능: 원래의 밝고 쨍한 색상 그대로
-                    _nodeImage.color = new Color(baseColor.r, baseColor.g, baseColor.b, 1f);
+                    SetColor(baseColor);
                     _nodeButton.interactable = true;
                     break;
-                    
+
                 case NodeState.Current:
-                    // 현재 위치: 하얀색(Color.white)과 살짝 섞어서 더 밝게 빛나게 강조
-                    _nodeImage.color = Color.Lerp(baseColor, Color.white, 0.3f);
-                    _nodeImage.color = new Color(_nodeImage.color.r, _nodeImage.color.g, _nodeImage.color.b, 1f);
+                    SetColor(Color.Lerp(baseColor, Color.white, 0.3f));
                     _nodeButton.interactable = false;
                     break;
-                    
+
                 case NodeState.Visited:
-                    // 방문 완료: 검은색과 30%만 섞어서 갈 수 없는 곳보단 살짝 밝게
-                    _nodeImage.color = Color.Lerp(baseColor, Color.black, 0.3f);
-                    _nodeImage.color = new Color(_nodeImage.color.r, _nodeImage.color.g, _nodeImage.color.b, 1f);
+                    SetColor(Color.Lerp(baseColor, Color.black, 0.3f));
                     _nodeButton.interactable = false;
                     break;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(state), state, null);
             }
+        }
+
+        private void OnDestroy()
+        {
+            if (_nodeButton != null)
+                _nodeButton.onClick.RemoveListener(HandleButtonClicked);
+
+            OnClicked = null;
+        }
+
+        private void HandleButtonClicked()
+        {
+            OnClicked?.Invoke(this);
+        }
+
+        private void SetTypeColor()
+        {
+            Color typeColor = NodeData.type switch
+            {
+                NodeType.Enemy => colorEnemy,
+                NodeType.Elite => colorElite,
+                NodeType.Rest => colorRest,
+                NodeType.Merchant => colorMerchant,
+                NodeType.Treasure => colorTreasure,
+                NodeType.Event => colorEvent,
+                NodeType.Boss => colorBoss,
+                NodeType.Start => colorStart,
+                _ => Color.white
+            };
+
+            SetColor(typeColor);
+        }
+
+        private void SetColor(Color color)
+        {
+            color.a = 1f;
+            _nodeImage.color = color;
         }
     }
 }

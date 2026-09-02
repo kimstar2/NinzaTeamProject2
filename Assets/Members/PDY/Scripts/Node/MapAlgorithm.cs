@@ -1,73 +1,144 @@
-﻿namespace Members.PDY.Scripts.Node
-{
-    using System.Collections.Generic;
-    using UnityEngine;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 
+namespace Members.PDY.Scripts.Node
+{
     public static class MapAlgorithm
     {
-        // [수정됨] jitterX, jitterY 매개변수 추가
-        public static List<List<Node>> GenerateMapData(int columns, int rows, int startingPaths, float spacingX, float spacingY, MapDirection direction, float jitterX, float jitterY)
+        private const int MaxStartingRowSelectionAttempts = 100;
+
+        public static List<List<Node>> GenerateMapData(
+            int columns,
+            int rows,
+            int startingPaths,
+            float spacingX,
+            float spacingY,
+            MapDirection direction,
+            float jitterX,
+            float jitterY)
         {
-            List<List<Node>> map = new List<List<Node>>();
+            ValidateDimensions(columns, rows);
 
-            float offsetX = (direction == MapDirection.Horizontal) ? ((columns - 1) * spacingX) / 2f : ((rows - 1) * spacingX) / 2f;
-            float offsetY = (direction == MapDirection.Horizontal) ? ((rows - 1) * spacingY) / 2f : ((columns - 1) * spacingY) / 2f;
+            List<List<Node>> map = CreateGrid(
+                columns,
+                rows,
+                spacingX,
+                spacingY,
+                direction,
+                jitterX,
+                jitterY);
 
-            for (int c = 0; c < columns; c++)
+            List<int> currentRows = ConnectStartNode(map, rows, startingPaths);
+            currentRows = ConnectIntermediateColumns(map, columns, rows, currentRows);
+            ConnectBossNode(map, columns, rows, currentRows);
+
+            return map;
+        }
+
+        private static void ValidateDimensions(int columns, int rows)
+        {
+            if (columns < 2)
+                throw new ArgumentOutOfRangeException(nameof(columns), columns, "Map requires at least 2 columns.");
+
+            if (rows < 1)
+                throw new ArgumentOutOfRangeException(nameof(rows), rows, "Map requires at least 1 row.");
+        }
+
+        private static List<List<Node>> CreateGrid(
+            int columns,
+            int rows,
+            float spacingX,
+            float spacingY,
+            MapDirection direction,
+            float jitterX,
+            float jitterY)
+        {
+            List<List<Node>> map = new(columns);
+
+            float offsetX = direction == MapDirection.Horizontal
+                ? (columns - 1) * spacingX / 2f
+                : (rows - 1) * spacingX / 2f;
+            float offsetY = direction == MapDirection.Horizontal
+                ? (rows - 1) * spacingY / 2f
+                : (columns - 1) * spacingY / 2f;
+
+            for (int column = 0; column < columns; column++)
             {
-                var columnList = new List<Node>();
-                for (int r = 0; r < rows; r++)
+                List<Node> columnNodes = new(rows);
+
+                for (int row = 0; row < rows; row++)
                 {
-                    Node node = new Node(c, r);
-                    node.type = AssignNodeType(c, columns);
-
-                    // [추가됨] 시작(0열)과 보스(마지막 열)는 흔들리지 않게 0으로 고정
-                    float currentJitterX = (c == 0 || c == columns - 1) ? 0f : Random.Range(-jitterX, jitterX);
-                    float currentJitterY = (c == 0 || c == columns - 1) ? 0f : Random.Range(-jitterY, jitterY);
-
-                    if (direction == MapDirection.Horizontal)
+                    Node node = new(column, row)
                     {
-                        // 기본 좌표에 지터값을 더해줍니다.
-                        float x = (c * spacingX) - offsetX + currentJitterX;
-                        float y = (r * spacingY) - offsetY + currentJitterY;
-                        
-                        if (c == 0 || c == columns - 1) 
-                            y = ((rows / 2f) * spacingY) - offsetY;
-                            
-                        node.position = new Vector2(x, y);
-                    }
-                    else 
-                    {
-                        float x = (r * spacingX) - offsetX + currentJitterX;
-                        float y = (c * spacingY) - offsetY + currentJitterY;
-                        
-                        if (c == 0 || c == columns - 1) 
-                            x = ((rows / 2f) * spacingX) - offsetX;
-                            
-                        node.position = new Vector2(x, y);
-                    }
-                    
-                    columnList.Add(node);
+                        type = AssignNodeType(column, columns),
+                        position = CalculateNodePosition(
+                            column,
+                            row,
+                            columns,
+                            rows,
+                            spacingX,
+                            spacingY,
+                            offsetX,
+                            offsetY,
+                            direction,
+                            jitterX,
+                            jitterY)
+                    };
+
+                    columnNodes.Add(node);
                 }
-                map.Add(columnList);
+
+                map.Add(columnNodes);
             }
 
+            return map;
+        }
+
+        private static Vector2 CalculateNodePosition(
+            int column,
+            int row,
+            int columns,
+            int rows,
+            float spacingX,
+            float spacingY,
+            float offsetX,
+            float offsetY,
+            MapDirection direction,
+            float jitterX,
+            float jitterY)
+        {
+            bool isEndpointColumn = column == 0 || column == columns - 1;
+            float currentJitterX = isEndpointColumn ? 0f : UnityEngine.Random.Range(-jitterX, jitterX);
+            float currentJitterY = isEndpointColumn ? 0f : UnityEngine.Random.Range(-jitterY, jitterY);
+
+            if (direction == MapDirection.Horizontal)
+            {
+                float x = column * spacingX - offsetX + currentJitterX;
+                float y = row * spacingY - offsetY + currentJitterY;
+
+                if (isEndpointColumn)
+                    y = rows / 2f * spacingY - offsetY;
+
+                return new Vector2(x, y);
+            }
+
+            float verticalX = row * spacingX - offsetX + currentJitterX;
+            float verticalY = column * spacingY - offsetY + currentJitterY;
+
+            if (isEndpointColumn)
+                verticalX = rows / 2f * spacingX - offsetX;
+
+            return new Vector2(verticalX, verticalY);
+        }
+
+        private static List<int> ConnectStartNode(List<List<Node>> map, int rows, int startingPaths)
+        {
             Node startNode = map[0][rows / 2];
             startNode.isUsed = true;
             startNode.type = NodeType.Start;
 
-            List<int> currentRows = new List<int>();
-            int actualPaths = Mathf.Min(startingPaths, rows);
-            int safeCount = 0;
-
-            while (currentRows.Count < actualPaths && safeCount < 100)
-            {
-                int randomRow = Random.Range(0, rows);
-                if (!currentRows.Contains(randomRow)) currentRows.Add(randomRow);
-                safeCount++;
-            }
-            currentRows.Sort(); 
-
+            List<int> currentRows = SelectStartingRows(rows, startingPaths);
             foreach (int row in currentRows)
             {
                 Node nextNode = map[1][row];
@@ -75,34 +146,73 @@
                 startNode.nextNodes.Add(nextNode);
             }
 
-            for (int c = 1; c < columns - 2; c++) 
+            return currentRows;
+        }
+
+        private static List<int> SelectStartingRows(int rows, int startingPaths)
+        {
+            int actualPaths = Mathf.Min(startingPaths, rows);
+            int attempts = 0;
+            List<int> selectedRows = new();
+
+            while (selectedRows.Count < actualPaths && attempts < MaxStartingRowSelectionAttempts)
             {
-                List<int> nextRows = new List<int>();
-                for (int i = 0; i < currentRows.Count; i++)
+                int randomRow = UnityEngine.Random.Range(0, rows);
+                if (!selectedRows.Contains(randomRow))
+                    selectedRows.Add(randomRow);
+
+                attempts++;
+            }
+
+            selectedRows.Sort();
+            return selectedRows;
+        }
+
+        private static List<int> ConnectIntermediateColumns(
+            List<List<Node>> map,
+            int columns,
+            int rows,
+            List<int> currentRows)
+        {
+            for (int column = 1; column < columns - 2; column++)
+            {
+                List<int> nextRows = new(currentRows.Count);
+
+                for (int index = 0; index < currentRows.Count; index++)
                 {
-                    int currentRow = currentRows[i];
-                    int minRow = (i == 0) ? 0 : nextRows[i - 1]; 
-                    int maxRow = (i == currentRows.Count - 1) ? rows - 1 : currentRows[i + 1] + 1;
+                    int currentRow = currentRows[index];
+                    int minRow = index == 0 ? 0 : nextRows[index - 1];
+                    int maxRow = index == currentRows.Count - 1 ? rows - 1 : currentRows[index + 1] + 1;
 
                     int clampMin = Mathf.Clamp(Mathf.Max(minRow, currentRow - 1), 0, rows - 1);
                     int clampMax = Mathf.Clamp(Mathf.Min(maxRow, currentRow + 1), 0, rows - 1);
-                    if (clampMin > clampMax) clampMin = clampMax; 
+                    if (clampMin > clampMax)
+                        clampMin = clampMax;
 
-                    int nextRow = Random.Range(clampMin, clampMax + 1);
+                    int nextRow = UnityEngine.Random.Range(clampMin, clampMax + 1);
                     nextRows.Add(nextRow);
 
-                    Node currentNode = map[c][currentRow];
-                    Node nextNode = map[c + 1][nextRow];
-                    
+                    Node currentNode = map[column][currentRow];
+                    Node nextNode = map[column + 1][nextRow];
                     currentNode.isUsed = true;
                     nextNode.isUsed = true;
 
                     if (!currentNode.nextNodes.Contains(nextNode))
                         currentNode.nextNodes.Add(nextNode);
                 }
+
                 currentRows = nextRows;
             }
 
+            return currentRows;
+        }
+
+        private static void ConnectBossNode(
+            List<List<Node>> map,
+            int columns,
+            int rows,
+            IEnumerable<int> currentRows)
+        {
             Node bossNode = map[columns - 1][rows / 2];
             bossNode.isUsed = true;
             bossNode.type = NodeType.Boss;
@@ -113,31 +223,34 @@
                 if (!currentNode.nextNodes.Contains(bossNode))
                     currentNode.nextNodes.Add(bossNode);
             }
-
-            return map;
         }
 
         private static NodeType AssignNodeType(int column, int totalColumns)
         {
-            if (column == 0) return NodeType.Start;
-            if (column == totalColumns - 1) return NodeType.Boss;
-            if (column == totalColumns - 2) return NodeType.Rest;
-            // [핵심 수정] 맵의 1/3, 2/3 지점 계산
-            int oneThirdPoint = totalColumns / 3;
-            int twoThirdsPoint = (totalColumns * 2) / 3;
-
-            // 해당 지점은 무조건 휴식(Rest) 노드로 고정
-            if (column == oneThirdPoint || column == twoThirdsPoint) 
+            if (column == 0)
+                return NodeType.Start;
+            if (column == totalColumns - 1)
+                return NodeType.Boss;
+            if (column == totalColumns - 2)
                 return NodeType.Rest;
-            
-            if (column == 1) return NodeType.Enemy; 
-        
-            // 나머지 열들은 확률에 따라 랜덤 배정 (휴식 노드 제외 후 확률 재조정)
-            float r = Random.value;
-            if (r < 0.20f) return NodeType.Merchant; // 20%
-            if (r < 0.40f) return NodeType.Elite;    // 20%
-            if (r < 0.70f) return NodeType.Event;    // 30%
-            return NodeType.Enemy;                   // 30%
+
+            int oneThirdPoint = totalColumns / 3;
+            int twoThirdsPoint = totalColumns * 2 / 3;
+            if (column == oneThirdPoint || column == twoThirdsPoint)
+                return NodeType.Rest;
+
+            if (column == 1)
+                return NodeType.Enemy;
+
+            float randomValue = UnityEngine.Random.value;
+            if (randomValue < 0.20f)
+                return NodeType.Merchant;
+            if (randomValue < 0.40f)
+                return NodeType.Elite;
+            if (randomValue < 0.70f)
+                return NodeType.Event;
+
+            return NodeType.Enemy;
         }
     }
 }
