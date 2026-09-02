@@ -1,36 +1,48 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using DevLib.ModuleSystem;
 using Members.PSW.Code.Test;
 using UnityEngine;
 
 namespace Members.PSW.Code.DiceReroll_Lock
 {
-    public class DiceController : ModuleOwner
+    public class DiceController : MonoBehaviour
     {
         [SerializeField] private bool canCancelLock = false;
         
         private List<IReroll> _diceList;
 
-        private TestDiceUIConnector _uiConnector;
+        [SerializeField]private TestDiceUIConnector uiConnector;
 
-        protected override void Awake()
+        private void Awake()
         {
-            base.Awake();   
             _diceList = GetComponentsInChildren<IReroll>().ToList();
         }
 
-        protected override void AfterInitializeModules()
+        private void OnEnable()
         {
-            base.AfterInitializeModules();
-            _uiConnector = GetModule<TestDiceUIConnector>();
-            _uiConnector.OnRerollClick += HandleReroll;
-            _uiConnector.OnDiceLock += LockDice;
+            EventSubscribe();
+        }
+
+        private void OnDestroy()
+        {
+            EventDisSubscribe();
+        }
+
+        private void EventSubscribe()
+        {
+            uiConnector.OnRerollClick += HandleReroll;
+            uiConnector.OnDiceLock += LockDice;
+        }
+
+        private void EventDisSubscribe()
+        {
+            uiConnector.OnRerollClick -= HandleReroll;
+            uiConnector.OnDiceLock -= LockDice;
         }
 
         private void HandleReroll()
         {
-            foreach (IReroll dice in _diceList)     
+            foreach (IReroll dice in _diceList)
             {
                 if (dice.IsLocked)
                 {
