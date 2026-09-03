@@ -8,13 +8,6 @@ namespace Members.KJY.Scripts.Dice
 {
     public class DiceBattleManager : ModuleOwner
     {
-        private EventChannelSO _eventChannelSO;
         private DiceRerollRaiser _raiser;
-        
-        protected override void InitializeModules()
-        {
-            base.InitializeModules();
-            _eventChannelSO = GetModule<GetEventChannel>().EventChannel;
-        }
     }
 }

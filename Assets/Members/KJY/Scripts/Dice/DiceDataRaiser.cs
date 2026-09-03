@@ -5,18 +5,16 @@ using Members.KJY.Scripts.Module.Util;
 
 namespace Members.KJY.Scripts.Dice
 {
-    public class DiceDataRaiser : MonoModule
+    public class DiceDataRaiser : MonoEvent
     {
-        private EventChannelSO _eventChannel;
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
-            _eventChannel = Owner.GetModule<GetEventChannel>().EventChannel;
         }
 
         public void RaiseDiceData()
         {
-            _eventChannel.RaiseEvent(new OnDiceDataBind(new DiceDataSO()));
+            EventChannel.RaiseEvent(new OnDiceDataBind(new DiceDataSO()));
         }
     }
 }
