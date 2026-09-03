@@ -21,30 +21,29 @@ namespace Members.PSW.Code.DiceReroll_Lock
         {
             _diceList = GetComponentsInChildren<IReroll>().ToList();
         }
-
+        
         private void OnEnable()
         {
             EventSubscribe();
         }
-
+        
         private void OnDisable()
         {
             EventDisSubscribe();
         }
-
+        
         private void EventSubscribe()
         {
             uiChannel.AddListener<RerollEvent>(HandleReroll);
             uiChannel.AddListener<LockEvent>(LockDice);
         }
-
+        
         private void EventDisSubscribe()
         {
             uiChannel.RemoveListener<RerollEvent>(HandleReroll);
             uiChannel.RemoveListener<LockEvent>(LockDice);
-
         }
-
+        
         private void HandleReroll(RerollEvent evt)
         {
             foreach (IReroll dice in _diceList)
@@ -59,7 +58,7 @@ namespace Members.PSW.Code.DiceReroll_Lock
                 dice.Reroll();
             }
         }
-
+        
         private void LockDice(LockEvent evt)
         {
             if (evt.DiceNum < 0 || evt.DiceNum >= _diceList.Count)
@@ -67,7 +66,7 @@ namespace Members.PSW.Code.DiceReroll_Lock
                 Debug.Log("해당 index에 값이 존재하지 않습니다.");
                 return;
             }
-
+        
             if (_diceList[evt.DiceNum].IsLocked && !canCancelLock)
             {
                 Debug.Log($"{evt.DiceNum}번 주사위는 이미 잠겨있습니다. canCancelLock 값을 통해 잠금 해제 가능 여부를 조절할 수 있습니다.");

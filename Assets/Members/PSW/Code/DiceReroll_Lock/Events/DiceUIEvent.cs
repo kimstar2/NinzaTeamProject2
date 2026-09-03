@@ -21,4 +21,14 @@ namespace Members.PSW.Code.DiceReroll_Lock.Events
             DiceNum = value;
         }
     }
+
+    public class PEvent : GameEvent
+    {
+        public string YourName { get; private set; }
+
+        public PEvent(string s)
+        {
+            YourName = s;
+        }
+    }
 }
