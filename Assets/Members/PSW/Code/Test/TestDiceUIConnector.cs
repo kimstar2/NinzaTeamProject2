@@ -11,9 +11,6 @@ namespace Members.PSW.Code.Test
     {
         [SerializeField] private EventChannelSO evt;
         
-        public event Action OnRerollClick;
-        public event Action<int> OnDiceLock;
-
         public void RerollButton()
         {
             Debug.Log("리롤 시도");
