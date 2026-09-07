@@ -501,7 +501,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1972161500}
-  - {fileID: 928090145}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &401962396
@@ -516,6 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ce0164ff324704b948aa6569fb8643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.DiceReroll_Lock.DiceController
+  uiChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   canCancelLock: 1
   uiConnector: {fileID: 567637417}
 --- !u!1 &567637412
@@ -638,6 +638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66555c316e8c441cbfa741b25e8f4d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Test.TestDiceUIConnector
+  evt: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!1 &592335302
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +690,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a948b71e5c768a40a3afe4edb803810, type: 2}
   - {fileID: 11400000, guid: 5aac325e414df8e4f9bd23700af22e4c, type: 2}
   - {fileID: 11400000, guid: 6ed179d198a96af4280ba5db9afb7b00, type: 2}
+  <CurrentSkill>k__BackingField: {fileID: 0}
 --- !u!1 &759857185
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +742,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a948b71e5c768a40a3afe4edb803810, type: 2}
   - {fileID: 11400000, guid: 5aac325e414df8e4f9bd23700af22e4c, type: 2}
   - {fileID: 11400000, guid: 6ed179d198a96af4280ba5db9afb7b00, type: 2}
+  <CurrentSkill>k__BackingField: {fileID: 0}
 --- !u!1 &836784693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,37 +1158,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925999662}
   m_CullTransparentMesh: 1
---- !u!1 &928090144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 928090145}
-  m_Layer: 0
-  m_Name: UIConnector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &928090145
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 928090144}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 401962395}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1005645605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1608,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a948b71e5c768a40a3afe4edb803810, type: 2}
   - {fileID: 11400000, guid: 5aac325e414df8e4f9bd23700af22e4c, type: 2}
   - {fileID: 11400000, guid: 6ed179d198a96af4280ba5db9afb7b00, type: 2}
+  <CurrentSkill>k__BackingField: {fileID: 0}
 --- !u!1 &1264464977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +1932,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a948b71e5c768a40a3afe4edb803810, type: 2}
   - {fileID: 11400000, guid: 5aac325e414df8e4f9bd23700af22e4c, type: 2}
   - {fileID: 11400000, guid: 6ed179d198a96af4280ba5db9afb7b00, type: 2}
+  <CurrentSkill>k__BackingField: {fileID: 0}
 --- !u!1 &1608883673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,6 +2123,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a948b71e5c768a40a3afe4edb803810, type: 2}
   - {fileID: 11400000, guid: 5aac325e414df8e4f9bd23700af22e4c, type: 2}
   - {fileID: 11400000, guid: 6ed179d198a96af4280ba5db9afb7b00, type: 2}
+  <CurrentSkill>k__BackingField: {fileID: 0}
 --- !u!1 &1938912063
 GameObject:
   m_ObjectHideFlags: 0

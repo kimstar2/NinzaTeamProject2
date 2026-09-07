@@ -7,7 +7,7 @@ namespace Members.PSW.Code.DiceReroll_Lock
     public class Dice : MonoBehaviour, IReroll
     {
         [SerializeField] private List<SkillSO> skillSet;
-        public SkillSO CurrentSkill { get; private set; }
+        [field: SerializeField] public SkillSO CurrentSkill { get; private set; }
         public bool IsLocked { get; private set; }
 
         [ContextMenu("Check")]
