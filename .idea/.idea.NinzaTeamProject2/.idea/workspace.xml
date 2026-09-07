@@ -11,13 +11,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/ISkillLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/ISkillLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillSetting.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillSetting.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/UnitController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/UnitController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 4.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 4.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 5.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data 5.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/skill data.asset.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +49,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Siwoo-Lv999"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kimstar2/NinzaTeamProject2.git",
+    "accountId": "e8ca3be3-5946-4422-8119-651db6fe9a29"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/BackgroundScroll.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/Dice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/IReroll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/LumenTestScene.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -45,28 +87,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Lee-Yoon-Woo&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Lumen",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe" />
@@ -115,6 +159,7 @@
       <workItem from="1787820521514" duration="7525000" />
       <workItem from="1788337475521" duration="1553000" />
       <workItem from="1788423351403" duration="727000" />
+      <workItem from="1788788393845" duration="3919000" />
     </task>
     <servers />
   </component>

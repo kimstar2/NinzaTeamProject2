@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using Members.PSW.Code.Unit_Logic;
+using Members.PSW.Code.Unit_Logic.Runtime;
+using UnityEngine;
 
 namespace Members.PSW.Code.Test
 {
@@ -6,6 +10,7 @@ namespace Members.PSW.Code.Test
     public class SkillSO : ScriptableObject
     {
         public string skillName;
-        public int damage;
+        [SerializeReference] public Type logicType;
+        public List<SkillSetting> skillSet;
     }
 }
