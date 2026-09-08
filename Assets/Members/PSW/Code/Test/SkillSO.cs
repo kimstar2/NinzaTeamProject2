@@ -10,7 +10,7 @@ namespace Members.PSW.Code.Test
     public class SkillSO : ScriptableObject
     {
         public string skillName;
-        [SerializeReference] public Type logicType;
+        public string logicClassName;
         public List<SkillSetting> skillSet;
     }
 }

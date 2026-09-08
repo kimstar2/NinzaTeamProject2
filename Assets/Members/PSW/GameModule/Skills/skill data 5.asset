@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: skill data 5
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Test.SkillSO
   skillName: 6s
-  damage: 5
+  logicType:
+    rid: -2
+  skillSet: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

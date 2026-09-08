@@ -6,13 +6,9 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
 {
     public abstract class AbstractSkillLogic : MonoBehaviour, ISkillLogic
     {
-        public event Action OnCalculate;
-
+        public abstract event Action<CalculateStat> OnCalculate;
         public abstract void PlaySkill(SkillSO skill);
 
-        protected void CalculateEvent()
-        {
-            OnCalculate?.Invoke();
-        }
+        protected abstract void CalculateEvent();
     }
 }
