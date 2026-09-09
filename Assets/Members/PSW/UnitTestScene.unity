@@ -160,9 +160,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 160602285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b10fef49162b47b59cafc1117ad4e549, type: 3}
+  m_Script: {fileID: 11500000, guid: 82ac3a1548544cf59f616df7cd717539, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.SkillLogics.TestSkillLogic
+  m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.TestSkillLogic
+--- !u!1 &307576647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 307576648}
+  - component: {fileID: 307576649}
+  m_Layer: 0
+  m_Name: SkillCalc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &307576648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307576647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 334601682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307576649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307576647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec70e074b5f46ceb918299d7ae9c93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.SkillCalculater
+  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!1 &334601680
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.UnitController
   skill: {fileID: 11400000, guid: f9c950f65ae353e459b3b20f5c49c82e, type: 2}
+  currentHp: 100
   evt: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!4 &334601682
 Transform:
@@ -203,14 +249,60 @@ Transform:
   m_GameObject: {fileID: 334601680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.55, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1292538893}
   - {fileID: 1510116890}
+  - {fileID: 307576648}
+  - {fileID: 1050685692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1050685691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050685692}
+  - component: {fileID: 1050685693}
+  m_Layer: 0
+  m_Name: StatModule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1050685692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050685691}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 334601682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1050685693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050685691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899ba9b8cb8641d8911e612e389f8a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.StatModule
 --- !u!1 &1292538892
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aab420ec0a4d28b3e4f5eb4292139b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.SkillExecutor
+  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

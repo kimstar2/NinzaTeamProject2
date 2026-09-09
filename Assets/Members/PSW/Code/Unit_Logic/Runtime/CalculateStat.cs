@@ -2,7 +2,9 @@
 {
     public struct CalculateStat
     {
-        public float attckValue;
+        //여기에 % 관련 추가해야함.
+        
+        public float attackValue;
         public float damageValue;
     }
 }

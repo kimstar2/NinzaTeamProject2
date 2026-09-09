@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Members.PSW.Code.Unit_Logic.Runtime
+namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
 {
     public enum SkillType
     {

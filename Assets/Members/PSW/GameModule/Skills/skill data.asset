@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: skill data
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Test.SkillSO
   skillName: 1s
-  damage: 5
+  logicClassName: TestSkillLogic
+  skillSet:
+    skillType: 0
+    damage: 100
+    heal: 0
+    buff: 0
+    debuff: 0
+    shield: 0
