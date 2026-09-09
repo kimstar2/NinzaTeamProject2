@@ -13,7 +13,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
         public static SkillEndEvent Instance { get; private set; } = new();
     }
     
-    public class SkillExecutor : MonoModule, IAfterInitModule
+    public class SkillExecutor : MonoModule
     {
         [SerializeField] public EventChannelSO eventChannel;
         
@@ -21,13 +21,14 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
         
         private bool _canExecute;
         
-        public void AfterInit()
+        public override void Initialize(ModuleOwner owner)
         {
+            base.Initialize(owner);
+            
             _skillDict = GetComponentsInChildren<ISkillLogic>(true).ToDictionary(m => m.GetType().Name);
             
             InitSkill();
             DebugDictKey();
-
             _canExecute = true;
         }
 
@@ -41,11 +42,9 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
 
         private void InitSkill()
         {
-            StatModule stat = Owner.GetModule<StatModule>();
-            
             foreach (ISkillLogic skill in _skillDict.Values)
             {
-                skill.Init(this, stat.CurrentStat);
+                skill.Init(this);
             }
         }
 
@@ -67,9 +66,10 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
             }
         }
 
-        private void SkillCalc(CalculateStat stat, SkillSO skill)
+        private void SkillCalc(CalculateStat stat, SkillSO skill, GameObject target)
         {
-            Owner.GetModule<SkillCalculater>().Calculate(stat, skill);
+            Debug.Log("SkillExecutor SkillCalc");
+            Owner.GetModule<SkillCalculater>().Calculate(stat, skill, target);
         }
 
         private void HandleSkillFinish()
@@ -78,14 +78,14 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
             _canExecute = true;
         }
 
-        public void TryExecuteSkill(SkillSO skill)
+        public void TryExecuteSkill(SkillSO skill, GameObject target)
         {
             if (!_canExecute) return;
 
             if (_skillDict.TryGetValue(skill.logicClassName, out ISkillLogic logic))
             {
                 Debug.Log("스킬이 성공적으로 실행됨");
-                logic.PlaySkill(skill);
+                logic.PlaySkill(skill, target);
             }
 
             _canExecute = false;

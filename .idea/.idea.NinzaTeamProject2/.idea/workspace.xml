@@ -11,29 +11,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/TestSkillLogic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/TestSkillLogic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillExecutor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitStatModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitStatModule.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/IDamageable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/IDamageable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DevLib/ModuleSystem/ModuleOwner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DevLib/ModuleSystem/ModuleOwner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/CalculateStat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/CalculateStat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/ISkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/ISkillLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/ISkillLogic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/ISkillLogic.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/ISkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/ISkillLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/TestSkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/TestSkillLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillSetting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillCalculater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillCalculater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillExecutor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillSetting.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillSetting.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/StatModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/StatModule.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/UnitTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/UnitTestScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,9 +62,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/IReroll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/TestSkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillCalculater.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/LumenTestScene.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
@@ -158,7 +154,8 @@
       <workItem from="1788423351403" duration="727000" />
       <workItem from="1788788393845" duration="4117000" />
       <workItem from="1788874471910" duration="3930000" />
-      <workItem from="1788938863704" duration="11268000" />
+      <workItem from="1788938863704" duration="13482000" />
+      <workItem from="1788960064713" duration="4776000" />
     </task>
     <servers />
   </component>

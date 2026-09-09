@@ -10,10 +10,13 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
     {
         public SkillType SkillType { get; private set; }
         public int Value { get; private set; }
+        public GameObject Target { get; private set; }
 
-        public CalcValueEvent(int value)
+        public CalcValueEvent(int value, SkillType skillType, GameObject target)
         {
             Value = value;
+            SkillType = skillType;
+            Target = target;
         }
     }
     
@@ -21,7 +24,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
     {
         [SerializeField] private EventChannelSO eventChannel;
         
-        public void Calculate(CalculateStat currentStat, SkillSO skill)
+        public void Calculate(CalculateStat currentStat, SkillSO skill, GameObject target)
         {
             int value = 0;
             
@@ -30,9 +33,12 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
                 case SkillType.Damage:
                     value = AttackType(skill.skillSet.damage, currentStat.damageValue);
                     break;
+                case SkillType.Heal:
+                    value = AttackType(skill.skillSet.heal, currentStat.healthValue);
+                    break;
             }
             
-            eventChannel.RaiseEvent(new CalcValueEvent(value));
+            eventChannel.RaiseEvent(new CalcValueEvent(value, skill.skillSet.skillType, target));
         }
 
         private int AttackType(int damage, float stat)

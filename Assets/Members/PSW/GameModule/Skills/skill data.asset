@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d9d426e1424a1083d55c513591581c, type: 3}
   m_Name: skill data
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Test.SkillSO
-  skillName: 1s
+  skillName: Fuck
   logicClassName: TestSkillLogic
   skillSet:
     skillType: 0

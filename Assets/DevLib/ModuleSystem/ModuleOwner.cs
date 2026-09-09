@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace DevLib.ModuleSystem
 {
+    [DefaultExecutionOrder(-1000)]
     public abstract class ModuleOwner : MonoBehaviour
     {
         protected Dictionary<Type, IModule> _moduleDict;

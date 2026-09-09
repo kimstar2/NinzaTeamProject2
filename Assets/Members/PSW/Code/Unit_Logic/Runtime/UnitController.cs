@@ -10,9 +10,11 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
     {
         [Header("Test(나중에 삭제해야함)")] 
         [SerializeField] private SkillSO skill;
+        [SerializeField] private GameObject target;
 
-        [SerializeField] private int currentHp;
-        [SerializeField] private EventChannelSO evt;
+        [field: SerializeField , Header("유닛 데이터")] public UnitDataSO UnitData { get; private set; }
+        
+        [SerializeField, Header("이벤트 채널")] private EventChannelSO evt;
         
         private SkillExecutor _executor;
         
@@ -36,12 +38,12 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
         [ContextMenu("Fuck You")]
         private void Test()
         {
-            _executor.TryExecuteSkill(skill);
+            _executor.TryExecuteSkill(skill, target);
         }
         
         private void HandleSkillEvent(GameEvent evt)
         {
-            _executor.TryExecuteSkill(skill);
+            _executor.TryExecuteSkill(skill, target);
         }
     }
 }

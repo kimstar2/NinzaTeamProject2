@@ -1,4 +1,5 @@
 ﻿using DevLib.ModuleSystem;
+using UnityEngine;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime
 {
@@ -9,11 +10,10 @@ namespace Members.PSW.Code.Unit_Logic.Runtime
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
-            CurrentStat = new CalculateStat()
-            {
-                attackValue = 0,
-                damageValue = 0
-            };
+            var unit = owner as UnitController;
+            Debug.Assert(unit != null, "UnitController is null");
+
+            CurrentStat = unit.UnitData.baseStat;
         }
 
         public void ChangeStat(CalculateStat newStat)
