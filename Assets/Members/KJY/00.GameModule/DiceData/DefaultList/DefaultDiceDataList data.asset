@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46c18d5cdfe4a6d8948c5e0d8eca9d0, type: 3}
+  m_Name: DefaultDiceDataList data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataListSO
+  <Front>k__BackingField: {fileID: 11400000, guid: f600ed4550e5aac4799543166cc5464a, type: 2}
+  <Back>k__BackingField: {fileID: 11400000, guid: 390bad3c1eee9c84895de8bf91288210, type: 2}
+  <Left>k__BackingField: {fileID: 11400000, guid: e869c5abe72d9c74bb87f2fd2c1c6e71, type: 2}
+  <Right>k__BackingField: {fileID: 11400000, guid: b53d64b27d624bc4eba11639ee65f413, type: 2}
+  <Top>k__BackingField: {fileID: 11400000, guid: 326524b5ffa7deb4083d2f6ebe5dc0d7, type: 2}
+  <Bottom>k__BackingField: {fileID: 11400000, guid: 2bcf412023950254fb2115e5407a311d, type: 2}

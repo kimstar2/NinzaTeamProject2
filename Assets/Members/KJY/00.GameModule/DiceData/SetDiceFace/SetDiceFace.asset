@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fad384476a847278ba584665c52735e, type: 3}
+  m_Name: SetDiceFace
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.SetDiceFaceSO
+  <Front>k__BackingField:
+    <FaceType>k__BackingField: 0
+    <Num>k__BackingField: 1
+  <Back>k__BackingField:
+    <FaceType>k__BackingField: 1
+    <Num>k__BackingField: 6
+  <Left>k__BackingField:
+    <FaceType>k__BackingField: 2
+    <Num>k__BackingField: 3
+  <Right>k__BackingField:
+    <FaceType>k__BackingField: 3
+    <Num>k__BackingField: 4
+  <Top>k__BackingField:
+    <FaceType>k__BackingField: 4
+    <Num>k__BackingField: 2
+  <Bottom>k__BackingField:
+    <FaceType>k__BackingField: 5
+    <Num>k__BackingField: 5

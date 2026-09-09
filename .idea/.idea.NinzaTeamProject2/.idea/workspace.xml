@@ -10,19 +10,19 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a742114c-62c8-4500-8bbd-e638da8f5a44" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/MapGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/MapGenerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/Node.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/Node.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeType.cs.meta" afterDir="false" />
+    <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/CalculateStat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/CalculateStat.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillCalculater.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillCalculater.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/ISkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/ISkillLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data 5.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,14 +32,44 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Siwoo-Lv999&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kimstar2/NinzaTeamProject2.git&quot;,
+    &quot;accountId&quot;: &quot;e8ca3be3-5946-4422-8119-651db6fe9a29&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Members/CJY/Scripts/Node.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/65/7079f1cd/Sequence.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/f6/a6702fde/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/BackgroundScroll.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/Dice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/IReroll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/AbstractSkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillCalculater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/SkillLogics/TestSkillLogic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitStat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/LumenTestScene.unity" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
-  <component name="ProjectId" id="3GDVbFWNjbQuxjgWcddDuoYnk3q" />
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3IUYGfljPxRyxRNv25j9ZDAHHk7" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,6 +77,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -54,20 +85,24 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Sunfish",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Lumen",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\UnityProject\NINJA\1.2 Team_Project\NinzaTeamProject2&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\UnityProject\NINJA\1.2 Team_Project\NinzaTeamProject2" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\user\Desktop\UnityProject\NinzaTeamProject2 -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\user\Desktop\UnityProject\NinzaTeamProject2" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -76,8 +111,8 @@
     </configuration>
     <configuration name="Unity 시작" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe" />
-      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\UnityProject\NINJA\1.2 Team_Project\NinzaTeamProject2&quot; -debugCodeOptimization" />
-      <option name="WORKING_DIRECTORY" value="C:\UnityProject\NINJA\1.2 Team_Project\NinzaTeamProject2" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\user\Desktop\UnityProject\NinzaTeamProject2 -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\user\Desktop\UnityProject\NinzaTeamProject2" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -103,12 +138,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="a742114c-62c8-4500-8bbd-e638da8f5a44" name="변경" comment="" />
-      <created>1783506195444</created>
+      <changelist id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="" />
+      <created>1787820519927</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1783506195444</updated>
-      <workItem from="1783506196835" duration="3935000" />
+      <updated>1787820519927</updated>
+      <workItem from="1787820521514" duration="7525000" />
+      <workItem from="1788337475521" duration="1553000" />
+      <workItem from="1788423351403" duration="727000" />
+      <workItem from="1788788393845" duration="4117000" />
+      <workItem from="1788874471910" duration="3562000" />
     </task>
     <servers />
   </component>
