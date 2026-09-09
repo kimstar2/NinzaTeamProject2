@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
-using Members.PSW.Code.Unit_Logic.Runtime;
-using Members.PSW.Code.Unit_Logic.Runtime.Skill;
+using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
 
 namespace Members.PSW.Code.Test
@@ -10,6 +9,6 @@ namespace Members.PSW.Code.Test
     {
         public string skillName;
         public string logicClassName;
-        public SkillSetting skillSet;
+        public List<SkillSetting> skillSet;
     }
 }

@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ade131343f41789dea5422d5d5c098, type: 3}
-  m_Name: Unit
+  m_Name: "\uB9C8\uBC95\uC0AC"
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.UnitDataSO
-  maxHealth: 120
+  name: "\uC804\uC0AC"
+  maxHealth: 125
   baseStat:
     damageValue: 1
     healthValue: 1

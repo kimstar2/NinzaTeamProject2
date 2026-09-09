@@ -1,4 +1,4 @@
-using Members.PSW.Code.Unit_Logic.Runtime.Skill;
+using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEditor;
 using UnityEngine;
 
@@ -22,6 +22,8 @@ namespace Members.PSW.Code.Unit_Logic.Editor
                 EditorGUI.indentLevel++;
                 SerializedProperty skillType = property.FindPropertyRelative(nameof(SkillSetting.skillType));
                 DrawNextProperty(ref position, skillType);
+                SerializedProperty useSelf = property.FindPropertyRelative(nameof(SkillSetting.useSelf));
+                DrawNextProperty(ref position, useSelf);
 
                 SerializedProperty value = GetValueProperty(property);
                 if (value != null)
@@ -61,8 +63,6 @@ namespace Members.PSW.Code.Unit_Logic.Editor
                     return property.FindPropertyRelative(nameof(SkillSetting.heal));
                 case SkillType.Buff:
                     return property.FindPropertyRelative(nameof(SkillSetting.buff));
-                case SkillType.Debuff:
-                    return property.FindPropertyRelative(nameof(SkillSetting.debuff));
                 case SkillType.Shield:
                     return property.FindPropertyRelative(nameof(SkillSetting.shield));
                 default:

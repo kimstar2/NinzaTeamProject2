@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Net.Http.Headers;
+using DevLib.ModuleSystem;
 using DG.Tweening;
 using Members.PSW.Code.Test;
+using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics
@@ -12,20 +13,31 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics
         public event Action OnSkillFinished;
 
         private SkillExecutor _executor;
+        private ModuleOwner _owner;
 
         private CalculateStat CurrentStat => _executor.Owner.GetModule<StatModule>().CurrentStat;
 
         public void Init(SkillExecutor executor)
         {
             _executor = executor;
+            _owner = executor.Owner;
         }
 
         public void PlaySkill(SkillSO skill, GameObject target)
         {
+            Vector3 pastPos = _owner.transform.position;
+            
             Sequence seq = DOTween.Sequence();
-            seq.Append(_executor.Owner.transform.DORotate(new Vector3(0, 0, 1080f), 1.5f, RotateMode.FastBeyond360));
+            seq.Append(_owner.transform.DOMove(target.transform.position, 1f).SetEase(Ease.Linear));
+            
+            seq.Append(_owner.transform.DORotate(new Vector3(0, 0, 45), 0.3f));
+            seq.Append(_owner.transform.DORotate(new Vector3(0, 0, -45), 0.3f));
+            seq.Append(_owner.transform.DORotate(new Vector3(0, 0, 0), 0.3f));
+            
             seq.AppendCallback(() => OnCalculate?.Invoke(CurrentStat, skill, target));
-            seq.AppendInterval(1f);
+            
+            seq.Append(_owner.transform.DOMove(pastPos, 1f).SetEase(Ease.Linear));
+            
             seq.AppendCallback(() => OnSkillFinished?.Invoke());
         }
     }

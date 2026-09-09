@@ -1,5 +1,6 @@
 ﻿using System;
 using Members.PSW.Code.Test;
+using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime.Skill

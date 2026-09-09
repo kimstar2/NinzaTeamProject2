@@ -1,4 +1,5 @@
 ﻿using DevLib.ModuleSystem;
+using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime

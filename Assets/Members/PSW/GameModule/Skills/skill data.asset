@@ -15,9 +15,21 @@ MonoBehaviour:
   skillName: Fuck
   logicClassName: TestSkillLogic
   skillSet:
-    skillType: 0
-    damage: 100
+  - skillType: 0
+    useSelf: 0
+    damage: 10
     heal: 0
     buff: 0
-    debuff: 0
+    shield: 0
+  - skillType: 1
+    useSelf: 1
+    damage: 10
+    heal: 2
+    buff: 0
+    shield: 0
+  - skillType: 2
+    useSelf: 1
+    damage: 10
+    heal: 2
+    buff: 0
     shield: 0
