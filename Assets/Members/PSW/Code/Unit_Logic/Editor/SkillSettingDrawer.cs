@@ -25,6 +25,11 @@ namespace Members.PSW.Code.Unit_Logic.Editor
                 SerializedProperty useSelf = property.FindPropertyRelative(nameof(SkillSetting.useSelf));
                 DrawNextProperty(ref position, useSelf);
 
+                SerializedProperty enemyTargetAll = property.FindPropertyRelative(nameof(SkillSetting.enemyTargetAll));
+                DrawNextProperty(ref position, enemyTargetAll);
+                SerializedProperty teamTargetAll = property.FindPropertyRelative(nameof(SkillSetting.teamTargetAll));
+                DrawNextProperty(ref position, teamTargetAll);
+
                 SerializedProperty value = GetValueProperty(property);
                 if (value != null)
                     DrawNextProperty(ref position, value);
@@ -38,7 +43,15 @@ namespace Members.PSW.Code.Unit_Logic.Editor
 
         public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
         {
-            int lines = property.isExpanded ? (GetValueProperty(property) != null ? 4 : 3) : 1;
+            // Foldout, skill type, three targeting toggles, and the selected skill value.
+            int lines = property.isExpanded ? (GetValueProperty(property) != null ? 6 : 5) : 1;
+            if (property.isExpanded)
+            {
+                SerializedProperty useSelf = property.FindPropertyRelative(nameof(SkillSetting.useSelf));
+                if (!useSelf.hasMultipleDifferentValues && useSelf.boolValue)
+                    lines++;
+            }
+
             return lines * EditorGUIUtility.singleLineHeight
                 + (lines - 1) * EditorGUIUtility.standardVerticalSpacing;
         }

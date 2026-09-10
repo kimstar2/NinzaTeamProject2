@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ade131343f41789dea5422d5d5c098, type: 3}
-  m_Name: TestTarget
+  m_Name: "\uC900\uC601"
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.UnitDataSO
+  name: "\uC548\uB1FD~!"
+  unitType: 1
   maxHealth: 100
   baseStat:
     damageValue: 1
-    healthValue: 1
+    healValue: 1
