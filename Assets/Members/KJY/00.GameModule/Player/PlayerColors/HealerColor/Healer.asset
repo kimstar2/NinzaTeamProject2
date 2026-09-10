@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd300d84c9dd40228982fbac3967321c, type: 3}
   m_Name: Healer
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Util.ColorSO
-  <DefaultColor>k__BackingField: {r: 0.106906176, g: 1, b: 0, a: 1}
+  <DefaultColor>k__BackingField: {r: 0.83137256, g: 0.8980392, b: 0.9843137, a: 1}
   <IsUsingRandomColor>k__BackingField: 0
   <Colors>k__BackingField: []

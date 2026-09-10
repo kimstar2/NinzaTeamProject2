@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd300d84c9dd40228982fbac3967321c, type: 3}
   m_Name: Mage
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Util.ColorSO
-  <DefaultColor>k__BackingField: {r: 0, g: 0.108020306, b: 1, a: 1}
+  <DefaultColor>k__BackingField: {r: 0.42352942, g: 0.43137255, b: 0.627451, a: 1}
   <IsUsingRandomColor>k__BackingField: 0
   <Colors>k__BackingField: []

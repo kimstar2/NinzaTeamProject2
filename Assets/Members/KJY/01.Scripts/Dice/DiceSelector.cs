@@ -17,10 +17,7 @@ namespace Members.KJY._01.Scripts.Dice
         [field: SerializeField] public PlayerType PlayerType { get; private set; }
         [field: SerializeField] public GradientSO LineColor { get; private set; }
         [field: SerializeField] public ColorSO PlayerColor {get; private set;}
-        [SerializeField] private UIMonoImage targetImage;
         [SerializeField] private UIMonoOutline targetOutline;
-        [SerializeField] private Color selectColor;
-        [SerializeField] private Color unSelectColor;
         private bool _hasTarget;
 
         public UnityEvent onSetTarget;
@@ -49,17 +46,17 @@ namespace Members.KJY._01.Scripts.Dice
             {
                 SetHasTarget(false);
                 eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerType));
+                onUnSelect?.Invoke();
+                Debug.Log("이");
                 return;
             }
-            
-            targetImage.SetColor(selectColor);
+            Debug.Log("뱅");
             IsSelect = true;
             onSelect?.Invoke();
         }
 
         protected override void UnSelect()
         {
-            targetImage.SetColor(unSelectColor);
             IsSelect = false;
             if (!_hasTarget)
                 onUnSelect?.Invoke();

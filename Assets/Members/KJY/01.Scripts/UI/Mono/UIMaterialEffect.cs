@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Members.KJY._01.Scripts.UI.Mono
 {
-    public class UIMaterialBlinkEffect : MonoBehaviour
+    public class UIMaterialEffect : MonoBehaviour
     {
         [SerializeField] private UIMonoImage targetImage;
         [SerializeField] private ShaderHashSO shaderHash;
@@ -40,14 +40,14 @@ namespace Members.KJY._01.Scripts.UI.Mono
             DOTween.To(() => crtBlink, x =>
             {
                 crtBlink = x;
-                SetValue(crtBlink);
+                SetVariable(crtBlink);
             },blinkVal, _duration)
             .SetId(_id)
             .SetEase(blinkEase)
             .OnComplete(() => onBlinkComplete?.Invoke());
         }
 
-        private void SetValue(float crtBlink)
+        private void SetVariable(float crtBlink)
         {
             _materialIns.SetFloat(shaderHash.HashValue, crtBlink);
             targetImage.Image.SetMaterialDirty();   

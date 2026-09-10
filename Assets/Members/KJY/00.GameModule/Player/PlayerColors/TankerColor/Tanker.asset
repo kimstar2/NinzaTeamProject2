@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd300d84c9dd40228982fbac3967321c, type: 3}
   m_Name: Tanker
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Util.ColorSO
-  <DefaultColor>k__BackingField: {r: 1, g: 0.8800796, b: 0, a: 1}
+  <DefaultColor>k__BackingField: {r: 0.8509804, g: 0.8235294, b: 0.7647059, a: 1}
   <IsUsingRandomColor>k__BackingField: 0
   <Colors>k__BackingField: []

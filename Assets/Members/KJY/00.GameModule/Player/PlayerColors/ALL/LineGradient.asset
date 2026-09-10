@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b855107748764a5fa10048e6ffa2fa46, type: 3}
-  m_Name: DLineGradient
+  m_Name: LineGradient
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Util.GradientSO
   <DefaultGradient>k__BackingField:
     serializedVersion: 2
-    key0: {r: 0.69803923, g: 0.21176471, b: 0.24705882, a: 1}
+    key0: {r: 0.72156864, g: 0.72156864, b: 1, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}

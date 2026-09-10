@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OutlineBlink
+  m_Name: UIBlink
   m_Shader: {fileID: -6465566751694194690, guid: 559f8a952a4ad5b44bf2aafeb940d312, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -53,13 +53,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlinkValue: -5
+    - _AlphaValue: 1
+    - _BlinkValue: -12.5
     - _EnableExternalAlpha: 0
     - _ZWrite: 0
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DefaultColor: {r: 5.9921565, g: 5.9921565, b: 5.9921565, a: 1}
+    - _DefaultColor: {r: 14.259475, g: 14.259475, b: 14.259475, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
