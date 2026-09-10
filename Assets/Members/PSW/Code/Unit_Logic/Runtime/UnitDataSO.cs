@@ -3,10 +3,17 @@ using UnityEngine;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime
 {
-    [CreateAssetMenu(fileName = "Unit Data", menuName = "Lumen/Unit/Data", order = 0)]
+    public enum UnitType
+    {
+        Player,
+        Enemy
+    }
+    
+    [CreateAssetMenu(fileName = "Unit Data", menuName = "Lumen/Unit/Unit Data", order = 0)]
     public class UnitDataSO : ScriptableObject
     {
         public new string name;
+        public UnitType unitType;
         public int maxHealth;
         public CalculateStat baseStat;
     }
