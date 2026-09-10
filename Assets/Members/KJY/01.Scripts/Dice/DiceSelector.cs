@@ -90,6 +90,11 @@ namespace Members.KJY._01.Scripts.Dice
 
         private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
         
+        
+        public override void ApplyDamage(float damage)
+        {
+            
+        }
 
 #if UNITY_EDITOR
         private void OnValidate()

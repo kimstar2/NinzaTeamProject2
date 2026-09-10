@@ -8,17 +8,23 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
 {
     public class EnemySelector : AbstractSelector
     {
+
+
         protected override void Select()
         {
             eventChannel.RaiseEvent(new OnEnemySelect(this));
             onSelect?.Invoke();
-            Debug.Log("OnSelect");
         }
         
         protected override void UnSelect()
         {
             onUnSelect?.Invoke();
-            Debug.Log("OnUnSelect");
+        }
+
+        public override void ApplyDamage(float damage) // 추후 데이터 추가 예정
+        {
+            HealthModule.TakeDamage(damage);
+            Debug.Log($"아야 입은데미지 : {damage}");
         }
     }
 }
