@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Members.PSW.Code.Unit_Logic;
-using Members.PSW.Code.Unit_Logic.Runtime;
+﻿using System.Collections.Generic;
+using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
 
 namespace Members.PSW.Code.Test

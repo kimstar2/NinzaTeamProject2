@@ -12,5 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d9d426e1424a1083d55c513591581c, type: 3}
   m_Name: skill data
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Test.SkillSO
-  skillName: 1s
-  damage: 5
+  skillName: Fuck
+  logicClassName: TestSkillLogic
+  skillSet:
+  - skillType: 0
+    useSelf: 0
+    damage: 10
+    heal: 0
+    buff: 0
+    shield: 0
+  - skillType: 1
+    useSelf: 1
+    damage: 10
+    heal: 2
+    buff: 0
+    shield: 0
+  - skillType: 2
+    useSelf: 1
+    damage: 10
+    heal: 2
+    buff: 0
+    shield: 0
