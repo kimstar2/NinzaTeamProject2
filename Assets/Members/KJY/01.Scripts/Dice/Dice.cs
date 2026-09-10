@@ -2,9 +2,9 @@
 using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
 using DG.Tweening;
+using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice;
-using Members.KJY._01.Scripts.Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -22,9 +22,10 @@ namespace Members.KJY._01.Scripts.Dice
         [SerializeField] private float minRollingPower, maxRollingPower;
         [SerializeField] private Transform destTrm;
         private bool _isLock;
-
+        
         private Sequence _roll;
         private int _currenRan;
+        private DiceFaceType _crtFaceType;
         
         private void OnEnable()
         {
@@ -48,20 +49,17 @@ namespace Members.KJY._01.Scripts.Dice
 
         public void Roll(Vector3 localEndPosition, Vector3 resultEuler)
         {
-            if (_isLock) return;
             _roll?.Kill();
 
             float x = Random.Range(minSpinVec.x, maxSpinVec.x);
             float y = Random.Range(minSpinVec.y, maxSpinVec.y);
             float z = Random.Range(minSpinVec.z, maxSpinVec.z);
-            Vector3 spinEnd = resultEuler
-                              + new Vector3(x, y, z);
 
             _roll = DOTween.Sequence().OnComplete(CompleteRoll);
             
             float power = Random.Range(minRollingPower, maxRollingPower);
-            
-            Vector3 maxPos = new Vector3(localEndPosition.x, power, localEndPosition.z);
+            Vector3 spinEnd = _isLock ? transform.localEulerAngles : resultEuler + new Vector3(x, y, z);
+            Vector3 maxPos = new Vector3(localEndPosition.x, _isLock ? localEndPosition.y : power , localEndPosition.z);
             
             _roll.Append(
                 transform.DOLocalMove(maxPos, rollingStep.Duration).SetEase(rollingStep.EaseType));
@@ -83,8 +81,8 @@ namespace Members.KJY._01.Scripts.Dice
         
         private void CompleteRoll()
         {
-            var faceType = diceFaces[_currenRan].Type;
-            eventChannel.RaiseEvent(new OnRollEnd(faceType, playerType));
+             _crtFaceType = _isLock ? _crtFaceType : diceFaces[_currenRan].Type;
+            eventChannel.RaiseEvent(new OnRollEnd(_crtFaceType, playerType));
         }
     }
 }

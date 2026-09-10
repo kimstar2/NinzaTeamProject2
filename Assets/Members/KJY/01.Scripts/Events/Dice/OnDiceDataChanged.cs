@@ -1,6 +1,6 @@
 ﻿using DevLib.CoreLib.Runtime;
+using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Dice.Data;
-using Members.KJY._01.Scripts.Player;
 
 namespace Members.KJY._01.Scripts.Events.Dice
 {
@@ -13,6 +13,11 @@ namespace Members.KJY._01.Scripts.Events.Dice
         {
             PlayerType = playerType;
             DiceDataList = diceDataList;
+        }
+
+        public PlayerType GetPlayerTypeUsingInteger(int d)
+        {
+            return PlayerType;
         }
     }
 }

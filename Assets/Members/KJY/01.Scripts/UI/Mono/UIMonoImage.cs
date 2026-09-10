@@ -6,7 +6,7 @@ namespace Members.KJY._01.Scripts.UI.Mono
 {
     public class UIMonoImage : MonoBehaviour
     {
-        protected Image Image;
+        public Image Image {get; private set;}
 
         protected virtual void Awake()
         {
@@ -21,6 +21,11 @@ namespace Members.KJY._01.Scripts.UI.Mono
         public void SetColor(Color color)
         {
             Image.color = color;
+        }
+
+        public void SetMaterial(Material material)
+        {
+            Image.material = material;
         }
     }
 }
