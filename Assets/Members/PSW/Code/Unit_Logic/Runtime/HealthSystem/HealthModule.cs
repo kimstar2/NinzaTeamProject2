@@ -9,7 +9,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.HealthSystem
     public class HealthModule : MonoModule, IDamageable
     {
         [SerializeField] private int currentHealth;
-        [SerializeField] private EventChannelSO evt;
+        [SerializeField] private EventChannelSO eventChannel;
 
         private UnitController _unit;
         
@@ -25,19 +25,29 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.HealthSystem
 
         private void OnEnable()
         {
-            evt.AddListener<CalcValueEvent>(HandleValueType);
+            eventChannel.AddListener<CalcValueEvent>(HandleValueType);
         }
 
         private void OnDisable()
         {
-            evt.RemoveListener<CalcValueEvent>(HandleValueType);
+            eventChannel.RemoveListener<CalcValueEvent>(HandleValueType);
         }
 
         private void HandleValueType(CalcValueEvent evt)
         {
-            if (evt.Target != Owner.gameObject) return;
-            
-            switch (evt.SkillType)
+            if (evt.SkillSet.enemyTargetAll && _unit.UnitData.unitType == UnitType.Enemy)
+                GetSkillSwitch(evt);
+
+            else if (evt.SkillSet.teamTargetAll && _unit.UnitData.unitType == UnitType.Player)
+                GetSkillSwitch(evt);
+
+            else if (evt.Target == Owner.gameObject)
+                GetSkillSwitch(evt);
+        }
+
+        private void GetSkillSwitch(CalcValueEvent evt)
+        {
+            switch (evt.SkillSet.skillType)
             {
                 case SkillType.Damage:
                     GetDamage(evt.Value);
@@ -47,7 +57,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.HealthSystem
                     break;
             }
         }
-        
+
         public void GetDamage(int damage)
         {
             currentHealth -= damage;
@@ -57,7 +67,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.HealthSystem
         public void GetHealth(int health)
         {
             currentHealth += health;
-            Debug.Log($"체력이 성공적으로 회복됨 {currentHealth}");
+            Debug.Log($"체력이 성공적으로 회복됨 {Owner.gameObject.name}");
         }
     }
 }
