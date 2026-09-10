@@ -11,49 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDiceInventory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceRollManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 4.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 4.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 5.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data 5.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/Dice data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Combat/TargetConnect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Combat/TargetConnect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Dice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Dice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceBattleManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceBattleManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceRollManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceDataBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceDataBinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceDataReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceDataReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceInventory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceInventory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDiceInventory.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceRollReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceLockChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceRollReceiver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceLockChecker.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnDiceDataBind.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnPlayerDiceDataBind.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnDiceDataBind.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnPlayerDiceDataBind.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnDiceDataChanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnDiceDataChanged.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnDiceLock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnDiceLock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnRollEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnRollEnd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player/IClickToGettable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player/IClickToGettable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player/MainPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player/MainPlayer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player/PlayerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Player/PlayerType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/UIMonoImage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/UIMonoImage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/RealScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/Services.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Combat.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/8d/8b9b89f8/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/ee/47ffbe5e/LineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/0c/b4b6a159/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/f6/a6702fde/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/ShaderHashSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractDiceInventory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,7 +46,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/Dice.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/DiceReroll_Lock/IReroll.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Test/DamageText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/LumenTestScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Editor/AssetPostProcessors/MaterialPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@4eb612570652/Editor/Generation/Targets/BuiltIn/Editor/AssetPostProcessors/MaterialPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
