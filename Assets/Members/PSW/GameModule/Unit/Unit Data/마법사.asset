@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: "\uB9C8\uBC95\uC0AC"
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.UnitDataSO
   name: "\uC804\uC0AC"
+  unitType: 0
   maxHealth: 125
   baseStat:
     damageValue: 1
-    healthValue: 1
+    healValue: 1

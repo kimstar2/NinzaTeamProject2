@@ -11,7 +11,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Combat.meta" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/ISkillLogicExecutor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillDataSO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/Editor/TweenStepDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/Editor/TweenStepDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenSOSequencer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenSOSequencer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenSequencer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenSequencer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenStep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenStep.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player_container.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player_container.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Default Skill data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Default Skill data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/AbstractSkillLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/AbstractSkillLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/ISkillLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/ISkillLogic.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/ISkillLogicExecutor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/SkillDataSO.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/SkillDataSO.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillDataSO.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/SkillExecutor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/SkillExecutor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillExecutor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/T.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/T/UsingTweenSkillLogic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Skill/T/UsingTweenSkillLogic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/AttackCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/AttackCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Module/Util/SetPosition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Module/Util/SetPosition.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/T/Rammus_0.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/T/Rammus_0.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/T/yasuo.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/T/yasuo.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/T/yone.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/T/yone.jpg.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,17 +67,24 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/ee/47ffbe5e/LineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/0c/b4b6a159/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/f6/a6702fde/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/ClassStepTweenSequencer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenStepClass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/ShaderHashSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractDiceInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemySelector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/AbstractSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill/ISkill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill/TestSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceGradeSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceRollData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceBattleManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/DiceSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Interface/IGetIsSelectService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnEndBattle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/OnExecuteNextCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Flags/IRequirePooling.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Services/GetPlayerTrmService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Services/IGetPlayerTrmService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/UIMonoOutline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/ColorSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/GradientSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -153,6 +200,8 @@
       <workItem from="1788940910631" duration="19545000" />
       <workItem from="1789021703719" duration="1244000" />
       <workItem from="1789027438441" duration="1941000" />
+      <workItem from="1789049831128" duration="5355000" />
+      <workItem from="1789083409061" duration="26431000" />
     </task>
     <servers />
   </component>

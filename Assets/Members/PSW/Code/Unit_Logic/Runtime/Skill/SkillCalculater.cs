@@ -8,14 +8,14 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
 {
     public class CalcValueEvent : GameEvent
     {
-        public SkillType SkillType { get; private set; }
+        public SkillSetting SkillSet { get; private set; }
         public int Value { get; private set; }
         public GameObject Target { get; private set; }
 
-        public CalcValueEvent(int value, SkillType skillType, GameObject target)
+        public CalcValueEvent(int value, SkillSetting skillSet, GameObject target)
         {
             Value = value;
-            SkillType = skillType;
+            SkillSet = skillSet;
             Target = target;
         }
     }
@@ -42,21 +42,22 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
                     value = CrossValue(skill.damage, currentStat.damageValue);
                     if (skill.useSelf)
                     {
-                        eventChannel.RaiseEvent(new CalcValueEvent(value, skill.skillType, Owner.gameObject));
+                        eventChannel.RaiseEvent(new CalcValueEvent(value, skill, Owner.gameObject));
                         return;
                     }
                     break;
+                
                 case SkillType.Heal:
                     value = CrossValue(skill.heal, currentStat.healValue);
                     if (skill.useSelf)
                     {
-                        eventChannel.RaiseEvent(new CalcValueEvent(value, skill.skillType, Owner.gameObject));
+                        eventChannel.RaiseEvent(new CalcValueEvent(value, skill, Owner.gameObject));
                         return;
                     }
                     break;
             }
             
-            eventChannel.RaiseEvent(new CalcValueEvent(value, skill.skillType, target));
+            eventChannel.RaiseEvent(new CalcValueEvent(value, skill, target));
         }
 
         private int CrossValue(int damage, float stat)

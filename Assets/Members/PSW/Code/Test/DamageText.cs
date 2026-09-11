@@ -25,7 +25,7 @@ namespace Members.PSW.Code.Test
 
         private void HandleGetValue(CalcValueEvent evt)
         {
-            if (evt.SkillType != SkillType.Damage) return;
+            if (evt.SkillSet.skillType != SkillType.Damage) return;
             
             Sequence seq = DOTween.Sequence();
             seq.AppendCallback(() => _text.SetText($"{evt.Value}"));
