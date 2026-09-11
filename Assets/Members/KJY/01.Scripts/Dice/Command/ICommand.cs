@@ -9,5 +9,8 @@ namespace Members.KJY._01.Scripts.Dice.Command
     {
         void Execute();
         UniTask ExecuteAction(CancellationToken token);
+        
+        
+        void MoveNext();
     }
 }

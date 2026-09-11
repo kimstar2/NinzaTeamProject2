@@ -38,5 +38,6 @@ namespace Members.KJY._01.Scripts.Dice
         protected abstract void UnSelect();
 
         public abstract void ApplyDamage(float damage); // 추후 데이터 추가 예정
+        public abstract void OnAttackCommand();
     }
 }

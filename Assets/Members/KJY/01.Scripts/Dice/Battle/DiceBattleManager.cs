@@ -76,11 +76,11 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             _lineConnectors.Add(getSelector, lR);
         }
         
-        private void RemoveLine() // 라인렌더러 끄는거
+        public void RemoveLine(DiceSelector selector)
         {
-            if (!_lineConnectors.TryGetValue(CurrentDiceSelector, out LineRenderer lR)) return; // 있으면? 가져옴
+            if (!_lineConnectors.TryGetValue(selector, out LineRenderer lR)) return; // 있으면? 가져옴
             Destroy(lR.gameObject); // 나중에 풀링 대체여
-            _lineConnectors.Remove(CurrentDiceSelector);
+            _lineConnectors.Remove(selector);
         }
 
         private void ReCheck() // 키,밸 확인용
@@ -93,7 +93,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public (PlayerType type, bool isSelect) GetIsSelect() => 
             (CurrentDiceSelector != null ? CurrentDiceSelector.PlayerType : PlayerType.None,
                 CurrentDiceSelector != null && CurrentDiceSelector.IsSelect);
-
+        
         #region EventHandles
 
         
@@ -108,7 +108,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             if (BattleChain.Contains(new KeyValuePair<DiceSelector, EnemySelector>(CurrentDiceSelector,evt.EnemySelector)))
             {
                 BattleChain.Remove(CurrentDiceSelector);
-                RemoveLine();
+                RemoveLine(CurrentDiceSelector);
                 return;
             }
             
@@ -127,26 +127,28 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             
             BattleChain.Remove(CurrentDiceSelector); // 선택이 취소 된거니까 체인 연결이 되어있을경우 체인을 파기
                 
-            RemoveLine();
-
-            CurrentDiceSelector = null; // 현재 셀렉터는 없음
+            RemoveLine(CurrentDiceSelector);
+            ClearCrtSelector(); // 현재 셀렉터는 없음
             ReCheck();
         }
         
         private void HandleBattleStart(OnStartBattle evt) // 배틀 시작 버튼을 눌렀을때
         {
             AttackCommand[] getPlayerAttackData = GetP2TAtkCommands();
-            AttackCommand[] getEnemyAttackData = GetP2TAtkCommands();
             foreach (AttackCommand attackCommand in getPlayerAttackData)
                 _battleObserver.AddCommand(attackCommand);
-            foreach (AttackCommand attackCommand in getEnemyAttackData)
-                _battleObserver.AddCommand(attackCommand);
             
-            // 현재 상태들을 알림 이는 배틀 옵저버가 받게 됨
+            // AttackCommand[] getEnemyAttackData = GetP2TAtkCommands();
+
+            // foreach (AttackCommand attackCommand in getEnemyAttackData)
+            //     _battleObserver.AddCommand(attackCommand);
             
+            // 현재 명령(커맨드)들을 알림, 이는 배틀 옵저버가 받게 됨
+
+            ClearCrtSelector();
             _battleObserver.StartBattle();
         }
-
+        
         #endregion
 
         #region Helper
@@ -166,6 +168,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 ToArray();
             return d;
         }
+        
+        private void ClearCrtSelector() => CurrentDiceSelector = null;
 
         #endregion
         

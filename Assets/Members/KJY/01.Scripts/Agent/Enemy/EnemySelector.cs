@@ -9,7 +9,6 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
     public class EnemySelector : AbstractSelector
     {
 
-
         protected override void Select()
         {
             eventChannel.RaiseEvent(new OnEnemySelect(this));
@@ -26,5 +25,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             HealthModule.TakeDamage(damage);
             Debug.Log($"아야 입은데미지 : {damage}");
         }
+
+        public override void OnAttackCommand() { }
     }
 }

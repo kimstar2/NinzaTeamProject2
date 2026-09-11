@@ -93,8 +93,9 @@ namespace Members.KJY._01.Scripts.Dice
         
         public override void ApplyDamage(float damage)
         {
-            
         }
+
+        public override void OnAttackCommand() { UnSelect(); }
 
 #if UNITY_EDITOR
         private void OnValidate()

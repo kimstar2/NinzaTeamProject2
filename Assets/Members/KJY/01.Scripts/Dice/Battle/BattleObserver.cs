@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DevLib.CoreLib.Runtime;
@@ -7,6 +8,7 @@ using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Dice.Command;
 using Members.KJY._01.Scripts.Events.Dice;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
 {
@@ -14,14 +16,28 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     {
         [SerializeField] private EventChannelSO eventChannel;
         
-        [field:SerializeReference] public List<ICommand> commandList { get; private set; } = new();
+        [field:SerializeReference] public List<ICommand> CommandList { get; private set; } = new();
         public CancellationTokenSource BattleCts {get; private set;}
+        private ICommand _currentCommand;
 
         public void StartBattle() // 배틀 시작
         {
             Debug.Log("배틀 시작");
             ExecuteAsync().Forget();
         }
+
+        private void OnEnable()
+        {
+            eventChannel.AddListener<OnExecuteNextCommand>(HandleExecuteNextCommand);
+        }
+
+        private void OnDisable()
+        {
+            eventChannel.RemoveListener<OnExecuteNextCommand>(HandleExecuteNextCommand);
+        }
+            
+
+                    
 
         /// <summary>
         /// 비동기 행동 시퀀스
@@ -33,18 +49,27 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             KillTask();
             BattleCts = new CancellationTokenSource();
             CancellationToken ct = BattleCts.Token;
-            foreach (ICommand command in commandList)
+            foreach (ICommand command in CommandList.ToList())
             {
-                command.Execute();
-                await command.ExecuteAction(ct);
-                Debug.Log("d");
+                _currentCommand = command;
+                _currentCommand.Execute();
+                await _currentCommand.ExecuteAction(ct);
+                CommandList.Remove(_currentCommand);
             }
             ClearCommands();
             eventChannel.RaiseEvent(new OnEndBattle());
         }
 
-        public void AddCommand(ICommand command) => commandList.Add(command);
-        public void RemoveCommand(ICommand command) => commandList.Remove(command);
+        private void Update()
+        {
+            if (Keyboard.current.tKey.wasPressedThisFrame)
+                eventChannel.RaiseEvent(new OnExecuteNextCommand()); // 테스트 용도
+        }
+
+        private void HandleExecuteNextCommand(OnExecuteNextCommand garbage) => _currentCommand.MoveNext(); // 다음 행동 실행
+
+        public void AddCommand(ICommand command) => CommandList.Add(command);
+        public void RemoveCommand(ICommand command) => CommandList.Remove(command);
         
         private void KillTask()
         {
@@ -54,7 +79,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             BattleCts = null;
         }
 
-        private void ClearCommands() => commandList.Clear();
+        private void ClearCommands() => CommandList.Clear();
 
         private void OnDestroy()
         {
