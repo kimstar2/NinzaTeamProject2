@@ -1,4 +1,4 @@
-﻿using Members.KJY._01.Scripts.Agent.Skill;
+﻿using Members.KJY._01.Scripts.Agent.SkillSystem;
 using Members.PSW.Code.Test;
 using UnityEngine;
 

@@ -16,4 +16,5 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: -3559039512066393911, guid: 0fcd923b5e7c8f14c96657ff7094914c, type: 3}
   <SkillName>k__BackingField: 666
   <Description>k__BackingField: 6
+  <SkillData>k__BackingField: {fileID: 11400000, guid: f0da1279f1923e54386d068f19582cf2, type: 2}
   <BaseDamage>k__BackingField: 0

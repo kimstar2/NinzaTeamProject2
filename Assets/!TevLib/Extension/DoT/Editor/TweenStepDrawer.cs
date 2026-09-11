@@ -4,7 +4,7 @@ using UnityEngine;
 namespace _TevLib.Extension.DoT.Editor
 {
     [CustomPropertyDrawer(typeof(TweenStep))]
-    public sealed class TweenStepDrawer : PropertyDrawer
+    public class TweenStepDrawer : PropertyDrawer
     {
         private const string ActionTypeName = "<ActionType>k__BackingField";
         private const string InsertTypeName = "<InsertType>k__BackingField";

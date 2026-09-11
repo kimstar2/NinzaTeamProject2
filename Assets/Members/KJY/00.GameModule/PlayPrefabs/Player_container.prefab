@@ -539,6 +539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.DiceSelector
   <IsSelect>k__BackingField: 0
   <LineConnectTrm>k__BackingField: {fileID: 7935077226433335297}
+  <MyTransform>k__BackingField: {fileID: 0}
+  <TrmPivot>k__BackingField: {fileID: 0}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   onSelect:
     m_PersistentCalls:
@@ -742,6 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
   debugMode: 0
   <IsCanvas>k__BackingField: 1
   targetTrm: {fileID: 9098645680546581034}
@@ -1950,6 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
   debugMode: 0
   <IsCanvas>k__BackingField: 1
   targetTrm: {fileID: 9098645680546581034}
@@ -2588,6 +2592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
   debugMode: 0
   <IsCanvas>k__BackingField: 1
   targetTrm: {fileID: 1260231932141367841}

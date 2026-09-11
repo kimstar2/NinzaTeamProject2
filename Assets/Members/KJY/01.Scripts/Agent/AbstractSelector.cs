@@ -1,6 +1,6 @@
 ﻿using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
-using Members.KJY._01.Scripts.Agent.Skill;
+using Members.KJY._01.Scripts.Agent.SkillSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +15,8 @@ namespace Members.KJY._01.Scripts.Agent
     {
         [field:SerializeField] public bool IsSelect {get; protected set;} 
         [field: SerializeField] public Transform LineConnectTrm { get; private set; }
-        [field: SerializeField] public Transform MyTransform { get; private set; }
+        [field:SerializeField] public Transform MyTransform { get; protected set; }
+        [field:SerializeField] public Transform TrmPivot { get; private set; }
         [SerializeField] protected EventChannelSO eventChannel;
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;

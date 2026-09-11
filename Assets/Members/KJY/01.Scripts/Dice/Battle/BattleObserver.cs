@@ -54,9 +54,11 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 _currentCommand = command;
                 _currentCommand.Execute();
                 await _currentCommand.ExecuteAction(ct);
-                CommandList.Remove(_currentCommand);
+                Debug.Log("다음");
+                RemoveCommand(_currentCommand);
             }
             ClearCommands();
+            Debug.Log("배틀 끝");
             eventChannel.RaiseEvent(new OnEndBattle());
         }
 

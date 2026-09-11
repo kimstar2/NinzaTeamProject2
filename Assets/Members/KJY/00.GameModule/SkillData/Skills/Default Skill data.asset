@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
   m_Name: Default Skill data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillDataSO
-  <SkillLogic>k__BackingField: {fileID: 5993351066188092592, guid: 64267ae6266ad324fb9f39931e733022, type: 3}
-  skillName: Default Skill
+  <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: bb34b18dba2e5e04b8dacfe9ef904576, type: 3}
+  <SkillName>k__BackingField: DefaultSkill

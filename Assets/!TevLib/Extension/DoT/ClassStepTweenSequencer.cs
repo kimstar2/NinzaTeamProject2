@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,12 +7,13 @@ using UnityEngine.UI;
 namespace _TevLib.Extension.DoT
 {
 
-    public class TweenSOSequencer : MonoBehaviour
+    public class ClassStepTweenSequencer : MonoBehaviour
     {
+        [SerializeField] public bool setAwakeCache = true;
         [SerializeField] public bool debugMode = false;
         [field:SerializeField] public bool IsCanvas {get; private set;}
         [field: SerializeField] public Transform targetTrm;
-        [SerializeField] private List<TweenStepSO> sequenceStep;
+        [SerializeField] private List<TweenStepClass> sequenceStep;
         [Header("Tween Options")]
         [SerializeField] private UpdateType updateType;
         [SerializeField] private bool independentTime;
@@ -38,7 +39,8 @@ namespace _TevLib.Extension.DoT
         
         private void Awake()
         {
-            CacheComponents();
+            if (setAwakeCache)
+                CacheComponents();
         }
 
         private void CacheComponents()
@@ -56,6 +58,9 @@ namespace _TevLib.Extension.DoT
                 _spriteRenderer = targetTrm.GetComponent<SpriteRenderer>();
             }
         }
+        
+        public void SetSteps(List<TweenStepClass> steps) => sequenceStep = steps;
+        public void ClearStep() => sequenceStep.Clear();
 
         public bool SequenceAndResult()
         {
@@ -66,7 +71,7 @@ namespace _TevLib.Extension.DoT
 
             bool hasStep = false;
 
-            foreach (TweenStepSO step in sequenceStep)
+            foreach (TweenStepClass step in sequenceStep)
                 hasStep |= AddStep(_activeSequence, step);
 
             if (!hasStep)
@@ -86,9 +91,6 @@ namespace _TevLib.Extension.DoT
             return true;
         }
         
-        public void SetSteps(List<TweenStepSO> steps) => sequenceStep = steps;
-        public void ClearSteps() => sequenceStep.Clear();
-        
         [ContextMenu("Sequence")]
         public void Sequence()
         {
@@ -99,7 +101,7 @@ namespace _TevLib.Extension.DoT
 
             bool hasStep = false;
 
-            foreach (TweenStepSO step in sequenceStep)
+            foreach (TweenStepClass step in sequenceStep)
                 hasStep |= AddStep(_activeSequence, step);
 
             if (!hasStep)
@@ -123,9 +125,15 @@ namespace _TevLib.Extension.DoT
             onSeqComplete?.Invoke();
         }
 
+        public void SetTargetTrm(Transform trm)
+        {
+            targetTrm = trm;
+            CacheComponents();
+        }
+
         #region TweenHelper
         
-        private bool AddStep(Sequence sequence, TweenStepSO step)
+        private bool AddStep(Sequence sequence, TweenStepClass step)
         {
             switch (step.InsertType)
             {
@@ -178,7 +186,7 @@ namespace _TevLib.Extension.DoT
         }
 
         
-        private Tween MakeTween(TweenStepSO step)
+        private Tween MakeTween(TweenStepClass step)
         {
             switch (step.ActionType)
             {
@@ -209,13 +217,13 @@ namespace _TevLib.Extension.DoT
             return null;
         }
         
-        private Tween CreateMoveTween(TweenStepSO step)
+        private Tween CreateMoveTween(TweenStepClass step)
             => (IsCanvas ? _rectTrm : _transform).DOMove(step.GetTransformValue(), step.Duration);
 
-        private Tween CreateLocalScaleTween(TweenStepSO step)
+        private Tween CreateLocalScaleTween(TweenStepClass step)
             => (IsCanvas ? _rectTrm : _transform).DOScale(step.GetTransformValue(), step.Duration);
 
-        private Tween CreateCanvasAlpha(TweenStepSO step)
+        private Tween CreateCanvasAlpha(TweenStepClass step)
         {
             if (_canvasGroup == null)
             {
@@ -225,7 +233,7 @@ namespace _TevLib.Extension.DoT
             return _canvasGroup.DOFade(step.FadeValue, step.Duration);
         }
 
-        private Tween CreateAnchoredPositionTween(TweenStepSO step)
+        private Tween CreateAnchoredPositionTween(TweenStepClass step)
         {
             if (!IsCanvas)
             {
@@ -235,22 +243,22 @@ namespace _TevLib.Extension.DoT
             return _rectTrm.DOAnchorPos(step.GetTransformValue(), step.Duration);
         }
 
-        private Tween CreateLocalRotationTween(TweenStepSO step)
+        private Tween CreateLocalRotationTween(TweenStepClass step)
             => (IsCanvas ? _rectTrm : _transform).DOLocalRotate(step.GetTransformValue(), step.Duration,
                 step.UsingFastBeyond ?
                 RotateMode.FastBeyond360 :
                 RotateMode.Fast);
 
-        private Tween CreateLocalMoveTween(TweenStepSO step)
+        private Tween CreateLocalMoveTween(TweenStepClass step)
             => (IsCanvas ? _rectTrm : _transform).DOLocalMove(step.GetTransformValue(), step.Duration);
 
-        private Tween CreateRotationTween(TweenStepSO step)
+        private Tween CreateRotationTween(TweenStepClass step)
             => (IsCanvas ? _rectTrm : _transform).DORotate(step.GetTransformValue(), step.Duration,
                 step.UsingFastBeyond ?
                     RotateMode.FastBeyond360 :
                     RotateMode.Fast);
 
-        private Tween CreateColorTween(TweenStepSO step)
+        private Tween CreateColorTween(TweenStepClass step)
         {
             if (IsCanvas)
             {
@@ -266,7 +274,7 @@ namespace _TevLib.Extension.DoT
             return _spriteRenderer.DOColor(step.ColorValue, step.Duration);
         }
 
-        private Tween CreateFadeTween(TweenStepSO step)
+        private Tween CreateFadeTween(TweenStepClass step)
         {
             float alpha = Mathf.Clamp01(step.FadeValue);
 
@@ -284,7 +292,7 @@ namespace _TevLib.Extension.DoT
             return _spriteRenderer.DOFade(alpha, step.Duration);
         }
 
-        private Tween CreateSizeDeltaTween(TweenStepSO step)
+        private Tween CreateSizeDeltaTween(TweenStepClass step)
         {
             if (_rectTrm == null)
                 return LogMissingComponent<RectTransform>(step.ActionType);
@@ -292,7 +300,7 @@ namespace _TevLib.Extension.DoT
             return _rectTrm.DOSizeDelta(step.GetTransformValue(), step.Duration);
         }
 
-        private Tween CreateFillAmountTween(TweenStepSO step)
+        private Tween CreateFillAmountTween(TweenStepClass step)
         {
             if (_image == null)
                 return LogMissingComponent<Image>(step.ActionType);
@@ -313,6 +321,7 @@ namespace _TevLib.Extension.DoT
             _activeSequence.Kill();
             _activeSequence = null;
         }
+        
         #endregion
     }
 }

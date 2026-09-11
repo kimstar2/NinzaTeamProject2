@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 namespace _TevLib.Extension.DoT
 {
     [Serializable]
-    public struct TweenStep
+    public class TweenStepClass
     {
         [field: SerializeField] public SequenceActionType ActionType { get; private set; }
         [field: SerializeField] public SequenceInsertType InsertType { get; private set; }
@@ -32,6 +32,8 @@ namespace _TevLib.Extension.DoT
             return resultVector;
         }
 
+        public void SetTransformValue(Vector3 value) => MinTransformValue = value;
+        
         [field:SerializeField] public float FadeValue { get; private set; }
         [field:SerializeField] public Color ColorValue { get; private set; }
         

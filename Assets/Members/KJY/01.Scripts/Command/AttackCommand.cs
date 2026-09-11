@@ -2,7 +2,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Members.KJY._01.Scripts.Agent;
-using Members.KJY._01.Scripts.Agent.Skill;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Command
@@ -24,14 +23,13 @@ namespace Members.KJY._01.Scripts.Command
             TargetSelector = targetSelector;
         }
 
-        public void Execute() => Attacker.SkillExecutor.TryExecuteSkill(Attacker.DiceInventory.GetDiceData().SkillData);
+        public void Execute() => Attacker.SkillExecutor.TryExecuteSkill(Attacker,TargetSelector);
 
         public async UniTask ExecuteAction(CancellationToken token)
         {
             _nextSignal = new UniTaskCompletionSource();
             _nextSignal.Task.ToCancellationToken(token);
             await _nextSignal.Task;
-            TargetSelector.ApplyDamage(Damage);
         }
 
         public void MoveNext()

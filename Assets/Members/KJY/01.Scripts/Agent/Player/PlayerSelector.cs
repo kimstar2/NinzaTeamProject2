@@ -1,6 +1,7 @@
 ﻿using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice.Interface;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
+using Members.KJY._01.Scripts.Services;
 using Members.KJY._01.Scripts.UI.Mono;
 using Members.KJY._01.Scripts.Util;
 using UnityEngine;
@@ -19,7 +20,11 @@ namespace Members.KJY._01.Scripts.Agent.Player
         public UnityEvent onSetTarget;
 
 
-        private void Start() => targetOutline.SetColor(PlayerColor);
+        private void Start()
+        {
+            MyTransform = ServiceLocator.Get<IGetPlayerTrmService>().GetPlayerTrm(PlayerType);
+            targetOutline.SetColor(PlayerColor);
+        }
 
         private void OnEnable()
         {

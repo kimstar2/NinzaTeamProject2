@@ -9,6 +9,7 @@ namespace _TevLib.Extension.DoT
 
     public class TweenSequencer : MonoBehaviour
     {
+        [SerializeField] public bool setAwakeCache = true;
         [SerializeField] public bool debugMode = false;
         [field:SerializeField] public bool IsCanvas {get; private set;}
         [field: SerializeField] public Transform targetTrm;
@@ -38,7 +39,8 @@ namespace _TevLib.Extension.DoT
         
         private void Awake()
         {
-            CacheComponents();
+            if (setAwakeCache)
+                CacheComponents();
         }
 
         private void CacheComponents()
@@ -56,6 +58,9 @@ namespace _TevLib.Extension.DoT
                 _spriteRenderer = targetTrm.GetComponent<SpriteRenderer>();
             }
         }
+        
+        public void SetSteps(List<TweenStep> steps) => sequenceStep = steps;
+        public void ClearStep() => sequenceStep.Clear();
 
         public bool SequenceAndResult()
         {
@@ -118,6 +123,12 @@ namespace _TevLib.Extension.DoT
         {
             _activeSequence = null;
             onSeqComplete?.Invoke();
+        }
+
+        public void SetTargetTrm(Transform trm)
+        {
+            targetTrm = trm;
+            CacheComponents();
         }
 
         #region TweenHelper
