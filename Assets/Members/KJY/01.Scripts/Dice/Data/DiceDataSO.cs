@@ -1,4 +1,5 @@
-﻿using Members.PSW.Code.Test;
+﻿using Members.KJY._01.Scripts.Agent.Skill;
+using Members.PSW.Code.Test;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Dice.Data
@@ -13,7 +14,7 @@ namespace Members.KJY._01.Scripts.Dice.Data
         [field: TextArea, SerializeField] public string Description { get; private set; }
 
         [field: Header("Dice Data")]
-        [field:SerializeField] public SkillSO SkillData { get; private set;}
+        [field:SerializeField] public SkillDataSO SkillData { get; private set;}
         [field:SerializeField] public float BaseDamage { get; private set; }
     }
 }

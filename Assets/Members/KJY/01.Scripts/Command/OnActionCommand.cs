@@ -2,7 +2,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace Members.KJY._01.Scripts.Dice.Command
+namespace Members.KJY._01.Scripts.Command
 {
     public class OnActionCommand : ICommand
     {

@@ -1,22 +1,30 @@
 ﻿using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
-using Members.KJY._01.Scripts.Agent;
+using Members.KJY._01.Scripts.Agent.Skill;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Members.KJY._01.Scripts.Dice
+namespace Members.KJY._01.Scripts.Agent
 {
+    /// <summary>
+    /// 얘가 선택 관련도 하긴하는데
+    /// 막상 그냥 컨드롤러라고 보면 됨..
+    /// 나누기 귀찮아서 그런건 ㅈㅅ
+    /// </summary>
     public abstract class AbstractSelector : ModuleOwner ,  IDamageable
     {
         [field:SerializeField] public bool IsSelect {get; protected set;} 
         [field: SerializeField] public Transform LineConnectTrm { get; private set; }
+        [field: SerializeField] public Transform MyTransform { get; private set; }
         [SerializeField] protected EventChannelSO eventChannel;
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;
 
         #region Modules
 
+        public SkillExecutor SkillExecutor { get; private set; }
         public HealthModule HealthModule {get; private set;}
+        public AbstractDiceInventory DiceInventory { get; private set; }
 
         #endregion
         
@@ -24,6 +32,8 @@ namespace Members.KJY._01.Scripts.Dice
         {
             base.InitializeModules();
             HealthModule = GetModule<HealthModule>();
+            SkillExecutor = GetModule<SkillExecutor>();
+            DiceInventory = GetModule<AbstractDiceInventory>();
         }
         
         public void SelectToggle()

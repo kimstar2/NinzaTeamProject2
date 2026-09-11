@@ -5,7 +5,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
-using Members.KJY._01.Scripts.Dice.Command;
+using Members.KJY._01.Scripts.Command;
 using Members.KJY._01.Scripts.Events.Dice;
 using UnityEngine;
 using UnityEngine.InputSystem;

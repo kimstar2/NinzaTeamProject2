@@ -1,9 +1,7 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using Cysharp.Threading.Tasks;
-using UnityEngine;
 
-namespace Members.KJY._01.Scripts.Dice.Command
+namespace Members.KJY._01.Scripts.Command
 {
     public interface ICommand
     {

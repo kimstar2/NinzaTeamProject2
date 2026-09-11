@@ -1,18 +1,14 @@
-﻿using System;
-using DevLib.CoreLib.Runtime;
-using DevLib.ServiceLocator;
-using Members.KJY._01.Scripts.Agent.Player;
+﻿using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice.Interface;
-using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
 using Members.KJY._01.Scripts.UI.Mono;
 using Members.KJY._01.Scripts.Util;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Members.KJY._01.Scripts.Dice
+namespace Members.KJY._01.Scripts.Agent.Player
 {
-    public class DiceSelector : AbstractSelector
+    public class PlayerSelector : AbstractSelector
     {
         [field: SerializeField] public PlayerType PlayerType { get; private set; }
         [field: SerializeField] public GradientSO LineColor { get; private set; }
@@ -64,7 +60,7 @@ namespace Members.KJY._01.Scripts.Dice
 
         private void HandleDiceSelect(OnPlayerSelect evt)
         {
-            if (evt.DiceSelector.PlayerType == PlayerType)
+            if (evt.PlayerSelector.PlayerType == PlayerType)
             {
                 eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerType));
                 onUnSelect?.Invoke();
@@ -91,16 +87,14 @@ namespace Members.KJY._01.Scripts.Dice
         private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
         
         
-        public override void ApplyDamage(float damage)
-        {
-        }
+        public override void ApplyDamage(float damage) { }
 
-        public override void OnAttackCommand() { UnSelect(); }
+        public override void OnAttackCommand() => UnSelect();
 
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            gameObject.name = $"{nameof(DiceSelector)} ({PlayerType})";
+            gameObject.name = $"{nameof(PlayerSelector)} ({PlayerType})";
         }
 
 #endif
