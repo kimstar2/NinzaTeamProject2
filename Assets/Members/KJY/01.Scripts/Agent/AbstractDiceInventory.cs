@@ -16,7 +16,6 @@ namespace Members.KJY._01.Scripts.Agent
         {
             base.Initialize(owner);
             RunTimeDiceDataList = defaultDiceDataList.GetRuntimeList();
-            
         }
         
         public abstract void DiceDataChanged();

@@ -46,12 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.Skill.TestSkill
   <TweenSequencer>k__BackingField: {fileID: 9027923830301153940}
-  attackerStepIndex: 1
+  attackerStepIndex: 2
   targetStepIndex: 0
   tweenSteps:
   - <ActionType>k__BackingField: 4
     <InsertType>k__BackingField: 3
-    <EaseType>k__BackingField: 9
+    <EaseType>k__BackingField: 30
     <Duration>k__BackingField: 0.4
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
@@ -62,6 +62,32 @@ MonoBehaviour:
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
+  - <ActionType>k__BackingField: 3
+    <InsertType>k__BackingField: 4
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.4
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4764194320588573822}
+          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.Skill.TestSkill,
+            Assembly-CSharp
+          m_MethodName: ApplyStat
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - <ActionType>k__BackingField: 4
     <InsertType>k__BackingField: 3
     <EaseType>k__BackingField: 9
@@ -75,6 +101,9 @@ MonoBehaviour:
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
+  skillApplyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 5
 --- !u!1 &5825680277268869355
 GameObject:
   m_ObjectHideFlags: 0

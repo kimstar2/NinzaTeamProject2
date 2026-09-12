@@ -39,7 +39,7 @@ namespace Members.KJY._01.Scripts.Dice
             eventChannel.RemoveListener<OnRoll>(HandleRoll);
         }
         
-        private void HandleRoll(OnRoll obj) => Roll(destTrm.position,GetRandom());
+        private void HandleRoll(OnRoll obj) => Roll(destTrm.localPosition,GetRandom());
         private void HandleDiceLock(OnDiceLock obj)
         {
             if (obj.PlayerType != playerType) return;
@@ -64,7 +64,7 @@ namespace Members.KJY._01.Scripts.Dice
             _roll.Append(
                 transform.DOLocalMove(maxPos, rollingStep.Duration).SetEase(rollingStep.EaseType));
             _roll.Append(
-                transform.DOLocalMove(destTrm.position, power/fallingStep.Duration).SetEase(fallingStep.EaseType)
+                transform.DOLocalMove(destTrm.localPosition, power/fallingStep.Duration).SetEase(fallingStep.EaseType)
             );
             _roll.Insert(0f,
                 transform.DOLocalRotate(

@@ -5,6 +5,13 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.SkillSystem
 {
+    [Serializable]
+    public struct SkillApplyStat
+    {
+        [field:SerializeField] public  ApplyStatType ApplyStatType { get; private set; }
+        [field:SerializeField] public  float Value { get; private set; }
+    }
+    
     public class SkillLogicExecutor : MonoBehaviour , ISkillLogicExecutor
     {
         [SerializeField] public List<AbstractSkillLogic> skills;
@@ -18,7 +25,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public void SkillExecute(AbstractSelector attacker, AbstractSelector target)
         {
             foreach (AbstractSkillLogic skillLogic in skills)
-                skillLogic.Execute(attacker, target);
+                skillLogic.InitAndExecute(attacker, target);
             OnSkillExecute?.Invoke();
         }
     }

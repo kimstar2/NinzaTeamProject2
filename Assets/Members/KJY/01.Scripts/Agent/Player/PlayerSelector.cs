@@ -48,7 +48,6 @@ namespace Members.KJY._01.Scripts.Agent.Player
                 SetHasTarget(false);
                 eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerType));
                 onUnSelect?.Invoke();
-                Debug.Log("이");
                 return;
             }
             Debug.Log("뱅");
@@ -80,6 +79,13 @@ namespace Members.KJY._01.Scripts.Agent.Player
             UnSelect();
             onSetTarget?.Invoke();
         }
+        
+        public void OffSetTarget()
+        {
+            SetHasTarget(false);
+            UnSelect();
+        }
+
 
         private bool CheckIsSelect()
         {
@@ -91,10 +97,16 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
         
-        
-        public override void ApplyDamage(float damage) { }
-
         public override void OnAttackCommand() => UnSelect();
+        
+        public override void ApplyDamage(float damage)
+        {
+            HealthModule.TakeDamage(damage);
+        }
+
+        public override void ApplyHeal(float heal)
+        {
+        }
 
 #if UNITY_EDITOR
         private void OnValidate()

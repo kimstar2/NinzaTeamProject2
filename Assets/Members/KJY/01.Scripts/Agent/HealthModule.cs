@@ -41,6 +41,7 @@ namespace Members.KJY._01.Scripts.Agent
         {
             if (_isDead) return;
             
+            Debug.Log($"아야 {damage}");
             CurrentHealth -= damage;
             
             if (CurrentHealth <= 0)

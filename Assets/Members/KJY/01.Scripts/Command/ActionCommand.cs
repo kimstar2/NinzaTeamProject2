@@ -7,7 +7,7 @@ using UnityEngine;
 namespace Members.KJY._01.Scripts.Command
 {
     [Serializable]
-    public class AttackCommand : ICommand
+    public class ActionCommand : ICommand
     {
         // 직렬화 시켜놓는 이유는 인스펙터에서 배틀 옵저버 커맨드 확인 용임
         [field:SerializeField] public float Damage {get; private set;}
@@ -17,7 +17,7 @@ namespace Members.KJY._01.Scripts.Command
         private UniTaskCompletionSource _nextSignal;
         
         
-        public AttackCommand(AbstractSelector attacker , AbstractSelector targetSelector)
+        public ActionCommand(AbstractSelector attacker , AbstractSelector targetSelector)
         {
             Attacker = attacker;
             TargetSelector = targetSelector;

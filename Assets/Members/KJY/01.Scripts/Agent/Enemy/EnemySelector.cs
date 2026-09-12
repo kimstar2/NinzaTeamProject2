@@ -20,12 +20,15 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             onUnSelect?.Invoke();
         }
 
-        public override void ApplyDamage(float damage) // 추후 데이터 추가 예정
-        {
-            HealthModule.TakeDamage(damage);
-            Debug.Log($"아야 입은데미지 : {damage}");
-        }
 
         public override void OnAttackCommand() { }
+        public override void ApplyDamage(float damage)
+        {
+            HealthModule.TakeDamage(damage);
+        }
+
+        public override void ApplyHeal(float heal)
+        {
+        }
     }
 }

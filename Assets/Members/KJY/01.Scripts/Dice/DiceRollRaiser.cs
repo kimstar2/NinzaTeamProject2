@@ -25,6 +25,7 @@ namespace Members.KJY._01.Scripts.Dice
         private void Start()
         {
             _eventChannel = ServiceLocator.Get<IGetEventService>().EventChannel;
+            Roll(); // 처음 데이터 주입을 위함
         }
 
         public void Roll()
