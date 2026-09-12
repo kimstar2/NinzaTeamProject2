@@ -1,4 +1,5 @@
-﻿using Members.KJY._01.Scripts.Agent.SkillSystem;
+﻿using System;
+using Members.KJY._01.Scripts.Agent.SkillSystem;
 using Members.PSW.Code.Test;
 using UnityEngine;
 
@@ -10,8 +11,6 @@ namespace Members.KJY._01.Scripts.Dice.Data
         [field: Header("Basic Data")]
         [field: SerializeField] public DiceGradeSO DiceGrade {get; private set;}
         [field: SerializeField] public Sprite Icon { get; private set; }
-        [field: SerializeField] public string SkillName { get; private set; }
-        [field: TextArea, SerializeField] public string Description { get; private set; }
 
         [field: Header("Dice Data")]
         [field:SerializeField] public SkillDataSO SkillData { get; private set;}

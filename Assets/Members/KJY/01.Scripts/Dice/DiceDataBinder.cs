@@ -31,8 +31,8 @@ namespace Members.KJY._01.Scripts.Dice
         {
             if (evt.PlayerType != playerType) return;
             DiceDataSO diceData = evt.DiceData;
-            titleTMP.SetText(diceData.SkillName);
-            descTMP.SetText(diceData.Description);
+            titleTMP.SetText(diceData.SkillData.SkillName);
+            descTMP.SetText(diceData.SkillData.SkillDescription);
             gradeOutline.SetColor(diceData.DiceGrade.GradeColor);
             iconImage.ToList().ForEach(i=>i.SetImage(diceData.Icon));
         }

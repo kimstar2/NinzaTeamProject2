@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: bb34b18dba2e5e04b8dacfe9ef904576, type: 3}
   <SkillName>k__BackingField: TestSkill1
+  <SkillDescription>k__BackingField: "\uC801\uC744 \uBBF8\uCE5C \uAC1C\uCA4C\uB294
+    \uBC29\uBC95\uC73C\uB85C \uC5C6\uC560\uBC84\uB9BD\uB2C8\uB2E4."

@@ -3,6 +3,7 @@ using System.Linq;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using DevLib.ServiceLocator;
+using DG.Tweening;
 using Members.KJY._01.Scripts.Agent.Enemy;
 using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Command;
@@ -19,8 +20,11 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     {
         [field: SerializeField] public PlayerSelector CurrentPlayerSelector { get; private set; }
         [SerializeField] private EventChannelSO eventChannel;
+        
+        [Header("Line Renderer Set")]
         [SerializeField] private MonoLineRenderer copyLineRenderer;
         [SerializeField] private Transform lRParent;
+        [SerializeField] private float lRFadeTime;
 
         private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
         private BattleObserver _battleObserver;
@@ -74,19 +78,31 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             }
             copyLineRenderer.SetGradient(getSelector.LineColor.GetGradient());
             lR = Instantiate(copyLineRenderer.LineRenderer, lRParent, true);
+
+            lR.widthMultiplier = 0;
+            
+            DOTween.To(() => lR.widthMultiplier,
+                    x => lR.widthMultiplier = x, 1, lRFadeTime)
+                .SetLink(lR.gameObject , LinkBehaviour.KillOnDestroy);
             
             lR.SetPositions(a2B);
             
             _lineConnectors.Add(getSelector, lR);
         }
-        
+
         public void RemoveLine(PlayerSelector selector)
         {
-            if (!_lineConnectors.TryGetValue(selector, out LineRenderer lR)) return; // 있으면? 가져옴
-            Destroy(lR.gameObject); // 나중에 풀링 대체여
-            _lineConnectors.Remove(selector);
+            if (!_lineConnectors.Remove(selector, out LineRenderer lR)) return; // 있으면? 가져옴
+            DOTween.To(() => lR.widthMultiplier,
+                    x => lR.widthMultiplier = x, 0, lRFadeTime)
+                .SetLink(lR.gameObject , LinkBehaviour.KillOnDestroy)
+                .OnComplete(() =>
+                    {
+                        Destroy(lR.gameObject); // 나중에 풀링 대체여
+                    }
+                );
         }
-        
+
         // 현재 플레이어가 선택중에 있는지 체크
         public (PlayerType type, bool isSelect) GetIsSelect() => 
             (CurrentPlayerSelector != null ? CurrentPlayerSelector.PlayerType : PlayerType.None,
@@ -141,8 +157,18 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
             ClearCrtSelector();
             _battleObserver.StartBattle();
+            
+            RemoveAllLine();
         }
-        
+
+        private void RemoveAllLine()
+        {
+            List<PlayerSelector> removeList = BattleChain.Keys.ToList();
+
+            foreach (PlayerSelector pS in removeList)
+                RemoveLine(pS);
+        }
+
         private void HandleEndBattle(OnEndBattle obj)
         {
             List<PlayerSelector> removeList = BattleChain.Keys.ToList();
@@ -151,7 +177,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             {
                 pS.SelectToggle();
                 RemoveFromBattleChain(pS);
-                RemoveLine(pS);
             }
             ReCheck();
         }

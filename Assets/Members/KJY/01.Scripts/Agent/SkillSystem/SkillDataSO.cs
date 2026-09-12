@@ -7,5 +7,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
     {
         [field: SerializeField] public SkillLogicExecutor SkillLogicExecutor { get; private set; }
         [field: SerializeField] public string SkillName {get; private set;}
+        [field: SerializeField,TextArea] public string SkillDescription {get; private set;}
     }
 }
