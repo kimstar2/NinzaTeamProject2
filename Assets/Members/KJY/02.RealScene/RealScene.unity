@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uACF5\uACA9 \uC21C\uC11C"
+  m_text: "\uC9C4\uD589 \uC21C\uC11C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6d7a2a91b6ebd46aee11a58156a25a, type: 2}
   m_sharedMaterial: {fileID: 44029733490205967, guid: bf6d7a2a91b6ebd46aee11a58156a25a, type: 2}
@@ -2653,11 +2653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85b21a41c4d42c897336432d5cf386d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Services.GetPlayerTrmService
-  targetTransforms:
-  - {<TargetTrm>k__BackingField: {fileID: 647002677}, <PlayerType>k__BackingField: 0}
-  - {<TargetTrm>k__BackingField: {fileID: 0}, <PlayerType>k__BackingField: 1}
-  - {<TargetTrm>k__BackingField: {fileID: 0}, <PlayerType>k__BackingField: 2}
-  - {<TargetTrm>k__BackingField: {fileID: 0}, <PlayerType>k__BackingField: 3}
 --- !u!1 &326901600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,7 +2728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f6da4f128746ebba53d2d448aff972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Services.GetEventService
-  <EventChannel>k__BackingField: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!1 &350303802
 GameObject:
   m_ObjectHideFlags: 0
