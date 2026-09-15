@@ -2,6 +2,7 @@
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Agent.SkillSystem;
+using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.UI.Mono;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,10 +16,13 @@ namespace Members.KJY._01.Scripts.Agent
     /// </summary>
     public abstract class AbstractSelector : ModuleOwner ,  IStatApply
     {
-        [field:SerializeField] public bool IsSelect {get; protected set;} 
+        [field:Header("Object Setting")]
         [field: SerializeField] public Transform LineConnectTrm { get; private set; }
-        [field:SerializeField] public Transform MyTransform { get; protected set; }
         [field:SerializeField] public Transform DefaultPosition { get; private set; }
+        [field:SerializeField] public AbstractAgent MyAgent { get; private set; }
+        [field:Header("Game Setting")]
+        [field:SerializeField] public bool IsSelect {get; protected set;} 
+        [field:SerializeField] public UIMonoImage IconImage { get; private set; }
         [SerializeField] protected EventChannelSO eventChannel;
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;

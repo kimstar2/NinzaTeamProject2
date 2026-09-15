@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Command;
 using Members.KJY._01.Scripts.Events.Dice;
+using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using ZLinq;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
 {
@@ -49,7 +49,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             KillTask();
             BattleCts = new CancellationTokenSource();
             CancellationToken ct = BattleCts.Token;
-            foreach (ICommand command in CommandList.ToList())
+            
+            foreach (ICommand command in CommandList.AsValueEnumerable().ToList())
             {
                 _currentCommand = command;
                 _currentCommand.Execute();
@@ -60,6 +61,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             ClearCommands();
             Debug.Log("배틀 끝");
             eventChannel.RaiseEvent(new OnEndBattle());
+            eventChannel.RaiseEvent(new OnEnemyRoll());
         }
 
         private void Update()

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using DevLib.CoreLib.Runtime;
 using Members.PSW.Code.DiceReroll_Lock.Events;
 using Members.PSW.Code.Test;
 using UnityEngine;
+using ZLinq;
 
 namespace Members.PSW.Code.DiceReroll_Lock
 {
@@ -19,7 +19,7 @@ namespace Members.PSW.Code.DiceReroll_Lock
         
         private void Awake()
         {
-            _diceList = GetComponentsInChildren<IReroll>().ToList();
+            _diceList = GetComponentsInChildren<IReroll>().AsValueEnumerable().ToList();
         }
         
         private void OnEnable()
