@@ -10,29 +10,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/DamageText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/DamageText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Test/SkillSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Editor/SkillSettingDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Editor/SkillSettingDrawer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/ISkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/ISkillLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillCalculater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/SkillCalculater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Structs/SkillSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Structs/SkillSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data 3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data 3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/skill data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/TestTarget.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/TestTarget.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/마법사.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/마법사.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/전사.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/전사.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/탱커.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/탱커.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/힐러.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Data/힐러.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Module/HealthModule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Unit/Unit Module/HealthModule.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/UnitTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/UnitTestScene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +84,7 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Lumen",
+    "git-widget-placeholder": "Sunfish",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
