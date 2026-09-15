@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: efe1f09fcd9af294f9e380d69d876f2b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5087768955279185939
+    second: PlayerCard-Pixel-Concept-v1_0
+  - first:
+      213: 8771634886766377590
+    second: PlayerCard-Pixel-Concept-v1_1
+  - first:
+      213: 2861616051183429262
+    second: PlayerCard-Pixel-Concept-v1_2
+  - first:
+      213: -3253256871432841717
+    second: PlayerCard-Pixel-Concept-v1_3
+  - first:
+      213: 7341730783579518285
+    second: PlayerCard-Pixel-Concept-v1_4
+  - first:
+      213: 6377240367117591489
+    second: PlayerCard-Pixel-Concept-v1_5
+  - first:
+      213: 6422052253138754412
+    second: PlayerCard-Pixel-Concept-v1_6
+  - first:
+      213: -3625152944461110922
+    second: PlayerCard-Pixel-Concept-v1_7
+  - first:
+      213: 6145950109790143425
+    second: PlayerCard-Pixel-Concept-v1_8
+  - first:
+      213: 1588263199467967338
+    second: PlayerCard-Pixel-Concept-v1_9
+  - first:
+      213: -2263921800849699209
+    second: PlayerCard-Pixel-Concept-v1_10
+  - first:
+      213: -3590895008008792460
+    second: PlayerCard-Pixel-Concept-v1_11
+  - first:
+      213: 3559637769512907666
+    second: PlayerCard-Pixel-Concept-v1_12
+  - first:
+      213: -9016318919680725858
+    second: PlayerCard-Pixel-Concept-v1_13
+  - first:
+      213: 1243609416617625991
+    second: PlayerCard-Pixel-Concept-v1_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1019
+        height: 1536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7e251671d9469b0800000000000000
+      internalID: -5087768955279185939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1502
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a3225947b1bb970800000000000000
+      internalID: 8771634886766377590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1503
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86285613a086b720800000000000000
+      internalID: 2861616051183429262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_3
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1459
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b069527ac1c1ad2d0800000000000000
+      internalID: -3253256871432841717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_4
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 121
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45becfdf3113e560800000000000000
+      internalID: 7341730783579518285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_5
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 55
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c363596352808850800000000000000
+      internalID: 6377240367117591489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 63
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b155daf76bf1950800000000000000
+      internalID: 6422052253138754412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_7
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 67
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6712fe89a9ed0bdc0800000000000000
+      internalID: -3625152944461110922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_8
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 64
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3805def0dca4550800000000000000
+      internalID: 6145950109790143425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_9
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 45
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a631d1607f4aa0610800000000000000
+      internalID: 1588263199467967338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_10
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 35
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e471ded1fe490e0800000000000000
+      internalID: -2263921800849699209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_11
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 33
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47699edf3049a2ec0800000000000000
+      internalID: -3590895008008792460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_12
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 31
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29371ec01bf566130800000000000000
+      internalID: 3559637769512907666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_13
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 14
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9cebca86b99fd280800000000000000
+      internalID: -9016318919680725858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerCard-Pixel-Concept-v1_14
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 15
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78903dcec20324110800000000000000
+      internalID: 1243609416617625991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlayerCard-Pixel-Concept-v1_0: -5087768955279185939
+      PlayerCard-Pixel-Concept-v1_1: 8771634886766377590
+      PlayerCard-Pixel-Concept-v1_10: -2263921800849699209
+      PlayerCard-Pixel-Concept-v1_11: -3590895008008792460
+      PlayerCard-Pixel-Concept-v1_12: 3559637769512907666
+      PlayerCard-Pixel-Concept-v1_13: -9016318919680725858
+      PlayerCard-Pixel-Concept-v1_14: 1243609416617625991
+      PlayerCard-Pixel-Concept-v1_2: 2861616051183429262
+      PlayerCard-Pixel-Concept-v1_3: -3253256871432841717
+      PlayerCard-Pixel-Concept-v1_4: 7341730783579518285
+      PlayerCard-Pixel-Concept-v1_5: 6377240367117591489
+      PlayerCard-Pixel-Concept-v1_6: 6422052253138754412
+      PlayerCard-Pixel-Concept-v1_7: -3625152944461110922
+      PlayerCard-Pixel-Concept-v1_8: 6145950109790143425
+      PlayerCard-Pixel-Concept-v1_9: 1588263199467967338
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,17 @@
+﻿using DevLib.CoreLib.Runtime;
+using Members.KJY._01.Scripts.Agent.Enemy;
+using Members.KJY._01.Scripts.Dice.Data;
+
+namespace Members.KJY._01.Scripts.Events.Dice.Agent.Enemy
+{
+    public class OnEnemyDiceDataBind : GameEvent
+    {
+        public DiceDataSO DiceData { get; private set; }
+        public EnemyNumber EnemyType { get; private set; }
+        public OnEnemyDiceDataBind(DiceDataSO diceData, EnemyNumber enemyType)
+        {
+            DiceData = diceData;
+            EnemyType = enemyType;
+        }
+    }
+}
