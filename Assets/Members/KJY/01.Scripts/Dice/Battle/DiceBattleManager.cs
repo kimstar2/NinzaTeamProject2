@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using DevLib.ServiceLocator;
@@ -13,6 +14,7 @@ using Members.KJY._01.Scripts.Events.Dice.Selector;
 using Members.KJY._01.Scripts.Flags;
 using Members.KJY._01.Scripts.Mono;
 using UnityEngine;
+using ZLinq;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
 {
@@ -25,16 +27,16 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private MonoLineRenderer copyLineRenderer;
         [SerializeField] private Transform lRParent;
         [SerializeField] private float lRFadeTime;
+        [SerializeField] private TweenSequencer startBattleSeq;
 
         private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
         private BattleObserver _battleObserver;
+        public int Count => BattleChain.Count;
 
         private readonly LinkedList<(PlayerSelector playerSelector, EnemySelector enemySelector)> _orderedChain = new();
         // public Dictionary<PlayerSelector,EnemySelector> BattleChain { get; private set; } = new();
         public Dictionary<PlayerSelector, LinkedListNode<(PlayerSelector playerSelector, EnemySelector enemySelector)>> BattleChain { get; private set; } = new();
-        public List<PlayerSelector> keys ;
-        public List<EnemySelector> values;
-
+        
         protected override void InitializeModules()
         {
             base.InitializeModules();
@@ -105,7 +107,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         // 현재 플레이어가 선택중에 있는지 체크
         public (PlayerType type, bool isSelect) GetIsSelect() => 
-            (CurrentPlayerSelector != null ? CurrentPlayerSelector.PlayerType : PlayerType.None,
+            (CurrentPlayerSelector != null ? CurrentPlayerSelector.PlayerData.PlayerType : PlayerType.None,
                 CurrentPlayerSelector != null && CurrentPlayerSelector.IsSelect);
         
         #region EventHandles
@@ -118,35 +120,28 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         {
             if (CurrentPlayerSelector == null) return;
             if (!CurrentPlayerSelector.IsSelect) return; // 현재 셀렉터가 존재하면서 선택이 되어있다면
-            
-            if (RemoveFromBattleChain(CurrentPlayerSelector))
-            {
-                RemoveLine(CurrentPlayerSelector);
-                ReCheck();
-                return;
-            }
-            
+
             AddOrMoveToLast(CurrentPlayerSelector,evt.EnemySelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
             ConnectLine(CurrentPlayerSelector);
+            eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.PlayerData,Count,true));
 
             CurrentPlayerSelector.OnSetTarget();
-            ReCheck();
         }
 
         private void HandleDiceUnSelected(OnPlayerUnSelect evt) // 플레이어가 선택을 취소 했다면 
         {
             if (CurrentPlayerSelector == null) return; // 근데 구라핑이면 리턴
-            if (CurrentPlayerSelector.PlayerType != evt.PlayerType) return; // 취소한애가 현재 셀렉터랑 같냐? (선택되어있는 상태에서 한번더 눌렀을때)
+            if (CurrentPlayerSelector.PlayerData.PlayerType != evt.PlayerType) return; // 취소한애가 현재 셀렉터랑 같냐? (선택되어있는 상태에서 한번더 눌렀을때)
             
             RemoveFromBattleChain(CurrentPlayerSelector); // 선택이 취소 된거니까 체인 연결이 되어있을경우 체인을 파기
             RemoveLine(CurrentPlayerSelector);
 
             ClearCrtSelector(); // 현재 셀렉터는 없음
-            ReCheck();
         }
         
         private void HandleStartBattle(OnStartBattle evt) // 배틀 시작 버튼을 눌렀을때
         {
+            _battleObserver.AddCommand(new OnActionCommand(startBattleSeq.Sequence,null));
             ActionCommand[] getPlayerAttackData = GetP2TAtkCommands();
             foreach (ActionCommand attackCommand in getPlayerAttackData)
                 _battleObserver.AddCommand(attackCommand);
@@ -161,9 +156,11 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             RemoveAllLine();
         }
 
+        public void ExecuteNextCommand() => eventChannel.RaiseEvent(new OnExecuteNextCommand());
+        
         private void RemoveAllLine()
         {
-            List<PlayerSelector> removeList = BattleChain.Keys.ToList();
+            List<PlayerSelector> removeList = BattleChain.Keys.AsValueEnumerable().ToList();
 
             foreach (PlayerSelector pS in removeList)
                 RemoveLine(pS);
@@ -171,14 +168,13 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private void HandleEndBattle(OnEndBattle obj)
         {
-            List<PlayerSelector> removeList = BattleChain.Keys.ToList();
+            List<PlayerSelector> removeList = BattleChain.Keys.AsValueEnumerable().ToList();
 
             foreach (PlayerSelector pS in removeList)
             {
                 pS.SelectToggle();
                 RemoveFromBattleChain(pS);
             }
-            ReCheck();
         }
         
         #endregion
@@ -187,8 +183,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private ActionCommand[] GetP2TAtkCommands() // 플레이어가 적한테 공격
         {
-            ActionCommand[] d = _orderedChain.
-                Select(s => new ActionCommand(s.playerSelector, s.enemySelector)).
+            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.playerSelector, s.enemySelector)).
                 ToArray();
             return d;
         }
@@ -196,20 +191,13 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         private ActionCommand[] GetE2PAtkCommands() // 플레이어가 적한테 공격
         {
-            ActionCommand[] d = _orderedChain.
-                Select(s => new ActionCommand(s.enemySelector, s.playerSelector)).
+            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.enemySelector, s.playerSelector)).
                 ToArray();
             return d;
         }
         
         
         private void ClearCrtSelector() => CurrentPlayerSelector = null;
-        
-        private void ReCheck() // 키,밸 확인용
-        {
-            keys = _orderedChain.Select(s => s.playerSelector).ToList();
-            values = _orderedChain.Select(s => s.enemySelector).ToList();
-        }
 
         public void AddOrMoveToLast(PlayerSelector key, EnemySelector value)
         {
@@ -231,6 +219,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
             _orderedChain.Remove(node);
             BattleChain.Remove(key);
+            
+            eventChannel.RaiseEvent(new OnBattleChainChanged(key.PlayerData,Count,false));
             return true;
         }
 

@@ -9,16 +9,17 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 {
     public class SkillExecutor : MonoModule , IRequirePooling
     {
+        [SerializeField] private Transform skillParent;
         [SerializeField] private EventChannelSO eventChannel;
         public bool CanExecuteSkill { get; private set; } = true;
-        public SkillLogicExecutor CurrentSkillLogic { get; private set; }
+        public ISkillLogicExecutor CurrentSkillLogic { get; private set; }
 
         public void TryExecuteSkill(AbstractSelector attacker, AbstractSelector target) // 스킬 사용 시도
         {
             if(!CanExecuteSkill) return; // 스킬 사용 못해 => 리턴
 
             CurrentSkillLogic = Instantiate(attacker.DiceInventory.GetDiceData()
-                .SkillData.SkillLogicExecutor,transform);
+                .SkillData.SkillLogicExecutor,skillParent.transform);
             
             if (CurrentSkillLogic == null)
             {

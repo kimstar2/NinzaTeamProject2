@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 3308954972889334041}
   - component: {fileID: 5989240373151615508}
   m_Layer: 5
-  m_Name: DiceDataBinder (Tanker)
+  m_Name: PlayerDiceDataBinder (Tanker)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 2616635142116553006}
   - component: {fileID: 8539814864430939586}
   - component: {fileID: 3984144196368593295}
+  - component: {fileID: 6658816076796158196}
   m_Layer: 5
   m_Name: PlayerIcon_image
   m_TagString: Untagged
@@ -430,6 +431,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6658816076796158196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789840407839547788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 755136f5b3004daeacb5e16e12ce99ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.Mono.UIMonoImage
 --- !u!1 &2439431106318738430
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,10 +651,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb713560cfd4d01b7c4c3641c9392b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.DiceSelector
-  <IsSelect>k__BackingField: 0
   <LineConnectTrm>k__BackingField: {fileID: 7935077226433335297}
-  <MyTransform>k__BackingField: {fileID: 0}
   <DefaultPosition>k__BackingField: {fileID: 0}
+  <MyAgent>k__BackingField: {fileID: 0}
+  <IsSelect>k__BackingField: 0
+  <IconImage>k__BackingField: {fileID: 6658816076796158196}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   onSelect:
     m_PersistentCalls:
@@ -649,7 +663,7 @@ MonoBehaviour:
   onUnSelect:
     m_PersistentCalls:
       m_Calls: []
-  <PlayerType>k__BackingField: 0
+  <PlayerData>k__BackingField: {fileID: 0}
   <LineColor>k__BackingField: {fileID: 11400000, guid: e10458bd1ff527e42b032ebfffe4eecf, type: 2}
   <PlayerColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
   targetOutline: {fileID: 6319685054170952251}
@@ -898,6 +912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa1a16d73594b22abd1230bd0c81e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillExecuter
+  skillParent: {fileID: 0}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!1 &2757125109162692828
 GameObject:
@@ -2527,7 +2542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0e23826bd85774fafc4bf902037b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthModule
-  <MaxHealth>k__BackingField: 100
+  <DefaultMaxHealth>k__BackingField: 10
 --- !u!1 &6807989209900345950
 GameObject:
   m_ObjectHideFlags: 0

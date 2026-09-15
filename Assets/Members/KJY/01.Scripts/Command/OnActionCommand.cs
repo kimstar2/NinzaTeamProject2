@@ -12,7 +12,7 @@ namespace Members.KJY._01.Scripts.Command
         private UniTaskCompletionSource _nextSignal;
         
         
-        public OnActionCommand(Action startAction ,float delay , Action endAction)
+        public OnActionCommand(Action startAction , Action endAction)
         {
             StartAction = startAction;
             EndAction = endAction;

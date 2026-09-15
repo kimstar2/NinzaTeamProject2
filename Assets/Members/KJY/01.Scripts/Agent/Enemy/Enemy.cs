@@ -1,11 +1,9 @@
-﻿using DevLib.CoreLib.Runtime;
-using DevLib.ModuleSystem;
-using Members.KJY._01.Scripts.Events.Dice;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.Enemy
 {
-    public class Enemy : ModuleOwner
+    public class Enemy : AbstractAgent
     {
+        
     }
 }

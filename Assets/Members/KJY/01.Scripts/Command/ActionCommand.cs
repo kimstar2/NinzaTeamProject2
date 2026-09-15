@@ -10,7 +10,6 @@ namespace Members.KJY._01.Scripts.Command
     public class ActionCommand : ICommand
     {
         // 직렬화 시켜놓는 이유는 인스펙터에서 배틀 옵저버 커맨드 확인 용임
-        [field:SerializeField] public float Damage {get; private set;}
         [field:SerializeField] public AbstractSelector Attacker { get; private set; }
         [field:SerializeField] public AbstractSelector TargetSelector { get; private set; }
         

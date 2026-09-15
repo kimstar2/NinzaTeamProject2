@@ -7,7 +7,6 @@ using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice;
-using Members.KJY._01.Scripts.Services;
 using Members.KJY._01.Scripts.UI.Mono;
 using UnityEngine;
 using UnityEngine.Events;

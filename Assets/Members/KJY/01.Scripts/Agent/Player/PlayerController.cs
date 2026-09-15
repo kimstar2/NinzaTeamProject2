@@ -1,3 +1,4 @@
+using System;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Events.Player;
 using Members.KJY._01.Scripts.GameSystem;
@@ -6,14 +7,14 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.Player
 {
-    public class PlayerController : ModuleOwner
+    public class PlayerController : MonoBehaviour
     {
         [field: SerializeField] public PlayerInputSO playerInput;
         private Camera _camera;
 
-        protected override void InitializeModules()
+
+        private void Awake()
         {
-            base.InitializeModules();
             _camera = Camera.main;
         }
 
