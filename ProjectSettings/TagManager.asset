@@ -25,7 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - VFX
   - 
   - 
   - 
@@ -40,6 +40,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GameUI
+    uniqueID: 2280492709
+    locked: 0
+  - name: UI
+    uniqueID: 1963040383
+    locked: 0
+  - name: VFX
+    uniqueID: 463734569
     locked: 0
   m_RenderingLayers:
   - Default

@@ -18,7 +18,7 @@ namespace _TevLib.Extension.DoT
         [field:SerializeField] public bool UsingFastBeyond { get; private set; }
         [field:SerializeField] public Vector3 MinTransformValue { get; private set; }
         [field:SerializeField] public Vector3 MaxTransformValue { get; private set; }
-
+        
         public Vector3 GetTransformValue()
         {
             Vector3 resultVector = MinTransformValue;
@@ -32,8 +32,6 @@ namespace _TevLib.Extension.DoT
             return resultVector;
         }
 
-        public void SetTransformValue(Vector3 value) => MinTransformValue = value;
-        
         [field:SerializeField] public float FadeValue { get; private set; }
         [field:SerializeField] public Color ColorValue { get; private set; }
         

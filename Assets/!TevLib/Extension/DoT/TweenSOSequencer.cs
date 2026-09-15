@@ -86,6 +86,9 @@ namespace _TevLib.Extension.DoT
             return true;
         }
         
+        public void SetSteps(List<TweenStepSO> steps) => sequenceStep = steps;
+        public void ClearSteps() => sequenceStep.Clear();
+        
         [ContextMenu("Sequence")]
         public void Sequence()
         {
