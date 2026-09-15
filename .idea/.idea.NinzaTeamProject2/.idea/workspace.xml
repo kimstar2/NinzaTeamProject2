@@ -11,13 +11,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragment.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlotSetter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlotSetter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/JobSetter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/JobSetter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/EventBus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/EventBus.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/Events.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/Events/RegisterFragmentEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/Events/RegisterFragmentEvent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/Events/UnRegisterFragmentEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/Events/UnRegisterFragmentEvent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/08.fonts/MaruMinyaHangul 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.fonts/MaruMinyaHangul 1 SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/BackgroundScroll.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/BackgroundScroll.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/EventScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/EventScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Events/SuperArtMan.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Events/SuperArtMan.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/RestScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/RestScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +49,21 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/BackgroundScroll.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/AddSystem/DiceFragmentSO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/EventDataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/SetButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Event/TextExplainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/JobSetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/MySystem/Events/RegisterFragmentEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/TestFrag 1.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/TestFrag.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/UI/HoverEventer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/UI/TextSine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/LYW/Scripts/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Editor/UGUI/UI/GraphicEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@f17df9b1ab21/Runtime/UGUI/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
@@ -115,6 +147,14 @@
       <workItem from="1787820521514" duration="7525000" />
       <workItem from="1788337475521" duration="1553000" />
       <workItem from="1788423351403" duration="727000" />
+      <workItem from="1788943083084" duration="1202000" />
+      <workItem from="1788962267572" duration="58000" />
+      <workItem from="1789027157499" duration="1172000" />
+      <workItem from="1789028372643" duration="8684000" />
+      <workItem from="1789048097750" duration="1405000" />
+      <workItem from="1789395973180" duration="267000" />
+      <workItem from="1789479472101" duration="1662000" />
+      <workItem from="1789481336846" duration="1279000" />
     </task>
     <servers />
   </component>
