@@ -6,7 +6,7 @@ namespace Members.KJY._01.Scripts.Agent
 {
     public class HealthModule : MonoModule
     {
-        [field: SerializeField] public float MaxHealth { get; private set; } = 10;
+        [field: SerializeField] public float DefaultMaxHealth { get; private set; } = 10;
         private float _currentHealth;
         
         public delegate void HealthChanged(float health , float maxHealth); // 매개변수명 확인을 위함
@@ -17,13 +17,15 @@ namespace Members.KJY._01.Scripts.Agent
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
-            InitHealth();
+            InitHealth(DefaultMaxHealth);
         }
 
-        public void InitHealth()
+        public void InitHealth(float maxHealth , bool initHealth = true)
         {
             _isDead = false;
-            CurrentHealth = MaxHealth;
+            DefaultMaxHealth = maxHealth;
+            if (initHealth)
+                CurrentHealth = DefaultMaxHealth;
         }
         
         public float CurrentHealth
@@ -31,8 +33,8 @@ namespace Members.KJY._01.Scripts.Agent
             get => _currentHealth;
             private set
             {
-                _currentHealth = Mathf.Clamp(value, 0, MaxHealth);
-                OnHealthChanged?.Invoke(_currentHealth , MaxHealth);
+                _currentHealth = Mathf.Clamp(value, 0, DefaultMaxHealth);
+                OnHealthChanged?.Invoke(_currentHealth , DefaultMaxHealth);
             }
         }
         
@@ -41,6 +43,7 @@ namespace Members.KJY._01.Scripts.Agent
         {
             if (_isDead) return;
             
+            Debug.Log($"아야 {damage}");
             CurrentHealth -= damage;
             
             if (CurrentHealth <= 0)

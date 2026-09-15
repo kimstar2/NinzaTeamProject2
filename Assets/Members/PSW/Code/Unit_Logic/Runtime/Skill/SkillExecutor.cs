@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using Members.PSW.Code.Test;
 using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
+using ZLinq;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
 {
@@ -25,7 +25,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
         {
             base.Initialize(owner);
             
-            _skillDict = GetComponentsInChildren<ISkillLogic>(true).ToDictionary(m => m.GetType().Name);
+            _skillDict = GetComponentsInChildren<ISkillLogic>(true).AsValueEnumerable().ToDictionary(m => m.GetType().Name);
             
             InitSkill();
             DebugDictKey();

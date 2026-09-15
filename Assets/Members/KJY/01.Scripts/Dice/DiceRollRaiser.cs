@@ -4,7 +4,7 @@ using DevLib.ModuleSystem;
 using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice;
-using Members.KJY._01.Scripts.Services;
+using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,24 +12,24 @@ namespace Members.KJY._01.Scripts.Dice
 {
     public class DiceRollRaiser : MonoModule
     {
+        [SerializeField] private EventChannelSO eventChannel;
         [SerializeField] private DiceDataSO testData;
         [SerializeField] private float maxRiskLevel;
         [SerializeField] private float riskLevel;
         [SerializeField] private float riskLevelIncrease; // 테스트용임
         [Min(1f),SerializeField] private float riskLevelIncreasePer; // 테스트용임
-        private EventChannelSO _eventChannel;
         private int _rollCount;
         
         public UnityEvent<float> onRiskLevelChanged;
 
         private void Start()
         {
-            _eventChannel = ServiceLocator.Get<IGetEventService>().EventChannel;
+            Roll(); // 처음 데이터 주입을 위함
         }
 
         public void Roll()
         {
-            _eventChannel.RaiseEvent(new OnRoll());
+            eventChannel.RaiseEvent(new OnPlayerRoll());
 
             _rollCount++;
             riskLevel += riskLevelIncreasePer * _rollCount * riskLevelIncrease;

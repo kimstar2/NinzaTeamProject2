@@ -122,7 +122,7 @@ namespace _TevLib.Extension.DoT
         private void HandleCompleteTween()
         {
             _activeSequence = null;
-            onSeqComplete?.Invoke();
+                onSeqComplete?.Invoke();
         }
 
         public void SetTargetTrm(Transform trm)

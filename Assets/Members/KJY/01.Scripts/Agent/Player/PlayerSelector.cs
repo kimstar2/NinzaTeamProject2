@@ -1,7 +1,6 @@
 ﻿using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice.Interface;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
-using Members.KJY._01.Scripts.Services;
 using Members.KJY._01.Scripts.UI.Mono;
 using Members.KJY._01.Scripts.Util;
 using UnityEngine;
@@ -11,7 +10,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
 {
     public class PlayerSelector : AbstractSelector
     {
-        [field: SerializeField] public PlayerType PlayerType { get; private set; }
+        [field: SerializeField] public PlayerDataSO PlayerData { get; private set; }
         [field: SerializeField] public GradientSO LineColor { get; private set; }
         [field: SerializeField] public ColorSO PlayerColor {get; private set;}
         [SerializeField] private UIMonoOutline targetOutline;
@@ -22,8 +21,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         private void Start()
         {
-            MyTransform = ServiceLocator.Get<IGetPlayerTrmService>().GetPlayerTrm(PlayerType);
             targetOutline.SetColor(PlayerColor);
+            ValidateData();
         }
 
         private void OnEnable()
@@ -46,9 +45,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
             if (_hasTarget)
             {
                 SetHasTarget(false);
-                eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerType));
+                eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerData.PlayerType));
                 onUnSelect?.Invoke();
-                Debug.Log("이");
                 return;
             }
             Debug.Log("뱅");
@@ -65,9 +63,9 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         private void HandleDiceSelect(OnPlayerSelect evt)
         {
-            if (evt.PlayerSelector.PlayerType == PlayerType)
+            if (evt.PlayerSelector.PlayerData.PlayerType == PlayerData.PlayerType)
             {
-                eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerType));
+                eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerData.PlayerType));
                 onUnSelect?.Invoke();
             }
             else
@@ -80,26 +78,46 @@ namespace Members.KJY._01.Scripts.Agent.Player
             UnSelect();
             onSetTarget?.Invoke();
         }
+        
+        public void OffSetTarget()
+        {
+            SetHasTarget(false);
+            UnSelect();
+        }
+
 
         private bool CheckIsSelect()
         {
             (PlayerType playerType, bool isSelect) tuple = ServiceLocator.Get<IGetIsSelectService>().GetIsSelect();
-            if (PlayerType == PlayerType.None) return false;
+            if (PlayerData.PlayerType == PlayerType.None) return false;
             
-            return PlayerType != tuple.playerType && tuple.isSelect;
+            return PlayerData.PlayerType != tuple.playerType && tuple.isSelect;
         }
 
         private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
         
-        
-        public override void ApplyDamage(float damage) { }
-
         public override void OnAttackCommand() => UnSelect();
+        
+        public override void ApplyDamage(float damage)
+        {
+            HealthModule.TakeDamage(damage);
+        }
+
+        public override void ApplyHeal(float heal) { }
+        
+        private void ValidateData()
+        {
+            IconImage.SetImage(PlayerData.PlayerImage);
+            IconImage.SetColor(PlayerData.ImageColor);
+            MyAgent.AgentRenderer.SetSprite(PlayerData.PlayerImage);
+            MyAgent.AgentRenderer.SetColor(PlayerData.ImageColor);
+        }
 
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            gameObject.name = $"{nameof(PlayerSelector)} ({PlayerType})";
+            if (PlayerData == null) return;
+            gameObject.name = $"{nameof(PlayerSelector)} ({PlayerData.PlayerType})";
         }
 
 #endif
