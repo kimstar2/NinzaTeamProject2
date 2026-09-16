@@ -16,6 +16,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	              "It requires you have in your scene an object with a Volume " +
 	              "with PaniniProjection active, and a MMPaniniProjectionShaker_URP component.")]
 	#if MM_URP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Panini Projection URP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.URP")]

@@ -10,11 +10,13 @@ namespace Members.KJY._01.Scripts.Agent
     {
         [field:SerializeField] public MonoSprite AgentRenderer {get; private set;}
         public IAnimatable AnimCompo {get; private set;}
+        public IAnimatorTrigger AnimTrigger {get; private set;}
         
         protected override void InitializeModules()
         {
             base.InitializeModules();
             AnimCompo = GetModule<IAnimatable>();
+            AnimTrigger = GetModule<IAnimatorTrigger>();
         }   
     }
 }

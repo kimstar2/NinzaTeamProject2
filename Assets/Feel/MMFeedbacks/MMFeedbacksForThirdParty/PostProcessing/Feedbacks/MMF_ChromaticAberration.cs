@@ -13,6 +13,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	/// </summary>
 	[AddComponentMenu("")]
 	#if MM_POSTPROCESSING
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Chromatic Aberration")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.PostProcessing")]

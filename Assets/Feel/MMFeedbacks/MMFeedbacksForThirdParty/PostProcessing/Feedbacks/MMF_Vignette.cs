@@ -14,6 +14,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	/// </summary>
 	[AddComponentMenu("")]
 	#if MM_POSTPROCESSING
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Vignette")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.PostProcessing")]

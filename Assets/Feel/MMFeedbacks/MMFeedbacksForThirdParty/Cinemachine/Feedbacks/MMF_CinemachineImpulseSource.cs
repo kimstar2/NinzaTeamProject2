@@ -11,6 +11,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 {
 	[AddComponentMenu("")]
 	#if MM_CINEMACHINE || MM_CINEMACHINE3
+	[System.Serializable]
 	[FeedbackPath("Camera/Cinemachine Impulse Source")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.Cinemachine")]

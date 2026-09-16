@@ -14,6 +14,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	/// </summary>
 	[AddComponentMenu("")]
 	#if MM_HDRP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Exposure HDRP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.HDRP")]
