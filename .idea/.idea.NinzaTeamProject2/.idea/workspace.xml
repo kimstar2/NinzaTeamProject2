@@ -11,33 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/indexLayout.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Enemy_container.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Enemy_container.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player_container.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player_container.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceDataBinder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceDataBinder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceDataReceiver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceDataReceiver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceRollData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceRollData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceRollManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceRollManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyNumber.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyNumber.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyType.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemySelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemySelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillExecutor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/ActionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/ActionCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/OnActionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/OnActionCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyDataChanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyDataChanged.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyDiceDataBind.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyDiceDataBind.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyDiceDataChanged.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyDiceDataChanged.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyRoll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyRollRaise.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyRoll.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyRollRaise.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyRollEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/Dice/Agent/Enemy/OnEnemyRollEnd.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,6 +184,8 @@
       <workItem from="1789429097956" duration="2022000" />
       <workItem from="1789456101972" duration="1001000" />
       <workItem from="1789479899200" duration="894000" />
+      <workItem from="1789521027451" duration="202000" />
+      <workItem from="1789527404136" duration="424000" />
     </task>
     <servers />
   </component>
