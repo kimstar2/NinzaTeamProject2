@@ -7,7 +7,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 {
     public class EnemyDice : AbstractDice
     {
-        [SerializeField] private EnemyNumber enemyType;
+        [SerializeField] private EnemyType enemyType;
 
         private void OnEnable()
         {
@@ -22,8 +22,14 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             eventChannel.RemoveListener<OnEnemyRoll>(HandleEnemyRoll);
         }
 
-        private void HandleEnemyRoll(OnEnemyRoll obj)
-            => Roll(destTrm.localPosition,GetRandom());
+        private void HandleEnemyRoll(OnEnemyRoll enemyRoll)
+        {
+            if (enemyRoll.enemyType != enemyType) return;
+            if (enemyRoll.isDead) return;
+            Roll(destTrm.localPosition,GetRandom());
+            
+        }
+        
         protected override void CompleteRoll()
         {
             crtFaceType = diceFaces[currenRan].Type;

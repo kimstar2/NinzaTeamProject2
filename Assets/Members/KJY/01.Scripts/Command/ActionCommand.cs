@@ -22,13 +22,29 @@ namespace Members.KJY._01.Scripts.Command
             TargetSelector = targetSelector;
         }
 
-        public void Execute() => Attacker.SkillExecutor.TryExecuteSkill(Attacker,TargetSelector);
-
-        public async UniTask ExecuteAction(CancellationToken token)
+        public void SetNextSignal(CancellationToken token)
         {
             _nextSignal = new UniTaskCompletionSource();
             _nextSignal.Task.ToCancellationToken(token);
+        }
+
+        public async UniTask ExecuteAction()
+        {
+            if (TryExecuteSkill()) return;
+            
             await _nextSignal.Task;
+        }
+
+        private bool TryExecuteSkill()
+        {
+            if (Attacker.IsDead || TargetSelector.IsDead)
+            {
+                MoveNext();
+                return true;
+            }
+
+            Attacker.SkillExecutor.TryExecuteSkill(Attacker, TargetSelector);
+            return false;
         }
 
         public void MoveNext()

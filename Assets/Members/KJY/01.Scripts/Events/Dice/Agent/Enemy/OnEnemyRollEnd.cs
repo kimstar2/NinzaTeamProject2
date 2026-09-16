@@ -7,9 +7,9 @@ namespace Members.KJY._01.Scripts.Events.Dice.Agent.Enemy
     public class OnEnemyRollEnd : GameEvent
     {
         public DiceFaceType DiceFaceType {get; private set;}
-        public EnemyNumber EnemyType {get; private set;}
+        public EnemyType EnemyType {get; private set;}
         
-        public OnEnemyRollEnd(DiceFaceType diceFaceType , EnemyNumber enemyType)
+        public OnEnemyRollEnd(DiceFaceType diceFaceType , EnemyType enemyType)
         {
             DiceFaceType = diceFaceType;
             EnemyType = enemyType;

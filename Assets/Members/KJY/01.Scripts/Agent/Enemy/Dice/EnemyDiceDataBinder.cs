@@ -11,7 +11,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 {
     public class EnemyDiceDataBinder : MonoBehaviour
     {
-        [SerializeField] private EnemyNumber enemyType;
+        [SerializeField] private EnemyType enemyType;
         [SerializeField] private EventChannelSO eventChannel;
         [SerializeField] private UIMonoTMP titleTMP;
         [SerializeField] private UIMonoTMP descTMP;

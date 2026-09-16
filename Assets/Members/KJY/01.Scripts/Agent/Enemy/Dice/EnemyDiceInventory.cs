@@ -10,7 +10,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 {
     public class EnemyDiceInventory : AbstractDiceInventory
     {
-        [SerializeField] private EnemyNumber enemyType;
+        [SerializeField] private EnemyType enemyType;
         [SerializeField] private float receiveDelay;
         private CancellationTokenSource _cts;
         public UnityEvent onRollReceived;

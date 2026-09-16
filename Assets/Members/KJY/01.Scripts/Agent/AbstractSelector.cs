@@ -24,6 +24,7 @@ namespace Members.KJY._01.Scripts.Agent
         [field:SerializeField] public bool IsSelect {get; protected set;} 
         [field:SerializeField] public UIMonoImage IconImage { get; private set; }
         [SerializeField] protected EventChannelSO eventChannel;
+        public bool IsDead {get; protected set;}
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;
 
@@ -41,6 +42,22 @@ namespace Members.KJY._01.Scripts.Agent
             HealthModule = GetModule<HealthModule>();
             SkillExecutor = GetModule<SkillExecutor>();
             DiceInventory = GetModule<AbstractDiceInventory>();
+        }
+        
+        protected override void AfterInitializeModules()
+        {
+            base.AfterInitializeModules();
+            HealthModule.OnDead += HandleDead;
+        }
+        
+        protected virtual void HandleDead()
+        {
+            IsDead = true;
+        }
+        
+        private void OnDestroy()
+        {
+            HealthModule.OnDead -= HandleDead;
         }
         
         public void SelectToggle()
