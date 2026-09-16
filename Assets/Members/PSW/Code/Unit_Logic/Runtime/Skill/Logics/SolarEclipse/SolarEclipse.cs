@@ -94,6 +94,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             boomLight.obj.SetActive(true);
 
             MagicMapRotate(false);
+            _rotateSpeed = 0f;
         }
 
         #endregion
@@ -145,8 +146,8 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
 
         private void MoveObject()
         {
-            solar.trm.DOMove(targetPos, 2f);
-            luna.trm.DOMove(targetPos, 2f);
+            solar.trm.DOLocalMove(targetPos, 2f);
+            luna.trm.DOLocalMove(targetPos, 2f);
         }
 
         private void MagicMapRotate(bool isRotate)
