@@ -108,7 +108,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             }
         }
 
-        #region Skill Code
+        #region Test Code
 
         [ContextMenu("TestSkill")]
         public void TestSkill()
@@ -132,6 +132,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             seq.Append(luna.trm.DOScale(Vector3.zero, 0.3f));
             seq.AppendCallback(() => luna.obj.SetActive(false));
         }
+        #endregion
         
         private void StartFade(Sequence seq)
         {
@@ -156,13 +157,12 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
                 _magicMapRotate = isRotate;
         }
 
-        #endregion
 
         public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
         {
-            ResetItem();
-            _target= target;
+            _target = target;
             targetPos = target.DefaultPosition.position;
+            ResetItem();
             
             Sequence seq = DOTween.Sequence();
             StartFade(seq);
