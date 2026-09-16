@@ -54,10 +54,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EdgeSoftness: 0.027
-    - _GlowIntensity: 10.9
+    - _EdgeSoftness: 0.01
+    - _GlowIntensity: 20
     - _Opacity: 1
-    - _Radius: 0.5
+    - _Radius: 0.487
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

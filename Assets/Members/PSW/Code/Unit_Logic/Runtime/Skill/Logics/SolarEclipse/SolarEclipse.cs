@@ -1,12 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using DG.Tweening;
+using Members.KJY._01.Scripts.Agent;
+using Members.KJY._01.Scripts.Agent.SkillSystem;
+using Members.KJY._01.Scripts.Agent.SkillSystem.Skill;
 using Members.PSW.Code.Test;
 using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
 {
-    public class SolarEclipse : MonoBehaviour, ISkillLogic
+    public class SolarEclipse : AbstractSkillLogic
     {
         [Header("Test")]
         [SerializeField] private Vector3 targetPos;
@@ -16,16 +21,19 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         [SerializeField] private SkillItem luna;
         [SerializeField] private SkillItem magicMap;
         [SerializeField] private SkillItem boomLight;
+        public List<SkillApplyStat> applyStats;
         
-        public event Action<CalculateStat, SkillSO, GameObject> OnCalculate;
-        public event Action OnSkillFinished;
+        public UnityEvent onSkillFinished;
 
         private bool _magicMapRotate = false;
         private CalculateStat CurrentStat => _executor.Owner.GetModule<StatModule>().CurrentStat;
         
         private SkillExecutor _executor;
         private float _rotateSpeed;
+        private AbstractSelector _target;
 
+        
+        
         #region Component Init
 
         private void GetCompo()
@@ -87,12 +95,6 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
 
             MagicMapRotate(false);
         }
-        
-        public void Init(SkillExecutor executor)
-        {
-            _executor = executor;
-            ResetItem();
-        }
 
         #endregion
         
@@ -130,33 +132,6 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             seq.AppendCallback(() => luna.obj.SetActive(false));
         }
         
-        public void PlaySkill(SkillSO skill, GameObject target)
-        {
-            ResetItem();
-            targetPos = target.transform.position;
-            
-            Sequence seq = DOTween.Sequence();
-            StartFade(seq);
-            seq.AppendCallback(MoveObject);
-            seq.AppendInterval(2.1f);
-            seq.AppendCallback(() =>
-            {
-                magicMap.sr.DOFade(1, 0.5f);
-                MagicMapRotate(true);
-            });
-            seq.AppendInterval(1.5f);
-            seq.AppendCallback(() => solar.obj.SetActive(false));
-            seq.Append(boomLight.trm.DOScale(new Vector3(6f, 6f, 1), 0.6f));
-            seq.AppendCallback(() => boomLight.trm.localScale = Vector3.zero);
-            seq.AppendCallback(() => boomLight.obj.SetActive(false));
-            seq.Append(luna.trm.DOScale(new Vector3(10, 10, 1), 1f).SetEase(Ease.OutQuart));
-            seq.AppendCallback(() => magicMap.obj.SetActive(false));
-            seq.AppendCallback(() => OnCalculate?.Invoke(CurrentStat, skill, target));
-            seq.Append(luna.trm.DOScale(Vector3.zero, 0.3f));
-            seq.AppendCallback(() => luna.obj.SetActive(false));
-            seq.AppendCallback(() => OnSkillFinished?.Invoke());
-        }
-
         private void StartFade(Sequence seq)
         {
             seq.AppendCallback(() =>
@@ -181,5 +156,44 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         }
 
         #endregion
+
+        public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
+        {
+            ResetItem();
+            _target= target;
+            targetPos = target.DefaultPosition.position;
+            
+            Sequence seq = DOTween.Sequence();
+            StartFade(seq);
+            seq.AppendCallback(MoveObject);
+            seq.AppendInterval(2.1f);
+            seq.AppendCallback(() =>
+            {
+                magicMap.sr.DOFade(1, 0.5f);
+                MagicMapRotate(true);
+            });
+            seq.AppendInterval(1.5f);
+            seq.AppendCallback(() => solar.obj.SetActive(false));
+            seq.Append(boomLight.trm.DOScale(new Vector3(6f, 6f, 1), 0.6f));
+            seq.AppendCallback(() => boomLight.trm.localScale = Vector3.zero);
+            seq.AppendCallback(() => boomLight.obj.SetActive(false));
+            seq.Append(luna.trm.DOScale(new Vector3(10, 10, 1), 1f).SetEase(Ease.OutQuart));
+            seq.AppendCallback(() => magicMap.obj.SetActive(false));
+
+            seq.AppendCallback(() => ApplyStat());
+            
+            seq.Append(luna.trm.DOScale(Vector3.zero, 0.3f));
+            seq.AppendCallback(() => luna.obj.SetActive(false));
+            
+            seq.AppendCallback(() => onSkillFinished?.Invoke());
+        }
+
+        public override void ApplyStat()
+        {
+            foreach (var applyStat in applyStats)
+            {
+                _target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
+            }
+        }
     }
 }
