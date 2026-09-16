@@ -16,6 +16,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	              "It requires you have in your scene an object with a Volume " +
 	              "with PaniniProjection active, and a MMPaniniProjectionShaker_HDRP component.")]
 	#if MM_HDRP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Panini Projection HDRP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.HDRP")]

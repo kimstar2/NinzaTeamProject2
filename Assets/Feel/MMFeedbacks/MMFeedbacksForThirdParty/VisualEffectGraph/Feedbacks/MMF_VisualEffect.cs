@@ -15,6 +15,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	[AddComponentMenu("")]
 	[FeedbackHelp("This feedback will let you apply basic controls to a target VisualEffect")]
 	#if MM_VISUALEFFECTGRAPH
+	[System.Serializable]
 	[FeedbackPath("Particles/VisualEffect")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.VisualEffectGraph")]

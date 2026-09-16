@@ -232,5 +232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99182b418434406ebb7efcd720fbea4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor
+  <IdleAnimHash>k__BackingField: {fileID: 11400000, guid: 55ce4fd4f2b99f046a996b6659ee1334, type: 2}
+  <SkillAnimHash>k__BackingField: {fileID: 11400000, guid: bcb3bb86cf40be14a8a366d16c2fed92, type: 2}
   skills:
   - {fileID: 4764194320588573822}
+  onAnimFinished:
+    m_PersistentCalls:
+      m_Calls: []

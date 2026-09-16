@@ -14,6 +14,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	/// </summary>
 	[AddComponentMenu("")]
 	#if MM_URP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Film Grain URP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.URP")]

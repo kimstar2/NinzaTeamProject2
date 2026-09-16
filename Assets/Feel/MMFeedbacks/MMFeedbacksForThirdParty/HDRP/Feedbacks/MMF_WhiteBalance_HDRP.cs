@@ -16,6 +16,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	              "It requires you have in your scene an object with a Volume " +
 	              "with WhiteBalance active, and a MMWhiteBalanceShaker_HDRP component.")]
 	#if MM_HDRP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/White Balance HDRP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.HDRP")]

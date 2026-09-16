@@ -14,6 +14,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	[FeedbackHelp("This feedback allows you to control bloom intensity and threshold over time. It requires you have in your scene an object with a Volume " +
 	              "with Bloom active, and a MMBloomShaker_URP component.")]
 	#if MM_URP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Channel Mixer URP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.URP")]

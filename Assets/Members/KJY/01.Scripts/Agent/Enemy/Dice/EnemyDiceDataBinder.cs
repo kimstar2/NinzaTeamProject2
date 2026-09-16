@@ -3,8 +3,10 @@ using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
+using Members.KJY._01.Scripts.Mono;
 using Members.KJY._01.Scripts.UI.Mono;
 using UnityEngine;
+using UnityEngine.Events;
 using ZLinq;
 
 namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
@@ -17,6 +19,8 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         [SerializeField] private UIMonoTMP descTMP;
         [SerializeField] private UIMonoOutline gradeOutline;
         [SerializeField] private UIMonoImage[] iconImage;
+        [SerializeField] private MonoParticle rollParticle;
+        public UnityEvent onDiceDataBind;
 
         public void OnEnable()
         {
@@ -36,6 +40,11 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             descTMP.SetText(diceData.SkillData.SkillDescription);
             gradeOutline.SetColor(diceData.DiceGrade.GradeColor);
             iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(diceData.Icon));
+            
+            rollParticle.SetParticleColor(diceData.DiceGrade.GradeColor);
+            rollParticle.PlayParticle();
+            
+            onDiceDataBind?.Invoke();
         }
         
         private void OnValidate()

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _TevLib.Extension.DoT;
+using DevLib.HashDataSystem;
 using Members.KJY._01.Scripts.Agent.SkillSystem.Skill;
 using UnityEngine;
 
@@ -13,18 +14,18 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [SerializeField] private List<TweenStepClass> solarTweenStep;
         [SerializeField] private int attackerTrmIndex;
         
-        public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
+        public override void ApplyStat()
         {
-            lunarTweenStep[attackerTrmIndex].SetTransformValue(attacker.DefaultPosition.position);
-            solarTweenStep[attackerTrmIndex].SetTransformValue(attacker.DefaultPosition.position);
+        }
+
+        public override void Execute()
+        {
+            lunarTweenStep[attackerTrmIndex].SetTransformValue(Executor.Attacker.DefaultPosition.position);
+            solarTweenStep[attackerTrmIndex].SetTransformValue(Executor.Attacker.DefaultPosition.position);
             LunarTweenSequencer.SetSteps(lunarTweenStep);
             SolarTweenSequencer.SetSteps(solarTweenStep);
             LunarTweenSequencer.Sequence();
             SolarTweenSequencer.Sequence();
-        }
-
-        public override void ApplyStat()
-        {
         }
     }
 }

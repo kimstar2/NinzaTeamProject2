@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DevLib.CoreLib.Runtime;
@@ -15,7 +16,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     public class BattleObserver : MonoModule
     {
         [SerializeField] private EventChannelSO eventChannel;
-        
+        [SerializeField] private float commandDelay;
         [field:SerializeReference] public List<ICommand> CommandList { get; private set; } = new();
         public CancellationTokenSource BattleCts {get; private set;}
         private ICommand _currentCommand;
@@ -58,6 +59,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 await _currentCommand.ExecuteAction();
                 Debug.Log("다음");
                 RemoveCommand(_currentCommand);
+                await UniTask.Delay(TimeSpan.FromSeconds(commandDelay), cancellationToken:ct);
             }
             ClearCommands();
             Debug.Log("배틀 끝");
