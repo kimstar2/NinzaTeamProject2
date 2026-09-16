@@ -5,14 +5,13 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
 {
     public class CombatInstinct : AbstractSkillLogic
     {
-        public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
+        public override void ApplyStat()
         {
             
         }
 
-        public override void ApplyStat()
+        public override void Execute()
         {
-            
         }
     }
 }

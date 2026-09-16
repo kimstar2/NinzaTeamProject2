@@ -26,11 +26,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         public UnityEvent onSkillFinished;
 
         private bool _magicMapRotate = false;
-        private CalculateStat CurrentStat => _executor.Owner.GetModule<StatModule>().CurrentStat;
-        
-        private SkillExecutor _executor;
         private float _rotateSpeed;
-        private AbstractSelector _target;
 
         
         
@@ -158,11 +154,10 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
 
         #endregion
 
-        public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
+        public override void Execute()
         {
             ResetItem();
-            _target= target;
-            targetPos = target.DefaultPosition.position;
+            targetPos = Executor.Target.DefaultPosition.position;
             
             Sequence seq = DOTween.Sequence();
             StartFade(seq);
@@ -181,7 +176,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             seq.Append(luna.trm.DOScale(new Vector3(10, 10, 1), 1f).SetEase(Ease.OutQuart));
             seq.AppendCallback(() => magicMap.obj.SetActive(false));
 
-            seq.AppendCallback(() => ApplyStat());
+            seq.AppendCallback(ApplyStat);
             
             seq.Append(luna.trm.DOScale(Vector3.zero, 0.3f));
             seq.AppendCallback(() => luna.obj.SetActive(false));
@@ -193,7 +188,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         {
             foreach (var applyStat in applyStats)
             {
-                _target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
+                Executor.Target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
             }
         }
     }
