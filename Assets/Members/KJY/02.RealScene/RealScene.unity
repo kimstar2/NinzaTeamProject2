@@ -782,6 +782,10 @@ PrefabInstance:
       propertyPath: enemyType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7181693421131579699, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: enemyType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7200237148739525945, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: enemyType
       value: 3
@@ -5582,6 +5586,10 @@ PrefabInstance:
       propertyPath: enemyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7181693421131579699, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: enemyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7200237148739525945, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: enemyType
       value: 2
@@ -8481,6 +8489,7 @@ MonoBehaviour:
   <DiceRollCheckList>k__BackingField:
   - <EnemyType>k__BackingField: 0
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8497,11 +8506,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
   - <EnemyType>k__BackingField: 1
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8518,11 +8525,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
   - <EnemyType>k__BackingField: 2
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8539,11 +8544,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
   - <EnemyType>k__BackingField: 3
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8560,9 +8563,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &1138939130
 GameObject:
   m_ObjectHideFlags: 0
@@ -11158,6 +11158,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7037175358048698588, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: enemyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181693421131579699, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: enemyType
       value: 1
       objectReference: {fileID: 0}
@@ -14110,6 +14114,8 @@ MonoBehaviour:
   lRParent: {fileID: 1631962377}
   lRFadeTime: 0.3
   startBattleSeq: {fileID: 1786755356}
+  key: []
+  value: []
 --- !u!1 &2084988607
 GameObject:
   m_ObjectHideFlags: 0

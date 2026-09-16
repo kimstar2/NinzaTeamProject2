@@ -1,6 +1,6 @@
 ﻿namespace Members.KJY._01.Scripts.Agent.Enemy
 {
-    public enum EnemyNumber
+    public enum EnemyType
     {
         Enemy1,
         Enemy2,

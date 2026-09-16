@@ -17,7 +17,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public void TryExecuteSkill(AbstractSelector attacker, AbstractSelector target) // 스킬 사용 시도
         {
             if(!CanExecuteSkill) return; // 스킬 사용 못해 => 리턴
-
+            
             CurrentSkillLogic = Instantiate(attacker.DiceInventory.GetDiceData()
                 .SkillData.SkillLogicExecutor,skillParent.transform);
             
@@ -34,7 +34,9 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public void HandleEndSkill()
         {
             if (CurrentSkillLogic != null)
+            {
                 CurrentSkillLogic.OnSkillFinished -= HandleEndSkill;
+            }
             eventChannel.RaiseEvent(new OnExecuteNextCommand());
         }
     }

@@ -7,9 +7,9 @@ namespace Members.KJY._01.Scripts.Events.Dice.Agent.Enemy
     public class OnEnemyDataChanged : GameEvent
     {
         public EnemyDataSO EnemyData { get; private set; }
-        public EnemyNumber EnemyType { get; private set; }
+        public EnemyType EnemyType { get; private set; }
 
-        public OnEnemyDataChanged(EnemyDataSO enemyData, EnemyNumber enemyType)
+        public OnEnemyDataChanged(EnemyDataSO enemyData, EnemyType enemyType)
         {
             EnemyData = enemyData;
             EnemyType = enemyType;

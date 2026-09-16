@@ -1,5 +1,6 @@
 ﻿using System;
 using DevLib.CoreLib.Runtime;
+using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice;
@@ -13,8 +14,8 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
     {
         [SerializeField] private EnemyDataSO defaultEnemyData;
         [SerializeField] private EnemyDataSO runtimeEnemyData;
-        [SerializeField] private EnemyNumber enemyType;
-
+        [SerializeField] private EnemyType enemyType;
+        
         protected override void InitializeModules()
         {
             base.InitializeModules();
@@ -36,8 +37,15 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             eventChannel.RemoveListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
         }
 
+        protected override void HandleDead()
+        {
+            base.HandleDead();
+            eventChannel.RaiseEvent(new OnEnemyDead(enemyType, true));
+        }
+
         protected override void Select()
         {
+            if (IsDead) return;
             eventChannel.RaiseEvent(new OnEnemySelect(this));
             onSelect?.Invoke();
         }
@@ -53,7 +61,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             ValidateData();
         }
 
-        private void ValidateData()
+        public void ValidateData()
         {
             IconImage.SetImage(runtimeEnemyData.EnemyImage);
             IconImage.SetColor(runtimeEnemyData.ImageColor);

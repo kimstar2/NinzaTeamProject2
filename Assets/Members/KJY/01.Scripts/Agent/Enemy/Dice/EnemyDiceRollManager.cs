@@ -11,10 +11,10 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
     [Serializable]
     public class EnemyDiceRollCheck
     {
-        [field:SerializeField] public EnemyNumber EnemyType {get; private set;}
+        [field:SerializeField] public EnemyType EnemyType {get; private set;}
         [field:SerializeField] public bool DiceRollEnd {get; private set;}
+        [field:SerializeField] public bool IsDead {get; private set;}
         public UnityEvent<EnemyDiceRollData> onRollEnd;
-        public UnityEvent<EnemyNumber> onRoll;
         
         public void OnRollEnd(DiceFaceType diceFaceType)
         {
@@ -24,8 +24,12 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         
         public void OnRoll()
         {
-            onRoll?.Invoke(EnemyType);
             DiceRollEnd = false;
+        }
+        
+        public void OnDead()
+        {
+            IsDead = true;
         }
     }
     public class EnemyDiceRollManager : AbstractDiceRollManager
@@ -35,32 +39,43 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 
         private void OnEnable()
         {
-            eventChannel.AddListener<OnEnemyRoll>(HandleRoll);
+            eventChannel.AddListener<OnEnemyRollRaise>(HandleRoll);
             eventChannel.AddListener<OnEnemyRollEnd>(HandleRollEnd);
+            eventChannel.AddListener<OnEnemyDead>(HandleEnemyDead);
         }
 
         private void OnDisable()
         {
-            eventChannel.RemoveListener<OnEnemyRoll>(HandleRoll);
+            eventChannel.RemoveListener<OnEnemyRollRaise>(HandleRoll);
             eventChannel.RemoveListener<OnEnemyRollEnd>(HandleRollEnd);
         }
 
-        private void HandleRollEnd(OnEnemyRollEnd obj)
+        private void HandleRollEnd(OnEnemyRollEnd evt)
         {
-            EnemyDiceRollCheck check = DiceRollCheckList.Find(x => x.EnemyType == obj.EnemyType);
-            check.OnRollEnd(obj.DiceFaceType);
+            EnemyDiceRollCheck check = DiceRollCheckList.Find(x => x.EnemyType == evt.EnemyType);
+            check.OnRollEnd(evt.DiceFaceType);
 
-            AllDiceRollEnd = DiceRollCheckList.TrueForAll(x => x.DiceRollEnd);
+            AllDiceRollEnd = DiceRollCheckList.TrueForAll(x => x.DiceRollEnd || x.IsDead);
             
             if (AllDiceRollEnd)
                 onAllDiceRollEnd?.Invoke();
         }
 
-        private void HandleRoll(OnEnemyRoll obj)
+        private void HandleRoll(OnEnemyRollRaise garbage)
         {
             AllDiceRollEnd = false;
             foreach (EnemyDiceRollCheck check in DiceRollCheckList)
+            {
+                eventChannel.RaiseEvent(new OnEnemyRoll(check.EnemyType,check.IsDead));
                 check.OnRoll();
+            }
+        }
+        
+        private void HandleEnemyDead(OnEnemyDead evt)
+        {
+            EnemyDiceRollCheck check = DiceRollCheckList.Find(x => x.EnemyType == evt.enemyType);
+            Debug.Log("Real Dead");
+            check.OnDead();
         }
     }
 }

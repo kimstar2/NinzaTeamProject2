@@ -18,7 +18,6 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         public UnityEvent onSetTarget;
 
-
         private void Start()
         {
             targetOutline.SetColor(PlayerColor);
