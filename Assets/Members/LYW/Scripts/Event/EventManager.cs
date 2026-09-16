@@ -4,6 +4,7 @@ using Members.LYW.Scripts.Event;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
 
 public class EventManager : MonoBehaviour
 {

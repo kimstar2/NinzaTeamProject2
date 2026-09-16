@@ -35,8 +35,10 @@ Shader "Custom/UI/ScrollingDiagonalStripesMasked"
         Pass
         {
             CGPROGRAM
+
             #pragma vertex vert
             #pragma fragment frag
+
             #include "UnityCG.cginc"
 
             struct appdata_t
@@ -48,12 +50,16 @@ Shader "Custom/UI/ScrollingDiagonalStripesMasked"
 
             struct v2f
             {
-                float4 vertex   : SV_POSITION;
-                fixed4 color    : COLOR;
-                float2 uv       : TEXCOORD0;
+                float4 vertex    : SV_POSITION;
+                fixed4 color     : COLOR;
+                float2 uv        : TEXCOORD0;
+
+                // 모든 UI가 공유하는 화면 위치
+                float4 screenPos : TEXCOORD1;
             };
 
             sampler2D _MainTex;
+
             fixed4 _Color;
 
             fixed4 _StripeColor1;
@@ -62,39 +68,80 @@ Shader "Custom/UI/ScrollingDiagonalStripesMasked"
             float _StripeCount;
             float _StripeRatio;
             float _ScrollSpeed;
+
             float _DirectionX;
             float _DirectionY;
+
 
             v2f vert(appdata_t v)
             {
                 v2f o;
+
                 o.vertex = UnityObjectToClipPos(v.vertex);
+
                 o.uv = v.texcoord;
                 o.color = v.color * _Color;
+
+                // 화면 전체에서 공통으로 쓰는 위치
+                o.screenPos = ComputeScreenPos(o.vertex);
+
                 return o;
             }
 
+
             fixed4 frag(v2f i) : SV_Target
             {
-                // 원본 UI Image(스프라이트)의 알파를 읽음
+                // =====================================
+                // 원본 Image 알파
+                // =====================================
+
                 fixed4 baseTex = tex2D(_MainTex, i.uv);
 
-                // 사선 패턴 계산
-                float stripeUV = i.uv.x * _DirectionX + i.uv.y * _DirectionY;
-                stripeUV += _Time.y * _ScrollSpeed;
 
-                float stripe = frac(stripeUV * _StripeCount);
+                // =====================================
+                // 공통 좌표
+                // =====================================
 
-                fixed4 stripeColor = (stripe < _StripeRatio) ? _StripeColor1 : _StripeColor2;
+                // 0 ~ 1 화면 좌표
+                float2 position =
+                    i.screenPos.xy / i.screenPos.w;
 
-                // Image의 원본 알파로 마스킹
+
+                // =====================================
+                // 사선 패턴
+                // =====================================
+
+                float stripeUV =
+                    position.x * _DirectionX +
+                    position.y * _DirectionY;
+
+                stripeUV +=
+                    _Time.y * _ScrollSpeed;
+
+
+                float stripe =
+                    frac(stripeUV * _StripeCount);
+
+
+                fixed4 stripeColor =
+                    stripe < _StripeRatio
+                    ? _StripeColor1
+                    : _StripeColor2;
+
+
+                // =====================================
+                // Sprite Alpha Mask
+                // =====================================
+
                 stripeColor.a *= baseTex.a;
 
-                // UI Image의 color tint 반영
+                // Image Color
                 stripeColor *= i.color;
+
 
                 return stripeColor;
             }
+
             ENDCG
         }
     }

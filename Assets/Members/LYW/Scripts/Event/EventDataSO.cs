@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace Members.LYW.Scripts.Event
 {
@@ -17,14 +16,14 @@ namespace Members.LYW.Scripts.Event
         public int choices = 1;
 
         public List<string> choiceText = new();
-        public List<Button.ButtonClickedEvent> choiceEvent = new();
+        public List<UnityEngine.UI.Button.ButtonClickedEvent> choiceEvent = new();
 
         private void OnValidate()
         {
             choices = Mathf.Clamp(choices, 1, 4);
 
             ResizeList(choiceText, choices, "");
-            ResizeList(choiceEvent, choices, () => new Button.ButtonClickedEvent());
+            ResizeList(choiceEvent, choices, () => new UnityEngine.UI.Button.ButtonClickedEvent());
         }
 
         private void ResizeList<T>(List<T> list, int size, T defaultValue)
@@ -36,7 +35,7 @@ namespace Members.LYW.Scripts.Event
                 list.RemoveAt(list.Count - 1);
         }
 
-        private void ResizeList<T>(List<T> list, int size, System.Func<T> factory)
+        private void ResizeList<T>(List<T> list, int size, Func<T> factory)
         {
             while (list.Count < size)
                 list.Add(factory());

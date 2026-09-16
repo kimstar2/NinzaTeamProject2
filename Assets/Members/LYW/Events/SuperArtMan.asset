@@ -17,12 +17,11 @@ MonoBehaviour:
     \uD569\uB2C8\uB2E4.\\n\uBB34\uC5C7\uC744 \uD560 \uAC74\uAC00\uC694?"
   backgroundImage: {fileID: -3455379205716615412, guid: f6801eb44a1ced247aa0602774190e9c, type: 3}
   EXImage: {fileID: 8924360345130645525, guid: 7a6fe90c523b3f34da99e8d31cf563f0, type: 3}
-  choices: 4
+  choices: 3
   choiceText:
   - "\uAC70\uC808\uD55C\uB2E4."
   - "\uB108\uBB34 \uC2EB\uB2E4\uACE0 \uD55C\uB2E4."
   - "\uC2EB\uB2E4\uACE0 \uD55C\uB2E4."
-  - "\uC77C\uC744 \uB118\uAE34\uB2E4."
   choiceEvent:
   - m_PersistentCalls:
       m_Calls:
@@ -62,20 +61,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: Say
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
