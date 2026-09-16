@@ -1,4 +1,5 @@
 ﻿using Members.KJY._01.Scripts.Util;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.Player
@@ -7,6 +8,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
     public class PlayerDataSO : ScriptableObject
     {
         [field:SerializeField] public PlayerType PlayerType {get; private set;}
+        [field:SerializeField] public AnimatorController AnimCon {get; private set;}
         [field:SerializeField] public Sprite PlayerImage {get; private set;}
         [field:SerializeField] public ColorSO ImageColor {get; private set;}
     }

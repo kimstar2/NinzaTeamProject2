@@ -1,6 +1,7 @@
 ﻿using System;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Util;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent
@@ -25,6 +26,8 @@ namespace Members.KJY._01.Scripts.Agent
             if (Animator.GetCurrentAnimatorStateInfo(0).shortNameHash != hash)
                 RenderClip(hash);
         }
+
+        public void SetController(AnimatorController controller) => Animator.runtimeAnimatorController = controller;
 
         public event Action OnAnimFinished;
         public void AnimFinishedEnd()

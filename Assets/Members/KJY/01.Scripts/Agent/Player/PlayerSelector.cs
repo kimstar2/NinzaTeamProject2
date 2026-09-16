@@ -110,6 +110,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
             IconImage.SetColor(PlayerData.ImageColor);
             MyAgent.AgentRenderer.SetSprite(PlayerData.PlayerImage);
             MyAgent.AgentRenderer.SetColor(PlayerData.ImageColor);
+            
+            MyAgent.AnimCompo.SetController(PlayerData.AnimCon);
         }
 
 #if UNITY_EDITOR
