@@ -5,8 +5,8 @@ namespace Members.KJY._01.Scripts.Command
 {
     public interface ICommand
     {
-        void Execute();
-        UniTask ExecuteAction(CancellationToken token);
+        void SetNextSignal(CancellationToken token);
+        UniTask ExecuteAction();
         
         
         void MoveNext();

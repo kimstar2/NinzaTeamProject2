@@ -5,6 +5,7 @@ using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using DevLib.ServiceLocator;
 using DG.Tweening;
+using Members.KJY._01.Scripts.Agent;
 using Members.KJY._01.Scripts.Agent.Enemy;
 using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Command;
@@ -31,11 +32,14 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
         private BattleObserver _battleObserver;
+        [SerializeField] private List<PlayerSelector> key;
+        [SerializeField] private List<AbstractSelector> value;
+        
         public int Count => BattleChain.Count;
 
-        private readonly LinkedList<(PlayerSelector playerSelector, EnemySelector enemySelector)> _orderedChain = new();
+        private readonly LinkedList<(PlayerSelector playerSelector, AbstractSelector targetSelector)> _orderedChain = new();
         // public Dictionary<PlayerSelector,EnemySelector> BattleChain { get; private set; } = new();
-        public Dictionary<PlayerSelector, LinkedListNode<(PlayerSelector playerSelector, EnemySelector enemySelector)>> BattleChain { get; private set; } = new();
+        public Dictionary<PlayerSelector, LinkedListNode<(PlayerSelector playerSelector, AbstractSelector targetSelector)>> BattleChain { get; private set; } = new();
         
         protected override void InitializeModules()
         {
@@ -69,8 +73,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         private void ConnectLine(PlayerSelector getSelector)
         {
-            if (!TryGetValue(getSelector , out EnemySelector enemySelector)) return;
-            Vector3[] a2B = { getSelector.LineConnectTrm.position, enemySelector.LineConnectTrm.position };
+            if (!TryGetValue(getSelector , out AbstractSelector targetSelector)) return;
+            Vector3[] a2B = { getSelector.LineConnectTrm.position, targetSelector.LineConnectTrm.position };
 
             if (_lineConnectors.TryGetValue(getSelector, out LineRenderer lR))
             {
@@ -114,12 +118,23 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         
         private void HandleDiceSelected(OnPlayerSelect evt) // 플레이어 선택을 했다면?
-            => CurrentPlayerSelector = evt.PlayerSelector; // 현재 셀렉터는 선택한 플레이어 셀렉터
+        {
+            CurrentPlayerSelector = evt.PlayerSelector;
+            
+            if (!CurrentPlayerSelector.IsSelect) return;
+            AddOrMoveToLast(CurrentPlayerSelector,evt.PlayerSelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
+            ConnectLine(CurrentPlayerSelector);
+            eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.PlayerData,Count,true));
+
+            CurrentPlayerSelector.OnSetTarget();
+
+            // 현재 셀렉터는 선택한 플레이어 셀렉터
+        }
 
         private void HandleTargetSelected(OnEnemySelect evt) // 타겟(적)을 선택을 했다면
         {
             if (CurrentPlayerSelector == null) return;
-            if (!CurrentPlayerSelector.IsSelect) return; // 현재 셀렉터가 존재하면서 선택이 되어있다면
+            if (!CurrentPlayerSelector.IsSelect) return; // 현재 셀렉터가 존재하면서 선택이 안되어있다면
 
             AddOrMoveToLast(CurrentPlayerSelector,evt.EnemySelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
             ConnectLine(CurrentPlayerSelector);
@@ -183,7 +198,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private ActionCommand[] GetP2TAtkCommands() // 플레이어가 적한테 공격
         {
-            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.playerSelector, s.enemySelector)).
+            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.playerSelector, s.targetSelector)).
                 ToArray();
             return d;
         }
@@ -191,19 +206,24 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         private ActionCommand[] GetE2PAtkCommands() // 플레이어가 적한테 공격
         {
-            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.enemySelector, s.playerSelector)).
+            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.targetSelector, s.playerSelector)).
                 ToArray();
             return d;
         }
-        
+
+        private void ReCheck()
+        {
+            key = BattleChain.Keys.AsValueEnumerable().ToList();
+            var d = BattleChain.Values.AsValueEnumerable().ToList();
+        }
         
         private void ClearCrtSelector() => CurrentPlayerSelector = null;
 
-        public void AddOrMoveToLast(PlayerSelector key, EnemySelector value)
+        public void AddOrMoveToLast(PlayerSelector key, AbstractSelector value)
         {
             if (BattleChain.TryGetValue(key, out var node))
             {
-                node.Value = (playerSelector: key, enemySelector: value);
+                node.Value = (playerSelector: key, targetSelector: value);
 
                 _orderedChain.Remove(node);
                 _orderedChain.AddLast(node);
@@ -224,20 +244,20 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             return true;
         }
 
-        public bool TryGetValue(PlayerSelector key, out EnemySelector value)
+        public bool TryGetValue(PlayerSelector key, out AbstractSelector value)
         {
             if (BattleChain.TryGetValue(key, out var node))
             {
-                value = node.Value.enemySelector;
+                value = node.Value.targetSelector;
                 return true;
             }
             value = null;
             return false;
         }
         
-        public EnemySelector TryGetValue(PlayerSelector key)
+        public AbstractSelector TryGetValue(PlayerSelector key)
         {
-            return BattleChain.TryGetValue(key, out var node) ? node.Value.enemySelector : null;
+            return BattleChain.TryGetValue(key, out var node) ? node.Value.targetSelector : null;
         }
 
         #endregion
@@ -246,7 +266,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private void OnDrawGizmos()
         {
             foreach (var p in _orderedChain)
-                Gizmos.DrawLine(p.playerSelector.LineConnectTrm.position, p.enemySelector.LineConnectTrm.position);
+                Gizmos.DrawLine(p.playerSelector.LineConnectTrm.position, p.targetSelector.LineConnectTrm.position);
         }
         #endif
     }

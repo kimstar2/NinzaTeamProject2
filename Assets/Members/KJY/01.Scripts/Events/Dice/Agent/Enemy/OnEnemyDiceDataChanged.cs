@@ -7,10 +7,10 @@ namespace Members.KJY._01.Scripts.Events.Dice.Agent.Enemy
 {
     public class OnEnemyDiceDataChanged : GameEvent
     {
-        public EnemyNumber EnemyType {get; private set;}
+        public EnemyType EnemyType {get; private set;}
         public DiceDataListSO DiceDataList {get; private set;}
         
-        public OnEnemyDiceDataChanged(EnemyNumber enemyType , DiceDataListSO diceDataList)
+        public OnEnemyDiceDataChanged(EnemyType enemyType , DiceDataListSO diceDataList)
         {
             EnemyType = enemyType;
             DiceDataList = diceDataList;
