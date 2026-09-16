@@ -11,38 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Dealer/Dealer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Dealer/Dealer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Healer/Healer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Healer/Healer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Mage/Mage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Mage/Mage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Tanker/Tanker.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Tanker/Tanker.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Knight Templar/Knight Templar.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Knight Templar/Knight Templar.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Priest/Priest.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Priest/Priest.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Swordsman/Swordsman.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Swordsman/Swordsman.aseprite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack01(With magic effects).anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack01(With magic effects).anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack01.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack01.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack01_Effect.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack01_Effect.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack02(With magic effects).anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack02(With magic effects).anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack02.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack02.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack02_Effect.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Attack02_Effect.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Death.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Death.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Hurt.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Hurt.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Idle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Idle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Walk.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Walk.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Wizard.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Wizard/Wizard.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/SolarEclipse/SolarEclipse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/SolarEclipse/SolarEclipse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +110,7 @@
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "base",
+    "git-widget-placeholder": "KJY",
     "junie.onboarding.icon.badge.shown": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -219,7 +188,7 @@
       <workItem from="1789479899200" duration="894000" />
       <workItem from="1789521027451" duration="202000" />
       <workItem from="1789527404136" duration="424000" />
-      <workItem from="1789566036071" duration="653000" />
+      <workItem from="1789566036071" duration="1108000" />
     </task>
     <servers />
   </component>

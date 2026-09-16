@@ -26,9 +26,6 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         public UnityEvent onSkillFinished;
 
         private bool _magicMapRotate = false;
-        private CalculateStat CurrentStat => _executor.Owner.GetModule<StatModule>().CurrentStat;
-        
-        private SkillExecutor _executor;
         private float _rotateSpeed;
         private AbstractSelector _target;
 
@@ -157,11 +154,23 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
                 _magicMapRotate = isRotate;
         }
 
-
-        public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
+        
+        public override void ApplyStat()
         {
-            _target = target;
-            targetPos = target.DefaultPosition.position;
+            foreach (var applyStat in applyStats)
+            {
+                _target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
+            }
+        }
+
+        public override void Init(SkillLogicExecutor executor)
+        {
+            base.Init(executor);
+            targetPos = Executor.Target.DefaultPosition.position;
+        }
+
+        public override void Execute()
+        {
             ResetItem();
             
             Sequence seq = DOTween.Sequence();
@@ -187,14 +196,6 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             seq.AppendCallback(() => luna.obj.SetActive(false));
             
             seq.AppendCallback(() => onSkillFinished?.Invoke());
-        }
-
-        public override void ApplyStat()
-        {
-            foreach (var applyStat in applyStats)
-            {
-                _target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
-            }
         }
     }
 }
