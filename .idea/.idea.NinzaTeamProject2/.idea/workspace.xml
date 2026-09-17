@@ -10,7 +10,11 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="" />
+    <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/AgentAnim/BaseAgentCon.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/AgentAnim/BaseAgentCon.controller" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,10 +67,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/PointerRLClickTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Flags/IRequirePooling.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Mono/MonoParticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Service/GetCurrentCam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Service/GetCurrentEnemyParty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Service/IGetCurrentCam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Service/IGetCurrentEnemyParty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/MonoSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/UIMonoOutline.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/CamLenSetter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/ColorSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/GradientSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/OnAwake.cs" root0="FORCE_HIGHLIGHTING" />

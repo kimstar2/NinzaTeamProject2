@@ -419,7 +419,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1983136695}
-  - {fileID: 447374897}
   - {fileID: 1688853853}
   m_Father: {fileID: 1152459506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1311,7 +1310,7 @@ GameObject:
   - component: {fileID: 168686156}
   - component: {fileID: 168686157}
   m_Layer: 5
-  m_Name: OnShowSeq
+  m_Name: EnemyPartyPanelOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1762,6 +1761,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba42457ce2274c46905e79f6ab10a63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.DiceInventory
+--- !u!1 &224624936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 224624937}
+  - component: {fileID: 224624938}
+  m_Layer: 5
+  m_Name: StartBattleCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &224624937
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224624936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283995964}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &224624938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224624936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0e669899334ad0b33fd310761f4da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Util.CamLensSetter
+  value: 6
+  useIgnoreTimeScale: 0
+  lensValueStep:
+    <ActionType>k__BackingField: 0
+    <InsertType>k__BackingField: 0
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 1
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &225232603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2241,6 +2304,43 @@ MonoBehaviour:
   <TopImage>k__BackingField: {fileID: 1214399862}
   <BottomImage>k__BackingField: {fileID: 443176121}
   playerType: 3
+--- !u!1 &283995963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 283995964}
+  m_Layer: 5
+  m_Name: CamSet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &283995964
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283995963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 224624937}
+  - {fileID: 1364652851}
+  m_Father: {fileID: 1152459506}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285047465 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1963665645513869264, guid: d563862f11179454db766d9530ade438, type: 3}
@@ -3572,7 +3672,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447374896}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3580,7 +3680,7 @@ RectTransform:
   - {fileID: 1903728483}
   - {fileID: 1256585786}
   - {fileID: 966555295}
-  m_Father: {fileID: 65504338}
+  m_Father: {fileID: 1688853853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -4612,7 +4712,7 @@ GameObject:
   - component: {fileID: 516803280}
   - component: {fileID: 516803281}
   m_Layer: 5
-  m_Name: OnShowSeq
+  m_Name: PlayerPartyPanelOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5256,6 +5356,80 @@ Transform:
   - {fileID: 536275311}
   m_Father: {fileID: 714833906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &553001724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553001725}
+  - component: {fileID: 553001726}
+  m_Layer: 5
+  m_Name: BattlePanelOn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &553001725
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553001724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1983136695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &553001726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553001724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
+  debugMode: 0
+  <IsCanvas>k__BackingField: 1
+  targetTrm: {fileID: 1983136695}
+  sequenceStep:
+  - <ActionType>k__BackingField: 1
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.5
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 0
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &580670700
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,6 +5733,38 @@ Transform:
   m_Children:
   - {fileID: 1106573983}
   m_Father: {fileID: 1091700766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &672769101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672769102}
+  m_Layer: 0
+  m_Name: Cinamahcines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &672769102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672769101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 860579970}
+  m_Father: {fileID: 1198774591}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679542628
 GameObject:
@@ -6085,6 +6291,7 @@ GameObject:
   - component: {fileID: 713869175}
   - component: {fileID: 713869174}
   - component: {fileID: 713869177}
+  - component: {fileID: 713869178}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6212,6 +6419,38 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &713869178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713869173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!1 &714833905
 GameObject:
   m_ObjectHideFlags: 0
@@ -6959,6 +7198,112 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &860579969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860579970}
+  - component: {fileID: 860579971}
+  - component: {fileID: 860579972}
+  - component: {fileID: 860579973}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &860579970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860579969}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 672769102}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860579971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860579969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 1
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60
+    OrthographicSize: 8
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!114 &860579972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860579969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBasicMultiChannelPerlin
+  NoiseProfile: {fileID: 11400000, guid: a3dacaec0287d7444b4bd276816e1666, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 0.3
+  FrequencyGain: 1
+  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &860579973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860579969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df3d99cb1ace4d84beb85a37ae42442c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Service.GetCurrentCam
 --- !u!1 &862938094
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,7 +7515,35 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - waitTime: 1
+        - m_Target: {fileID: 1457345077}
+          m_TargetAssemblyTypeName: _TevLib.Extension.DoT.TweenSequencer, Assembly-CSharp
+          m_MethodName: Sequence
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - waitTime: 0.7
+    onPlay:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 224624938}
+          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Util.CamLensSetter, Assembly-CSharp
+          m_MethodName: SetValue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - waitTime: 0.3
     onPlay:
       m_PersistentCalls:
         m_Calls:
@@ -9142,7 +9515,7 @@ GameObject:
   - component: {fileID: 1122773338}
   - component: {fileID: 1122773339}
   m_Layer: 5
-  m_Name: OffShowSeq
+  m_Name: EnemyPartyPanelOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9336,6 +9709,7 @@ RectTransform:
   - {fileID: 1104961269}
   - {fileID: 1593650971}
   - {fileID: 65504338}
+  - {fileID: 283995964}
   m_Father: {fileID: 1104139142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9688,6 +10062,7 @@ Transform:
   - {fileID: 713869176}
   - {fileID: 1510094921}
   - {fileID: 1830543060}
+  - {fileID: 672769102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1199783931
@@ -11211,6 +11586,70 @@ Transform:
   - {fileID: 1583806474}
   m_Father: {fileID: 1089572413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1364652850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364652851}
+  - component: {fileID: 1364652852}
+  m_Layer: 5
+  m_Name: EndBattleCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1364652851
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364652850}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 283995964}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1364652852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364652850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0e669899334ad0b33fd310761f4da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Util.CamLensSetter
+  value: 8
+  useIgnoreTimeScale: 0
+  lensValueStep:
+    <ActionType>k__BackingField: 0
+    <InsertType>k__BackingField: 0
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.7
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1383065620
 GameObject:
   m_ObjectHideFlags: 0
@@ -11531,6 +11970,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1364652852}
+          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Util.CamLensSetter, Assembly-CSharp
+          m_MethodName: SetValue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1449163271
 GameObject:
   m_ObjectHideFlags: 0
@@ -11562,6 +12013,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1645797480}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1457345075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1457345076}
+  - component: {fileID: 1457345077}
+  m_Layer: 5
+  m_Name: BattlePanelOff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1457345076
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457345075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1983136695}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1457345077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457345075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
+  debugMode: 0
+  <IsCanvas>k__BackingField: 1
+  targetTrm: {fileID: 1983136695}
+  sequenceStep:
+  - <ActionType>k__BackingField: 1
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.5
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 500, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 0
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1494319223
 GameObject:
   m_ObjectHideFlags: 0
@@ -13092,9 +13617,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1073898334}
   - {fileID: 1651610252}
   - {fileID: 580670701}
+  - {fileID: 447374897}
+  - {fileID: 1073898334}
   m_Father: {fileID: 65504338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -14030,7 +14556,7 @@ GameObject:
   - component: {fileID: 1805357574}
   - component: {fileID: 1805357575}
   m_Layer: 5
-  m_Name: OffShowSeq
+  m_Name: PlayerPartyPanelOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15176,6 +15702,8 @@ RectTransform:
   - {fileID: 697007573}
   - {fileID: 1078546846}
   - {fileID: 1773001265}
+  - {fileID: 553001725}
+  - {fileID: 1457345076}
   m_Father: {fileID: 65504338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
@@ -15341,6 +15869,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 168686157}
+        m_TargetAssemblyTypeName: _TevLib.Extension.DoT.TweenSequencer, Assembly-CSharp
+        m_MethodName: Sequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 553001726}
         m_TargetAssemblyTypeName: _TevLib.Extension.DoT.TweenSequencer, Assembly-CSharp
         m_MethodName: Sequence
         m_Mode: 1
