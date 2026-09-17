@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a45ec12a4341e7a0e00b0d87ec4a4c, type: 3}
+  m_Name: NSC_3
+  m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.EventDataSO
+  EventTitle: "\uBC14\uB2E4\uC640 \uB098, \uADF8\uB9AC\uACE0 \uAC08\uC99D"
+  EventExplain: "\uC544 \uC774\uB7F0, \uC5EC\uD589\uAC00\uBC29\uC5D0 \uB4E4\uC5B4\uC788\uB358
+    \uBB3C\uC744 \uC804\uBD80 \uB9C8\uC154\uBC84\uB838\uB2E4. \uAC08\uC99D\uC740
+    \uC2EC\uD574\uC9C0\uACE0\uC788\uB2E4. \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
+  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
+  EXImage: {fileID: 0}
+  exImageScale: 1
+  exImageColor: {r: 1, g: 1, b: 1, a: 1}
+  backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
+  exImageMaterial: {fileID: 0}
+  choices: 3
+  choiceText:
+  - "\uBC14\uB2F7\uBB3C\uC744 \uD37C\uB9C8\uC2E0\uB2E4."
+  - "\uBBF8\uCE5C\uB4EF\uC774 \uBC14\uB2F7\uBB3C\uC744 \uD37C\uB9C8\uC2E0\uB2E4."
+  - "\uD640\uB9B0 \uB4EF \uBC14\uB2F7\uBB3C\uC744 \uD37C\uB9C8\uC2E0\uB2E4."
+  resultText:
+  - "\uC544, \uAC08\uC99D\uC774 \uB354 \uC2EC\uD558\uAC8C \uB290\uAEF4\uC9C4\uB2E4.
+    \uBA38\uB9AC\uAC00 \uC5B4\uC9C0\uB7FD\uB2E4.\\n(\uC544\uAD70 \uD30C\uD2F0\uC758
+    \uCCB4\uB825 20 \uAC10\uC18C)"
+  - "\uC2EC\uD55C \uAC08\uC99D\uC5D0\uB294 \uB354\uC6B1 \uB9CE\uC740 \uBC14\uB2F7\uBB3C!
+    \uAC08\uC99D\uC774 \uD574\uACB0\uB418\uC5C8\uB2E4.\\n\uC544\uBB34 \uC77C\uB3C4
+    \uC77C\uC5B4\uB098\uC9C0 \uC54A\uC558\uB2E4."
+  - "\uC73C\uC73D\u2026 \uC9E0\uBB3C\uC744 \uB108\uBB34 \uB9CE\uC774 \uB9C8\uC168\uB354\uB2C8,
+    \uC785\uC548\uC774 \uB108\uBB34 \uC9DC\uC84C\uB2E4. \uCE68\uC744 \uC0BC\uD0A4\uAE30\uB9CC\uD574\uB3C4
+    \uC9E0\uB9DB\uC774 \uB290\uAEF4\uC9C4\uB2E4.\\n(\uC544\uAD70 \uD30C\uD2F0\uC758
+    \uCCB4\uB825\uC774 10 \uAC10\uC18C)"
+  changeStatusDatas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  choiceEvent: 020000000200000002000000

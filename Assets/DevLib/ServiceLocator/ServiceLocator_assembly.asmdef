@@ -1,0 +1,6 @@
+﻿{
+  "name": "ServiceLocator_assembly",
+  "references": [
+    "SoundSystem_assembly"
+  ]
+}

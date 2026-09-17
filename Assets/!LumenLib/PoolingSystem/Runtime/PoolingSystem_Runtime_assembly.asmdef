@@ -1,0 +1,6 @@
+﻿{
+  "name": "PoolingSystem_Runtime_assembly",
+  "references": [
+    "ServiceLocator_assembly"
+  ]
+}
