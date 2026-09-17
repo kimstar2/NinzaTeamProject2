@@ -10,6 +10,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         AbstractSelector Attacker { get; }
             
         void SkillFinished();
-        void SkillExecute(AbstractSelector attacker, AbstractSelector target);
+        void SkillExecute(AbstractSelector attacker, AbstractSelector target, AgentType agentType);
     }
 }

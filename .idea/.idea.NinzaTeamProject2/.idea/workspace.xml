@@ -11,7 +11,154 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/SolarEclipse/SolarEclipse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/SolarEclipse/SolarEclipse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthSystem/AgentUIHealthBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/Editor/TweenStepClassDrawer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/Editor/TweenStepClassDrawer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy1/Enemy1 data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy1/Enemy1 data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy2/Enemy2 data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy2/Enemy2 data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy3/Enemy3 data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy3/Enemy3 data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy4/Enemy4 data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Enemy4/Enemy4 data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Enemy_container.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Enemy_container.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player_container.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/PlayPrefabs/Player_container.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Dealer/Dealer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Dealer/Dealer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Healer/Healer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Healer/Healer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Mage/Mage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Mage/Mage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Tanker/Tanker.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Tanker/Tanker.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T1/SkillLogicExecutor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T1/SkillLogicExecutor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T2/SkillLogicExecutor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T2/SkillLogicExecutor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T2/SkillLogicExecutor.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T2/SkillLogicExecutor.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T2/Test Skill data 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/TestSkill/T2/Test Skill data 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractAgent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractAgent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentAnim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentAnim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentHealthBar.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentHealthBar.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthSystem/AgentUIHealthBar.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemySelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemySelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthSystem/HealthModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthModule.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthSystem/HealthModule.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/IAnimatable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/IAnimatable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/DiceSkills/TestSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/DiceSkills/TestSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/ISkillLogicExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/ISkillLogicExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillLogicExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillLogicExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/DiceBattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/DiceBattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Archer/Archer.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Archer/Archer.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Armored Axeman/Armored Axeman.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Armored Axeman/Armored Axeman.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Armored Orc/Armored Orc.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Armored Orc/Armored Orc.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Armored Skeleton/Armored Skeleton.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Armored Skeleton/Armored Skeleton.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Bat/Bat.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Bat/Bat.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Elite Orc/Elite Orc.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Elite Orc/Elite Orc.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Greatsword Skeleton/Greatsword Skeleton.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Greatsword Skeleton/Greatsword Skeleton.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Knight Templar/Knight Templar.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Knight Templar/Knight Templar.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Knight/Knight.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Knight/Knight.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Lancer/Lancer.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Lancer/Lancer.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Necromancer/Necromancer.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Necromancer/Necromancer.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Orc rider/Orc rider.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Orc rider/Orc rider.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Orc/Orc.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Orc/Orc.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Priest/Priest.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Priest/Priest.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Skeleton Archer/Skeleton Archer.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Skeleton Archer/Skeleton Archer.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Skeleton/Skeleton.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Skeleton/Skeleton.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Slime/Slime.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Slime/Slime.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Soldier/Soldier.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Soldier/Soldier.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Swordsman/Swordsman.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Swordsman/Swordsman.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Werebear/Werebear.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Werebear/Werebear.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Werewolf/Werewolf.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Werewolf/Werewolf.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Wizard/Wizard.aseprite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Characters(100x100 split)/Wizard/Wizard.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Attack01.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Attack01.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Attack02.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Attack02.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Attack3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Attack3.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Dealer.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Dealer.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Hurt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Hurt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Dealer/Walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Hash/SkillHash/Attack01 hash.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Hash/SkillHash/Attack01 hash.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Hash/SkillHash/Attack02 hash.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Hash/SkillHash/Attack02 hash.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Attack(With magic effects).anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Attack(With magic effects).anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Attack.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Attack.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Attack_effect.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Attack_effect.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Heal(With magic effects).anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Heal(With magic effects).anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Heal.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Heal.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Heal_effect.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Heal_effect.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Healer.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Healer.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Hurt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Hurt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Healer/Walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack01(With magic effects).anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack01(With magic effects).anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack01.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack01.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack01_Effect.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack01_Effect.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack02(With magic effects).anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack02(With magic effects).anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack02.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack02.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack02_Effect.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Attack02_Effect.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Hurt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Hurt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Mage.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Mage.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Walk.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Mage/Walk.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Attack01.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Attack01.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Attack02.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Attack02.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Attack03.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Attack03.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Block.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Block.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Hurt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Hurt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Tanker.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Tanker.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Walk01.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Walk01.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Walk02.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/07.Anim/Tanker/Walk02.anim.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,22 +169,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/44/efe156e4/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/7e/6de52735/Renderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/8d/8b9b89f8/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b6535aa091d41cf8b3ca222ed9ceef0212600/ee/47ffbe5e/LineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e4eaf245b924ed1b8c17467295ae042a6ca00/32/487bb8b0/AnimatorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/0c/b4b6a159/Boolean.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/85f554d43a0a4e42b62a44c4e3531b102b800/f6/a6702fde/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/ClassStepTweenSequencer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/Editor/TransformTweenStepDrawer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TransformTweenSequencer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TransformTweenStep.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/DoT/TweenStepClass.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/!TevLib/Extension/ShaderHashSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AbstractAgent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Dice/EnemyDiceDataBinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyDataSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyDeadReceiver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemySelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/HealthSystem/AbstractHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/IAnimatorTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/PlayerDataSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,6 +212,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Events/PointerRLClickTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Flags/IRequirePooling.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Mono/MonoParticle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Service/GetCurrentEnemyParty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Service/IGetCurrentEnemyParty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/MonoSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/Mono/UIMonoOutline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Util/ColorSO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -75,7 +231,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/HealthModule.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/HealthSystem/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/UnitDataSO.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Members/PSW/LumenTestScene.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@dc216dc4183d/Runtime/UniTaskCompletionSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@dc216dc4183d/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@e9f15c489688/Editor/AssetPostProcessors/MaterialPostprocessor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -98,29 +253,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "KJY",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;KJY&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe" />
@@ -188,7 +343,10 @@
       <workItem from="1789479899200" duration="894000" />
       <workItem from="1789521027451" duration="202000" />
       <workItem from="1789527404136" duration="424000" />
-      <workItem from="1789566036071" duration="1108000" />
+      <workItem from="1789566036071" duration="3439000" />
+      <workItem from="1789571427392" duration="1575000" />
+      <workItem from="1789620153101" duration="728000" />
+      <workItem from="1789632473784" duration="6721000" />
     </task>
     <servers />
   </component>

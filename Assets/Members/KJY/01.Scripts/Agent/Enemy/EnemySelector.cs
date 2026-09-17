@@ -1,12 +1,15 @@
-﻿using System;
+﻿    using System;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
+using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
+using Members.KJY._01.Scripts.Service;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Members.KJY._01.Scripts.Agent.Enemy
 {
@@ -15,26 +18,25 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         [SerializeField] private EnemyDataSO defaultEnemyData;
         [SerializeField] private EnemyDataSO runtimeEnemyData;
         [SerializeField] private EnemyType enemyType;
-        
+        private IGetCurrentEnemyParty _getEnemyData;
+            
         protected override void InitializeModules()
         {
             base.InitializeModules();
             runtimeEnemyData = Instantiate(defaultEnemyData);
         }
 
-        private void Start()
+        protected override void Start()
         {
-            ValidateData();
+            base.Start();
+            _getEnemyData = ServiceLocator.Get<IGetCurrentEnemyParty>();
+            EnemyDataChanged(_getEnemyData.GetData(0)); // ㅌㅅㅌ
         }
 
-        private void OnEnable()
+        private void Update()
         {
-            eventChannel.AddListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
-        }
-
-        private void OnDisable()
-        {
-            eventChannel.RemoveListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
+            if (Keyboard.current.eKey.wasPressedThisFrame) // ㅌㅅㅌ
+                EnemyDataChanged(_getEnemyData.GetData(0));
         }
 
         protected override void HandleDead()
@@ -63,17 +65,19 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
 
         public void ValidateData()
         {
+            if (runtimeEnemyData == null) return;
             IconImage.SetImage(runtimeEnemyData.EnemyImage);
             IconImage.SetColor(runtimeEnemyData.ImageColor);
             MyAgent.AgentRenderer.SetSprite(runtimeEnemyData.EnemyImage);
             MyAgent.AgentRenderer.SetColor(runtimeEnemyData.ImageColor);
+            MyAgent.AnimCompo.SetController(runtimeEnemyData.EnemyAc);
         }
 
         
         public override void OnAttackCommand() { }
         public override void ApplyDamage(float damage)
         {
-            HealthModule.TakeDamage(damage);
+            MyAgent.HealthModule.TakeDamage(damage);
         }
 
         public override void ApplyHeal(float heal)
@@ -81,10 +85,12 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
 
         #region Handle
 
-        private void HandleEnemyDataChanged(OnEnemyDataChanged evt)
+        private void EnemyDataChanged(EnemyDataSO newEnemyData)
         {
-            if (evt.EnemyType != enemyType) return;
-            ChangeEnemyData(evt.EnemyData);
+            if (newEnemyData == null) return;
+            if (newEnemyData == runtimeEnemyData) return;
+            eventChannel.RaiseEvent(new OnEnemyDataChanged(newEnemyData,enemyType));
+            ChangeEnemyData(newEnemyData);
         }
         
 

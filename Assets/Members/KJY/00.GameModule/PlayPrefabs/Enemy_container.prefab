@@ -1091,12 +1091,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff00228387943389dee5409336d0b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.AgentHealthBar
-  healthModule: {fileID: 6034839142369487453}
-  healthBar: {fileID: 6341383169326608900}
   tweenStep:
     <ActionType>k__BackingField: 0
     <InsertType>k__BackingField: 0
-    <EaseType>k__BackingField: 9
+    <EaseType>k__BackingField: 8
     <Duration>k__BackingField: 0.7
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
@@ -1107,6 +1105,7 @@ MonoBehaviour:
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
+  healthBar: {fileID: 6341383169326608900}
 --- !u!1 &4733274046874983949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6906,7 +6905,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2625799577629299511}
   - {fileID: 4651759678736932104}
   - {fileID: 3222568838569264371}
   - {fileID: 3725472802208584313}
@@ -6935,12 +6933,40 @@ MonoBehaviour:
   <IsSelect>k__BackingField: 0
   <IconImage>k__BackingField: {fileID: 3660031373480466888}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
+  deathHash: {fileID: 11400000, guid: e32a0450fc25bf4439af07e44d698d8d, type: 2}
   onSelect:
     m_PersistentCalls:
       m_Calls: []
   onUnSelect:
     m_PersistentCalls:
       m_Calls: []
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7554631812613555614}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.AgentHealthBar, Assembly-CSharp
+        m_MethodName: SetHealthBar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3745032813363545931}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.AgentHealthBar, Assembly-CSharp
+        m_MethodName: SetHealthBar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   defaultEnemyData: {fileID: 11400000, guid: 316ecfda9f7fbed4a828275fded52ab3, type: 2}
   runtimeEnemyData: {fileID: 0}
   enemyType: 0
@@ -7931,55 +7957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755136f5b3004daeacb5e16e12ce99ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.Mono.UIMonoImage
---- !u!1 &8386912361400107450
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2625799577629299511}
-  - component: {fileID: 6034839142369487453}
-  m_Layer: 5
-  m_Name: HealthModule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2625799577629299511
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8386912361400107450}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4928419031167159163}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6034839142369487453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8386912361400107450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a0e23826bd85774fafc4bf902037b42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.HealthModule
-  <DefaultMaxHealth>k__BackingField: 10
 --- !u!1 &8613316298699725074
 GameObject:
   m_ObjectHideFlags: 0
@@ -8064,13 +8041,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff00228387943389dee5409336d0b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.AgentHealthBar
-  healthModule: {fileID: 6034839142369487453}
-  healthBar: {fileID: 4853539559648013343}
   tweenStep:
     <ActionType>k__BackingField: 0
     <InsertType>k__BackingField: 0
     <EaseType>k__BackingField: 9
-    <Duration>k__BackingField: 0.3
+    <Duration>k__BackingField: 0.4
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
     <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
@@ -8080,6 +8055,7 @@ MonoBehaviour:
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
+  healthBar: {fileID: 4853539559648013343}
 --- !u!1 &8977905659975715488
 GameObject:
   m_ObjectHideFlags: 0
@@ -8232,5 +8208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa1a16d73594b22abd1230bd0c81e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillExecuter
+  agentType: 1
   skillParent: {fileID: 0}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}

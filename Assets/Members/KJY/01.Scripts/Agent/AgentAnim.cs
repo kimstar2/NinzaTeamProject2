@@ -27,9 +27,14 @@ namespace Members.KJY._01.Scripts.Agent
                 RenderClip(hash);
         }
 
-        public void SetController(AnimatorController controller) => Animator.runtimeAnimatorController = controller;
+        public void SetController(AnimatorOverrideController controller)
+        {
+            Debug.Log("Onset");
+            Animator.runtimeAnimatorController = controller;
+        }
 
         public event Action OnAnimFinished;
+
         public void AnimFinishedEnd()
         {
             Debug.Log("anim finished");

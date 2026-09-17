@@ -67,12 +67,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             eventChannel.RaiseEvent(new OnEnemyRollRaise());
         }
 
-        private void Update()
-        {
-            if (Keyboard.current.tKey.wasPressedThisFrame)
-                eventChannel.RaiseEvent(new OnExecuteNextCommand()); // 테스트 용도
-        }
-
         private void HandleExecuteNextCommand(OnExecuteNextCommand garbage)
         {
             Debug.Log("다음행동");

@@ -18,8 +18,9 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         public UnityEvent onSetTarget;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             targetOutline.SetColor(PlayerColor);
             ValidateData();
         }
@@ -99,7 +100,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
         
         public override void ApplyDamage(float damage)
         {
-            HealthModule.TakeDamage(damage);
+            MyAgent.HealthModule.TakeDamage(damage);
         }
 
         public override void ApplyHeal(float heal) { }
