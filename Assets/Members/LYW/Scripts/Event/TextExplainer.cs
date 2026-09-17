@@ -7,7 +7,8 @@ namespace Members.LYW.Scripts.Event
     public class TextExplainer : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI text;
-
+        [SerializeField] private float printTerm = 0.05f;
+        
         public void StartTexting(string text)
         {
             StartCoroutine(Texting(text));
@@ -27,7 +28,7 @@ namespace Members.LYW.Scripts.Event
                 {
                     this.text.text += text[i];
                 }
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(printTerm);
             }
         }
     }

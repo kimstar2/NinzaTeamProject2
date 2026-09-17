@@ -12,10 +12,10 @@ namespace Members.LYW.Scripts
     {
         private Image _fragmentImage;
         public DiceFragmentSO _fragment { get; private set; }
-        private bool isSelected = false;
+        public bool isSelected { get; private set; } = false;
         public int index {get; private set;}
-        static int SeletedValue = 0;
-        
+        public static int SelectedValue { get; private set; } = 0;
+        public static void ResetSelectedValue() => SelectedValue = 0;
         public void Init(DiceFragmentSO fragment)
         {
             _fragmentImage = GetComponent<Image>();
@@ -31,9 +31,9 @@ namespace Members.LYW.Scripts
         {
             if (!isSelected)
             {
-                if (SeletedValue >= 3) return;
+                if (SelectedValue >= 3) return;
                 isSelected = true;
-                SeletedValue++;
+                SelectedValue++;
                 _fragmentImage.color = new Color(0.7f, 0.7f, 0.7f, 1);
                 EventBus.Publish(new RegisterFragmentEvent()
                 {
@@ -43,7 +43,7 @@ namespace Members.LYW.Scripts
             else
             {
                 isSelected = false;
-                SeletedValue--;
+                SelectedValue--;
                 _fragmentImage.color = Color.white;
                 EventBus.Publish(new UnRegisterFragmentEvent()
                 {

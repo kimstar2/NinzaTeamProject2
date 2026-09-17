@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,10 +22,19 @@ namespace Members.LYW.Scripts
             _fragment = fragment;
             diceFragmentSprite.sprite = fragment.diceFragmentSprite;
         }
+
+        public void ResetSlot()
+        {
+            index = 0;
+            isSetted = false;
+            _fragment = null;
+            diceFragmentSprite.sprite = defaultImage;
+        }
         
         public void RemoveFragment()
         {
             if (!isSetted) return;
+            index = 0;
             isSetted = false;
             _fragment = null;
             diceFragmentSprite.sprite = defaultImage;

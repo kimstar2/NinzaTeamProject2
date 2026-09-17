@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1cf3386540071042b2739d73bafb6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Test
+  firstEvent: {fileID: 5361117998682239395, guid: 4736f2903684b8049a92837a0aca9016, type: 3}
+  secondEvent: {fileID: 754240341450393803, guid: fd96822ed799d5040a0cb10162213799, type: 3}

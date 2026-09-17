@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a45ec12a4341e7a0e00b0d87ec4a4c, type: 3}
+  m_Name: SC_1
+  m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.EventDataSO
+  EventTitle: "\uC5B4\uB450\uC6B4 \uACE8\uBAA9 \uC18D\uC758 \uC810\uC9D1"
+  EventExplain: "\uC810\uC9D1\uC5D0 \uC788\uB358 \uC608\uC5B8\uC790\uAC00 \uBBF8\uB798\uB97C
+    \uBCF4\uACE0\uC2F6\uC9C0 \uC54A\uB0D0\uACE0 \uBB3B\uB294\uB2E4."
+  backgroundImage: {fileID: 0}
+  EXImage: {fileID: -3833160224216749389, guid: a6f92f730ec592146b538c4b27f002de, type: 3}
+  exImageScale: 25.51
+  exImageColor: {r: 1, g: 1, b: 1, a: 1}
+  backGroundImageColor: {r: 0, g: 0, b: 0, a: 1}
+  exImageMaterial: {fileID: 2100000, guid: 5efc627d69feea14d9693ef7b82e39c9, type: 2}
+  choices: 3
+  choiceText:
+  - "\uBBF8\uB798\uB97C \uBCF8\uB2E4."
+  - "\uBBF8\uB798\uB530\uC704 \uBBFF\uC744 \uAC83\uC774 \uBABB \uB41C\uB2E4."
+  - "\uB0B4 \uBBF8\uB798\uB294 \uB0B4\uAC00 \uAC1C\uCC99\uD55C\uB2E4."
+  choiceEvent:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
+        m_TargetAssemblyTypeName: Test, Assembly-CSharp
+        m_MethodName: Say
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
+        m_TargetAssemblyTypeName: Test, Assembly-CSharp
+        m_MethodName: Say
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
+        m_TargetAssemblyTypeName: Test, Assembly-CSharp
+        m_MethodName: Say
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a45ec12a4341e7a0e00b0d87ec4a4c, type: 3}
+  m_Name: NSC_4
+  m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.EventDataSO
+  EventTitle: "\uC1FC\uD0C0\uC784!"
+  EventExplain: "\uB9C8\uC744\uC758 \uB9C8\uCC28\uC5D0\uC11C \u201C\uAD6C\uC218\uD55C
+    \uBF55\uC9DD \uACE0\uC18D\uB3C4\uB85C \uD2B8\uB85C\uD2B8! \uC2E0\uB098\uAC8C
+    \uCDA4\uCD94\uBA70 \uD0EC\uBC84\uB9B0! \uC5D0\uC77C\uB9AC\uC5B8 \uC2E0\uB098\uAC8C
+    \uB0A0\uC544\uBD10~ \uBF55\uC9DD \uB9AC\uB4EC \uBAB8\uC5D0 \uB9E1\uACA8~ \uACE0\uC18D\uB3C4\uB85C
+    \uC704\uB97C \uB2EC\uB824!\u201D \uAC00 \uBC18\uBCF5\uB418\uACE0 \uC788\uB2E4."
+  backgroundImage: {fileID: 0}
+  EXImage: {fileID: 0}
+  exImageScale: 1
+  exImageColor: {r: 1, g: 1, b: 1, a: 1}
+  backGroundImageColor: {r: 0, g: 0, b: 0, a: 1}
+  exImageMaterial: {fileID: 0}
+  choices: 4
+  choiceText:
+  - "\uB2EC\uB9B0\uB2E4."
+  - "\uB2EC\uB9B0\uB2E4."
+  - "\uB2EC\uB9B0\uB2E4."
+  - "\uB2EC\uB9B0\uB2E4."
+  choiceEvent: 00000000000000000000000000000000
