@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
-using EventType = UnityEngine.EventType;
 
 public class EventManager : MonoBehaviour
 {
@@ -70,6 +69,19 @@ public class EventManager : MonoBehaviour
                     break;
                 case Members.LYW.Scripts.Event.EventType.MoveNextEvent:
                     buttons[i].onClick.AddListener(eventer.MoveNextEvent);
+                    break;
+                case  Members.LYW.Scripts.Event.EventType.DefaultComplete:
+                    buttons[i].onClick.AddListener(()=>
+                    {
+                        eventer.EndEvent(_eventData.resultText[index]);
+                    });
+                    break;
+                case  Members.LYW.Scripts.Event.EventType.ChangePlayerStatus:
+                    buttons[i].onClick.AddListener(()=>
+                    {
+                        eventer.EndEvent(_eventData.resultText[index]);
+                        eventer.SetPlayerStatus(_eventData.changeStatusDatas[index]);
+                    });
                     break;
             }
         }

@@ -16,57 +16,23 @@ MonoBehaviour:
   EventExplain: "\uBAAC\uC2A4\uD130\uB4E4 \uC0AC\uC774\uC5D0 \uACE0\uB9BD\uB41C \uC655\uAD6D
     \uAE30\uC0AC\uAC00 \uBAAC\uC2A4\uD130\uB4E4\uC744 \uC880 \uC4F0\uB7EC\uB728\uB824\uC8FC\uC9C0
     \uC54A\uACA0\uB0D0\uACE0 \uD55C\uB2E4."
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
   EXImage: {fileID: 0}
   exImageScale: 1
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
-  backGroundImageColor: {r: 0, g: 0, b: 0, a: 1}
+  backGroundImageColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   exImageMaterial: {fileID: 0}
   choices: 3
   choiceText:
   - "\uB3C4\uC640\uC900\uB2E4."
   - "\uBB34\uC2DC\uD558\uACE0 \uC9C0\uB098\uAC04\uB2E4."
   - "\uB2E4\uAD6C\uB9AC\uAE4C\uC11C \uC8FD\uC774\uACA0\uB2E4."
-  choiceEvent:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: Say
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: Say
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: Say
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  resultText:
+  - "\uC804\uD22C \uC2DC\uC791!"
+  - "\uC544\uBB34 \uC77C\uB3C4 \uC77C\uC5B4\uB098\uC9C0 \uC54A\uC558\uB2E4."
+  - "\uC804\uD22C \uC2DC\uC791!"
+  changeStatusDatas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  choiceEvent: 020000000200000002000000

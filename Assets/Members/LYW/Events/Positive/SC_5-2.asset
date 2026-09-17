@@ -18,42 +18,21 @@ MonoBehaviour:
     \uC8FC\uC0AC\uC704\uAC00 \uBA48\uCD94\uAE30 \uC804, \uB51C\uB7EC\uAC00 \uC8FC\uC0AC\uC704\uB97C
     \uCEF5\uC73C\uB85C \uB36E\uACE0\uB294 \uB9D0\uD588\uB2E4. \u201D\uD640,\uC9DD.
     \uD558\uB098\uB9CC \uACE0\uB974\uAC8C.\u201D"
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
   EXImage: {fileID: 0}
   exImageScale: 1
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
-  backGroundImageColor: {r: 0, g: 0, b: 0, a: 1}
+  backGroundImageColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   exImageMaterial: {fileID: 0}
   choices: 2
   choiceText:
   - "\uD640\uC218."
   - "\uC9DD\uC218."
-  choiceEvent:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: Say
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2176093042075440880, guid: ca25879290b92d14281f64aef7bec728, type: 3}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
-        m_MethodName: Say
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  resultText:
+  - "\"\uD765, \uC6B4\uC774 \uC88B\uB124.\"\\n100\uACE8\uB4DC\uB97C \uD68D\uB4DD\uD588\uB2E4!"
+  - "100\uACE8\uB4DC\uB97C \uC783\uC5C8\uB2E4...\\n\uB2E4\uC74C \uAE30\uD68C\uB97C
+    \uB178\uB824\uBCF4\uC790."
+  changeStatusDatas:
+  - {fileID: 0}
+  - {fileID: 0}
+  choiceEvent: 0200000002000000

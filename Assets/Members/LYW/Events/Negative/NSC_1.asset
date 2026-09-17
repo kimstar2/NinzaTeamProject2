@@ -18,15 +18,28 @@ MonoBehaviour:
     \uADF8\uB9AC\uACE0, \uB098\uC758 \uB208 \uC55E\uC5D4 \uB3C4\uC800\uD788 \uCC38\uC744
     \uC218 \uC5C6\uB294 \uC544\uB984\uB2E4\uC6B4 \uBB34\uC9C0\uAC1C \uC8FC\uC0AC\uC704\uAC00
     \uC788\uC5C8\uB2E4. \uC7C1\uCDE8\uD560\uAE4C?"
-  backgroundImage: {fileID: 0}
+  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
   EXImage: {fileID: 0}
   exImageScale: 1
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
-  backGroundImageColor: {r: 0, g: 0, b: 0, a: 1}
+  backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
   exImageMaterial: {fileID: 0}
   choices: 3
   choiceText:
   - "\uC7C1\uCDE8\uD55C\uB2E4."
   - "\uBB34\uC2DC\uD558\uACE0 \uC232\uC744 \uAC00\uB85C\uC9C0\uB978\uB2E4."
   - "\uD070 \uC18C\uB9AC\uB85C \uACE0\uD568\uC744 \uCE5C\uB2E4."
-  choiceEvent: 000000000000000000000000
+  resultText:
+  - "\u201D\uCF5C\uB85D\uCF5C\uB85D!!\u201D \uC774\uB7F0! \uACE0\uB9BD\uB41C \uACF3\uC774
+    \uADF8\uB0E5 \uC232\uC774 \uC544\uB2CC \uD658\uB9C8\uC758 \uC232\uC774\uC5C8\uB2E4\u2026\\n(\uB2E4\uC74C
+    \uC804\uD22C 5\uBC88\uB3D9\uC548 \uBC1B\uB294 \uD53C\uD574\uAC00 10% \uC99D\uAC00)"
+  - "\uBE60\uB978\uC18D\uB3C4\uB85C \uC232\uC744 \uAC00\uB85C\uC9C0\uB974\uB294 \uB3D9\uC548
+    \uB098\uBB47\uAC00\uC9C0\uC5D0 \uCC14\uB9AC\uACE0 \uBCA0\uC5EC\uBC84\uB838\uB2E4.\\n(\uC544\uAD70
+    \uD30C\uD2F0\uC758 \uCCB4\uB825\uC774 20\uC529 \uAC10\uC18C)"
+  - "\uD658\uB9C8\uB4E4\uC774 \uB3C4\uB9DD\uAC00\uBC84\uB838\uB2E4.\\n\uC544\uBB34
+    \uC77C\uB3C4 \uC77C\uC5B4\uB098\uC9C0 \uC54A\uC558\uB2E4."
+  changeStatusDatas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  choiceEvent: 020000000200000002000000

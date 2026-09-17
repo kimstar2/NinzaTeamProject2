@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,7 +9,9 @@ namespace Members.LYW.Scripts.Event
     public enum EventType
     {
         Say,
-        MoveNextEvent
+        MoveNextEvent,
+        DefaultComplete,
+        ChangePlayerStatus
     }
     
     [CreateAssetMenu(fileName = "EventDataSO", menuName = "LYW/SO/EventDataSO")]
@@ -30,6 +33,8 @@ namespace Members.LYW.Scripts.Event
         public int choices = 1;
 
         public List<string> choiceText = new();
+        public List<string> resultText = new();
+        public List<ChangeStatusDataSO> changeStatusDatas = new();
         public List<EventType> choiceEvent = new();
 
         private void OnValidate()
@@ -38,9 +43,11 @@ namespace Members.LYW.Scripts.Event
 
             ResizeList(choiceText, choices, "");
             ResizeList(choiceEvent, choices, new EventType());
+            ResizeList(changeStatusDatas, choices);
+            ResizeList(resultText, choices, "");
         }
 
-        private void ResizeList<T>(List<T> list, int size, T defaultValue)
+        private void ResizeList<T>(List<T> list, int size, T defaultValue = default)
         {
             while (list.Count < size)
                 list.Add(defaultValue);
