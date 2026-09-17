@@ -20,12 +20,14 @@ public class UpgradeButton : MonoBehaviour
         
         EventBus.Subscribe<RegisterFragmentEvent>(SetButtonState);
         EventBus.Subscribe<UnRegisterFragmentEvent>(SetButtonState);
+        button.onClick.AddListener(SetButtonState);
     }
 
     void OnDisable()
     {
         EventBus.UnSubscribe<RegisterFragmentEvent>(SetButtonState);
         EventBus.UnSubscribe<UnRegisterFragmentEvent>(SetButtonState);
+        button.onClick.RemoveListener(SetButtonState);
     }
 
     private void Start()
@@ -37,6 +39,11 @@ public class UpgradeButton : MonoBehaviour
         button.interactable = false;
     }
 
+    private void SetButtonState()
+    {
+        StartCoroutine(UpdateButton());
+    }
+    
     private void SetButtonState(RegisterFragmentEvent registerFragmentEvent)
     {
         StartCoroutine(UpdateButton());
