@@ -35,5 +35,27 @@ namespace DevLib.ServiceLocator
             Debug.LogWarning($"[Service Locator] {typeof(T).Name} 이 등록되지 않음");
             return default;
         }
+        
+        public static bool TryGet<T>(out T service)
+        {
+            if (_services.TryGetValue(typeof(T), out object value)
+                && value is T typedService)
+            {
+                service = typedService;
+                return true;
+            }
+
+            service = default;
+            return false;
+        }
+
+        public static void UnRegister<T>(T service)
+        {
+            if (_services.TryGetValue(typeof(T), out object registered)
+                && ReferenceEquals(registered, service))
+            {
+                UnRegister<T>();
+            }
+        }
     }
 }

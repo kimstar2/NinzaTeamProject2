@@ -16,6 +16,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	              "It requires you have in your scene an object with a Volume " +
 	              "with WhiteBalance active, and a MMWhiteBalanceShaker_URP component.")]
 	#if MM_URP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/White Balance URP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.URP")]

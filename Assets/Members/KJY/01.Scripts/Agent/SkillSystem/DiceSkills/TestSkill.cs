@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using _TevLib.Extension.DoT;
+using DevLib.HashDataSystem;
 using Members.KJY._01.Scripts.Agent.SkillSystem.Skill;
 using UnityEngine;
 
@@ -11,24 +12,29 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [SerializeField] private int attackerStepIndex, targetStepIndex;
         [SerializeField] private List<TweenStepClass> tweenSteps;
         [SerializeField] private List<SkillApplyStat> skillApplyStats;
-        private AbstractSelector _target;
-
-        public override void InitAndExecute(AbstractSelector attacker, AbstractSelector target)
-        {
-            _target = target;
-            
-            tweenSteps[attackerStepIndex].SetTransformValue(attacker.DefaultPosition.position);
-            tweenSteps[targetStepIndex].SetTransformValue(target.DefaultPosition.position);
-            
-            TweenSequencer.SetSteps(tweenSteps);
-            TweenSequencer.SetTargetTrm(attacker.MyAgent.transform);
-            TweenSequencer.Sequence();
-        }
 
         public override void ApplyStat()
         {
             foreach (SkillApplyStat applyStat in skillApplyStats)
-                _target.ApplyStat(applyStat.ApplyStatType,applyStat.Value);
+                Executor.Target.ApplyStat(applyStat.ApplyStatType,applyStat.Value);
+        }
+
+        public override void Execute()
+        {
+            Executor.PlayAnim();
+            // tweenSteps[attackerStepIndex].SetTransformValue(Executor.Attacker.DefaultPosition.position);
+            // tweenSteps[targetStepIndex].SetTransformValue(Executor.Target.DefaultPosition.position);
+            //
+            // TweenSequencer.SetSteps(tweenSteps);
+            // TweenSequencer.SetTargetTrm(Executor.Attacker.MyAgent.transform);
+            // TweenSequencer.Sequence();
+        }
+
+        public override void AnimEnd()
+        {
+            Executor.PlayIdleAnim();
+            Executor.SkillFinished();
+            Debug.Log("d");
         }
     }
 }

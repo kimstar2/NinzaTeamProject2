@@ -7,31 +7,34 @@ using UnityEngine.UI;
 public class FragmentSetter : MonoBehaviour
 {
     [SerializeField] private Inventory inventory;
+    [SerializeField] private List<DiceFragment> diceFragments = new();
 
     private void Start()
     {
         SetContents();
     }
 
+    public void RemoveSelectedDiceFragment()
+    {
+        var selectedDices = diceFragments
+            .Where(x => x != null && x.isSelected)
+            .ToList();
+
+        foreach (var selectedDice in selectedDices)
+        {
+            inventory.RemoveFragment(selectedDice._fragment);
+        }
+    }
+
     public void SetContents()
     {
-        List<Transform> children = transform.Cast<Transform>().ToList();
-
-        if (children.Count > 0)
+        foreach (Transform child in transform)
         {
-            foreach (Transform child in children)
-            {
-                Destroy(child.gameObject);
-            }
-            
-            for (int i = 0; i < inventory.DiceFragments.Count; i++)
-            {
-                CreateContent(inventory.DiceFragments[i], i);
-            }
-
-            return;
+            Destroy(child.gameObject);
         }
-        
+
+        diceFragments.Clear();
+
         for (int i = 0; i < inventory.DiceFragments.Count; i++)
         {
             CreateContent(inventory.DiceFragments[i], i);
@@ -40,15 +43,18 @@ public class FragmentSetter : MonoBehaviour
 
     private void CreateContent(DiceFragmentSO fragment, int index)
     {
-        GameObject diceFragment = new GameObject()
-        {
-            name = "DiceFragment",
-        };
+        GameObject diceFragment = new GameObject("DiceFragment");
+
         diceFragment.transform.SetParent(transform);
+
         var image = diceFragment.AddComponent<Image>();
         var clickTrigger = diceFragment.AddComponent<DiceFragment>();
+
         clickTrigger.Init(fragment);
         clickTrigger.SetIndex(index);
+
         image.sprite = fragment.diceFragmentSprite;
+
+        diceFragments.Add(clickTrigger);
     }
 }

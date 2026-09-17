@@ -23,19 +23,27 @@ namespace Members.LYW.Scripts
         {
             EventBus.Subscribe<RegisterFragmentEvent>(AddFragment);
             EventBus.Subscribe<UnRegisterFragmentEvent>(RemoveFragment);
+            EventBus.Subscribe<UpgradeFragmentEvent>(RefreshFragments);
         }
 
         private void OnDisable()
         {
             EventBus.UnSubscribe<RegisterFragmentEvent>(AddFragment);
             EventBus.UnSubscribe<UnRegisterFragmentEvent>(RemoveFragment);
+            EventBus.UnSubscribe<UpgradeFragmentEvent>(RefreshFragments);
+        }
+
+        private void RefreshFragments(UpgradeFragmentEvent upgradeFragmentEvent)
+        {
+            foreach (var slot in slots)
+            {
+                slot.ResetSlot();
+            }
         }
         
         private void AddFragment(RegisterFragmentEvent registerFragmentEvent)
         {
-            Debug.Log("추가됨.");
             if (slots.All(s => s.isSetted)) return;
-            Debug.Log("추가됨2");
             foreach (var slot in slots)
             {
                 if (!slot.isSetted)
@@ -49,12 +57,10 @@ namespace Members.LYW.Scripts
         
         private void RemoveFragment(UnRegisterFragmentEvent unRegisterFragmentEvent)
         {
-            Debug.Log("제거됨.");
             if (!slots.Any(s => s.isSetted)) return;
-            Debug.Log("제거됨2");
             foreach (var slot in slots)
             {
-                if (slot.index ==  unRegisterFragmentEvent.fragment.index)
+                if (slot.index == unRegisterFragmentEvent.fragment.index)
                 {
                     slot.RemoveFragment();
                     return;

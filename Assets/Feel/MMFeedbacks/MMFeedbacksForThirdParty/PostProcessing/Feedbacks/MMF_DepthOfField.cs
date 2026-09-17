@@ -17,6 +17,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	              "It requires you have in your scene an object with a PostProcessVolume " +
 	              "with Depth of Field active, and a MMDepthOfFieldShaker component.")]
 	#if MM_POSTPROCESSING
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Depth Of Field")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.PostProcessing")]

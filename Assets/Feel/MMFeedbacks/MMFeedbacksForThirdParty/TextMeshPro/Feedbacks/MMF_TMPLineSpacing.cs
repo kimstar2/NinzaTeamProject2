@@ -14,6 +14,7 @@ namespace MoreMountains.Feedbacks
 	[AddComponentMenu("")]
 	[FeedbackHelp("This feedback lets you control the line spacing of a target TMP over time.")]
 	#if MM_UGUI2
+	[System.Serializable]
 	[FeedbackPath("TextMesh Pro/TMP Line Spacing")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.TextMeshPro")]

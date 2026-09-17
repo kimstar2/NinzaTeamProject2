@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Tanker
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Player.PlayerDataSO
   <PlayerType>k__BackingField: 0
+  <Anim>k__BackingField: {fileID: 9100000, guid: 5f3f01c338090cb4db8df3f10501bd7b, type: 2}
   <PlayerImage>k__BackingField: {fileID: 2702264444479049373, guid: a8665e3b7a691d94fb14932fa91092d8, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: e4c420ea4a0436045ad1733a3fdf6f00, type: 2}

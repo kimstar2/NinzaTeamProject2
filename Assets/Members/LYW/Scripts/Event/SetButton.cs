@@ -15,6 +15,8 @@ namespace Members.LYW.Scripts.Event
         private RectTransform rectTransform;
 
         private Vector2 originalPosition;
+        
+        private Tween scaleTween;
 
         private void Awake()
         {
@@ -30,7 +32,7 @@ namespace Members.LYW.Scripts.Event
 
             canvasGroup.DOKill();
             rectTransform.DOKill();
-            
+
             canvasGroup.alpha = 0f;
 
             canvasGroup.interactable = false;
@@ -38,12 +40,12 @@ namespace Members.LYW.Scripts.Event
 
             rectTransform.anchoredPosition =
                 originalPosition + Vector2.left * moveDistance;
-            
+
             canvasGroup
                 .DOFade(1f, duration)
                 .SetDelay(delay)
                 .SetEase(Ease.OutQuad);
-            
+
             rectTransform
                 .DOAnchorPos(originalPosition, duration)
                 .SetDelay(delay)
@@ -59,7 +61,9 @@ namespace Members.LYW.Scripts.Event
         {
             canvasGroup.DOKill();
             rectTransform.DOKill();
-            
+
+            scaleTween?.Kill();
+
             canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
 
@@ -74,17 +78,18 @@ namespace Members.LYW.Scripts.Event
                 )
                 .SetEase(Ease.InCubic);
         }
-        
+
         public void OnPointerEnter(PointerEventData eventData)
         {
             var outline = GetComponent<Outline>();
+
             var color = outline.effectColor;
             color.a = 1f;
             outline.effectColor = color;
             
-            transform.DOKill();
+            scaleTween?.Kill();
 
-            transform
+            scaleTween = transform
                 .DOScale(1.05f, 0.15f)
                 .SetEase(Ease.OutQuad);
         }
@@ -92,13 +97,14 @@ namespace Members.LYW.Scripts.Event
         public void OnPointerExit(PointerEventData eventData)
         {
             var outline = GetComponent<Outline>();
+
             var color = outline.effectColor;
             color.a = 0f;
             outline.effectColor = color;
             
-            transform.DOKill();
+            scaleTween?.Kill();
 
-            transform
+            scaleTween = transform
                 .DOScale(1f, 0.15f)
                 .SetEase(Ease.OutQuad);
         }

@@ -17,6 +17,7 @@ namespace MoreMountains.FeedbacksForThirdParty
 	              "It requires you have in your scene an object with a Volume " +
 	              "with Color Adjustments active, and a MMColorAdjustmentsShaker_URP component.")]
 	#if MM_URP
+	[System.Serializable]
 	[FeedbackPath("PostProcess/Color Adjustments URP")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.URP")]

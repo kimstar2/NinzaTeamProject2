@@ -13,6 +13,7 @@ namespace MoreMountains.Feedbacks
 	[AddComponentMenu("")]
 	[FeedbackHelp("This feedback lets you control the color of a target TMP over time.")]
 	#if MM_UGUI2
+	[System.Serializable]
 	[FeedbackPath("TextMesh Pro/TMP Color")]
 	#endif
 	[MovedFrom(false, null, "MoreMountains.Feedbacks.TextMeshPro")]
