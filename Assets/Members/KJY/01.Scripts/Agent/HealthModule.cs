@@ -48,6 +48,7 @@ namespace Members.KJY._01.Scripts.Agent
             
             if (CurrentHealth <= 0)
             {
+                Debug.Log("dead");
                 _isDead = true;
                 OnDead?.Invoke();
             }

@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Battle.BattleObserver
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
+  commandDelay: 0.1
   <CommandList>k__BackingField: []
   references:
     version: 2
@@ -779,6 +780,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7037175358048698588, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: enemyType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181693421131579699, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: enemyType
       value: 3
       objectReference: {fileID: 0}
@@ -1852,6 +1857,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 216517045}
     m_Modifications:
+    - target: {fileID: 6771643344793294803, guid: d563862f11179454db766d9530ade438, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
     - target: {fileID: 8133093779782226154, guid: d563862f11179454db766d9530ade438, type: 3}
       propertyPath: m_Name
       value: Healer
@@ -3162,6 +3171,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1034862696}
     m_Modifications:
+    - target: {fileID: 6771643344793294803, guid: d563862f11179454db766d9530ade438, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
     - target: {fileID: 8133093779782226154, guid: d563862f11179454db766d9530ade438, type: 3}
       propertyPath: m_Name
       value: Mage
@@ -4542,6 +4555,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1761031624}
     m_Modifications:
+    - target: {fileID: 1579157908532088578, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
+    - target: {fileID: 4331378556868547248, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8699271899877395888, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5579,6 +5600,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7037175358048698588, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: enemyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181693421131579699, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: enemyType
       value: 2
       objectReference: {fileID: 0}
@@ -8481,6 +8506,7 @@ MonoBehaviour:
   <DiceRollCheckList>k__BackingField:
   - <EnemyType>k__BackingField: 0
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8497,11 +8523,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
   - <EnemyType>k__BackingField: 1
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8518,11 +8542,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
   - <EnemyType>k__BackingField: 2
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8539,11 +8561,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
   - <EnemyType>k__BackingField: 3
     <DiceRollEnd>k__BackingField: 0
+    <IsDead>k__BackingField: 0
     onRollEnd:
       m_PersistentCalls:
         m_Calls:
@@ -8560,9 +8580,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    onRoll:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!1 &1138939130
 GameObject:
   m_ObjectHideFlags: 0
@@ -9766,6 +9783,10 @@ PrefabInstance:
     - target: {fileID: 6896565726711562072, guid: e2788b6186939d647adf856fef153983, type: 3}
       propertyPath: m_EffectColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101902260906076278, guid: e2788b6186939d647adf856fef153983, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7426838693887059843, guid: e2788b6186939d647adf856fef153983, type: 3}
       propertyPath: m_Name
@@ -11077,6 +11098,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1911217094}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayFeedbacks
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetBlink
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MoreMountains.Feedbacks.MMF_Player, MoreMountains.Tools
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Members.KJY._01.Scripts.UI.Mono.UIMaterialBlinkEffect, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910444270936403157, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: onSeqComplete.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3092916734845281530, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11158,6 +11231,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7037175358048698588, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: enemyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181693421131579699, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: enemyType
       value: 1
       objectReference: {fileID: 0}
@@ -11704,6 +11781,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 21422226}
     m_Modifications:
+    - target: {fileID: 1579157908532088578, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
+    - target: {fileID: 4331378556868547248, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8699271899877395888, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12235,6 +12320,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1211306931}
     m_Modifications:
+    - target: {fileID: 1579157908532088578, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
+    - target: {fileID: 4331378556868547248, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8699271899877395888, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13648,6 +13741,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1911217094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 467040590823279030, guid: b31308143cb7268468641e93717bcb88, type: 3}
+  m_PrefabInstance: {fileID: 1536274936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a34f9422a10343c69c696374ad241c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.Mono.UIMaterialBlinkEffect
 --- !u!1 &1927249703
 GameObject:
   m_ObjectHideFlags: 0
@@ -14110,6 +14214,8 @@ MonoBehaviour:
   lRParent: {fileID: 1631962377}
   lRFadeTime: 0.3
   startBattleSeq: {fileID: 1786755356}
+  key: []
+  value: []
 --- !u!1 &2084988607
 GameObject:
   m_ObjectHideFlags: 0
@@ -14280,6 +14386,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 55819688}
     m_Modifications:
+    - target: {fileID: 6771643344793294803, guid: d563862f11179454db766d9530ade438, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
     - target: {fileID: 8133093779782226154, guid: d563862f11179454db766d9530ade438, type: 3}
       propertyPath: m_Name
       value: Dealer
@@ -14386,6 +14496,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 890816646}
     m_Modifications:
+    - target: {fileID: 6771643344793294803, guid: d563862f11179454db766d9530ade438, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
     - target: {fileID: 8133093779782226154, guid: d563862f11179454db766d9530ade438, type: 3}
       propertyPath: m_Name
       value: Tanker
@@ -14668,6 +14782,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 671475814}
     m_Modifications:
+    - target: {fileID: 1579157908532088578, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
+    - target: {fileID: 4331378556868547248, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8699271899877395888, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

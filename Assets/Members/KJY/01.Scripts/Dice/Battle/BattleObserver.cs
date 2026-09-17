@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DevLib.CoreLib.Runtime;
@@ -15,7 +16,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     public class BattleObserver : MonoModule
     {
         [SerializeField] private EventChannelSO eventChannel;
-        
+        [SerializeField] private float commandDelay;
         [field:SerializeReference] public List<ICommand> CommandList { get; private set; } = new();
         public CancellationTokenSource BattleCts {get; private set;}
         private ICommand _currentCommand;
@@ -53,15 +54,17 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             foreach (ICommand command in CommandList.AsValueEnumerable().ToList())
             {
                 _currentCommand = command;
-                _currentCommand.Execute();
-                await _currentCommand.ExecuteAction(ct);
+                
+                _currentCommand.SetNextSignal(ct);
+                await _currentCommand.ExecuteAction();
                 Debug.Log("다음");
                 RemoveCommand(_currentCommand);
+                await UniTask.Delay(TimeSpan.FromSeconds(commandDelay), cancellationToken:ct);
             }
             ClearCommands();
             Debug.Log("배틀 끝");
             eventChannel.RaiseEvent(new OnEndBattle());
-            eventChannel.RaiseEvent(new OnEnemyRoll());
+            eventChannel.RaiseEvent(new OnEnemyRollRaise());
         }
 
         private void Update()
@@ -70,7 +73,12 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 eventChannel.RaiseEvent(new OnExecuteNextCommand()); // 테스트 용도
         }
 
-        private void HandleExecuteNextCommand(OnExecuteNextCommand garbage) => _currentCommand.MoveNext(); // 다음 행동 실행
+        private void HandleExecuteNextCommand(OnExecuteNextCommand garbage)
+        {
+            Debug.Log("다음행동");
+            _currentCommand.MoveNext();
+            // 다음 행동 실행
+        }
 
         public void AddCommand(ICommand command) => CommandList.Add(command);
         public void RemoveCommand(ICommand command) => CommandList.Remove(command);
