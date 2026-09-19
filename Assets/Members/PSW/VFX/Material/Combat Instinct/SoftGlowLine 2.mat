@@ -51,12 +51,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CoreWidth: 0.134
+    - _CoreWidth: 0.104
     - _EdgeSoftness: 1
     - _EndFade: 0.1
     - _GlowIntensity: 8.23
-    - _HalfWidth: 0.384
-    - _Opacity: 1
+    - _HalfWidth: 0.5
+    - _Opacity: 0.113
     - _QueueControl: 0
     - _QueueOffset: -5
     m_Colors:
