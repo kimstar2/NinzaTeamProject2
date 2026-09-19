@@ -21,6 +21,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field:SerializeField] public HashDataSO IdleAnimHash {get; private set;}
         [field:SerializeField] public HashDataSO SkillAnimHash {get; private set;}
         [SerializeField] private List<AbstractSkillLogic> skills;
+        public AgentType AgentType { get; private set; }
         public event Action OnSkillFinished;
         public event Action OnSkillExecute;
         public UnityEvent onAnimFinished;
@@ -29,10 +30,13 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public AbstractSelector Target { get; private set; }
         
         public void SkillFinished() => OnSkillFinished?.Invoke();
-        public void SkillExecute(AbstractSelector attacker, AbstractSelector target)
+        public void SkillExecute(AbstractSelector attacker, AbstractSelector target , AgentType agentType)
         {
             Target = target;
             Attacker = attacker;
+            AgentType = agentType;
+            
+            if (Attacker.IsDead ||  Target.IsDead) return;
             
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
             Attacker.MyAgent.AnimTrigger.OnAnimFinished += HandleAnimFinished;
@@ -48,6 +52,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         private void HandleAnimFinished()
         {
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
+            onAnimFinished?.Invoke();
             
             foreach (AbstractSkillLogic skillLogic in skills)
                 skillLogic.AnimEnd();

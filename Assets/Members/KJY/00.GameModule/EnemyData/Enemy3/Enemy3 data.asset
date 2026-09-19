@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
   <EnemyName>k__BackingField: Enemy3
   <EnemyHealth>k__BackingField: 100
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: 3fd9d17990964704db3327b20880bac9, type: 2}
   <EnemyImage>k__BackingField: {fileID: 6479062115034984017, guid: 0064965e18d1ea84a94453e2d35293db, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: efc68200803710547a5e45fb9e5e10be, type: 2}

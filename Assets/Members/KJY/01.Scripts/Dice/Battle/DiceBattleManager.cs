@@ -15,6 +15,7 @@ using Members.KJY._01.Scripts.Events.Dice.Selector;
 using Members.KJY._01.Scripts.Flags;
 using Members.KJY._01.Scripts.Mono;
 using UnityEngine;
+using UnityEngine.Events;
 using ZLinq;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
@@ -28,7 +29,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private MonoLineRenderer copyLineRenderer;
         [SerializeField] private Transform lRParent;
         [SerializeField] private float lRFadeTime;
-        [SerializeField] private TweenSequencer startBattleSeq;
+        public UnityEvent onStartBattle;
+        public UnityEvent onEndBattle;
 
         private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
         private BattleObserver _battleObserver;
@@ -156,7 +158,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         private void HandleStartBattle(OnStartBattle evt) // 배틀 시작 버튼을 눌렀을때
         {
-            _battleObserver.AddCommand(new OnActionCommand(startBattleSeq.Sequence,null));
+            _battleObserver.AddCommand(new OnActionCommand(onStartBattle.Invoke,null));
             ActionCommand[] getPlayerAttackData = GetP2TAtkCommands();
             foreach (ActionCommand attackCommand in getPlayerAttackData)
                 _battleObserver.AddCommand(attackCommand);
@@ -190,6 +192,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 pS.SelectToggle();
                 RemoveFromBattleChain(pS);
             }
+            
+            onEndBattle?.Invoke();
         }
         
         #endregion

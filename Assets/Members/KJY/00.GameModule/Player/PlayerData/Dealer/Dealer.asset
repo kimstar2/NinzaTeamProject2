@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Dealer
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Player.PlayerDataSO
   <PlayerType>k__BackingField: 1
-  <Anim>k__BackingField: {fileID: 9100000, guid: aac3a1039b1989d479c81ffb262845ec, type: 2}
+  <AnimCon>k__BackingField: {fileID: 9100000, guid: aac3a1039b1989d479c81ffb262845ec, type: 2}
   <PlayerImage>k__BackingField: {fileID: -5983517201403770315, guid: 3584c85aec357e94c90518c204a14da9, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: 77c59ee189a01eb4381c3b6414aa6193, type: 2}

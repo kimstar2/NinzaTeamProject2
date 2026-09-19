@@ -9,6 +9,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 {
     public class SkillExecutor : MonoModule , IRequirePooling
     {
+        [SerializeField] private AgentType agentType;
         [SerializeField] private Transform skillParent;
         [SerializeField] private EventChannelSO eventChannel;
         public bool CanExecuteSkill { get; private set; } = true;
@@ -28,7 +29,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             }
             
             CurrentSkillLogic.OnSkillFinished += HandleEndSkill;
-            CurrentSkillLogic.SkillExecute(attacker, target);
+            CurrentSkillLogic.SkillExecute(attacker, target, agentType);
         }
 
         public void HandleEndSkill()

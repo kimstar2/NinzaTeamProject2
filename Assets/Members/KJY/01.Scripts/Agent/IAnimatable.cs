@@ -8,6 +8,6 @@ namespace Members.KJY._01.Scripts.Agent
         Animator Animator { get; }
         void RenderClip(int hash);
         void RenderClipIfNotPlaying(int hash);
-        void SetController(AnimatorController controller);
+        void SetController(AnimatorOverrideController controller);
     }
 }
