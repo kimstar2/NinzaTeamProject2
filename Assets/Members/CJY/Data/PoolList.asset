@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe35413491d47c18f4a5d8c956c1fd6, type: 3}
+  m_Name: PoolList
+  m_EditorClassIdentifier: PoolingSystem_Runtime_assembly::_LumenLib.PoolingSystem.Runtime.PoolingListSO
+  <PoolList>k__BackingField:
+  - {fileID: 11400000, guid: 14928970a15941a48a93e01d375e540e, type: 2}
+  - {fileID: 11400000, guid: eeba1e2a962eeb543972b5f7567b5f5d, type: 2}
+  - {fileID: 11400000, guid: c12a438b7174cb84f94d9751f5338270, type: 2}
