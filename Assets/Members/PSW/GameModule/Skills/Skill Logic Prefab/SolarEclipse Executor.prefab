@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 1370358560196507374}
   - component: {fileID: 7367117411249116541}
   m_Layer: 0
-  m_Name: Skill Logic Excutor
+  m_Name: SolarEclipse Executor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
