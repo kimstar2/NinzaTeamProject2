@@ -13,7 +13,7 @@ Pooling Item 만들기
 4. 프리팹과 초기 생성 갯수를 설정합니다.
 
 사용 예시
-using LumenLib.PoolingSystem.Runtime;
+``` using LumenLib.PoolingSystem.Runtime;
 using Services = LumenLib.ServiceLocator.ServiceLocator;
 
 if (Services.TryGet<ObjectPool>(out var pool))

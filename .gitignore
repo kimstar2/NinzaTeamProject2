@@ -107,3 +107,5 @@ InitTestScene*.unity*
 
 # NuGetForUnity restores binaries from Assets/packages.config.
 /[Aa]ssets/[Pp]ackages/
+.idea
+.idea
