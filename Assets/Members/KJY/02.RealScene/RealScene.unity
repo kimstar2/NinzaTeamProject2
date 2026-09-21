@@ -1021,76 +1021,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a2d01d418d4f46a4d13efabd9ae852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDiceInventory
---- !u!1 &132746343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 132746344}
-  - component: {fileID: 132746345}
-  m_Layer: 5
-  m_Name: DiceRollRaiser
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &132746344
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132746343}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1819734132}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &132746345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132746343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a4c396211794e7babcdf6a0eeffd81b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceRollRaiser
-  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
-  testData: {fileID: 11400000, guid: f600ed4550e5aac4799543166cc5464a, type: 2}
-  maxRiskLevel: 100
-  riskLevel: 0
-  riskLevelIncrease: 2
-  riskLevelIncreasePer: 1.1
-  onRiskLevelChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2084988611}
-        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.UI.UIFillAmountBinder,
-          Assembly-CSharp
-        m_MethodName: FillAmount
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &134120344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4548,55 +4478,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 111564955280840867, guid: e2788b6186939d647adf856fef153983, type: 3}
   m_PrefabInstance: {fileID: 499352750}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &510950248
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 510950249}
-  - component: {fileID: 510950250}
-  m_Layer: 5
-  m_Name: BattleStartRaiser
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &510950249
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510950248}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2044270134}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &510950250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510950248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819641d7b83648ac8db33b702da738e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.DiceBattleRaiser
-  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
 --- !u!1 &516758367
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,7 +4667,7 @@ PrefabInstance:
     - target: {fileID: 1579157908532088578, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d00682177a6925942b6b6491b1a6ad9b, type: 2}
+      objectReference: {fileID: 22100000, guid: 6a4b52f32a2353e42bcae2249a9c1d90, type: 2}
     - target: {fileID: 4331378556868547248, guid: a352963aa4764e149826ee1cbe7058cd, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -6229,8 +6110,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 132746345}
-        m_TargetAssemblyTypeName: Members.KJY.Scripts.Dice.DiceRollRaiser, Assembly-CSharp
+      - m_Target: {fileID: 1819734133}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.Player.Dice.PlayerDiceRollManager,
+          Assembly-CSharp
         m_MethodName: Roll
         m_Mode: 1
         m_Arguments:
@@ -8841,10 +8723,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 510950250}
-        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Dice.Battle.DiceBattleRaiser,
+      - m_Target: {fileID: 2044270135}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Dice.Battle.DiceBattleManager,
           Assembly-CSharp
-        m_MethodName: BattleStart
+        m_MethodName: StartBattle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9370,7 +9252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3406472edea42d59c490ad90debe41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.Dice.EnemyDiceRollManager
-  <AllDiceRollEnd>k__BackingField: 0
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   onAllDiceRollEnd:
     m_PersistentCalls:
@@ -12478,6 +12359,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6fd7465a9f4201a85d82828c7e7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Mono.MonoLineRenderer
+--- !u!1 &1517384286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517384287}
+  - component: {fileID: 1517384288}
+  m_Layer: 0
+  m_Name: PoolingService
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1517384287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517384286}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1871291596}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1517384288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517384286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65402a95cae045deb78d46025f490fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: PoolingSystem_Runtime_assembly::_LumenLib.PoolingSystem.Runtime.ObjectPool
+  poolList: {fileID: 11400000, guid: e2042d65420717b4188bdaf37552c8b1, type: 2}
 --- !u!1001 &1536274936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14682,8 +14608,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 132746344}
+  m_Children: []
   m_Father: {fileID: 1593650971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -14703,7 +14628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb301bbfab349cc9b3c9d98b71dcbac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceBattleManager
-  <AllDiceRollEnd>k__BackingField: 0
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   onAllDiceRollEnd:
     m_PersistentCalls:
@@ -14794,6 +14718,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 216759309}
+          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Dice.DiceInventory, Assembly-CSharp
+          m_MethodName: HandleRollEnd
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onRoll:
       m_PersistentCalls:
         m_Calls: []
@@ -14837,6 +14773,26 @@ MonoBehaviour:
     onRoll:
       m_PersistentCalls:
         m_Calls: []
+  maxRiskLevel: 100
+  riskLevel: 0
+  riskLevelIncrease: 1
+  riskLevelIncreasePer: 1
+  onRiskLevelChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2084988611}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.UI.UIFillAmountBinder,
+          Assembly-CSharp
+        m_MethodName: FillAmount
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1830543054
 GameObject:
   m_ObjectHideFlags: 0
@@ -15046,6 +15002,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1000044917}
+  - {fileID: 1517384287}
   m_Father: {fileID: 1434438566}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880866262
@@ -15798,7 +15755,6 @@ RectTransform:
   - {fileID: 875479873}
   - {fileID: 1448350951}
   - {fileID: 1631962377}
-  - {fileID: 510950249}
   - {fileID: 36420978}
   m_Father: {fileID: 1593650971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15820,6 +15776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.DiceBattleManager
   <CurrentPlayerSelector>k__BackingField: {fileID: 0}
+  pRollManager: {fileID: 1819734133}
+  eRollManager: {fileID: 1120800155}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   copyLineRenderer: {fileID: 1510483103}
   lRParent: {fileID: 1631962377}
@@ -15953,12 +15911,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4146786208365501868, guid: c105d842632890546baac2d11fc33d00, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

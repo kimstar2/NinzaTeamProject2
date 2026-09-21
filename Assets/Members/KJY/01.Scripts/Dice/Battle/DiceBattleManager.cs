@@ -23,6 +23,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     public class DiceBattleManager : ModuleOwner , IGetIsSelectService , IRequirePooling
     {
         [field: SerializeField] public PlayerSelector CurrentPlayerSelector { get; private set; }
+        [SerializeField] private AbstractDiceRollManager pRollManager,eRollManager;
         [SerializeField] private EventChannelSO eventChannel;
         
         [Header("Line Renderer Set")]
@@ -32,16 +33,16 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public UnityEvent onStartBattle;
         public UnityEvent onEndBattle;
 
-        private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
-        private BattleObserver _battleObserver;
         [SerializeField] private List<PlayerSelector> key;
         [SerializeField] private List<AbstractSelector> value;
         
-        public int Count => BattleChain.Count;
+        private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
+        private BattleObserver _battleObserver;
+        
 
         private readonly LinkedList<(PlayerSelector playerSelector, AbstractSelector targetSelector)> _orderedChain = new();
-        // public Dictionary<PlayerSelector,EnemySelector> BattleChain { get; private set; } = new();
         public Dictionary<PlayerSelector, LinkedListNode<(PlayerSelector playerSelector, AbstractSelector targetSelector)>> BattleChain { get; private set; } = new();
+        public int Count => BattleChain.Count;
         
         protected override void InitializeModules()
         {
@@ -58,7 +59,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             eventChannel.AddListener<OnPlayerSelect>(HandleDiceSelected);
             eventChannel.AddListener<OnPlayerUnSelect>(HandleDiceUnSelected);
             eventChannel.AddListener<OnEnemySelect>(HandleTargetSelected);
-            eventChannel.AddListener<OnStartBattle>(HandleStartBattle);
             eventChannel.AddListener<OnEndBattle>(HandleEndBattle);
         }
 
@@ -67,7 +67,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             eventChannel.RemoveListener<OnPlayerSelect>(HandleDiceSelected);
             eventChannel.RemoveListener<OnPlayerUnSelect>(HandleDiceUnSelected);
             eventChannel.RemoveListener<OnEnemySelect>(HandleTargetSelected);
-            eventChannel.RemoveListener<OnStartBattle>(HandleStartBattle);
             eventChannel.RemoveListener<OnEndBattle>(HandleEndBattle);
         }
         
@@ -156,8 +155,11 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             ClearCrtSelector(); // 현재 셀렉터는 없음
         }
         
-        private void HandleStartBattle(OnStartBattle evt) // 배틀 시작 버튼을 눌렀을때
+        public void StartBattle() // 배틀 시작 버튼을 눌렀을때
         {
+            if (_battleObserver.IsBattle) return;
+            if (!pRollManager.AllDiceRollEnd || !eRollManager.AllDiceRollEnd) return;
+            
             _battleObserver.AddCommand(new OnActionCommand(onStartBattle.Invoke,null));
             ActionCommand[] getPlayerAttackData = GetP2TAtkCommands();
             foreach (ActionCommand attackCommand in getPlayerAttackData)
