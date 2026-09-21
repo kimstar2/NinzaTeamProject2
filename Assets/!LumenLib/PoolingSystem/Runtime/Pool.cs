@@ -42,6 +42,7 @@ namespace _LumenLib.PoolingSystem.Runtime
             else
                 item = _pool.Pop();
             
+            item.GameObject.SetActive(true);
             return item;
         }
         
