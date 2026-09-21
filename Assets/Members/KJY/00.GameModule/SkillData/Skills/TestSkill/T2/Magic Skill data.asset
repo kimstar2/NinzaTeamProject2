@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
-  m_Name: Test Skill data 2
+  m_Name: Magic Skill data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 7e187c292ec81d84d9f5219c8b05f92e, type: 3}
-  <SkillName>k__BackingField: TestSkill2
+  <SkillName>k__BackingField: Magic Skill data
   <SkillDescription>k__BackingField: "\uB69C\uB6A0.\n"

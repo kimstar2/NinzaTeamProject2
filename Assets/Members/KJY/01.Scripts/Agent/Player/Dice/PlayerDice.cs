@@ -22,7 +22,12 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
             eventChannel.RemoveListener<OnPlayerRoll>(HandleRoll);
         }
         
-        private void HandleRoll(OnPlayerRoll obj) => Roll(destTrm.localPosition,GetRandom());
+        private void HandleRoll(OnPlayerRoll obj)
+        {
+            if (obj.playerType == playerType)
+                Roll(destTrm.localPosition, GetRandom());
+        }
+
         private void HandleDiceLock(OnDiceLock obj)
         {
             if (obj.PlayerType != playerType) return;

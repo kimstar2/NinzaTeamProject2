@@ -10,5 +10,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         public abstract void ApplyStat();
         public abstract void Execute();
         public virtual void AnimEnd() {}
+        public virtual void Attack() {}
     }
 }

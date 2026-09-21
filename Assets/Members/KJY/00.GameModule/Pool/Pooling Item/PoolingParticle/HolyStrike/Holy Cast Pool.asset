@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bf033ece7ac4d2a857f72cca9a12201, type: 3}
+  m_Name: Holy Cast Pool
+  m_EditorClassIdentifier: PoolingSystem_Runtime_assembly::_LumenLib.PoolingSystem.Runtime.PoolItemSO
+  <ItemName>k__BackingField: HolyCast
+  <Prefab>k__BackingField: {fileID: 3976184009791385243, guid: 3810416ce2719b4409752fb4a076e668, type: 3}
+  <PoolSize>k__BackingField: 4

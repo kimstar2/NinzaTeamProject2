@@ -48,6 +48,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         {
             eventChannel.RemoveListener<OnEnemyRollRaise>(HandleRoll);
             eventChannel.RemoveListener<OnEnemyRollEnd>(HandleRollEnd);
+            eventChannel.RemoveListener<OnEnemyDead>(HandleEnemyDead);
         }
 
         private void HandleRollEnd(OnEnemyRollEnd evt)

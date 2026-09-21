@@ -34,11 +34,16 @@ namespace Members.KJY._01.Scripts.Agent
         }
 
         public event Action OnAnimFinished;
+        public event Action OnAttack;
 
         public void AnimFinishedEnd()
         {
-            Debug.Log("anim finished");
             OnAnimFinished?.Invoke();
+        }
+
+        public void AnimOnAttack()
+        {
+            OnAttack?.Invoke();
         }
     }
 }

@@ -19,11 +19,12 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private float commandDelay;
         [field:SerializeReference] public List<ICommand> CommandList { get; private set; } = new();
         public CancellationTokenSource BattleCts {get; private set;}
+        public bool IsBattle {get; private set;}
         private ICommand _currentCommand;
 
         public void StartBattle() // 배틀 시작
         {
-            Debug.Log("배틀 시작");
+            IsBattle = true;
             ExecuteAsync().Forget();
         }
 
@@ -63,6 +64,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             }
             ClearCommands();
             Debug.Log("배틀 끝");
+            IsBattle = false;
             eventChannel.RaiseEvent(new OnEndBattle());
             eventChannel.RaiseEvent(new OnEnemyRollRaise());
         }

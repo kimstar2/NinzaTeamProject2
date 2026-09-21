@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceDataSO
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
   <Icon>k__BackingField: {fileID: 4633355498211079068, guid: 03c9eaea50b051a48aab156c11ee947f, type: 3}
-  <SkillData>k__BackingField: {fileID: 11400000, guid: f0da1279f1923e54386d068f19582cf2, type: 2}
+  <SkillData>k__BackingField: {fileID: 11400000, guid: 809a4c1df16d8834f93a4176ef06b7df, type: 2}
   <BaseDamage>k__BackingField: 0
