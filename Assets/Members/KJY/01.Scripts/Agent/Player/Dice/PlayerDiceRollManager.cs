@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DevLib.CoreLib.Runtime;
 using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
@@ -32,25 +33,24 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
     public class PlayerDiceRollManager : AbstractDiceRollManager
     {
         [field:SerializeField] public List<PlayerDiceRollCheck> DiceRollCheckList {get; private set;}
+        [SerializeField] private float maxRiskLevel;
+        [SerializeField] private float riskLevel;
+        [SerializeField] private float riskLevelIncrease; // 테스트용임
+        [Min(1f),SerializeField] private float riskLevelIncreasePer; // 테스트용임
+        private int _rollCount;
+        
+        public UnityEvent<float> onRiskLevelChanged;
         
         private void OnEnable()
         {
-            eventChannel.AddListener<OnPlayerRoll>(HandleRoll);
             eventChannel.AddListener<OnPlayerRollEnd>(HandleRollEnd);
         }
 
         private void OnDisable()
         {
-            eventChannel.RemoveListener<OnPlayerRoll>(HandleRoll);
             eventChannel.RemoveListener<OnPlayerRollEnd>(HandleRollEnd);
         }
-
-        private void HandleRoll(OnPlayerRoll garbageEvent)
-        {
-            AllDiceRollEnd = false;
-            foreach (PlayerDiceRollCheck check in DiceRollCheckList)
-                check.OnRoll();
-        }
+        
 
         private void HandleRollEnd(OnPlayerRollEnd obj)
         {
@@ -58,9 +58,38 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
             check.OnRollEnd(obj.DiceFaceType);
             
             AllDiceRollEnd = DiceRollCheckList.TrueForAll(x => x.DiceRollEnd);
-            
+
             if (AllDiceRollEnd)
+            {
                 onAllDiceRollEnd?.Invoke();
+            }
         }
+
+        public void Roll()
+        {
+            RollLogic();
+            CalcRisk();
+        }
+
+        protected override void RollLogic()
+        {
+            if (!AllDiceRollEnd) return;
+            foreach (PlayerDiceRollCheck check in DiceRollCheckList)
+            {
+                check.OnRoll();
+                eventChannel.RaiseEvent(new OnPlayerRoll(check.PlayerType));
+            }
+            
+            AllDiceRollEnd = false;
+        }
+
+        private void CalcRisk()
+        {
+            _rollCount++;
+            riskLevel += riskLevelIncreasePer * _rollCount * riskLevelIncrease;
+            onRiskLevelChanged?.Invoke(riskLevel / maxRiskLevel);
+        }
+
+        public void ResetRollCount() => _rollCount = 0;
     }
 }

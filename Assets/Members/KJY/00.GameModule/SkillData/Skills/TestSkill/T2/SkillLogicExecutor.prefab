@@ -31,6 +31,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4335802457941589015}
+  - {fileID: 2941277385335199267}
+  - {fileID: 2844104486927756942}
+  - {fileID: 8844479330974824001}
+  - {fileID: 3763570264628312288}
   m_Father: {fileID: 1211011605552433023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4764194320588573822
@@ -45,53 +49,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b82e1d2115417c9b8be92b902df219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.Skill.TestSkill
-  <TweenSequencer>k__BackingField: {fileID: 9027923830301153940}
-  attackerStepIndex: 3
-  targetStepIndex: 1
-  tweenSteps:
-  - <ActionType>k__BackingField: 5
+  <PoolParticle>k__BackingField: {fileID: 11400000, guid: 9db3dfa7647f1e64f8380d0cccf7407e, type: 2}
+  <ActionSeq>k__BackingField: {fileID: 1022030187608124442}
+  <ReturnSeq>k__BackingField: {fileID: 341171226798586969}
+  playerTweenSteps:
+  - <ActionType>k__BackingField: 8
     <InsertType>k__BackingField: 3
     <EaseType>k__BackingField: 9
-    <Duration>k__BackingField: 0.4
-    <IsRandomizeValue>k__BackingField: 0
-    <UsingFastBeyond>k__BackingField: 1
-    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 360}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
-    <FadeValue>k__BackingField: 0
-    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Callback>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
-  - <ActionType>k__BackingField: 4
-    <InsertType>k__BackingField: 3
-    <EaseType>k__BackingField: 8
-    <Duration>k__BackingField: 0.4
+    <Duration>k__BackingField: 0.5
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 10, y: 0, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MinTransformValue>k__BackingField: {fileID: 2844104486927756942}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
     <FadeValue>k__BackingField: 0
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
-  - <ActionType>k__BackingField: 4
+  - <ActionType>k__BackingField: 1
     <InsertType>k__BackingField: 4
-    <EaseType>k__BackingField: 8
-    <Duration>k__BackingField: 0.4
+    <EaseType>k__BackingField: 0
+    <Duration>k__BackingField: 0
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MinTransformValue>k__BackingField: {fileID: 0}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
     <FadeValue>k__BackingField: 0
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4764194320588573822}
-          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.Skill.TestSkill,
+        - m_Target: {fileID: 8499836435451648999}
+          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor,
             Assembly-CSharp
-          m_MethodName: ApplyStat
+          m_MethodName: PlayAnim
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -101,22 +92,127 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - <ActionType>k__BackingField: 4
+  enemyTweenSteps:
+  - <ActionType>k__BackingField: 8
     <InsertType>k__BackingField: 3
-    <EaseType>k__BackingField: 8
-    <Duration>k__BackingField: 0.4
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.5
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MinTransformValue>k__BackingField: {fileID: 8844479330974824001}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
     <FadeValue>k__BackingField: 0
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
+  - <ActionType>k__BackingField: 1
+    <InsertType>k__BackingField: 4
+    <EaseType>k__BackingField: 0
+    <Duration>k__BackingField: 0
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {fileID: 0}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8499836435451648999}
+          m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor,
+            Assembly-CSharp
+          m_MethodName: PlayAnim
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   skillApplyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 20
+  onAnimEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 341171226798586969}
+        m_TargetAssemblyTypeName: _TevLib.Extension.DoT.TransformTweenSequencer,
+          Assembly-CSharp
+        m_MethodName: Sequence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &3659548024893007821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3763570264628312288}
+  m_Layer: 0
+  m_Name: Default
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3763570264628312288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659548024893007821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5028591223717276406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844479330974824001}
+  m_Layer: 0
+  m_Name: EnemyPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844479330974824001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5028591223717276406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5825680277268869355
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,9 +222,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4335802457941589015}
-  - component: {fileID: 9027923830301153940}
+  - component: {fileID: 1022030187608124442}
   m_Layer: 0
-  m_Name: TweenSequencer
+  m_Name: ActionSeq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +245,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2546592455592494940}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9027923830301153940
+--- !u!114 &1022030187608124442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,14 +254,84 @@ MonoBehaviour:
   m_GameObject: {fileID: 5825680277268869355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 656f187523e5457d99d7db1954989cdc, type: 3}
+  m_Script: {fileID: 11500000, guid: 077eb7da58744613a162672452d0a3b4, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.ClassStepTweenSequencer
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TransformTweenSequencer
   setAwakeCache: 0
   debugMode: 0
   <IsCanvas>k__BackingField: 0
-  targetTrm: {fileID: 0}
+  targetTrm: {fileID: 4335802457941589015}
   sequenceStep: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 0
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &6368876529864379614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2941277385335199267}
+  - component: {fileID: 341171226798586969}
+  m_Layer: 0
+  m_Name: ReturnSeq
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2941277385335199267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368876529864379614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341171226798586969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368876529864379614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077eb7da58744613a162672452d0a3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TransformTweenSequencer
+  setAwakeCache: 0
+  debugMode: 0
+  <IsCanvas>k__BackingField: 0
+  targetTrm: {fileID: 2941277385335199267}
+  sequenceStep:
+  - <ActionType>k__BackingField: 8
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.5
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {fileID: 3763570264628312288}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
   updateType: 0
   independentTime: 0
   targetLink: 0
@@ -232,5 +398,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99182b418434406ebb7efcd720fbea4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor
+  <IdleAnimHash>k__BackingField: {fileID: 11400000, guid: 55ce4fd4f2b99f046a996b6659ee1334, type: 2}
+  <SkillAnimHash>k__BackingField: {fileID: 11400000, guid: 826d3ee88c5e53e44989281de2df2f00, type: 2}
   skills:
   - {fileID: 4764194320588573822}
+  onAnimFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4764194320588573822}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.TestSkill,
+          Assembly-CSharp
+        m_MethodName: ApplyStat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &8063857840460296942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2844104486927756942}
+  m_Layer: 0
+  m_Name: PlayerPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2844104486927756942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063857840460296942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

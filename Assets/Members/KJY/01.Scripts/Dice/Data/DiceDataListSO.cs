@@ -23,11 +23,11 @@ namespace Members.KJY._01.Scripts.Dice.Data
             _ = faceType switch
             {
                 DiceFaceType.Front => Front = diceData,
-                DiceFaceType.Back => Back = Back,
-                DiceFaceType.Left => Left = Left,
-                DiceFaceType.Right => Right = Right,
-                DiceFaceType.Top => Top = Top,
-                DiceFaceType.Bottom => Bottom = Bottom,
+                DiceFaceType.Back => Back = diceData,
+                DiceFaceType.Left => Left = diceData,
+                DiceFaceType.Right => Right = diceData,
+                DiceFaceType.Top => Top = diceData,
+                DiceFaceType.Bottom => Bottom = diceData,
                 _ => null
             };
         }

@@ -18,17 +18,21 @@ namespace Members.KJY._01.Scripts.Command
             EndAction = endAction;
         }
 
-        public void Execute() => StartAction?.Invoke();
 
-        public async UniTask ExecuteAction(CancellationToken token)
+        public async UniTask ExecuteAction()
         {
-            _nextSignal = new UniTaskCompletionSource();
-            _nextSignal.Task.ToCancellationToken(token);
-            
+            StartAction?.Invoke();
             await _nextSignal.Task;
             EndAction?.Invoke();
         }
 
+        public void SetNextSignal(CancellationToken token)
+        {
+            _nextSignal = new UniTaskCompletionSource();
+            _nextSignal.Task.ToCancellationToken(token);
+        }
+
+        
         public void MoveNext()
         {
             _nextSignal?.TrySetResult();

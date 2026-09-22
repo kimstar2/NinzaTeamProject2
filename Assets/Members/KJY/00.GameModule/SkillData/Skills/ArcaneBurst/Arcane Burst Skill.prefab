@@ -1,0 +1,387 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3370893657857971980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2546592455592494940}
+  - component: {fileID: 4764194320588573822}
+  m_Layer: 0
+  m_Name: ArcaneBurstSkill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2546592455592494940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370893657857971980}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4335802457941589015}
+  - {fileID: 2941277385335199267}
+  - {fileID: 2844104486927756942}
+  - {fileID: 3763570264628312288}
+  m_Father: {fileID: 1211011605552433023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4764194320588573822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3370893657857971980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f72437680a445309710a74df1b8aa6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.ArcaneBurstSkill
+  <ActionSeq>k__BackingField: {fileID: 1022030187608124442}
+  <ReturnSeq>k__BackingField: {fileID: 341171226798586969}
+  castPosition: {fileID: 2844104486927756942}
+  returnPosition: {fileID: 3763570264628312288}
+  advanceDistance: 0.6
+  approachTarget: 0
+  attackDistance: 1.2
+  animationTimeout: 3
+  effectOffset: {x: 0, y: 0.5, z: 0}
+  onCast:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4764194320588573822}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.ArcaneBurstSkill,
+          Assembly-CSharp
+        m_MethodName: PlayCastParticle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8499836435451648999}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor,
+          Assembly-CSharp
+        m_MethodName: PlayAnim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onAnimEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 341171226798586969}
+        m_TargetAssemblyTypeName: _TevLib.Extension.DoT.TransformTweenSequencer,
+          Assembly-CSharp
+        m_MethodName: Sequence
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  <CastParticle>k__BackingField: {fileID: 11400000, guid: 5d6b5718bd3e480bb4bf301e61b1bab3, type: 2}
+  <ImpactParticle>k__BackingField: {fileID: 11400000, guid: bba03ba6081846a088470a51b7e8518b, type: 2}
+  damage: 20
+--- !u!1 &3659548024893007821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3763570264628312288}
+  m_Layer: 0
+  m_Name: ReturnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3763570264628312288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3659548024893007821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5825680277268869355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4335802457941589015}
+  - component: {fileID: 1022030187608124442}
+  m_Layer: 0
+  m_Name: ActionSeq
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4335802457941589015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825680277268869355}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1022030187608124442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825680277268869355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077eb7da58744613a162672452d0a3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TransformTweenSequencer
+  setAwakeCache: 0
+  debugMode: 0
+  <IsCanvas>k__BackingField: 0
+  targetTrm: {fileID: 4335802457941589015}
+  sequenceStep:
+  - <ActionType>k__BackingField: 4
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.2
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {fileID: 2844104486927756942}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 0
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4764194320588573822}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.Skill.AbstractParticleSkill,
+          Assembly-CSharp
+        m_MethodName: PlaySkillAnim
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6368876529864379614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2941277385335199267}
+  - component: {fileID: 341171226798586969}
+  m_Layer: 0
+  m_Name: ReturnSeq
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2941277385335199267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368876529864379614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341171226798586969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368876529864379614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 077eb7da58744613a162672452d0a3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TransformTweenSequencer
+  setAwakeCache: 0
+  debugMode: 0
+  <IsCanvas>k__BackingField: 0
+  targetTrm: {fileID: 2941277385335199267}
+  sequenceStep:
+  - <ActionType>k__BackingField: 4
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.25
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {fileID: 3763570264628312288}
+    <MaxTransformValue>k__BackingField: {fileID: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 0
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4764194320588573822}
+        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.Agent.SkillSystem.Skill.AbstractParticleSkill,
+          Assembly-CSharp
+        m_MethodName: HandleReturnEnd
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &6762140114145609128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1211011605552433023}
+  - component: {fileID: 8499836435451648999}
+  m_Layer: 0
+  m_Name: Arcane Burst Skill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1211011605552433023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762140114145609128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2546592455592494940}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8499836435451648999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762140114145609128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99182b418434406ebb7efcd720fbea4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor
+  <IdleAnimHash>k__BackingField: {fileID: 11400000, guid: 55ce4fd4f2b99f046a996b6659ee1334, type: 2}
+  <SkillAnimHash>k__BackingField: {fileID: 11400000, guid: bcb3bb86cf40be14a8a366d16c2fed92, type: 2}
+  skills:
+  - {fileID: 4764194320588573822}
+  onAnimFinished:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &8063857840460296942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2844104486927756942}
+  m_Layer: 0
+  m_Name: CastPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2844104486927756942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063857840460296942}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2546592455592494940}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

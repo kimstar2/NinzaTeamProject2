@@ -22,13 +22,30 @@ namespace Members.KJY._01.Scripts.Command
             TargetSelector = targetSelector;
         }
 
-        public void Execute() => Attacker.SkillExecutor.TryExecuteSkill(Attacker,TargetSelector);
-
-        public async UniTask ExecuteAction(CancellationToken token)
+        public void SetNextSignal(CancellationToken token)
         {
             _nextSignal = new UniTaskCompletionSource();
             _nextSignal.Task.ToCancellationToken(token);
-            await _nextSignal.Task;
+        }
+
+        public async UniTask ExecuteAction()
+        {
+            UniTask nextTask = _nextSignal.Task; // 스킬이 바로 끝나도 기다릴 Task는 미리 잡아둠
+            if (TryExecuteSkill()) return;
+            
+            await nextTask;
+        }
+
+        private bool TryExecuteSkill()
+        {
+            if (Attacker.IsDead || TargetSelector.IsDead)
+            {
+                MoveNext();
+                return true;
+            }
+
+            Attacker.SkillExecutor.TryExecuteSkill(Attacker, TargetSelector);
+            return false;
         }
 
         public void MoveNext()

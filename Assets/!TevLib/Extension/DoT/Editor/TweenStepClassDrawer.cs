@@ -6,4 +6,4 @@ namespace _TevLib.Extension.DoT.Editor
     public sealed class TweenStepClassDrawer : TweenStepDrawer
     {
     }
-}
+}   

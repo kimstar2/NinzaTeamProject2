@@ -1,5 +1,6 @@
 ﻿using System;
 using DevLib.CoreLib.Runtime;
+using DevLib.HashDataSystem;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Agent.SkillSystem;
 using Members.KJY._01.Scripts.Dice;
@@ -24,13 +25,16 @@ namespace Members.KJY._01.Scripts.Agent
         [field:SerializeField] public bool IsSelect {get; protected set;} 
         [field:SerializeField] public UIMonoImage IconImage { get; private set; }
         [SerializeField] protected EventChannelSO eventChannel;
+        [SerializeField] private HashDataSO deathHash; 
+        public AgentDataSO AgentData { get; protected set; }
+        public bool IsDead {get; protected set;}
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;
+        public UnityEvent<float> onHealthChanged;
 
         #region Modules
 
         public SkillExecutor SkillExecutor { get; private set; }
-        public HealthModule HealthModule {get; private set;}
         public AbstractDiceInventory DiceInventory { get; private set; }
 
         #endregion
@@ -38,9 +42,32 @@ namespace Members.KJY._01.Scripts.Agent
         protected override void InitializeModules()
         {
             base.InitializeModules();
-            HealthModule = GetModule<HealthModule>();
             SkillExecutor = GetModule<SkillExecutor>();
             DiceInventory = GetModule<AbstractDiceInventory>();
+        }
+        
+        protected virtual void HandleDead()
+        {
+            MyAgent.AnimCompo.RenderClip(deathHash.HashValue);
+            IsDead = true;
+        }
+        
+        protected void HandleHealthChanged(float health, float maxHealth)
+        {
+            Debug.Log("dddasd");
+            onHealthChanged?.Invoke(health / maxHealth);
+        }
+
+        protected virtual void Start()
+        {
+            MyAgent.HealthModule.OnDead += HandleDead;
+            MyAgent.HealthModule.OnHealthChanged += HandleHealthChanged;
+        }
+
+        protected virtual void OnDestroy()
+        {
+            MyAgent.HealthModule.OnDead -= HandleDead;
+            MyAgent.HealthModule.OnHealthChanged -= HandleHealthChanged;
         }
         
         public void SelectToggle()
@@ -72,6 +99,5 @@ namespace Members.KJY._01.Scripts.Agent
         }
         public abstract void ApplyDamage(float damage); // 추후 데이터 추가 예정
         public abstract void ApplyHeal(float heal); // 추후 데이터 추가 예정
-        
     }
 }

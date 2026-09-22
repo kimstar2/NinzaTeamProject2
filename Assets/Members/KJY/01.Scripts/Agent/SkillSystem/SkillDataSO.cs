@@ -6,7 +6,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
     [CreateAssetMenu(fileName = "Skill data", menuName = "KJY/Skill/Skill data", order = 0)]
     public class SkillDataSO : ScriptableObject
     {
-        [field: SerializeField] public HashDataSO SkillAnim {get; private set;} 
         [field: SerializeField] public SkillLogicExecutor SkillLogicExecutor { get; private set; }
         [field: SerializeField] public string SkillName {get; private set;}
         [field: SerializeField,TextArea] public string SkillDescription {get; private set;}

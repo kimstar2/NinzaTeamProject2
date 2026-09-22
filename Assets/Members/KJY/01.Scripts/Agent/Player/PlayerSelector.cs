@@ -1,7 +1,4 @@
-﻿using DevLib.ServiceLocator;
-using Members.KJY._01.Scripts.Dice.Interface;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
-using Members.KJY._01.Scripts.UI.Mono;
 using Members.KJY._01.Scripts.Util;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,15 +10,14 @@ namespace Members.KJY._01.Scripts.Agent.Player
         [field: SerializeField] public PlayerDataSO PlayerData { get; private set; }
         [field: SerializeField] public GradientSO LineColor { get; private set; }
         [field: SerializeField] public ColorSO PlayerColor {get; private set;}
-        [SerializeField] private UIMonoOutline targetOutline;
         private bool _hasTarget;
 
         public UnityEvent onSetTarget;
 
-
-        private void Start()
+        protected override void Start()
         {
-            targetOutline.SetColor(PlayerColor);
+            base.Start();
+            AgentData = PlayerData;
             ValidateData();
         }
 
@@ -37,73 +33,63 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         protected override void Select()
         {
-            if (CheckIsSelect())
-                return;
-            
-            eventChannel.RaiseEvent(new OnPlayerSelect(this));
-            
+            if (IsDead) return;
             if (_hasTarget)
             {
-                SetHasTarget(false);
-                eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerData.PlayerType));
-                onUnSelect?.Invoke();
+                UnSelect(); // 연결된 애를 다시 누르면 연결 취소
                 return;
             }
-            Debug.Log("뱅");
             IsSelect = true;
+            eventChannel.RaiseEvent(new OnPlayerSelect(this)); // 상태부터 바꿔야 받는 쪽도 선택된 걸 앎
             onSelect?.Invoke();
         }
 
         protected override void UnSelect()
         {
             IsSelect = false;
-            if (!_hasTarget)
-                onUnSelect?.Invoke();
+            SetHasTarget(false);
+            eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerData.PlayerType));
+            onUnSelect?.Invoke();
         }
 
         private void HandleDiceSelect(OnPlayerSelect evt)
         {
-            if (evt.PlayerSelector.PlayerData.PlayerType == PlayerData.PlayerType)
-            {
-                eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerData.PlayerType));
-                onUnSelect?.Invoke();
-            }
-            else
-                UnSelect(); // 내가 아니라면? UnSelect
+            if (evt.PlayerSelector == this || !IsSelect) return;
+            IsSelect = false; // 다른 애 선택하면 대기 표시만 끔. 이미 연결된 애는 그대로
+            onUnSelect?.Invoke();
         }
 
         public void OnSetTarget()
         {
             SetHasTarget(true);
-            UnSelect();
+            IsSelect = false;
             onSetTarget?.Invoke();
         }
         
         public void OffSetTarget()
         {
             SetHasTarget(false);
-            UnSelect();
+            IsSelect = false;
+            onUnSelect?.Invoke();
         }
 
 
-        private bool CheckIsSelect()
+        protected override void HandleDead()
         {
-            (PlayerType playerType, bool isSelect) tuple = ServiceLocator.Get<IGetIsSelectService>().GetIsSelect();
-            if (PlayerData.PlayerType == PlayerType.None) return false;
-            
-            return PlayerData.PlayerType != tuple.playerType && tuple.isSelect;
+            base.HandleDead();
+            UnSelect();
         }
 
         private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
         
-        public override void OnAttackCommand() => UnSelect();
+        public override void OnAttackCommand() => OffSetTarget();
         
         public override void ApplyDamage(float damage)
         {
-            HealthModule.TakeDamage(damage);
+            MyAgent.HealthModule.TakeDamage(damage);
         }
 
-        public override void ApplyHeal(float heal) { }
+        public override void ApplyHeal(float heal) => MyAgent.HealthModule.Heal(heal);
         
         private void ValidateData()
         {
@@ -111,6 +97,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
             IconImage.SetColor(PlayerData.ImageColor);
             MyAgent.AgentRenderer.SetSprite(PlayerData.PlayerImage);
             MyAgent.AgentRenderer.SetColor(PlayerData.ImageColor);
+            
+            MyAgent.AnimCompo.SetController(PlayerData.AnimCon);
         }
 
 #if UNITY_EDITOR

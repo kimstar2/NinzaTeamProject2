@@ -7,7 +7,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 {
     public class EnemyDiceDataReceiver : AbstractDiceDataReceiver
     {
-        [SerializeField] private EnemyNumber enemyType;
+        [SerializeField] private EnemyType enemyType;
 
         private void OnEnable()
         {

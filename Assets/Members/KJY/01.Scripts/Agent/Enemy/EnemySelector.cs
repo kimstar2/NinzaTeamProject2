@@ -1,11 +1,15 @@
-﻿using System;
+﻿    using System;
 using DevLib.CoreLib.Runtime;
+using DevLib.ModuleSystem;
+using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
+using Members.KJY._01.Scripts.Service;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Members.KJY._01.Scripts.Agent.Enemy
 {
@@ -13,31 +17,37 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
     {
         [SerializeField] private EnemyDataSO defaultEnemyData;
         [SerializeField] private EnemyDataSO runtimeEnemyData;
-        [SerializeField] private EnemyNumber enemyType;
-
+        [SerializeField] private EnemyType enemyType;
+        private IGetCurrentEnemyParty _getEnemyData;
+            
         protected override void InitializeModules()
         {
             base.InitializeModules();
             runtimeEnemyData = Instantiate(defaultEnemyData);
         }
 
-        private void Start()
+        protected override void Start()
         {
-            ValidateData();
+            base.Start();
+            _getEnemyData = ServiceLocator.Get<IGetCurrentEnemyParty>();
+            EnemyDataChanged(_getEnemyData.GetData(0)); // ㅌㅅㅌ
         }
 
-        private void OnEnable()
+        private void Update()
         {
-            eventChannel.AddListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
+            // if (Keyboard.current.eKey.wasPressedThisFrame) // ㅌㅅㅌ
+                // EnemyDataChanged(_getEnemyData.GetData(0));
         }
 
-        private void OnDisable()
+        protected override void HandleDead()
         {
-            eventChannel.RemoveListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
+            base.HandleDead();
+            eventChannel.RaiseEvent(new OnEnemyDead(enemyType, true));
         }
 
         protected override void Select()
         {
+            if (IsDead) return;
             eventChannel.RaiseEvent(new OnEnemySelect(this));
             onSelect?.Invoke();
         }
@@ -50,33 +60,39 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         private void ChangeEnemyData(EnemyDataSO newEnemyData)
         {
             runtimeEnemyData = newEnemyData;
+            AgentData = newEnemyData;
             ValidateData();
         }
 
-        private void ValidateData()
+        public void ValidateData()
         {
+            if (runtimeEnemyData == null) return;
             IconImage.SetImage(runtimeEnemyData.EnemyImage);
             IconImage.SetColor(runtimeEnemyData.ImageColor);
+            Debug.Log("DDDD");
             MyAgent.AgentRenderer.SetSprite(runtimeEnemyData.EnemyImage);
             MyAgent.AgentRenderer.SetColor(runtimeEnemyData.ImageColor);
+            MyAgent.AnimCompo.SetController(runtimeEnemyData.EnemyAc);
         }
 
         
         public override void OnAttackCommand() { }
         public override void ApplyDamage(float damage)
         {
-            HealthModule.TakeDamage(damage);
+            MyAgent.HealthModule.TakeDamage(damage);
         }
 
         public override void ApplyHeal(float heal)
-        { }
+        { MyAgent.HealthModule.Heal(heal); }
 
         #region Handle
 
-        private void HandleEnemyDataChanged(OnEnemyDataChanged evt)
+        private void EnemyDataChanged(EnemyDataSO newEnemyData)
         {
-            if (evt.EnemyType != enemyType) return;
-            ChangeEnemyData(evt.EnemyData);
+            if (newEnemyData == null) return;
+            if (newEnemyData == runtimeEnemyData) return;
+            eventChannel.RaiseEvent(new OnEnemyDataChanged(newEnemyData,enemyType));
+            ChangeEnemyData(newEnemyData);
         }
         
 
