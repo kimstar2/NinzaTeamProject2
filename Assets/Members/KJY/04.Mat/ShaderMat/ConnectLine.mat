@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ConnectLine
-  m_Shader: {fileID: -6465566751694194690, guid: 8f933e1d9bf1f674989535dfa2304a28, type: 3}
+  m_Shader: {fileID: 4800000, guid: b57a3c37a42d1fb429804eacfbe7e885, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -55,6 +55,9 @@ Material:
     m_Floats:
     - _BlinkValue: 0
     - _EnableExternalAlpha: 0
+    - _FlowSpeed: 0.45
+    - _FlowStrength: 0.3
+    - _Softness: 0.45
     - _ZWrite: 0
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}

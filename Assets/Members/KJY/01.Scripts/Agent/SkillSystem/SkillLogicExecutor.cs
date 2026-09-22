@@ -36,10 +36,18 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             Attacker = attacker;
             AgentType = agentType;
             
-            if (Attacker.IsDead ||  Target.IsDead) return;
+            if (Attacker == null || Target == null || Attacker.IsDead || Target.IsDead)
+            {
+                SkillFinished();
+                Remove();
+                return;
+            }
             
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
-            Attacker.MyAgent.AnimTrigger.OnAnimFinished += HandleAnimFinished;
+            Attacker.MyAgent.AnimTrigger.OnAnimFinished += HandleAnimFinished;        
+            
+            Attacker.MyAgent.AnimTrigger.OnAttack -= HandleAttack;
+            Attacker.MyAgent.AnimTrigger.OnAttack += HandleAttack;
 
             foreach (AbstractSkillLogic skillLogic in skills)
             {
@@ -47,6 +55,14 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
                 skillLogic.Execute();
             }
             OnSkillExecute?.Invoke();
+        }
+
+        private void HandleAttack()
+        {
+            Attacker.MyAgent.AnimTrigger.OnAttack -= HandleAttack;
+           
+            foreach (AbstractSkillLogic skillLogic in skills)
+                skillLogic.Attack();
         }
 
         private void HandleAnimFinished()
@@ -61,6 +77,15 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public void Remove()
         {
             Destroy(gameObject);
+        }
+
+        private void OnDestroy()
+        {
+            if (Attacker == null || Attacker.MyAgent == null) return;
+            var trigger = Attacker.MyAgent.AnimTrigger;
+            if (trigger == null) return;
+            trigger.OnAnimFinished -= HandleAnimFinished;
+            trigger.OnAttack -= HandleAttack;
         }
 
         public void PlayAnim()

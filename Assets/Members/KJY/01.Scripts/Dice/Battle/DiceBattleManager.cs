@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using DevLib.ServiceLocator;
-using DG.Tweening;
 using Members.KJY._01.Scripts.Agent;
 using Members.KJY._01.Scripts.Agent.Enemy;
 using Members.KJY._01.Scripts.Agent.Player;
@@ -23,6 +21,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     public class DiceBattleManager : ModuleOwner , IGetIsSelectService , IRequirePooling
     {
         [field: SerializeField] public PlayerSelector CurrentPlayerSelector { get; private set; }
+        [SerializeField] private AbstractDiceRollManager pRollManager,eRollManager;
         [SerializeField] private EventChannelSO eventChannel;
         
         [Header("Line Renderer Set")]
@@ -32,16 +31,16 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public UnityEvent onStartBattle;
         public UnityEvent onEndBattle;
 
-        private readonly Dictionary<PlayerSelector, LineRenderer> _lineConnectors = new();
-        private BattleObserver _battleObserver;
         [SerializeField] private List<PlayerSelector> key;
         [SerializeField] private List<AbstractSelector> value;
         
-        public int Count => BattleChain.Count;
+        private readonly Dictionary<PlayerSelector, MonoLineRenderer> _lineConnectors = new();
+        private BattleObserver _battleObserver;
+        
 
         private readonly LinkedList<(PlayerSelector playerSelector, AbstractSelector targetSelector)> _orderedChain = new();
-        // public Dictionary<PlayerSelector,EnemySelector> BattleChain { get; private set; } = new();
         public Dictionary<PlayerSelector, LinkedListNode<(PlayerSelector playerSelector, AbstractSelector targetSelector)>> BattleChain { get; private set; } = new();
+        public int Count => BattleChain.Count;
         
         protected override void InitializeModules()
         {
@@ -58,7 +57,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             eventChannel.AddListener<OnPlayerSelect>(HandleDiceSelected);
             eventChannel.AddListener<OnPlayerUnSelect>(HandleDiceUnSelected);
             eventChannel.AddListener<OnEnemySelect>(HandleTargetSelected);
-            eventChannel.AddListener<OnStartBattle>(HandleStartBattle);
             eventChannel.AddListener<OnEndBattle>(HandleEndBattle);
         }
 
@@ -67,7 +65,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             eventChannel.RemoveListener<OnPlayerSelect>(HandleDiceSelected);
             eventChannel.RemoveListener<OnPlayerUnSelect>(HandleDiceUnSelected);
             eventChannel.RemoveListener<OnEnemySelect>(HandleTargetSelected);
-            eventChannel.RemoveListener<OnStartBattle>(HandleStartBattle);
             eventChannel.RemoveListener<OnEndBattle>(HandleEndBattle);
         }
         
@@ -76,39 +73,19 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private void ConnectLine(PlayerSelector getSelector)
         {
             if (!TryGetValue(getSelector , out AbstractSelector targetSelector)) return;
-            Vector3[] a2B = { getSelector.LineConnectTrm.position, targetSelector.LineConnectTrm.position };
-
-            if (_lineConnectors.TryGetValue(getSelector, out LineRenderer lR))
+            if (!_lineConnectors.TryGetValue(getSelector, out MonoLineRenderer line))
             {
-                lR.SetPositions(a2B);
-                lR.enabled = true;
-                return;
+                line = Instantiate(copyLineRenderer, lRParent, true);
+                _lineConnectors.Add(getSelector, line);
             }
-            copyLineRenderer.SetGradient(getSelector.LineColor.GetGradient());
-            lR = Instantiate(copyLineRenderer.LineRenderer, lRParent, true);
-
-            lR.widthMultiplier = 0;
-            
-            DOTween.To(() => lR.widthMultiplier,
-                    x => lR.widthMultiplier = x, 1, lRFadeTime)
-                .SetLink(lR.gameObject , LinkBehaviour.KillOnDestroy);
-            
-            lR.SetPositions(a2B);
-            
-            _lineConnectors.Add(getSelector, lR);
+            line.Connect(getSelector.LineConnectTrm, targetSelector.LineConnectTrm,
+                getSelector.LineColor.GetGradient(), lRFadeTime);
         }
 
         public void RemoveLine(PlayerSelector selector)
         {
-            if (!_lineConnectors.Remove(selector, out LineRenderer lR)) return; // 있으면? 가져옴
-            DOTween.To(() => lR.widthMultiplier,
-                    x => lR.widthMultiplier = x, 0, lRFadeTime)
-                .SetLink(lR.gameObject , LinkBehaviour.KillOnDestroy)
-                .OnComplete(() =>
-                    {
-                        Destroy(lR.gameObject); // 나중에 풀링 대체여
-                    }
-                );
+            if (!_lineConnectors.Remove(selector, out MonoLineRenderer line)) return;
+            line.Disconnect(lRFadeTime);
         }
 
         // 현재 플레이어가 선택중에 있는지 체크
@@ -122,42 +99,46 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private void HandleDiceSelected(OnPlayerSelect evt) // 플레이어 선택을 했다면?
         {
             CurrentPlayerSelector = evt.PlayerSelector;
-            
-            if (!CurrentPlayerSelector.IsSelect) return;
-            AddOrMoveToLast(CurrentPlayerSelector,evt.PlayerSelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
-            ConnectLine(CurrentPlayerSelector);
-            eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.PlayerData,Count,true));
-
-            CurrentPlayerSelector.OnSetTarget();
-
-            // 현재 셀렉터는 선택한 플레이어 셀렉터
+            // 여기선 선택만 함. 체인 연결은 적 눌렀을 때
         }
 
         private void HandleTargetSelected(OnEnemySelect evt) // 타겟(적)을 선택을 했다면
         {
             if (CurrentPlayerSelector == null) return;
             if (!CurrentPlayerSelector.IsSelect) return; // 현재 셀렉터가 존재하면서 선택이 안되어있다면
+            if (CurrentPlayerSelector.IsDead || evt.EnemySelector.IsDead) return;
 
             AddOrMoveToLast(CurrentPlayerSelector,evt.EnemySelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
             ConnectLine(CurrentPlayerSelector);
             eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.PlayerData,Count,true));
 
             CurrentPlayerSelector.OnSetTarget();
+            ClearCrtSelector();
         }
 
         private void HandleDiceUnSelected(OnPlayerUnSelect evt) // 플레이어가 선택을 취소 했다면 
         {
-            if (CurrentPlayerSelector == null) return; // 근데 구라핑이면 리턴
-            if (CurrentPlayerSelector.PlayerData.PlayerType != evt.PlayerType) return; // 취소한애가 현재 셀렉터랑 같냐? (선택되어있는 상태에서 한번더 눌렀을때)
-            
-            RemoveFromBattleChain(CurrentPlayerSelector); // 선택이 취소 된거니까 체인 연결이 되어있을경우 체인을 파기
-            RemoveLine(CurrentPlayerSelector);
-
-            ClearCrtSelector(); // 현재 셀렉터는 없음
+            PlayerSelector selector = null;
+            if (CurrentPlayerSelector != null && CurrentPlayerSelector.PlayerData.PlayerType == evt.PlayerType)
+            {
+                selector = CurrentPlayerSelector;
+                ClearCrtSelector();
+            }
+            else
+            {
+                foreach (PlayerSelector player in BattleChain.Keys)
+                    if (player.PlayerData.PlayerType == evt.PlayerType) { selector = player; break; }
+            }
+            if (selector == null) return;
+            RemoveFromBattleChain(selector);
+            RemoveLine(selector); // 다른 애 고르는 중에도 기존 연결은 따로 취소 가능
         }
         
-        private void HandleStartBattle(OnStartBattle evt) // 배틀 시작 버튼을 눌렀을때
+        public void StartBattle() // 배틀 시작 버튼을 눌렀을때
         {
+            if (_battleObserver.IsBattle) return;
+            if (!pRollManager.AllDiceRollEnd || !eRollManager.AllDiceRollEnd) return;
+            
             _battleObserver.AddCommand(new OnActionCommand(onStartBattle.Invoke,null));
             ActionCommand[] getPlayerAttackData = GetP2TAtkCommands();
             foreach (ActionCommand attackCommand in getPlayerAttackData)
@@ -167,6 +148,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 _battleObserver.AddCommand(attackCommand);
             // 현재 명령(커맨드)들을 알림, 이는 배틀 옵저버가 받게 됨
 
+            CurrentPlayerSelector?.OffSetTarget();
             ClearCrtSelector();
             _battleObserver.StartBattle();
             
@@ -180,7 +162,10 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             List<PlayerSelector> removeList = BattleChain.Keys.AsValueEnumerable().ToList();
 
             foreach (PlayerSelector pS in removeList)
+            {
+                pS.OffSetTarget();
                 RemoveLine(pS);
+            }
         }
 
         private void HandleEndBattle(OnEndBattle obj)
@@ -189,8 +174,9 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
             foreach (PlayerSelector pS in removeList)
             {
-                pS.SelectToggle();
+                pS.OffSetTarget();
                 RemoveFromBattleChain(pS);
+                RemoveLine(pS);
             }
             
             onEndBattle?.Invoke();

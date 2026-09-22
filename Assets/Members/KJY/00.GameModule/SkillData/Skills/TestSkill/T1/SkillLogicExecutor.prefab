@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b82e1d2115417c9b8be92b902df219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.Skill.TestSkill
+  <PoolParticle>k__BackingField: {fileID: 11400000, guid: 9db3dfa7647f1e64f8380d0cccf7407e, type: 2}
   <ActionSeq>k__BackingField: {fileID: 1022030187608124442}
   <ReturnSeq>k__BackingField: {fileID: 341171226798586969}
   playerTweenSteps:

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: NecroRain Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 3385855866850025558, guid: 0bd3542d3a888f14685331adb3edc5be, type: 3}
+  <SkillName>k__BackingField: "\uAC15\uB839\uBE44"
+  <SkillDescription>k__BackingField: "\uC9C0\uC815\uD55C \uB300\uC0C1\uC5D0\uAC8C
+    3\uBC88 \uB099\uD558 \uACF5\uACA9. \uD55C \uBC88\uB9C8\uB2E4 8 + \uC8FC\uC0AC\uC704
+    \uAE30\uBCF8 \uD53C\uD574\uB97C \uC90C."

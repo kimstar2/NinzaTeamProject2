@@ -30,9 +30,10 @@ namespace Members.KJY._01.Scripts.Command
 
         public async UniTask ExecuteAction()
         {
+            UniTask nextTask = _nextSignal.Task; // 스킬이 바로 끝나도 기다릴 Task는 미리 잡아둠
             if (TryExecuteSkill()) return;
             
-            await _nextSignal.Task;
+            await nextTask;
         }
 
         private bool TryExecuteSkill()

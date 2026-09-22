@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe35413491d47c18f4a5d8c956c1fd6, type: 3}
+  m_Name: Pooling List
+  m_EditorClassIdentifier: PoolingSystem_Runtime_assembly::_LumenLib.PoolingSystem.Runtime.PoolingListSO
+  <PoolList>k__BackingField:
+  - {fileID: 11400000, guid: 9db3dfa7647f1e64f8380d0cccf7407e, type: 2}
+  - {fileID: 11400000, guid: 5d6b5718bd3e480bb4bf301e61b1bab3, type: 2}
+  - {fileID: 11400000, guid: bba03ba6081846a088470a51b7e8518b, type: 2}
+  - {fileID: 11400000, guid: ecf8fdc43126c1d4ab6c5acd63068663, type: 2}
+  - {fileID: 11400000, guid: 3c8f59a0dc23a4048b6a7b57c03a8223, type: 2}
+  - {fileID: 11400000, guid: 9a8af611c637d064794839edabd2bbdb, type: 2}
+  - {fileID: 11400000, guid: 337efddbee5965c46ac7ae9592fe6f4e, type: 2}
+  - {fileID: 11400000, guid: 280b97dfb5a6a9541a6214b2cc63f94f, type: 2}

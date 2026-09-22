@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Healer
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Player.PlayerDataSO
   <PlayerType>k__BackingField: 2
+  <AttackType>k__BackingField: 2
   <AnimCon>k__BackingField: {fileID: 22100000, guid: be22e4471a7e06240aa0754aa6164f22, type: 2}
-  <PlayerImage>k__BackingField: {fileID: -5983517201403770315, guid: 3584c85aec357e94c90518c204a14da9, type: 3}
+  <PlayerImage>k__BackingField: {fileID: -4749681873034518491, guid: 4b7090f4eabd034409dd543f7abc1986, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: 1be6c6f07b614ef4e8fe3425146e7be0, type: 2}

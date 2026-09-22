@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Mage
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Player.PlayerDataSO
   <PlayerType>k__BackingField: 3
+  <AttackType>k__BackingField: 2
   <AnimCon>k__BackingField: {fileID: 22100000, guid: 9a159eb0d80dffe41b2b301077aa68bb, type: 2}
-  <PlayerImage>k__BackingField: {fileID: -5983517201403770315, guid: 3584c85aec357e94c90518c204a14da9, type: 3}
+  <PlayerImage>k__BackingField: {fileID: 1457491203435894738, guid: eba94abab86b28e40887bb8b609fae39, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: b84e7a335dc33984f8f84c1ee3deca7b, type: 2}

@@ -15,5 +15,5 @@ MonoBehaviour:
   <EnemyName>k__BackingField: Enemy2
   <EnemyHealth>k__BackingField: 100
   <EnemyAc>k__BackingField: {fileID: 22100000, guid: 0934c4812c641904894e012dcb23ac3b, type: 2}
-  <EnemyImage>k__BackingField: {fileID: 6479062115034984017, guid: 0064965e18d1ea84a94453e2d35293db, type: 3}
+  <EnemyImage>k__BackingField: {fileID: -7132172409892320828, guid: 5715c387a5671a441a1f3a85e5bf0dad, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: 23c1089657ef41942948a336c112f523, type: 2}
