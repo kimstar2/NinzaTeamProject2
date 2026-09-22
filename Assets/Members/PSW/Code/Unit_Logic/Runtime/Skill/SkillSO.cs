@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Members.PSW.Code.Unit_Logic.Runtime.Structs;
 using UnityEngine;
 
-namespace Members.PSW.Code.Test
+namespace Members.PSW.Code.Unit_Logic.Runtime.Skill
 {
     [CreateAssetMenu(fileName = "skill data", menuName = "Lumen/Unit/Skill Data", order = 0)]
     public class SkillSO : ScriptableObject
