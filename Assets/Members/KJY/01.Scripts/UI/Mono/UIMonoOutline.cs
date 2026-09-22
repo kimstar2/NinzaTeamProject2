@@ -7,18 +7,20 @@ namespace Members.KJY._01.Scripts.UI.Mono
 {
     public class UIMonoOutline : MonoBehaviour
     {
-        protected Outline Outline {get; private set;}
-        protected virtual void Awake()
+        public Outline Outline {get; private set;}
+        private void Awake()
         {
             Outline = GetComponent<Outline>();
         }
 
         public void SetColor(Color color)
         {
+            if (Outline == null) return;
             Outline.effectColor = color;
         }   
         public void SetColor(ColorSO color)
         {
+            if (Outline == null) return;
             Outline.effectColor = color.GetColor();
         }
 

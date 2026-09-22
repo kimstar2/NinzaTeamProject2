@@ -222,6 +222,8 @@ MonoBehaviour:
   castPosition: {fileID: 7068114218579385320}
   returnPosition: {fileID: 1400171667257188776}
   advanceDistance: 0.6
+  approachTarget: 0
+  attackDistance: 1.2
   animationTimeout: 3
   effectOffset: {x: 0, y: 0.5, z: 0}
   onCast:

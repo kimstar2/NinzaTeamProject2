@@ -26,6 +26,7 @@ namespace Members.KJY._01.Scripts.Agent
         [field:SerializeField] public UIMonoImage IconImage { get; private set; }
         [SerializeField] protected EventChannelSO eventChannel;
         [SerializeField] private HashDataSO deathHash; 
+        public AgentDataSO AgentData { get; protected set; }
         public bool IsDead {get; protected set;}
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;

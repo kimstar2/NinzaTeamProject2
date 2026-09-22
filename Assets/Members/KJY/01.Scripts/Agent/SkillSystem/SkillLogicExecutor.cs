@@ -36,7 +36,12 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             Attacker = attacker;
             AgentType = agentType;
             
-            if (Attacker.IsDead ||  Target.IsDead) return;
+            if (Attacker == null || Target == null || Attacker.IsDead || Target.IsDead)
+            {
+                SkillFinished();
+                Remove();
+                return;
+            }
             
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
             Attacker.MyAgent.AnimTrigger.OnAnimFinished += HandleAnimFinished;        

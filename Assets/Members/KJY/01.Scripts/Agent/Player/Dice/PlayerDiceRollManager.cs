@@ -65,18 +65,13 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
             }
         }
 
-        private void Start()
-        {
-            RollLogic(); // 처음 데이터 주입을 위함
-        }
-
         public void Roll()
         {
             RollLogic();
             CalcRisk();
         }
 
-        private void RollLogic()
+        protected override void RollLogic()
         {
             if (!AllDiceRollEnd) return;
             foreach (PlayerDiceRollCheck check in DiceRollCheckList)

@@ -14,7 +14,9 @@
 | HolyStrike | Top — Dice data 4 | 빛 기둥 내려온 다음 1번 | 32 + BaseDamage |
 | ArcaneBurst | Bottom — Dice data 5 | 공격 이벤트에서 바로 1번 | 20 + BaseDamage |
 
-주사위는 플레이어랑 적이 같이 쓰니까 양쪽 다 이 스킬들 사용함.
+위 표는 DiceInventory의 `defaultDiceDataList`에 연결된 기본 주사위임.
+캐릭터마다 이 기본 목록을 런타임에 복제해서 사용함.
+추가로 만든 근접, 화살, 회복 스킬의 설정은 `RoleSkills.md` 보면 됨.
 강령비는 광역이 아니라 전달받은 대상 하나를 때림. 중간에 죽으면 남은 타격은 안 들어감.
 
 ## Inspector 연결

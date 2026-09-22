@@ -1,6 +1,7 @@
 using System;
 using DevLib.ModuleSystem;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Members.KJY._01.Scripts.Agent.HealthSystem
 {
@@ -8,7 +9,8 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
     {
         [field: SerializeField] public float DefaultMaxHealth { get; private set; } = 10;
         private float _currentHealth;
-        
+
+        public UnityEvent<float> onTakeDamaged;
         public delegate void HealthChanged(float health , float maxHealth); // 매개변수명 확인을 위함
         public event HealthChanged OnHealthChanged;
         public event Action OnDead;
@@ -44,7 +46,7 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
         {
             if (_isDead) return;
             
-            Debug.Log($"아야 {damage}");
+            onTakeDamaged?.Invoke(damage);
             CurrentHealth -= damage;
             
             if (CurrentHealth <= 0)
@@ -53,6 +55,12 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
                 _isDead = true;
                 OnDead?.Invoke();
             }
+        }
+
+        public void Heal(float heal)
+        {
+            if (_isDead) return; // 회복이지 부활은 아님
+            CurrentHealth += Mathf.Max(0f, heal);
         }
     }
 }
