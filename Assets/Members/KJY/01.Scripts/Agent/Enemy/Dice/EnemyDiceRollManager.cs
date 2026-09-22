@@ -64,14 +64,21 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 
         private void HandleRoll(OnEnemyRollRaise garbage)
         {
-            AllDiceRollEnd = false;
+            RollLogic();
+        }
+
+        protected override void RollLogic()
+        {
+            if (!AllDiceRollEnd) return;
             foreach (EnemyDiceRollCheck check in DiceRollCheckList)
             {
-                eventChannel.RaiseEvent(new OnEnemyRoll(check.EnemyType,check.IsDead));
                 check.OnRoll();
+                eventChannel.RaiseEvent(new OnEnemyRoll(check.EnemyType,check.IsDead));
             }
+            
+            AllDiceRollEnd = false;
         }
-        
+
         private void HandleEnemyDead(OnEnemyDead evt)
         {
             EnemyDiceRollCheck check = DiceRollCheckList.Find(x => x.EnemyType == evt.enemyType);

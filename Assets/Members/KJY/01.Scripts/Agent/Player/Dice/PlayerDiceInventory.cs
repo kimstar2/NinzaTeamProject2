@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Members.KJY._01.Scripts.Dice;
@@ -6,6 +7,7 @@ using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
 using UnityEngine;
 using UnityEngine.Events;
+using ZLinq;
 
 namespace Members.KJY._01.Scripts.Agent.Player.Dice
 {

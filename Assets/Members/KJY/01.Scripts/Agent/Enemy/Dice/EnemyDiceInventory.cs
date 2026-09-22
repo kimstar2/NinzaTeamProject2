@@ -25,7 +25,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         public void HandleRollEnd(EnemyDiceRollData enemyDiceRollData)
         {
             if (enemyDiceRollData.enemyType != enemyType) return;
-            savedDiceData = RunTimeDiceDataList.GetDiceData(enemyDiceRollData.diceFaceType); // 테스트
+            savedDiceData = RunTimeDiceDataList.GetDiceData(enemyDiceRollData.diceFaceType);
         }
         
         public override void Apply()
