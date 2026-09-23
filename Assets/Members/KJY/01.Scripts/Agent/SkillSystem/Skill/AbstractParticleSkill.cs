@@ -9,6 +9,7 @@ using Members.KJY._01.Scripts.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using ZLinq;
 
 namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
 {
@@ -21,8 +22,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         [SerializeField] private Transform castPosition;
         [SerializeField] private Transform returnPosition;
         [SerializeField, Min(0f)] private float advanceDistance = 0.6f;
+        [SerializeField] private bool approachTarget; // 근접이면 타겟 앞까지 감
+        [SerializeField, Min(0f)] private float attackDistance = 1.2f;
         [SerializeField, Min(0.1f)] private float animationTimeout = 3f;
         [SerializeField] protected Vector3 effectOffset = new(0f, 0.5f, 0f);
+        [SerializeField] protected AgentAttackType agentAttackType;
 
         public UnityEvent onCast; // 시전 파티클, Executor.PlayAnim 연결
         public UnityEvent onAnimEnd; // ReturnSeq.Sequence 연결
@@ -41,7 +45,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         private bool _returnEnd;
         private bool _skillEnd;
 
-        protected bool CanHit => Executor != null && Executor.Attacker != null && Executor.Target != null &&
+        protected virtual bool CanHit => Executor != null && Executor.Attacker != null && Executor.Target != null &&
                                  !Executor.Attacker.IsDead && !Executor.Target.IsDead &&
                                  Executor.Attacker != Executor.Target;
         protected bool CanApplyStat => CanHit && _attackStarted && !_attackEnd && !_skillEnd;
@@ -68,6 +72,9 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             float direction = Mathf.Sign(distance);
             castPosition.position = _defaultPos + Vector3.right *
                 (direction * Mathf.Min(advanceDistance, Mathf.Abs(distance) * 0.25f));
+            if (approachTarget)
+                castPosition.position = Executor.Target.MyAgent.transform.position -
+                    Vector3.right * (direction * Mathf.Min(attackDistance, Mathf.Abs(distance)));
             returnPosition.position = _defaultPos; // 돌아갈 위치는 시전 전에 저장해둠
             ActionSeq.SetTargetTrm(_attackerTrm);
             ReturnSeq.SetTargetTrm(_attackerTrm);
@@ -161,7 +168,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         protected float GetDamage(float damage)
         {
             var diceData = Executor.Attacker.DiceInventory.GetDiceData();
-            return Mathf.Max(0f, damage + (diceData != null ? diceData.BaseDamage : 0f));
+            return Mathf.Max(0f, damage + (diceData != null 
+                ? diceData.SkillDataStructs
+                    .AsValueEnumerable()
+                    .Where(s => s.AgentAttackType == agentAttackType)
+                    .Select(s=>s.BaseDamage).First() : 0f));
         }
 
         protected void PlayParticle(PoolItemSO item, Vector3 pos)

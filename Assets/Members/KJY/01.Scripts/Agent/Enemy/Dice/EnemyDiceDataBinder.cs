@@ -20,33 +20,55 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         [SerializeField] private UIMonoOutline gradeOutline;
         [SerializeField] private UIMonoImage[] iconImage;
         [SerializeField] private MonoParticle rollParticle;
+        private EnemyDataSO _enemyData;
         public UnityEvent onDiceDataBind;
-
+        public SkillDataStruct CurrentSkillData { get; private set; }
+        public DiceDataSO CurrentDiceData { get; private set; }
+        
         public void OnEnable()
         {
             eventChannel.AddListener<OnEnemyDiceDataBind>(HandleDiceDataBind);
+            eventChannel.AddListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
         }
+
+        private void HandleEnemyDataChanged(OnEnemyDataChanged obj)
+        {
+            if (obj.EnemyType != enemyType) return;
+            _enemyData = obj.EnemyData;
+            DataBind();
+        }
+
         private void OnDisable()
         {
             eventChannel.RemoveListener<OnEnemyDiceDataBind>(HandleDiceDataBind);
+            eventChannel.RemoveListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
         }
 
         private void HandleDiceDataBind(OnEnemyDiceDataBind evt)
         {
             if (evt.EnemyType != enemyType) return;
+            CurrentDiceData = evt.DiceData;
             
-            DiceDataSO diceData = evt.DiceData;
-            titleTMP.SetText(diceData.SkillData.SkillName);
-            descTMP.SetText(diceData.SkillData.SkillDescription);
-            gradeOutline.SetColor(diceData.DiceGrade.GradeColor);
-            iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(diceData.Icon));
+            DataBind();
+        }
+
+        private void DataBind()
+        {
+            if (_enemyData == null) return;
+            if (CurrentDiceData == null) return;
             
-            rollParticle.SetParticleColor(diceData.DiceGrade.GradeColor);
+            CurrentSkillData = CurrentDiceData.GetSkillDataStruct(_enemyData.AttackType);
+            titleTMP.SetText(CurrentSkillData.SkillData.SkillName);
+            descTMP.SetText(CurrentSkillData.SkillData.SkillDescription);
+            gradeOutline.SetColor(CurrentDiceData.DiceGrade.GradeColor);
+            iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(CurrentDiceData.Icon));
+            
+            rollParticle.SetParticleColor(CurrentDiceData.DiceGrade.GradeColor);
             rollParticle.PlayParticle();
             
             onDiceDataBind?.Invoke();
         }
-        
+
         private void OnValidate()
         {
             gameObject.name = $"{nameof(EnemyDiceDataBinder)} ({enemyType})";

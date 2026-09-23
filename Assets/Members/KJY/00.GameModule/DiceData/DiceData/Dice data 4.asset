@@ -14,5 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceDataSO
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
   <Icon>k__BackingField: {fileID: 2092391006585376696, guid: fc48bf2f30a62224baa12bb82af51ea8, type: 3}
-  <SkillData>k__BackingField: {fileID: 11400000, guid: 400635940054fde43b522e830b8759a1, type: 2}
-  <BaseDamage>k__BackingField: 0
+  <SkillDataStructs>k__BackingField:
+  - <AgentAttackType>k__BackingField: 0
+    <SkillData>k__BackingField: {fileID: 11400000, guid: e8c6f8a6a8a1153448200910b56aff00, type: 2}
+    <SkillLevel>k__BackingField: 0
+    <BaseDamage>k__BackingField: 10
+  - <AgentAttackType>k__BackingField: 1
+    <SkillData>k__BackingField: {fileID: 11400000, guid: fecb28fa4e0e6734f85078cca273ef12, type: 2}
+    <SkillLevel>k__BackingField: 0
+    <BaseDamage>k__BackingField: 5
+  - <AgentAttackType>k__BackingField: 2
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 7f60b62e229a46d48beceec7d8a851a8, type: 2}
+    <SkillLevel>k__BackingField: 0
+    <BaseDamage>k__BackingField: 15

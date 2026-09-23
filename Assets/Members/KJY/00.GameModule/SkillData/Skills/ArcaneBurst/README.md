@@ -23,6 +23,6 @@ KJY의 `MagicSkill`과 같은 `AbstractSkillLogic` / `SkillLogicExecutor` 실행
 - 시트: `06.Sprite/Tiny RPG Character Asset Pack 01 v2.0 -Full 22 Characters/Magic(Projectile)/Wizard_Attack01_Effect.png` (10 × 1).
 - 각 파티클은 1개씩 방출하며 시전 0.45초 / 타격 0.65초, 반복 없음, 종료 Callback으로 풀에 반환됩니다. URP 2D Unlit 머티리얼을 사용합니다.
 
-기본 주사위 목록의 **Bottom 면**, 즉 `Dice data 5.asset`에 연결했습니다. 이 주사위 데이터를 사용하는 플레이어와 적에게 모두 적용됩니다. 프리팹의 `damage`, `advanceDistance`, `effectOffset`과 각 파티클 설정을 Inspector에서 조절할 수 있습니다.
+공통 기본 주사위 목록의 **Bottom 면**에 연결되어 있음. DiceInventory는 이 기본 목록을 런타임에 복제해서 사용함. 프리팹의 `damage`, `advanceDistance`, `effectOffset`과 각 파티클 설정을 Inspector에서 조절하면 됨.
 
-공통 Executor에는 파괴 시 애니메이션 이벤트 구독을 해제하는 정리 처리만 추가했습니다. 기존 MagicSkill과 다른 스킬들의 실행/피해 규칙은 그대로 사용합니다.
+공통 Executor는 파괴 시 애니메이션 이벤트 구독을 해제하고, 실행 중에는 중복 요청을 막음. 기존 MagicSkill도 같은 실행 계약을 사용함.

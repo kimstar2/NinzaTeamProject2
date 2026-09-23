@@ -35,8 +35,8 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
 
         private void Update()
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame) // ㅌㅅㅌ
-                EnemyDataChanged(_getEnemyData.GetData(0));
+            // if (Keyboard.current.eKey.wasPressedThisFrame) // ㅌㅅㅌ
+                // EnemyDataChanged(_getEnemyData.GetData(0));
         }
 
         protected override void HandleDead()
@@ -60,6 +60,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         private void ChangeEnemyData(EnemyDataSO newEnemyData)
         {
             runtimeEnemyData = newEnemyData;
+            AgentData = newEnemyData;
             ValidateData();
         }
 
@@ -68,6 +69,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             if (runtimeEnemyData == null) return;
             IconImage.SetImage(runtimeEnemyData.EnemyImage);
             IconImage.SetColor(runtimeEnemyData.ImageColor);
+            Debug.Log("DDDD");
             MyAgent.AgentRenderer.SetSprite(runtimeEnemyData.EnemyImage);
             MyAgent.AgentRenderer.SetColor(runtimeEnemyData.ImageColor);
             MyAgent.AnimCompo.SetController(runtimeEnemyData.EnemyAc);
@@ -81,7 +83,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         }
 
         public override void ApplyHeal(float heal)
-        { }
+        { MyAgent.HealthModule.Heal(heal); }
 
         #region Handle
 

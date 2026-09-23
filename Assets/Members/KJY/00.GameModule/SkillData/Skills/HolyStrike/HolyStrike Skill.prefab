@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillLogicExecutor
   <IdleAnimHash>k__BackingField: {fileID: 11400000, guid: 55ce4fd4f2b99f046a996b6659ee1334, type: 2}
-  <SkillAnimHash>k__BackingField: {fileID: 11400000, guid: 826d3ee88c5e53e44989281de2df2f00, type: 2}
+  <SkillAnimHash>k__BackingField: {fileID: 11400000, guid: bcb3bb86cf40be14a8a366d16c2fed92, type: 2}
   skills:
   - {fileID: 4308889254685722348}
   onAnimFinished:
@@ -250,6 +250,8 @@ MonoBehaviour:
   castPosition: {fileID: 1351643545422977396}
   returnPosition: {fileID: 6381723949977578241}
   advanceDistance: 0.6
+  approachTarget: 0
+  attackDistance: 1.2
   animationTimeout: 3
   effectOffset: {x: 0, y: 0.5, z: 0}
   onCast:
