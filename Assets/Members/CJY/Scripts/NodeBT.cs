@@ -9,7 +9,7 @@ namespace Members.CJY.Scripts
     {
         private Image iconImage;
         private NodeEvent nodeEvent;
-        private NodeInfoSO nodeInfo;
+        private NodeConnect node;
 
         [SerializeField] private PoolItemSO poolItem;
         public PoolItemSO Item => poolItem;
@@ -20,22 +20,22 @@ namespace Members.CJY.Scripts
             iconImage = GetComponent<Image>();
         }
 
-        public void Init(NodeInfoSO info, NodeEvent nodeEv)
+        public void Init(NodeConnect nodeObj, NodeEvent nodeEv)
         {
-            iconImage.sprite = info.icon;
+            iconImage.sprite = nodeObj.info.icon;
             nodeEvent = nodeEv;
-            nodeInfo = info;
+            node = nodeObj;
         }
 
         public void OnClickNode()
         {
-            nodeEvent.SelectNode(nodeInfo.type);
+            nodeEvent.SelectNode(node);
         }
         
         public void ResetItem()
         {
             iconImage.sprite = null;
-            nodeInfo = null;
+            node = null;
         }
         
     }

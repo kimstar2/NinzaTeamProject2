@@ -28,7 +28,7 @@ namespace Members.CJY.Scripts
         [SerializeField] private GameObject nodeGroupPrefab;
         [SerializeField] private Transform lineParent;
         [SerializeField] private GameObject linePrefab;
-        
+
         private NodeEvent nodeEvent;
         private List<List<NodeConnect>> nodeConnects = new List<List<NodeConnect>>();
 
@@ -90,11 +90,11 @@ namespace Members.CJY.Scripts
                     nodeItem.GameObject.SetActive(true);
 
                     NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-                    bt.Init(nodeTypes[typeCount], nodeEvent);
                     
                     NodeConnect connect = new NodeConnect(nodeConnects.Count, i, nodeTypes[typeCount]);
                     connect.view = bt;
                     nodeGroups.Add(connect);
+                    bt.Init(connect, nodeEvent);
                     
                     typeCount++;
                 }
@@ -116,11 +116,11 @@ namespace Members.CJY.Scripts
             nodeItem.GameObject.SetActive(true);
 
             NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-            bt.Init(info, nodeEvent);
 
             NodeConnect connect = new NodeConnect(nodeConnects.Count, 0, info);
             connect.view = bt;
             nodeConnects.Add(new List<NodeConnect>() {connect});
+            bt.Init(connect, nodeEvent);
         }
 
         // 좀 비효율적이긴 함 (나중에 다시 보기)

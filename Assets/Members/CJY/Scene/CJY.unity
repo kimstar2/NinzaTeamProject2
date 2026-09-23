@@ -303,7 +303,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4709e2cebdb852d4d889c0a44b152f92, type: 2}
   - {fileID: 11400000, guid: 2c07b89ecd3ced642aa7540db17fd327, type: 2}
   objectPool: {fileID: 1149616502}
-  columnCount: 10
+  columnCount: 15
   minNodeCount: 2
   maxNodeCount: 3
   nodeParent: {fileID: 1998612155}
