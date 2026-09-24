@@ -1,18 +1,21 @@
-using System;
-using System.Collections.Generic;
-using Random = UnityEngine.Random;
-
 namespace _TevLib.Extension.DoT
 {
-    [Serializable]
-    public struct RandomTweenStep
-    {
-        public List<TweenStepSO> steps;
+    using System;
+    using System.Collections.Generic;
+    using Random = UnityEngine.Random;
 
-        public TweenStepSO GetRandomStep()
+    namespace _TevLib.Extension.DoT
+    {
+        [Serializable]
+        public struct RandomTweenStep
         {
-            int r = Random.Range(0, steps.Count);
-            return steps[r];
+            public List<TweenStep> steps;
+
+            public TweenStep GetRandomStep()
+            {
+                int r = Random.Range(0, steps.Count);
+                return steps[r];
+            }
         }
     }
 }

@@ -178,7 +178,6 @@ MonoBehaviour:
   <ArrowRenderer>k__BackingField: {fileID: 694716301669575934}
   <ProjectileSeq>k__BackingField: {fileID: 5774177809780093897}
   targetPosition: {fileID: 2905848276260076468}
-  damage: 26
 --- !u!1 &2872416752920638545
 GameObject:
   m_ObjectHideFlags: 0

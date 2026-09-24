@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
   m_Name: Enemy1 data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 1
   <AttackType>k__BackingField: 1
   <EnemyName>k__BackingField: Enemy1
-  <EnemyHealth>k__BackingField: 100
   <EnemyAc>k__BackingField: {fileID: 22100000, guid: 66b6aff8e9fb6204995ef3fbc2e8dbfe, type: 2}
   <EnemyImage>k__BackingField: {fileID: -1467410003536780371, guid: b9cc3b37e1f2e2447a15ee5a518b4b3a, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: 25e8414f4b187cd4b96e5c613dc353fd, type: 2}
+  <Cost>k__BackingField: 1

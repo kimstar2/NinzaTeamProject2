@@ -13,7 +13,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field:SerializeField] public PoolItemSO CastParticle {get; private set;}
         [field:SerializeField] public PoolItemSO ImpactParticle {get; private set;}
         [SerializeField, Min(1)] private int hitCount = 3;
-        [SerializeField, Min(0f)] private float damage = 8f;
         [SerializeField, Min(0f)] private float hitDelay = 0.3f;
         [SerializeField, Min(0f)] private float hitInterval = 0.15f;
         private int _hitCount;
@@ -41,7 +40,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _applyCount >= _hitCount) return;
             _applyCount++; // 지금 들어온 타격은 적용했음
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage(damage));
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
         }
     }
 }

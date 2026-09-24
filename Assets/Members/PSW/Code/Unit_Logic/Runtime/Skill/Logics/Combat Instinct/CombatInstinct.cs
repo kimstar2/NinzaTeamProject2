@@ -79,9 +79,9 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
         private bool _showLine;
         private AbstractSelector _target;
 
-        public override void Init(SkillLogicExecutor executor)
+        public override void Init(SkillLogicExecutor executor,float baseLevel)
         {
-            base.Init(executor);
+            base.Init(executor,baseLevel);
 
             _startPos = executor.Attacker.DefaultPosition.position;
             

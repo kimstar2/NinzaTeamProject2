@@ -12,7 +12,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field:Header("Particle Setting")]
         [field:SerializeField] public PoolItemSO CastParticle {get; private set;}
         [field:SerializeField] public PoolItemSO ImpactParticle {get; private set;}
-        [SerializeField, Min(0f)] private float damage = 32f;
         [SerializeField, Min(0f)] private float hitDelay = 0.24f;
         private bool _isHit;
         private bool _isApplied;
@@ -32,7 +31,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || !_isHit || _isApplied) return;
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage(damage));
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
         }
     }
 }

@@ -61,7 +61,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             }
             if (ActionSeq == null || ReturnSeq == null || castPosition == null || returnPosition == null)
             {
-                Debug.LogError($"{name}: 시퀀서랑 위치 연결 확인해줘", this);
                 EndSkill();
                 return;
             }
@@ -165,29 +164,20 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             TryEndSkill();
         }
 
-        protected float GetDamage(float damage)
+        protected float GetDamage()
         {
-            var diceData = Executor.Attacker.DiceInventory.GetDiceData();
-            return Mathf.Max(0f, damage + (diceData != null 
-                ? diceData.SkillDataStructs
-                    .AsValueEnumerable()
-                    .Where(s => s.AgentAttackType == agentAttackType)
-                    .Select(s=>s.BaseDamage).First() : 0f));
+            return Mathf.Max(0f, GetStat(ApplyStatType.Damage));
         }
 
         protected void PlayParticle(PoolItemSO item, Vector3 pos)
         {
             if (_pool == null || item == null)
-            {
-                Debug.LogWarning($"{name}: 파티클 풀 연결 확인해줘", this);
                 return;
-            }
             var pooled = _pool.Pop(item.ItemName);
             PoolingParticle particle = pooled as PoolingParticle;
             if (particle == null)
             {
                 if (pooled != null) _pool.Push(pooled);
-                Debug.LogWarning($"{name}: {item.ItemName} 풀 등록 확인해줘", this);
                 return;
             }
             _particles.Add(particle);

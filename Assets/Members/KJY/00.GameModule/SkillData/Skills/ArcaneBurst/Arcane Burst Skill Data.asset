@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 9e55606da1864f00ad0d39c2a7fc3d33, type: 3}
   <SkillName>k__BackingField: Arcane Burst
-  <SkillDescription>k__BackingField: "마력을 모아 지정한 적에게 폭발을 일으킵니다. 피해량: 20 + 주사위 기본 피해."
+  <SkillDescription>k__BackingField: "마력을 모아 지정한 적에게 폭발을 일으킵니다. 피해량: {0} + 주사위 기본 피해."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 20

@@ -1,4 +1,6 @@
 using Members.KJY._01.Scripts.Events.Dice.Selector;
+using Members.KJY._01.Scripts.Events.Dice;
+using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
 using Members.KJY._01.Scripts.Util;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,6 +15,25 @@ namespace Members.KJY._01.Scripts.Agent.Player
         private bool _hasTarget;
 
         public UnityEvent onSetTarget;
+        public UnityEvent onDead;
+        public UnityEvent onInit;
+        [Min(0f)] public float playerLevel = 1f;
+
+        public void Init(PlayerDataSO data)
+        {
+            PlayerData = data;
+            AgentData = data;
+            EnterBattle();
+            IsDead = false;
+            OffSetTarget();
+            ValidateData();
+            MyAgent.HealthModule.InitHealth(data.MaxHealth);
+            eventChannel.RaiseEvent(new OnDiceLock(false, PlayerData.PlayerType));
+            eventChannel.RaiseEvent(new OnPlayerDataReceive(data));
+            DiceInventory.DiceDataChanged();
+            onInit?.Invoke();
+            // eventChannel.RaiseEvent(new OnPlayerRoll(data.PlayerType));
+        }
 
         protected override void Start()
         {
@@ -76,8 +97,12 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         protected override void HandleDead()
         {
+            if (IsDead) return;
             base.HandleDead();
+            PlayerData.Dead();
             UnSelect();
+            eventChannel.RaiseEvent(new OnPlayerDead(PlayerData.PlayerType, true));
+            onDead?.Invoke();
         }
 
         private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
@@ -90,7 +115,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
         }
 
         public override void ApplyHeal(float heal) => MyAgent.HealthModule.Heal(heal);
-        
+
         private void ValidateData()
         {
             IconImage.SetImage(PlayerData.PlayerImage);
@@ -99,6 +124,11 @@ namespace Members.KJY._01.Scripts.Agent.Player
             MyAgent.AgentRenderer.SetColor(PlayerData.ImageColor);
             
             MyAgent.AnimCompo.SetController(PlayerData.AnimCon);
+        }
+
+        public override float GetLevel()
+        {
+            return playerLevel > 0f ? playerLevel : 1f;
         }
 
 #if UNITY_EDITOR

@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 7e187c292ec81d84d9f5219c8b05f92e, type: 3}
   <SkillName>k__BackingField: Magic Skill data
-  <SkillDescription>k__BackingField: "\uB69C\uB6A0.\n"
+  <SkillDescription>k__BackingField: "적에게 {0} 피해를 줍니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 20
