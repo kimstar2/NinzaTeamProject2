@@ -28,13 +28,31 @@ namespace Members.CJY.Scripts
         [SerializeField] private GameObject nodeGroupPrefab;
         [SerializeField] private Transform lineParent;
         [SerializeField] private GameObject linePrefab;
-        
+
         private NodeEvent nodeEvent;
+        private NodeConnect currentNode;
         private List<List<NodeConnect>> nodeConnects = new List<List<NodeConnect>>();
 
         private void Awake()
         {
             nodeEvent = GetComponent<NodeEvent>();
+            nodeEvent.OnNodeSelected += HandleNodeSelected;
+        }
+
+        private void OnDestroy()
+        {
+            nodeEvent.OnNodeSelected -= HandleNodeSelected;
+        }
+
+        private void HandleNodeSelected(NodeConnect nextNode)
+        {
+            if (currentNode == null) return;
+
+            if (!currentNode.nextNodes.Contains(nextNode))
+                return;
+
+            currentNode = nextNode;
+            NodeVisualSetting();
         }
 
         private int[] NodeCount(int colCnt)
@@ -67,6 +85,9 @@ namespace Members.CJY.Scripts
             
             ConnectNode();
             RenderLine();
+
+            currentNode = nodeConnects[0][0];
+            NodeVisualSetting();
         }
 
         private void MakeGroup(int[] nodeCount, List<NodeInfoSO> nodeTypes)
@@ -78,7 +99,6 @@ namespace Members.CJY.Scripts
                 Transform groupTrm = groupItem.GameObject.transform;
 
                 groupTrm.SetParent(nodeParent, false);
-                groupItem.GameObject.SetActive(true);
                 
                 List<NodeConnect> nodeGroups = new List<NodeConnect>();
 
@@ -87,14 +107,13 @@ namespace Members.CJY.Scripts
                     IPoolable nodeItem = objectPool.Pop("Node");
                     Transform nodeTrm = nodeItem.GameObject.transform;
                     nodeTrm.SetParent(groupTrm, false);
-                    nodeItem.GameObject.SetActive(true);
 
                     NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-                    bt.Init(nodeTypes[typeCount], nodeEvent);
                     
                     NodeConnect connect = new NodeConnect(nodeConnects.Count, i, nodeTypes[typeCount]);
                     connect.view = bt;
                     nodeGroups.Add(connect);
+                    bt.Init(connect, nodeEvent);
                     
                     typeCount++;
                 }
@@ -108,19 +127,17 @@ namespace Members.CJY.Scripts
             Transform groupTrm = groupItem.GameObject.transform;
             
             groupTrm.SetParent(nodeParent, false);
-            groupItem.GameObject.SetActive(true);
             
             IPoolable nodeItem = objectPool.Pop("Node");
             Transform nodeTrm = nodeItem.GameObject.transform;
             nodeTrm.SetParent(groupTrm, false);
-            nodeItem.GameObject.SetActive(true);
 
             NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-            bt.Init(info, nodeEvent);
 
             NodeConnect connect = new NodeConnect(nodeConnects.Count, 0, info);
             connect.view = bt;
             nodeConnects.Add(new List<NodeConnect>() {connect});
+            bt.Init(connect, nodeEvent);
         }
 
         // 좀 비효율적이긴 함 (나중에 다시 보기)
@@ -311,6 +328,28 @@ namespace Members.CJY.Scripts
                         rt.position = fromPos;
                         rt.sizeDelta = new Vector2(distance, rt.sizeDelta.y);
                         rt.rotation = Quaternion.Euler(0f, 0f, angle);
+                    }
+                }
+            }
+        }
+
+        private void NodeVisualSetting()
+        {
+            foreach (List<NodeConnect> column in nodeConnects)
+            {
+                foreach (NodeConnect node in column)
+                {
+                    if (node == currentNode)
+                    {
+                        node.view.SetVisual(NodeState.Current);
+                    }
+                    else if (currentNode.nextNodes.Contains(node))
+                    {
+                        node.view.SetVisual(NodeState.Moveable);
+                    }
+                    else
+                    {
+                        node.view.SetVisual(NodeState.Locked);
                     }
                 }
             }

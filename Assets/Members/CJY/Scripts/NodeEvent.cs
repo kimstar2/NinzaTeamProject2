@@ -5,20 +5,20 @@ namespace Members.CJY.Scripts
 {
     public class NodeEvent : MonoBehaviour
     {
-        public event Action<NodeType> OnNodeSelected;
+        public event Action<NodeConnect> OnNodeSelected;
 
-        public void SelectNode(NodeType type)
+        public void SelectNode(NodeConnect node)
         {
-            OnNodeSelected?.Invoke(type);
+            OnNodeSelected?.Invoke(node);
         }
         
         // 이런식으로 알잘딱 구독해서 사용하셈
-        /*private void HandleNodeSelected(NodeType type)
+        /*private void HandleNodeSelected(NodeConnect node)
         {
-            if (type == NodeType.Battle)
+            if (node.info.type == NodeType.Battle)
             {
                 
             }
-        }*/ 
+        } */
     }
 }
