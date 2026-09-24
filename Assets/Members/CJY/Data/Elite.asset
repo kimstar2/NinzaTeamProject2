@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Elite
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeInfoSO
   type: 2
-  icon: {fileID: 1335385452945238478, guid: 7dffd21074da88d4e80eba42350a77d4, type: 3}
+  icon: {fileID: 1287488252, guid: 55b2f9c56f879704f89f46bfd669b086, type: 3}
   percent: 5
