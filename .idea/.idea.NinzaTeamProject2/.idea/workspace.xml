@@ -12,17 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Battle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Battle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Boss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Boss.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Elite.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Elite.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Event.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Event.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Rest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Rest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Shop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Shop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Start.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Start.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Line.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Line.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Node.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Node.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Line.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Line.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Node.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Node.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/NodeGroup.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/NodeGroup.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeBT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeBT.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeMaker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,6 +208,7 @@
       <workItem from="1790034052573" duration="2703000" />
       <workItem from="1790058072117" duration="6243000" />
       <workItem from="1790261402328" duration="4439000" />
+      <workItem from="1790298178062" duration="3822000" />
     </task>
     <servers />
   </component>

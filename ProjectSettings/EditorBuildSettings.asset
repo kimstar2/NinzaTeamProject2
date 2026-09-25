@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Members/CJY/Scene/SaveTestScene.unity
+    guid: daa5f03095fec334ea6557fba59d3a88
+  - enabled: 1
+    path: Assets/Members/CJY/Scene/CJY.unity
+    guid: 2574449407e3a994098b09e90fbc5983
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
