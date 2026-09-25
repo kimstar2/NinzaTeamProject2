@@ -479,7 +479,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 499352750}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a34f9422a10343c69c696374ad241c5f, type: 3}
   m_Name: 
@@ -876,6 +876,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
@@ -2341,7 +2345,7 @@ MonoBehaviour:
   evtChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   enemyDiceInventory: {fileID: 1244943975}
   headAnchor: {fileID: 526303433}
-  worldOffset: {x: 0, y: 0, z: 0}
+  worldOffset: {x: 0, y: 0.5, z: 0}
   lastDicePrefab: {fileID: 7315061616827967434, guid: 973095d4cabc96e419cbcc8901e7db24, type: 3}
 --- !u!1 &283995963
 GameObject:
@@ -3877,7 +3881,7 @@ MonoBehaviour:
   evtChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   enemyDiceInventory: {fileID: 2040662745}
   headAnchor: {fileID: 1643187260}
-  worldOffset: {x: 0, y: 0, z: 0}
+  worldOffset: {x: 0, y: 0.5, z: 0}
   lastDicePrefab: {fileID: 7315061616827967434, guid: 973095d4cabc96e419cbcc8901e7db24, type: 3}
 --- !u!1 &493250478
 GameObject:
@@ -5627,7 +5631,7 @@ MonoBehaviour:
   evtChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   enemyDiceInventory: {fileID: 225264164}
   headAnchor: {fileID: 1756957625}
-  worldOffset: {x: 0, y: 0, z: 0}
+  worldOffset: {x: 0, y: 0.5, z: 0}
   lastDicePrefab: {fileID: 7315061616827967434, guid: 973095d4cabc96e419cbcc8901e7db24, type: 3}
 --- !u!1 &606687776
 GameObject:
@@ -6197,6 +6201,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
@@ -6952,7 +6960,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 499352750}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a34f9422a10343c69c696374ad241c5f, type: 3}
   m_Name: 
@@ -12553,7 +12561,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -2014474587
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: -25
   m_MaskInteraction: 0
   m_Positions:
@@ -12629,6 +12637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf6fd7465a9f4201a85d82828c7e7950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Mono.MonoLineRenderer
+  pointCount: 24
+  arcHeight: 0.2
 --- !u!1 &1517384286
 GameObject:
   m_ObjectHideFlags: 0
@@ -12956,6 +12966,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
@@ -16235,7 +16249,7 @@ MonoBehaviour:
   evtChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   enemyDiceInventory: {fileID: 120475708}
   headAnchor: {fileID: 1106573983}
-  worldOffset: {x: 0, y: 0, z: 0}
+  worldOffset: {x: 0, y: 0.5, z: 0}
   lastDicePrefab: {fileID: 7315061616827967434, guid: 973095d4cabc96e419cbcc8901e7db24, type: 3}
 --- !u!1 &2084988607
 GameObject:
@@ -16752,6 +16766,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8496665686908930414, guid: b31308143cb7268468641e93717bcb88, type: 3}
