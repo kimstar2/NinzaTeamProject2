@@ -4,9 +4,11 @@ using DevLib.HashDataSystem;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Agent.SkillSystem;
 using Members.KJY._01.Scripts.Dice;
+using Members.KJY._01.Scripts.UI;
 using Members.KJY._01.Scripts.UI.Mono;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Members.KJY._01.Scripts.Agent
 {
@@ -31,7 +33,11 @@ namespace Members.KJY._01.Scripts.Agent
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;
         public UnityEvent<float> onHealthChanged;
-
+        public TweenLayoutGroup TweenLayoutGroup { get; private set; }
+        [field: SerializeField] public TweenLayoutGroup DiceLayoutGroup { get; private set; }
+        [field: SerializeField] public Transform DiceLayoutTarget { get; private set; }
+        protected bool isFirstInit = true;
+        
         #region Modules
 
         public SkillExecutor SkillExecutor { get; private set; }
@@ -44,6 +50,22 @@ namespace Members.KJY._01.Scripts.Agent
             base.InitializeModules();
             SkillExecutor = GetModule<SkillExecutor>();
             DiceInventory = GetModule<AbstractDiceInventory>();
+            TweenLayoutGroup = GetComponentInParent<TweenLayoutGroup>();
+        }
+
+        public void HideFromBattle()
+        {
+            TweenLayoutGroup.Hide(transform);
+            DiceLayoutGroup.Hide(DiceLayoutTarget);
+            MyAgent.gameObject.SetActive(false);
+        }
+
+        protected void EnterBattle()
+        {
+            MyAgent.gameObject.SetActive(true);
+            MyAgent.transform.position = DefaultPosition.position;
+            DiceLayoutGroup.Add(DiceLayoutTarget);
+            TweenLayoutGroup.Add(transform);
         }
         
         protected virtual void HandleDead()
@@ -54,7 +76,6 @@ namespace Members.KJY._01.Scripts.Agent
         
         protected void HandleHealthChanged(float health, float maxHealth)
         {
-            Debug.Log("dddasd");
             onHealthChanged?.Invoke(health / maxHealth);
         }
 
@@ -62,6 +83,7 @@ namespace Members.KJY._01.Scripts.Agent
         {
             MyAgent.HealthModule.OnDead += HandleDead;
             MyAgent.HealthModule.OnHealthChanged += HandleHealthChanged;
+            HandleHealthChanged(MyAgent.HealthModule.CurrentHealth, MyAgent.HealthModule.DefaultMaxHealth);
         }
 
         protected virtual void OnDestroy()
@@ -97,7 +119,9 @@ namespace Members.KJY._01.Scripts.Agent
                     throw new ArgumentOutOfRangeException(nameof(statType), statType, null);
             }
         }
-        public abstract void ApplyDamage(float damage); // 추후 데이터 추가 예정
-        public abstract void ApplyHeal(float heal); // 추후 데이터 추가 예정
+        public abstract void ApplyDamage(float damage);
+        public abstract void ApplyHeal(float heal);
+        public abstract float GetLevel();
+
     }
 }

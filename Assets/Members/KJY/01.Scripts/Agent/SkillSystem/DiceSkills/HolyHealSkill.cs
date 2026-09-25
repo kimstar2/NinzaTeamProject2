@@ -9,7 +9,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
     public class HolyHealSkill : AbstractParticleSkill
     {
         [field:SerializeField] public PoolItemSO HealParticle {get; private set;}
-        [SerializeField, Min(0f)] private float heal = 20f;
         private bool _isApplied;
 
         protected override bool CanHit => Executor != null && Executor.Attacker != null && !Executor.Attacker.IsDead;
@@ -25,7 +24,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
-            Executor.Attacker.ApplyStat(ApplyStatType.Heal, heal); // 지금 타겟 선택은 적 기준이라 일단 자기 회복
+            Executor.Attacker.ApplyStat(ApplyStatType.Heal, GetStat(ApplyStatType.Heal)); // 지금 타겟 선택은 적 기준이라 일단 자기 회복
         }
     }
 }

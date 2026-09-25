@@ -157,7 +157,6 @@ MonoBehaviour:
   <CastParticle>k__BackingField: {fileID: 11400000, guid: 3c8f59a0dc23a4048b6a7b57c03a8223, type: 2}
   <ImpactParticle>k__BackingField: {fileID: 11400000, guid: 9a8af611c637d064794839edabd2bbdb, type: 2}
   hitCount: 3
-  damage: 8
   hitDelay: 0.3
   hitInterval: 0.15
 --- !u!1 &6873919260695396416

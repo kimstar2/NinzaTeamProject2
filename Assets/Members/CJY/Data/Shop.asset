@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shop
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeInfoSO
   type: 3
-  icon: {fileID: 2092391006585376696, guid: fc48bf2f30a62224baa12bb82af51ea8, type: 3}
+  icon: {fileID: -1358081769, guid: 55b2f9c56f879704f89f46bfd669b086, type: 3}
   percent: 10
