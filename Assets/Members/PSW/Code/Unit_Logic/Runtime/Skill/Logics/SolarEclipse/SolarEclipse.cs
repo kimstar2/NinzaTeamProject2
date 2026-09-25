@@ -163,9 +163,9 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             }
         }
 
-        public override void Init(SkillLogicExecutor executor)
+        public override void Init(SkillLogicExecutor executor, float baseLevel)
         {
-            base.Init(executor);
+            base.Init(executor,baseLevel);
             targetPos = Executor.Target.DefaultPosition.position;
         }
 

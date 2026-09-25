@@ -104,7 +104,6 @@ MonoBehaviour:
         m_CallState: 2
   <CastParticle>k__BackingField: {fileID: 11400000, guid: 5d6b5718bd3e480bb4bf301e61b1bab3, type: 2}
   <ImpactParticle>k__BackingField: {fileID: 11400000, guid: bba03ba6081846a088470a51b7e8518b, type: 2}
-  damage: 20
 --- !u!1 &3659548024893007821
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,101 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112174143334863567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2809446153970972299}
+  - component: {fileID: 2509509325289184464}
+  m_Layer: 0
+  m_Name: DeathExitSeq
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2809446153970972299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112174143334863567}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 111564955280840867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2509509325289184464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112174143334863567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
+  debugMode: 0
+  <IsCanvas>k__BackingField: 1
+  targetTrm: {fileID: 111564955280840867}
+  sequenceStep:
+  - <ActionType>k__BackingField: 8
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 8
+    <Duration>k__BackingField: 0.28
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 3
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 8
+    <Duration>k__BackingField: 0.28
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0.82, y: 0.82, z: 0.82}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 2
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 5
+    <Duration>k__BackingField: 0.24
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 5
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &120383155391670998
 GameObject:
   m_ObjectHideFlags: 0
@@ -48,6 +144,7 @@ GameObject:
   - component: {fileID: 2034824584315311686}
   - component: {fileID: 4046208395471348535}
   - component: {fileID: 7402971368035382027}
+  - component: {fileID: 8574886010575554303}
   m_Layer: 5
   m_Name: Visual
   m_TagString: Untagged
@@ -95,14 +192,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.12452829, g: 0.12452829, b: 0.12452829, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4146786208365501868, guid: c105d842632890546baac2d11fc33d00, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -124,6 +221,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755136f5b3004daeacb5e16e12ce99ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.Mono.UIMonoImage
+--- !u!114 &8574886010575554303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687480650090793622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0.2754717, g: 0.2754717, b: 0.2754717, a: 0.5}
+  m_EffectDistance: {x: 4, y: 4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &937200220553652175
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,7 +5304,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 463734569
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_RenderMode: 4
@@ -5533,7 +5645,7 @@ RectTransform:
   m_Father: {fileID: 9098645680546581034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5555,7 +5667,7 @@ MonoBehaviour:
     m_Top: 15
     m_Bottom: 15
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -5679,7 +5791,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  <PlayerData>k__BackingField: {fileID: 0}
+  <DiceLayoutGroup>k__BackingField: {fileID: 0}
+  <DiceLayoutTarget>k__BackingField: {fileID: 0}
+  <RuntimePlayerData>k__BackingField: {fileID: 0}
   <LineColor>k__BackingField: {fileID: 11400000, guid: e10458bd1ff527e42b032ebfffe4eecf, type: 2}
   <PlayerColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
   onSetTarget:
@@ -5698,6 +5812,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onDead:
+    m_PersistentCalls:
+      m_Calls: []
+  onInit:
+    m_PersistentCalls:
+      m_Calls: []
+  playerLevel: 0
 --- !u!1 &2505473590076940325
 GameObject:
   m_ObjectHideFlags: 0
@@ -5974,10 +6095,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 9098645680546581034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5904447442746052728
 MonoBehaviour:
@@ -5996,21 +6117,47 @@ MonoBehaviour:
   <IsCanvas>k__BackingField: 1
   targetTrm: {fileID: 9098645680546581034}
   sequenceStep:
-  - <ActionType>k__BackingField: 10
+  - <ActionType>k__BackingField: 3
     <InsertType>k__BackingField: 3
     <EaseType>k__BackingField: 9
     <Duration>k__BackingField: 0.1
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 275, y: 200, z: 0}
+    <MinTransformValue>k__BackingField: {x: 1.1, y: 1.1428572, z: 1}
+    <MaxTransformValue>k__BackingField: {x: 1.1, y: 1.1428572, z: 1}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 2
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.08
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 1
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 3
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 8
+    <Duration>k__BackingField: 0.2
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
     <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
     <FadeValue>k__BackingField: 0
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
-  - <ActionType>k__BackingField: 10
-    <InsertType>k__BackingField: 3
+  - <ActionType>k__BackingField: 2
+    <InsertType>k__BackingField: 6
     <EaseType>k__BackingField: 8
     <Duration>k__BackingField: 0.2
     <IsRandomizeValue>k__BackingField: 0
@@ -6026,7 +6173,7 @@ MonoBehaviour:
   independentTime: 0
   targetLink: 0
   linkType: 0
-  id: {fileID: 2901278285321762842}
+  id: {fileID: 9098645680546581034}
   onSeqComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -6119,6 +6266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fbe4418d814149b5da2a743027c19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.DiceDataUILocker
+  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   onEnter:
     m_PersistentCalls:
       m_Calls:
@@ -6211,10 +6359,10 @@ RectTransform:
   - {fileID: 2055173253906508145}
   m_Father: {fileID: 3918910920503856383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 195, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &4696894277222572034
 MonoBehaviour:
@@ -6542,6 +6690,102 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   healthBar: {fileID: 596809430150648098}
+--- !u!1 &4113445008014045047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7431297590600603425}
+  - component: {fileID: 2726722092078574801}
+  m_Layer: 0
+  m_Name: ReflowSeq
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7431297590600603425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113445008014045047}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 111564955280840867}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2726722092078574801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4113445008014045047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
+  setAwakeCache: 1
+  debugMode: 0
+  <IsCanvas>k__BackingField: 1
+  targetTrm: {fileID: 111564955280840867}
+  sequenceStep:
+  - <ActionType>k__BackingField: 8
+    <InsertType>k__BackingField: 3
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.28
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 3
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.28
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 1, y: 1, z: 1}
+    <MaxTransformValue>k__BackingField: {x: 1, y: 1, z: 1}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 2
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.28
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 1
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  updateType: 0
+  independentTime: 0
+  targetLink: 0
+  linkType: 5
+  id: {fileID: 0}
+  onSeqComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4395248073346047111
 GameObject:
   m_ObjectHideFlags: 0
@@ -6558,6 +6802,7 @@ GameObject:
   - component: {fileID: 4059737890375096099}
   - component: {fileID: 6319685054170952251}
   - component: {fileID: 5032003485149942896}
+  - component: {fileID: 1007316822863204448}
   m_Layer: 5
   m_Name: Player_container
   m_TagString: Untagged
@@ -6583,6 +6828,8 @@ RectTransform:
   - {fileID: 7935077226433335297}
   - {fileID: 5193013035762838170}
   - {fileID: 6050114479836159685}
+  - {fileID: 2809446153970972299}
+  - {fileID: 7431297590600603425}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6718,6 +6965,18 @@ MonoBehaviour:
   onRightClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!225 &1007316822863204448
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395248073346047111}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &5102130060527756540
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,10 +7007,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 9098645680546581034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5463120293883996909
 GameObject:
@@ -7178,6 +7437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3918910920503856383}
   - component: {fileID: 3730689145338415473}
+  - component: {fileID: 2817121947728097840}
   m_Layer: 5
   m_Name: Desc_container
   m_TagString: Untagged
@@ -7224,8 +7484,34 @@ MonoBehaviour:
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: 1
-  m_FlexibleHeight: 1
+  m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2817121947728097840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980007852426901013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &6365973168216091399
 GameObject:
   m_ObjectHideFlags: 0
@@ -7410,7 +7696,7 @@ RectTransform:
   m_Father: {fileID: 3918910920503856383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7557,10 +7843,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 9098645680546581034}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &585385255608889358
 MonoBehaviour:
@@ -7579,28 +7865,54 @@ MonoBehaviour:
   <IsCanvas>k__BackingField: 1
   targetTrm: {fileID: 9098645680546581034}
   sequenceStep:
-  - <ActionType>k__BackingField: 10
+  - <ActionType>k__BackingField: 3
     <InsertType>k__BackingField: 3
     <EaseType>k__BackingField: 9
     <Duration>k__BackingField: 0.15
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 275, y: 200, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MinTransformValue>k__BackingField: {x: 1.1, y: 1.1428572, z: 1}
+    <MaxTransformValue>k__BackingField: {x: 1.1, y: 1.1428572, z: 1}
     <FadeValue>k__BackingField: 0
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
       m_PersistentCalls:
         m_Calls: []
-  - <ActionType>k__BackingField: 10
+  - <ActionType>k__BackingField: 2
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.08
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 1
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 3
     <InsertType>k__BackingField: 3
     <EaseType>k__BackingField: 27
     <Duration>k__BackingField: 0.2
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 250, y: 175, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MinTransformValue>k__BackingField: {x: 1, y: 1, z: 1}
+    <MaxTransformValue>k__BackingField: {x: 1, y: 1, z: 1}
     <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 2
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 8
+    <Duration>k__BackingField: 0.2
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 1
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
       m_PersistentCalls:
@@ -7609,7 +7921,7 @@ MonoBehaviour:
   independentTime: 0
   targetLink: 0
   linkType: 0
-  id: {fileID: 2901278285321762842}
+  id: {fileID: 9098645680546581034}
   onSeqComplete:
     m_PersistentCalls:
       m_Calls: []
@@ -7685,12 +7997,12 @@ MonoBehaviour:
   selector: {fileID: 1114260980001786297}
   targetOutline: {fileID: 6896565726711562072}
   lightImage: {fileID: 8785665863121718028}
-  idleColor: {r: 0.22, g: 0.28, b: 0.36, a: 0.7}
+  idleColor: {r: 1, g: 1, b: 1, a: 1}
   fadeTime: 0.14
   pulseTime: 0.65
-  lightAlpha: 0.28
-  connectedStrength: 0.55
-  outlineWidth: {x: 1, y: 3}
+  lightAlpha: 0.125
+  connectedStrength: 1
+  outlineWidth: {x: 3, y: 3}
 --- !u!1 &7118560932366574240
 GameObject:
   m_ObjectHideFlags: 0
@@ -7793,6 +8105,11 @@ GameObject:
   - component: {fileID: 7005660954329420754}
   - component: {fileID: 9082349364305765480}
   - component: {fileID: 5241203637618527158}
+  - component: {fileID: 896197580849852000}
+  - component: {fileID: 6497365960820316486}
+  - component: {fileID: 4972995497851386464}
+  - component: {fileID: 7777121659558782006}
+  - component: {fileID: 7783004189919918798}
   m_Layer: 5
   m_Name: Data UI
   m_TagString: Untagged
@@ -7809,7 +8126,7 @@ RectTransform:
   m_GameObject: {fileID: 7205461977034763967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1237865415730614497}
@@ -7821,7 +8138,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 320, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4250944558616341051
 CanvasRenderer:
@@ -7890,6 +8207,95 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!225 &896197580849852000
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205461977034763967}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &6497365960820316486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205461977034763967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &4972995497851386464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205461977034763967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &7777121659558782006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205461977034763967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096ef5e8e23c1c741bf55b216643f40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.TooltipPanelBounds
+  screenPadding: 12
+  animationPadding: {x: 1.1, y: 1.15}
+--- !u!223 &7783004189919918798
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205461977034763967}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 1963040383
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
 --- !u!1 &7426838693887059843
 GameObject:
   m_ObjectHideFlags: 0
@@ -7959,8 +8365,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1036920257864518660}
-        m_TargetAssemblyTypeName: _TevLib.Extension.DoT.TweenSequencer, Assembly-CSharp
+      - m_Target: {fileID: 5594699410085409164}
+        m_TargetAssemblyTypeName: _TevLib.Extension.DoT.RandomSequencer, Assembly-CSharp
         m_MethodName: Sequence
         m_Mode: 1
         m_Arguments:
@@ -8483,7 +8889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4024885943980692513}
-  - component: {fileID: 1036920257864518660}
+  - component: {fileID: 5594699410085409164}
   m_Layer: 5
   m_Name: RollSeq
   m_TagString: Untagged
@@ -8511,7 +8917,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1036920257864518660
+--- !u!114 &5594699410085409164
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8520,40 +8926,108 @@ MonoBehaviour:
   m_GameObject: {fileID: 9183157703020153863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7152fdc97db23d449cfb3617b81ed3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 466cc4a80a6e479fba364178067c9257, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.TweenSequencer
-  setAwakeCache: 1
+  m_EditorClassIdentifier: Assembly-CSharp::_TevLib.Extension.DoT.RandomSequencer
   debugMode: 0
   <IsCanvas>k__BackingField: 1
   targetTrm: {fileID: 1260231932141367841}
   sequenceStep:
-  - <ActionType>k__BackingField: 1
-    <InsertType>k__BackingField: 3
-    <EaseType>k__BackingField: 9
-    <Duration>k__BackingField: 0.1
-    <IsRandomizeValue>k__BackingField: 0
-    <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 0, y: -15, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
-    <FadeValue>k__BackingField: 0
-    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Callback>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
-  - <ActionType>k__BackingField: 1
-    <InsertType>k__BackingField: 3
-    <EaseType>k__BackingField: 27
-    <Duration>k__BackingField: 0.3
-    <IsRandomizeValue>k__BackingField: 0
-    <UsingFastBeyond>k__BackingField: 0
-    <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
-    <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
-    <FadeValue>k__BackingField: 0
-    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
-    <Callback>k__BackingField:
-      m_PersistentCalls:
-        m_Calls: []
+  - steps:
+    - <ActionType>k__BackingField: 1
+      <InsertType>k__BackingField: 3
+      <EaseType>k__BackingField: 9
+      <Duration>k__BackingField: 0.1
+      <IsRandomizeValue>k__BackingField: 0
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: 0, y: -5, z: 0}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <ActionType>k__BackingField: 1
+      <InsertType>k__BackingField: 3
+      <EaseType>k__BackingField: 9
+      <Duration>k__BackingField: 0.1
+      <IsRandomizeValue>k__BackingField: 0
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: 0, y: 5, z: 0}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <ActionType>k__BackingField: 1
+      <InsertType>k__BackingField: 3
+      <EaseType>k__BackingField: 9
+      <Duration>k__BackingField: 0.1
+      <IsRandomizeValue>k__BackingField: 0
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: -5, y: 0, z: 0}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+    - <ActionType>k__BackingField: 1
+      <InsertType>k__BackingField: 3
+      <EaseType>k__BackingField: 9
+      <Duration>k__BackingField: 0.1
+      <IsRandomizeValue>k__BackingField: 0
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: 5, y: 0, z: 0}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+  - steps:
+    - <ActionType>k__BackingField: 5
+      <InsertType>k__BackingField: 6
+      <EaseType>k__BackingField: 27
+      <Duration>k__BackingField: 0.1
+      <IsRandomizeValue>k__BackingField: 1
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: 0, y: 0, z: -5}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 5}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+  - steps:
+    - <ActionType>k__BackingField: 1
+      <InsertType>k__BackingField: 3
+      <EaseType>k__BackingField: 27
+      <Duration>k__BackingField: 0.3
+      <IsRandomizeValue>k__BackingField: 0
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
+  - steps:
+    - <ActionType>k__BackingField: 5
+      <InsertType>k__BackingField: 6
+      <EaseType>k__BackingField: 9
+      <Duration>k__BackingField: 0.3
+      <IsRandomizeValue>k__BackingField: 0
+      <UsingFastBeyond>k__BackingField: 0
+      <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+      <FadeValue>k__BackingField: 0
+      <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+      <Callback>k__BackingField:
+        m_PersistentCalls:
+          m_Calls: []
   updateType: 0
   independentTime: 0
   targetLink: 0
@@ -8561,17 +9035,4 @@ MonoBehaviour:
   id: {fileID: 0}
   onSeqComplete:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2596604600034595515}
-        m_TargetAssemblyTypeName: Members.KJY._01.Scripts.UI.Mono.UIMaterialBlinkEffect,
-          Assembly-CSharp
-        m_MethodName: SetBlink
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

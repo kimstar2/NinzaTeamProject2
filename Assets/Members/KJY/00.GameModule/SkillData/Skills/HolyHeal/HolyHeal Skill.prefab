@@ -287,7 +287,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   <HealParticle>k__BackingField: {fileID: 11400000, guid: 337efddbee5965c46ac7ae9592fe6f4e, type: 2}
-  heal: 20
 --- !u!1 &3798405408764320151
 GameObject:
   m_ObjectHideFlags: 0

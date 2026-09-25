@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: TwinSlash Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: bc73cab5e4cb60e45b3abaf783c6050b, type: 3}
+  <SkillName>k__BackingField: "\uC5F0\uC18D \uBCA0\uAE30"
+  <Icon>k__BackingField: {fileID: 6939772521941676478, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\uD55C \uC801\uC744 \uB450 \uBC88 \uBCB1\uB2C8\uB2E4.
+    \uD55C \uBC88\uB9C8\uB2E4 {0} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 13

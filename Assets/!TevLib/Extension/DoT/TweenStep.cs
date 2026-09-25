@@ -18,6 +18,12 @@ namespace _TevLib.Extension.DoT
         [field:SerializeField] public bool UsingFastBeyond { get; private set; }
         [field:SerializeField] public Vector3 MinTransformValue { get; private set; }
         [field:SerializeField] public Vector3 MaxTransformValue { get; private set; }
+
+        public void SetTransformValue(Vector3 value)
+        {
+            IsRandomizeValue = false;
+            MinTransformValue = MaxTransformValue = value;
+        }
         
         public Vector3 GetTransformValue()
         {

@@ -23,25 +23,34 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         public void OnEnable()
         {
             eventChannel.AddListener<OnPlayerDiceDataBind>(HandleDiceDataBind);
+            eventChannel.AddListener<OnPlayerDataReceive>(HandleDataReceive);
         }
         private void OnDisable()
         {
             eventChannel.RemoveListener<OnPlayerDiceDataBind>(HandleDiceDataBind);
+            eventChannel.RemoveListener<OnPlayerDataReceive>(HandleDataReceive);
+        }
+
+        private void HandleDataReceive(OnPlayerDataReceive evt)
+        {
+            if (evt.PlayerDataData.PlayerType != playerData.PlayerType) return;
+            playerData = evt.PlayerDataData;
         }
 
         private void HandleDiceDataBind(OnPlayerDiceDataBind evt) // 후에 복잡 해지면 이벤트로 옮길수 도 있을듯[
         {
             if (evt.PlayerType != playerData.PlayerType) return;
             DiceDataSO diceData = evt.DiceData;
-            var d = diceData.SkillDataStructs
-                .AsValueEnumerable()
-                .Where(s => s.AgentAttackType == playerData.AttackType)
-                .Select(s=>s)
-                .First();
+            var d = diceData.GetSkillDataStruct(playerData.AttackType);
+            if (d.SkillData == null) return;
             titleTMP.SetText(d.SkillData.SkillName);
-            descTMP.SetText(d.SkillData.SkillDescription);
+            descTMP.SetText(d.SkillData.GetDescription(evt.Level));
             gradeOutline.SetColor(diceData.DiceGrade.GradeColor);
-            iconImage.ToList().ForEach(i=>i.SetImage(diceData.Icon));
+            iconImage.ToList().ForEach(i=>
+            {
+                i.SetImage(diceData.GetIcon(playerData.AttackType));
+                i.SetColor(Color.white);
+            });
             rollParticle.SetParticleColor(diceData.DiceGrade.GradeColor);
             rollParticle.PlayParticle();
         }

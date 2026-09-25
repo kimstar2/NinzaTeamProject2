@@ -8,11 +8,13 @@ namespace Members.KJY._01.Scripts.Events.Dice.Agent.Player
     {
         public DiceDataSO DiceData {get; private set;}
         public PlayerType PlayerType {get; private set;}
+        public float Level { get; private set; }
         
-        public OnPlayerDiceDataBind(DiceDataSO bindData , PlayerType playerType)
+        public OnPlayerDiceDataBind(DiceDataSO bindData, PlayerType playerType, float level)
         {
             DiceData = bindData;
             PlayerType = playerType;
+            Level = level;
         }
     }
 }

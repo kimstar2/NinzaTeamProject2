@@ -16,6 +16,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         
         public override void ApplyStat()
         {
+            ApplyConfiguredStats(Executor.Target);
         }
 
         public override void Execute()

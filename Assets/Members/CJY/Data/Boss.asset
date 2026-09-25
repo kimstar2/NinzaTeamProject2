@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35090e304d8a4245a3c298edff396241, type: 3}
   m_Name: Boss
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeInfoSO
+  typeName: "\uBCF4\uC2A4"
   type: 6
-  icon: {fileID: 532282208441007744, guid: 20958f2855e409847804576737fc3f95, type: 3}
+  icon: {fileID: -2334227510110740323, guid: 55b2f9c56f879704f89f46bfd669b086, type: 3}
   percent: 0

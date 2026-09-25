@@ -16,8 +16,16 @@ namespace Members.KJY._01.Scripts.Dice
         public override void Initialize(ModuleOwner owner)
         {
             base.Initialize(owner);
-            RunTimeDiceDataList = defaultDiceDataList.GetRuntimeList();
-            savedDiceData = RunTimeDiceDataList.GetDiceData(DiceFaceType.Front); // 기본 데이터
+            SetDiceList(defaultDiceDataList);
+        }
+
+        public void SetDiceList(DiceDataListSO data)
+        {
+            DiceDataListSO source = data != null ? data : defaultDiceDataList;
+            if (source == null) return;
+            if (RunTimeDiceDataList != null) Destroy(RunTimeDiceDataList);
+            RunTimeDiceDataList = source.GetRuntimeList();
+            savedDiceData = RunTimeDiceDataList.Front;
         }
 
         private void OnDestroy()
