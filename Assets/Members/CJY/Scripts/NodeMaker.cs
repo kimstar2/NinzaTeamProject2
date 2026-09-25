@@ -63,7 +63,12 @@ namespace Members.CJY.Scripts
             int[] cnt = new int[colCnt];
             for (int i = 0; i < colCnt; i++)
             {
-                cnt[i] = Random.Range(minNodeCount, maxNodeCount+1); 
+                cnt[i] = Random.Range(minNodeCount, maxNodeCount+1);
+                if (i > 2)
+                {
+                    if (cnt[i] == cnt[i - 1] && cnt[i] == cnt[i - 2]) 
+                        cnt[i] = cnt[i] == 2 ? 3 : 2;
+                }
             }
 
             return cnt;
