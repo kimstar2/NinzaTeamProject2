@@ -1,5 +1,4 @@
-﻿using System;
-using _LumenLib.PoolingSystem.Runtime;
+﻿using _LumenLib.PoolingSystem.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 

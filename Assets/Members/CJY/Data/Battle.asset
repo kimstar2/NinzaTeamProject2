@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35090e304d8a4245a3c298edff396241, type: 3}
   m_Name: Battle
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeInfoSO
+  typeName: "\uC804\uD22C"
   type: 1
   icon: {fileID: -542400159, guid: 55b2f9c56f879704f89f46bfd669b086, type: 3}
   percent: 60
