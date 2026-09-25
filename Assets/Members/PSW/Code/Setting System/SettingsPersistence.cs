@@ -16,7 +16,7 @@ namespace Members.PSW.Code.SettingSystem
             foreach (SettingsAudioVolume volume in audioVolumes)
                 volume.RestoreSavedVolume();
 
-            displayMode.RestoreSavedMode();
+            displayMode.RestoreSavedSettings();
         }
 
         private void OnEnable()

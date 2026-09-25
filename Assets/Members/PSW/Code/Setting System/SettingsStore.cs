@@ -10,6 +10,24 @@ namespace Members.PSW.Code.SettingSystem
 
         private const string KeyPrefix = "PSW.Settings.v1.";
         private const string DisplayModeKey = KeyPrefix + "displayMode";
+        private const string ResolutionWidthKey = KeyPrefix + "resolution.width";
+        private const string ResolutionHeightKey = KeyPrefix + "resolution.height";
+
+        public static Vector2Int LoadResolution(Vector2Int fallback)
+        {
+            int width = PlayerPrefs.GetInt(ResolutionWidthKey, 0);
+            int height = PlayerPrefs.GetInt(ResolutionHeightKey, 0);
+            return width > 0 && height > 0 ? new Vector2Int(width, height) : fallback;
+        }
+
+        public static void StoreResolution(Vector2Int resolution)
+        {
+            if (resolution.x <= 0 || resolution.y <= 0)
+                return;
+
+            PlayerPrefs.SetInt(ResolutionWidthKey, resolution.x);
+            PlayerPrefs.SetInt(ResolutionHeightKey, resolution.y);
+        }
 
         public static float LoadVolume(string channelKey)
         {
