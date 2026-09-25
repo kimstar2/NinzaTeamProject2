@@ -16,8 +16,8 @@ MonoBehaviour:
   EventExplain: "\uC810\uC9D1\uC5D0 \uC788\uB358 \uC608\uC5B8\uC790\uAC00 \uBBF8\uB798\uB97C
     \uBCF4\uACE0\uC2F6\uC9C0 \uC54A\uB0D0\uACE0 \uBB3B\uB294\uB2E4."
   backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
-  EXImage: {fileID: -3833160224216749389, guid: a6f92f730ec592146b538c4b27f002de, type: 3}
-  exImageScale: 25.51
+  EXImage: {fileID: 4294284834468940157, guid: 5a4119c1832cf4c4883b24a42319e196, type: 3}
+  exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
   backGroundImageColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
   exImageMaterial: {fileID: 2100000, guid: 5efc627d69feea14d9693ef7b82e39c9, type: 2}

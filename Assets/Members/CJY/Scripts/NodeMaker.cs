@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using _LumenLib.PoolingSystem.Runtime;
-using Members.PDY.Scripts.Node;
 using UnityEngine;
-using UnityEngine.Pool;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -13,7 +9,7 @@ namespace Members.CJY.Scripts
 {
     public class NodeMaker : MonoBehaviour
     {
-        [Header("NodeInfo")] 
+        [Header("Node")] 
         [SerializeField] private NodeInfoSO startNode;
         [SerializeField] private NodeInfoSO bossNode;
         [SerializeField] private List<NodeInfoSO> nodeInfos;
@@ -29,6 +25,10 @@ namespace Members.CJY.Scripts
         [SerializeField] private GameObject nodeGroupPrefab;
         [SerializeField] private Transform lineParent;
         [SerializeField] private GameObject linePrefab;
+        
+        [Header("NodeInfo")]
+        [SerializeField] private GameObject infoPrefab;
+        [SerializeField] private Transform infoParent;
 
         private NodeEvent nodeEvent;
         private NodeConnect currentNode;
@@ -39,6 +39,22 @@ namespace Members.CJY.Scripts
         {
             nodeEvent = GetComponent<NodeEvent>();
             nodeEvent.OnNodeSelected += HandleNodeSelected;
+            
+            MakeInfo();
+        }
+        
+        private void MakeInfo()
+        {
+            List<NodeInfoSO> nodeInfo = new List<NodeInfoSO>();
+            nodeInfo.Add(startNode);
+            nodeInfo.Add(bossNode);
+            nodeInfo.AddRange(nodeInfos);
+
+            foreach (NodeInfoSO info in nodeInfo)
+            {
+                GameObject obj = Instantiate(infoPrefab, infoParent);
+                obj.GetComponent<NodeInfoUI>().Init(info);
+            }
         }
 
         private void OnDestroy()
@@ -63,7 +79,12 @@ namespace Members.CJY.Scripts
             int[] cnt = new int[colCnt];
             for (int i = 0; i < colCnt; i++)
             {
-                cnt[i] = Random.Range(minNodeCount, maxNodeCount+1); 
+                cnt[i] = Random.Range(minNodeCount, maxNodeCount+1);
+                if (i > 1)
+                {
+                    if (cnt[i] == cnt[i - 1] && cnt[i] == cnt[i - 2]) 
+                        cnt[i] = cnt[i] == 2 ? 3 : 2;
+                }
             }
 
             return cnt;

@@ -16,6 +16,7 @@ namespace Members.CJY.Scripts
     [CreateAssetMenu(fileName = "NodeInfo", menuName = "CJY/NodeInfo", order = 0)]
     public class NodeInfoSO : ScriptableObject
     {
+        public string typeName;
         public NodeType type;
         public Sprite icon;
         [Range(0, 100)] public float percent;
