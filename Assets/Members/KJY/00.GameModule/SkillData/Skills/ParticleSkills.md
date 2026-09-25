@@ -7,15 +7,15 @@
 각 스킬에서 볼 건 `AttackAsync`랑 `ApplyStat`임. 기다리는 건 전부 UniTask고 코루틴은 안 씀.
 지금은 순회가 단순해서 foreach / for만 사용함. 나중에 쿼리 필요하면 ZLinq의 `AsValueEnumerable()` 쓰면 됨.
 
-| 스킬 | 연결된 기본 주사위 면 | 타격 방식 | 기본 피해 |
+| 스킬 | 역할 | 타격 방식 | 기본 피해 |
 | --- | --- | --- | --- |
-| Fireball | Left — Dice data 2 | 불덩이 도착하면 1번 | 24 + BaseDamage |
-| NecroRain | Right — Dice data 3 | 3번 떨어뜨림 | 매번 8 + BaseDamage |
-| HolyStrike | Top — Dice data 4 | 빛 기둥 내려온 다음 1번 | 32 + BaseDamage |
-| ArcaneBurst | Bottom — Dice data 5 | 공격 이벤트에서 바로 1번 | 20 + BaseDamage |
+| Fireball | Magic | 불덩이 도착하면 1번 | 24 × 레벨 |
+| NecroRain | Magic | 3번 떨어뜨림 | 매번 8 × 레벨 |
+| HolyStrike | Healer | 빛 기둥 내려온 다음 1번 | 32 × 레벨 |
+| ArcaneBurst | Magic | 공격 이벤트에서 바로 1번 | 20 × 레벨 |
 
-위 표는 DiceInventory의 `defaultDiceDataList`에 연결된 기본 주사위임.
-캐릭터마다 이 기본 목록을 런타임에 복제해서 사용함.
+같은 주사위 면도 AttackType에 따라 스킬이 다름. 역할별 연결은 `RoleSkills.md` 참고.
+플레이어는 이 기본 목록을, 적은 적 데이터에 지정된 목록을 런타임에 복제해서 사용함.
 추가로 만든 근접, 화살, 회복 스킬의 설정은 `RoleSkills.md` 보면 됨.
 강령비는 광역이 아니라 전달받은 대상 하나를 때림. 중간에 죽으면 남은 타격은 안 들어감.
 
@@ -38,10 +38,11 @@ ReturnSeq에서 Executor.SkillFinished로 바로 넘기면 남은 타격/이펙�
 ## 자주 바꿀 값
 
 - 공통: `Advance Distance`, `Effect Offset`, ActionSeq / ReturnSeq의 시간과 Ease.
-- ArcaneBurst: `Damage`, `Cast Particle`, `Impact Particle`.
-- Fireball: `Damage`, ProjectileSeq의 이동 시간/Ease, ProjectileParticle 크기. TargetPosition은 대상 위치를 넣는 용도임.
-- NecroRain: `Damage`, `Hit Count`, `Hit Delay`, `Hit Interval`. Hit Delay는 낙하 시작부터 피해 적용까지, Hit Interval은 그 다음 낙하까지 기다리는 시간임.
-- HolyStrike: `Damage`, `Hit Delay`. 빛 기둥 시트가 바닥에 닿는 프레임에 맞추면 됨.
+- 모든 피해/회복 수치: 스킬 데이터의 `ApplyStats`.
+- ArcaneBurst: `Cast Particle`, `Impact Particle`.
+- Fireball: ProjectileSeq의 이동 시간/Ease, ProjectileParticle 크기. TargetPosition은 대상 위치를 넣는 용도임. 피해는 SkillDataSO의 ApplyStats에서 바꿈.
+- NecroRain: `Hit Count`, `Hit Delay`, `Hit Interval`. Hit Delay는 낙하 시작부터 피해 적용까지, Hit Interval은 그 다음 낙하까지 기다리는 시간임.
+- HolyStrike: `Hit Delay`. 빛 기둥 시트가 바닥에 닿는 프레임에 맞추면 됨.
 
 `Animation Timeout`은 애니메이션 끝 이벤트가 안 왔을 때 복귀하는 시간임. 이 시간이 지났다고 없는 타격을 만들어내지는 않음.
 스킬 오브젝트가 없어지면 기다리던 UniTask도 취소되고 남은 파티클은 풀로 돌려보냄.

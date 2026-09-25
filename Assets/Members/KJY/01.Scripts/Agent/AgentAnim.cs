@@ -1,7 +1,6 @@
 ﻿using System;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Util;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent
@@ -29,8 +28,9 @@ namespace Members.KJY._01.Scripts.Agent
 
         public void SetController(AnimatorOverrideController controller)
         {
-            Debug.Log("Onset");
             Animator.runtimeAnimatorController = controller;
+            Animator.Rebind();
+            Animator.Update(0f);
         }
 
         public event Action OnAnimFinished;

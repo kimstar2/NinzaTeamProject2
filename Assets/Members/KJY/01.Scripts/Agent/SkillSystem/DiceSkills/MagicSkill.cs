@@ -19,7 +19,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field: SerializeField] public TransformTweenSequencer ReturnSeq { get; private set; }
         [SerializeField] private List<TransformTweenStep> playerTweenSteps;
         [SerializeField] private List<TransformTweenStep> enemyTweenSteps;
-        [SerializeField] private List<SkillApplyStat> skillApplyStats;
         private ObjectPool _pool;
         public UnityEvent onAnimEnd;
 
@@ -30,8 +29,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
 
         public override void ApplyStat()
         {
-            foreach (SkillApplyStat applyStat in skillApplyStats)
-                Executor.Target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
+            ApplyConfiguredStats(Executor.Target);
         }
 
         public override void Execute()

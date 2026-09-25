@@ -9,13 +9,6 @@ using UnityEngine.Events;
 
 namespace Members.KJY._01.Scripts.Agent.SkillSystem
 {
-    [Serializable]
-    public struct SkillApplyStat
-    {
-        [field:SerializeField] public  ApplyStatType ApplyStatType { get; private set; }
-        [field:SerializeField] public  float Value { get; private set; }
-    }
-    
     public class SkillLogicExecutor : MonoBehaviour , ISkillLogicExecutor , IRequirePooling
     {
         [field:SerializeField] public HashDataSO IdleAnimHash {get; private set;}
@@ -28,13 +21,15 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         
         public AbstractSelector Attacker { get; private set; }
         public AbstractSelector Target { get; private set; }
+        public SkillDataSO SkillData { get; private set; }
         
         public void SkillFinished() => OnSkillFinished?.Invoke();
-        public void SkillExecute(AbstractSelector attacker, AbstractSelector target , AgentType agentType)
+        public void SkillExecute(AbstractSelector attacker, AbstractSelector target, AgentType agentType, SkillDataSO skillData)
         {
             Target = target;
             Attacker = attacker;
             AgentType = agentType;
+            SkillData = skillData;
             
             if (Attacker == null || Target == null || Attacker.IsDead || Target.IsDead)
             {
@@ -51,7 +46,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 
             foreach (AbstractSkillLogic skillLogic in skills)
             {
-                skillLogic.Init(this);
+                skillLogic.Init(this,attacker.GetLevel());
                 skillLogic.Execute();
             }
             OnSkillExecute?.Invoke();

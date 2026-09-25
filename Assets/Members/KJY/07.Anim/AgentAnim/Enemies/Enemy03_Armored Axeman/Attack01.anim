@@ -99,14 +99,14 @@ AnimationClip:
   m_Events:
   - time: 0.4
     functionName: AnimOnAttack
-    data:
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.89
     functionName: AnimFinishedEnd
-    data:
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

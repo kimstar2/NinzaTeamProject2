@@ -21,12 +21,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             if(!CanExecuteSkill) return; // 스킬 사용 못해 => 리턴
             CanExecuteSkill = false;
             
-            var skillData = attacker.DiceInventory
-                .GetDiceData().SkillDataStructs
-                .AsValueEnumerable()
-                .Where(s=>s.AgentAttackType == attacker.AgentData.AttackType)
-                .Select(s=>s.SkillData)
-                .First();
+            var face = attacker.DiceInventory.GetDiceData();
+            var skillData = face != null ? face.GetSkillDataStruct(attacker.AgentData.AttackType).SkillData : null;
             
             if (skillData == null || skillData.SkillLogicExecutor == null)
             {
@@ -36,7 +32,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             }
             CurrentSkillLogic = Instantiate(skillData.SkillLogicExecutor, skillParent);
             CurrentSkillLogic.OnSkillFinished += HandleEndSkill;
-            CurrentSkillLogic.SkillExecute(attacker, target, agentType);
+            CurrentSkillLogic.SkillExecute(attacker, target, agentType, skillData);
         }
 
         public void HandleEndSkill()

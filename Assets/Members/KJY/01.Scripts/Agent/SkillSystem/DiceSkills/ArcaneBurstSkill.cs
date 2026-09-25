@@ -12,7 +12,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field:Header("Particle Setting")]
         [field:SerializeField, FormerlySerializedAs("castParticle")] public PoolItemSO CastParticle {get; private set;}
         [field:SerializeField, FormerlySerializedAs("impactParticle")] public PoolItemSO ImpactParticle {get; private set;}
-        [SerializeField, Min(0f)] private float damage = 20f;
         private bool _isApplied;
 
         public void PlayCastParticle() // onCast에 연결
@@ -29,7 +28,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return; // 두 번 들어와도 한 번만 적용
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage(damage));
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
         }
     }
 }

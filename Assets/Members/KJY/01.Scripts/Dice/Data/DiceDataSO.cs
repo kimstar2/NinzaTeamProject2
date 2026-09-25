@@ -28,6 +28,12 @@ namespace Members.KJY._01.Scripts.Dice.Data
                 .FirstOrDefault();
             return skillDataStruct;
         }
+
+        public Sprite GetIcon(AgentAttackType attackType)
+        {
+            var skill = GetSkillDataStruct(attackType).SkillData;
+            return skill != null && skill.Icon != null ? skill.Icon : Icon;
+        }
     }
 
     [Serializable]
