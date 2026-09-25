@@ -1,6 +1,5 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using Members.KJY._01.Scripts.Dice;
-using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,7 +21,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         {
             eventChannel.RemoveListener<OnEnemyDiceDataChanged>(HandleDiceDataChanged);
             eventChannel.RemoveListener<OnEnemyDead>(HandleEnemyDead);
-            }
+        }
         
         private void HandleEnemyDead(OnEnemyDead obj)
         {
@@ -33,13 +32,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         private void HandleDiceDataChanged(OnEnemyDiceDataChanged evt)
         {
             if (evt.EnemyType != enemyType) return;
-            DiceDataListSO list = evt.DiceDataList;
-            FrontImage.SetSprite(list.Front.Icon);
-            BackImage.SetSprite(list.Back.Icon);
-            LeftImage.SetSprite(list.Left.Icon);
-            RightImage.SetSprite(list.Right.Icon);
-            TopImage.SetSprite(list.Top.Icon);
-            BottomImage.SetSprite(list.Bottom.Icon);
+            ApplyDiceData(evt.DiceDataList, evt.AttackType);
         }
     }
 }

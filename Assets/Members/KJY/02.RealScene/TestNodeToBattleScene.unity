@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 1188093488}
   - component: {fileID: 1188093489}
   m_Layer: 0
-  m_Name: NodeDataStorage
+  m_Name: BattleDataStorage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,6 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 670d72eedf6545a6ac94aae76b08410e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.GameSystem.NodeDataStorage
+  runTimeTanker: {fileID: 11400000, guid: 2c032ce962ff98d4f80eb99e2077c5bf, type: 2}
+  runTimeDealer: {fileID: 11400000, guid: df7f0511704826f4ca9785929acc661e, type: 2}
+  runTimeHealer: {fileID: 11400000, guid: 21e589245743362408e232e9dc6cf5aa, type: 2}
+  runTimeMage: {fileID: 11400000, guid: 76b50cc7a5b0fca498f7fa58f46da40f, type: 2}
   battleData: {fileID: 11400000, guid: d5008a104117a194a8272267d6f95f94, type: 2}
   battleScene: 2
 --- !u!1 &1557512464

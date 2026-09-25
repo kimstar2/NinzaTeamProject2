@@ -45,7 +45,11 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
             _isLocked = evt.IsLock;
         }
 
-        public override void DiceDataChanged() => eventChannel.RaiseEvent(new OnPlayerDiceDataChanged(playerType, RunTimeDiceDataList));
+        public override void DiceDataChanged()
+        {
+            if (_mySelector == null || _mySelector.AgentData == null) return;
+            eventChannel.RaiseEvent(new OnPlayerDiceDataChanged(playerType, RunTimeDiceDataList, _mySelector.AgentData.AttackType));
+        }
 
         public void HandleRollEnd(PlayerDiceRollData playerDiceRollData)
         {

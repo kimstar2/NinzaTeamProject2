@@ -1,5 +1,6 @@
 using System;
 using DevLib.ServiceLocator;
+using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.GameSystem;
 using NaughtyAttributes;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace Members.KJY._01.Scripts.Service
 {
     public class BattleDataStorage : MonoBehaviour , IBattleDataStorage
     {
+        [SerializeField] private PlayerDataSO runTimeTanker,runTimeDealer,runTimeHealer, runTimeMage ;
         [SerializeField] private BattleDataSO battleData;
         [Scene]
         [SerializeField] private int battleScene;
@@ -18,6 +20,15 @@ namespace Members.KJY._01.Scripts.Service
         private void Awake()
         {
             ServiceLocator.Register<IBattleDataStorage>(this);
+            runTimeTanker = Instantiate(runTimeTanker);
+            runTimeDealer = Instantiate(runTimeDealer);
+            runTimeHealer = Instantiate(runTimeHealer);
+            runTimeMage = Instantiate(runTimeMage);
+            
+            runTimeTanker.Init();
+            runTimeDealer.Init();
+            runTimeHealer.Init();
+            runTimeMage.Init();
         }
 
         private void OnDestroy()
@@ -34,6 +45,23 @@ namespace Members.KJY._01.Scripts.Service
         public BattleDataSO GetBattleData()
         {
             return battleData;
+        }
+        
+        public PlayerDataSO GetRunTimePlayerData(PlayerType pT)
+        {
+            return pT switch
+            {
+                PlayerType.Tanker => runTimeTanker,
+                PlayerType.Dealer => runTimeDealer,
+                PlayerType.Healer => runTimeHealer,
+                PlayerType.Mage => runTimeMage,
+                _ => null
+            };
+        }
+
+        public PlayerDataSO[] GetRunTimePlayerData()
+        {
+            return new[] { runTimeTanker, runTimeDealer, runTimeHealer, runTimeMage };
         }
     }
 }

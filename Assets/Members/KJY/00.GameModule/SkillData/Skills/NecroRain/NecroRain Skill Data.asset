@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 3385855866850025558, guid: 0bd3542d3a888f14685331adb3edc5be, type: 3}
   <SkillName>k__BackingField: "\uAC15\uB839\uBE44"
-  <SkillDescription>k__BackingField: "지정한 대상에게 3번 낙하 공격. 한 번마다 {0} + 주사위 기본 피해를 줌."
+  <Icon>k__BackingField: {fileID: -6326363554524431381, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\uC9C0\uC815\uD55C \uC801\uC5D0\uAC8C 3\uBC88
+    \uB099\uD558 \uACF5\uACA9\uC744 \uD569\uB2C8\uB2E4. \uD55C \uBC88\uB9C8\uB2E4
+    {0} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 8

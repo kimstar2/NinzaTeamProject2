@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5109ef0730d4c458b6a921739cd4359, type: 3}
   m_Name: Dealer
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Player.PlayerDataSO
-  <MaxHealth>k__BackingField: 1
+  <MaxHealth>k__BackingField: 110
   <AttackType>k__BackingField: 1
   <PlayerType>k__BackingField: 1
   <AnimCon>k__BackingField: {fileID: 22100000, guid: 8a0936840eba0fb428a29acecb165132, type: 2}
   <PlayerImage>k__BackingField: {fileID: 3613407544420638092, guid: 175bb448ef00962478c40c8d0cdc4bb5, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: 77c59ee189a01eb4381c3b6414aa6193, type: 2}
   <Cost>k__BackingField: 2
+  <CurrentHealth>k__BackingField: 0

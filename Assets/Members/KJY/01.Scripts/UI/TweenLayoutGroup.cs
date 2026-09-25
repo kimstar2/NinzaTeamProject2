@@ -31,6 +31,7 @@ namespace Members.KJY._01.Scripts.UI
         private readonly List<Item> _activeItems = new();
         public event Action<Transform> OnRemoved;
         public int ActiveCount => _activeItems.Count;
+        public bool IsTransitioning => items.Exists(item => item.removing || item.reflowSequence.HasTween);
 
         public int GetActiveIndex(Transform target)
         {
@@ -118,25 +119,31 @@ namespace Members.KJY._01.Scripts.UI
         public void Add(Transform target)
         {
             Item item = FindItem(target);
-            if (item == null) return;
+            if (item == null || _activeItems.Contains(item)) return;
             CacheSlots();
             item.exitSequence.Stop();
             item.reflowSequence.Stop();
             item.removing = false;
+            if (layoutGroup != null)
+            {
+                layoutGroup.enabled = false;
+                _layoutFrozen = true;
+            }
             _activeItems.Remove(item);
             _activeItems.Add(item); // 증원은 남아 있는 유닛 뒤로 들어옴
             item.target.SetAsLastSibling();
-            item.target.gameObject.SetActive(true);
-            item.target.localScale = item.scale;
+            // 보이기 전에 위치/크기를 준비. 재배치 시퀀스가 이동과 등장을 함께 마무리함.
+            Vector3 destination = _slots[_activeItems.Count - 1];
+            item.target.localPosition = destination + item.exitOffset;
+            item.target.localScale = item.scale * 0.96f;
             if (item.canvasGroup != null)
             {
-                item.canvasGroup.alpha = 1f;
+                item.canvasGroup.alpha = 0f;
                 item.canvasGroup.interactable = true;
                 item.canvasGroup.blocksRaycasts = true;
             }
 
-            Vector3 destination = _slots[_activeItems.Count - 1];
-            item.target.localPosition = destination + item.exitOffset;
+            item.target.gameObject.SetActive(true);
             Reflow();
         }
 

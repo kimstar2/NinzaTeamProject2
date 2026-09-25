@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DevLib.CoreLib.Runtime;
 using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice;
@@ -9,6 +10,7 @@ using Members.KJY._01.Scripts.Events.Player;
 using Members.KJY._01.Scripts.Service;
 using UnityEngine;
 using UnityEngine.Events;
+using ZLinq;
 
 namespace Members.KJY._01.Scripts.Agent.Player.Dice
 {
@@ -77,7 +79,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
 
         private void Start()
         {
-            _battleDataStorage = ServiceLocator.Get<IBattleDataStorage>().Instance;
+                _battleDataStorage = ServiceLocator.Get<IBattleDataStorage>().Instance;
             var data = _battleDataStorage.GetBattleData();
             
             _maxRiskPenalty = data.maxRiskPenalty;
@@ -122,14 +124,18 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
 
         private void CheckAllRollEnd()
         {
-            bool wasComplete = AllDiceRollEnd;
             AllDiceRollEnd = DiceRollCheckList.TrueForAll(x => x.IsDead || x.DiceRollEnd);
             if (AllDiceRollEnd) onAllDiceRollEnd?.Invoke();
         }
 
         private bool _isFirstRoll = true;
-        public void Roll()
+        private bool _canRoll = false;
+        public void Roll(bool isStartRoll)
         {
+            if (isStartRoll)
+                _canRoll = true;
+            else if (!_canRoll) return;
+            
             if (DiceRollCheckList.TrueForAll(x => x.IsDead) ||
                 DiceRollCheckList.Exists(x => !x.IsDead && x.IsRolling)) return;
             RollLogic();
@@ -158,7 +164,11 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         private void CalcRisk()
         {
             _rollCount++;
-            _riskLevel = Mathf.Min(maxRiskLevel,riskLevelIncreaseMulti * riskLevelIncrease + _riskLevel);
+            float countRisk = DiceRollCheckList.AsValueEnumerable().Count(s => !s.IsDead) * _rollCount * 0.25f;;
+            float riskLevel = riskLevelIncreaseMulti * riskLevelIncrease + _riskLevel;
+            
+            _riskLevel = Mathf.Min
+                (maxRiskLevel,countRisk + riskLevel);
             onRiskLevelChanged?.Invoke(_riskLevel / maxRiskLevel);
             if (_reachMaxRisk)
                 onReachMaxRisk?.Invoke();

@@ -68,16 +68,24 @@ Material:
     m_Ints: []
     m_Floats:
     - _EdgeSoftness: 0.015
-    - _EdgeWidth: 0.14
+    - _EdgeWidth: 0.075
     - _EnableExternalAlpha: 0
-    - _Intensity: 1
+    - _Expansion: 0.04
+    - _Intensity: 4
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _UseFaceColors: 0
     - _ZWrite: 0
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 7.6414657, g: 0, b: 0, a: 1}
+    - _BackColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Edge: {r: 0.82, g: 0.91, b: 0, a: 0}
+    - _FrontColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LeftColor: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TopColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

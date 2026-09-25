@@ -26,14 +26,21 @@ namespace Members.KJY._01.Scripts.UI
 
         public void Set(float value)
         {
-            DOTween.Kill(trmId);
-            float temp = _lastEvaluate;
-            DOTween.To(() => temp, x =>
-            {
-                temp = x;
-                Color c = gradient.DefaultGradient.Evaluate(temp);
-                outlines.AsValueEnumerable().ToList().ForEach(s=>s.SetColor(c));
-            }, value,tweenStep.Duration).SetEase(tweenStep.EaseType).SetId(_id);
+            DOTween.Kill(_id);
+
+            DOTween.To(
+                () => _lastEvaluate,
+                x =>
+                {
+                    _lastEvaluate = x;
+                    Color color = gradient.DefaultGradient.Evaluate(Mathf.Clamp01(x));
+
+                    foreach (var outline in outlines)
+                        outline.SetColor(color);
+                },
+                Mathf.Clamp01(value),
+                tweenStep.Duration
+            ).SetEase(tweenStep.EaseType).SetId(_id);
         }
     }
 }

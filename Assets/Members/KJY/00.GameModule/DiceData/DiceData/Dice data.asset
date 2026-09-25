@@ -11,19 +11,23 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: Dice data
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceDataSO
-  <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: 4146786208365501868, guid: c105d842632890546baac2d11fc33d00, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <DiceGrade>k__BackingField: {fileID: 11400000, guid: 240a2e14afdcd324ead28d93aacdc4f8, type: 2}
+  <Icon>k__BackingField: {fileID: -2685187325292641383, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: e8c6f8a6a8a1153448200910b56aff00, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 10
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 1
     <SkillData>k__BackingField: {fileID: 11400000, guid: fecb28fa4e0e6734f85078cca273ef12, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 5
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 2
-    <SkillData>k__BackingField: {fileID: 11400000, guid: 7f60b62e229a46d48beceec7d8a851a8, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 15
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 05bfbdbf27004339b5e98f3d76208233, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 3
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 6c0d6c4e25430ae4dbe425d730061630, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0

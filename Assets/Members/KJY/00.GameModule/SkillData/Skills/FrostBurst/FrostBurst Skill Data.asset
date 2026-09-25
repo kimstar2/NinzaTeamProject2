@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: FrostBurst Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: e74fb6eb9aaf9564f84ea6fb262a7f28, type: 3}
+  <SkillName>k__BackingField: "\uC5BC\uC74C \uD3ED\uBC1C"
+  <Icon>k__BackingField: {fileID: -5050291110520419546, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\uC801\uC758 \uC704\uCE58\uC5D0 \uC5BC\uC74C
+    \uD30C\uD3B8\uC744 \uD130\uB728\uB824 {0} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 26

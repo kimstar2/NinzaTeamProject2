@@ -1,5 +1,6 @@
 ﻿using System;
 using Members.KJY._01.Scripts.Util;
+using Members.KJY._01.Scripts.Dice.Data;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.Enemy
@@ -12,6 +13,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         [field: SerializeField] public Sprite EnemyImage { get; private set; }
         [field: SerializeField] public ColorSO ImageColor { get; private set; }
         [field: SerializeField] public int Cost {get; private set;}
+        [field: SerializeField] public DiceDataListSO DiceDataList { get; private set; }
         public event Action<EnemyDataSO> OnDead;
 
         public void Dead() => OnDead?.Invoke(this);
