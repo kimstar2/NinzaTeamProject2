@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using _TevLib.Extension.DoT._TevLib.Extension.DoT;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
@@ -122,7 +123,7 @@ namespace _TevLib.Extension.DoT
 
         #region TweenHelper
         
-        private bool AddStep(Sequence sequence, TweenStepSO step)
+        private bool AddStep(Sequence sequence, TweenStep step)
         {
             switch (step.InsertType)
             {
@@ -175,7 +176,7 @@ namespace _TevLib.Extension.DoT
         }
 
         
-        private Tween MakeTween(TweenStepSO step)
+        private Tween MakeTween(TweenStep step)
         {
             switch (step.ActionType)
             {
@@ -206,13 +207,13 @@ namespace _TevLib.Extension.DoT
             return null;
         }
         
-        private Tween CreateMoveTween(TweenStepSO step)
+        private Tween CreateMoveTween(TweenStep step)
             => (IsCanvas ? _rectTrm : _transform).DOMove(step.GetTransformValue(), step.Duration);
 
-        private Tween CreateLocalScaleTween(TweenStepSO step)
+        private Tween CreateLocalScaleTween(TweenStep step)
             => (IsCanvas ? _rectTrm : _transform).DOScale(step.GetTransformValue(), step.Duration);
 
-        private Tween CreateCanvasAlpha(TweenStepSO step)
+        private Tween CreateCanvasAlpha(TweenStep step)
         {
             if (_canvasGroup == null)
             {
@@ -222,7 +223,7 @@ namespace _TevLib.Extension.DoT
             return _canvasGroup.DOFade(step.FadeValue, step.Duration);
         }
 
-        private Tween CreateAnchoredPositionTween(TweenStepSO step)
+        private Tween CreateAnchoredPositionTween(TweenStep step)
         {
             if (!IsCanvas)
             {
@@ -232,22 +233,22 @@ namespace _TevLib.Extension.DoT
             return _rectTrm.DOAnchorPos(step.GetTransformValue(), step.Duration);
         }
 
-        private Tween CreateLocalRotationTween(TweenStepSO step)
+        private Tween CreateLocalRotationTween(TweenStep step)
             => (IsCanvas ? _rectTrm : _transform).DOLocalRotate(step.GetTransformValue(), step.Duration,
                 step.UsingFastBeyond ?
                     RotateMode.FastBeyond360 :
                     RotateMode.Fast);
 
-        private Tween CreateLocalMoveTween(TweenStepSO step)
+        private Tween CreateLocalMoveTween(TweenStep step)
             => (IsCanvas ? _rectTrm : _transform).DOLocalMove(step.GetTransformValue(), step.Duration);
 
-        private Tween CreateRotationTween(TweenStepSO step)
+        private Tween CreateRotationTween(TweenStep step)
             => (IsCanvas ? _rectTrm : _transform).DORotate(step.GetTransformValue(), step.Duration,
                 step.UsingFastBeyond ?
                     RotateMode.FastBeyond360 :
                     RotateMode.Fast);
 
-        private Tween CreateColorTween(TweenStepSO step)
+        private Tween CreateColorTween(TweenStep step)
         {
             if (IsCanvas)
             {
@@ -263,7 +264,7 @@ namespace _TevLib.Extension.DoT
             return _spriteRenderer.DOColor(step.ColorValue, step.Duration);
         }
 
-        private Tween CreateFadeTween(TweenStepSO step)
+        private Tween CreateFadeTween(TweenStep step)
         {
             float alpha = Mathf.Clamp01(step.FadeValue);
 
@@ -281,7 +282,7 @@ namespace _TevLib.Extension.DoT
             return _spriteRenderer.DOFade(alpha, step.Duration);
         }
 
-        private Tween CreateSizeDeltaTween(TweenStepSO step)
+        private Tween CreateSizeDeltaTween(TweenStep step)
         {
             if (_rectTrm == null)
                 return LogMissingComponent<RectTransform>(step.ActionType);
@@ -289,7 +290,7 @@ namespace _TevLib.Extension.DoT
             return _rectTrm.DOSizeDelta(step.GetTransformValue(), step.Duration);
         }
 
-        private Tween CreateFillAmountTween(TweenStepSO step)
+        private Tween CreateFillAmountTween(TweenStep step)
         {
             if (_image == null)
                 return LogMissingComponent<Image>(step.ActionType);

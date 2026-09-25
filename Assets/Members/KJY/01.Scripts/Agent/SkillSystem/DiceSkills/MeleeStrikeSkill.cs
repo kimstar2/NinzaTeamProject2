@@ -7,7 +7,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
 {
     public class MeleeStrikeSkill : AbstractParticleSkill
     {
-        [SerializeField, Min(0f)] private float damage = 18f;
         private bool _isApplied;
 
         protected override UniTask AttackAsync(CancellationToken token)
@@ -20,7 +19,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage(damage));
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
         }
     }
 }

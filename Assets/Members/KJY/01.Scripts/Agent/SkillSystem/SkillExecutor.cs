@@ -36,7 +36,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             }
             CurrentSkillLogic = Instantiate(skillData.SkillLogicExecutor, skillParent);
             CurrentSkillLogic.OnSkillFinished += HandleEndSkill;
-            CurrentSkillLogic.SkillExecute(attacker, target, agentType);
+            CurrentSkillLogic.SkillExecute(attacker, target, agentType, skillData);
         }
 
         public void HandleEndSkill()

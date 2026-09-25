@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
@@ -15,6 +16,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
     {
         [SerializeField] private PlayerType playerType;
         private bool _isLocked;
+        private AbstractSelector _mySelector;
         
         [SerializeField] private float receiveDelay;
         private CancellationTokenSource _cts;
@@ -22,16 +24,25 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         public UnityEvent onLockedReceived;
         
         private void Start() => DiceDataChanged();
+
+        public override void Initialize(ModuleOwner owner)
+        {
+            base.Initialize(owner);
+            _mySelector = owner as AbstractSelector;
+        }
         
         private void OnEnable() => eventChannel.AddListener<OnDiceLock>(HandleDiceLock);
-        private void OnDisable() => eventChannel.RemoveListener<OnDiceLock>(HandleDiceLock);
+        private void OnDisable()
+        {
+            KillApply();
+            eventChannel.RemoveListener<OnDiceLock>(HandleDiceLock);
+        }
 
         
         private void HandleDiceLock(OnDiceLock evt)
         {
             if (playerType != evt.PlayerType) return;
             _isLocked = evt.IsLock;
-            Debug.Log("IsLocked: " + _isLocked);
         }
 
         public override void DiceDataChanged() => eventChannel.RaiseEvent(new OnPlayerDiceDataChanged(playerType, RunTimeDiceDataList));
@@ -44,6 +55,8 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
 
         public override void Apply()
         {
+            if (!isActiveAndEnabled || _mySelector.IsDead) return;
+            KillApply();
             _cts = new CancellationTokenSource();
             CancellationToken token = _cts.Token;
             ApplyDelay(token).Forget();
@@ -52,12 +65,21 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         private async UniTask ApplyDelay(CancellationToken token)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(receiveDelay) , cancellationToken:token);
-            eventChannel.RaiseEvent(new OnPlayerDiceDataBind(savedDiceData, playerType));
+            if (_mySelector.IsDead) return;
+            eventChannel.RaiseEvent(new OnPlayerDiceDataBind(savedDiceData, playerType, _mySelector.GetLevel()));
 
             if (_isLocked)
                 onLockedReceived?.Invoke();
             else
                 onRollReceived?.Invoke();
+        }
+
+        private void KillApply()
+        {
+            if (_cts == null) return;
+            _cts.Cancel();
+            _cts.Dispose();
+            _cts = null;
         }
     }
 }

@@ -262,7 +262,6 @@ MonoBehaviour:
   <ProjectileSeq>k__BackingField: {fileID: 345443615076082576}
   targetPosition: {fileID: 6341467577414132772}
   <ImpactParticle>k__BackingField: {fileID: 11400000, guid: ecf8fdc43126c1d4ab6c5acd63068663, type: 2}
-  damage: 24
 --- !u!1 &4468739969225610330
 GameObject:
   m_ObjectHideFlags: 0

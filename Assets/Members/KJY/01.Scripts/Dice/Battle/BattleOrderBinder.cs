@@ -28,7 +28,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private void HandleBattleChainChanged(OnBattleChainChanged evt)
         {
-            Debug.Log(evt.chainCount);
             if (evt.chainCount > 0)
                 onChainSeq.Sequence();
             else
@@ -46,7 +45,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             {
                 if (_battleOrders.Remove(evt.playerData.PlayerType, out BattleOrder battleOrder))
                 {
-                    Debug.Log("Remove");
                     battleOrder.RemoveSeq.Sequence();
                 }
             }

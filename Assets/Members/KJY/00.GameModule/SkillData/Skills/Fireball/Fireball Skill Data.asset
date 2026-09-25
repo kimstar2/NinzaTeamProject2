@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 2398796357892219269, guid: 18920fc81048d8e47aaf042464f5df8b, type: 3}
   <SkillName>k__BackingField: "\uD654\uC5FC\uD0C4"
-  <SkillDescription>k__BackingField: "\uBD88\uB369\uC774\uB97C \uB0A0\uB824 \uB3C4\uCC29\uD558\uBA74
-    24 + \uC8FC\uC0AC\uC704 \uAE30\uBCF8 \uD53C\uD574\uB97C \uC90C."
+  <SkillDescription>k__BackingField: "불덩이가 도착하면 {0} + 주사위 기본 피해를 줌."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 24

@@ -12,7 +12,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field:SerializeField] public SpriteRenderer ArrowRenderer {get; private set;}
         [field:SerializeField] public TransformTweenSequencer ProjectileSeq {get; private set;}
         [SerializeField] private Transform targetPosition;
-        [SerializeField, Min(0f)] private float damage = 16f;
         private bool _isArrived;
         private bool _isApplied;
 
@@ -37,7 +36,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || !_isArrived || _isApplied) return;
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage(damage));
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
         }
     }
 }

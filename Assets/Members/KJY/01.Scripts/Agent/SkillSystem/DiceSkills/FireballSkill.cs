@@ -14,7 +14,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field:SerializeField] public TransformTweenSequencer ProjectileSeq {get; private set;}
         [SerializeField] private Transform targetPosition;
         [field:SerializeField] public PoolItemSO ImpactParticle {get; private set;}
-        [SerializeField, Min(0f)] private float damage = 24f;
         private bool _isArrived;
         private bool _isApplied;
 
@@ -42,7 +41,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || !_isArrived || _isApplied) return;
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage(damage));
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
         }
     }
 }

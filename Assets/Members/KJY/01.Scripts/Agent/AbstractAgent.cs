@@ -17,7 +17,6 @@ namespace Members.KJY._01.Scripts.Agent
         protected override void InitializeModules()
         {
             base.InitializeModules();
-            Debug.Log("get");
             HealthModule = GetModule<HealthModule>();
             AnimCompo = GetModule<IAnimatable>();
             AnimTrigger = GetModule<IAnimatorTrigger>();

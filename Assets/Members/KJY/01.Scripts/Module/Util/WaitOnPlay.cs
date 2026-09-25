@@ -17,6 +17,8 @@ namespace Members.KJY._01.Scripts.Module.Util
     {
         [SerializeField] List<WaitOnPlayStruct> waitOnPlayStructs;
         private CancellationTokenSource _cts;
+
+        private void OnDisable() => KillTask();
         
         public void Play()
         {
