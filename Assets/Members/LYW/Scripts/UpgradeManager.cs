@@ -19,6 +19,8 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private FragmentSetter fragmentSetter;
     [SerializeField] private TextMeshProUGUI upgradeText;
     [SerializeField] private TextMeshProUGUI percentText;
+    [SerializeField] private Inventory inventory;
+    
     private int needyGold = 0;
     private int randNum;
 
@@ -81,6 +83,8 @@ public class UpgradeManager : MonoBehaviour
         {
             // 여기에 근접 직업군에 맞는 주사위 면 지급 로직 작성
             Debug.Log("근접 주사위 면 지급됨.");
+            
+            //inventory.
         }
         if (jobSetter.curJob == Job.Ranged)
         {
