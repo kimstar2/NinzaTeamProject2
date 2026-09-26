@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using _LumenLib.PoolingSystem.Runtime;
 using UnityEngine;
@@ -25,10 +26,11 @@ namespace Members.CJY.Scripts
         [SerializeField] private GameObject nodeGroupPrefab;
         [SerializeField] private Transform lineParent;
         [SerializeField] private GameObject linePrefab;
-        
-        [Header("NodeInfo")]
+
+        [Header("NodeInfo")] 
         [SerializeField] private GameObject infoPrefab;
         [SerializeField] private Transform infoParent;
+        [SerializeField] private float previewDur;
 
         private NodeEvent nodeEvent;
         private NodeConnect currentNode;
@@ -39,10 +41,10 @@ namespace Members.CJY.Scripts
         {
             nodeEvent = GetComponent<NodeEvent>();
             nodeEvent.OnNodeSelected += HandleNodeSelected;
-            
+
             MakeInfo();
         }
-        
+
         private void MakeInfo()
         {
             List<NodeInfoSO> nodeInfo = new List<NodeInfoSO>();
@@ -65,13 +67,52 @@ namespace Members.CJY.Scripts
         private void HandleNodeSelected(NodeConnect nextNode)
         {
             if (currentNode == null) return;
-
-            if (!currentNode.nextNodes.Contains(nextNode))
-                return;
+            if (!currentNode.nextNodes.Contains(nextNode)) return;
 
             currentNode = nextNode;
             NodeVisualSetting();
+            PlayPreviewAnim();
+            
             SaveMap();
+        }
+
+        private void PlayPreviewAnim()
+        {
+            HashSet<NodeConnect> set = PreviewNodeSetting();
+            StartCoroutine(PreviewRoutine(set));
+        }
+
+        private IEnumerator PreviewRoutine(HashSet<NodeConnect> set)
+        {
+            foreach (List<NodeConnect> column in nodeConnects)
+            {
+                bool hasPreview = false;
+
+                foreach (NodeConnect node in column)
+                {
+                    if (!set.Contains(node)) continue;
+                    node.view.ScaleUp(previewDur);
+                    hasPreview = true;
+                }
+
+                if (hasPreview)
+                    yield return new WaitForSeconds(previewDur);
+            }
+
+            foreach (List<NodeConnect> column in nodeConnects)
+            {
+                bool hasPreview = false;
+
+                foreach (NodeConnect node in column)
+                {
+                    if (!set.Contains(node)) continue;
+                    node.view.ScaleDown(previewDur);
+                    hasPreview = true;
+                }
+
+                if (hasPreview)
+                    yield return new WaitForSeconds(previewDur);
+            }
         }
 
         private int[] NodeCount(int colCnt)
@@ -79,10 +120,10 @@ namespace Members.CJY.Scripts
             int[] cnt = new int[colCnt];
             for (int i = 0; i < colCnt; i++)
             {
-                cnt[i] = Random.Range(minNodeCount, maxNodeCount+1);
+                cnt[i] = Random.Range(minNodeCount, maxNodeCount + 1);
                 if (i > 1)
                 {
-                    if (cnt[i] == cnt[i - 1] && cnt[i] == cnt[i - 2]) 
+                    if (cnt[i] == cnt[i - 1] && cnt[i] == cnt[i - 2])
                         cnt[i] = cnt[i] == 2 ? 3 : 2;
                 }
             }
@@ -93,25 +134,25 @@ namespace Members.CJY.Scripts
         public void MakeNode()
         {
             DeleteNode();
-            
+
             int[] nodeCount = NodeCount(columnCount);
-            int total =  nodeCount.Sum();
-            List<NodeInfoSO> info =  NodeSetting(total);
-            
+            int total = nodeCount.Sum();
+            List<NodeInfoSO> info = NodeSetting(total);
+
             MakeSingleGroup(startNode);
             MakeGroup(nodeCount, info);
             MakeSingleGroup(bossNode);
-            
+
             foreach (Transform groupTrm in nodeParent)
                 LayoutRebuilder.ForceRebuildLayoutImmediate(groupTrm.GetComponent<RectTransform>());
             LayoutRebuilder.ForceRebuildLayoutImmediate(nodeParent);
-            
+
             ConnectNode();
             RenderLine();
 
             currentNode = nodeConnects[0][0];
             NodeVisualSetting();
-            
+
             SaveMap();
         }
 
@@ -139,7 +180,7 @@ namespace Members.CJY.Scripts
                 Transform groupTrm = groupItem.GameObject.transform;
 
                 groupTrm.SetParent(nodeParent, false);
-                
+
                 List<NodeConnect> nodeGroups = new List<NodeConnect>();
 
                 for (int i = 0; i < count; i++)
@@ -149,14 +190,15 @@ namespace Members.CJY.Scripts
                     nodeTrm.SetParent(groupTrm, false);
 
                     NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-                    
+
                     NodeConnect connect = new NodeConnect(nodeConnects.Count, i, nodeTypes[typeCount]);
                     connect.view = bt;
                     nodeGroups.Add(connect);
                     bt.Init(connect, nodeEvent);
-                    
+
                     typeCount++;
                 }
+
                 nodeConnects.Add(nodeGroups);
             }
         }
@@ -165,9 +207,9 @@ namespace Members.CJY.Scripts
         {
             IPoolable groupItem = objectPool.Pop("NodeGroup");
             Transform groupTrm = groupItem.GameObject.transform;
-            
+
             groupTrm.SetParent(nodeParent, false);
-            
+
             IPoolable nodeItem = objectPool.Pop("Node");
             Transform nodeTrm = nodeItem.GameObject.transform;
             nodeTrm.SetParent(groupTrm, false);
@@ -176,7 +218,7 @@ namespace Members.CJY.Scripts
 
             NodeConnect connect = new NodeConnect(nodeConnects.Count, 0, info);
             connect.view = bt;
-            nodeConnects.Add(new List<NodeConnect>() {connect});
+            nodeConnects.Add(new List<NodeConnect>() { connect });
             bt.Init(connect, nodeEvent);
         }
 
@@ -186,16 +228,16 @@ namespace Members.CJY.Scripts
             for (int i = nodeParent.childCount - 1; i >= 0; i--)
             {
                 Transform groupTrm = nodeParent.GetChild(i);
-                
+
                 for (int j = groupTrm.childCount - 1; j >= 0; j--)
                 {
                     Transform nodeTrm = groupTrm.GetChild(j);
                     IPoolable node = groupTrm.GetChild(j).GetComponent<IPoolable>();
-                    
+
                     nodeTrm.SetParent(objectPool.transform, false);
                     objectPool.Push(node);
                 }
-                
+
                 IPoolable group = groupTrm.GetComponent<IPoolable>();
                 groupTrm.SetParent(nodeParent, false);
                 objectPool.Push(group);
@@ -205,7 +247,7 @@ namespace Members.CJY.Scripts
             {
                 Transform lineTrm = lineParent.GetChild(i);
                 IPoolable line = lineParent.GetChild(i).GetComponent<IPoolable>();
-                
+
                 lineTrm.SetParent(objectPool.transform, false);
                 objectPool.Push(line);
             }
@@ -229,13 +271,13 @@ namespace Members.CJY.Scripts
             {
                 nodes.Add(nodeInfos[Random.Range(0, nodeInfos.Count)]);
             }
-            
+
             // 섞기
             for (int i = nodes.Count - 1; i >= 0; i--)
             {
-                int j = Random.Range(0, i+1);
-                    
-                NodeInfoSO temp =  nodes[i];
+                int j = Random.Range(0, i + 1);
+
+                NodeInfoSO temp = nodes[i];
                 nodes[i] = nodes[j];
                 nodes[j] = temp;
             }
@@ -251,7 +293,7 @@ namespace Members.CJY.Scripts
             {
                 List<NodeConnect> currentColumn = nodeConnects[i];
                 List<NodeConnect> nextColumn = nodeConnects[i + 1];
-                
+
                 foreach (NodeConnect next in nextColumn)
                 {
                     float nextY = next.view.transform.position.y;
@@ -279,6 +321,7 @@ namespace Members.CJY.Scripts
                                 minDiff = diff;
                             }
                         }
+
                         candidates.Add(closest);
                     }
 
@@ -348,7 +391,7 @@ namespace Members.CJY.Scripts
                 }*/
             }
         }
-        
+
 
         private void RenderLine()
         {
@@ -360,7 +403,7 @@ namespace Members.CJY.Scripts
                     {
                         Vector3 fromPos = node.view.transform.position;
                         Vector3 toPos = next.view.transform.position;
-                        
+
                         IPoolable lineItem = objectPool.Pop("Line");
                         Transform lineTrm = lineItem.GameObject.transform;
                         lineTrm.SetParent(lineParent, false);
@@ -380,24 +423,51 @@ namespace Members.CJY.Scripts
             }
         }
 
+        private HashSet<NodeConnect> PreviewNodeSetting()
+        {
+            HashSet<NodeConnect> set = new HashSet<NodeConnect>();
+
+            foreach (NodeConnect node in currentNode.nextNodes)
+            {
+                set.Add(node);
+            }
+
+            for (int i = 0; i < nodeConnects.Count; i++)
+            {
+                foreach (NodeConnect node in nodeConnects[i])
+                {
+                    if(!set.Contains(node)) continue;
+
+                    foreach (NodeConnect next in node.nextNodes)
+                    {
+                        set.Add(next);
+                    }
+                }
+            }
+
+            return set;
+        }
+
         private void NodeVisualSetting()
         {
+            HashSet<NodeConnect> set = PreviewNodeSetting();
+            
             foreach (List<NodeConnect> column in nodeConnects)
             {
                 foreach (NodeConnect node in column)
                 {
+                    NodeState state;
+
                     if (node == currentNode)
-                    {
-                        node.view.SetVisual(NodeState.Current);
-                    }
+                        state = NodeState.Current;
                     else if (currentNode.nextNodes.Contains(node))
-                    {
-                        node.view.SetVisual(NodeState.Moveable);
-                    }
+                        state = NodeState.Movable;
+                    else if (set.Contains(node))
+                        state = NodeState.Preview;
                     else
-                    {
-                        node.view.SetVisual(NodeState.Locked);
-                    }
+                        state = NodeState.Locked;
+                    
+                    node.view.SetVisual(state);
                 }
             }
         }
@@ -429,7 +499,7 @@ namespace Members.CJY.Scripts
                             lane = next.lane,
                         });
                     }
-                    
+
                     saveData.nodes.Add(data);
                 }
             }
@@ -439,37 +509,37 @@ namespace Members.CJY.Scripts
                 column = currentNode.column,
                 lane = currentNode.lane
             };
-            
+
             string json = JsonUtility.ToJson(saveData, true);
             PlayerPrefs.SetString(saveKey, json);
             PlayerPrefs.Save();
         }
-        
+
         private NodeInfoSO GetInfoByType(NodeType type)
         {
             if (type == NodeType.Start) return startNode;
             if (type == NodeType.Boss) return bossNode;
-            
+
             return nodeInfos.FirstOrDefault(x => x.type == type);
         }
 
         private bool LoadMap()
         {
             if (!PlayerPrefs.HasKey(saveKey)) return false;
-            
+
             string json = PlayerPrefs.GetString(saveKey);
             MapSaveData saveData = JsonUtility.FromJson<MapSaveData>(json);
             if (!saveData.hasData) return false;
-            
+
             ResetNode();
             nodeConnects.Clear();
-            
+
             // =================================
-            
+
             Dictionary<(int, int), NodeConnect> connects = new Dictionary<(int, int), NodeConnect>();
             Dictionary<int, List<NodeConnect>> columns = new Dictionary<int, List<NodeConnect>>();
             Dictionary<int, Transform> groupTransforms = new Dictionary<int, Transform>();
-            
+
             foreach (NodeSaveData data in saveData.nodes)
             {
                 if (!groupTransforms.TryGetValue(data.column, out Transform groupTrm))
@@ -494,12 +564,12 @@ namespace Members.CJY.Scripts
                 bt.Init(connect, nodeEvent);
 
                 columns[data.column].Add(connect);
-                connects[(data.column, data.lane)] = connect; 
+                connects[(data.column, data.lane)] = connect;
             }
 
             foreach (int col in columns.Keys.OrderBy(c => c))
                 nodeConnects.Add(columns[col]);
-            
+
             foreach (NodeSaveData data in saveData.nodes)
             {
                 NodeConnect node = connects[(data.column, data.lane)];
@@ -517,6 +587,7 @@ namespace Members.CJY.Scripts
 
             RenderLine();
             NodeVisualSetting();
+            PlayPreviewAnim();
 
             return true;
         }

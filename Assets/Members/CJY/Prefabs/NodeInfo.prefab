@@ -222,6 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701867786436438186}
   - component: {fileID: 8611979559591696105}
+  - component: {fileID: -6221278794412056326}
   m_Layer: 5
   m_Name: NodeInfo
   m_TagString: Untagged
@@ -264,3 +265,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeInfoUI
   iconImage: {fileID: 1302371550026577812}
   nameText: {fileID: 2686399072818569065}
+--- !u!114 &-6221278794412056326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080696314673071114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071666117cd54a41a5787e16a008b1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.MouseEv
+  maxScale: 1.1
+  speed: 0.2
