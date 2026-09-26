@@ -58,7 +58,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private void Start()
         {
-            MakeRound(_dataStorage.GetBattleData().playerDataList.ToArray(),_dataStorage.GetBattleData().enemyDataList.ToArray());
+            MakeRound(_dataStorage.GetRunTimePlayerData(),_dataStorage.GetBattleData().enemyDataList.ToArray());
         }
 
         private void OnEnable()
@@ -74,6 +74,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private void OnDisable()
         {
             eventChannel.RemoveListener<OnEndBattle>(HandleEndBattle);
+            eventChannel.RemoveListener<OnPlayerDead>(HandlePlayerDead);
+            eventChannel.RemoveListener<OnEnemyDead>(HandleEnemyDead);
             enemyLayoutGroup.OnRemoved -= HandleRemoved;
             enemyAgentLayoutGroup.OnRemoved -= HandleRemoved;
             KillTask();
@@ -166,14 +168,20 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private async UniTask WaitForReinforcement(CancellationToken ct)
         {
-            if (reinforcementDelay > 0f) await UniTask.Delay(TimeSpan.FromSeconds(reinforcementDelay), cancellationToken: ct);
-            else await UniTask.NextFrame();
-            while (diceBattleManager.IsBattle) await UniTask.NextFrame();
-            if (!_hasRound || !isActiveAndEnabled) await UniTask.NextFrame();
-
-            FillEmptySlots();
-            CheckRoundClear();
-            eventChannel.RaiseEvent(new OnEnemyRollRaise(true));
+            try
+            {
+                await UniTask.WaitUntil(() => !diceBattleManager.IsBattle &&
+                    !enemyLayoutGroup.IsTransitioning && !enemyAgentLayoutGroup.IsTransitioning, cancellationToken: ct);
+                if (reinforcementDelay > 0f)
+                    await UniTask.Delay(TimeSpan.FromSeconds(reinforcementDelay), cancellationToken: ct);
+                if (!_hasRound || !isActiveAndEnabled || diceBattleManager.IsBattle) return;
+                FillEmptySlots();
+                CheckRoundClear();
+                await UniTask.WaitUntil(() => !enemyLayoutGroup.IsTransitioning &&
+                    !enemyAgentLayoutGroup.IsTransitioning, cancellationToken: ct);
+                eventChannel.RaiseEvent(new OnEnemyRollRaise(true));
+            }
+            catch (OperationCanceledException) when (ct.IsCancellationRequested) { }
         }
 
         private void FillEmptySlots()

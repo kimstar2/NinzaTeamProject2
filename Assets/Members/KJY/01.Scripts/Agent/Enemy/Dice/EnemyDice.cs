@@ -27,12 +27,16 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         public UnityEvent onDeadRollLanded;
         public UnityEvent onDeadRollComplete;
         private Vector3 _restScale;
+        private Vector3 _startPosition;
+        private Quaternion _startRotation;
         private bool _isDeadRolling;
         private bool _deadRollCompleted;
 
         private void Awake()
         {
             _restScale = transform.localScale;
+            _startPosition = transform.localPosition;
+            _startRotation = transform.localRotation;
         }
 
         private void OnEnable()
@@ -61,6 +65,9 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             _deadRollCompleted = false;
             isLock = false;
             transform.localScale = _restScale;
+            // destTrm은 굴린 뒤의 착지점. 초기화는 씬에 배치한 아래쪽 대기 위치로 돌린다.
+            transform.localPosition = _startPosition;
+            transform.localRotation = _startRotation;
             faceReceiver.SetFaceColor(Color.white);
         }
         private void HandleEnemyRoll(OnEnemyRoll enemyRoll)

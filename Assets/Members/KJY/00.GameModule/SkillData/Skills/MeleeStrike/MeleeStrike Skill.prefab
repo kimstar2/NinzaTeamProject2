@@ -140,6 +140,7 @@ MonoBehaviour:
   attackDistance: 1.2
   animationTimeout: 3
   effectOffset: {x: 0, y: 0.5, z: 0}
+  agentAttackType: 0
   onCast:
     m_PersistentCalls:
       m_Calls:
@@ -172,6 +173,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  impactParticle: {fileID: 11400000, guid: 3fdbd1abdc005da49900ef909ffade9e, type: 2}
 --- !u!1 &3283351251085031094
 GameObject:
   m_ObjectHideFlags: 0

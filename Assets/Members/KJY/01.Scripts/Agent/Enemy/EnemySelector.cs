@@ -68,6 +68,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             IsSelect = false;
             _isDeadRolled = false;
             ValidateData();
+            DiceInventory.SetDiceList(RuntimeEnemyData.DiceDataList);
             MyAgent.HealthModule.InitHealth(RuntimeEnemyData.MaxHealth);
             onUnSelect?.Invoke();
             eventChannel.RaiseEvent(new OnEnemyDead(enemyType, false));

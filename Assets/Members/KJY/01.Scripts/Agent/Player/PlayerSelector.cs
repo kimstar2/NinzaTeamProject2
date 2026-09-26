@@ -9,7 +9,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
 {
     public class PlayerSelector : AbstractSelector
     {
-        [field: SerializeField] public PlayerDataSO PlayerData { get; private set; }
+        [field: SerializeField] public PlayerDataSO RuntimePlayerData { get; private set; }
         [field: SerializeField] public GradientSO LineColor { get; private set; }
         [field: SerializeField] public ColorSO PlayerColor {get; private set;}
         private bool _hasTarget;
@@ -21,26 +21,28 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         public void Init(PlayerDataSO data)
         {
-            PlayerData = data;
+            RuntimePlayerData = data;
             AgentData = data;
+            
+            if (data.IsDead) return;
             EnterBattle();
             IsDead = false;
             OffSetTarget();
             ValidateData();
-            MyAgent.HealthModule.InitHealth(data.MaxHealth);
-            eventChannel.RaiseEvent(new OnDiceLock(false, PlayerData.PlayerType));
+            MyAgent.HealthModule.InitHealth(data.MaxHealth,data.CurrentHealth);
+            eventChannel.RaiseEvent(new OnDiceLock(false, RuntimePlayerData.PlayerType));
             eventChannel.RaiseEvent(new OnPlayerDataReceive(data));
             DiceInventory.DiceDataChanged();
             onInit?.Invoke();
             // eventChannel.RaiseEvent(new OnPlayerRoll(data.PlayerType));
         }
 
-        protected override void Start()
-        {
-            base.Start();
-            AgentData = PlayerData;
-            ValidateData();
-        }
+        // protected override void Start()
+        // {
+        //     base.Start();
+        //     AgentData = RuntimePlayerData;
+        //     ValidateData();
+        // }
 
         private void OnEnable()
         {
@@ -69,7 +71,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
         {
             IsSelect = false;
             SetHasTarget(false);
-            eventChannel.RaiseEvent(new OnPlayerUnSelect(PlayerData.PlayerType));
+            eventChannel.RaiseEvent(new OnPlayerUnSelect(RuntimePlayerData.PlayerType));
             onUnSelect?.Invoke();
         }
 
@@ -99,9 +101,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
         {
             if (IsDead) return;
             base.HandleDead();
-            PlayerData.Dead();
             UnSelect();
-            eventChannel.RaiseEvent(new OnPlayerDead(PlayerData.PlayerType, true));
+            eventChannel.RaiseEvent(new OnPlayerDead(RuntimePlayerData.PlayerType, true));
             onDead?.Invoke();
         }
 
@@ -111,19 +112,24 @@ namespace Members.KJY._01.Scripts.Agent.Player
         
         public override void ApplyDamage(float damage)
         {
+            RuntimePlayerData.TakeDamage(damage);
             MyAgent.HealthModule.TakeDamage(damage);
         }
 
-        public override void ApplyHeal(float heal) => MyAgent.HealthModule.Heal(heal);
+        public override void ApplyHeal(float heal)
+        {
+            RuntimePlayerData.Heal(heal);
+            MyAgent.HealthModule.Heal(heal);
+        }
 
         private void ValidateData()
         {
-            IconImage.SetImage(PlayerData.PlayerImage);
-            IconImage.SetColor(PlayerData.ImageColor);
-            MyAgent.AgentRenderer.SetSprite(PlayerData.PlayerImage);
-            MyAgent.AgentRenderer.SetColor(PlayerData.ImageColor);
+            IconImage.SetImage(RuntimePlayerData.PlayerImage);
+            IconImage.SetColor(RuntimePlayerData.ImageColor);
+            MyAgent.AgentRenderer.SetSprite(RuntimePlayerData.PlayerImage);
+            MyAgent.AgentRenderer.SetColor(RuntimePlayerData.ImageColor);
             
-            MyAgent.AnimCompo.SetController(PlayerData.AnimCon);
+            MyAgent.AnimCompo.SetController(RuntimePlayerData.AnimCon);
         }
 
         public override float GetLevel()
@@ -134,8 +140,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            if (PlayerData == null) return;
-            gameObject.name = $"{nameof(PlayerSelector)} ({PlayerData.PlayerType})";
+            if (RuntimePlayerData == null) return;
+            gameObject.name = $"{nameof(PlayerSelector)} ({RuntimePlayerData.PlayerType})";
         }
 
 #endif

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
+  m_Name: Swordsman Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 50
+  <AttackType>k__BackingField: 1
+  <EnemyName>k__BackingField: "\uAC80\uC0AC"
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: d92ae21a1df39c543bd4045a81abb285, type: 2}
+  <EnemyImage>k__BackingField: {fileID: -7295194784296088645, guid: 6f62df3e5af0a40498a0f1130d04c171, type: 3}
+  <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
+  <Cost>k__BackingField: 2
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: cf7538f77f5145344b57829e41c5ae78, type: 2}

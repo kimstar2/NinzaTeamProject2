@@ -31,6 +31,13 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
                 CurrentHealth = DefaultMaxHealth;
         }
         
+        public void InitHealth(float maxHealth , float crtHealth)
+        {
+            _isDead = false;
+            DefaultMaxHealth = maxHealth;
+            CurrentHealth = crtHealth;
+        }
+        
         public float CurrentHealth
         {
             get => _currentHealth;
@@ -44,7 +51,7 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
         
         public void TakeDamage(float damage)
         {
-            if (_isDead) return;
+            if (_isDead || damage <= 0f || float.IsNaN(damage) || float.IsInfinity(damage)) return;
             
             onTakeDamaged?.Invoke(damage);
             CurrentHealth -= damage;

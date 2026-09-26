@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: 3c8ccc649e666a3489693c69cf7df8ee, type: 3}
   <SkillName>k__BackingField: "\uADFC\uC811 \uD0C0\uACA9"
-  <SkillDescription>k__BackingField: "다가가서 {0} + 주사위 기본 피해. 첫 번째 공격 모션."
+  <Icon>k__BackingField: {fileID: 7222565985598036394, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\uACF5\uACA9\uC774 \uB2FF\uB294 \uC21C\uAC04
+    {0} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 18

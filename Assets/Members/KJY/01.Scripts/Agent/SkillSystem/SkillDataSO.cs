@@ -19,6 +19,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
     {
         [field: SerializeField] public SkillLogicExecutor SkillLogicExecutor { get; private set; }
         [field: SerializeField] public string SkillName {get; private set;}
+        [field: SerializeField] public Sprite Icon {get; private set;}
         [field: SerializeField,TextArea] public string SkillDescription {get; private set;}
         [SerializeField] private List<SkillApplyStat> applyStats = new();
 

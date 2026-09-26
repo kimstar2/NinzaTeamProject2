@@ -26,6 +26,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             base.Initialize(owner);
             _mySelector = owner as AbstractSelector;
             _deadRollReceived = false;
+            savedDiceData = null;
         }
 
         private void OnEnable()
@@ -50,7 +51,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             if (evt.enemyType != enemyType || evt.isDead) return;
             KillApply();
             _deadRollReceived = false;
-            savedDiceData = RunTimeDiceDataList.GetDiceData(DiceFaceType.Front);
+            savedDiceData = null;
         }
 
         private void HandleEnemyDeadRollEnd(OnEnemyDeadRollEnd evt)
@@ -70,7 +71,8 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 
         public override void DiceDataChanged()
         {
-            eventChannel.RaiseEvent(new OnEnemyDiceDataChanged(enemyType,RunTimeDiceDataList));
+            if (_mySelector == null || _mySelector.AgentData == null) return;
+            eventChannel.RaiseEvent(new OnEnemyDiceDataChanged(enemyType, RunTimeDiceDataList, _mySelector.AgentData.AttackType));
         }
 
         public void HandleRollEnd(EnemyDiceRollData enemyDiceRollData)
@@ -81,7 +83,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         
         public override void Apply()
         {
-            if (!isActiveAndEnabled || _mySelector.IsDead) return;
+            if (!isActiveAndEnabled || _mySelector.IsDead || savedDiceData == null) return;
             KillApply();
             _cts = new CancellationTokenSource();
             CancellationToken token = _cts.Token;
@@ -96,14 +98,14 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
 
         public void RealApply()
         {
-            if (_mySelector.IsDead) return;
+            if (_mySelector.IsDead || savedDiceData == null) return;
             eventChannel.RaiseEvent(new OnEnemyDiceDataBind(savedDiceData, enemyType, EnemyRollType.Roll, _mySelector.GetLevel()));
             onRollReceived?.Invoke();
         }
         
         private void HandleRiskPenaltyChanged(OnRiskPenaltyChanged obj)
         {
-            if (_mySelector.IsDead) return;
+            if (_mySelector.IsDead || savedDiceData == null) return;
             eventChannel.RaiseEvent(new OnEnemyDiceDataBind(savedDiceData, enemyType, EnemyRollType.Roll, obj.PenaltyValue));
             onRollReceived?.Invoke();
         }
