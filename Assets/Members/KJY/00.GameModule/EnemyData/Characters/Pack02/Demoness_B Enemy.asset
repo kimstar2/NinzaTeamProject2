@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
+  m_Name: Demoness_B Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 50
+  <AttackType>k__BackingField: 1
+  <EnemyName>k__BackingField: "붉은 발톱"
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: cddb9940d880b234aa8c5b6c3d6e6b49, type: 2}
+  <EnemyImage>k__BackingField: {fileID: -2631493503088175608, guid: 19f6488ebbf7c224bbad0f5a4e7c17e8, type: 3}
+  <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
+  <Cost>k__BackingField: 2
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: adb9dcb469b358c995a91c48e4232eb0, type: 2}
+  <AdvancedDiceDataList>k__BackingField: {fileID: 11400000, guid: c36101f78d2356e4b237b82f1a8b19f1, type: 2}

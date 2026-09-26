@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pack02_Eyeball Monster
+  m_Controller: {fileID: 9100000, guid: aac3a1039b1989d479c81ffb262845ec, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 62ade5a5184c6ae44b627091dc6b0b19, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ac355637697147b42a6d9559d14e6abb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ab62bdf95d9c6c74c9c4ece6e316b898, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 77dcd08c730b6cc4fa2a398ec6049bfb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7e1152de41db08b4e96ff68793b609a6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8e7d8bc394b2be844adca322fc1eafe5, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ae8e1b0555edd8149944b897df06a52f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a474fafb6abeb29479f2ff86b92bfe01, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2bb8de1464aaa41498cbaa77a17d20c2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1753c8302bebdd9419724fe6569295eb, type: 2}

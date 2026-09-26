@@ -9,6 +9,7 @@ using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using Members.KJY._01.Scripts.Events.Dice.Selector;
 using Members.KJY._01.Scripts.Service;
+using Members.KJY._01.Scripts.UI;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -18,6 +19,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
     public class EnemySelector : AbstractSelector
     {
         [SerializeField] private EnemyType enemyType;
+        [SerializeField] private EnemyRankPresentation rankPresentation;
         private IGetCurrentEnemyParty _getEnemyData;
         private bool _isDeadRolled;
         
@@ -69,7 +71,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             _isDeadRolled = false;
             ValidateData();
             DiceInventory.SetDiceList(RuntimeEnemyData.DiceDataList);
-            MyAgent.HealthModule.InitHealth(RuntimeEnemyData.MaxHealth);
+            MyAgent.HealthModule.InitHealth(RuntimeEnemyData.EncounterHealth);
             onUnSelect?.Invoke();
             eventChannel.RaiseEvent(new OnEnemyDead(enemyType, false));
             eventChannel.RaiseEvent(new OnEnemyDataChanged(RuntimeEnemyData, enemyType));
@@ -82,6 +84,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         {
             RuntimeEnemyData = null;
             AgentData = null;
+            rankPresentation?.Apply(null);
             IsDead = true;
             IsSelect = false;
             eventChannel.RaiseEvent(new OnEnemyDataChanged(null, enemyType));
@@ -120,6 +123,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
             MyAgent.AgentRenderer.SetSprite(RuntimeEnemyData.EnemyImage);
             MyAgent.AgentRenderer.SetColor(RuntimeEnemyData.ImageColor);
             MyAgent.AnimCompo.SetController(RuntimeEnemyData.EnemyAc);
+            rankPresentation?.Apply(RuntimeEnemyData);
         }
 
         
@@ -134,7 +138,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
 
         public override float GetLevel()
         {
-            return ServiceLocator.Get<IGetRiskPenalty>().GetRiskPenalty();
+            return ServiceLocator.Get<IGetRiskPenalty>().GetRiskPenalty() * (RuntimeEnemyData != null ? RuntimeEnemyData.DicePower : 1f);
         }
 
         #region Handle

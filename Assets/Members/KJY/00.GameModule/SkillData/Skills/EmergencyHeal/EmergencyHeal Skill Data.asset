@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: EmergencyHeal Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 30cb123508875fec9e009bce24f815ab, type: 3}
+  <SkillName>k__BackingField: "긴급 치유"
+  <Icon>k__BackingField: {fileID: -8721206407534337006, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "자신을 {0} 회복합니다. 자신의 체력이 35% 이하면 회복량이 두 배가 됩니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 1
+    <Value>k__BackingField: 23
+  damageCondition: 0
+  <LifeStealFraction>k__BackingField: 0

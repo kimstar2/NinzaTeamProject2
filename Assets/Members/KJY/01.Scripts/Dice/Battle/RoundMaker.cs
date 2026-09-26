@@ -37,8 +37,9 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private EventChannelSO eventChannel;
         [SerializeField] private TweenLayoutGroup enemyLayoutGroup, enemyAgentLayoutGroup;
         [SerializeField, Min(0f)] private float reinforcementDelay = 0.75f;
-        [SerializeField] private List<EnemyDataSO> onBattleList = new();
-        [SerializeField] private List<EnemyDataSO> readyBattlesList = new();
+        private readonly List<EnemyDataSO> onBattleList = new();
+        private readonly List<EnemyDataSO> readyBattlesList = new();
+        private bool _resultSent;
         private BattleDataStorage _dataStorage;
         private Vector3[] _enemyPositions;
         private bool _hasRound;
@@ -99,7 +100,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             if (!ValidateRound(players, enemies)) return;
 
             _enemiesCount = enemies.Length;
-            _playerCount = players.Length;
+            _playerCount = Array.FindAll(players, player => !player.IsDead).Length;
+            _resultSent = false;
             
             KillTask();
             _isMakingRound = true;
@@ -119,7 +121,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             for (int i = 0; i < selectors.Length; i++)
             {
                 if (selectors[i] != null) selectors[i].HideFromBattle();
-                eventChannel.RaiseEvent(new OnPlayerDead((PlayerType)i,false));
             }
             
             
@@ -160,7 +161,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             
             _cts =  new CancellationTokenSource();
             
-            if (readyBattlesList.Count > 0 && onBattleList.Count < MaxUnitCount)
+            if (!_resultSent && readyBattlesList.Count > 0 && onBattleList.Count < MaxUnitCount)
                 WaitForReinforcement(_cts.Token).Forget();
 
             CheckRoundClear();
@@ -174,7 +175,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                     !enemyLayoutGroup.IsTransitioning && !enemyAgentLayoutGroup.IsTransitioning, cancellationToken: ct);
                 if (reinforcementDelay > 0f)
                     await UniTask.Delay(TimeSpan.FromSeconds(reinforcementDelay), cancellationToken: ct);
-                if (!_hasRound || !isActiveAndEnabled || diceBattleManager.IsBattle) return;
+                if (!_hasRound || _resultSent || !isActiveAndEnabled || diceBattleManager.IsBattle) return;
                 FillEmptySlots();
                 CheckRoundClear();
                 await UniTask.WaitUntil(() => !enemyLayoutGroup.IsTransitioning &&
@@ -206,18 +207,25 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private int _playerCount = 0, _enemiesCount = 0; 
         private void HandlePlayerDead(OnPlayerDead evt)
         {
-            if (!evt.IsDead) return;
+            if (!evt.IsDead || !_hasRound || _isMakingRound || _resultSent) return;
             _playerCount--;
             if (_playerCount == 0)
-                eventChannel.RaiseEvent(new OnBattleResult(BattleResult.PlayerLost));
+                FinishRound(BattleResult.PlayerLost);
         }
         
         private void HandleEnemyDead(OnEnemyDead evt)
         {
-            if (!evt.isDead) return;
+            if (!evt.isDead || !_hasRound || _isMakingRound || _resultSent) return;
             _enemiesCount--;
             if (_enemiesCount == 0)
-                eventChannel.RaiseEvent(new OnBattleResult(BattleResult.PlayerWon));
+                FinishRound(BattleResult.PlayerWon);
+        }
+
+        private void FinishRound(BattleResult result)
+        {
+            _resultSent = true;
+            KillTask();
+            eventChannel.RaiseEvent(new OnBattleResult(result));
         }
 
         private void CheckRoundClear()

@@ -22,6 +22,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 {
     public class DiceBattleManager : ModuleOwner , IRequirePooling
     {
+        public const int MaxBossRetaliations = 2;
         [field: SerializeField] public PlayerSelector CurrentPlayerSelector { get; private set; }
         [SerializeField] private AbstractDiceRollManager pRollManager,eRollManager;
         [SerializeField] private EventChannelSO eventChannel;
@@ -129,7 +130,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         public void StartBattle() // 배틀 시작 버튼을 눌렀을때
         {
-            if (_battleObserverService.IsBattle) return;
+            if (_battleObserverService.IsBattle || _battleObserverService.HasBattleResult) return;
             if (!pRollManager.AllDiceRollEnd || !eRollManager.AllDiceRollEnd) return;
             
             _battleObserverService.AddCommand(new OnActionCommand(onStartBattle.Invoke,null));
@@ -197,9 +198,19 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         private ActionCommand[] GetE2PAtkCommands() // 플레이어가 적한테 공격
         {
-            ActionCommand[] d = _orderedChain.AsValueEnumerable().Select(s => new ActionCommand(s.targetSelector, s.playerSelector)).
-                ToArray();
-            return d;
+            var commands = new List<ActionCommand>();
+            int bossActions = 0;
+            foreach (var pair in _orderedChain)
+            {
+                // 네 명이 보스 하나를 골라도 흡혈/강공격을 네 번 연속 쓰지는 않는다.
+                if (pair.targetSelector is EnemySelector enemy && enemy.RuntimeEnemyData.Rank == EnemyRank.Boss)
+                {
+                    if (bossActions >= MaxBossRetaliations) continue;
+                    bossActions++;
+                }
+                commands.Add(new ActionCommand(pair.targetSelector, pair.playerSelector));
+            }
+            return commands.ToArray();
         }
         
         private void ClearCrtSelector() => CurrentPlayerSelector = null;

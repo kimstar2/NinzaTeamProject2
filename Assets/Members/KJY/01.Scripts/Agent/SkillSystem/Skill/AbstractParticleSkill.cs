@@ -27,6 +27,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         [SerializeField, Min(0.1f)] private float animationTimeout = 3f;
         [SerializeField] protected Vector3 effectOffset = new(0f, 0.5f, 0f);
         [SerializeField] protected AgentAttackType agentAttackType;
+        [SerializeField] private PoolItemSO recoveryParticle;
 
         public UnityEvent onCast; // 시전 파티클, Executor.PlayAnim 연결
         public UnityEvent onAnimEnd; // ReturnSeq.Sequence 연결
@@ -166,7 +167,26 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
 
         protected float GetDamage()
         {
-            return Mathf.Max(0f, GetStat(ApplyStatType.Damage));
+            var attackerHealth = Executor.Attacker.MyAgent.HealthModule;
+            var targetHealth = Executor.Target.MyAgent.HealthModule;
+            float multiplier = Executor.SkillData.GetDamageMultiplier(
+                attackerHealth.CurrentHealth / Mathf.Max(1f, attackerHealth.DefaultMaxHealth),
+                targetHealth.CurrentHealth / Mathf.Max(1f, targetHealth.DefaultMaxHealth));
+            return Mathf.Max(0f, GetStat(ApplyStatType.Damage)) * multiplier;
+        }
+
+        protected void ApplyDamage()
+        {
+            var targetHealth = Executor.Target.MyAgent.HealthModule;
+            float healthBefore = targetHealth.CurrentHealth;
+            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
+
+            // 남은 체력보다 큰 피해를 줘도 실제 깎은 양만 흡수한다.
+            float drainedHealth = Mathf.Max(0f, healthBefore - targetHealth.CurrentHealth) *
+                                  Executor.SkillData.LifeStealFraction;
+            if (drainedHealth <= 0f || Executor.Attacker.IsDead) return;
+            Executor.Attacker.ApplyStat(ApplyStatType.Heal, drainedHealth);
+            PlayParticle(recoveryParticle, Executor.Attacker.MyAgent.transform.position + effectOffset);
         }
 
         protected void PlayParticle(PoolItemSO item, Vector3 pos)

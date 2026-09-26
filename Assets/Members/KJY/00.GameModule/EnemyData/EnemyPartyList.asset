@@ -17,27 +17,54 @@ MonoBehaviour:
     <EnemyDataList>k__BackingField:
     - {fileID: 11400000, guid: bb570524b0631b34c9b7207276ca8fce, type: 2}
     - {fileID: 11400000, guid: 3c77a137abbfc464f91ef3a5951e3d0d, type: 2}
+    - {fileID: 11400000, guid: c609392d0d9a56e5bcd2b065c1bcb262, type: 2}
+    - {fileID: 11400000, guid: 64b5b42b60f0574c9856a68d8482be55, type: 2}
     - {fileID: 11400000, guid: f9b10ef30eeab2749a4f7aa38e7a218b, type: 2}
-    - {fileID: 11400000, guid: 19973749cf731814bb09b8b71ef0419e, type: 2}
     - {fileID: 11400000, guid: 23fa32a4e0ee10f4cb28e77de5c9acb8, type: 2}
+    - {fileID: 11400000, guid: 19973749cf731814bb09b8b71ef0419e, type: 2}
     - {fileID: 11400000, guid: d098143efdae1834a806d74c1fabb3fc, type: 2}
     - {fileID: 11400000, guid: e3f86d85d1a8f4241be7d53ae2d72a10, type: 2}
+    - {fileID: 11400000, guid: b68c47af17605cc49090643b29ec6079, type: 2}
+    - {fileID: 11400000, guid: ace4a89387145b71a69f9e9c48592041, type: 2}
+    - {fileID: 11400000, guid: 8d0843c8f1e75c37ab26b269add4baea, type: 2}
+    <StageName>k__BackingField: "1 \uC2A4\uD14C\uC774\uC9C0 \xB7 \uBCC0\uBC29\uC758
+      \uC232"
+    <Boss>k__BackingField: {fileID: 11400000, guid: 38fdddf8438d51b18294533aca0e351e, type: 2}
+    <LateHealthMultiplier>k__BackingField: 1.28
+    <LateDicePower>k__BackingField: 1.1
+    <BaseGoldReward>k__BackingField: 18
   - <EnemyPartyType>k__BackingField: 1
     <EnemyDataList>k__BackingField:
     - {fileID: 11400000, guid: 588353a9b871316459127f5018e1a885, type: 2}
     - {fileID: 11400000, guid: 0f5f6cc5961e13f4f8081951eceade8c, type: 2}
     - {fileID: 11400000, guid: c47e2ad0c33f2dc43aca6f5e06484745, type: 2}
+    - {fileID: 11400000, guid: 2e9f0c773fff5890a2c9fb737a4768a9, type: 2}
+    - {fileID: 11400000, guid: 39ba6767e454539384aeeecdf2b63035, type: 2}
+    - {fileID: 11400000, guid: 4a57299e8e4655e3bd2773ceccc2f04a, type: 2}
+    - {fileID: 11400000, guid: 94c7dd1e00c85f658f6cec64f37dc426, type: 2}
+    - {fileID: 11400000, guid: 65fea951c2b65a8892ba3ea81837933a, type: 2}
     - {fileID: 11400000, guid: 8cf7ac9ba189fb14096befbe8c47bfd2, type: 2}
     - {fileID: 11400000, guid: 9ae5782acbacf89469cc3e169389c9ae, type: 2}
     - {fileID: 11400000, guid: 76a60388f596be14e9268a5148fb235f, type: 2}
     - {fileID: 11400000, guid: d7b08ae53746243478b9277f0b0ede35, type: 2}
-  - <EnemyPartyType>k__BackingField: 2
-    <EnemyDataList>k__BackingField:
+    - {fileID: 11400000, guid: fe344d75102e5ab7bf20797817e09b1f, type: 2}
+    - {fileID: 11400000, guid: 354c97ade3485b50b7af2b68743a8ce5, type: 2}
+    - {fileID: 11400000, guid: e105a2c9aaa1577d88a4141320e52b93, type: 2}
+    - {fileID: 11400000, guid: 96a16f0eb6265da1a99d76e85c276a1a, type: 2}
+    - {fileID: 11400000, guid: 9e5a55de57175cbb9063684a5d28a9d0, type: 2}
     - {fileID: 11400000, guid: 29b9020f0f7604544a2df11ab3323553, type: 2}
     - {fileID: 11400000, guid: 89c9700b1d765f142956b86733379bc8, type: 2}
     - {fileID: 11400000, guid: 37f9dc96b2863a64d8dd24671bd225df, type: 2}
     - {fileID: 11400000, guid: 8f78dde7309f1bc429d2ffe597ffa384, type: 2}
     - {fileID: 11400000, guid: b7ecf5c948e5b4945b186d4570216b93, type: 2}
     - {fileID: 11400000, guid: b4babf1825bff484887540b88ace8b61, type: 2}
+    - {fileID: 11400000, guid: 74c9aa7626785f74ada659b97ba25b72, type: 2}
     - {fileID: 11400000, guid: 6907aebb404a65340826ce1446c0d33a, type: 2}
     - {fileID: 11400000, guid: fb082e72ed28da5468f3e763e6e79d0b, type: 2}
+    - {fileID: 11400000, guid: 261326c2849954ef95baac9edd5f991d, type: 2}
+    - {fileID: 11400000, guid: d1611625464f5396a0336d35a99e594d, type: 2}
+    <StageName>k__BackingField: "2 \uC2A4\uD14C\uC774\uC9C0 \xB7 \uC7BF\uBE5B \uC131\uCC44"
+    <Boss>k__BackingField: {fileID: 11400000, guid: 6bfa03512da75c3eb51b2e897ac65006, type: 2}
+    <LateHealthMultiplier>k__BackingField: 1.3
+    <LateDicePower>k__BackingField: 1.12
+    <BaseGoldReward>k__BackingField: 25
