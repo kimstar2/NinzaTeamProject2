@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bf033ece7ac4d2a857f72cca9a12201, type: 3}
-  m_Name: StageNodePool
+  m_Name: BattleNode
   m_EditorClassIdentifier: PoolingSystem_Runtime_assembly::_LumenLib.PoolingSystem.Runtime.PoolItemSO
-  <ItemName>k__BackingField: Node
-  <Prefab>k__BackingField: {fileID: 1285391560519560719, guid: fcc4625a38dd4911a3f35ec821a4ad32, type: 3}
+  <ItemName>k__BackingField: BattleNode
+  <Prefab>k__BackingField: {fileID: 1285391560519560719, guid: ff7d035577894c3faebbcb05874524e3, type: 3}
   <PoolSize>k__BackingField: 20

@@ -1,4 +1,4 @@
-﻿using _LumenLib.PoolingSystem.Runtime;
+using _LumenLib.PoolingSystem.Runtime;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,7 +35,7 @@ namespace Members.CJY.Scripts
         [SerializeField] private float maxScale = 1.3f;
         private Vector3 startScale;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             iconImage = GetComponent<Image>();
             button = GetComponent<Button>();
@@ -43,7 +43,7 @@ namespace Members.CJY.Scripts
             startScale = rectTransform.localScale;
         }
 
-        public void Init(NodeConnect nodeObj, NodeEvent nodeEv)
+        public virtual void Init(NodeConnect nodeObj, NodeEvent nodeEv)
         {
             iconImage.sprite = nodeObj.info.icon;
             nodeEvent = nodeEv;
@@ -78,10 +78,17 @@ namespace Members.CJY.Scripts
             nodeEvent.SelectNode(node);
         }
         
-        public void ResetItem()
+        public virtual void ResetItem()
         {
             iconImage.sprite = null;
             node = null;
+        }
+
+        protected virtual void OnDisable()
+        {
+            if (rectTransform == null) return;
+            rectTransform.DOKill();
+            rectTransform.localScale = startScale;
         }
 
         public void ScaleUp(float dur)

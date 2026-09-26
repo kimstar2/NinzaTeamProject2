@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2470958493060700245}
   - component: {fileID: -1906745142505875135}
   m_Layer: 5
-  m_Name: StageNode
+  m_Name: BattleNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2470958493060700245}
-        m_TargetAssemblyTypeName: Members.CJY.Scripts.NodeBT, Assembly-CSharp
+        m_TargetAssemblyTypeName: Members.CJY.Scripts.BattleNodeBT, Assembly-CSharp
         m_MethodName: OnClickNode
         m_Mode: 1
         m_Arguments:
@@ -144,13 +144,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1285391560519560719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcd7e665f56842c7a247bb2ef6a282cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 28c499afec9d487999b2114e094e7324, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeBT
-  poolItem: {fileID: 11400000, guid: 1211eba569dd43868fefeab7201534fc, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.BattleNodeBT
+  poolItem: {fileID: 11400000, guid: bdf50ac3f0bb421ba17e997705a623f4, type: 2}
   currentColor: {r: 0.08697481, g: 0.0662157, b: 0.2264151, a: 1}
   movableColor: {r: 1, g: 1, b: 1, a: 1}
-  lockedColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
+  previewColor: {r: 1, g: 1, b: 1, a: 1}
+  lockedColor: {r: 0.27044016, g: 0.27044016, b: 0.27044016, a: 1}
+  maxScale: 1.2
 --- !u!114 &-1906745142505875135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,11 +162,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1285391560519560719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1384f0d5275949bdb86773e12e0ffd3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 071666117cd54a41a5787e16a008b1f8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.StageNodeHover
+  m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.MouseEv
   maxScale: 1.4
-  speed: 0.2
+  duration: 0.2
 --- !u!1 &2921773316526708232
 GameObject:
   m_ObjectHideFlags: 0

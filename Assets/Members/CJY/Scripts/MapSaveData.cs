@@ -24,5 +24,6 @@ namespace Members.CJY.Scripts
         public List<NodeSaveData> nodes = new List<NodeSaveData>();
         public NodeData currentNode;
         public bool hasData;
+        public int version, stage, seed;
     }
 }
