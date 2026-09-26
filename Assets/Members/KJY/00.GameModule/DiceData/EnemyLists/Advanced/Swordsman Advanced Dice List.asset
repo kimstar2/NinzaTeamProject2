@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46c18d5cdfe4a6d8948c5e0d8eca9d0, type: 3}
+  m_Name: Swordsman Advanced Dice List
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataListSO
+  <Front>k__BackingField: {fileID: 11400000, guid: 4b58944dd2658834d9886504ed43968a, type: 2}
+  <Back>k__BackingField: {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  <Left>k__BackingField: {fileID: 11400000, guid: aac0903f2809575b976c412be29cb263, type: 2}
+  <Right>k__BackingField: {fileID: 11400000, guid: c3c844802a2353feac3dfbd0328ec2e6, type: 2}
+  <Top>k__BackingField: {fileID: 11400000, guid: c3c844802a2353feac3dfbd0328ec2e6, type: 2}
+  <Bottom>k__BackingField: {fileID: 11400000, guid: c3c844802a2353feac3dfbd0328ec2e6, type: 2}

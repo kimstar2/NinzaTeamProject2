@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
+  m_Name: Ambush Face
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
+  <Icon>k__BackingField: {fileID: 7960256026366805285, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDataStructs>k__BackingField:
+  - <AgentAttackType>k__BackingField: 0
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 05798eaf56fe523b88c5c93a39517474, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 1
+    <SkillData>k__BackingField: {fileID: 11400000, guid: d24ad471d5b35e708d764373a7ef7ddf, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 2
+    <SkillData>k__BackingField: {fileID: 11400000, guid: b6e9900e57085367b6f5e565d620cbca, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 3
+    <SkillData>k__BackingField: {fileID: 11400000, guid: c09a75a29d4574e42a3b755466e26d3e, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0

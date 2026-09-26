@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
+  m_Name: Lava Slime Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 38
+  <AttackType>k__BackingField: 1
+  <EnemyName>k__BackingField: "용암 슬라임"
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: 3c6fc117d74ee904c878c7a80864b87e, type: 2}
+  <EnemyImage>k__BackingField: {fileID: 1271779760812874642, guid: 408ecafd5b95c18428206105296c7dcb, type: 3}
+  <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
+  <Cost>k__BackingField: 1
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 2aa834103d8d5c8aaf89dfa5d23ee792, type: 2}
+  <AdvancedDiceDataList>k__BackingField: {fileID: 11400000, guid: cb1f098807065aa0acbcfb2b0ec687fb, type: 2}

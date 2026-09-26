@@ -10,5 +10,10 @@ namespace Members.KJY._01.Scripts.GameSystem.EnemyParty
     {
         [field:SerializeField] public EnemyPartyType EnemyPartyType {get; private set;}
         [field:SerializeField] public EnemyDataSO[] EnemyDataList {get; private set;}
+        [field:SerializeField] public string StageName {get; private set;}
+        [field:SerializeField] public EnemyDataSO Boss {get; private set;}
+        [field:SerializeField, Range(1f, 2f)] public float LateHealthMultiplier {get; private set;}
+        [field:SerializeField, Range(1f, 1.5f)] public float LateDicePower {get; private set;}
+        [field:SerializeField, Min(0)] public int BaseGoldReward {get; private set;}
     }
 }

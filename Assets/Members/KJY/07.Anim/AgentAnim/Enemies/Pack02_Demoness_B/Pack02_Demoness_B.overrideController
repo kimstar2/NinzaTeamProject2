@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Pack02_Demoness_B
+  m_Controller: {fileID: 9100000, guid: aac3a1039b1989d479c81ffb262845ec, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 62ade5a5184c6ae44b627091dc6b0b19, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6dac5dbd23dfab74ba7007a7bd48a89e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ab62bdf95d9c6c74c9c4ece6e316b898, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 61216cd8749cd8a4a857e9e3628be193, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7e1152de41db08b4e96ff68793b609a6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 47c7f4f1cab3b3047a6e22bb723eb46f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ae8e1b0555edd8149944b897df06a52f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b39f144a459475145a095b030a7f6d4c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 2bb8de1464aaa41498cbaa77a17d20c2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e7646bdde0094c74cad49535d5c4b5a1, type: 2}

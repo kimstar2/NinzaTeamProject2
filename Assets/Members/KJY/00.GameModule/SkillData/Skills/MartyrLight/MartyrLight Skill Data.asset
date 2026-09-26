@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: MartyrLight Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 4284561404034561628, guid: 2cc90741f7805073a67f01dfd317a1c6, type: 3}
+  <SkillName>k__BackingField: "불굴의 성광"
+  <Icon>k__BackingField: {fileID: 4238349195380458671, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "빛으로 {0} 피해를 주고 자신을 {1} 회복합니다. 자신의 체력이 50% 이하면 피해가 50% 증가합니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 24
+  - <ApplyStatType>k__BackingField: 1
+    <Value>k__BackingField: 8
+  damageCondition: 2
+  <LifeStealFraction>k__BackingField: 0

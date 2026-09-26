@@ -23,7 +23,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
         {
             RuntimePlayerData = data;
             AgentData = data;
-            
+            IsDead = data.IsDead;
+            eventChannel.RaiseEvent(new OnPlayerDead(data.PlayerType, data.IsDead));
             if (data.IsDead) return;
             EnterBattle();
             IsDead = false;
