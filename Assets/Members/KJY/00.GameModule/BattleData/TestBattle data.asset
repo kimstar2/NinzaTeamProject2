@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a72271fc40e4c2692d8fe0aff595975, type: 3}
   m_Name: TestBattle data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.GameSystem.BattleDataSO
-  playerDataList:
-  - {fileID: 11400000, guid: 21e589245743362408e232e9dc6cf5aa, type: 2}
-  - {fileID: 11400000, guid: df7f0511704826f4ca9785929acc661e, type: 2}
-  - {fileID: 11400000, guid: 2c032ce962ff98d4f80eb99e2077c5bf, type: 2}
-  - {fileID: 11400000, guid: 76b50cc7a5b0fca498f7fa58f46da40f, type: 2}
   enemyDataList:
   - {fileID: 11400000, guid: 316ecfda9f7fbed4a828275fded52ab3, type: 2}
   - {fileID: 11400000, guid: 03829b1974f784b49af41c1f84961fe9, type: 2}
   - {fileID: 11400000, guid: df60a813bbdf3574096c5f8abf80ce7e, type: 2}
   - {fileID: 11400000, guid: df60a813bbdf3574096c5f8abf80ce7e, type: 2}
   - {fileID: 11400000, guid: 25991f37c09033044a05409470d53d70, type: 2}
-  - {fileID: 11400000, guid: 25991f37c09033044a05409470d53d70, type: 2}
-  - {fileID: 11400000, guid: 25991f37c09033044a05409470d53d70, type: 2}
-  maxRiskPenalty: 1
-  riskLevelIncrease: 5
-  riskLevelIncreaseMulti: 1.05
+  - {fileID: 11400000, guid: e3f86d85d1a8f4241be7d53ae2d72a10, type: 2}
+  - {fileID: 11400000, guid: df60a813bbdf3574096c5f8abf80ce7e, type: 2}
+  - {fileID: 11400000, guid: d7b08ae53746243478b9277f0b0ede35, type: 2}
+  - {fileID: 11400000, guid: 8f78dde7309f1bc429d2ffe597ffa384, type: 2}
+  - {fileID: 11400000, guid: 6907aebb404a65340826ce1446c0d33a, type: 2}
+  - {fileID: 11400000, guid: fb082e72ed28da5468f3e763e6e79d0b, type: 2}
+  - {fileID: 11400000, guid: 9ae5782acbacf89469cc3e169389c9ae, type: 2}
+  maxRiskPenalty: 0.65
+  riskLevelIncrease: 2
+  riskLevelIncreaseMulti: 1.15

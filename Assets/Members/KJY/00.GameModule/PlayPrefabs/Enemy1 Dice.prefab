@@ -504,9 +504,9 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2062788805
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &696067496712725917
@@ -853,11 +853,24 @@ MonoBehaviour:
   - <ActionType>k__BackingField: 8
     <InsertType>k__BackingField: 3
     <EaseType>k__BackingField: 9
-    <Duration>k__BackingField: 0.32
+    <Duration>k__BackingField: 0.28
     <IsRandomizeValue>k__BackingField: 0
     <UsingFastBeyond>k__BackingField: 0
     <MinTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
     <MaxTransformValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <FadeValue>k__BackingField: 0
+    <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
+    <Callback>k__BackingField:
+      m_PersistentCalls:
+        m_Calls: []
+  - <ActionType>k__BackingField: 3
+    <InsertType>k__BackingField: 6
+    <EaseType>k__BackingField: 9
+    <Duration>k__BackingField: 0.28
+    <IsRandomizeValue>k__BackingField: 0
+    <UsingFastBeyond>k__BackingField: 0
+    <MinTransformValue>k__BackingField: {x: 1, y: 1, z: 1}
+    <MaxTransformValue>k__BackingField: {x: 1, y: 1, z: 1}
     <FadeValue>k__BackingField: 0
     <ColorValue>k__BackingField: {r: 0, g: 0, b: 0, a: 0}
     <Callback>k__BackingField:
@@ -5825,6 +5838,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDiceDataReceiver
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
+  borderRenderer: {fileID: 5863353568824370241}
+  useFaceColorsHash: {fileID: 11400000, guid: 250498c21e0549749bf2cd03855c53d8, type: 2}
+  frontColorHash: {fileID: 11400000, guid: 21cc8b3835427e84eac6a68431b960ca, type: 2}
+  backColorHash: {fileID: 11400000, guid: f58504d359981b744aa5f9497425f9d1, type: 2}
+  leftColorHash: {fileID: 11400000, guid: e9240974892bc1c4ea32b23dfa8771dd, type: 2}
+  rightColorHash: {fileID: 11400000, guid: b095de43880d1cf479da4e172bcb12d1, type: 2}
+  topColorHash: {fileID: 11400000, guid: 6684e44249e682e4fb6ad89211fcaf8b, type: 2}
+  bottomColorHash: {fileID: 11400000, guid: ab041cd38521be14a89a424d03080b25, type: 2}
   <FrontImage>k__BackingField: {fileID: 5841972758993096514}
   <BackImage>k__BackingField: {fileID: 7072814998244760861}
   <LeftImage>k__BackingField: {fileID: 5578279712362850432}

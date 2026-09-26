@@ -11,19 +11,23 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: Dice data 5
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceDataSO
-  <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: -3559039512066393911, guid: 0fcd923b5e7c8f14c96657ff7094914c, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
+  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
-    <SkillData>k__BackingField: {fileID: 11400000, guid: e8c6f8a6a8a1153448200910b56aff00, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 10
+    <SkillData>k__BackingField: {fileID: 11400000, guid: d48cdc9993b1b30479386dffbbd8def1, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 1
-    <SkillData>k__BackingField: {fileID: 11400000, guid: fecb28fa4e0e6734f85078cca273ef12, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 5
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 74274e789b0c5434785b2954f9100a98, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 2
-    <SkillData>k__BackingField: {fileID: 11400000, guid: 05bfbdbf27004339b5e98f3d76208233, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 15
+    <SkillData>k__BackingField: {fileID: 11400000, guid: bbe5719f25035ca458c563a6f0494b67, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 3
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 400635940054fde43b522e830b8759a1, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0

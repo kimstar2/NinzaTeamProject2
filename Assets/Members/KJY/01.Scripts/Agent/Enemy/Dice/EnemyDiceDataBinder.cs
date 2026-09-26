@@ -38,7 +38,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         {
             if (obj.EnemyType != enemyType) return;
             _enemyData = obj.EnemyData;
-            DataBind();
+            ClearResult();
         }
 
         private void OnDisable()
@@ -51,8 +51,20 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         private void HandleEnemyDead(OnEnemyDead evt)
         {
             if (evt.enemyType != enemyType || evt.isDead) return;
+            ClearResult();
+        }
+
+        private void ClearResult()
+        {
+            // 적 데이터 준비와 굴림 결과 공개는 별개다. 새 적은 빈 면에서 시작한다.
             CurrentDiceData = null;
             CurrentSkillData = default;
+            _level = 1f;
+            titleTMP.SetText(string.Empty);
+            descTMP.SetText(string.Empty);
+            // foreach (var icon in iconImage) icon.SetColor(new Color(46f,46f,46f));
+            // gradeOutline.SetColor(Color.white);
+            rollParticle.ParticleSystem.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
 
         private void HandleDiceDataBind(OnEnemyDiceDataBind evt)
@@ -78,10 +90,15 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             if (CurrentDiceData == null) return;
             
             CurrentSkillData = CurrentDiceData.GetSkillDataStruct(_enemyData.AttackType);
+            if (CurrentSkillData.SkillData == null) return;
             titleTMP.SetText(CurrentSkillData.SkillData.SkillName);
             descTMP.SetText(CurrentSkillData.SkillData.GetDescription(_level));
             gradeOutline.SetColor(CurrentDiceData.DiceGrade.GradeColor);
-            iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(CurrentDiceData.Icon));
+            iconImage.AsValueEnumerable().ToList().ForEach(i=>
+            {
+                i.SetImage(CurrentDiceData.GetIcon(_enemyData.AttackType));
+                i.SetColor(Color.white);
+            });
             
             rollParticle.SetParticleColor(CurrentDiceData.DiceGrade.GradeColor);
             rollParticle.PlayParticle();
@@ -94,9 +111,10 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             if (CurrentDiceData == null) return;
 
             CurrentSkillData = CurrentDiceData.GetSkillDataStruct(_enemyData.AttackType);
+            if (CurrentSkillData.SkillData == null) return;
             titleTMP.SetText(CurrentSkillData.SkillData.SkillName);
             descTMP.SetText(CurrentSkillData.SkillData.GetDescription(_level));
-            iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(CurrentDiceData.Icon));
+            iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(CurrentDiceData.GetIcon(_enemyData.AttackType)));
             rollParticle.SetParticleColor(Color.orangeRed);
             rollParticle.PlayParticle();
             onDiceDataBind?.Invoke();

@@ -103,7 +103,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
             AddOrMoveToLast(CurrentPlayerSelector,evt.EnemySelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
             ConnectLine(CurrentPlayerSelector);
-            eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.PlayerData,Count,true));
+            eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.RuntimePlayerData,Count,true));
 
             CurrentPlayerSelector.OnSetTarget();
             ClearCrtSelector();
@@ -112,7 +112,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private void HandleDiceUnSelected(OnPlayerUnSelect evt) // 플레이어가 선택을 취소 했다면 
         {
             PlayerSelector selector = null;
-            if (CurrentPlayerSelector != null && CurrentPlayerSelector.PlayerData.PlayerType == evt.PlayerType)
+            if (CurrentPlayerSelector != null && CurrentPlayerSelector.RuntimePlayerData.PlayerType == evt.PlayerType)
             {
                 selector = CurrentPlayerSelector;
                 ClearCrtSelector();
@@ -120,7 +120,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             else
             {
                 foreach (PlayerSelector player in BattleChain.Keys)
-                    if (player.PlayerData.PlayerType == evt.PlayerType) { selector = player; break; }
+                    if (player.RuntimePlayerData.PlayerType == evt.PlayerType) { selector = player; break; }
             }
             if (selector == null) return;
             RemoveFromBattleChain(selector);
@@ -225,7 +225,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             _orderedChain.Remove(node);
             BattleChain.Remove(key);
             
-            eventChannel.RaiseEvent(new OnBattleChainChanged(key.PlayerData,Count,false));
+            eventChannel.RaiseEvent(new OnBattleChainChanged(key.RuntimePlayerData,Count,false));
         }
 
         public bool TryGetValue(PlayerSelector key, out AbstractSelector value)

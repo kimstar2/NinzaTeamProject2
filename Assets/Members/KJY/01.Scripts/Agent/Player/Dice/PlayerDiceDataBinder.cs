@@ -41,15 +41,16 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         {
             if (evt.PlayerType != playerData.PlayerType) return;
             DiceDataSO diceData = evt.DiceData;
-            var d = diceData.SkillDataStructs
-                .AsValueEnumerable()
-                .Where(s => s.AgentAttackType == playerData.AttackType)
-                .Select(s=>s)
-                .First();
+            var d = diceData.GetSkillDataStruct(playerData.AttackType);
+            if (d.SkillData == null) return;
             titleTMP.SetText(d.SkillData.SkillName);
             descTMP.SetText(d.SkillData.GetDescription(evt.Level));
             gradeOutline.SetColor(diceData.DiceGrade.GradeColor);
-            iconImage.ToList().ForEach(i=>i.SetImage(diceData.Icon));
+            iconImage.ToList().ForEach(i=>
+            {
+                i.SetImage(diceData.GetIcon(playerData.AttackType));
+                i.SetColor(Color.white);
+            });
             rollParticle.SetParticleColor(diceData.DiceGrade.GradeColor);
             rollParticle.PlayParticle();
         }

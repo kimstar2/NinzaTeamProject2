@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
+  m_Name: FlameArrow Face
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
+  <Icon>k__BackingField: {fileID: -3024870396548848517, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDataStructs>k__BackingField:
+  - <AgentAttackType>k__BackingField: 0
+    <SkillData>k__BackingField: {fileID: 11400000, guid: d48cdc9993b1b30479386dffbbd8def1, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 1
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 74274e789b0c5434785b2954f9100a98, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 2
+    <SkillData>k__BackingField: {fileID: 11400000, guid: bbe5719f25035ca458c563a6f0494b67, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 3
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 3c3027d93e637e84ca8f9e65c7a0f9b1, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
