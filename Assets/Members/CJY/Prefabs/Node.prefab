@@ -150,7 +150,9 @@ MonoBehaviour:
   poolItem: {fileID: 11400000, guid: 14928970a15941a48a93e01d375e540e, type: 2}
   currentColor: {r: 0.08697481, g: 0.0662157, b: 0.2264151, a: 1}
   movableColor: {r: 1, g: 1, b: 1, a: 1}
-  lockedColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
+  previewColor: {r: 1, g: 1, b: 1, a: 1}
+  lockedColor: {r: 0.27044016, g: 0.27044016, b: 0.27044016, a: 1}
+  maxScale: 1.2
 --- !u!114 &-1906745142505875135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.MouseEv
   maxScale: 1.4
-  speed: 0.2
+  duration: 0.2
 --- !u!1 &2921773316526708232
 GameObject:
   m_ObjectHideFlags: 0

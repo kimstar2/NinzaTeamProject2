@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
+  m_Name: Demon_A Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 58
+  <AttackType>k__BackingField: 1
+  <EnemyName>k__BackingField: "마계 검병"
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: f28a0ae2f013c2c46847dcabbf10c13c, type: 2}
+  <EnemyImage>k__BackingField: {fileID: 8332582147124629600, guid: af9138e554e4e3e4d9b74625dab6de09, type: 3}
+  <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
+  <Cost>k__BackingField: 2
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 0301200678335c41bfedb34d6b7a28a8, type: 2}
+  <AdvancedDiceDataList>k__BackingField: {fileID: 11400000, guid: b0c0ac9c5207573a82263207201522ce, type: 2}

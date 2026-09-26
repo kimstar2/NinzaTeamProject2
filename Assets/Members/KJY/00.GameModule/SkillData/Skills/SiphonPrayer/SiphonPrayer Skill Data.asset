@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: SiphonPrayer Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 4284561404034561628, guid: c734fb74233153a59ec23e45aca17505, type: 3}
+  <SkillName>k__BackingField: "생명의 기도"
+  <Icon>k__BackingField: {fileID: 561270323415413769, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "빛으로 {0} 피해를 주고 자신을 {1} 회복합니다. 실제 피해의 25%를 추가로 회복합니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 18
+  - <ApplyStatType>k__BackingField: 1
+    <Value>k__BackingField: 5
+  damageCondition: 0
+  <LifeStealFraction>k__BackingField: 0.25
