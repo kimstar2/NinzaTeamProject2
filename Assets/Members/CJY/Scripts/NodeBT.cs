@@ -1,4 +1,5 @@
 ﻿using _LumenLib.PoolingSystem.Runtime;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,8 @@ namespace Members.CJY.Scripts
     public enum NodeState
     {
         Current,
-        Moveable,
+        Movable,
+        Preview,
         Locked
     }
     public class NodeBT : MonoBehaviour, IPoolable
@@ -16,6 +18,8 @@ namespace Members.CJY.Scripts
         private Button button;
         private NodeEvent nodeEvent;
         private NodeConnect node;
+        private MouseEv mouseEv;
+        private RectTransform rectTransform;
 
         [SerializeField] private PoolItemSO poolItem;
         public PoolItemSO Item => poolItem;
@@ -23,13 +27,20 @@ namespace Members.CJY.Scripts
 
         [Header("color")] 
         [SerializeField] private Color currentColor = new Color();
-        [SerializeField] private Color movableColor = Color.white;
+        [SerializeField] private Color movableColor = new  Color();
+        [SerializeField] private Color previewColor = new Color();
         [SerializeField] private Color lockedColor = new Color();
+        
+        [Header("settings")]
+        [SerializeField] private float maxScale = 1.3f;
+        private Vector3 startScale;
 
         private void Awake()
         {
             iconImage = GetComponent<Image>();
             button = GetComponent<Button>();
+            rectTransform = GetComponent<RectTransform>();
+            startScale = rectTransform.localScale;
         }
 
         public void Init(NodeConnect nodeObj, NodeEvent nodeEv)
@@ -47,9 +58,13 @@ namespace Members.CJY.Scripts
                     iconImage.color = currentColor;
                     button.interactable = false;
                     break;
-                case NodeState.Moveable:
+                case NodeState.Movable:
                     iconImage.color = movableColor;
                     button.interactable = true;
+                    break;
+                case NodeState.Preview:
+                    iconImage.color = previewColor;
+                    button.interactable = false;
                     break;
                 case NodeState.Locked:
                     iconImage.color = lockedColor;
@@ -68,6 +83,18 @@ namespace Members.CJY.Scripts
             iconImage.sprite = null;
             node = null;
         }
-        
+
+        public void ScaleUp(float dur)
+        {
+            rectTransform.DOKill();
+            rectTransform.DOScale(startScale * maxScale, dur);
+        }
+
+        public void ScaleDown(float dur)
+        {
+            rectTransform.DOKill();
+            rectTransform.DOScale(startScale, dur);
+        }
+
     }
 }

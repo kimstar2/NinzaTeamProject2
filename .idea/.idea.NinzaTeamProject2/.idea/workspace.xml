@@ -12,21 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-ThinItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Feel/MMTools/Demos/MMTween/Fonts/Lato/SDF/Lato-ThinItalic SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Battle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Battle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Boss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Boss.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Elite.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Elite.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Event.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Event.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/PoolList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/PoolList.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Rest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Rest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Shop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Shop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/Start.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/Start.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Node.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Node.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/NodeInfo.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/NodeInfo.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/NodeMap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/NodeMap.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/MapSaveData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/MapSaveData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/MouseEv.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/MouseEv.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeBT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeBT.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeConnect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeConnect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeInfoSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeInfoSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeMaker.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +228,9 @@
       <workItem from="1790083844544" duration="8056000" />
       <workItem from="1790133003426" duration="13468000" />
       <workItem from="1790228882373" duration="27055000" />
-      <workItem from="1790309545462" duration="4312000" />
+      <workItem from="1790309545462" duration="6285000" />
+      <workItem from="1790400614299" duration="4843000" />
+      <workItem from="1790405486990" duration="683000" />
     </task>
     <servers />
   </component>
@@ -252,6 +245,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
