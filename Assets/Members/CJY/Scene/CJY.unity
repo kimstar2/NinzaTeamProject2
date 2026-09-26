@@ -989,6 +989,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656586172}
   m_CullTransparentMesh: 1
+--- !u!1 &1687001600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687001602}
+  - component: {fileID: 1687001601}
+  m_Layer: 0
+  m_Name: '!==DontDestroy==!'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1687001601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687001600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f640522b8c104fa09039ca3ff9a781e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.GameSystem.DontDestroy
+--- !u!4 &1687001602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687001600}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1974194134}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737083297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1167,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737083297}
   m_CullTransparentMesh: 1
+--- !u!1 &1974194133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974194134}
+  - component: {fileID: 1974194135}
+  m_Layer: 0
+  m_Name: BattleDataStorage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1974194134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974194133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1687001602}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1974194135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974194133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670d72eedf6545a6ac94aae76b08410e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Service.BattleDataStorage
+  <StageDataList>k__BackingField:
+  - {fileID: 11400000, guid: 51171eef51884fd2b55a77ba9d83023b, type: 2}
+  - {fileID: 11400000, guid: 1092961d981c418396002462ebae4de7, type: 2}
+  <CurrentStage>k__BackingField: 0
+  runTimeTanker: {fileID: 11400000, guid: 2c032ce962ff98d4f80eb99e2077c5bf, type: 2}
+  runTimeDealer: {fileID: 11400000, guid: df7f0511704826f4ca9785929acc661e, type: 2}
+  runTimeHealer: {fileID: 11400000, guid: 21e589245743362408e232e9dc6cf5aa, type: 2}
+  runTimeMage: {fileID: 11400000, guid: 76b50cc7a5b0fca498f7fa58f46da40f, type: 2}
+  battleData: {fileID: 11400000, guid: d5008a104117a194a8272267d6f95f94, type: 2}
+  battleScene: 2
 --- !u!1 &2131550860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1373,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499896735814250173, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 549752409782286893, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
       propertyPath: m_Name
       value: NodeMap
@@ -1354,6 +1457,138 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5600198850926839, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: battleDataStorage
+      value:
+      objectReference: {fileID: 1974194135}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: battleDataStorage
+      value:
+      objectReference: {fileID: 1974194135}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].<Type>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].<Scene>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].<ImmediatelyChangeScene>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1974194135}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Tp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Members.KJY._01.Scripts.Service.BattleDataStorage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[0].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].<Type>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].<Scene>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].<ImmediatelyChangeScene>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1974194135}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Tp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Members.KJY._01.Scripts.Service.BattleDataStorage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[1].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].<Type>k__BackingField
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].<Scene>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].<ImmediatelyChangeScene>k__BackingField
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1974194135}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Tp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Members.KJY._01.Scripts.Service.BattleDataStorage, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5568698930399848979, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: nodeScenes.Array.data[2].onNodeSelected.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1367,3 +1602,4 @@ SceneRoots:
   - {fileID: 1005263042}
   - {fileID: 5053262175540448471}
   - {fileID: 468914012}
+  - {fileID: 1687001602}

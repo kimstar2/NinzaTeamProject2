@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656a7fea98d14bde9881a681178ae031, type: 3}
+  m_Name: Stage 2
+  m_EditorClassIdentifier:
+  enemies:
+  - {fileID: 11400000, guid: 9ae5782acbacf89469cc3e169389c9ae, type: 2}
+  - {fileID: 11400000, guid: 65fea951c2b65a8892ba3ea81837933a, type: 2}
+  - {fileID: 11400000, guid: 588353a9b871316459127f5018e1a885, type: 2}
+  - {fileID: 11400000, guid: c47e2ad0c33f2dc43aca6f5e06484745, type: 2}
+  - {fileID: 11400000, guid: 4a57299e8e4655e3bd2773ceccc2f04a, type: 2}
+  - {fileID: 11400000, guid: 76a60388f596be14e9268a5148fb235f, type: 2}
+  - {fileID: 11400000, guid: d7b08ae53746243478b9277f0b0ede35, type: 2}
+  - {fileID: 11400000, guid: 39ba6767e454539384aeeecdf2b63035, type: 2}
+  - {fileID: 11400000, guid: 94c7dd1e00c85f658f6cec64f37dc426, type: 2}
+  - {fileID: 11400000, guid: b7ecf5c948e5b4945b186d4570216b93, type: 2}
+  - {fileID: 11400000, guid: fb082e72ed28da5468f3e763e6e79d0b, type: 2}
+  - {fileID: 11400000, guid: 74c9aa7626785f74ada659b97ba25b72, type: 2}
+  - {fileID: 11400000, guid: 2e9f0c773fff5890a2c9fb737a4768a9, type: 2}
+  - {fileID: 11400000, guid: 9e5a55de57175cbb9063684a5d28a9d0, type: 2}
+  - {fileID: 11400000, guid: 0f5f6cc5961e13f4f8081951eceade8c, type: 2}
+  - {fileID: 11400000, guid: 8cf7ac9ba189fb14096befbe8c47bfd2, type: 2}
+  - {fileID: 11400000, guid: 354c97ade3485b50b7af2b68743a8ce5, type: 2}
+  - {fileID: 11400000, guid: 96a16f0eb6265da1a99d76e85c276a1a, type: 2}
+  - {fileID: 11400000, guid: 89c9700b1d765f142956b86733379bc8, type: 2}
+  - {fileID: 11400000, guid: 29b9020f0f7604544a2df11ab3323553, type: 2}
+  - {fileID: 11400000, guid: b4babf1825bff484887540b88ace8b61, type: 2}
+  - {fileID: 11400000, guid: fe344d75102e5ab7bf20797817e09b1f, type: 2}
+  - {fileID: 11400000, guid: e105a2c9aaa1577d88a4141320e52b93, type: 2}
+  - {fileID: 11400000, guid: 37f9dc96b2863a64d8dd24671bd225df, type: 2}
+  - {fileID: 11400000, guid: 8f78dde7309f1bc429d2ffe597ffa384, type: 2}
+  - {fileID: 11400000, guid: 6907aebb404a65340826ce1446c0d33a, type: 2}
+  - {fileID: 11400000, guid: 261326c2849954ef95baac9edd5f991d, type: 2}
+  - {fileID: 11400000, guid: d1611625464f5396a0336d35a99e594d, type: 2}
+  boss: {fileID: 11400000, guid: 6bfa03512da75c3eb51b2e897ac65006, type: 2}
+  enemyCount: {x: 2, y: 4}
+  healthMultiplier: {x: 1, y: 1.3}
+  dicePower: {x: 1, y: 1.15}
+  gold: {x: 26, y: 64}

@@ -1789,6 +1789,9 @@ MonoBehaviour:
   victoryMotion: {fileID: 890000000000000042}
   defeatMotion: {fileID: 890000000000000052}
   closeMotion: {fileID: 890000000000000062}
+  onResultClosed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8418807885883832500
 GameObject:
   m_ObjectHideFlags: 0

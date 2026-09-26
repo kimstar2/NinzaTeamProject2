@@ -1,7 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using _LumenLib.PoolingSystem.Runtime;
+using Members.KJY._01.Scripts;
+using Members.KJY._01.Scripts.Service;
+using Members.KJY._01.Scripts.Agent.Enemy;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -17,6 +20,7 @@ namespace Members.CJY.Scripts
 
         [Header("Settings")] 
         [SerializeField] private ObjectPool objectPool;
+        [SerializeField] private BattleDataStorage battleDataStorage;
         [SerializeField] private int columnCount; // start, boss 노드를 제외한 열 개수
         [SerializeField] private int minNodeCount, maxNodeCount;
 
@@ -35,7 +39,9 @@ namespace Members.CJY.Scripts
         private NodeEvent nodeEvent;
         private NodeConnect currentNode;
         private List<List<NodeConnect>> nodeConnects = new List<List<NodeConnect>>();
-        private const string saveKey = "MapSaveData";
+        private StageDataSO _stageData;
+        private int _stageIndex, _mapSeed, _lastColumn;
+        private string saveKey => $"MapSaveData.Stage{_stageIndex}";
 
         private void Awake()
         {
@@ -63,6 +69,8 @@ namespace Members.CJY.Scripts
         {
             nodeEvent.OnNodeSelected -= HandleNodeSelected;
         }
+
+        public bool CanEnter(NodeConnect node) => currentNode != null && currentNode.nextNodes.Contains(node);
 
         private void HandleNodeSelected(NodeConnect nextNode)
         {
@@ -133,7 +141,10 @@ namespace Members.CJY.Scripts
 
         public void MakeNode()
         {
+            if (!SelectStage()) return;
             DeleteNode();
+            _mapSeed = Random.Range(1, int.MaxValue);
+            _lastColumn = columnCount + 1;
 
             int[] nodeCount = NodeCount(columnCount);
             int total = nodeCount.Sum();
@@ -158,6 +169,7 @@ namespace Members.CJY.Scripts
 
         public void OpenNode()
         {
+            if (!SelectStage()) return;
             if (!LoadMap())
             {
                 MakeNode();
@@ -167,6 +179,7 @@ namespace Members.CJY.Scripts
 
         public void DeleteNode()
         {
+            StopAllCoroutines();
             ResetNode();
             nodeConnects.Clear();
         }
@@ -185,16 +198,8 @@ namespace Members.CJY.Scripts
 
                 for (int i = 0; i < count; i++)
                 {
-                    IPoolable nodeItem = objectPool.Pop("Node");
-                    Transform nodeTrm = nodeItem.GameObject.transform;
-                    nodeTrm.SetParent(groupTrm, false);
-
-                    NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-
-                    NodeConnect connect = new NodeConnect(nodeConnects.Count, i, nodeTypes[typeCount]);
-                    connect.view = bt;
+                    NodeConnect connect = CreateNode(nodeConnects.Count, i, nodeTypes[typeCount], groupTrm);
                     nodeGroups.Add(connect);
-                    bt.Init(connect, nodeEvent);
 
                     typeCount++;
                 }
@@ -210,16 +215,37 @@ namespace Members.CJY.Scripts
 
             groupTrm.SetParent(nodeParent, false);
 
-            IPoolable nodeItem = objectPool.Pop("Node");
-            Transform nodeTrm = nodeItem.GameObject.transform;
-            nodeTrm.SetParent(groupTrm, false);
+            NodeConnect connect = CreateNode(nodeConnects.Count, 0, info, groupTrm);
+            nodeConnects.Add(new List<NodeConnect> { connect });
+        }
 
-            NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
+        private bool SelectStage()
+        {
+            _stageData = battleDataStorage != null ? battleDataStorage.CurrentStageData : null;
+            if (_stageData == null || !_stageData.IsValid)
+            {
+                Debug.LogError("스테이지의 적 목록과 보스를 연결하세요.", this);
+                return false;
+            }
+            _stageIndex = battleDataStorage.CurrentStage;
+            return true;
+        }
 
-            NodeConnect connect = new NodeConnect(nodeConnects.Count, 0, info);
-            connect.view = bt;
-            nodeConnects.Add(new List<NodeConnect>() { connect });
-            bt.Init(connect, nodeEvent);
+        private NodeConnect CreateNode(int column, int lane, NodeInfoSO info, Transform parent)
+        {
+            var node = new NodeConnect(column, lane, info);
+            if (node.IsBattle)
+            {
+                EnemyRank rank = info.type == NodeType.Boss ? EnemyRank.Boss :
+                    info.type == NodeType.Elite ? EnemyRank.Elite : EnemyRank.Normal;
+                int seed = unchecked(_mapSeed ^ (column * 397) ^ (lane * 7919));
+                node.battleData = _stageData.CreateBattle(column, _lastColumn, seed, rank);
+            }
+            var item = objectPool.Pop(node.IsBattle ? "BattleNode" : "Node");
+            item.GameObject.transform.SetParent(parent, false);
+            node.view = item.GameObject.GetComponent<NodeBT>();
+            node.view.Init(node, nodeEvent);
+            return node;
         }
 
         // 좀 비효율적이긴 함 (나중에 다시 보기)
@@ -228,6 +254,7 @@ namespace Members.CJY.Scripts
             for (int i = nodeParent.childCount - 1; i >= 0; i--)
             {
                 Transform groupTrm = nodeParent.GetChild(i);
+                if (groupTrm == lineParent || !groupTrm.TryGetComponent<IPoolable>(out var group)) continue;
 
                 for (int j = groupTrm.childCount - 1; j >= 0; j--)
                 {
@@ -238,8 +265,7 @@ namespace Members.CJY.Scripts
                     objectPool.Push(node);
                 }
 
-                IPoolable group = groupTrm.GetComponent<IPoolable>();
-                groupTrm.SetParent(nodeParent, false);
+                groupTrm.SetParent(objectPool.transform, false);
                 objectPool.Push(group);
             }
 
@@ -352,43 +378,6 @@ namespace Members.CJY.Scripts
                     }
                 }
 
-                /*foreach (NodeConnect current in currentColumn)
-                {
-                    int lineCount = 1;
-
-                    for (int j = 0; j < lineCount; j++)
-                    {
-                        int nextNode = Random.Range(0, nextColumn.Count);
-                        NodeConnect target = nextColumn[nextNode];
-
-                        if (!current.nextNodes.Contains(target))
-                        {
-                            current.nextNodes.Add(target);
-                        }
-                    }
-                }
-
-                // 다음 컬럼의 노드중에 현재 컬럼과 하나도 연결되어있지 않은 노드는
-                // 다시 랜덤돌려서 현재 컬럼의 노드중 하나를 연결시켜줌
-                foreach (NodeConnect next in nextColumn)
-                {
-                    bool connected = false;
-
-                    foreach (NodeConnect current in currentColumn)
-                    {
-                        if (current.nextNodes.Contains(next))
-                        {
-                            connected = true;
-                            break;
-                        }
-                    }
-
-                    if (!connected)
-                    {
-                        int currentNode = Random.Range(0, currentColumn.Count);
-                        currentColumn[currentNode].nextNodes.Add(next);
-                    }
-                }*/
             }
         }
 
@@ -476,7 +465,10 @@ namespace Members.CJY.Scripts
         {
             MapSaveData saveData = new MapSaveData
             {
-                hasData = true
+                hasData = true,
+                version = 1,
+                stage = _stageIndex,
+                seed = _mapSeed
             };
 
             foreach (List<NodeConnect> column in nodeConnects)
@@ -519,7 +511,6 @@ namespace Members.CJY.Scripts
         {
             if (type == NodeType.Start) return startNode;
             if (type == NodeType.Boss) return bossNode;
-
             return nodeInfos.FirstOrDefault(x => x.type == type);
         }
 
@@ -529,7 +520,10 @@ namespace Members.CJY.Scripts
 
             string json = PlayerPrefs.GetString(saveKey);
             MapSaveData saveData = JsonUtility.FromJson<MapSaveData>(json);
-            if (!saveData.hasData) return false;
+            if (saveData == null || !saveData.hasData || saveData.version != 1 ||
+                saveData.stage != _stageIndex || saveData.nodes.Count == 0) return false;
+            _mapSeed = saveData.seed;
+            _lastColumn = saveData.nodes.Max(node => node.column);
 
             ResetNode();
             nodeConnects.Clear();
@@ -554,14 +548,7 @@ namespace Members.CJY.Scripts
 
                 NodeInfoSO info = GetInfoByType(data.type);
 
-                IPoolable nodeItem = objectPool.Pop("Node");
-                Transform nodeTrm = nodeItem.GameObject.transform;
-                nodeTrm.SetParent(groupTrm, false);
-
-                NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-                NodeConnect connect = new NodeConnect(data.column, data.lane, info);
-                connect.view = bt;
-                bt.Init(connect, nodeEvent);
+                NodeConnect connect = CreateNode(data.column, data.lane, info, groupTrm);
 
                 columns[data.column].Add(connect);
                 connects[(data.column, data.lane)] = connect;

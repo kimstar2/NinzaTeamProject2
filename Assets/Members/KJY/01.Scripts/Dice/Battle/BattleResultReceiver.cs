@@ -8,6 +8,7 @@ using Members.KJY._01.Scripts.Events;
 using Members.KJY._01.Scripts.Service;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
@@ -41,6 +42,9 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private TweenSequencer victoryMotion;
         [SerializeField] private TweenSequencer defeatMotion;
         [SerializeField] private TweenSequencer closeMotion;
+
+        [Header("결과창을 닫은 뒤 실행")]
+        [SerializeField] private UnityEvent onResultClosed = new();
 
         private BattleDataStorage _storage;
         private BattleInventory _inventory;
@@ -110,11 +114,10 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 (!_victory || enemyRollManager.AllDiceRollEnd));
 
             _inventory.CompleteEncounter(_victory, _storage.GetBattleData().GoldReward);
-            bool finalClear = _victory && _storage.IsFinalEncounter;
-            resultTitle.text = _victory ? finalClear ? "모험 완료" : "전투 승리" : "전투 패배";
+            resultTitle.text = _victory ? "전투 승리" : "전투 패배";
             resultTitle.color = _victory ? new Color(1f, 0.83f, 0.46f) : new Color(0.93f, 0.52f, 0.5f);
             resultDescription.text = _victory
-                ? finalClear ? "두 스테이지의 마지막 적을 물리쳤습니다." : "길을 가로막던 적을 물리쳤습니다."
+                ? "길을 가로막던 적을 물리쳤습니다."
                 : "잠시 숨을 고르고 다시 도전해 보세요.";
             rewardSection.SetActive(_victory);
             goldText.text = $"+ {_inventory.GoldEarned} G   <size=70%>보유 {_inventory.Gold} G</size>";
@@ -128,7 +131,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             rewardNotice.text = _inventory.SkippedRewards > 0
                 ? $"가방이 가득 차 주사위 {_inventory.SkippedRewards}개를 담지 못했습니다."
                 : _inventory.EncounterRewards.Count == 0 ? "획득한 주사위가 없습니다." : $"주사위 {_inventory.EncounterRewards.Count}개를 가방에 보관했습니다.";
-            continueLabel.text = _victory ? finalClear ? "모험 마무리" : "다음으로" : "다시 도전하기";
+            continueLabel.text = "확인";
             if (!_victory)
             {
                 resultCard.sizeDelta = new Vector2(resultCard.sizeDelta.x, 350f);
@@ -172,9 +175,10 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         {
             closeMotion.Sequence();
             backdropOutMotion.Sequence();
-            // 입력은 한 번만 받고, 접히는 모션이 끝난 뒤에 씬을 이동한다.
+            // 접히는 모션이 끝난 뒤 다음 진행을 호출한 씬에 맡긴다.
             yield return new WaitUntil(() => !closeMotion.HasTween && !backdropOutMotion.HasTween);
-            _storage.CompleteEncounter(_victory);
+            resultPanel.gameObject.SetActive(false);
+            onResultClosed.Invoke();
         }
 
         private void OnDisable()
