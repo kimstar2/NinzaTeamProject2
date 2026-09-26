@@ -26,7 +26,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         public void Bind(RewardDiceFragmentSO reward)
         {
-            icon.sprite = reward.diceFragmentSprite;
+            icon.sprite = reward.Icon;
             title.text = reward.SkillData != null ? reward.SkillData.SkillName : reward.name;
             var grade = reward.DiceData.DiceGrade;
             gradeMark.color = grade != null ? grade.GradeColor : Color.white;

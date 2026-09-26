@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Text;
+using Members.KJY._01.Scripts.Dice.Data;
 
 namespace Members.PSW.Code.InventorySystem
 {
@@ -16,7 +17,7 @@ namespace Members.PSW.Code.InventorySystem
         [SerializeField] private TMP_Text skillDescription;
         [SerializeField] private Image skillIcon;
         private Inventory _inventory;
-        private DiceFragmentSO _shownFragment;
+        private DiceDataSO _shownFragment;
         private Vector2 _scrollPosition;
 
         private void OnEnable()
@@ -66,7 +67,7 @@ namespace Members.PSW.Code.InventorySystem
             if (skillInfoPanel != null) skillInfoPanel.gameObject.SetActive(false);
         }
 
-        private void ShowSkillInfo(DiceFragmentSO fragment, RectTransform source)
+        private void ShowSkillInfo(DiceDataSO fragment, RectTransform source)
         {
             if (skillInfoPanel == null || skillTitle == null || skillDescription == null || skillIcon == null)
                 return;
@@ -76,7 +77,7 @@ namespace Members.PSW.Code.InventorySystem
                 return;
             }
 
-            skillIcon.sprite = fragment.diceFragmentSprite;
+            skillIcon.sprite = fragment.Icon;
             skillTitle.text = fragment.name;
             skillDescription.text = string.Empty;
             if (fragment is RewardDiceFragmentSO reward)

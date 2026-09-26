@@ -391,6 +391,11 @@ MonoBehaviour:
   upgradeText: {fileID: 1723261861}
   percentText: {fileID: 219551431}
   inventory: {fileID: 0}
+  meleeDiceFragments:
+  - {fileID: 0}
+  rangedDiceFragments: []
+  magicianDiceFragments: []
+  healerDiceFragments: []
 --- !u!4 &139810470
 Transform:
   m_ObjectHideFlags: 0
@@ -5661,6 +5666,7 @@ MonoBehaviour:
   linePrefab: {fileID: 6168571957938592681, guid: 48362cd574c627e44a66f6d73426acba, type: 3}
   infoPrefab: {fileID: 9080696314673071114, guid: f87e7b32a2322e442a897ecef30219e2, type: 3}
   infoParent: {fileID: 507479660357264286}
+  previewDur: 0
 --- !u!114 &8029846994608671057
 MonoBehaviour:
   m_ObjectHideFlags: 0

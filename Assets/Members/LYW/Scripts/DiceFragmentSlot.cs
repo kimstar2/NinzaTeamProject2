@@ -1,5 +1,6 @@
 ﻿using System;
 using JetBrains.Annotations;
+using Members.KJY._01.Scripts.Dice.Data;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,16 +12,16 @@ namespace Members.LYW.Scripts
     {
         private Image diceFragmentSprite;
         [field : SerializeField] public Sprite defaultImage { get; private set; }
-        public DiceFragmentSO _fragment {get; private set;}
+        public DiceDataSO _fragment {get; private set;}
         public bool isSetted { get; private set; } = false;
         public int index { get; private set; }
 
-        public void SetFragment(DiceFragmentSO fragment)
+        public void SetFragment(DiceDataSO fragment)
         {
             if (isSetted) return;
             isSetted = true;
             _fragment = fragment;
-            diceFragmentSprite.sprite = fragment.diceFragmentSprite;
+            diceFragmentSprite.sprite = fragment.Icon;
         }
 
         public void ResetSlot()

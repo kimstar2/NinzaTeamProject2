@@ -5,7 +5,7 @@ using Members.KJY._01.Scripts.Agent.SkillSystem;
 namespace Members.PSW.Code.InventorySystem
 {
     // A runtime reward fits the existing LYW list while retaining the full combat data.
-    public sealed class RewardDiceFragmentSO : DiceFragmentSO
+    public sealed class RewardDiceFragmentSO : DiceDataSO
     {
         public DiceDataSO DiceData { get; private set; }
         public float Level { get; private set; }

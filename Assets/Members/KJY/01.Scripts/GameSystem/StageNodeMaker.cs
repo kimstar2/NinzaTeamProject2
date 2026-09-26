@@ -376,7 +376,7 @@ namespace Members.KJY._01.Scripts.GameSystem
                     }
                     else if (currentNode.nextNodes.Contains(node))
                     {
-                        node.view.SetVisual(NodeState.Moveable);
+                        node.view.SetVisual(NodeState.Movable);
                     }
                     else
                     {

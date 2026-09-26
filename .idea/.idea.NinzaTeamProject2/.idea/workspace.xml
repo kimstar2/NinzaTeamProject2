@@ -12,6 +12,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleRewardItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleRewardItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/GameSystem/StageNodeMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/GameSystem/StageNodeMaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/AddSystem/DiceFragmentSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/AddSystem/DiceData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/AddSystem/DiceFragmentSO.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/AddSystem/DiceData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/DiceFragmentSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/FragmentSetter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/FragmentSetter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/UpgradeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Inventory System/BackpackInventoryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Inventory System/BackpackInventoryView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Inventory System/RewardDiceFragmentSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Inventory System/RewardDiceFragmentSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +161,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;KJY&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;base&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -240,6 +252,8 @@
       <workItem from="1790228882373" duration="27055000" />
       <workItem from="1790310290567" duration="12012000" />
       <workItem from="1790394335698" duration="4783000" />
+      <workItem from="1790424876165" duration="2145000" />
+      <workItem from="1790427088755" duration="2749000" />
     </task>
     <servers />
   </component>
