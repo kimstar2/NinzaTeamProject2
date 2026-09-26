@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 223275328495558708}
   - component: {fileID: 47637758222838241}
   - component: {fileID: 2470958493060700245}
+  - component: {fileID: -1906745142505875135}
   m_Layer: 5
   m_Name: Node
   m_TagString: Untagged
@@ -103,7 +104,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -147,6 +148,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeBT
   poolItem: {fileID: 11400000, guid: 14928970a15941a48a93e01d375e540e, type: 2}
+  currentColor: {r: 0.08697481, g: 0.0662157, b: 0.2264151, a: 1}
+  movableColor: {r: 1, g: 1, b: 1, a: 1}
+  lockedColor: {r: 0.49685526, g: 0.49685526, b: 0.49685526, a: 1}
+--- !u!114 &-1906745142505875135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285391560519560719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071666117cd54a41a5787e16a008b1f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.MouseEv
+  maxScale: 1.4
+  speed: 0.2
 --- !u!1 &2921773316526708232
 GameObject:
   m_ObjectHideFlags: 0

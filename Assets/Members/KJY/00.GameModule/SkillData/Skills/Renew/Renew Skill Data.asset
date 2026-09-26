@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: Renew Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: ea6fdcf7df7c05d42b4c0f4d1d0f21b8, type: 3}
+  <SkillName>k__BackingField: "\uD68C\uBCF5 \uB9E5\uB3D9"
+  <Icon>k__BackingField: {fileID: -8721206407534337006, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\uBE5B\uC774 \uC138 \uBC88 \uD37C\uC9D1\uB2C8\uB2E4.
+    \uB9E4\uBC88 \uC790\uC2E0\uC758 \uCCB4\uB825\uC744 {0} \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 1
+    <Value>k__BackingField: 9

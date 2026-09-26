@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
+  m_Name: Necromancer Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 54
+  <AttackType>k__BackingField: 2
+  <EnemyName>k__BackingField: "\uAC15\uB839\uC220\uC0AC"
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: c765b445c73177142872d5a1dbe713ed, type: 2}
+  <EnemyImage>k__BackingField: {fileID: -5252879251821265602, guid: 802d4eeec6b48c4409c2520647ae44f9, type: 3}
+  <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
+  <Cost>k__BackingField: 3
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 74283312f4e707048bc293d6b28a9429, type: 2}

@@ -11,6 +11,7 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
         private float _currentHealth;
 
         public UnityEvent<float> onTakeDamaged;
+        public UnityEvent onDead;
         public delegate void HealthChanged(float health , float maxHealth); // 매개변수명 확인을 위함
         public event HealthChanged OnHealthChanged;
         public event Action OnDead;
@@ -30,6 +31,13 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
                 CurrentHealth = DefaultMaxHealth;
         }
         
+        public void InitHealth(float maxHealth , float crtHealth)
+        {
+            _isDead = false;
+            DefaultMaxHealth = maxHealth;
+            CurrentHealth = crtHealth;
+        }
+        
         public float CurrentHealth
         {
             get => _currentHealth;
@@ -37,23 +45,22 @@ namespace Members.KJY._01.Scripts.Agent.HealthSystem
             {
                 _currentHealth = Mathf.Clamp(value, 0, DefaultMaxHealth);
                 OnHealthChanged?.Invoke(_currentHealth , DefaultMaxHealth);
-                Debug.Log("d");
             }
         }
         
         
         public void TakeDamage(float damage)
         {
-            if (_isDead) return;
+            if (_isDead || damage <= 0f || float.IsNaN(damage) || float.IsInfinity(damage)) return;
             
             onTakeDamaged?.Invoke(damage);
             CurrentHealth -= damage;
             
             if (CurrentHealth <= 0)
             {
-                Debug.Log("dead");
                 _isDead = true;
                 OnDead?.Invoke();
+                onDead?.Invoke();
             }
         }
 

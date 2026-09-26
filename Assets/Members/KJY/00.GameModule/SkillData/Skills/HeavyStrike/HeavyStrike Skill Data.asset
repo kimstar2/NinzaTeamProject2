@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: a33d28c1fb4a0f148a660356183cf5ba, type: 3}
   <SkillName>k__BackingField: "\uAC15\uD55C \uD0C0\uACA9"
-  <SkillDescription>k__BackingField: "\uB2E4\uAC00\uAC00\uC11C 28 + \uC8FC\uC0AC\uC704
-    \uAE30\uBCF8 \uD53C\uD574. \uB450 \uBC88\uC9F8 \uACF5\uACA9 \uBAA8\uC158."
+  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\uBB34\uAC70\uC6B4 \uC77C\uACA9\uC73C\uB85C
+    {0} \uD53C\uD574\uB97C \uC90D\uB2C8\uB2E4."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 28

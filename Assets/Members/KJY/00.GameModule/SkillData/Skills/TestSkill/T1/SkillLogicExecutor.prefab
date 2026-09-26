@@ -132,9 +132,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  skillApplyStats:
-  - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 5
   onAnimEnd:
     m_PersistentCalls:
       m_Calls:

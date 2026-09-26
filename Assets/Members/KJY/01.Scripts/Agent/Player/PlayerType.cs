@@ -6,6 +6,7 @@
         Dealer,
         Healer,
         Mage,
-        None
+        None,
+        All
     }
 }

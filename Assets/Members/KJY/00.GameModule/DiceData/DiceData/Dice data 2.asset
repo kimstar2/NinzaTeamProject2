@@ -11,19 +11,23 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: Dice data 2
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY.Scripts.Dice.DiceDataSO
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: 4633355498211079068, guid: 03c9eaea50b051a48aab156c11ee947f, type: 3}
+  <Icon>k__BackingField: {fileID: -3024870396548848517, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
-    <SkillData>k__BackingField: {fileID: 11400000, guid: e8c6f8a6a8a1153448200910b56aff00, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 10
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 371f26b7351ab7640a54c92723275734, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 1
-    <SkillData>k__BackingField: {fileID: 11400000, guid: fecb28fa4e0e6734f85078cca273ef12, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 5
+    <SkillData>k__BackingField: {fileID: 11400000, guid: d38707ec77c3e144ba0a2c4cd6884730, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 2
-    <SkillData>k__BackingField: {fileID: 11400000, guid: 7f60b62e229a46d48beceec7d8a851a8, type: 2}
-    <SkillLevel>k__BackingField: 0
-    <BaseDamage>k__BackingField: 15
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 809a4c1df16d8834f93a4176ef06b7df, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 3
+    <SkillData>k__BackingField: {fileID: 11400000, guid: c09a75a29d4574e42a3b755466e26d3e, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0

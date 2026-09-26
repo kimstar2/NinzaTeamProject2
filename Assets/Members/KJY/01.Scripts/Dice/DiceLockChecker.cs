@@ -23,28 +23,43 @@ namespace Members.KJY._01.Scripts.Dice
         [SerializeField] private Color onLockColor;
         [SerializeField] private Color offLockColor;
         public bool IsLocked {get; private set;}
-        
+
+        private void OnEnable()
+        {
+            eventChannel.AddListener<OnStartBattle>(HandleStartBattle);
+        }
+
+        private void OnDisable()
+        {
+            eventChannel.RemoveListener<OnStartBattle>(HandleStartBattle);
+        }
+
+        private void HandleStartBattle(OnStartBattle obj) => OffLock();
+
+
         public void LockToggle()
         {
             if (!IsLocked)
                 OnLock();
             else
                 OffLock();
-            eventChannel.RaiseEvent(new OnDiceLock(IsLocked,playerType));
         }
 
-        private void OnLock()
+        public void OnLock()
         {
             IsLocked = true;
             diceImage.SetColor(onLockColor);
+            eventChannel.RaiseEvent(new OnDiceLock(IsLocked,playerType));
         }
 
         
-        private void OffLock()
+        public void OffLock()
         {
             IsLocked = false;
             diceImage.SetColor(offLockColor);
+            eventChannel.RaiseEvent(new OnDiceLock(IsLocked,playerType));
         }
+        
         
         private void OnValidate()
         {

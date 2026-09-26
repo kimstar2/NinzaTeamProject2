@@ -44,6 +44,12 @@ TagManager:
   - name: Agent
     uniqueID: 3109160217
     locked: 0
+  - name: BackVFX
+    uniqueID: 1015289677
+    locked: 0
+  - name: Object
+    uniqueID: 2232178491
+    locked: 0
   - name: GameUI
     uniqueID: 2280492709
     locked: 0

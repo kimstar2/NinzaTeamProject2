@@ -62,6 +62,22 @@ namespace _TevLib.Extension.DoT
         public void SetSteps(List<TweenStep> steps) => sequenceStep = steps;
         public void ClearStep() => sequenceStep.Clear();
 
+        // Keep timing/easing authored in the Inspector, but supply a layout's new destination.
+        public void SetPositionValue(Vector3 position)
+        {
+            for (int i = 0; i < sequenceStep.Count; i++)
+            {
+                TweenStep step = sequenceStep[i];
+                if (step.ActionType != SequenceActionType.DoLocalMove &&
+                    step.ActionType != SequenceActionType.DoMove &&
+                    step.ActionType != SequenceActionType.DoAnchoredPosition) continue;
+                step.SetTransformValue(position);
+                sequenceStep[i] = step;
+            }
+        }
+
+        public void Stop() => KillTween();
+
         public bool SequenceAndResult()
         {
             KillTween();

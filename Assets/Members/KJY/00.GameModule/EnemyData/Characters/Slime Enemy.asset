@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9179432ffc8c441fb48efc4539140e15, type: 3}
+  m_Name: Slime Enemy
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
+  <MaxHealth>k__BackingField: 28
+  <AttackType>k__BackingField: 1
+  <EnemyName>k__BackingField: "\uC2AC\uB77C\uC784"
+  <EnemyAc>k__BackingField: {fileID: 22100000, guid: d30a4579aead9f4489d90313330bcd51, type: 2}
+  <EnemyImage>k__BackingField: {fileID: 7996689706240812867, guid: 7ab6c624c04f663438af388542ec5632, type: 3}
+  <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
+  <Cost>k__BackingField: 1
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 2c2cdc612a3944b45ba760fe814ffe67, type: 2}

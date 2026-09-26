@@ -11,12 +11,12 @@ namespace Members.KJY._01.Scripts.Dice
         [SerializeField] protected EventChannelSO eventChannel;
         public bool AllDiceRollEnd { get; protected set; } = true;
         public UnityEvent onAllDiceRollEnd;
-
+        
         protected abstract void RollLogic();
 
-        private void Start()
-        {
-            RollLogic();
-        }
+        // private void Start()
+        // {
+            // RollLogic();
+        // }
     }
 }
