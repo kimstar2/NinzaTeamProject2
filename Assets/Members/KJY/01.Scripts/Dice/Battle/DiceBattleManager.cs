@@ -118,7 +118,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private bool TryConnectTarget(AbstractSelector target)
         {
-            if (IsBattle || CurrentPlayerSelector == null || !CurrentPlayerSelector.IsSelect ||
+            if (IsBattle || !pRollManager.AllDiceRollEnd || CurrentPlayerSelector == null || !CurrentPlayerSelector.IsSelect ||
                 CurrentPlayerSelector.CurrentSkill == null ||
                 !CurrentPlayerSelector.CurrentSkill.CanTarget(CurrentPlayerSelector, target)) return false;
             AddOrMoveToLast(CurrentPlayerSelector, target);
@@ -143,6 +143,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                     if (player.RuntimePlayerData.PlayerType == evt.PlayerType) { selector = player; break; }
             }
             if (selector == null) return;
+            selector.OffSetTarget();
             RemoveFromBattleChain(selector);
             RemoveLine(selector); // 다른 애 고르는 중에도 기존 연결은 따로 취소 가능
         }
