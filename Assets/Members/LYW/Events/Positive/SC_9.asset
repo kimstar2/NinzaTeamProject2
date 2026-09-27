@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a45ec12a4341e7a0e00b0d87ec4a4c, type: 3}
+  m_Name: SC_9
+  m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.EventDataSO
+  EventTitle: "\uBD09\uC778"
+  EventExplain: "\uD55C \uB9C8\uC744\uC5D0 \uB2F9\uB3C4\uD558\uC790, \uB9C8\uC744\uC758
+    \uC7A5\uB85C\uCC98\uB7FC \uBCF4\uC774\uB294 \uB0A8\uC790\uAC00 \uB9C8\uBC95\uC0AC\uC5D0\uAC8C
+    \uBD80\uD0C1\uC744 \uD55C\uB2E4.\\n\u201D\uCD5C\uADFC\uC5D0 \uBD09\uC778\uD55C
+    \uB9C8\uBB3C\uC758 \uBD09\uC778\uC774 \uD480\uB9B4 \uAC83 \uAC19\uC544\uC11C
+    \uB9D0\uC774\uC57C\u2026 \uC544\uAC00\uC528\uAC00 \uC870\uAE08 \uB3C4\uC640\uC904
+    \uC218 \uC788\uC744\uAE4C?\u201D\\n\uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
+  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
+  EXImage: {fileID: 6600639419874255735, guid: 8c2351a2a598aed4384444b1d8f8c85f, type: 3}
+  exImageScale: 9.7
+  exImageColor: {r: 1, g: 1, b: 1, a: 1}
+  backGroundImageColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}
+  exImageMaterial: {fileID: 0}
+  choices: 2
+  choiceText:
+  - "\uB9C8\uBB3C\uC744 \uBD09\uC778\uD55C\uB2E4. "
+  - "\uBB34\uB9AC\uB2E4."
+  resultText:
+  - "\u201D\uACE0\uB9C8\uC6CC \uC544\uAC00\uC528. \uB355\uBD84\uC5D0 50\uB144 \uC815\uB3C4\uB294
+    \uAC71\uC815\uC5C6\uC774 \uC0B4 \uC218 \uC788\uACA0\uC5B4. \uC774\uAC74 \uB2F5\uB840\uC57C.\u201D\\n(\uB9C8\uBC95\uC0AC\uC758
+    \uCCB4\uB825\uC774 10 \uAC10\uC18C\uD55C\uB2E4. 50\uACE8\uB4DC\uB97C \uD68D\uB4DD\uD55C\uB2E4.)"
+  - "\u201D\uC74C, \uADF8\uB807\uC9C0. \uB0B4\uAC00 \uBB34\uB9AC\uD55C \uBD80\uD0C1\uC744
+    \uD55C \uAC70 \uAC19\uB124. \uBBF8\uC548\uD574 \uC544\uAC00\uC528.\u201D\\n\uC544\uBB34\uC77C\uB3C4
+    \uC77C\uC5B4\uB098\uC9C0 \uC54A\uB294\uB2E4."
+  changeStatusDatas:
+  - {fileID: 0}
+  - {fileID: 0}
+  choiceEvent: 0200000002000000

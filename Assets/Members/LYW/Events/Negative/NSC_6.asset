@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a45ec12a4341e7a0e00b0d87ec4a4c, type: 3}
+  m_Name: NSC_6
+  m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.EventDataSO
+  EventTitle: "\uB098\uC05C \uC0AC\uACFC"
+  EventExplain: "\uAE38\uC744 \uAC00\uB358\uC911, \uC544\uC8FC \u201C\uB098\uC05C
+    \uC0AC\uACFC\u201D \uB97C \uBC1C\uACAC\uD588\uB2E4. \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
+  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
+  EXImage: {fileID: 0}
+  exImageScale: 9.7
+  exImageColor: {r: 1, g: 1, b: 1, a: 1}
+  backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
+  exImageMaterial: {fileID: 0}
+  choices: 2
+  choiceText:
+  - "\uBA39\uC5B4\uBCF8\uB2E4."
+  - "\uC774\uB7F0\uAC8C \uB9DB\uC788\uC744\uB9AC\uAC00 \uC5C6\uB2E4. \uC800\uBA40\uB9AC
+    \uB358\uC838\uBC84\uB9B0\uB2E4."
+  resultText:
+  - "\uD55C\uC785 \uBCA0\uC5B4\uBB3C\uC740 \uC21C\uAC04, \uC88B\uC9C0 \uC54A\uC740
+    \uC608\uAC10\uC774 \uB4E4\uAE30 \uC2DC\uC791\uD588\uB2E4.\\n(\uB2E4\uC74C \uC804\uD22C
+    5\uBC88 \uB3D9\uC548 \uC5BB\uB294 \uBCF4\uC0C1\uC774 25% \uAC10\uC18C\uD55C\uB2E4.)"
+  - "\uB2F9\uC2E0\uC774 \uC0AC\uACFC\uB97C \uB358\uC84C\uC744 \uB54C, \uC5B4\uB5A4
+    \uB9C8\uBC95\uC0AC\uAC00 \uADF8 \uC0AC\uACFC\uB97C \uCC44\uAC14\uB2E4.\\n\uC544\uBB34
+    \uC77C\uB3C4 \uC77C\uC5B4\uB098\uC9C0 \uC54A\uC558\uB2E4."
+  changeStatusDatas:
+  - {fileID: 0}
+  - {fileID: 0}
+  choiceEvent: 0200000002000000
