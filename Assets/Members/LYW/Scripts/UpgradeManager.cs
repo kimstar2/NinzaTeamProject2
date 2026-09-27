@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _TevLib.Extension.DoT;
 using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Dice.Battle;
+using Members.KJY._01.Scripts.Dice.Data;
 using Members.KJY._01.Scripts.UI;
 using Members.PSW.Code.InventorySystem;
 using NaughtyAttributes;
@@ -30,6 +31,7 @@ public class UpgradeManager : MonoBehaviour
     private BattleInventory _inventory;
     private int _slot;
     private bool _busy;
+    private bool _lastGradeUp;
 
     private void Start()
     {
@@ -122,18 +124,25 @@ public class UpgradeManager : MonoBehaviour
             }
         var target = _selected[0];
         bool hasTarget = target != null && _inventory != null;
+        var plan = hasTarget ? _inventory.GetForgePlan(_selected) : BattleInventory.ForgePlan.Invalid(string.Empty);
+        bool gradeUp = plan.Mode == BattleInventory.ForgeMode.GradeUp;
+        float resultLevel = plan.Mode == BattleInventory.ForgeMode.Enhance ? plan.ResultLevel : hasTarget ? target.Level : 1f;
         bool revealResult = !resultCard.gameObject.activeSelf;
-        resultCard.gameObject.SetActive(hasTarget);
-        resultTitle.text = "제련 후";
-        currentDescription.text = hasTarget ? Describe(target, target.Level) : "기준 면을 고르세요.\n\n스킬과 등급을 유지한 채 레벨을 올립니다.";
-        resultDescription.text = hasTarget ? Describe(target, _inventory.GetForgedLevel(target.Level)) : "강화 후의 스킬 수치를\n여기서 비교할 수 있습니다.";
-        if (hasTarget)
+        resultCard.gameObject.SetActive(hasTarget && !gradeUp); // 등급 업 결과는 무작위라 카드 대신 설명만 보여준다
+        resultTitle.text = gradeUp ? "등급 상승" : "제련 후";
+        currentDescription.text = hasTarget ? Describe(target, target.Level) : "기준 면을 고르세요.\n\n재료 면의 등급에 따라 레벨이 오르거나 등급이 오릅니다.";
+        resultDescription.text = !hasTarget ? "강화 후의 스킬 수치를\n여기서 비교할 수 있습니다." :
+            gradeUp ? $"{DiceGradeSO.GetName(plan.ResultGrade)} 등급 스킬로 바뀝니다.\n\n적합 직업은 유지되고 Lv.1부터 시작합니다.\n좋은 재료를 넣을수록 강한 스킬이 나오기 쉽습니다." :
+            Describe(target, resultLevel);
+        if (hasTarget && !gradeUp)
         {
-            resultCard.Bind(target.DiceData, _inventory.GetForgedLevel(target.Level));
+            resultCard.Bind(target.DiceData, resultLevel);
             if (revealResult) resultCard.Reveal();
         }
         goldText.text = _inventory != null ? $"보유 골드  {_inventory.Gold} G" : "모험을 시작한 뒤 이용할 수 있습니다.";
-        costText.text = hasTarget ? $"제련하기  ·  {_inventory.GetForgeCost(target.Level)} G" : "제련하기";
+        string action = gradeUp ? "등급 상승" : "제련하기";
+        int cost = plan.Mode != BattleInventory.ForgeMode.None ? plan.Cost : hasTarget ? _inventory.GetForgeCost(target.Level) : 0;
+        costText.text = hasTarget ? $"{action}  ·  {cost} G" : action;
         string reason = "전투에서 획득한 면 3개가 필요합니다.";
         forgeButton.interactable = _inventory != null && _inventory.CanForge(_selected, out reason);
         notice.text = forgeButton.interactable ? reason : (_slot == 0 ? "기준 면" : $"재료 {_slot}") + " 선택 중 · " + reason;
@@ -146,6 +155,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (_busy || _inventory == null) return;
         _busy = true;
+        _lastGradeUp = _inventory.GetForgePlan(_selected).Mode == BattleInventory.ForgeMode.GradeUp;
         if (!_inventory.TryForge(_selected, out var reason))
         {
             _busy = false;
@@ -169,9 +179,12 @@ public class UpgradeManager : MonoBehaviour
         Refresh();
         resultCard.Bind(_selected[0]);
         resultCard.Reveal();
-        resultTitle.text = "제련 완료";
+        var face = _selected[0].DiceData;
+        resultTitle.text = _lastGradeUp ? "등급 상승 완료" : "제련 완료";
         resultDescription.text = Describe(_selected[0], _selected[0].Level);
-        notice.text = $"{_selected[0].DiceData.MainName} · Lv.{_selected[0].Level:0.#} 제련 완료. 면공방에서 장착할 수 있습니다.";
+        notice.text = _lastGradeUp
+            ? $"{face.MainName} ({(face.DiceGrade != null ? face.DiceGrade.DisplayName : "일반")}) 스킬로 바뀌었습니다. 면공방에서 장착할 수 있습니다."
+            : $"{face.MainName} · Lv.{_selected[0].Level:0.#} 제련 완료. 면공방에서 장착할 수 있습니다.";
     }
 
     public void Close() { if (!_busy) StartCoroutine(Leave()); }

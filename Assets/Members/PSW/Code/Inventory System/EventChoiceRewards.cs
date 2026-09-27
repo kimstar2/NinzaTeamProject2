@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.Reflection;
 using System;
 using DevLib.ServiceLocator;
+using DevLib.CoreLib.Runtime;
+using Members.KJY._01.Scripts.Agent;
+using Members.KJY._01.Scripts.Events;
 using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Service;
 using Members.KJY._01.Scripts.Dice.Data;
@@ -24,6 +27,23 @@ namespace Members.PSW.Code.InventorySystem
         [SerializeField] private List<DiceDataSO> rewardPool = new();
         [SerializeField] private List<HealthChoice> healthChoices = new();
         [SerializeField] private List<GoldChoice> goldChoices = new();
+        [SerializeField] private List<DamageChoice> damageChoices = new();
+        [SerializeField] private EventChannelSO eventChannel;
+        [SerializeField] private string resetScenePath;
+        private readonly EventDamageModifiers _damageModifiers = new();
+        private bool _hasCompletedBattle;
+        private int _completedBattleScene;
+
+        [Serializable]
+        private sealed class DamageChoice
+        {
+            public EventDataSO eventData;
+            public int choiceIndex;
+            public float outgoingPercent;
+            public float incomingPercent;
+            public int battles = -1;
+            [TextArea] public string resultText;
+        }
 
         [Serializable]
         private sealed class GoldChoice
@@ -81,12 +101,16 @@ namespace Members.PSW.Code.InventorySystem
 
         private void OnEnable()
         {
+            ServiceLocator.Register<IDamageModifiers>(_damageModifiers);
+            if (eventChannel != null) eventChannel.AddListener<OnBattleResult>(HandleBattleResult);
             SceneManager.sceneLoaded += HandleSceneLoaded;
             SceneManager.sceneUnloaded += HandleSceneUnloaded;
         }
 
         private void OnDisable()
         {
+            ServiceLocator.UnRegister<IDamageModifiers>(_damageModifiers);
+            if (eventChannel != null) eventChannel.RemoveListener<OnBattleResult>(HandleBattleResult);
             SceneManager.sceneLoaded -= HandleSceneLoaded;
             SceneManager.sceneUnloaded -= HandleSceneUnloaded;
             for (int i = _bindings.Count - 1; i >= 0; i--) ReleaseBinding(i);
@@ -95,6 +119,12 @@ namespace Members.PSW.Code.InventorySystem
 
         private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
         {
+            // Current new-game flow always starts from the title scene.
+            if (scene.path == resetScenePath)
+            {
+                _damageModifiers.Clear();
+                _hasCompletedBattle = false;
+            }
             ReleaseUnownedRewards();
             if (sourceEvent == null || EventField == null || ButtonsField == null)
             {
@@ -126,7 +156,8 @@ namespace Members.PSW.Code.InventorySystem
                 if (source == null) continue;
                 _pendingManagers.RemoveAt(pendingIndex);
                 if (source != sourceEvent && !healthChoices.Exists(effect => effect.eventData == source) &&
-                    !goldChoices.Exists(effect => effect.eventData == source)) continue;
+                    !goldChoices.Exists(effect => effect.eventData == source) &&
+                    !damageChoices.Exists(effect => effect.eventData == source)) continue;
                 var buttons = ButtonsField.GetValue(manager) as List<Button>;
                 if (buttons == null || buttons.Count < source.choices ||
                     source.resultText.Count < source.choices || source.choiceEvent.Count < source.choices ||
@@ -165,6 +196,7 @@ namespace Members.PSW.Code.InventorySystem
             {
                 var effect = healthChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
                 var gold = goldChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
+                var damage = damageChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
                 BattleInventory inventory = null;
                 if (gold != null)
                 {
@@ -186,9 +218,30 @@ namespace Members.PSW.Code.InventorySystem
                 if (gold != null)
                 {
                     string goldResult = ApplyGoldChoice(gold, inventory);
-                    binding.Data.resultText[index] = result == null ? goldResult : result + "\n" + goldResult;
+                    result = result == null ? goldResult : result + "\n" + goldResult;
+                    binding.Data.resultText[index] = result;
+                }
+                if (damage != null)
+                {
+                    string damageResult = ApplyDamageChoice(damage);
+                    binding.Data.resultText[index] = result == null ? damageResult : result + "\n" + damageResult;
                 }
             }
+        }
+
+        private string ApplyDamageChoice(DamageChoice effect)
+        {
+            if (eventChannel == null || !ServiceLocator.TryGet<IBattleDataStorage>(out var storage) || storage.Instance == null)
+                return "모험 정보가 없어 피해 배율 효과를 적용하지 못했습니다.";
+            return _damageModifiers.TryAdd(effect.outgoingPercent, effect.incomingPercent, effect.battles)
+                ? effect.resultText : "피해 배율 설정이 올바르지 않아 효과를 적용하지 못했습니다.";
+        }
+
+        private void HandleBattleResult(OnBattleResult result)
+        {
+            if (_hasCompletedBattle) return;
+            _hasCompletedBattle = true;
+            _completedBattleScene = SceneManager.GetActiveScene().handle;
         }
 
         private static string ApplyGoldChoice(GoldChoice effect, BattleInventory inventory)
@@ -267,6 +320,13 @@ namespace Members.PSW.Code.InventorySystem
 
         private void HandleSceneUnloaded(Scene scene)
         {
+            // Keep modifiers through the finishing hit/death effects. Count once when
+            // leaving a completed battle; abandoning a scene without a result costs no duration.
+            if (_hasCompletedBattle && scene.handle == _completedBattleScene)
+            {
+                _damageModifiers.CompleteBattle();
+                _hasCompletedBattle = false;
+            }
             _pendingManagers.RemoveAll(manager => manager == null || manager.gameObject.scene == scene);
             for (int i = _bindings.Count - 1; i >= 0; i--)
                 if (_bindings[i].Manager == null || _bindings[i].Manager.gameObject.scene == scene)

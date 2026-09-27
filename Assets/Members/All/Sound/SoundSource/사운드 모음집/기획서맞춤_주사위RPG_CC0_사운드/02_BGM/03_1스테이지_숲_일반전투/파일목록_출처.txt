@@ -1,0 +1,24 @@
+﻿1스테이지 · 숲 · 일반전투 — 파일 목록과 출처
+================================================================
+음원 1개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] Action1 - Encounter With The Witches.ogg
+추천: 1순위
+한국어 설명: Encounter With The Witches
+기획서 사용 장면: 숲 일반 전투와 마법 적 조우의 1순위 후보. 주사위와 스킬 효과음이 들리도록 배경 볼륨을 조절해 비교
+작품 / 원본 팩: JRPG Pack 5 Action
+제작자: SubspaceAudio (Juhani Junkala)
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/jrpg-pack-5-action
+다운로드 링크: https://opengameart.org/sites/default/files/JRPG%20Music%20Pack%20%235%20%5BAction%5D%20by%20Juhani%20Junkala.zip
+압축 파일 안 원본 경로: Action1 - Encounter With The Witches.ogg
+파일 정보: OGG / 1분 53.5초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+루프 정보: 제작자 페이지는 Indie Game Music Loops 수록곡으로 소개. ZIP INFO에 CC0 확인. 개별 seamless 명시 및 연결 청음 확인은 없음.
+선정 근거: 제작자 팩 분류와 원본 곡명에 기반한 장면 추천; 청음 평가는 미실시

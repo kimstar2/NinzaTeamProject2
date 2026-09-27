@@ -1,0 +1,54 @@
+﻿환경 · 숲 · 화산 — 파일 목록과 출처
+================================================================
+음원 3개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] Forest_Ambience.mp3
+추천: 1순위
+한국어 설명: 평온한 숲 분위기 루프
+기획서 사용 장면: 1스테이지 숲의 노드 지도·조용한 숲 사건
+작품 / 원본 팩: Forest Ambience
+제작자: TinyWorlds
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/forest-ambience
+다운로드 링크: https://opengameart.org/sites/default/files/Forest_Ambience.mp3
+파일 정보: MP3 / 44.74초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 원문 루프 표시를 바탕으로 반복 후보; 실제 이음새 확인 필요
+적용 참고: 제작자 분류는 Music이며 seamless loop 명시. 순수 새·바람 현장음이라고 단정하지 않기.
+
+[02] cooking_with_cover_01.ogg
+추천: 대안
+한국어 설명: 뚜껑 덮인 끓는 물 루프
+기획서 사용 장면: 2스테이지 용암 지대의 끓는 기포 배경 후보
+작품 / 원본 팩: boiling water loops — with cover
+제작자: TinyWorlds
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/boiling-water-loops
+다운로드 링크: https://opengameart.org/sites/default/files/cooking_with_cover_01.ogg
+파일 정보: OGG / 4.86초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 원문 루프 표시를 바탕으로 반복 후보; 실제 이음새 확인 필요
+적용 참고: 원본은 물을 끓인 녹음. 용암 표현용 대체 소재이며 실제 용암 소리가 아님.
+
+[03] loop_bubbles_02.ogg
+추천: 대안
+한국어 설명: 거품 루프 02
+기획서 사용 장면: 마그마 슬라임·용암 웅덩이·독 웅덩이의 기포 배경
+작품 / 원본 팩: 40 CC0 water / splash / slime SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/water-splash-slime-sfx.zip
+압축 파일 안 원본 경로: loop_bubbles_02.ogg
+파일 정보: OGG / 7.33초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 원문 루프 표시를 바탕으로 반복 후보; 실제 이음새 확인 필요
+적용 참고: 원본은 물/거품 루프. 독·용암은 장면 대응 제안.

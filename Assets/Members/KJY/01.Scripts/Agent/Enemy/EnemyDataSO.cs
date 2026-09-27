@@ -19,7 +19,9 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         [field: SerializeField] public EnemyRank Rank { get; private set; }
         [field: SerializeField, Min(0.1f)] public float DicePower { get; private set; } = 1f;
         [field: SerializeField, Min(0.1f)] public float HealthMultiplier { get; private set; } = 1f;
-        public float EncounterHealth => MaxHealth * HealthMultiplier;
+        [field: SerializeField, Min(0f), Tooltip("0보다 크면 스테이지·등급 배율을 무시하고 이 체력으로 고정")]
+        public float FixedHealth { get; private set; }
+        public float EncounterHealth => FixedHealth > 0f ? FixedHealth : MaxHealth * HealthMultiplier;
         public event Action<EnemyDataSO> OnDead;
 
         public EnemyDataSO CreateBattleCopy(float health, float power, EnemyRank rank)

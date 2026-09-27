@@ -2,6 +2,8 @@
 
 namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
 {
+    using DevLib.ServiceLocator;
+
     public abstract class AbstractSkillLogic : MonoBehaviour
     {
         public SkillLogicExecutor Executor {get; private set;}
@@ -13,10 +15,16 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         }
 
         protected float GetStat(ApplyStatType statType)
-            => Executor.SkillData.GetScaledStat(statType, BaseLevel) * Executor.PowerMultiplier;
+        {
+            float value = Executor.SkillData.GetScaledStat(statType, BaseLevel) * Executor.PowerMultiplier;
+            if (statType == ApplyStatType.Damage && ServiceLocator.TryGet<IDamageModifiers>(out var modifiers))
+                value *= modifiers.GetOutgoingMultiplier(Executor.Attacker.AgentData);
+            return value;
+        }
 
         protected void ApplyConfiguredStats(AbstractSelector target)
         {
+            if (Executor.IsMissed) return;
             foreach (SkillApplyStat stat in Executor.SkillData.ApplyStats)
             {
                 float value = GetStat(stat.ApplyStatType);

@@ -1,0 +1,460 @@
+﻿RPG · 아이템 · 문 · 무기 — 파일 목록과 출처
+========================================================
+음원 파일 수: 41개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] beltHandle1.ogg
+한국어 설명 / 추천 장면: 허리띠 만지기 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/beltHandle1.ogg
+파일 정보: OGG / 0.28초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[002] beltHandle2.ogg
+한국어 설명 / 추천 장면: 허리띠 만지기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/beltHandle2.ogg
+파일 정보: OGG / 0.48초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[003] bookClose.ogg
+한국어 설명 / 추천 장면: 책 닫기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookClose.ogg
+파일 정보: OGG / 0.23초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[004] bookFlip1.ogg
+한국어 설명 / 추천 장면: 책장 넘기기 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookFlip1.ogg
+파일 정보: OGG / 0.77초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[005] bookFlip2.ogg
+한국어 설명 / 추천 장면: 책장 넘기기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookFlip2.ogg
+파일 정보: OGG / 0.43초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[006] bookFlip3.ogg
+한국어 설명 / 추천 장면: 책장 넘기기 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookFlip3.ogg
+파일 정보: OGG / 0.23초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[007] bookOpen.ogg
+한국어 설명 / 추천 장면: 책 펼치기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookOpen.ogg
+파일 정보: OGG / 0.15초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[008] bookPlace1.ogg
+한국어 설명 / 추천 장면: 책 내려놓기 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookPlace1.ogg
+파일 정보: OGG / 0.28초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[009] bookPlace2.ogg
+한국어 설명 / 추천 장면: 책 내려놓기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookPlace2.ogg
+파일 정보: OGG / 0.35초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[010] bookPlace3.ogg
+한국어 설명 / 추천 장면: 책 내려놓기 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/bookPlace3.ogg
+파일 정보: OGG / 0.26초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[011] chop.ogg
+한국어 설명 / 추천 장면: 내리찍기·찍어 자르기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/chop.ogg
+파일 정보: OGG / 0.24초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[012] cloth1.ogg
+한국어 설명 / 추천 장면: 천·옷감 움직임 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/cloth1.ogg
+파일 정보: OGG / 0.66초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[013] cloth2.ogg
+한국어 설명 / 추천 장면: 천·옷감 움직임 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/cloth2.ogg
+파일 정보: OGG / 0.42초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[014] cloth3.ogg
+한국어 설명 / 추천 장면: 천·옷감 움직임 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/cloth3.ogg
+파일 정보: OGG / 0.48초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[015] cloth4.ogg
+한국어 설명 / 추천 장면: 천·옷감 움직임 · 변형 4
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/cloth4.ogg
+파일 정보: OGG / 0.38초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[016] clothBelt.ogg
+한국어 설명 / 추천 장면: 천 허리띠 움직임
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/clothBelt.ogg
+파일 정보: OGG / 0.72초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[017] clothBelt2.ogg
+한국어 설명 / 추천 장면: 천 허리띠 움직임 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/clothBelt2.ogg
+파일 정보: OGG / 0.75초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[018] creak1.ogg
+한국어 설명 / 추천 장면: 삐걱거림 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/creak1.ogg
+파일 정보: OGG / 0.66초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[019] creak2.ogg
+한국어 설명 / 추천 장면: 삐걱거림 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/creak2.ogg
+파일 정보: OGG / 0.83초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[020] creak3.ogg
+한국어 설명 / 추천 장면: 삐걱거림 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/creak3.ogg
+파일 정보: OGG / 0.34초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[021] doorClose_1.ogg
+한국어 설명 / 추천 장면: 문 닫기 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/doorClose_1.ogg
+파일 정보: OGG / 0.68초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[022] doorClose_2.ogg
+한국어 설명 / 추천 장면: 문 닫기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/doorClose_2.ogg
+파일 정보: OGG / 0.61초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[023] doorClose_3.ogg
+한국어 설명 / 추천 장면: 문 닫기 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/doorClose_3.ogg
+파일 정보: OGG / 0.71초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[024] doorClose_4.ogg
+한국어 설명 / 추천 장면: 문 닫기 · 변형 4
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/doorClose_4.ogg
+파일 정보: OGG / 0.60초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[025] doorOpen_1.ogg
+한국어 설명 / 추천 장면: 문 열기 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/doorOpen_1.ogg
+파일 정보: OGG / 0.92초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[026] doorOpen_2.ogg
+한국어 설명 / 추천 장면: 문 열기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/doorOpen_2.ogg
+파일 정보: OGG / 1.41초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[027] drawKnife1.ogg
+한국어 설명 / 추천 장면: 칼 뽑기 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/drawKnife1.ogg
+파일 정보: OGG / 0.40초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[028] drawKnife2.ogg
+한국어 설명 / 추천 장면: 칼 뽑기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/drawKnife2.ogg
+파일 정보: OGG / 0.45초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[029] drawKnife3.ogg
+한국어 설명 / 추천 장면: 칼 뽑기 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/drawKnife3.ogg
+파일 정보: OGG / 0.48초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[030] dropLeather.ogg
+한국어 설명 / 추천 장면: 가죽 물건 떨어뜨리기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/dropLeather.ogg
+파일 정보: OGG / 0.42초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[031] handleCoins.ogg
+한국어 설명 / 추천 장면: 동전 만지기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/handleCoins.ogg
+파일 정보: OGG / 0.85초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[032] handleCoins2.ogg
+한국어 설명 / 추천 장면: 동전 만지기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/handleCoins2.ogg
+파일 정보: OGG / 0.34초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[033] handleSmallLeather.ogg
+한국어 설명 / 추천 장면: 작은 가죽 물건 만지기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/handleSmallLeather.ogg
+파일 정보: OGG / 0.34초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[034] handleSmallLeather2.ogg
+한국어 설명 / 추천 장면: 작은 가죽 물건 만지기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/handleSmallLeather2.ogg
+파일 정보: OGG / 0.31초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[035] knifeSlice.ogg
+한국어 설명 / 추천 장면: 칼로 베기
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/knifeSlice.ogg
+파일 정보: OGG / 0.60초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[036] knifeSlice2.ogg
+한국어 설명 / 추천 장면: 칼로 베기 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/knifeSlice2.ogg
+파일 정보: OGG / 0.57초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[037] metalClick.ogg
+한국어 설명 / 추천 장면: 금속 딸깍 소리
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/metalClick.ogg
+파일 정보: OGG / 0.45초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[038] metalLatch.ogg
+한국어 설명 / 추천 장면: 금속 걸쇠 움직임
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/metalLatch.ogg
+파일 정보: OGG / 0.26초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[039] metalPot1.ogg
+한국어 설명 / 추천 장면: 금속 냄비 소리 · 변형 1
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/metalPot1.ogg
+파일 정보: OGG / 1.46초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[040] metalPot2.ogg
+한국어 설명 / 추천 장면: 금속 냄비 소리 · 변형 2
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/metalPot2.ogg
+파일 정보: OGG / 0.94초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[041] metalPot3.ogg
+한국어 설명 / 추천 장면: 금속 냄비 소리 · 변형 3
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/metalPot3.ogg
+파일 정보: OGG / 0.91초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)

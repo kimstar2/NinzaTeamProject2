@@ -1,0 +1,113 @@
+﻿숲 · 독 · 뿌리 · 슬라임 — 파일 목록과 출처
+================================================================
+음원 7개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] bubble_01.ogg
+추천: 1순위
+한국어 설명: 거품 효과음 01
+기획서 사용 장면: 숲 적이 독을 생성·부여하는 순간
+작품 / 원본 팩: 40 CC0 water / splash / slime SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/water-splash-slime-sfx.zip
+압축 파일 안 원본 경로: bubble_01.ogg
+파일 정보: OGG / 0.70초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[02] Earth Element Magic Spell_3.ogg
+추천: 1순위
+한국어 설명: 뿌리·흙 부스러짐 느낌의 대지 주문
+기획서 사용 장면: 숲 적의 풀·뿌리 공격과 구속 효과
+작품 / 원본 팩: Earth Element Magic Spell
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/earth-element-magic-spell
+다운로드 링크: https://opengameart.org/sites/default/files/Earth%20Element%20Magic%20Spell_3.ogg
+파일 정보: OGG / 1.89초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[03] slime_01.ogg
+추천: 1순위
+한국어 설명: 슬라임 질감 효과음 01
+기획서 사용 장면: 숲 슬라임의 공격
+작품 / 원본 팩: 40 CC0 water / splash / slime SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/water-splash-slime-sfx.zip
+압축 파일 안 원본 경로: slime_01.ogg
+파일 정보: OGG / 0.47초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[04] wood_cracking_01.ogg
+추천: 1순위
+한국어 설명: 나무 갈라지는 소리 01
+기획서 사용 장면: 뿌리 구속 해제·나무 계열 숲 적의 피격
+작품 / 원본 팩: 100 CC0 metal and wood SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/100-cc0-metal-and-wood-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/100-CC0-wood-metal-SFX.zip
+압축 파일 안 원본 경로: wood_cracking_01.ogg
+파일 정보: OGG / 0.18초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[05] bubble_03.ogg
+추천: 대안
+한국어 설명: 거품 효과음 03
+기획서 사용 장면: 독 상태가 발동하는 턴의 짧은 신호
+작품 / 원본 팩: 40 CC0 water / splash / slime SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/water-splash-slime-sfx.zip
+압축 파일 안 원본 경로: bubble_03.ogg
+파일 정보: OGG / 0.55초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본은 거품. 독 효과로 쓰는 것은 연출상 대응.
+
+[06] slime_05.ogg
+추천: 대안
+한국어 설명: 슬라임 질감 효과음 05
+기획서 사용 장면: 숲 슬라임의 피격 또는 독액 접촉
+작품 / 원본 팩: 40 CC0 water / splash / slime SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/water-splash-slime-sfx.zip
+압축 파일 안 원본 경로: slime_05.ogg
+파일 정보: OGG / 0.46초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[07] slime_09.ogg
+추천: 대안
+한국어 설명: 슬라임 질감 효과음 09
+기획서 사용 장면: 독성 몬스터의 끈적한 공격 변형
+작품 / 원본 팩: 40 CC0 water / splash / slime SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/water-splash-slime-sfx.zip
+압축 파일 안 원본 경로: slime_09.ogg
+파일 정보: OGG / 0.65초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음

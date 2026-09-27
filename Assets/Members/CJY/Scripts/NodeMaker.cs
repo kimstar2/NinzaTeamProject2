@@ -250,7 +250,7 @@ namespace Members.CJY.Scripts
                 int seed = unchecked(_mapSeed ^ (column * 397) ^ (lane * 7919));
                 node.battleData = _stageData.CreateBattle(column, _lastColumn, seed, rank);
             }
-            var item = objectPool.Pop(node.IsBattle ? "BattleNode" : "Node");
+            var item = objectPool.Pop("Node");
             item.GameObject.transform.SetParent(parent, false);
             node.view = item.GameObject.GetComponent<NodeBT>();
             node.view.Init(node, nodeEvent);

@@ -1,0 +1,114 @@
+﻿마법사 · 빛 · 번개 · 얼음 — 파일 목록과 출처
+================================================================
+음원 7개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] coldsnap.wav
+추천: 1순위
+한국어 설명: 차갑게 얼어붙는 효과음
+기획서 사용 장면: 마법사 서리지대 생성·동결 부여
+작품 / 원본 팩: Ice spells
+제작자: bart; source recording Stephan at pdsounds
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/ice-spells
+다운로드 링크: https://opengameart.org/sites/default/files/icespells.zip
+압축 파일 안 원본 경로: coldsnap.wav
+파일 정보: WAV / 2.65초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[02] electricspell.ogg
+추천: 1순위
+한국어 설명: 전기 주문 모음 1
+기획서 사용 장면: 마법사 연쇄 번개의 첫 시전·첫 적 감전
+작품 / 원본 팩: Spell sounds — electricspell
+제작자: Augmentality (Brandon Morris), uploaded by HaelDB
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/spell-sounds
+다운로드 링크: https://opengameart.org/sites/default/files/electricspell.ogg
+파일 정보: OGG / 20.70초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본 한 파일에 서로 다른 길이의 주문이 여러 번 들어 있는 구성. 통째 원샷 재생에 앞서 청음하고 필요한 구간을 지정해야 함. 원본은 보존.
+
+[03] electricspell2.ogg
+추천: 대안
+한국어 설명: 전기 주문 모음 2
+기획서 사용 장면: 연쇄 번개의 다음 적 전이·감전 부여 대안
+작품 / 원본 팩: Spell sounds — electricspell2
+제작자: Augmentality (Brandon Morris), uploaded by HaelDB
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/spell-sounds
+다운로드 링크: https://opengameart.org/sites/default/files/electricspell2.ogg
+파일 정보: OGG / 21.10초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본 한 파일에 서로 다른 길이의 주문이 여러 번 들어 있는 구성. 통째 원샷 재생에 앞서 청음하고 필요한 구간을 지정해야 함. 원본은 보존.
+
+[04] ice.wav
+추천: 대안
+한국어 설명: 얼음 주문 효과음
+기획서 사용 장면: 서리지대의 얼음 반응·얼음 상태 효과
+작품 / 원본 팩: Ice spells
+제작자: bart; source recording Stephan at pdsounds
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/ice-spells
+다운로드 링크: https://opengameart.org/sites/default/files/icespells.zip
+압축 파일 안 원본 경로: ice.wav
+파일 정보: WAV / 1.16초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[05] laserLarge_000.ogg
+추천: 대안
+한국어 설명: 대형 레이저 · 변형 000
+기획서 사용 장면: 광선 스킬의 작은 시작·강한 타격 후보; 원본 레이저 음원을 빛 마법에 대응
+작품 / 원본 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+압축 파일 안 원본 경로: Audio/laserLarge_000.ogg
+파일 정보: OGG / 0.68초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[06] laserSmall_000.ogg
+추천: 대안
+한국어 설명: 소형 레이저 · 변형 000
+기획서 사용 장면: 광선 스킬의 작은 시작·강한 타격 후보; 원본 레이저 음원을 빛 마법에 대응
+작품 / 원본 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+압축 파일 안 원본 경로: Audio/laserSmall_000.ogg
+파일 정보: OGG / 0.24초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[07] spell_01.ogg
+추천: 대안
+한국어 설명: 일반 주문 효과음 01
+기획서 사용 장면: 점점 강해지는 광선의 시전 시작·빛 스킬 발동 보조
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: spell_01.ogg
+파일 정보: OGG / 0.63초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본은 일반 주문. 광선 전용·지속 루프로 분류된 소리는 아니므로 빛 연출에 맞는지 확인.

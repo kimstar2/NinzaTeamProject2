@@ -1,5 +1,7 @@
 using _LumenLib.PoolingSystem.Runtime;
 using DG.Tweening;
+using Members.KJY._01.Scripts;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,6 +37,8 @@ namespace Members.CJY.Scripts
         [SerializeField] private float maxScale = 1.3f;
         private Vector3 startScale;
 
+        [field: SerializeField, ReadOnly] public BattleData CurrentBattleData { get; private set; }
+
         protected virtual void Awake()
         {
             iconImage = GetComponent<Image>();
@@ -43,11 +47,12 @@ namespace Members.CJY.Scripts
             startScale = rectTransform.localScale;
         }
 
-        public virtual void Init(NodeConnect nodeObj, NodeEvent nodeEv)
+        public void Init(NodeConnect nodeObj, NodeEvent nodeEv)
         {
             iconImage.sprite = nodeObj.info.icon;
             nodeEvent = nodeEv;
             node = nodeObj;
+            CurrentBattleData = nodeObj.battleData;
         }
 
         public void SetVisual(NodeState state)
@@ -78,10 +83,11 @@ namespace Members.CJY.Scripts
             nodeEvent.SelectNode(node);
         }
         
-        public virtual void ResetItem()
+        public void ResetItem()
         {
             iconImage.sprite = null;
             node = null;
+            CurrentBattleData = null;
         }
 
         protected virtual void OnDisable()

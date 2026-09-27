@@ -1,0 +1,691 @@
+﻿레트로 · 레이저 · 전자음 — 파일 목록과 출처
+========================================================
+음원 파일 수: 62개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] highDown.ogg
+한국어 설명 / 추천 장면: 높은 음역의 하강 전자음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/highDown.ogg
+파일 정보: OGG / 0.52초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[002] highUp.ogg
+한국어 설명 / 추천 장면: 높은 음역의 상승 전자음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/highUp.ogg
+파일 정보: OGG / 0.55초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[003] laser1.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser1.ogg
+파일 정보: OGG / 1.10초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[004] laser2.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser2.ogg
+파일 정보: OGG / 1.09초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[005] laser3.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser3.ogg
+파일 정보: OGG / 0.98초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[006] laser4.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 4
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser4.ogg
+파일 정보: OGG / 1.13초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[007] laser5.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 5
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser5.ogg
+파일 정보: OGG / 1.01초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[008] laser6.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 6
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser6.ogg
+파일 정보: OGG / 0.97초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[009] laser7.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 7
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser7.ogg
+파일 정보: OGG / 0.93초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[010] laser8.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 8
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser8.ogg
+파일 정보: OGG / 0.99초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[011] laser9.ogg
+한국어 설명 / 추천 장면: 레이저 발사 · 변형 9
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/laser9.ogg
+파일 정보: OGG / 1.01초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[012] lowDown.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 하강 전자음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/lowDown.ogg
+파일 정보: OGG / 0.78초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[013] lowRandom.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 불규칙 전자음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/lowRandom.ogg
+파일 정보: OGG / 0.55초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[014] lowThreeTone.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 세 음 전자음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/lowThreeTone.ogg
+파일 정보: OGG / 1.02초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[015] pepSound1.ogg
+한국어 설명 / 추천 장면: 경쾌한 전자 효과음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/pepSound1.ogg
+파일 정보: OGG / 0.52초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[016] pepSound2.ogg
+한국어 설명 / 추천 장면: 경쾌한 전자 효과음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/pepSound2.ogg
+파일 정보: OGG / 0.55초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[017] pepSound3.ogg
+한국어 설명 / 추천 장면: 경쾌한 전자 효과음 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/pepSound3.ogg
+파일 정보: OGG / 0.44초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[018] pepSound4.ogg
+한국어 설명 / 추천 장면: 경쾌한 전자 효과음 · 변형 4
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/pepSound4.ogg
+파일 정보: OGG / 0.63초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[019] pepSound5.ogg
+한국어 설명 / 추천 장면: 경쾌한 전자 효과음 · 변형 5
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/pepSound5.ogg
+파일 정보: OGG / 0.63초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[020] phaseJump1.ogg
+한국어 설명 / 추천 장면: 위상 점프 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaseJump1.ogg
+파일 정보: OGG / 0.47초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[021] phaseJump2.ogg
+한국어 설명 / 추천 장면: 위상 점프 전자음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaseJump2.ogg
+파일 정보: OGG / 0.39초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[022] phaseJump3.ogg
+한국어 설명 / 추천 장면: 위상 점프 전자음 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaseJump3.ogg
+파일 정보: OGG / 0.44초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[023] phaseJump4.ogg
+한국어 설명 / 추천 장면: 위상 점프 전자음 · 변형 4
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaseJump4.ogg
+파일 정보: OGG / 0.47초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[024] phaseJump5.ogg
+한국어 설명 / 추천 장면: 위상 점프 전자음 · 변형 5
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaseJump5.ogg
+파일 정보: OGG / 0.42초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[025] phaserDown1.ogg
+한국어 설명 / 추천 장면: 페이저 하강 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserDown1.ogg
+파일 정보: OGG / 0.47초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[026] phaserDown2.ogg
+한국어 설명 / 추천 장면: 페이저 하강 전자음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserDown2.ogg
+파일 정보: OGG / 0.31초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[027] phaserDown3.ogg
+한국어 설명 / 추천 장면: 페이저 하강 전자음 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserDown3.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[028] phaserUp1.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp1.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[029] phaserUp2.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp2.ogg
+파일 정보: OGG / 0.42초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[030] phaserUp3.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp3.ogg
+파일 정보: OGG / 0.52초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[031] phaserUp4.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 4
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp4.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[032] phaserUp5.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 5
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp5.ogg
+파일 정보: OGG / 0.31초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[033] phaserUp6.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 6
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp6.ogg
+파일 정보: OGG / 0.34초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[034] phaserUp7.ogg
+한국어 설명 / 추천 장면: 페이저 상승 전자음 · 변형 7
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/phaserUp7.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[035] powerUp1.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp1.ogg
+파일 정보: OGG / 1.20초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[036] powerUp10.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 10
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp10.ogg
+파일 정보: OGG / 0.65초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[037] powerUp11.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 11
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp11.ogg
+파일 정보: OGG / 0.68초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[038] powerUp12.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 12
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp12.ogg
+파일 정보: OGG / 0.86초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[039] powerUp2.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp2.ogg
+파일 정보: OGG / 0.47초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[040] powerUp3.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp3.ogg
+파일 정보: OGG / 1.15초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[041] powerUp4.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 4
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp4.ogg
+파일 정보: OGG / 0.55초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[042] powerUp5.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 5
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp5.ogg
+파일 정보: OGG / 0.44초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[043] powerUp6.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 6
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp6.ogg
+파일 정보: OGG / 0.44초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[044] powerUp7.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 7
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp7.ogg
+파일 정보: OGG / 0.52초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[045] powerUp8.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 8
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp8.ogg
+파일 정보: OGG / 0.57초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[046] powerUp9.ogg
+한국어 설명 / 추천 장면: 파워업·강화 전자음 · 변형 9
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/powerUp9.ogg
+파일 정보: OGG / 0.55초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[047] spaceTrash1.ogg
+한국어 설명 / 추천 장면: 우주 잡음 효과 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/spaceTrash1.ogg
+파일 정보: OGG / 1.45초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[048] spaceTrash2.ogg
+한국어 설명 / 추천 장면: 우주 잡음 효과 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/spaceTrash2.ogg
+파일 정보: OGG / 1.47초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[049] spaceTrash3.ogg
+한국어 설명 / 추천 장면: 우주 잡음 효과 · 변형 3
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/spaceTrash3.ogg
+파일 정보: OGG / 1.54초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[050] spaceTrash4.ogg
+한국어 설명 / 추천 장면: 우주 잡음 효과 · 변형 4
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/spaceTrash4.ogg
+파일 정보: OGG / 1.48초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[051] spaceTrash5.ogg
+한국어 설명 / 추천 장면: 우주 잡음 효과 · 변형 5
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/spaceTrash5.ogg
+파일 정보: OGG / 1.43초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[052] threeTone1.ogg
+한국어 설명 / 추천 장면: 세 음 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/threeTone1.ogg
+파일 정보: OGG / 0.83초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[053] threeTone2.ogg
+한국어 설명 / 추천 장면: 세 음 전자음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/threeTone2.ogg
+파일 정보: OGG / 0.87초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[054] tone1.ogg
+한국어 설명 / 추천 장면: 단일 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/tone1.ogg
+파일 정보: OGG / 0.66초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[055] twoTone1.ogg
+한국어 설명 / 추천 장면: 두 음 전자음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/twoTone1.ogg
+파일 정보: OGG / 0.72초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[056] twoTone2.ogg
+한국어 설명 / 추천 장면: 두 음 전자음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/twoTone2.ogg
+파일 정보: OGG / 0.73초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[057] zap1.ogg
+한국어 설명 / 추천 장면: 찌릿한 전기 효과음 · 변형 1
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/zap1.ogg
+파일 정보: OGG / 1.02초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[058] zap2.ogg
+한국어 설명 / 추천 장면: 찌릿한 전기 효과음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/zap2.ogg
+파일 정보: OGG / 1.23초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[059] zapThreeToneDown.ogg
+한국어 설명 / 추천 장면: 세 음 하강 전기 효과음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/zapThreeToneDown.ogg
+파일 정보: OGG / 1.33초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[060] zapThreeToneUp.ogg
+한국어 설명 / 추천 장면: 세 음 상승 전기 효과음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/zapThreeToneUp.ogg
+파일 정보: OGG / 1.20초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[061] zapTwoTone.ogg
+한국어 설명 / 추천 장면: 두 음 전기 효과음
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/zapTwoTone.ogg
+파일 정보: OGG / 1.31초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[062] zapTwoTone2.ogg
+한국어 설명 / 추천 장면: 두 음 전기 효과음 · 변형 2
+작품 / 팩: Digital Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/digital-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/digital-audio/216eac4753-1677590265/kenney_digital-audio.zip
+ZIP 안의 원본 경로: Audio/zapTwoTone2.ogg
+파일 정보: OGG / 1.20초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)

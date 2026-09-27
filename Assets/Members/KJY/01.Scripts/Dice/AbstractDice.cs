@@ -50,9 +50,34 @@ namespace Members.KJY._01.Scripts.Dice
         }
         protected Vector3 GetRandom()
         {
-            currenRan = Random.Range(0, diceFaces.Count);
+            currenRan = PickFace();
             return diceFaces[currenRan].Range;
         }
+
+        // 면마다 가중치로 뽑는다. 기본은 모두 1이라 균등 확률
+        private int PickFace()
+        {
+            float total = 0f;
+            _faceWeights.Clear();
+            foreach (DiceFaceStruct face in diceFaces)
+            {
+                float weight = Mathf.Max(0f, GetFaceWeight(face.Type));
+                _faceWeights.Add(weight);
+                total += weight;
+            }
+            if (total <= 0f) return Random.Range(0, diceFaces.Count);
+
+            float pick = Random.value * total;
+            for (int i = 0; i < _faceWeights.Count; i++)
+            {
+                pick -= _faceWeights[i];
+                if (pick < 0f) return i;
+            }
+            return _faceWeights.Count - 1;
+        }
+
+        private readonly List<float> _faceWeights = new();
+        protected virtual float GetFaceWeight(DiceFaceType faceType) => 1f;
         
         protected abstract void CompleteRoll();
     }

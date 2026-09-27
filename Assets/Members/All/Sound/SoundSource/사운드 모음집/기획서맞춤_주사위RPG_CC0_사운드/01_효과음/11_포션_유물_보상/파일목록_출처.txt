@@ -1,0 +1,129 @@
+﻿포션 · 유물 · 보상 — 파일 목록과 출처
+================================================================
+음원 8개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] bottle-open-01.flac
+추천: 1순위
+한국어 설명: 병 여는 소리 01
+기획서 사용 장면: 회복 포션 사용 시작
+작품 / 원본 팩: Liquid Bottle Drink Set
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/liquid-bottle-drink-set
+다운로드 링크: https://opengameart.org/sites/default/files/qubodup-bottle-and-drink-sounds.7z
+압축 파일 안 원본 경로: qubodup-bottle-and-drink-sounds/bottle-open-01.flac
+파일 정보: FLAC / 0.68초 / 96000 Hz / 1채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[02] bottle-shake-01.flac
+추천: 1순위
+한국어 설명: 병 속 액체 흔드는 소리 01
+기획서 사용 장면: 포션 선택·꺼내기·사용 준비
+작품 / 원본 팩: Liquid Bottle Drink Set
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/liquid-bottle-drink-set
+다운로드 링크: https://opengameart.org/sites/default/files/qubodup-bottle-and-drink-sounds.7z
+압축 파일 안 원본 경로: qubodup-bottle-and-drink-sounds/bottle-shake-01.flac
+파일 정보: FLAC / 0.16초 / 96000 Hz / 1채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[03] item_coins_01.ogg
+추천: 1순위
+한국어 설명: 동전 아이템 효과음 01
+기획서 사용 장면: 전투 종료 후 재화 보상 획득
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: item_coins_01.ogg
+파일 정보: OGG / 0.41초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[04] item_gem_01.ogg
+추천: 1순위
+한국어 설명: 보석 아이템 효과음 01
+기획서 사용 장면: 유물 획득·희귀 보상 선택
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: item_gem_01.ogg
+파일 정보: OGG / 0.25초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[05] swallow-01.flac
+추천: 1순위
+한국어 설명: 액체 삼키는 소리 01
+기획서 사용 장면: 포션 마시기·소모 확정
+작품 / 원본 팩: Liquid Bottle Drink Set
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/liquid-bottle-drink-set
+다운로드 링크: https://opengameart.org/sites/default/files/qubodup-bottle-and-drink-sounds.7z
+압축 파일 안 원본 경로: qubodup-bottle-and-drink-sounds/swallow-01.flac
+파일 정보: FLAC / 0.34초 / 96000 Hz / 1채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[06] bottle-close-01.flac
+추천: 대안
+한국어 설명: 병 닫는 소리 01
+기획서 사용 장면: 포션 관련 상호작용 마무리
+작품 / 원본 팩: Liquid Bottle Drink Set
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/liquid-bottle-drink-set
+다운로드 링크: https://opengameart.org/sites/default/files/qubodup-bottle-and-drink-sounds.7z
+압축 파일 안 원본 경로: qubodup-bottle-and-drink-sounds/bottle-close-01.flac
+파일 정보: FLAC / 1.27초 / 96000 Hz / 1채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 게임에서 포션을 완전히 소비한다면 생략 가능.
+
+[07] glass_001.ogg
+추천: 대안
+한국어 설명: 유리 느낌의 알림음 · 변형 001
+기획서 사용 장면: 유물 또는 주사위 면 보상 획득에 사용할 짧은 반짝임·뜯는 음색 후보
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/glass_001.ogg
+파일 정보: OGG / 0.28초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[08] pluck_001.ogg
+추천: 대안
+한국어 설명: 튕기는 소리 · 변형 001
+기획서 사용 장면: 유물 또는 주사위 면 보상 획득에 사용할 짧은 반짝임·뜯는 음색 후보
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/pluck_001.ogg
+파일 정보: OGG / 0.10초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시

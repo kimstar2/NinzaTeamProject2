@@ -1,0 +1,812 @@
+﻿SF · 우주 · 장치 — 파일 목록과 출처
+========================================================
+음원 파일 수: 73개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] computerNoise_000.ogg
+한국어 설명 / 추천 장면: 컴퓨터 전자 잡음 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/computerNoise_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[002] computerNoise_001.ogg
+한국어 설명 / 추천 장면: 컴퓨터 전자 잡음 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/computerNoise_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[003] computerNoise_002.ogg
+한국어 설명 / 추천 장면: 컴퓨터 전자 잡음 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/computerNoise_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[004] computerNoise_003.ogg
+한국어 설명 / 추천 장면: 컴퓨터 전자 잡음 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/computerNoise_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[005] doorClose_000.ogg
+한국어 설명 / 추천 장면: SF 문 닫기 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/doorClose_000.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[006] doorClose_001.ogg
+한국어 설명 / 추천 장면: SF 문 닫기 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/doorClose_001.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[007] doorClose_002.ogg
+한국어 설명 / 추천 장면: SF 문 닫기 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/doorClose_002.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[008] doorOpen_000.ogg
+한국어 설명 / 추천 장면: SF 문 열기 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/doorOpen_000.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[009] doorOpen_001.ogg
+한국어 설명 / 추천 장면: SF 문 열기 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/doorOpen_001.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[010] doorOpen_002.ogg
+한국어 설명 / 추천 장면: SF 문 열기 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/doorOpen_002.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[011] engineCircular_000.ogg
+한국어 설명 / 추천 장면: 회전하는 엔진 소리 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/engineCircular_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[012] engineCircular_001.ogg
+한국어 설명 / 추천 장면: 회전하는 엔진 소리 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/engineCircular_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[013] engineCircular_002.ogg
+한국어 설명 / 추천 장면: 회전하는 엔진 소리 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/engineCircular_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[014] engineCircular_003.ogg
+한국어 설명 / 추천 장면: 회전하는 엔진 소리 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/engineCircular_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[015] engineCircular_004.ogg
+한국어 설명 / 추천 장면: 회전하는 엔진 소리 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/engineCircular_004.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[016] explosionCrunch_000.ogg
+한국어 설명 / 추천 장면: 파쇄감 있는 폭발 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/explosionCrunch_000.ogg
+파일 정보: OGG / 0.78초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[017] explosionCrunch_001.ogg
+한국어 설명 / 추천 장면: 파쇄감 있는 폭발 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/explosionCrunch_001.ogg
+파일 정보: OGG / 1.36초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[018] explosionCrunch_002.ogg
+한국어 설명 / 추천 장면: 파쇄감 있는 폭발 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/explosionCrunch_002.ogg
+파일 정보: OGG / 1.26초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[019] explosionCrunch_003.ogg
+한국어 설명 / 추천 장면: 파쇄감 있는 폭발 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/explosionCrunch_003.ogg
+파일 정보: OGG / 1.55초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[020] explosionCrunch_004.ogg
+한국어 설명 / 추천 장면: 파쇄감 있는 폭발 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/explosionCrunch_004.ogg
+파일 정보: OGG / 1.98초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[021] forceField_000.ogg
+한국어 설명 / 추천 장면: 에너지 방어막 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/forceField_000.ogg
+파일 정보: OGG / 0.95초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[022] forceField_001.ogg
+한국어 설명 / 추천 장면: 에너지 방어막 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/forceField_001.ogg
+파일 정보: OGG / 0.95초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[023] forceField_002.ogg
+한국어 설명 / 추천 장면: 에너지 방어막 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/forceField_002.ogg
+파일 정보: OGG / 0.96초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[024] forceField_003.ogg
+한국어 설명 / 추천 장면: 에너지 방어막 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/forceField_003.ogg
+파일 정보: OGG / 0.96초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[025] forceField_004.ogg
+한국어 설명 / 추천 장면: 에너지 방어막 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/forceField_004.ogg
+파일 정보: OGG / 0.95초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[026] impactMetal_000.ogg
+한국어 설명 / 추천 장면: 금속 충돌 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/impactMetal_000.ogg
+파일 정보: OGG / 0.63초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[027] impactMetal_001.ogg
+한국어 설명 / 추천 장면: 금속 충돌 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/impactMetal_001.ogg
+파일 정보: OGG / 0.69초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[028] impactMetal_002.ogg
+한국어 설명 / 추천 장면: 금속 충돌 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/impactMetal_002.ogg
+파일 정보: OGG / 0.47초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[029] impactMetal_003.ogg
+한국어 설명 / 추천 장면: 금속 충돌 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/impactMetal_003.ogg
+파일 정보: OGG / 0.78초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[030] impactMetal_004.ogg
+한국어 설명 / 추천 장면: 금속 충돌 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/impactMetal_004.ogg
+파일 정보: OGG / 0.39초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[031] laserLarge_000.ogg
+한국어 설명 / 추천 장면: 대형 레이저 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserLarge_000.ogg
+파일 정보: OGG / 0.68초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[032] laserLarge_001.ogg
+한국어 설명 / 추천 장면: 대형 레이저 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserLarge_001.ogg
+파일 정보: OGG / 0.72초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[033] laserLarge_002.ogg
+한국어 설명 / 추천 장면: 대형 레이저 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserLarge_002.ogg
+파일 정보: OGG / 0.74초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[034] laserLarge_003.ogg
+한국어 설명 / 추천 장면: 대형 레이저 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserLarge_003.ogg
+파일 정보: OGG / 0.72초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[035] laserLarge_004.ogg
+한국어 설명 / 추천 장면: 대형 레이저 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserLarge_004.ogg
+파일 정보: OGG / 0.69초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[036] laserRetro_000.ogg
+한국어 설명 / 추천 장면: 레트로 레이저 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserRetro_000.ogg
+파일 정보: OGG / 0.24초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[037] laserRetro_001.ogg
+한국어 설명 / 추천 장면: 레트로 레이저 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserRetro_001.ogg
+파일 정보: OGG / 0.24초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[038] laserRetro_002.ogg
+한국어 설명 / 추천 장면: 레트로 레이저 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserRetro_002.ogg
+파일 정보: OGG / 0.26초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[039] laserRetro_003.ogg
+한국어 설명 / 추천 장면: 레트로 레이저 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserRetro_003.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[040] laserRetro_004.ogg
+한국어 설명 / 추천 장면: 레트로 레이저 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserRetro_004.ogg
+파일 정보: OGG / 0.28초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[041] laserSmall_000.ogg
+한국어 설명 / 추천 장면: 소형 레이저 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserSmall_000.ogg
+파일 정보: OGG / 0.24초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[042] laserSmall_001.ogg
+한국어 설명 / 추천 장면: 소형 레이저 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserSmall_001.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[043] laserSmall_002.ogg
+한국어 설명 / 추천 장면: 소형 레이저 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserSmall_002.ogg
+파일 정보: OGG / 0.34초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[044] laserSmall_003.ogg
+한국어 설명 / 추천 장면: 소형 레이저 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserSmall_003.ogg
+파일 정보: OGG / 0.30초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[045] laserSmall_004.ogg
+한국어 설명 / 추천 장면: 소형 레이저 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/laserSmall_004.ogg
+파일 정보: OGG / 0.41초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[046] lowFrequency_explosion_000.ogg
+한국어 설명 / 추천 장면: 저주파 폭발 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/lowFrequency_explosion_000.ogg
+파일 정보: OGG / 2.00초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[047] lowFrequency_explosion_001.ogg
+한국어 설명 / 추천 장면: 저주파 폭발 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/lowFrequency_explosion_001.ogg
+파일 정보: OGG / 1.00초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[048] slime_000.ogg
+한국어 설명 / 추천 장면: 점액·슬라임 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/slime_000.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[049] slime_001.ogg
+한국어 설명 / 추천 장면: 점액·슬라임 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/slime_001.ogg
+파일 정보: OGG / 4.71초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[050] spaceEngine_000.ogg
+한국어 설명 / 추천 장면: 우주선 엔진 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngine_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[051] spaceEngine_001.ogg
+한국어 설명 / 추천 장면: 우주선 엔진 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngine_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[052] spaceEngine_002.ogg
+한국어 설명 / 추천 장면: 우주선 엔진 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngine_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[053] spaceEngine_003.ogg
+한국어 설명 / 추천 장면: 우주선 엔진 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngine_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[054] spaceEngineLarge_000.ogg
+한국어 설명 / 추천 장면: 대형 우주선 엔진 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLarge_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[055] spaceEngineLarge_001.ogg
+한국어 설명 / 추천 장면: 대형 우주선 엔진 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLarge_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[056] spaceEngineLarge_002.ogg
+한국어 설명 / 추천 장면: 대형 우주선 엔진 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLarge_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[057] spaceEngineLarge_003.ogg
+한국어 설명 / 추천 장면: 대형 우주선 엔진 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLarge_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[058] spaceEngineLarge_004.ogg
+한국어 설명 / 추천 장면: 대형 우주선 엔진 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLarge_004.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[059] spaceEngineLow_000.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 우주선 엔진 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLow_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[060] spaceEngineLow_001.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 우주선 엔진 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLow_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[061] spaceEngineLow_002.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 우주선 엔진 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLow_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[062] spaceEngineLow_003.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 우주선 엔진 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLow_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[063] spaceEngineLow_004.ogg
+한국어 설명 / 추천 장면: 낮은 음역의 우주선 엔진 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineLow_004.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[064] spaceEngineSmall_000.ogg
+한국어 설명 / 추천 장면: 소형 우주선 엔진 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineSmall_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[065] spaceEngineSmall_001.ogg
+한국어 설명 / 추천 장면: 소형 우주선 엔진 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineSmall_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[066] spaceEngineSmall_002.ogg
+한국어 설명 / 추천 장면: 소형 우주선 엔진 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineSmall_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[067] spaceEngineSmall_003.ogg
+한국어 설명 / 추천 장면: 소형 우주선 엔진 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineSmall_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[068] spaceEngineSmall_004.ogg
+한국어 설명 / 추천 장면: 소형 우주선 엔진 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/spaceEngineSmall_004.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[069] thrusterFire_000.ogg
+한국어 설명 / 추천 장면: 추진기 분사 · 변형 000
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/thrusterFire_000.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[070] thrusterFire_001.ogg
+한국어 설명 / 추천 장면: 추진기 분사 · 변형 001
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/thrusterFire_001.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[071] thrusterFire_002.ogg
+한국어 설명 / 추천 장면: 추진기 분사 · 변형 002
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/thrusterFire_002.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[072] thrusterFire_003.ogg
+한국어 설명 / 추천 장면: 추진기 분사 · 변형 003
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/thrusterFire_003.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[073] thrusterFire_004.ogg
+한국어 설명 / 추천 장면: 추진기 분사 · 변형 004
+작품 / 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+ZIP 안의 원본 경로: Audio/thrusterFire_004.ogg
+파일 정보: OGG / 5.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)

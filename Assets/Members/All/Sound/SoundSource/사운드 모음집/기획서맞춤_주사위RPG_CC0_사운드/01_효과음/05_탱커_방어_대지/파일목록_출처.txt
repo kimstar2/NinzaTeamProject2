@@ -1,0 +1,129 @@
+﻿탱커 · 방어 · 대지 — 파일 목록과 출처
+================================================================
+음원 8개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] impactMetal_heavy_000.ogg
+추천: 1순위
+한국어 설명: 금속의 강한 충격 · 변형 000
+기획서 사용 장면: 무력화·절대 방어·카운터의 방패 접촉과 금속 충돌
+작품 / 원본 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+압축 파일 안 원본 경로: Audio/impactMetal_heavy_000.ogg
+파일 정보: OGG / 0.17초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[02] impactMetal_medium_000.ogg
+추천: 1순위
+한국어 설명: 금속의 중간 강도 충격 · 변형 000
+기획서 사용 장면: 무력화·절대 방어·카운터의 방패 접촉과 금속 충돌
+작품 / 원본 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+압축 파일 안 원본 경로: Audio/impactMetal_medium_000.ogg
+파일 정보: OGG / 0.27초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[03] impactPlate_heavy_000.ogg
+추천: 1순위
+한국어 설명: 판의 강한 충격 · 변형 000
+기획서 사용 장면: 대지의 분노에서 방패가 땅에 닿는 순간의 타격 후보
+작품 / 원본 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+압축 파일 안 원본 경로: Audio/impactPlate_heavy_000.ogg
+파일 정보: OGG / 0.49초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[04] metal_hit_01.ogg
+추천: 1순위
+한국어 설명: 금속 타격 01
+기획서 사용 장면: 탱커 방패가 공격을 막는 순간
+작품 / 원본 팩: 100 CC0 metal and wood SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/100-cc0-metal-and-wood-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/100-CC0-wood-metal-SFX.zip
+압축 파일 안 원본 경로: metal_hit_01.ogg
+파일 정보: OGG / 0.27초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[05] metal_slam_01.ogg
+추천: 1순위
+한국어 설명: 금속을 세게 닫거나 부딪히는 소리
+기획서 사용 장면: 탱커 절대방어 전개 시 무게감 있는 방패 동작
+작품 / 원본 팩: 100 CC0 metal and wood SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/100-cc0-metal-and-wood-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/100-CC0-wood-metal-SFX.zip
+압축 파일 안 원본 경로: metal_slam_01.ogg
+파일 정보: OGG / 0.57초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[06] stones_01.ogg
+추천: 1순위
+한국어 설명: 돌 효과음 01
+기획서 사용 장면: 탱커 대지의 분노에서 방패가 지면을 내려치는 순간
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: stones_01.ogg
+파일 정보: OGG / 0.68초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 실제 지면 강타 녹음이 아닌 돌 효과음의 장면 대응 후보.
+
+[07] forceField_000.ogg
+추천: 대안
+한국어 설명: 에너지 방어막 · 변형 000
+기획서 사용 장면: 보호막 생성·절대 방어의 대안; 원본 SF 방어장 효과이므로 판타지 마법음과 비교해 선택
+작품 / 원본 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+압축 파일 안 원본 경로: Audio/forceField_000.ogg
+파일 정보: OGG / 0.95초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[08] metal_hit_03.ogg
+추천: 대안
+한국어 설명: 금속 타격 03
+기획서 사용 장면: 탱커 반격 적중·용암 갑옷에 막힌 공격
+작품 / 원본 팩: 100 CC0 metal and wood SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/100-cc0-metal-and-wood-sfx
+다운로드 링크: https://opengameart.org/sites/default/files/100-CC0-wood-metal-SFX.zip
+압축 파일 안 원본 경로: metal_hit_03.ogg
+파일 정보: OGG / 0.40초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음

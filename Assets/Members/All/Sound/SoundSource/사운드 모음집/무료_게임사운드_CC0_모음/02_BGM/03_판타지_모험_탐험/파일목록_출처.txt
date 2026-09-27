@@ -1,0 +1,31 @@
+﻿판타지 · 모험 · 탐험 — 파일 목록과 출처
+========================================================
+음원 파일 수: 2개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] a_path_which_leads_to_somewhere_0.ogg
+한국어 설명 / 추천 장면: 느긋한 신스, 신비한 길, 대화 장면, 90 BPM
+작품 / 팩: A Path Which leads to somewhere
+제작자: Centurion_of_war
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/a-path-which-leads-to-somewhere
+원본 다운로드 링크: https://opengameart.org/sites/default/files/a_path_which_leads_to_somewhere_0.ogg
+파일 정보: OGG / 42.67초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: loopable 태그; 루프 경계는 확인 권장
+
+[002] fairy_adventure_bpm140_0.ogg
+한국어 설명 / 추천 장면: 판타지 필드 탐험, 요정, 140 BPM
+작품 / 팩: Fairy Adventure
+제작자: MintoDog
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/fairy-adventure
+원본 다운로드 링크: https://opengameart.org/sites/default/files/fairy_adventure_bpm140_0.ogg
+파일 정보: OGG / 2분 24.0초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 루프 가능 명시

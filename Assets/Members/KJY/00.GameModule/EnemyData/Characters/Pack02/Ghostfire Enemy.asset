@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
   <MaxHealth>k__BackingField: 42
   <AttackType>k__BackingField: 2
-  <EnemyName>k__BackingField: "떠도는 혼불"
+  <EnemyName>k__BackingField: "망령 사신"
   <EnemyAc>k__BackingField: {fileID: 22100000, guid: b04c03f8c198e694f98eaf314f3bcf44, type: 2}
   <EnemyImage>k__BackingField: {fileID: 2893505284880620740, guid: 8c8b550e570204742bc90cce911fead5, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
   <Cost>k__BackingField: 2
-  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 6d26969065555fe691c17f0308df03ea, type: 2}
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 2151e976e802c7efa7e1367e40440ad7, type: 2}
+  <Rank>k__BackingField: 1
+  <FixedHealth>k__BackingField: 300

@@ -13,6 +13,8 @@ namespace Members.KJY._01.Scripts
         [Tooltip("약한 적부터 강한 적 순서")]
         public EnemyDataSO[] enemies;
         public EnemyDataSO boss;
+        [Tooltip("정예 노드에서 반드시 등장하는 적. 비우면 일반 적 중에서 뽑는다")]
+        public EnemyDataSO elite;
         [Header("초반 → 후반")]
         public Vector2Int enemyCount = new(2, 4);
         public Vector2 healthMultiplier = new(1f, 1.35f);
@@ -34,7 +36,9 @@ namespace Members.KJY._01.Scripts
             int width = Mathf.Min(enemies.Length, Mathf.Max(3, enemies.Length / 3));
             int first = Mathf.RoundToInt(progress * (enemies.Length - width));
             var candidates = new List<EnemyDataSO>();
-            for (int i = 0; i < count; i++)
+            bool hasElite = rank == EnemyRank.Elite && elite != null;
+            if (hasElite) picked[0] = elite; // 정예가 앞에 서고 나머지는 일반 적으로 채움
+            for (int i = hasElite ? 1 : 0; i < count; i++)
             {
                 if (rank == EnemyRank.Boss) { picked[i] = boss; break; }
                 if (candidates.Count == 0)

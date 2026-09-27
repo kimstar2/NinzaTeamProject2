@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: ScytheAfterimage Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: bc73cab5e4cb60e45b3abaf783c6050b, type: 3}
+  <SkillName>k__BackingField: "낫의 잔상"
+  <Icon>k__BackingField: {fileID: 6939772521941676478, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "낫을 두 번 휘둘러 매번 {0} 피해를 줍니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 13
+  damageCondition: 0
+  <LifeStealFraction>k__BackingField: 0
+  <Target>k__BackingField: 0
+  <Synergy>k__BackingField: 1
+  <Strength>k__BackingField: 65
+  <Status>k__BackingField: 0
+  <StatusDamage>k__BackingField: 0
+  <StatusTurns>k__BackingField: 0
+  <BonusVsStatus>k__BackingField: 0
+  <BonusDamage>k__BackingField: 0
+  <MissChance>k__BackingField: 0
+  <MissTurns>k__BackingField: 0
+  <HealthCost>k__BackingField: 0
+  <ExecuteThreshold>k__BackingField: 0
+  <StunTurns>k__BackingField: 0
+  <EnemyTargetRule>k__BackingField: 1
+  suitableTypes:
+  - 1
+  - 4

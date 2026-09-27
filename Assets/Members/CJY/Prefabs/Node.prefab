@@ -149,10 +149,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeBT
   poolItem: {fileID: 11400000, guid: 14928970a15941a48a93e01d375e540e, type: 2}
-  currentColor: {r: 0.32941177, g: 0.1764706, b: 0.18431373, a: 1}
+  currentColor: {r: 0.45911938, g: 0.14293335, b: 0.16353732, a: 1}
   movableColor: {r: 1, g: 1, b: 1, a: 1}
-  previewColor: {r: 0.3647059, g: 0.38431373, b: 0.47843137, a: 1}
-  lockedColor: {r: 0.3283019, g: 0.17530082, b: 0.18057674, a: 1}
+  previewColor: {r: 1, g: 1, b: 1, a: 1}
+  lockedColor: {r: 0.30817598, g: 0.30817598, b: 0.30817598, a: 1}
   maxScale: 1.2
 --- !u!114 &-1906745142505875135
 MonoBehaviour:

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46c18d5cdfe4a6d8948c5e0d8eca9d0, type: 3}
+  m_Name: Player_Mage Dice List
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataListSO
+  <Front>k__BackingField: {fileID: 11400000, guid: 4e9b41d789deacc40b9f3961b3ac406e, type: 2}
+  <Back>k__BackingField: {fileID: 11400000, guid: 0ed965b768799874ddb4b6fa6a299725, type: 2}
+  <Left>k__BackingField: {fileID: 11400000, guid: ad88c152cf0e917232ff1e7a7d0aa813, type: 2}
+  <Right>k__BackingField: {fileID: 11400000, guid: b299f997ac788bce461add562776aa3b, type: 2}
+  <Top>k__BackingField: {fileID: 11400000, guid: 27cdd0576e3164327a81e468345cea6b, type: 2}
+  <Bottom>k__BackingField: {fileID: 11400000, guid: 4e7e4d6cade45d3bdfb8ccb4914deda2, type: 2}
+  faceLevels:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1

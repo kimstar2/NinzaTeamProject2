@@ -103,8 +103,9 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
         {
             if (_showLine)
             {
-                // Vector3 dir = _startPos - Executor.Attacker.DefaultPosition.position;
-                Vector3 dir = _startPos - attacker.transform.position;
+                // 실제 전투에서는 Executor의 공격자를, 테스트에서는 attacker를 따라감
+                Vector3 current = Executor != null ? Executor.Attacker.DefaultPosition.position : attacker.transform.position;
+                Vector3 dir = _startPos - current;
                 
                 mainLine.SetPosition(0, dir); //나중에 Executor.Attacker로 변경
                 subLine1.SetPosition(0, dir + Vector3.right * lineDistant.sub1Start + Vector3.up * lineDistant.upSubLine);
@@ -185,6 +186,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
             
             seq.AppendCallback(() =>
             {
+                if (targetCam == null) return;
                 targetCam.Target.TrackingTarget = Executor.Target.DefaultPosition;
                 targetCam.Priority = 15;
             });
@@ -199,19 +201,24 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
             seq.AppendCallback(() =>
             {
                 effectEvent.onEffectImpact?.Invoke();
-                targetCam.Lens.OrthographicSize = 5;
+                if (targetCam != null) targetCam.Lens.OrthographicSize = 5;
             });
             seq.AppendCallback(() => ApplyStat());
             seq.AppendInterval(timeSet.effectDuration/2);
-            
+
             seq.AppendCallback(() => effectEvent.onEffectEnd?.Invoke());
             seq.AppendCallback(() =>
             {
-                targetCam.Priority = 0;
+                if (targetCam != null) targetCam.Priority = 0;
             });
             seq.Append(vignette.DOFade(0, 1f));
             seq.Append(Executor.Attacker.DefaultPosition.DOMove(_startPos, 1f));
-            seq.AppendCallback(() => onSkillFinished?.Invoke());
+            seq.AppendCallback(() =>
+            {
+                _showLine = false;
+                onSkillFinished?.Invoke(); // 프리팹에서 Executor.SkillFinished 연결됨
+                Executor.Remove();
+            });
         }
 
         private void LineFadeOut(Sequence seq)
@@ -232,8 +239,10 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
             seq.Append(lineParent.DOScaleY(0, timeSet.lineFadeDuration));
         }
         
-        public override void ApplyStat()    
+        public override void ApplyStat()
         {
+            // 실제 전투에서는 스킬 데이터의 수치(표식·빗나감·상태이상 포함)를 사용
+            if (Executor != null) { ApplyConfiguredStats(Executor.Target); return; }
             foreach (var applyStat in applyStats)
             {
                 _target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);

@@ -50,3 +50,7 @@ MonoBehaviour:
   forgeBaseCost: 20
   forgeLevelGain: 0.5
   forgeMaxLevel: 3
+  mixedLevelGain: 1
+  gradeUpCostMultiplier: 1.35
+  gradeUpPool: {fileID: 11400000, guid: 307aa93783ab77fac0326a6b48771332, type: 2}
+  gradeUpSpread: 0.3

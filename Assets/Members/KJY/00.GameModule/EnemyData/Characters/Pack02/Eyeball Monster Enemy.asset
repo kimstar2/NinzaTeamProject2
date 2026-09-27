@@ -19,4 +19,4 @@ MonoBehaviour:
   <EnemyImage>k__BackingField: {fileID: -1524728195476994211, guid: 1dbf407022eee144c99442853108ccdd, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
   <Cost>k__BackingField: 2
-  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 0e8f503cc1085a93918e1d340036c041, type: 2}
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 8ae561f55884bacfb29c4948458ac4d6, type: 2}

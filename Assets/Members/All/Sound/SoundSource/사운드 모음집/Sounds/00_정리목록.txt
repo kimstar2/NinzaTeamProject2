@@ -1,0 +1,37 @@
+﻿사운드 정리 목록
+파일명 기준으로 17개를 7개 카테고리에 정리했습니다.
+원본 파일명과 내용은 그대로 유지했습니다.
+출처 웹 검색과 라이선스 검증은 생략했습니다.
+
+[01_BGM_전투]
+Limbus Company - Canto I Battle Theme A2.mp3
+
+[02_전투시작_충격_전환]
+bass-drop-edit_mixdown.mp3
+Bust In (Battle Start) - DELTARUNE Chapter 1 OST.mp3
+
+[03_공격_전투효과]
+gargamel10-sword-slashing-game-sound-effect-2-379229.mp3
+maou_se_battle01.mp3
+
+[04_마법_성속성_얼음]
+holy-sound-louder_9V3Vj6W.mp3
+ice-sound_OqmRp2J.mp3
+rescopicsound-elemental-magic-spell-impact-outgoing-228342.mp3
+
+[05_회복_체력]
+mgs-health.mp3
+sprout-heal.mp3
+undertale-heal-sound.mp3
+yodguard-healing-magic-2-378663.mp3
+
+[06_UI_선택_버튼]
+minecraft_click.mp3
+ps5-selection-button.mp3
+switch-sound.mp3
+undertale-select-sound.mp3
+
+[07_물방울_환경]
+water-droplet-yes.mp3
+
+분류 참고: maou_se_battle01은 구체적인 소리 종류가 파일명에 없어 전투효과로 분류했습니다. mgs-health는 회복 또는 체력 경고일 수 있어 회복·체력 폴더에 배치했습니다.

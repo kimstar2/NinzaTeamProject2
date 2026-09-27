@@ -161,6 +161,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             ActionCommand[] getEnemyAttackData = GetE2PAtkCommands();
             foreach (ActionCommand attackCommand in getEnemyAttackData)
                 _battleObserverService.AddCommand(attackCommand);
+            _battleObserverService.AddCommand(new StatusTickCommand(GetCombatants));
             // 현재 명령(커맨드)들을 알림, 이는 배틀 옵저버가 받게 됨
 
             CurrentPlayerSelector?.OffSetTarget();
@@ -217,6 +218,33 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         }
         
         
+        // 스킬의 대상 규칙에 따라 살아 있는 플레이어 중 하나를 고른다. Default면 null(기존 방식 사용)
+        private PlayerSelector PickPlayerTarget(TargetRule rule)
+        {
+            if (rule == TargetRule.Default) return null;
+            var alive = new List<PlayerSelector>();
+            foreach (var player in _players)
+                if (player != null && !player.IsDead && player.AgentData != null) alive.Add(player);
+            if (alive.Count == 0) return null;
+            if (rule == TargetRule.Random) return alive[UnityEngine.Random.Range(0, alive.Count)];
+
+            PlayerSelector lowest = alive[0];
+            float lowestRatio = float.MaxValue;
+            foreach (var player in alive)
+            {
+                var health = player.MyAgent.HealthModule;
+                float ratio = health.CurrentHealth / Mathf.Max(1f, health.DefaultMaxHealth);
+                if (ratio < lowestRatio) { lowestRatio = ratio; lowest = player; }
+            }
+            return lowest;
+        }
+
+        private IEnumerable<AbstractSelector> GetCombatants()
+        {
+            foreach (var player in _players) yield return player;
+            foreach (var enemy in _enemies) yield return enemy;
+        }
+
         public void SetCombatants(IEnumerable<PlayerSelector> players, IEnumerable<EnemySelector> enemies)
         {
             _players.Clear();
@@ -241,7 +269,9 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 }
                 else
                 {
-                    target = _orderedChain.FirstOrDefault(pair => pair.targetSelector == enemy).playerSelector;
+                    target = PickPlayerTarget(enemy.CurrentSkill.EnemyTargetRule);
+                    if (target == null)
+                        target = _orderedChain.FirstOrDefault(pair => pair.targetSelector == enemy).playerSelector;
                     if (target == null || target.IsDead)
                         target = _players.FirstOrDefault(player => player != null && !player.IsDead);
                 }

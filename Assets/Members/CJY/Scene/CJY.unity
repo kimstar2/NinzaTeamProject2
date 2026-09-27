@@ -111906,6 +111906,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5600198850926839, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: columnCount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600198850926839, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
       propertyPath: battleDataStorage
       value: 
       objectReference: {fileID: 1974194135}

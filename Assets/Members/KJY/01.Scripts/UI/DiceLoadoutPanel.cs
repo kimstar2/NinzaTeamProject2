@@ -121,8 +121,10 @@ namespace Members.KJY._01.Scripts.UI
         {
             if (face == null) return "빈 면입니다.";
             var skill = face.GetSkillDataStruct(_player.AttackType).SkillData;
-            return $"<color=#B5A5F4>{face.MainName}</color>  <size=80%>Lv.{level:0.#}</size>\n" +
-                (skill != null ? $"{skill.SkillName}\n{skill.GetDescription(level)}" : "이 캐릭터가 사용할 수 없는 면입니다.");
+            string body = skill == null ? "이 캐릭터가 사용할 수 없는 면입니다." :
+                !skill.IsSuitable(_player.AttackType) ? $"{skill.SkillName}\n<color=#E57373>직업이 맞지 않아 장착할 수 없습니다. (적합: {skill.SuitableDescription})</color>" :
+                $"{skill.SkillName}\n{skill.GetDescription(level)}";
+            return $"<color=#B5A5F4>{face.MainName}</color>  <size=80%>Lv.{level:0.#}</size>\n" + body;
         }
 
         private void RefreshDescription()
@@ -131,7 +133,7 @@ namespace Members.KJY._01.Scripts.UI
             faceDescription.text = _selected != null ? Describe(_selected.DiceData, _selected.Level) :
                 "가방에서 면을 골라\n바뀔 스킬을 확인하세요.";
             equipButton.interactable = _selected != null && _selected.DiceData != null &&
-                _selected.DiceData.GetSkillDataStruct(_player.AttackType).SkillData != null;
+                _selected.DiceData.CanUse(_player.AttackType);
             notice.text = _selected != null ? $"{playerName.text} · {FaceName(_slot)} 교체" :
                 _items.Count == 0 ? "전투에서 얻은 면이 가방에 모입니다." : $"{FaceName(_slot)} 선택 · 오른쪽에서 교체할 면을 고르세요.";
         }

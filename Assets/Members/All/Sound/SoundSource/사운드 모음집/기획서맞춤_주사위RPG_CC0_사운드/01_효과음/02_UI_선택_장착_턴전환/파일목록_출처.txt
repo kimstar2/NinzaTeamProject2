@@ -1,0 +1,173 @@
+﻿UI · 선택 · 장착 · 턴전환 — 파일 목록과 출처
+================================================================
+음원 11개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] back_001.ogg
+추천: 1순위
+한국어 설명: 뒤로 가기 · 변형 001
+기획서 사용 장면: 메뉴 취소·닫기; 재련 실행 전 뒤로가기
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/back_001.ogg
+파일 정보: OGG / 0.06초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[02] bookFlip1.ogg
+추천: 1순위
+한국어 설명: 책장 넘기기 · 변형 1
+기획서 사용 장면: 사건 설명 또는 유물 정보 창; 두 소리는 상황에 따라 선택
+작품 / 원본 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+압축 파일 안 원본 경로: Audio/bookFlip1.ogg
+파일 정보: OGG / 0.77초 / 48000 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[03] bookOpen.ogg
+추천: 1순위
+한국어 설명: 책 펼치기
+기획서 사용 장면: 사건 설명 또는 유물 정보 창; 두 소리는 상황에 따라 선택
+작품 / 원본 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+압축 파일 안 원본 경로: Audio/bookOpen.ogg
+파일 정보: OGG / 0.15초 / 48000 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[04] click_001.ogg
+추천: 1순위
+한국어 설명: 클릭 · 변형 001
+기획서 사용 장면: 노드 지도·타깃·스킬·유물 선택
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/click_001.ogg
+파일 정보: OGG / 0.10초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[05] confirmation_001.ogg
+추천: 1순위
+한국어 설명: 확인·승인 · 변형 001
+기획서 사용 장면: 되돌릴 수 없는 스킬 장착 확정
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/confirmation_001.ogg
+파일 정보: OGG / 0.29초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[06] confirmation_002.ogg
+추천: 1순위
+한국어 설명: 확인·승인 · 변형 002
+기획서 사용 장면: 플레이어 행동 완료와 적 턴 전환
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/confirmation_002.ogg
+파일 정보: OGG / 0.54초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[07] error_001.ogg
+추천: 1순위
+한국어 설명: 오류·실패 알림 · 변형 001
+기획서 사용 장면: 이미 확정된 행동 등 사용할 수 없는 선택; 리롤 횟수 제한을 뜻하지 않음
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/error_001.ogg
+파일 정보: OGG / 0.16초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[08] question_001.ogg
+추천: 1순위
+한국어 설명: 질문·확인 요청 · 변형 001
+기획서 사용 장면: 사건 노드에서 선택지가 나타나는 순간
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/question_001.ogg
+파일 정보: OGG / 0.49초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[09] select_001.ogg
+추천: 1순위
+한국어 설명: 항목 선택 · 변형 001
+기획서 사용 장면: 노드 지도·타깃·스킬·유물 선택
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/select_001.ogg
+파일 정보: OGG / 0.04초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[10] toggle_001.ogg
+추천: 1순위
+한국어 설명: 켜기·끄기 전환 · 변형 001
+기획서 사용 장면: 주사위 결과 보관(잠금)과 잠금 해제; 최종 스킬 장착 확정음과 구별
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/toggle_001.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[11] toggle_002.ogg
+추천: 1순위
+한국어 설명: 켜기·끄기 전환 · 변형 002
+기획서 사용 장면: 주사위 결과 보관(잠금)과 잠금 해제; 최종 스킬 장착 확정음과 구별
+작품 / 원본 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+압축 파일 안 원본 경로: Audio/toggle_002.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시

@@ -20,4 +20,4 @@ MonoBehaviour:
   <ImageColor>k__BackingField: {fileID: 11400000, guid: 1be6c6f07b614ef4e8fe3425146e7be0, type: 2}
   <Cost>k__BackingField: 3
   <CurrentHealth>k__BackingField: 0
-  defaultDiceList: {fileID: 11400000, guid: cedf277fdf68be04d885b2df29d5fac3, type: 2}
+  defaultDiceList: {fileID: 11400000, guid: 065f62dadd003947788a1d49165def75, type: 2}

@@ -51,10 +51,13 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         }
     }
     
-    public class PlayerDiceRollManager : AbstractDiceRollManager , IGetRiskPenalty
+    public class PlayerDiceRollManager : AbstractDiceRollManager , IGetRiskPenalty , ILuckProvider
     {
         [field:SerializeField] public List<PlayerDiceRollCheck> DiceRollCheckList {get; private set;}
-        [SerializeField] private float maxRiskLevel; 
+        [SerializeField] private float maxRiskLevel;
+        [Tooltip("위험도가 최대일 때의 행운. 위험도에 비례해서 오른다")]
+        [SerializeField, Min(0f)] private float luckAtMaxRisk = 1f;
+        private float _bonusLuck;
         [Min(1f),SerializeField] private float riskLevelIncreaseMulti;
         [SerializeField] private float riskLevelIncrease;
         private float _maxRiskPenalty;
@@ -70,12 +73,17 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         {
             base.InitializeModules();
             ServiceLocator.Register<IGetRiskPenalty>(this);
+            ServiceLocator.Register<ILuckProvider>(this);
         }
 
         private void OnDestroy()
         {
             ServiceLocator.UnRegister<IGetRiskPenalty>();
+            ServiceLocator.UnRegister<ILuckProvider>();
         }
+
+        public float Luck => (maxRiskLevel > 0f ? _riskLevel / maxRiskLevel : 0f) * luckAtMaxRisk + _bonusLuck;
+        public void AddBonusLuck(float amount) => _bonusLuck = Mathf.Max(0f, _bonusLuck + amount);
 
         private void Start()
         {

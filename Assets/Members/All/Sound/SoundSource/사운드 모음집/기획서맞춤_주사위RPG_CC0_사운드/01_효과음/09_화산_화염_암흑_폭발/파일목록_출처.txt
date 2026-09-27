@@ -1,0 +1,177 @@
+﻿화산 · 화염 · 암흑 · 폭발 — 파일 목록과 출처
+================================================================
+음원 11개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] explosionCrunch_000.ogg
+추천: 1순위
+한국어 설명: 파쇄감 있는 폭발 · 변형 000
+기획서 사용 장면: 화산 폭발·폭탄 문어 폭발·일식 광역 폭발의 타격 후보
+작품 / 원본 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+압축 파일 안 원본 경로: Audio/explosionCrunch_000.ogg
+파일 정보: OGG / 0.78초 / 44100 Hz / 1채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[02] fout-01.flac
+추천: 1순위
+한국어 설명: 어둠 주문 01
+기획서 사용 장면: 마법사 낙인 부여·암흑 표식 생성
+작품 / 원본 팩: 3 dark magic spells
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/3-dark-magic-spells
+다운로드 링크: https://opengameart.org/sites/default/files/dark_magic.7z
+압축 파일 안 원본 경로: dark_magic/fout-01.flac
+파일 정보: FLAC / 2.84초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[03] fout-02.flac
+추천: 1순위
+한국어 설명: 어둠 주문 02
+기획서 사용 장면: 마법사 보라색 속박·사신 계열 적의 저주
+작품 / 원본 팩: 3 dark magic spells
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/3-dark-magic-spells
+다운로드 링크: https://opengameart.org/sites/default/files/dark_magic.7z
+압축 파일 안 원본 경로: dark_magic/fout-02.flac
+파일 정보: FLAC / 1.22초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[04] lowFrequency_explosion_000.ogg
+추천: 1순위
+한국어 설명: 저주파 폭발 · 변형 000
+기획서 사용 장면: 보스 분화·대폭발의 낮고 무거운 충격 보조 후보
+작품 / 원본 팩: Sci-fi Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/sci-fi-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/sci-fi-sounds/6b296f9ecf-1677589334/kenney_sci-fi-sounds.zip
+압축 파일 안 원본 경로: Audio/lowFrequency_explosion_000.ogg
+파일 정보: OGG / 2.00초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[05] sfx100v2_stones_03.ogg
+추천: 1순위
+한국어 설명: 돌 효과음 03
+기획서 사용 장면: 용암 골렘·화산 딱정벌레의 암석 공격과 파편
+작품 / 원본 팩: 100 CC0 SFX #2
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/100-cc0-sfx-2
+다운로드 링크: https://opengameart.org/sites/default/files/sfx_100_v2.zip
+압축 파일 안 원본 경로: sfx100v2_stones_03.ogg
+파일 정보: OGG / 0.53초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[06] spell_fire_01.ogg
+추천: 1순위
+한국어 설명: 화염 주문 01
+기획서 사용 장면: 화산의 불 악마가 화염 공격을 시전
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: spell_fire_01.ogg
+파일 정보: OGG / 1.06초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[07] spell_fire_05.ogg
+추천: 1순위
+한국어 설명: 화염 주문 05
+기획서 사용 장면: 마왕의 분화·용암 공격 발동
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: spell_fire_05.ogg
+파일 정보: OGG / 1.24초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본은 화염 주문. 분화 전용 소리와는 구분.
+
+[08] fout-03.flac
+추천: 대안
+한국어 설명: 어둠 주문 03
+기획서 사용 장면: 마왕의 폭발 낙인 예고 또는 일식의 암흑 시전
+작품 / 원본 팩: 3 dark magic spells
+제작자: qubodup
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/3-dark-magic-spells
+다운로드 링크: https://opengameart.org/sites/default/files/dark_magic.7z
+압축 파일 안 원본 경로: dark_magic/fout-03.flac
+파일 정보: FLAC / 3.92초 / 44100 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[09] sfx100v2_thunder_01.ogg
+추천: 대안
+한국어 설명: 천둥 효과음
+기획서 사용 장면: 마왕 분화·과열 폭주·보스 강공격의 저음 충격 보조
+작품 / 원본 팩: 100 CC0 SFX #2
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/100-cc0-sfx-2
+다운로드 링크: https://opengameart.org/sites/default/files/sfx_100_v2.zip
+압축 파일 안 원본 경로: sfx100v2_thunder_01.ogg
+파일 정보: OGG / 5.26초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본은 천둥. 화산 폭발 실황으로 표기하지 않기.
+
+[10] spell_fire_03.ogg
+추천: 대안
+한국어 설명: 화염 주문 03
+기획서 사용 장면: 폭탄 문어의 폭발 공격·화염 명중
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: spell_fire_03.ogg
+파일 정보: OGG / 1.93초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본 분류는 화염 주문. 실제 폭탄 폭발 녹음으로 단정하지 않기.
+
+[11] spell_fire_07.ogg
+추천: 대안
+한국어 설명: 화염 주문 07
+기획서 사용 장면: 마법사 일식의 광역 폭발 또는 마왕 폭발 낙인 발동
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: spell_fire_07.ogg
+파일 정보: OGG / 0.65초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+적용 참고: 원본은 화염 주문. 암흑 폭발과 어울리는지는 청음 후 결정.

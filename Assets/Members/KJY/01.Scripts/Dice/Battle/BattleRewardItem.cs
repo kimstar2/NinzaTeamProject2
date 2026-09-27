@@ -39,12 +39,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             title.text = string.IsNullOrWhiteSpace(face.MainName) ? face.name : face.MainName;
             var grade = face.DiceGrade;
             gradeMark.color = grade != null ? grade.GradeColor : Color.white;
-            string gradeName = grade == null ? "일반" : grade.Grade switch
-            {
-                DiceGrade.Uncommon => "고급",
-                DiceGrade.Rare => "희귀",
-                _ => "일반"
-            };
+            string gradeName = grade == null ? DiceGradeSO.GetName(DiceGrade.Common) : grade.DisplayName;
             detail.text = $"{gradeName}  ·  Lv.{level:0.#}";
         }
     }

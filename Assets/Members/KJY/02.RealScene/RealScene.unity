@@ -21351,7 +21351,11 @@ MonoBehaviour:
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   forgeBaseCost: 20
   forgeLevelGain: 0.5
+  mixedLevelGain: 1
   forgeMaxLevel: 3
+  gradeUpCostMultiplier: 1.35
+  gradeUpPool: {fileID: 11400000, guid: 307aa93783ab77fac0326a6b48771332, type: 2}
+  gradeUpSpread: 0.3
 --- !u!4 &1537673671
 Transform:
   m_ObjectHideFlags: 0

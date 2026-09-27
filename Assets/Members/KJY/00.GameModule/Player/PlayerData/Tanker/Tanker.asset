@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Tanker
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Player.PlayerDataSO
   <MaxHealth>k__BackingField: 150
-  <AttackType>k__BackingField: 1
+  <AttackType>k__BackingField: 4
   <PlayerType>k__BackingField: 0
   <AnimCon>k__BackingField: {fileID: 22100000, guid: 6a4b52f32a2353e42bcae2249a9c1d90, type: 2}
   <PlayerImage>k__BackingField: {fileID: 868370677313445676, guid: 2dcedc8bf419ed344b909a329e79e58f, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: e4c420ea4a0436045ad1733a3fdf6f00, type: 2}
   <Cost>k__BackingField: 1
   <CurrentHealth>k__BackingField: 0
-  defaultDiceList: {fileID: 11400000, guid: cedf277fdf68be04d885b2df29d5fac3, type: 2}
+  defaultDiceList: {fileID: 11400000, guid: 52d230092499632842ca133780e1df28, type: 2}
