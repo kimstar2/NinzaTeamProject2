@@ -14,6 +14,7 @@ namespace Members.KJY._01.Scripts.Command
         [field:SerializeField] public AbstractSelector TargetSelector { get; private set; }
         
         private UniTaskCompletionSource _nextSignal;
+        private CancellationToken _token;
         
         
         public ActionCommand(AbstractSelector attacker , AbstractSelector targetSelector)
@@ -25,7 +26,7 @@ namespace Members.KJY._01.Scripts.Command
         public void SetNextSignal(CancellationToken token)
         {
             _nextSignal = new UniTaskCompletionSource();
-            _nextSignal.Task.ToCancellationToken(token);
+            _token = token;
         }
 
         public async UniTask ExecuteAction()
@@ -33,12 +34,12 @@ namespace Members.KJY._01.Scripts.Command
             UniTask nextTask = _nextSignal.Task; // 스킬이 바로 끝나도 기다릴 Task는 미리 잡아둠
             if (TryExecuteSkill()) return;
             
-            await nextTask;
+            await nextTask.AttachExternalCancellation(_token);
         }
 
         private bool TryExecuteSkill()
         {
-            if (Attacker.IsDead || TargetSelector.IsDead)
+            if (Attacker == null || TargetSelector == null || Attacker.IsDead || TargetSelector.IsDead)
             {
                 MoveNext();
                 return true;

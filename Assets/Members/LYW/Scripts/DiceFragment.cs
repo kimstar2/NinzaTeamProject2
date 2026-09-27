@@ -2,6 +2,7 @@
 using Members.LYW.Scripts.MySystem.Events;
 using Members.LYW.Scripts.System;
 using Members.LYW.Scripts.System.Events;
+using Members.PSW.Code.InventorySystem;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,12 +13,12 @@ namespace Members.LYW.Scripts
     public class DiceFragment : MonoBehaviour, IPointerClickHandler
     {
         private Image _fragmentImage;
-        public DiceDataSO _fragment { get; private set; }
+        public RewardDiceFragmentSO _fragment { get; private set; }
         public bool isSelected { get; private set; } = false;
         public int index {get; private set;}
         public static int SelectedValue { get; private set; } = 0;
         public static void ResetSelectedValue() => SelectedValue = 0;
-        public void Init(DiceDataSO fragment)
+        public void Init(RewardDiceFragmentSO fragment)
         {
             _fragmentImage = GetComponent<Image>();
             _fragment = fragment;

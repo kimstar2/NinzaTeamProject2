@@ -1,3 +1,4 @@
+using Members.KJY._01.Scripts.UI;
 using System.Collections.Generic;
 using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Agent.Player;
@@ -9,6 +10,7 @@ using UnityEngine.SceneManagement;
 
 namespace Members.KJY._01.Scripts.Service
 {
+    [DefaultExecutionOrder(-500)]
     public class BattleDataStorage : MonoBehaviour , IBattleDataStorage
     {
         [field:SerializeField] public List<StageDataSO> StageDataList { get; private set; }
@@ -19,6 +21,8 @@ namespace Members.KJY._01.Scripts.Service
         [field: SerializeField, Min(0)] public int CurrentStage { get; set; }
         private BattleDataSO _runtimeBattle;
         private bool _isOwner;
+        private string _returnScene, _mapKey, _mapCheckpoint;
+        public bool IsRunComplete { get; private set; }
 
         public BattleDataStorage Instance => this;
         public StageDataSO CurrentStageData => StageDataList != null && CurrentStage >= 0 &&
@@ -32,6 +36,8 @@ namespace Members.KJY._01.Scripts.Service
                 return;
             }
             _isOwner = true;
+            transform.SetParent(null);
+            DontDestroyOnLoad(gameObject);
             ServiceLocator.Register<IBattleDataStorage>(this);
             runTimeTanker = Instantiate(runTimeTanker);
             runTimeDealer = Instantiate(runTimeDealer);
@@ -56,7 +62,43 @@ namespace Members.KJY._01.Scripts.Service
         [ContextMenu("d")]
         public void Tp()
         {
-            SceneManager.LoadScene(battleScene);
+            SceneTransition.Load(battleScene);
+        }
+
+        public void SetReturnPoint(string mapKey)
+        {
+            _returnScene = SceneManager.GetActiveScene().path;
+            _mapKey = mapKey;
+            _mapCheckpoint = PlayerPrefs.GetString(mapKey, string.Empty);
+        }
+
+        public void FinishBattle(bool victory)
+        {
+            if (!victory)
+            {
+                if (!string.IsNullOrEmpty(_mapKey)) PlayerPrefs.SetString(_mapKey, _mapCheckpoint);
+                foreach (var player in GetRunTimePlayerData()) player.RecoverAfterDefeat();
+            }
+            else if (GetBattleData().EncounterRank == EnemyRank.Boss)
+            {
+                if (CurrentStage + 1 < StageDataList.Count) CurrentStage++;
+                else IsRunComplete = true;
+            }
+            PlayerPrefs.Save();
+        }
+
+        public void ReturnToMap()
+        {
+            if (!string.IsNullOrEmpty(_returnScene)) SceneTransition.Load(_returnScene);
+        }
+
+        public void ResetRun()
+        {
+            ReleaseBattle();
+            CurrentStage = 0;
+            IsRunComplete = false;
+            foreach (var player in GetRunTimePlayerData()) player.Init();
+            for (int i = 0; i < StageDataList.Count; i++) PlayerPrefs.DeleteKey($"MapSaveData.Stage{i}");
         }
 
         public bool TrySetBattle(BattleData data)
@@ -71,7 +113,7 @@ namespace Members.KJY._01.Scripts.Service
             }
             _runtimeBattle = Instantiate(battleData);
             _runtimeBattle.hideFlags = HideFlags.DontSave;
-            _runtimeBattle.SetBattle(enemies, data.gold, $"스테이지 {CurrentStage + 1}", data.rank);
+            _runtimeBattle.SetBattle(enemies, data.gold, CurrentStageData.stageName, data.rank);
             return true;
         }
 

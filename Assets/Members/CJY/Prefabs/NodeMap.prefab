@@ -815,8 +815,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80fc3803774e50e408ee1732dfc26ba5, type: 2}
   - {fileID: 11400000, guid: 4a2603655d8177e43a2b7f7a8fb694ff, type: 2}
   - {fileID: 11400000, guid: 4709e2cebdb852d4d889c0a44b152f92, type: 2}
-  - {fileID: 11400000, guid: 2c07b89ecd3ced642aa7540db17fd327, type: 2}
   objectPool: {fileID: 1218214289613331309}
+  battleDataStorage: {fileID: 0}
   columnCount: 15
   minNodeCount: 2
   maxNodeCount: 3
@@ -840,6 +840,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de01f14b49a412ea3baaaf2a6267821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeEvent
+  nodeScenes:
+  - <Type>k__BackingField: 4
+    <Scene>k__BackingField: 5
+    <ImmediatelyChangeScene>k__BackingField: 1
+    onNodeSelected:
+      m_PersistentCalls:
+        m_Calls: []
+  battleDataStorage: {fileID: 0}
+  battlePanel: {fileID: 0}
 --- !u!1 &6355342776536573060
 GameObject:
   m_ObjectHideFlags: 0

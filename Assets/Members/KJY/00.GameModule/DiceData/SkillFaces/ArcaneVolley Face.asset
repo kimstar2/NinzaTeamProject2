@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: ArcaneVolley Face
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uB9F9\uACF5\uC758 \uBA74"
+  <Description>k__BackingField: "\uBAA8\uB4E0 \uC5ED\uD560\uC774 \uAC15\uB825\uD55C
+    \uACF5\uACA9\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4. \uD790\uB7EC\uB3C4 \uC2E0\uC131\uD55C
+    \uBE5B\uC73C\uB85C \uC801\uC744 \uACF5\uACA9\uD569\uB2C8\uB2E4."
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: -8687731574678683240, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 4238349195380458671, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: d48cdc9993b1b30479386dffbbd8def1, type: 2}

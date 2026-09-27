@@ -1,5 +1,7 @@
 ﻿using JetBrains.Annotations;
 using UnityEngine;
+using DevLib.ServiceLocator;
+using Members.KJY._01.Scripts.Service;
 
 namespace Members.LYW.Scripts.Event
 {
@@ -28,8 +30,12 @@ namespace Members.LYW.Scripts.Event
 
         public void SetPlayerStatus([CanBeNull] ChangeStatusDataSO changeStatusData)
         {
-            Debug.Log("플레이어 값 변동됨.");
-            //플레이어 json 에서 changeStatusData 만큼씩 제거하는 로직 작성
+            if (changeStatusData == null || !ServiceLocator.TryGet<IBattleDataStorage>(out var storage)) return;
+            foreach (var player in storage.Instance.GetRunTimePlayerData())
+            {
+                if (changeStatusData.health > 0) player.Heal(changeStatusData.health);
+                else player.TakeDamage(-changeStatusData.health);
+            }
         }
     }
 }

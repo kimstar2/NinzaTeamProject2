@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Solar Eclipse Skill
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Skill.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 68410c4408bcdb94ab2d35a4c91133ca, type: 3}
-  <SkillName>k__BackingField: Solar Eclipse
+  <SkillName>k__BackingField: 일식
   <SkillDescription>k__BackingField: xxx

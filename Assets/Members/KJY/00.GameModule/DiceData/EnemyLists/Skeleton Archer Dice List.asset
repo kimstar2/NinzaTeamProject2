@@ -14,7 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataListSO
   <Front>k__BackingField: {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
   <Back>k__BackingField: {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
-  <Left>k__BackingField: {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
+  <Left>k__BackingField: {fileID: 11400000, guid: 319b319390c04a73a3362f97cc9abb0c, type: 2}
   <Right>k__BackingField: {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
   <Top>k__BackingField: {fileID: 11400000, guid: b2da5355826a07340838d46256e86666, type: 2}
   <Bottom>k__BackingField: {fileID: 11400000, guid: c740f069f5b624a4c990f47f137614ec, type: 2}
+  faceLevels:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1

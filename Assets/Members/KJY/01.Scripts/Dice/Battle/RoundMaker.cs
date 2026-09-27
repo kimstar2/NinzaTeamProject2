@@ -118,6 +118,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             }
 
             PlayerSelector[] selectors = { tanker, dealer, healer, mage };
+            diceBattleManager.SetCombatants(selectors, eList.ConvertAll(entry => entry.EnemySelector));
             for (int i = 0; i < selectors.Length; i++)
             {
                 if (selectors[i] != null) selectors[i].HideFromBattle();

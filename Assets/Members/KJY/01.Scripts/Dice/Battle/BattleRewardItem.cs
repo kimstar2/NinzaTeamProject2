@@ -15,6 +15,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private TMP_Text detail;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private TweenSequencer revealMotion;
+        [SerializeField] private GameObject selectionMarker;
 
         public bool IsRevealing => revealMotion.HasTween;
 
@@ -22,13 +23,21 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         public void Reveal() => revealMotion.Sequence();
 
+        public void SetSelected(bool selected)
+        {
+            if (selectionMarker != null) selectionMarker.SetActive(selected);
+        }
+
         private void OnDisable() => revealMotion.Stop();
 
         public void Bind(RewardDiceFragmentSO reward)
+            => Bind(reward.DiceData, reward.Level);
+
+        public void Bind(DiceDataSO face, float level)
         {
-            icon.sprite = reward.Icon;
-            title.text = reward.SkillData != null ? reward.SkillData.SkillName : reward.name;
-            var grade = reward.DiceData.DiceGrade;
+            icon.sprite = face.Icon;
+            title.text = string.IsNullOrWhiteSpace(face.MainName) ? face.name : face.MainName;
+            var grade = face.DiceGrade;
             gradeMark.color = grade != null ? grade.GradeColor : Color.white;
             string gradeName = grade == null ? "일반" : grade.Grade switch
             {
@@ -36,7 +45,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 DiceGrade.Rare => "희귀",
                 _ => "일반"
             };
-            detail.text = $"{gradeName}  ·  Lv.{reward.Level:0.#}";
+            detail.text = $"{gradeName}  ·  Lv.{level:0.#}";
         }
     }
 }

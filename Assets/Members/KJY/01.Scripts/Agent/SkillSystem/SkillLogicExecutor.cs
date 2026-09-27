@@ -22,6 +22,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public AbstractSelector Attacker { get; private set; }
         public AbstractSelector Target { get; private set; }
         public SkillDataSO SkillData { get; private set; }
+        public float PowerMultiplier { get; private set; } = 1f;
+        private bool _synergyApplied;
         
         public void SkillFinished() => OnSkillFinished?.Invoke();
         public void SkillExecute(AbstractSelector attacker, AbstractSelector target, AgentType agentType, SkillDataSO skillData)
@@ -31,12 +33,16 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             AgentType = agentType;
             SkillData = skillData;
             
-            if (Attacker == null || Target == null || Attacker.IsDead || Target.IsDead)
+            if (!skillData.CanTarget(attacker, target))
             {
                 SkillFinished();
                 Remove();
                 return;
             }
+            bool hasPower = skillData.GetScaledStat(ApplyStatType.Damage, 1f) > 0f ||
+                skillData.GetScaledStat(ApplyStatType.Heal, 1f) > 0f;
+            PowerMultiplier = hasPower ? Attacker.Effects.UseEmpower() : 1f;
+            _synergyApplied = false;
             
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
             Attacker.MyAgent.AnimTrigger.OnAnimFinished += HandleAnimFinished;        
@@ -58,6 +64,18 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
            
             foreach (AbstractSkillLogic skillLogic in skills)
                 skillLogic.Attack();
+        }
+
+        public void ApplySynergy()
+        {
+            if (_synergyApplied || Target == null || Target.IsDead) return;
+            _synergyApplied = true;
+            switch (SkillData.Synergy)
+            {
+                case SkillDataSO.SynergyType.Mark: Target.Effects.Mark(); break;
+                case SkillDataSO.SynergyType.Guard: Target.Effects.Guard(); break;
+                case SkillDataSO.SynergyType.Empower: Target.Effects.Empower(); break;
+            }
         }
 
         private void HandleAnimFinished()

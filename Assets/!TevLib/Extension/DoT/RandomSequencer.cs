@@ -80,7 +80,7 @@ namespace _TevLib.Extension.DoT
                 _activeSequence.SetId(id.GetHashCode());
             
             _activeSequence
-                .SetLink(gameObject
+                .SetLink(targetLink && targetTrm != null ? targetTrm.gameObject : gameObject
                     , linkType)
                 .OnComplete(HandleCompleteTween);
 
@@ -110,7 +110,7 @@ namespace _TevLib.Extension.DoT
                 _activeSequence.SetId(id.GetHashCode());
             
             _activeSequence
-                .SetLink(gameObject
+                .SetLink(targetLink && targetTrm != null ? targetTrm.gameObject : gameObject
                     , linkType)
                 .OnComplete(HandleCompleteTween);
         }

@@ -2,6 +2,7 @@
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Dice.Data;
+using Members.KJY._01.Scripts.Dice;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
 using Members.KJY._01.Scripts.Mono;
 using Members.KJY._01.Scripts.UI.Mono;
@@ -19,6 +20,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         [SerializeField] private UIMonoOutline gradeOutline;
         [SerializeField] private UIMonoImage[] iconImage;
         [SerializeField] private MonoParticle rollParticle;
+        [SerializeField] private DiceLockChecker lockChecker;
 
         public void OnEnable()
         {
@@ -51,6 +53,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
                 i.SetImage(diceData.GetIcon(playerData.AttackType));
                 i.SetColor(Color.white);
             });
+            lockChecker.RefreshColor();
             rollParticle.SetParticleColor(diceData.DiceGrade.GradeColor);
             rollParticle.PlayParticle();
         }

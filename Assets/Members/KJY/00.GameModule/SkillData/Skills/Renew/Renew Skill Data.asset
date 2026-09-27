@@ -16,7 +16,9 @@ MonoBehaviour:
   <SkillName>k__BackingField: "\uD68C\uBCF5 \uB9E5\uB3D9"
   <Icon>k__BackingField: {fileID: -8721206407534337006, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "\uBE5B\uC774 \uC138 \uBC88 \uD37C\uC9D1\uB2C8\uB2E4.
-    \uB9E4\uBC88 \uC790\uC2E0\uC758 \uCCB4\uB825\uC744 {0} \uD68C\uBCF5\uD569\uB2C8\uB2E4."
+    \uB9E4\uBC88 \uB300\uC0C1\uC758 \uCCB4\uB825\uC744 {0} \uD68C\uBCF5\uD569\uB2C8\uB2E4."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 9
+  <Target>k__BackingField: 1
+  <Synergy>k__BackingField: 3

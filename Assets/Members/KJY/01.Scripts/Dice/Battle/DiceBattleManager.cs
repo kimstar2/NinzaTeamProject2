@@ -7,6 +7,7 @@ using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Agent;
 using Members.KJY._01.Scripts.Agent.Enemy;
 using Members.KJY._01.Scripts.Agent.Player;
+using Members.KJY._01.Scripts.Agent.SkillSystem;
 using Members.KJY._01.Scripts.Command;
 using Members.KJY._01.Scripts.Dice.Interface;
 using Members.KJY._01.Scripts.Events.Dice;
@@ -36,6 +37,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         
         private readonly Dictionary<PlayerSelector, MonoLineRenderer> _lineConnectors = new();
         private BattleObserverService _battleObserverService;
+        private readonly List<PlayerSelector> _players = new();
+        private readonly List<EnemySelector> _enemies = new();
         
         private readonly LinkedList<(PlayerSelector playerSelector, AbstractSelector targetSelector)> _orderedChain = new();
         public Dictionary<PlayerSelector, LinkedListNode<(PlayerSelector playerSelector, AbstractSelector targetSelector)>> BattleChain { get; private set; } = new();
@@ -76,7 +79,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 _lineConnectors.Add(getSelector, line);
             }
             line.Connect(getSelector.LineConnectTrm, targetSelector.LineConnectTrm,
-                getSelector.LineColor.GetGradient(), lRFadeTime);
+                getSelector.LineColor.GetGradient(), lRFadeTime, targetSelector is PlayerSelector);
         }
 
         public void RemoveLine(PlayerSelector selector)
@@ -90,24 +93,40 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         #region EventHandles
 
         
-        private void HandleDiceSelected(OnPlayerSelect evt) // 플레이어 선택을 했다면?
+        private void HandleDiceSelected(OnPlayerSelect evt)
         {
-            CurrentPlayerSelector = evt.PlayerSelector;
-            // 여기선 선택만 함. 체인 연결은 적 눌렀을 때
+            if (IsBattle || _battleObserverService.HasBattleResult || !pRollManager.AllDiceRollEnd) return;
+            var clicked = evt.PlayerSelector;
+            if (clicked == null || clicked.IsDead) return;
+            if (TryConnectTarget(clicked)) return;
+            if (BattleChain.ContainsKey(clicked))
+            {
+                clicked.OffSetTarget();
+                RemoveFromBattleChain(clicked);
+                RemoveLine(clicked);
+                return;
+            }
+            bool cancel = CurrentPlayerSelector == clicked;
+            CurrentPlayerSelector?.OffSetTarget();
+            CurrentPlayerSelector = cancel ? null : clicked;
+            if (cancel) return;
+            clicked.BeginSelection();
+            if (clicked.CurrentSkill?.Target == SkillDataSO.TargetType.Self) TryConnectTarget(clicked);
         }
 
-        private void HandleTargetSelected(OnEnemySelect evt) // 타겟(적)을 선택을 했다면
-        {
-            if (CurrentPlayerSelector == null) return;
-            if (!CurrentPlayerSelector.IsSelect) return; // 현재 셀렉터가 존재하면서 선택이 안되어있다면
-            if (CurrentPlayerSelector.IsDead || evt.EnemySelector.IsDead) return;
+        private void HandleTargetSelected(OnEnemySelect evt) => TryConnectTarget(evt.EnemySelector);
 
-            AddOrMoveToLast(CurrentPlayerSelector,evt.EnemySelector); // 선택되어있는 플레이어 셀렉터랑 선택한 적을 연결 -> 마지막으로감
+        private bool TryConnectTarget(AbstractSelector target)
+        {
+            if (IsBattle || CurrentPlayerSelector == null || !CurrentPlayerSelector.IsSelect ||
+                CurrentPlayerSelector.CurrentSkill == null ||
+                !CurrentPlayerSelector.CurrentSkill.CanTarget(CurrentPlayerSelector, target)) return false;
+            AddOrMoveToLast(CurrentPlayerSelector, target);
             ConnectLine(CurrentPlayerSelector);
             eventChannel.RaiseEvent(new OnBattleChainChanged(CurrentPlayerSelector.RuntimePlayerData,Count,true));
-
             CurrentPlayerSelector.OnSetTarget();
             ClearCrtSelector();
+            return true;
         }
 
         private void HandleDiceUnSelected(OnPlayerUnSelect evt) // 플레이어가 선택을 취소 했다면 
@@ -131,6 +150,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public void StartBattle() // 배틀 시작 버튼을 눌렀을때
         {
             if (_battleObserverService.IsBattle || _battleObserverService.HasBattleResult) return;
+            if (Count == 0) return;
             if (!pRollManager.AllDiceRollEnd || !eRollManager.AllDiceRollEnd) return;
             
             _battleObserverService.AddCommand(new OnActionCommand(onStartBattle.Invoke,null));
@@ -196,19 +216,38 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         }
         
         
-        private ActionCommand[] GetE2PAtkCommands() // 플레이어가 적한테 공격
+        public void SetCombatants(IEnumerable<PlayerSelector> players, IEnumerable<EnemySelector> enemies)
+        {
+            _players.Clear();
+            _players.AddRange(players);
+            _enemies.Clear();
+            _enemies.AddRange(enemies);
+        }
+
+        private ActionCommand[] GetE2PAtkCommands()
         {
             var commands = new List<ActionCommand>();
-            int bossActions = 0;
-            foreach (var pair in _orderedChain)
+            foreach (var enemy in _enemies)
             {
-                // 네 명이 보스 하나를 골라도 흡혈/강공격을 네 번 연속 쓰지는 않는다.
-                if (pair.targetSelector is EnemySelector enemy && enemy.RuntimeEnemyData.Rank == EnemyRank.Boss)
+                if (enemy == null || enemy.IsDead || enemy.IsNoneData || enemy.CurrentSkill == null) continue;
+                AbstractSelector target;
+                if (enemy.CurrentSkill.Target == SkillDataSO.TargetType.Self) target = enemy;
+                else if (enemy.CurrentSkill.Target == SkillDataSO.TargetType.Ally)
                 {
-                    if (bossActions >= MaxBossRetaliations) continue;
-                    bossActions++;
+                    target = _enemies.Where(e => !e.IsNoneData && !e.IsDead)
+                        .OrderBy(e => e.MyAgent.HealthModule.CurrentHealth / e.MyAgent.HealthModule.DefaultMaxHealth)
+                        .FirstOrDefault();
                 }
-                commands.Add(new ActionCommand(pair.targetSelector, pair.playerSelector));
+                else
+                {
+                    target = _orderedChain.FirstOrDefault(pair => pair.targetSelector == enemy).playerSelector;
+                    if (target == null || target.IsDead)
+                        target = _players.FirstOrDefault(player => player != null && !player.IsDead);
+                }
+                if (target == null) continue;
+                int actions = enemy.RuntimeEnemyData.Rank == EnemyRank.Boss &&
+                    enemy.CurrentSkill.Target == SkillDataSO.TargetType.Enemy ? MaxBossRetaliations : 1;
+                for (int i = 0; i < actions; i++) commands.Add(new ActionCommand(enemy, target));
             }
             return commands.ToArray();
         }

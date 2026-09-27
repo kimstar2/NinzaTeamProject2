@@ -5,6 +5,7 @@ using _LumenLib.PoolingSystem.Runtime;
 using Members.KJY._01.Scripts;
 using Members.KJY._01.Scripts.Service;
 using Members.KJY._01.Scripts.Agent.Enemy;
+using DevLib.ServiceLocator;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -13,6 +14,8 @@ namespace Members.CJY.Scripts
 {
     public class NodeMaker : MonoBehaviour
     {
+        private const int MapVersion = 2;
+
         [Header("Node")] 
         [SerializeField] private NodeInfoSO startNode;
         [SerializeField] private NodeInfoSO bossNode;
@@ -42,6 +45,9 @@ namespace Members.CJY.Scripts
         private StageDataSO _stageData;
         private int _stageIndex, _mapSeed, _lastColumn;
         private string saveKey => $"MapSaveData.Stage{_stageIndex}";
+        public string SaveKey => saveKey;
+        public int CurrentColumn => currentNode?.column ?? 0;
+        public int LastColumn => _lastColumn;
 
         private void Awake()
         {
@@ -64,6 +70,8 @@ namespace Members.CJY.Scripts
                 obj.GetComponent<NodeInfoUI>().Init(info);
             }
         }
+
+        private void Start() => OpenNode();
 
         private void OnDestroy()
         {
@@ -221,6 +229,7 @@ namespace Members.CJY.Scripts
 
         private bool SelectStage()
         {
+            if (ServiceLocator.TryGet<IBattleDataStorage>(out var storage)) battleDataStorage = storage.Instance;
             _stageData = battleDataStorage != null ? battleDataStorage.CurrentStageData : null;
             if (_stageData == null || !_stageData.IsValid)
             {
@@ -314,6 +323,9 @@ namespace Members.CJY.Scripts
         private void ConnectNode()
         {
             float maxYDiff = 100f;
+            var random = new System.Random(_mapSeed);
+            // 캔버스 배율과 관계없이 UI 좌표로 높이를 비교한다.
+            float GetY(NodeConnect node) => nodeParent.InverseTransformPoint(node.view.transform.position).y;
 
             for (int i = 0; i < nodeConnects.Count - 1; i++)
             {
@@ -322,13 +334,13 @@ namespace Members.CJY.Scripts
 
                 foreach (NodeConnect next in nextColumn)
                 {
-                    float nextY = next.view.transform.position.y;
+                    float nextY = GetY(next);
 
                     List<NodeConnect> candidates = new List<NodeConnect>();
                     foreach (NodeConnect current in currentColumn)
                     {
-                        float currentY = current.view.transform.position.y;
-                        if (Mathf.Abs(currentY - nextY) <= maxYDiff)
+                        float currentY = GetY(current);
+                        if (Mathf.Abs(currentY - nextY) <= maxYDiff + 0.01f)
                         {
                             candidates.Add(current);
                         }
@@ -337,10 +349,10 @@ namespace Members.CJY.Scripts
                     if (candidates.Count == 0)
                     {
                         NodeConnect closest = currentColumn[0];
-                        float minDiff = Mathf.Abs(closest.view.transform.position.y - nextY);
+                        float minDiff = Mathf.Abs(GetY(closest) - nextY);
                         foreach (NodeConnect current in currentColumn)
                         {
-                            float diff = Mathf.Abs(current.view.transform.position.y - nextY);
+                            float diff = Mathf.Abs(GetY(current) - nextY);
                             if (diff < minDiff)
                             {
                                 closest = current;
@@ -351,7 +363,7 @@ namespace Members.CJY.Scripts
                         candidates.Add(closest);
                     }
 
-                    NodeConnect parent = candidates[Random.Range(0, candidates.Count)];
+                    NodeConnect parent = candidates[random.Next(candidates.Count)];
                     parent.nextNodes.Add(next);
                 }
 
@@ -360,13 +372,13 @@ namespace Members.CJY.Scripts
                 {
                     if (current.nextNodes.Count == 0)
                     {
-                        float currentY = current.view.transform.position.y;
+                        float currentY = GetY(current);
 
                         NodeConnect closest = nextColumn[0];
-                        float minDiff = Mathf.Abs(closest.view.transform.position.y - currentY);
+                        float minDiff = Mathf.Abs(GetY(closest) - currentY);
                         foreach (NodeConnect next in nextColumn)
                         {
-                            float diff = Mathf.Abs(next.view.transform.position.y - currentY);
+                            float diff = Mathf.Abs(GetY(next) - currentY);
                             if (diff < minDiff)
                             {
                                 closest = next;
@@ -390,8 +402,9 @@ namespace Members.CJY.Scripts
                 {
                     foreach (NodeConnect next in node.nextNodes)
                     {
-                        Vector3 fromPos = node.view.transform.position;
-                        Vector3 toPos = next.view.transform.position;
+                        // 선의 길이와 위치는 같은 UI 좌표계를 사용한다.
+                        Vector3 fromPos = lineParent.InverseTransformPoint(node.view.transform.position);
+                        Vector3 toPos = lineParent.InverseTransformPoint(next.view.transform.position);
 
                         IPoolable lineItem = objectPool.Pop("Line");
                         Transform lineTrm = lineItem.GameObject.transform;
@@ -404,9 +417,9 @@ namespace Members.CJY.Scripts
                         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
                         rt.pivot = new Vector2(0f, 0.5f);
-                        rt.position = fromPos;
+                        rt.localPosition = fromPos;
                         rt.sizeDelta = new Vector2(distance, rt.sizeDelta.y);
-                        rt.rotation = Quaternion.Euler(0f, 0f, angle);
+                        rt.localRotation = Quaternion.Euler(0f, 0f, angle);
                     }
                 }
             }
@@ -466,7 +479,7 @@ namespace Members.CJY.Scripts
             MapSaveData saveData = new MapSaveData
             {
                 hasData = true,
-                version = 1,
+                version = MapVersion,
                 stage = _stageIndex,
                 seed = _mapSeed
             };
@@ -520,10 +533,17 @@ namespace Members.CJY.Scripts
 
             string json = PlayerPrefs.GetString(saveKey);
             MapSaveData saveData = JsonUtility.FromJson<MapSaveData>(json);
-            if (saveData == null || !saveData.hasData || saveData.version != 1 ||
+            if (saveData == null || !saveData.hasData || saveData.version < 1 || saveData.version > MapVersion ||
                 saveData.stage != _stageIndex || saveData.nodes.Count == 0) return false;
             _mapSeed = saveData.seed;
             _lastColumn = saveData.nodes.Max(node => node.column);
+            bool removedShop = false;
+            foreach (var node in saveData.nodes)
+            {
+                if (node.type != NodeType.Shop) continue;
+                node.type = NodeType.Event;
+                removedShop = true;
+            }
 
             ResetNode();
             nodeConnects.Clear();
@@ -571,6 +591,16 @@ namespace Members.CJY.Scripts
             foreach (Transform groupTrm in nodeParent)
                 LayoutRebuilder.ForceRebuildLayoutImmediate(groupTrm.GetComponent<RectTransform>());
             LayoutRebuilder.ForceRebuildLayoutImmediate(nodeParent);
+
+            if (saveData.version < MapVersion)
+            {
+                // 기존 노드와 진행 위치는 유지하고 잘못 저장된 연결만 갱신한다.
+                foreach (var column in nodeConnects)
+                    foreach (var node in column) node.nextNodes.Clear();
+                ConnectNode();
+                SaveMap();
+            }
+            else if (removedShop) SaveMap();
 
             RenderLine();
             NodeVisualSetting();

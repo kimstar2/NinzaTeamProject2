@@ -108,5 +108,12 @@ namespace Members.LYW.Scripts.Event
                 .DOScale(1f, 0.15f)
                 .SetEase(Ease.OutQuad);
         }
+
+        private void OnDisable()
+        {
+            if (canvasGroup != null) canvasGroup.DOKill();
+            if (rectTransform != null) rectTransform.DOKill();
+            scaleTween?.Kill();
+        }
     }
 }
