@@ -20,7 +20,7 @@ MonoBehaviour:
     \uC704\uB97C \uB2EC\uB824!\u201D \uAC00 \uBC18\uBCF5\uB418\uACE0 \uC788\uB2E4."
   backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
   EXImage: {fileID: 0}
-  exImageScale: 1
+  exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
   backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
   exImageMaterial: {fileID: 0}

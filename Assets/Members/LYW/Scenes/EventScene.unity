@@ -2921,7 +2921,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4280230182
   m_fontColor: {r: 0.15, g: 0.13, b: 0.12, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3376,10 +3376,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ed1cac952ba71de46b4eddc0222569aa, type: 2}
   - {fileID: 11400000, guid: 7a9775dbc60b3224682fa694eea34675, type: 2}
   - {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
+  - {fileID: 11400000, guid: a5f6f0ea77a879a4a935de9895ffbe14, type: 2}
+  - {fileID: 11400000, guid: 68b8a27b6fa44a44aae6d7389da3820f, type: 2}
   - {fileID: 11400000, guid: 6817e6a28724c564eb17c3097602a877, type: 2}
   - {fileID: 11400000, guid: 934fe12868e6a7d4382f793d03340ba9, type: 2}
   - {fileID: 11400000, guid: 667045a0b13fe2f4a9b4081d2e900e03, type: 2}
   - {fileID: 11400000, guid: 0d9c65e9e7443ed42ac68e6cbb3c252e, type: 2}
+  - {fileID: 11400000, guid: 3f0328bfe7c67904195d9722d3eb744a, type: 2}
+  - {fileID: 11400000, guid: 8b01e082a5d4d7a4fb74d5a70de39651, type: 2}
+  - {fileID: 11400000, guid: 00c4d81d937a9fa4dae607a696deecd5, type: 2}
+  - {fileID: 11400000, guid: 3bbd99ec40e0cea4b95b3e62208f03ea, type: 2}
   _eventData: {fileID: 0}
   backgroundImage: {fileID: 493684832988497568}
   exImage: {fileID: 8606275040656391965}
@@ -3721,7 +3727,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4280230182
   m_fontColor: {r: 0.15, g: 0.13, b: 0.12, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3903,7 +3909,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4280230182
   m_fontColor: {r: 0.15, g: 0.13, b: 0.12, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4452,7 +4458,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4280230182
   m_fontColor: {r: 0.15, g: 0.13, b: 0.12, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

@@ -31,6 +31,7 @@ namespace Members.LYW.Scripts
         
         public void OnPointerClick(PointerEventData eventData)
         {
+            //Debug.Log("왜 왜왜ㅑ 안되냐");
             if (!isSelected)
             {
                 if (SelectedValue >= 3) return;
