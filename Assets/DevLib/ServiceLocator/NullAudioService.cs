@@ -11,17 +11,12 @@ namespace DevLib.ServiceLocator
             ServiceLocator.Register<IAudioService>(new NullAudioService());
         }
         
-        public void PlaySfx(SoundClipSO clipData, int channel = 0)
+        public void Play(SoundClipSO clipData, int channel = 0)
         {
             
         }
 
         public void StopSfx(int channel)
-        {
-            
-        }
-
-        public void PlayBgm(SoundClipSO bgmSound)
         {
             
         }

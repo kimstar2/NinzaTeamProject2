@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DevLib.SoundSystem.Runtime;
 using UnityEngine;
+using AudioType = DevLib.SoundSystem.Runtime.AudioType;
 
 namespace DevLib.ServiceLocator
 {
@@ -28,8 +29,21 @@ namespace DevLib.ServiceLocator
             //ServiceLocator.UnRegister<IAudioService>();
         }
 
-        public void PlaySfx(SoundClipSO clipData, int channel = 0)
+        public void Play(SoundClipSO clipData, int channel = 0)
         {
+            if (clipData == null || clipData.clip == null)
+            {
+                Debug.LogWarning("Assign a SoundClipSO with an audio clip before playing.", this);
+                return;
+            }
+
+            if (clipData.audioType == AudioType.Music)
+            {
+                _bgmPlayer.ForceStopSound();
+                _bgmPlayer.PlaySound(clipData);
+                return;
+            }
+
             GameObject playerObj = Instantiate(soundPlayerPrefab, transform);
             SoundPlayer player = playerObj.GetComponent<SoundPlayer>();
             player.PlaySound(clipData);
@@ -68,12 +82,6 @@ namespace DevLib.ServiceLocator
                 player.ForceStopSound();
                 SetDisableSoundPlayer(player);
             }
-        }
-
-        public void PlayBgm(SoundClipSO bgmSound)
-        {
-            _bgmPlayer.ForceStopSound();
-            _bgmPlayer.PlaySound(bgmSound);
         }
 
         public void StopBgm()

@@ -4,7 +4,9 @@ namespace DevLib.SoundSystem.Runtime
 {
     public enum AudioType
     {
-        Sfx, Music
+        Sfx = 0,
+        Music = 1,
+        UI = 2
     }
     
     [CreateAssetMenu(fileName = "Clip data", menuName = "Lib/Sound/Clip data", order = 0)]
