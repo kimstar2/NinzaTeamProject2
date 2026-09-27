@@ -12,6 +12,8 @@ namespace Members.KJY._01.Scripts.UI
         private string _nextScene;
         private bool _busy;
 
+        public static event System.Action BeforeSceneLoad;
+
         private void Awake()
         {
             if (_instance != null) { Destroy(gameObject); return; }
@@ -27,7 +29,12 @@ namespace Members.KJY._01.Scripts.UI
 
         public static void Load(string scene)
         {
-            if (_instance == null) { SceneManager.LoadScene(scene); return; }
+            if (_instance == null)
+            {
+                BeforeSceneLoad?.Invoke();
+                SceneManager.LoadScene(scene);
+                return;
+            }
             if (_instance._busy) return;
             _instance._busy = true;
             _instance._nextScene = scene;
@@ -39,7 +46,11 @@ namespace Members.KJY._01.Scripts.UI
         // 닫기 시퀀스의 OnComplete에서 호출한다.
         public void LoadPendingScene()
         {
-            if (!string.IsNullOrEmpty(_nextScene)) SceneManager.LoadSceneAsync(_nextScene);
+            if (!string.IsNullOrEmpty(_nextScene))
+            {
+                BeforeSceneLoad?.Invoke();
+                SceneManager.LoadSceneAsync(_nextScene);
+            }
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

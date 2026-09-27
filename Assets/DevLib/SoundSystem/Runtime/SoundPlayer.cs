@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 using Random = UnityEngine.Random;
@@ -14,6 +14,7 @@ namespace DevLib.SoundSystem.Runtime
         [SerializeField] private AudioMixerGroup uiGroup;
         
         private AudioSource _audioSource;
+        private Coroutine _stopRoutine;
 
         public event Action<SoundPlayer> OnSoundFinished;
 
@@ -24,6 +25,7 @@ namespace DevLib.SoundSystem.Runtime
 
         public void PlaySound(SoundClipSO clipData)
         {
+            ForceStopSound();
             if (clipData.audioType == AudioType.Sfx)
             {
                 _audioSource.outputAudioMixerGroup = sfxGroup;
@@ -56,20 +58,31 @@ namespace DevLib.SoundSystem.Runtime
             if (!clipData.isLoop)
             {
                 float duration = (endTime - startTime) / Mathf.Abs(_audioSource.pitch);
-                _ = DisableSoundTimer(duration + 0.2f);
+                _stopRoutine = StartCoroutine(DisableSoundTimer(duration + 0.2f));
             }
         }
 
-        private async Task DisableSoundTimer(float time)
+        private IEnumerator DisableSoundTimer(float time)
         {
-            await Awaitable.WaitForSecondsAsync(time);
+            yield return new WaitForSeconds(time);
+            _stopRoutine = null;
+            if (_audioSource == null) yield break;
             _audioSource.Stop();
             OnSoundFinished?.Invoke(this);
         }
+
+        private void OnDisable() => ForceStopSound();
         
         public void ForceStopSound()
         {
-            _audioSource.Stop();
+            if (_stopRoutine != null)
+            {
+                StopCoroutine(_stopRoutine);
+                _stopRoutine = null;
+            }
+
+            if (_audioSource != null)
+                _audioSource.Stop();
         }
     }
 }
