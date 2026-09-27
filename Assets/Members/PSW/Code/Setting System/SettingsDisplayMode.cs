@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using UnityEngine;
 
 namespace Members.PSW.Code.SettingSystem
@@ -9,6 +11,7 @@ namespace Members.PSW.Code.SettingSystem
     {
         [SerializeField] private TMP_Dropdown modeDropdown;
         [SerializeField] private TMP_Dropdown resolutionDropdown;
+        [SerializeField] private SoundClipSO clickSound;
 
         private readonly List<Vector2Int> _resolutions = new();
 
@@ -79,6 +82,7 @@ namespace Members.PSW.Code.SettingSystem
                 return;
 
             SettingsStore.StoreDisplayMode(index);
+            ServiceLocator.Get<IAudioService>().Play(clickSound);
             ApplySelectedSettings();
             SettingsStore.Save();
         }
@@ -89,6 +93,7 @@ namespace Members.PSW.Code.SettingSystem
                 return;
 
             SettingsStore.StoreResolution(_resolutions[index]);
+            ServiceLocator.Get<IAudioService>().Play(clickSound);
             ApplySelectedSettings();
             SettingsStore.Save();
         }

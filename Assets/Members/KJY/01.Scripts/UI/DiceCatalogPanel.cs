@@ -1,7 +1,5 @@
 using System.Collections;
 using _TevLib.Extension.DoT;
-using DevLib.ServiceLocator;
-using DevLib.SoundSystem.Runtime;
 using Members.KJY._01.Scripts.Dice.Battle;
 using Members.KJY._01.Scripts.Dice.Data;
 using TMPro;
@@ -19,7 +17,6 @@ namespace Members.KJY._01.Scripts.UI
         [SerializeField] private Transform content;
         [SerializeField] private TMP_Text description;
         [SerializeField] private TweenSequencer openMotion, closeMotion;
-        [SerializeField] private SoundClipSO clickSound;
         private bool _built;
         public bool IsOpen => panelRoot.activeSelf;
 
@@ -37,7 +34,6 @@ namespace Members.KJY._01.Scripts.UI
                     item.Bind(face, 1f);
                     item.GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        ServiceLocator.Get<IAudioService>().Play(clickSound);
                         description.text = face.MainName + "\n\n" + face.GetDescription(1f);
                     });
                     item.Reveal();

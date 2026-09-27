@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
 using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using Members.KJY._01.Scripts.Agent.Enemy.Dice;
 using Members.KJY._01.Scripts.Events;
 using Members.KJY._01.Scripts.Service;
@@ -42,6 +43,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private TweenSequencer defeatMotion;
         [SerializeField] private TweenSequencer closeMotion;
         [SerializeField] private UnityEvent onResultClosed;
+        [SerializeField] private SoundClipSO clickSound;
 
         private BattleDataStorage _storage;
         private BattleInventory _inventory;
@@ -137,6 +139,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             }
 
             TweenSequencer openMotion = _victory ? victoryMotion : defeatMotion;
+            ServiceLocator.Get<IAudioService>().Play(clickSound);
             backdropInMotion.Sequence();
             openMotion.Sequence();
 

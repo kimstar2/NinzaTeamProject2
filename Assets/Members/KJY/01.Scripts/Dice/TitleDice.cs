@@ -1,6 +1,8 @@
 using Members.KJY._01.Scripts.Title;
 using Members.KJY._01.Scripts.UI;
 using TMPro;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,13 +21,22 @@ namespace Members.KJY._01.Scripts.Dice
         [SerializeField] private GetSettingWindow settings;
         [SerializeField] private DiceCatalogPanel catalog;
         [SerializeField] private TMP_Text menuLabel;
+        [SerializeField] private SoundClipSO clickSound;
         public bool CanNavigate => (settings == null || !settings.IsOpen) && (catalog == null || !catalog.IsOpen);
         private void Update()
         {
             var keyboard = Keyboard.current;
             if (keyboard == null || !(keyboard.enterKey.wasPressedThisFrame || keyboard.numpadEnterKey.wasPressedThisFrame)) return;
-            if (settings != null && settings.IsOpen) settings.Close();
-            else if (catalog != null && catalog.IsOpen) catalog.Close();
+            if (settings != null && settings.IsOpen)
+            {
+                ServiceLocator.Get<IAudioService>().Play(clickSound);
+                settings.Close();
+            }
+            else if (catalog != null && catalog.IsOpen)
+            {
+                ServiceLocator.Get<IAudioService>().Play(clickSound);
+                catalog.Close();
+            }
             else currentMenu?.Set();
         }
 

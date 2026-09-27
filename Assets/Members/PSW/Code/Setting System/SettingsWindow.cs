@@ -1,5 +1,7 @@
 using System;
 using DG.Tweening;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -18,6 +20,7 @@ namespace Members.PSW.Code.SettingSystem
         [SerializeField, Range(0.01f, 1f)] private float startScale = 0.15f;
         [SerializeField, Scene] private string mainMenuScene;
         [SerializeField] private GameObject mainMenuButton;
+        [SerializeField] private SoundClipSO clickSound;
         public bool IsOpen => windowRoot.activeInHierarchy;
         public bool IsMainMenu => SceneManager.GetActiveScene().path == mainMenuScene;
 
@@ -115,6 +118,7 @@ namespace Members.PSW.Code.SettingSystem
         private void HandleToggle(InputAction.CallbackContext context)
         {
             if (IsMainMenu) return;
+            ServiceLocator.Get<IAudioService>().Play(clickSound);
             if (windowRoot.activeSelf && !_isClosing)
                 Close();
             else

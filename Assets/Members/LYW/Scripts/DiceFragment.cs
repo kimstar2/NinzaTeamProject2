@@ -4,6 +4,8 @@ using Members.LYW.Scripts.System;
 using Members.LYW.Scripts.System.Events;
 using Members.PSW.Code.InventorySystem;
 using UnityEngine;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -13,13 +15,15 @@ namespace Members.LYW.Scripts
     public class DiceFragment : MonoBehaviour, IPointerClickHandler
     {
         private Image _fragmentImage;
+        private SoundClipSO _clickSound;
         public RewardDiceFragmentSO _fragment { get; private set; }
         public bool isSelected { get; private set; } = false;
         public int index {get; private set;}
         public static int SelectedValue { get; private set; } = 0;
         public static void ResetSelectedValue() => SelectedValue = 0;
-        public void Init(RewardDiceFragmentSO fragment)
+        public void Init(RewardDiceFragmentSO fragment, SoundClipSO clickSound = null)
         {
+            _clickSound = clickSound;
             _fragmentImage = GetComponent<Image>();
             _fragment = fragment;
         }
@@ -35,6 +39,7 @@ namespace Members.LYW.Scripts
             if (!isSelected)
             {
                 if (SelectedValue >= 3) return;
+                if (_clickSound != null) ServiceLocator.Get<IAudioService>().Play(_clickSound);
                 isSelected = true;
                 SelectedValue++;
                 _fragmentImage.color = new Color(0.7f, 0.7f, 0.7f, 1);
@@ -46,6 +51,7 @@ namespace Members.LYW.Scripts
             else
             {
                 isSelected = false;
+                if (_clickSound != null) ServiceLocator.Get<IAudioService>().Play(_clickSound);
                 SelectedValue--;
                 _fragmentImage.color = Color.white;
                 EventBus.Publish(new UnRegisterFragmentEvent()

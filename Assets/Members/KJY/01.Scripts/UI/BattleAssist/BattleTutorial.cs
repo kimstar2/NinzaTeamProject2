@@ -1,6 +1,8 @@
 using System;
 using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using Members.KJY._01.Scripts.Agent.Player.Dice;
 using Members.KJY._01.Scripts.Events;
 using Members.KJY._01.Scripts.Events.Dice;
@@ -32,6 +34,7 @@ namespace Members.KJY._01.Scripts.UI
         [SerializeField] private TMP_Text heading, description, progress;
         [SerializeField] private TweenSequencer openMotion, closeMotion, pageMotion;
         [SerializeField] private Step[] steps;
+        [SerializeField] private SoundClipSO clickSound;
         private int _step;
         private bool _offered, _open, _inBattle, _waitingForRoll;
 
@@ -70,7 +73,11 @@ namespace Members.KJY._01.Scripts.UI
             }
             if (_offered) return;
             _offered = true;
-            if (!PlayerPrefs.HasKey(SeenKey)) Show();
+            if (!PlayerPrefs.HasKey(SeenKey))
+            {
+                Show();
+                if (_open) ServiceLocator.Get<IAudioService>().Play(clickSound);
+            }
         }
 
         public void Show()

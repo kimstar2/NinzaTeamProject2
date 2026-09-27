@@ -5926,6 +5926,7 @@ GameObject:
   - component: {fileID: 697007576}
   - component: {fileID: 697007575}
   - component: {fileID: 697007574}
+  - component: {fileID: 900000000000000300}
   m_Layer: 5
   m_Name: RollButton
   m_TagString: Untagged
@@ -8196,6 +8197,7 @@ GameObject:
   - component: {fileID: 1078546849}
   - component: {fileID: 1078546848}
   - component: {fileID: 1078546847}
+  - component: {fileID: 900000000000000301}
   m_Layer: 5
   m_Name: BattleStartButton
   m_TagString: Untagged
@@ -8728,6 +8730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb918b44b154f20880179c8a7471aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Battle.BattleResultReceiver
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   resultText: {fileID: 1983470336}
 --- !u!1 &1117170271
@@ -17900,6 +17903,7 @@ GameObject:
   - component: {fileID: 880000012}
   - component: {fileID: 880000013}
   - component: {fileID: 880000014}
+  - component: {fileID: 900000000000000302}
   m_Layer: 5
   m_Name: Backpack Button
   m_TagString: Untagged
@@ -18913,6 +18917,7 @@ GameObject:
   - component: {fileID: 880000142}
   - component: {fileID: 880000143}
   - component: {fileID: 880000144}
+  - component: {fileID: 900000000000000303}
   m_Layer: 5
   m_Name: Close Button
   m_TagString: Untagged
@@ -19234,6 +19239,7 @@ GameObject:
   - component: {fileID: 880000182}
   - component: {fileID: 880000183}
   - component: {fileID: 880000184}
+  - component: {fileID: 900000000000000304}
   m_Layer: 5
   m_Name: Outside Click Close
   m_TagString: Untagged
@@ -19542,6 +19548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae317f265d543934780a0ec8d5a0bf93, type: 3}
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::FragmentSetter
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   inventory: {fileID: 880000222}
   diceFragments: []
   allowSelection: 0
@@ -20671,6 +20678,71 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &900000000000000300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697007572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078546845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880000010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880000140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880000180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.LYW.Scripts;
 using Members.PSW.Code.InventorySystem;
@@ -12,6 +14,7 @@ public class FragmentSetter : MonoBehaviour
     [SerializeField] private List<DiceFragment> diceFragments = new();
     [SerializeField] private bool allowSelection = true;
     [SerializeField] private RectTransform slotFramePrefab;
+    [SerializeField] private SoundClipSO clickSound;
     private bool _hasContents;
     public event System.Action<RewardDiceFragmentSO, RectTransform> FragmentClicked;
 
@@ -83,7 +86,7 @@ public class FragmentSetter : MonoBehaviour
         }
         var clickTrigger = diceFragment.AddComponent<DiceFragment>();
 
-        clickTrigger.Init(fragment);
+        clickTrigger.Init(fragment, clickSound);
         clickTrigger.SetIndex(index);
 
         image.sprite = fragment.DiceData.Icon;
@@ -95,7 +98,11 @@ public class FragmentSetter : MonoBehaviour
             button.targetGraphic = image;
             button.transition = Selectable.Transition.None;
             button.navigation = new Navigation { mode = Navigation.Mode.None };
-            button.onClick.AddListener(() => FragmentClicked?.Invoke(fragment, image.rectTransform));
+            button.onClick.AddListener(() =>
+            {
+                ServiceLocator.Get<IAudioService>().Play(clickSound);
+                FragmentClicked?.Invoke(fragment, image.rectTransform);
+            });
         }
 
         diceFragments.Add(clickTrigger);

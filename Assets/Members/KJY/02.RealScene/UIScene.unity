@@ -2101,6 +2101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ff9274d4254865a4768a7537c548fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.TitleDIce
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   currentMenu: {fileID: 0}
   settings: {fileID: 178118700}
   catalog: {fileID: 1690456274}
@@ -8568,7 +8569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05569a6b44693924f9f695c67a9e10af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.DiceCatalogPanel
-  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   panelRoot: {fileID: 478404913}
   panelGroup: {fileID: 1790013552}
   faces:
