@@ -31,6 +31,28 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public int GoldEarned { get; private set; }
         public int SkippedRewards { get; private set; }
 
+        // Returns the amount actually added. Non-positive amounts do nothing.
+        public int AddGold(int amount)
+        {
+            if (amount <= 0) return 0;
+            int added = Mathf.Min(amount, int.MaxValue - Gold);
+            if (added == 0) return 0;
+            Gold += added;
+            NotifyChanged();
+            return added;
+        }
+
+        // Event losses stop at zero; returns the amount actually removed.
+        public int RemoveGold(int amount)
+        {
+            if (amount <= 0) return 0;
+            int removed = Mathf.Min(amount, Gold);
+            if (removed == 0) return 0;
+            Gold -= removed;
+            NotifyChanged();
+            return removed;
+        }
+
         public int GetForgeCost(float level) => Mathf.CeilToInt(Mathf.Max(1, forgeBaseCost) * Mathf.Max(1, level));
         public float GetForgedLevel(float level) => Mathf.Max(level, Mathf.Min(forgeMaxLevel, level + Mathf.Max(0.1f, forgeLevelGain)));
 

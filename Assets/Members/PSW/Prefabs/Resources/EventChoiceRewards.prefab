@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: EventChoiceRewards
+  m_TagString: Untagged
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55a9a12e6b843b4b65be31984ecdf91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.InventorySystem.EventChoiceRewards
+  sourceEvent: {fileID: 11400000, guid: 7a084699b146b2e43808ad4305a626c6, type: 2}
+  rewardPool:
+  - {fileID: 11400000, guid: 7dcc08455b1204e448e985eb8817bd31, type: 2}
+  - {fileID: 11400000, guid: d5f3596e3c2071c4095df7a19fd0b16c, type: 2}
+  - {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
+  - {fileID: 11400000, guid: b2da5355826a07340838d46256e86666, type: 2}
+  - {fileID: 11400000, guid: 57e62aff62b081046bfb9a67d636bb2e, type: 2}
+  - {fileID: 11400000, guid: 1a3df9ba8af021242908e715c704674e, type: 2}
+  - {fileID: 11400000, guid: 84847e558a39f674ca3bc606ef146baa, type: 2}
+  - {fileID: 11400000, guid: 791c3876c83f4ce4590e6239b66abd09, type: 2}
+  - {fileID: 11400000, guid: 4b58944dd2658834d9886504ed43968a, type: 2}
+  - {fileID: 11400000, guid: 7a6ff4b16abde454f8912d0c92c15bdb, type: 2}
+  - {fileID: 11400000, guid: f0ca8047e44c1e04fb8431df36e1df51, type: 2}
+  - {fileID: 11400000, guid: 319b319390c04a73a3362f97cc9abb0c, type: 2}
+  - {fileID: 11400000, guid: 0dd4fc0727c6e954f8cdc69f750d95ac, type: 2}
+  - {fileID: 11400000, guid: d65baf29e9abc5b40bebcb4e4ae2ebcb, type: 2}
+  - {fileID: 11400000, guid: aac0903f2809575b976c412be29cb263, type: 2}
+  - {fileID: 11400000, guid: 711b2d13aa7e5c29a70a17274885a048, type: 2}
+  - {fileID: 11400000, guid: 0b70a1381a08561684c95d7ad75cce78, type: 2}
+  - {fileID: 11400000, guid: c3c844802a2353feac3dfbd0328ec2e6, type: 2}
+  - {fileID: 11400000, guid: 4c80df11942059ffb5a4d1fdaa4e94ef, type: 2}
+  - {fileID: 11400000, guid: c740f069f5b624a4c990f47f137614ec, type: 2}
+  - {fileID: 11400000, guid: 4292233822a016b4280a0e4fa8b0b0c6, type: 2}
+  - {fileID: 11400000, guid: fd03ab00fdef0d44c9a8661e074a8ad1, type: 2}
+  - {fileID: 11400000, guid: a3892e0f862c4ea98ba5e258ba2d37d0, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  healthChoices:
+  - eventData: {fileID: 11400000, guid: 7a9775dbc60b3224682fa694eea34675, type: 2}
+    choiceIndex: 0
+    target: 5
+    health: 10
+    resultText: "여자아이를 마을까지 데려다주었습니다.\n살아 있는 아군의 HP를 각각 10 회복합니다."
+  - eventData: {fileID: 11400000, guid: a5f6f0ea77a879a4a935de9895ffbe14, type: 2}
+    choiceIndex: 0
+    target: 3
+    health: -10
+    resultText: "마물의 봉인을 도왔습니다.\n마법사의 HP가 10 감소합니다."
+  - eventData: {fileID: 11400000, guid: 6817e6a28724c564eb17c3097602a877, type: 2}
+    choiceIndex: 1
+    target: 5
+    health: -20
+    resultText: "숲을 가로지르다 나뭇가지에 찔리고 베였습니다.\n아군의 HP가 각각 20 감소합니다."
+  - eventData: {fileID: 11400000, guid: 667045a0b13fe2f4a9b4081d2e900e03, type: 2}
+    choiceIndex: 0
+    target: 5
+    health: -20
+    resultText: "갈증이 더 심해지고 머리가 어지럽습니다.\n아군의 HP가 각각 20 감소합니다."
+  - eventData: {fileID: 11400000, guid: 667045a0b13fe2f4a9b4081d2e900e03, type: 2}
+    choiceIndex: 2
+    target: 5
+    health: -10
+    resultText: "짠물을 너무 많이 마셨습니다.\n아군의 HP가 각각 10 감소합니다."
+  - eventData: {fileID: 11400000, guid: 3f0328bfe7c67904195d9722d3eb744a, type: 2}
+    choiceIndex: 0
+    target: 5
+    health: -10
+    resultText: "방심한 틈에 기습을 당했습니다.\n아군의 HP가 각각 10 감소합니다."
+  - eventData: {fileID: 11400000, guid: 3bbd99ec40e0cea4b95b3e62208f03ea, type: 2}
+    choiceIndex: 0
+    target: 5
+    health: -5
+    resultText: "금어초가 퍼뜨린 연기에 휘말렸습니다.\n아군의 HP가 각각 5 감소합니다."
+  goldChoices:
+  - eventData: {fileID: 11400000, guid: e4cd1ea18ac8b604398b8ad0dd99aacb, type: 2}
+    choiceIndex: 0
+    gold: 100
+  - eventData: {fileID: 11400000, guid: e4cd1ea18ac8b604398b8ad0dd99aacb, type: 2}
+    choiceIndex: 1
+    gold: -100
+  - eventData: {fileID: 11400000, guid: ed1cac952ba71de46b4eddc0222569aa, type: 2}
+    choiceIndex: 0
+    gold: 50
+  - eventData: {fileID: 11400000, guid: a5f6f0ea77a879a4a935de9895ffbe14, type: 2}
+    choiceIndex: 0
+    gold: 50
+  - eventData: {fileID: 11400000, guid: 68b8a27b6fa44a44aae6d7389da3820f, type: 2}
+    choiceIndex: 1
+    gold: 30
