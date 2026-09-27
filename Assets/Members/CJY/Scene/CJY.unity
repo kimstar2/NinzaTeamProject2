@@ -1274,6 +1274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499896735814250173, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 549752409782286893, guid: 1853d4731ae51cd40af77fefb15104e0, type: 3}
       propertyPath: m_Name
       value: NodeMap

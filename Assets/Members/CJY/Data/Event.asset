@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeInfoSO
   typeName: "\uC774\uBCA4\uD2B8"
   type: 4
-  icon: {fileID: 1317507493, guid: 55b2f9c56f879704f89f46bfd669b086, type: 3}
+  icon: {fileID: -57274845, guid: 2a7681db8478ff54a99fb5efd4907a88, type: 3}
   percent: 10
