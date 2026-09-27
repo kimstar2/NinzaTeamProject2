@@ -36,6 +36,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field: SerializeField, Range(0f, 1f)] public float LifeStealFraction { get; private set; }
         [field: SerializeField] public TargetType Target { get; private set; }
         [field: SerializeField] public SynergyType Synergy { get; private set; }
+        // 플레이어에게 보이지 않는 확률 보정용 수치. 행운이 오를수록 높은 스킬이 잘 나온다.
+        [field: SerializeField, Min(0)] public int Strength { get; private set; }
 
         public IReadOnlyList<SkillApplyStat> ApplyStats => applyStats;
 
