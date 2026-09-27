@@ -842,7 +842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeEvent
   nodeScenes:
   - <Type>k__BackingField: 4
-    <Scene>k__BackingField: 5
+    <Scene>k__BackingField: 4
     <ImmediatelyChangeScene>k__BackingField: 1
     onNodeSelected:
       m_PersistentCalls:

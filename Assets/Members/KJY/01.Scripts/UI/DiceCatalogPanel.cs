@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using _TevLib.Extension.DoT;
 using Members.KJY._01.Scripts.Dice.Battle;
 using Members.KJY._01.Scripts.Dice.Data;
@@ -17,31 +18,80 @@ namespace Members.KJY._01.Scripts.UI
         [SerializeField] private Transform content;
         [SerializeField] private TMP_Text description;
         [SerializeField] private TweenSequencer openMotion, closeMotion;
-        private bool _built;
+        private readonly List<BattleRewardItem> _items = new();
+        private DiceCatalogSO _catalog;
         public bool IsOpen => panelRoot.activeSelf;
 
-        private void Awake() => panelRoot.SetActive(false);
+        private void Awake()
+        {
+            panelRoot.SetActive(false);
+            // 전체 목록은 씬이 아니라 Resources/DiceCatalog 에셋에서 받는다 (씬 저장 상태와 상관없이 항상 최신)
+            _catalog = Resources.Load<DiceCatalogSO>(DiceCatalogSO.ResourcePath);
+            if (_catalog != null && _catalog.Faces != null && _catalog.Faces.Length > 0) faces = _catalog.Faces;
+        }
 
         public void Open()
         {
             panelRoot.SetActive(true);
             panelGroup.interactable = true;
-            if (!_built)
+            if (_items.Count == 0)
             {
                 foreach (var face in faces)
                 {
+                    if (face == null) continue;
                     var item = Instantiate(itemPrefab, content);
-                    item.Bind(face, 1f);
-                    item.GetComponent<Button>().onClick.AddListener(() =>
-                    {
-                        description.text = face.MainName + "\n\n" + face.GetDescription(1f);
-                    });
-                    item.Reveal();
+                    item.GetComponent<Button>().onClick.AddListener(() => ShowFace(face));
+                    _items.Add(item);
                 }
-                _built = true;
             }
-            description.text = "면마다 역할에 맞는 스킬이 달라집니다.\n\n표식 → 공격으로 연계하고, 격려 → 다음 스킬 강화로 순서를 설계해 보세요.\n\n면을 선택하면 역할별 효과를 확인할 수 있습니다.";
+
+            // 열 때마다 획득 기록을 다시 반영한다
+            int found = 0;
+            for (int i = 0, f = 0; i < faces.Length; i++)
+            {
+                if (faces[i] == null) continue;
+                var item = _items[f++];
+                bool discovered = IsUnlocked(faces[i]);
+                if (discovered)
+                {
+                    item.Bind(faces[i], 1f);
+                    found++;
+                }
+                else item.BindLocked(faces[i]);
+                item.Reveal();
+            }
+            description.text = $"수집 {found} / {_items.Count}\n\n게임에서 한 번이라도 얻은 스킬만 도감에 기록됩니다.\n\n면을 선택하면 역할별 효과를 확인할 수 있습니다.";
             openMotion.Sequence();
+            if (_scrollTop != null) StopCoroutine(_scrollTop);
+            _scrollTop = StartCoroutine(KeepScrollTop());
+        }
+
+        // 열림 연출과 아이템 연출이 도는 동안 레이아웃이 다시 잡히며 스크롤이 내려가므로, 끝날 때까지 맨 위에 고정한다.
+        private Coroutine _scrollTop;
+        private IEnumerator KeepScrollTop()
+        {
+            var scroll = content.GetComponentInParent<ScrollRect>();
+            var rect = (RectTransform)content;
+            float until = Time.unscaledTime + 0.6f;
+            do
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
+                if (scroll != null) scroll.StopMovement();
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, 0f); // Content 피벗이 위쪽이라 y=0이 맨 위
+                yield return null;
+            } while (openMotion.HasTween || Time.unscaledTime < until);
+            _scrollTop = null;
+        }
+
+        // 플레이어 기본 주사위 면은 처음부터 해금
+        private bool IsUnlocked(DiceDataSO face) =>
+            _catalog != null ? _catalog.IsUnlocked(face) : DiceCatalogProgress.IsDiscovered(face);
+
+        private void ShowFace(DiceDataSO face)
+        {
+            description.text = IsUnlocked(face)
+                ? face.MainName + "\n\n" + face.GetDescription(1f)
+                : "???\n\n아직 획득하지 않은 스킬입니다.\n전투 보상이나 이벤트, 재련으로 얻으면 정보가 공개됩니다.";
         }
 
         public void Close() { if (panelGroup.interactable) StartCoroutine(ClosePanel()); }

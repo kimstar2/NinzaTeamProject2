@@ -73,6 +73,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             var attacker = Executor.Attacker;
             float ratio = target.Effects.ReflectRatio;
             if (ratio <= 0f || dealt <= 0f || attacker == null || attacker == target || attacker.IsDead) return;
+            target.Effects.ShowPopup("반사!", new Color(0.85f, 0.9f, 1f));
             attacker.ApplyDamage(dealt * ratio);
         }
 

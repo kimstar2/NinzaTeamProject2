@@ -188,7 +188,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             if (SkillData.ReflectRatio > 0f && SkillData.ReflectTurns > 0)
             {
                 effects.AddReflect(SkillData.ReflectRatio, SkillData.ReflectTurns);
-                effects.ShowPopup("반사!", new Color(0.85f, 0.9f, 1f));
+                effects.ShowPopup("반사 태세", new Color(0.85f, 0.9f, 1f)); // "반사!"는 실제로 되돌려줄 때 뜬다
             }
             if (SkillData.Status != StatusType.None && SkillData.StatusDamage > 0f && SkillData.StatusTurns > 0)
             {

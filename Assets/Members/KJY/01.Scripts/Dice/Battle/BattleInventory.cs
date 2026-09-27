@@ -236,6 +236,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             }
             Gold -= plan.Cost;
             target.Initialize(resultFace, plan.ResultLevel);
+            DiceCatalogProgress.Discover(resultFace); // 등급 상승으로 새로 얻은 면
             for (int i = 1; i < faces.Count; i++)
             {
                 DiceFragments.Remove(faces[i]);

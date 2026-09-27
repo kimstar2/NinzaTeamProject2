@@ -23,6 +23,7 @@ namespace Members.KJY._01.Scripts.Agent.Player
             RuntimePlayerData = data;
             AgentData = data;
             if (data.DiceList != null) DiceInventory.SetDiceList(data.DiceList);
+            global::Members.KJY._01.Scripts.Dice.Data.DiceCatalogProgress.Discover(data.DiceList); // 시작 주사위도 얻은 것으로 친다
             IsDead = data.IsDead;
             eventChannel.RaiseEvent(new OnPlayerDead(data.PlayerType, data.IsDead));
             if (data.IsDead) return;

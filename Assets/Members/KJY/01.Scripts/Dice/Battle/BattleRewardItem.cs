@@ -41,6 +41,17 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             gradeMark.color = grade != null ? grade.GradeColor : Color.white;
             string gradeName = grade == null ? DiceGradeSO.GetName(DiceGrade.Common) : grade.DisplayName;
             detail.text = $"{gradeName}  ·  Lv.{level:0.#}";
+            icon.color = Color.white;
+        }
+
+        // 도감에서 아직 얻지 못한 면: 아이콘 실루엣만 진한 회색으로 보여주고 정보는 가린다.
+        public void BindLocked(DiceDataSO face)
+        {
+            icon.sprite = face != null ? face.Icon : null;
+            icon.color = new Color(0.16f, 0.16f, 0.16f, 1f);
+            title.text = "???";
+            gradeMark.color = new Color(0.3f, 0.3f, 0.3f, 1f);
+            detail.text = "미획득";
         }
     }
 }
