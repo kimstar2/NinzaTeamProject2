@@ -1,0 +1,23 @@
+﻿패배 · 게임오버 — 파일 목록과 출처
+================================================================
+음원 1개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] sad_game_over.wav
+추천: 1순위
+한국어 설명: Sad game over
+기획서 사용 장면: 파티 전멸과 런 종료 화면. 결과 확정 뒤 한 번 재생
+작품 / 원본 팩: Sad game over
+제작자: Emma_MA
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/sad-game-over
+다운로드 링크: https://opengameart.org/sites/default/files/sad_game_over.wav
+파일 정보: WAV / 19.00초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+루프 정보: 루프 명시 없음; 짧은 종료 음악
+선정 근거: 제작자 설명에 game over/death screen용 짧은 전자피아노 명시

@@ -1,0 +1,1109 @@
+﻿UI · 메뉴 · 클릭 — 파일 목록과 출처
+========================================================
+음원 파일 수: 100개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] back_001.ogg
+한국어 설명 / 추천 장면: 뒤로 가기 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/back_001.ogg
+파일 정보: OGG / 0.06초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[002] back_002.ogg
+한국어 설명 / 추천 장면: 뒤로 가기 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/back_002.ogg
+파일 정보: OGG / 0.07초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[003] back_003.ogg
+한국어 설명 / 추천 장면: 뒤로 가기 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/back_003.ogg
+파일 정보: OGG / 0.09초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[004] back_004.ogg
+한국어 설명 / 추천 장면: 뒤로 가기 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/back_004.ogg
+파일 정보: OGG / 0.07초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[005] bong_001.ogg
+한국어 설명 / 추천 장면: 둥 울리는 알림음 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/bong_001.ogg
+파일 정보: OGG / 0.12초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[006] click_001.ogg
+한국어 설명 / 추천 장면: 클릭 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/click_001.ogg
+파일 정보: OGG / 0.10초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[007] click_002.ogg
+한국어 설명 / 추천 장면: 클릭 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/click_002.ogg
+파일 정보: OGG / 0.01초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[008] click_003.ogg
+한국어 설명 / 추천 장면: 클릭 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/click_003.ogg
+파일 정보: OGG / 0.01초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[009] click_004.ogg
+한국어 설명 / 추천 장면: 클릭 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/click_004.ogg
+파일 정보: OGG / 0.01초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[010] click_005.ogg
+한국어 설명 / 추천 장면: 클릭 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/click_005.ogg
+파일 정보: OGG / 0.01초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[011] close_001.ogg
+한국어 설명 / 추천 장면: 창·메뉴 닫기 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/close_001.ogg
+파일 정보: OGG / 0.15초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[012] close_002.ogg
+한국어 설명 / 추천 장면: 창·메뉴 닫기 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/close_002.ogg
+파일 정보: OGG / 0.31초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[013] close_003.ogg
+한국어 설명 / 추천 장면: 창·메뉴 닫기 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/close_003.ogg
+파일 정보: OGG / 0.31초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[014] close_004.ogg
+한국어 설명 / 추천 장면: 창·메뉴 닫기 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/close_004.ogg
+파일 정보: OGG / 0.32초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[015] confirmation_001.ogg
+한국어 설명 / 추천 장면: 확인·승인 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/confirmation_001.ogg
+파일 정보: OGG / 0.29초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[016] confirmation_002.ogg
+한국어 설명 / 추천 장면: 확인·승인 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/confirmation_002.ogg
+파일 정보: OGG / 0.54초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[017] confirmation_003.ogg
+한국어 설명 / 추천 장면: 확인·승인 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/confirmation_003.ogg
+파일 정보: OGG / 0.32초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[018] confirmation_004.ogg
+한국어 설명 / 추천 장면: 확인·승인 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/confirmation_004.ogg
+파일 정보: OGG / 0.49초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[019] drop_001.ogg
+한국어 설명 / 추천 장면: 놓기·드롭 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/drop_001.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[020] drop_002.ogg
+한국어 설명 / 추천 장면: 놓기·드롭 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/drop_002.ogg
+파일 정보: OGG / 0.19초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[021] drop_003.ogg
+한국어 설명 / 추천 장면: 놓기·드롭 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/drop_003.ogg
+파일 정보: OGG / 0.19초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[022] drop_004.ogg
+한국어 설명 / 추천 장면: 놓기·드롭 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/drop_004.ogg
+파일 정보: OGG / 0.29초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[023] error_001.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_001.ogg
+파일 정보: OGG / 0.16초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[024] error_002.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_002.ogg
+파일 정보: OGG / 0.16초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[025] error_003.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_003.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[026] error_004.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_004.ogg
+파일 정보: OGG / 0.10초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[027] error_005.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_005.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[028] error_006.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 006
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_006.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[029] error_007.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 007
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_007.ogg
+파일 정보: OGG / 0.19초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[030] error_008.ogg
+한국어 설명 / 추천 장면: 오류·실패 알림 · 변형 008
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/error_008.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[031] glass_001.ogg
+한국어 설명 / 추천 장면: 유리 느낌의 알림음 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glass_001.ogg
+파일 정보: OGG / 0.28초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[032] glass_002.ogg
+한국어 설명 / 추천 장면: 유리 느낌의 알림음 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glass_002.ogg
+파일 정보: OGG / 0.13초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[033] glass_003.ogg
+한국어 설명 / 추천 장면: 유리 느낌의 알림음 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glass_003.ogg
+파일 정보: OGG / 0.12초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[034] glass_004.ogg
+한국어 설명 / 추천 장면: 유리 느낌의 알림음 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glass_004.ogg
+파일 정보: OGG / 0.69초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[035] glass_005.ogg
+한국어 설명 / 추천 장면: 유리 느낌의 알림음 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glass_005.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[036] glass_006.ogg
+한국어 설명 / 추천 장면: 유리 느낌의 알림음 · 변형 006
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glass_006.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[037] glitch_001.ogg
+한국어 설명 / 추천 장면: 전자 오류·글리치 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glitch_001.ogg
+파일 정보: OGG / 0.02초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[038] glitch_002.ogg
+한국어 설명 / 추천 장면: 전자 오류·글리치 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glitch_002.ogg
+파일 정보: OGG / 0.03초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[039] glitch_003.ogg
+한국어 설명 / 추천 장면: 전자 오류·글리치 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glitch_003.ogg
+파일 정보: OGG / 0.01초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[040] glitch_004.ogg
+한국어 설명 / 추천 장면: 전자 오류·글리치 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/glitch_004.ogg
+파일 정보: OGG / 0.02초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[041] maximize_001.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_001.ogg
+파일 정보: OGG / 0.26초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[042] maximize_002.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_002.ogg
+파일 정보: OGG / 0.26초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[043] maximize_003.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_003.ogg
+파일 정보: OGG / 0.21초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[044] maximize_004.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_004.ogg
+파일 정보: OGG / 0.42초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[045] maximize_005.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_005.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[046] maximize_006.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 006
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_006.ogg
+파일 정보: OGG / 0.38초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[047] maximize_007.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 007
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_007.ogg
+파일 정보: OGG / 0.19초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[048] maximize_008.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 008
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_008.ogg
+파일 정보: OGG / 0.23초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[049] maximize_009.ogg
+한국어 설명 / 추천 장면: 창·메뉴 확대 · 변형 009
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/maximize_009.ogg
+파일 정보: OGG / 0.22초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[050] minimize_001.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_001.ogg
+파일 정보: OGG / 0.26초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[051] minimize_002.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_002.ogg
+파일 정보: OGG / 0.26초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[052] minimize_003.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_003.ogg
+파일 정보: OGG / 0.21초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[053] minimize_004.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_004.ogg
+파일 정보: OGG / 0.42초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[054] minimize_005.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_005.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[055] minimize_006.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 006
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_006.ogg
+파일 정보: OGG / 0.38초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[056] minimize_007.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 007
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_007.ogg
+파일 정보: OGG / 0.19초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[057] minimize_008.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 008
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_008.ogg
+파일 정보: OGG / 0.23초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[058] minimize_009.ogg
+한국어 설명 / 추천 장면: 창·메뉴 축소 · 변형 009
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/minimize_009.ogg
+파일 정보: OGG / 0.22초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[059] open_001.ogg
+한국어 설명 / 추천 장면: 창·메뉴 열기 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/open_001.ogg
+파일 정보: OGG / 0.15초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[060] open_002.ogg
+한국어 설명 / 추천 장면: 창·메뉴 열기 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/open_002.ogg
+파일 정보: OGG / 0.31초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[061] open_003.ogg
+한국어 설명 / 추천 장면: 창·메뉴 열기 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/open_003.ogg
+파일 정보: OGG / 0.31초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[062] open_004.ogg
+한국어 설명 / 추천 장면: 창·메뉴 열기 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/open_004.ogg
+파일 정보: OGG / 0.32초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[063] pluck_001.ogg
+한국어 설명 / 추천 장면: 튕기는 소리 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/pluck_001.ogg
+파일 정보: OGG / 0.10초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[064] pluck_002.ogg
+한국어 설명 / 추천 장면: 튕기는 소리 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/pluck_002.ogg
+파일 정보: OGG / 0.16초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[065] question_001.ogg
+한국어 설명 / 추천 장면: 질문·확인 요청 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/question_001.ogg
+파일 정보: OGG / 0.49초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[066] question_002.ogg
+한국어 설명 / 추천 장면: 질문·확인 요청 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/question_002.ogg
+파일 정보: OGG / 0.33초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[067] question_003.ogg
+한국어 설명 / 추천 장면: 질문·확인 요청 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/question_003.ogg
+파일 정보: OGG / 0.33초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[068] question_004.ogg
+한국어 설명 / 추천 장면: 질문·확인 요청 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/question_004.ogg
+파일 정보: OGG / 0.33초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[069] scratch_001.ogg
+한국어 설명 / 추천 장면: 긁는 소리 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scratch_001.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[070] scratch_002.ogg
+한국어 설명 / 추천 장면: 긁는 소리 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scratch_002.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[071] scratch_003.ogg
+한국어 설명 / 추천 장면: 긁는 소리 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scratch_003.ogg
+파일 정보: OGG / 0.12초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[072] scratch_004.ogg
+한국어 설명 / 추천 장면: 긁는 소리 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scratch_004.ogg
+파일 정보: OGG / 0.33초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[073] scratch_005.ogg
+한국어 설명 / 추천 장면: 긁는 소리 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scratch_005.ogg
+파일 정보: OGG / 0.33초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[074] scroll_001.ogg
+한국어 설명 / 추천 장면: 스크롤 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scroll_001.ogg
+파일 정보: OGG / 1.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[075] scroll_002.ogg
+한국어 설명 / 추천 장면: 스크롤 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scroll_002.ogg
+파일 정보: OGG / 1.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[076] scroll_003.ogg
+한국어 설명 / 추천 장면: 스크롤 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scroll_003.ogg
+파일 정보: OGG / 1.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[077] scroll_004.ogg
+한국어 설명 / 추천 장면: 스크롤 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scroll_004.ogg
+파일 정보: OGG / 1.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[078] scroll_005.ogg
+한국어 설명 / 추천 장면: 스크롤 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/scroll_005.ogg
+파일 정보: OGG / 1.00초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[079] select_001.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_001.ogg
+파일 정보: OGG / 0.04초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[080] select_002.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_002.ogg
+파일 정보: OGG / 0.04초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[081] select_003.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_003.ogg
+파일 정보: OGG / 0.38초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[082] select_004.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_004.ogg
+파일 정보: OGG / 0.38초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[083] select_005.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_005.ogg
+파일 정보: OGG / 0.38초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[084] select_006.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 006
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_006.ogg
+파일 정보: OGG / 1.94초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[085] select_007.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 007
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_007.ogg
+파일 정보: OGG / 0.05초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[086] select_008.ogg
+한국어 설명 / 추천 장면: 항목 선택 · 변형 008
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/select_008.ogg
+파일 정보: OGG / 0.05초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[087] switch_001.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_001.ogg
+파일 정보: OGG / 0.62초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[088] switch_002.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_002.ogg
+파일 정보: OGG / 0.61초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[089] switch_003.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_003.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[090] switch_004.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_004.ogg
+파일 정보: OGG / 0.50초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[091] switch_005.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 005
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_005.ogg
+파일 정보: OGG / 0.61초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[092] switch_006.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 006
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_006.ogg
+파일 정보: OGG / 0.61초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[093] switch_007.ogg
+한국어 설명 / 추천 장면: 스위치 전환 · 변형 007
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/switch_007.ogg
+파일 정보: OGG / 0.61초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[094] tick_001.ogg
+한국어 설명 / 추천 장면: 짧은 틱 소리 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/tick_001.ogg
+파일 정보: OGG / 0.02초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[095] tick_002.ogg
+한국어 설명 / 추천 장면: 짧은 틱 소리 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/tick_002.ogg
+파일 정보: OGG / 0.02초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[096] tick_004.ogg
+한국어 설명 / 추천 장면: 짧은 틱 소리 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/tick_004.ogg
+파일 정보: OGG / 0.05초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[097] toggle_001.ogg
+한국어 설명 / 추천 장면: 켜기·끄기 전환 · 변형 001
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/toggle_001.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[098] toggle_002.ogg
+한국어 설명 / 추천 장면: 켜기·끄기 전환 · 변형 002
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/toggle_002.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[099] toggle_003.ogg
+한국어 설명 / 추천 장면: 켜기·끄기 전환 · 변형 003
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/toggle_003.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[100] toggle_004.ogg
+한국어 설명 / 추천 장면: 켜기·끄기 전환 · 변형 004
+작품 / 팩: Interface Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/interface-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+ZIP 안의 원본 경로: Audio/toggle_004.ogg
+파일 정보: OGG / 0.07초 / 44100 Hz / 1채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)

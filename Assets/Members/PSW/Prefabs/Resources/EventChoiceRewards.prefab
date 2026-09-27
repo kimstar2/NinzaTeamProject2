@@ -119,3 +119,30 @@ MonoBehaviour:
   - eventData: {fileID: 11400000, guid: 68b8a27b6fa44a44aae6d7389da3820f, type: 2}
     choiceIndex: 1
     gold: 30
+  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
+  resetScenePath: Assets/Members/KJY/02.RealScene/UIScene.unity
+  damageChoices:
+  - eventData: {fileID: 11400000, guid: ff20e64031f4c7746b28e34b70927f05, type: 2}
+    choiceIndex: 0
+    outgoingPercent: 10
+    incomingPercent: 0
+    battles: -1
+    resultText: "훈련으로 사기가 올랐습니다.\n이번 모험 동안 모든 아군이 가하는 피해가 10% 증가합니다."
+  - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
+    choiceIndex: 0
+    outgoingPercent: 0
+    incomingPercent: -20
+    battles: -1
+    resultText: "개복치를 바닷가로 데려다주었습니다.\n이번 모험 동안 모든 아군이 받는 피해가 20% 감소합니다."
+  - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
+    choiceIndex: 1
+    outgoingPercent: 0
+    incomingPercent: 20
+    battles: -1
+    resultText: "개복치를 무시했습니다.\n이번 모험 동안 모든 아군이 받는 피해가 20% 증가합니다."
+  - eventData: {fileID: 11400000, guid: 6817e6a28724c564eb17c3097602a877, type: 2}
+    choiceIndex: 0
+    outgoingPercent: 0
+    incomingPercent: 10
+    battles: 5
+    resultText: "환마의 숲에서 기침이 멎지 않습니다.\n다음 5번의 전투 동안 모든 아군이 받는 피해가 10% 증가합니다."

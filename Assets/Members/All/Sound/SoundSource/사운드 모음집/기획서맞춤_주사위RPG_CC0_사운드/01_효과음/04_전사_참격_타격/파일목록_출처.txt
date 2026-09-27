@@ -1,0 +1,128 @@
+﻿전사 · 참격 · 타격 — 파일 목록과 출처
+================================================================
+음원 8개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] blade_01.ogg
+추천: 1순위
+한국어 설명: 칼날 효과음 01
+기획서 사용 장면: 전사 난타의 연속 참격·참격 2타·전투 본능의 휘두르기 적중 후보
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: blade_01.ogg
+파일 정보: OGG / 0.29초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음
+
+[02] chop.ogg
+추천: 1순위
+한국어 설명: 내리찍기·찍어 자르기
+기획서 사용 장면: 처형의 내려치기 또는 분쇄의 강한 타격 후보
+작품 / 원본 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+압축 파일 안 원본 경로: Audio/chop.ogg
+파일 정보: OGG / 0.24초 / 48000 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[03] drawKnife1.ogg
+추천: 1순위
+한국어 설명: 칼 뽑기 · 변형 1
+기획서 사용 장면: 전사 공격 준비; 원본은 단검을 꺼내는 소리
+작품 / 원본 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+압축 파일 안 원본 경로: Audio/drawKnife1.ogg
+파일 정보: OGG / 0.40초 / 48000 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[04] impactPunch_heavy_000.ogg
+추천: 1순위
+한국어 설명: 강한 주먹 타격 · 변형 000
+기획서 사용 장면: 연속 공격의 타격감 보강; 마지막 강타에는 heavy 후보
+작품 / 원본 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+압축 파일 안 원본 경로: Audio/impactPunch_heavy_000.ogg
+파일 정보: OGG / 0.65초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[05] impactPunch_medium_000.ogg
+추천: 1순위
+한국어 설명: 중간 강도 주먹 타격 · 변형 000
+기획서 사용 장면: 연속 공격의 타격감 보강; 마지막 강타에는 heavy 후보
+작품 / 원본 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+압축 파일 안 원본 경로: Audio/impactPunch_medium_000.ogg
+파일 정보: OGG / 0.43초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[06] knifeSlice.ogg
+추천: 1순위
+한국어 설명: 칼로 베기
+기획서 사용 장면: 난타·전투 본능·참격의 베기 애니메이션에 맞춘 변형
+작품 / 원본 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+압축 파일 안 원본 경로: Audio/knifeSlice.ogg
+파일 정보: OGG / 0.60초 / 48000 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[07] knifeSlice2.ogg
+추천: 1순위
+한국어 설명: 칼로 베기 · 변형 2
+기획서 사용 장면: 난타·전투 본능·참격의 베기 애니메이션에 맞춘 변형
+작품 / 원본 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+압축 파일 안 원본 경로: Audio/knifeSlice2.ogg
+파일 정보: OGG / 0.57초 / 48000 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[08] blade_03.ogg
+추천: 대안
+한국어 설명: 칼날 효과음 03
+기획서 사용 장면: 전사 처형의 내려찍기·난타 마지막 타·분쇄 찌르기의 칼날 소리 대안
+작품 / 원본 팩: 80 CC0 RPG SFX
+제작자: rubberduck
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/node/86018
+다운로드 링크: https://opengameart.org/sites/default/files/80-CC0-RPG-SFX_0.zip
+압축 파일 안 원본 경로: blade_03.ogg
+파일 정보: OGG / 0.40초 / 48000 Hz / 2채널
+수집: 기획서에 맞춰 새로 확보
+라이선스: CC0 1.0
+재생 방식: 단발 사용 후보; 원본의 루프 보장을 뜻하지 않음

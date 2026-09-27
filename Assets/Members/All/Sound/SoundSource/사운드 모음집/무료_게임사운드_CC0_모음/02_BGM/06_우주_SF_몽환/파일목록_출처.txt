@@ -1,0 +1,20 @@
+﻿우주 · SF · 몽환 — 파일 목록과 출처
+========================================================
+음원 파일 수: 1개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] SpacyLoop.ogg
+한국어 설명 / 추천 장면: 멀티플레이 대기실, 우주 로비, SF 연결 화면
+작품 / 팩: SpacyLoop
+제작자: ElectronicFreaker
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/spacyloop
+원본 다운로드 링크: https://opengameart.org/sites/default/files/SpacyLoop.ogg
+파일 정보: OGG / 17.15초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 루프 명시
