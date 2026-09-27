@@ -22,7 +22,7 @@ namespace Members.KJY._01.Scripts.Agent
         public bool IsStunned => StunTurns > 0;
 
         // ===== 표시용: 떠오르는 문구와 디버프 색 =====
-        public enum DebuffKind { Mark, Poison, Burn, Brand, Miss, Stun }
+        public enum DebuffKind { Mark, Poison, Burn, Brand, Miss, Stun, Weaken }
 
         public event Action<string, Color> Popup;
         public event Action Cleared; // 전투 입장 등으로 모든 효과가 초기화될 때
@@ -38,6 +38,7 @@ namespace Members.KJY._01.Scripts.Agent
             DebuffKind.Brand => new Color(0.75f, 0.45f, 1f),
             DebuffKind.Miss => new Color(0.65f, 0.75f, 1f),
             DebuffKind.Stun => new Color(1f, 0.9f, 0.3f),
+            DebuffKind.Weaken => new Color(0.55f, 0.85f, 1f),
             _ => new Color(1f, 0.45f, 0.45f)
         };
 
@@ -58,6 +59,7 @@ namespace Members.KJY._01.Scripts.Agent
             DebuffKind.Mark => MarkedHits > 0,
             DebuffKind.Miss => MissTurns > 0,
             DebuffKind.Stun => StunTurns > 0,
+            DebuffKind.Weaken => WeakenTurns > 0,
             DebuffKind.Burn => HasStatus(StatusType.Burn),
             DebuffKind.Brand => HasStatus(StatusType.Brand),
             _ => HasStatus(StatusType.Poison)
@@ -73,6 +75,61 @@ namespace Members.KJY._01.Scripts.Agent
             }
         }
         public event Action Changed;
+
+        // 도발: 남은 턴 동안 상대의 단일 공격이 이 대상에게 향한다
+        public int TauntTurns { get; private set; }
+        // 피해 감소: 남은 턴 동안 받는 공격 피해를 비율만큼 줄인다 (보호와 별개로 곱해짐)
+        public float ResistRatio { get; private set; }
+        public int ResistTurns { get; private set; }
+        // 둔화: 남은 턴 동안 이 대상이 주는 피해가 비율만큼 줄어든다
+        public float WeakenRatio { get; private set; }
+        public int WeakenTurns { get; private set; }
+        // 공격력 증가: 남은 턴 동안 이 대상이 주는 피해가 비율만큼 늘어난다
+        public float PowerUpRatio { get; private set; }
+        public int PowerUpTurns { get; private set; }
+        public float OutgoingMultiplier =>
+            (WeakenTurns > 0 ? 1f - WeakenRatio : 1f) * (PowerUpTurns > 0 ? 1f + PowerUpRatio : 1f);
+
+        public void AddPowerUp(float ratio, int turns)
+        {
+            if (turns <= 0 || ratio <= 0f) return;
+            PowerUpRatio = Mathf.Max(PowerUpRatio, ratio);
+            PowerUpTurns = Mathf.Max(PowerUpTurns, turns);
+            Changed?.Invoke();
+        }
+
+        public void AddTaunt(int turns)
+        {
+            if (turns <= 0) return;
+            TauntTurns = Mathf.Max(TauntTurns, turns);
+            Changed?.Invoke();
+        }
+
+        public void AddResist(float ratio, int turns)
+        {
+            if (turns <= 0 || ratio <= 0f) return;
+            ResistRatio = Mathf.Max(ResistRatio, Mathf.Clamp01(ratio));
+            ResistTurns = Mathf.Max(ResistTurns, turns);
+            Changed?.Invoke();
+        }
+
+        public void AddWeaken(float ratio, int turns)
+        {
+            if (turns <= 0 || ratio <= 0f) return;
+            WeakenRatio = Mathf.Max(WeakenRatio, Mathf.Clamp01(ratio));
+            WeakenTurns = Mathf.Max(WeakenTurns, turns);
+            Changed?.Invoke();
+        }
+
+        // 무적: 남은 턴 동안 스킬 공격 피해를 모두 무시한다 (지속 피해는 들어감)
+        public int InvulnerableTurns { get; private set; }
+
+        public void AddInvulnerable(int turns)
+        {
+            if (turns <= 0) return;
+            InvulnerableTurns = Mathf.Max(InvulnerableTurns, turns);
+            Changed?.Invoke();
+        }
 
         // 반사: 남은 턴 동안 스킬로 받은 피해의 일부를 공격자에게 되돌린다.
         public float ReflectRatio { get; private set; }
@@ -91,8 +148,8 @@ namespace Members.KJY._01.Scripts.Agent
         {
             MarkedHits = 0;
             _dots.Clear();
-            MissChance = 0f;
-            MissTurns = StunTurns = 0;
+            MissChance = WeakenRatio = 0f;
+            MissTurns = StunTurns = WeakenTurns = 0;
             Changed?.Invoke();
         }
 
@@ -166,6 +223,11 @@ namespace Members.KJY._01.Scripts.Agent
             if (StunTurns > 0) StunTurns--;
             _stunBlockedThisTurn = false;
             if (ReflectTurns > 0 && --ReflectTurns == 0) ReflectRatio = 0f;
+            if (InvulnerableTurns > 0) InvulnerableTurns--;
+            if (TauntTurns > 0) TauntTurns--;
+            if (ResistTurns > 0 && --ResistTurns == 0) ResistRatio = 0f;
+            if (WeakenTurns > 0 && --WeakenTurns == 0) WeakenRatio = 0f;
+            if (PowerUpTurns > 0 && --PowerUpTurns == 0) PowerUpRatio = 0f;
             Changed?.Invoke();
             return damage;
         }
@@ -192,6 +254,12 @@ namespace Members.KJY._01.Scripts.Agent
 
         public float ReduceDamage(float damage)
         {
+            if (damage > 0f && InvulnerableTurns > 0)
+            {
+                ShowPopup("무효", new Color(0.85f, 0.9f, 1f));
+                return 0f;
+            }
+            if (damage > 0f && ResistTurns > 0) damage *= 1f - ResistRatio;
             if (damage <= 0f || GuardHits == 0) return Mathf.Max(0f, damage);
             GuardHits--;
             Changed?.Invoke();
@@ -203,7 +271,8 @@ namespace Members.KJY._01.Scripts.Agent
             MarkedHits = GuardHits = 0;
             IsEmpowered = false;
             MissChance = ReflectRatio = 0f;
-            MissTurns = StunTurns = ReflectTurns = 0;
+            MissTurns = StunTurns = ReflectTurns = InvulnerableTurns = TauntTurns = ResistTurns = WeakenTurns = PowerUpTurns = 0;
+            ResistRatio = WeakenRatio = PowerUpRatio = 0f;
             _stunBlockedThisTurn = false;
             _dots.Clear();
             _debuffOrder.Clear();
@@ -218,7 +287,9 @@ namespace Members.KJY._01.Scripts.Agent
             {
                 string text = (MarkedHits > 0 ? $"표식 {MarkedHits}  " : "") +
                               (GuardHits > 0 ? $"보호 {GuardHits}  " : "") + (IsEmpowered ? "격려  " : "") +
-                              (ReflectTurns > 0 ? $"반사 {ReflectTurns}  " : "");
+                              (ReflectTurns > 0 ? $"반사 {ReflectTurns}  " : "") + (InvulnerableTurns > 0 ? $"무적 {InvulnerableTurns}  " : "") +
+                              (TauntTurns > 0 ? $"도발 {TauntTurns}  " : "") + (ResistTurns > 0 ? $"피해 감소 {ResistTurns}  " : "") +
+                              (WeakenTurns > 0 ? $"둔화 {WeakenTurns}  " : "") + (PowerUpTurns > 0 ? $"공격력 증가 {PowerUpTurns}  " : "");
                 foreach (var pair in _dots) text += $"{StatusName(pair.Key)} {pair.Value.Turns}  ";
                 return text + (MissTurns > 0 ? $"빗나감 {MissTurns}  " : "") + (StunTurns > 0 ? $"행동 불가 {StunTurns}" : "");
             }

@@ -46,6 +46,13 @@
 | EnemyTargetRule | 몬스터가 쓸 때 대상: Default / Random / LowestHealth |
 | suitableTypes | 이 면을 장착할 수 있는 직업. 비우면 모두. 몬스터 사용에는 영향 없음 |
 | IsArea | 광역. 대상 진영 전체(적 전체 / 아군 전체)에 적용. 플레이어는 대상을 고르지 않고 바로 연결 |
+| InvulnerableTurns | 대상이 그 턴 동안 스킬 공격 피해를 모두 무시 (무력화). 지속 피해는 들어감 |
+| HealMaxHealthRatio | 대상 최대 체력의 비율만큼 추가 회복 (재생의 빛 30%). 제련 레벨 1당 +25% |
+| TauntTurns | 도발: 그 턴 수 동안 상대의 단일 공격이 대상에게 향함 (압도 2턴) |
+| ResistRatio / ResistTurns | 받는 공격 피해 N% 감소 (압도 20%·2턴). 보호와 별개로 곱해짐 |
+| WeakenRatio / WeakenTurns | 둔화: 대상이 주는 피해 N% 감소 (서리지대 15%·2턴). 정화로 제거됨 |
+| PowerUpRatio / PowerUpTurns | 공격력 증가: 대상이 주는 피해 N% 증가 (야수의 포효 15%, 화염 폭주 25%, 과열 30%, 전투 독려 20%, 모두 2턴) |
+| SelfDestruct | 스킬을 쓴 뒤 시전자가 쓰러짐 (자폭) |
 | EffectColor | 이 스킬이 건 디버프의 문구·캐릭터 색. 투명이면 종류별 기본색 |
 | Strength | 강함도 |
 

@@ -15,14 +15,14 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 8b6aab026c345724ab9e333de443e7fc, type: 3}
   <SkillName>k__BackingField: "압도"
   <Icon>k__BackingField: {fileID: 4209667872795797613, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "거대한 기세로 몸을 부풀려 공격을 버텨 냅니다."
+  <SkillDescription>k__BackingField: "몸집을 키워 적의 시선을 끌어모읍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 0
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 2
-  <Synergy>k__BackingField: 3
+  <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 85
   <Status>k__BackingField: 0
   <StatusDamage>k__BackingField: 0
@@ -37,3 +37,6 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 4
+  <TauntTurns>k__BackingField: 2
+  <ResistRatio>k__BackingField: 0.2
+  <ResistTurns>k__BackingField: 2

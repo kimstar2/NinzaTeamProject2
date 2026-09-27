@@ -22,7 +22,7 @@ MonoBehaviour:
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 1
-  <Synergy>k__BackingField: 4
+  <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 60
   <Status>k__BackingField: 0
   <StatusDamage>k__BackingField: 0
@@ -39,3 +39,5 @@ MonoBehaviour:
   - 1
   - 2
   <IsArea>k__BackingField: 1
+  <PowerUpRatio>k__BackingField: 0.15
+  <PowerUpTurns>k__BackingField: 2

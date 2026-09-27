@@ -19,6 +19,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             float value = Executor.SkillData.GetScaledStat(statType, BaseLevel) * Executor.PowerMultiplier;
             if (statType == ApplyStatType.Damage && ServiceLocator.TryGet<IDamageModifiers>(out var modifiers))
                 value *= modifiers.GetOutgoingMultiplier(Executor.Attacker.AgentData);
+            if (statType == ApplyStatType.Damage) value *= Executor.Attacker.Effects.OutgoingMultiplier; // 둔화
             return value;
         }
 

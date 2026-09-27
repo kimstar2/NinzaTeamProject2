@@ -37,3 +37,6 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 2
+  <WeakenRatio>k__BackingField: 0.15
+  <WeakenTurns>k__BackingField: 2
+  <EffectColor>k__BackingField: {r: 0.55, g: 0.85, b: 1, a: 1}

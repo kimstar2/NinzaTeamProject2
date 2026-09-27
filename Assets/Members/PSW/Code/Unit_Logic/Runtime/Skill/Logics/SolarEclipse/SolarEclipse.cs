@@ -22,6 +22,8 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         [SerializeField] private SkillItem magicMap;
         [SerializeField] private SkillItem boomLight;
         public List<SkillApplyStat> applyStats;
+        [Header("Timing")]
+        [SerializeField, Range(0.2f, 1f)] private float durationScale = 0.5f; // 1이면 원래 길이(약 6.5초)
         
         public UnityEvent onSkillFinished;
 
@@ -101,7 +103,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             if (_magicMapRotate)
             {
                 magicMap.trm.rotation *= Quaternion.Euler(0, 0, _rotateSpeed);
-                _rotateSpeed += 0.01f;
+                _rotateSpeed += 0.01f / durationScale;
             }
         }
 
@@ -135,18 +137,20 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         {
             seq.AppendCallback(() =>
             {
-                solar.sr.DOFade(1, 1f);
-                luna.sr.DOFade(1, 1f);
+                solar.sr.DOFade(1, D(1f));
+                luna.sr.DOFade(1, D(1f));
             });
-            
-            seq.AppendInterval(1f);
+
+            seq.AppendInterval(D(1f));
         }
 
         private void MoveObject()
         {
-            solar.trm.DOLocalMove(targetPos, 2f);
-            luna.trm.DOLocalMove(targetPos, 2f);
+            solar.trm.DOLocalMove(targetPos, D(2f));
+            luna.trm.DOLocalMove(targetPos, D(2f));
         }
+
+        private float D(float seconds) => seconds * durationScale;
 
         private void MagicMapRotate(bool isRotate)
         {
@@ -178,23 +182,23 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             Sequence seq = DOTween.Sequence();
             StartFade(seq);
             seq.AppendCallback(MoveObject);
-            seq.AppendInterval(2.1f);
+            seq.AppendInterval(D(2.1f));
             seq.AppendCallback(() =>
             {
-                magicMap.sr.DOFade(1, 0.5f);
+                magicMap.sr.DOFade(1, D(0.5f));
                 MagicMapRotate(true);
             });
-            seq.AppendInterval(1.5f);
+            seq.AppendInterval(D(1.5f));
             seq.AppendCallback(() => solar.obj.SetActive(false));
-            seq.Append(boomLight.trm.DOScale(new Vector3(6f, 6f, 1), 0.6f));
+            seq.Append(boomLight.trm.DOScale(new Vector3(6f, 6f, 1), D(0.6f)));
             seq.AppendCallback(() => boomLight.trm.localScale = Vector3.zero);
             seq.AppendCallback(() => boomLight.obj.SetActive(false));
-            seq.Append(luna.trm.DOScale(new Vector3(10, 10, 1), 1f).SetEase(Ease.OutQuart));
+            seq.Append(luna.trm.DOScale(new Vector3(10, 10, 1), D(1f)).SetEase(Ease.OutQuart));
             seq.AppendCallback(() => magicMap.obj.SetActive(false));
 
             seq.AppendCallback(() => ApplyStat());
-            
-            seq.Append(luna.trm.DOScale(Vector3.zero, 0.3f));
+
+            seq.Append(luna.trm.DOScale(Vector3.zero, D(0.3f)));
             seq.AppendCallback(() => luna.obj.SetActive(false));
             
             seq.AppendCallback(() =>

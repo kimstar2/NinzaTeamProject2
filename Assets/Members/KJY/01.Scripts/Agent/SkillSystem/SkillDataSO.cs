@@ -73,6 +73,19 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field: SerializeField, Min(0)] public int ReflectTurns { get; private set; }
         [field: SerializeField] public bool CleanseDebuffs { get; private set; } // 대상의 디버프를 모두 제거
         [field: SerializeField] public bool IsArea { get; private set; } // 광역: 대상 진영 전체. 플레이어는 대상을 고르지 않는다
+        [field: SerializeField, Min(0)] public int InvulnerableTurns { get; private set; } // 대상이 스킬 공격 피해를 모두 무시하는 턴
+        [field: SerializeField, Range(0f, 1f)] public float HealMaxHealthRatio { get; private set; } // 대상 최대 체력의 이 비율만큼 추가 회복
+        [field: SerializeField, Min(0)] public int TauntTurns { get; private set; } // 대상에게 거는 도발: 상대의 단일 공격을 끌어옴
+        [field: SerializeField, Range(0f, 1f)] public float ResistRatio { get; private set; } // 대상이 받는 공격 피해 감소 비율
+        [field: SerializeField, Min(0)] public int ResistTurns { get; private set; }
+        [field: SerializeField, Range(0f, 1f)] public float WeakenRatio { get; private set; } // 둔화: 대상이 주는 피해 감소 비율
+        [field: SerializeField, Min(0)] public int WeakenTurns { get; private set; }
+        [field: SerializeField, Range(0f, 2f)] public float PowerUpRatio { get; private set; } // 공격력 증가: 대상이 주는 피해 증가 비율
+        [field: SerializeField, Min(0)] public int PowerUpTurns { get; private set; }
+        [field: SerializeField] public bool SelfDestruct { get; private set; } // 스킬을 쓰고 나면 시전자가 쓰러짐
+
+        // 최대 체력 % 회복량. 제련 레벨 1당 +25%씩 (Lv.3이면 1.5배)
+        public float GetHealRatio(float level) => HealMaxHealthRatio * (1f + Mathf.Max(0f, level - 1f) * 0.25f);
         [field: SerializeField, Tooltip("디버프가 걸렸을 때 문구와 캐릭터 색. 투명(알파 0)이면 종류별 기본색")]
         public Color EffectColor { get; private set; } = Color.clear;
         [field: SerializeField] public TargetRule EnemyTargetRule { get; private set; } // 적(몬스터)이 쓸 때 대상 고르는 방식
@@ -126,7 +139,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
                 SynergyType.Empower => "격려: 다음 공격·회복 스킬의 효과가 35% 증가합니다. 중첩되지 않습니다.",
                 _ => string.Empty
             };
-            return target + GetStatDescription(level) + (synergy.Length > 0 ? "\n" + synergy : "") + GetExtraDescription();
+            return target + GetStatDescription(level) + (synergy.Length > 0 ? "\n" + synergy : "") + GetExtraDescription(level);
         }
 
         // 몬스터가 누구를 노리는지: 무작위 / 낮은 체력 / 보복(자신을 공격한 캐릭터) / 자신 / 전체
@@ -145,9 +158,23 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 
         private static string StatusName(StatusType status) => CombatEffects.StatusName(status);
 
-        private string GetExtraDescription()
+        private string GetExtraDescription(float level)
         {
             var text = new System.Text.StringBuilder();
+            if (HealMaxHealthRatio > 0f)
+                text.Append($"\n회복: 대상 최대 체력의 {GetHealRatio(level) * 100f:0.#}%를 회복합니다.");
+            if (InvulnerableTurns > 0)
+                text.Append($"\n무적: {InvulnerableTurns}턴 동안 받는 공격 피해를 모두 무시합니다. (지속 피해 제외)");
+            if (TauntTurns > 0)
+                text.Append($"\n도발: {TauntTurns}턴 동안 적의 단일 공격이 대상에게 향합니다.");
+            if (ResistRatio > 0f && ResistTurns > 0)
+                text.Append($"\n피해 감소: {ResistTurns}턴 동안 받는 공격 피해가 {ResistRatio * 100f:0}% 줄어듭니다.");
+            if (WeakenRatio > 0f && WeakenTurns > 0)
+                text.Append($"\n둔화: {WeakenTurns}턴 동안 대상이 주는 피해가 {WeakenRatio * 100f:0}% 줄어듭니다.");
+            if (PowerUpRatio > 0f && PowerUpTurns > 0)
+                text.Append($"\n공격력 증가: {PowerUpTurns}턴 동안 대상이 주는 피해가 {PowerUpRatio * 100f:0}% 늘어납니다.");
+            if (SelfDestruct)
+                text.Append("\n자폭: 스킬을 쓴 뒤 시전자가 쓰러집니다.");
             if (Status != StatusType.None && StatusDamage > 0f && StatusTurns > 0)
                 text.Append($"\n{StatusName(Status)}: {StatusTurns}턴 동안 턴이 끝날 때마다 {StatusDamage:0.#} 피해를 줍니다.");
             if (BonusVsStatus != StatusType.None && BonusDamage > 0f)

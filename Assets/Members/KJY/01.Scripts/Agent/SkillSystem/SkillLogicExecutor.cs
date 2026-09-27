@@ -28,12 +28,26 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         private readonly List<AbstractSelector> _targets = new();
         private bool _missShown;
         
-        public void SkillFinished() => OnSkillFinished?.Invoke();
+        public void SkillFinished()
+        {
+            // 자폭: 공격이 모두 끝난 뒤 시전자가 쓰러진다
+            if (_executed && SkillData != null && SkillData.SelfDestruct && Attacker != null && !Attacker.IsDead)
+            {
+                Attacker.Effects.ShowPopup("자폭!", new Color(1f, 0.45f, 0.3f));
+                Attacker.ApplyDamage(Attacker.MyAgent.HealthModule.CurrentHealth);
+            }
+            _executed = false;
+            OnSkillFinished?.Invoke();
+        }
+
+        private bool _executed; // 대상이 없어 바로 끝난 경우에는 자폭하지 않음
         public void SkillExecute(AbstractSelector attacker, AbstractSelector target, AgentType agentType, SkillDataSO skillData)
         {
             // 광역 공격은 연출이 향할 대상을 상대 진영 가운데로 정한다 (피해는 전체)
             if (skillData.IsArea && skillData.Target == SkillDataSO.TargetType.Enemy)
                 target = FindAreaCenter(attacker, skillData) ?? target;
+            else if (skillData.Target == SkillDataSO.TargetType.Enemy)
+                target = FindTaunter(attacker, skillData) ?? target; // 도발 중인 상대가 있으면 단일 공격은 그쪽으로
             Target = target;
             Attacker = attacker;
             AgentType = agentType;
@@ -46,11 +60,12 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
                 return;
             }
             bool hasPower = skillData.GetScaledStat(ApplyStatType.Damage, 1f) > 0f ||
-                skillData.GetScaledStat(ApplyStatType.Heal, 1f) > 0f;
+                skillData.GetScaledStat(ApplyStatType.Heal, 1f) > 0f || skillData.HealMaxHealthRatio > 0f;
             PowerMultiplier = hasPower ? Attacker.Effects.UseEmpower() : 1f;
             IsMissed = skillData.GetScaledStat(ApplyStatType.Damage, 1f) > 0f && Attacker.Effects.RollMiss();
             _effectApplied.Clear();
             _missShown = false;
+            _executed = true;
             PayHealthCost();
             
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
@@ -81,6 +96,14 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
            
             foreach (AbstractSkillLogic skillLogic in skills)
                 skillLogic.Attack();
+        }
+
+        private static AbstractSelector FindTaunter(AbstractSelector attacker, SkillDataSO skillData)
+        {
+            foreach (var selector in AbstractSelector.InBattle)
+                if (selector != null && !selector.IsDead && selector.Effects.TauntTurns > 0 && skillData.CanTarget(attacker, selector))
+                    return selector;
+            return null;
         }
 
         // 살아 있는 상대를 위에서부터 줄 세웠을 때 가운데. 짝수면 가운데 두 명 중 위쪽.
@@ -135,6 +158,32 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             {
                 effects.ClearDebuffs(); // 새 효과를 걸기 전에 먼저 정화
                 effects.ShowPopup("정화!", new Color(0.6f, 1f, 1f));
+            }
+            if (SkillData.PowerUpRatio > 0f && SkillData.PowerUpTurns > 0)
+            {
+                effects.AddPowerUp(SkillData.PowerUpRatio, SkillData.PowerUpTurns);
+                effects.ShowPopup("공격력 증가!", new Color(1f, 0.8f, 0.35f));
+            }
+            if (SkillData.TauntTurns > 0)
+            {
+                effects.AddTaunt(SkillData.TauntTurns);
+                effects.ShowPopup("도발!", new Color(1f, 0.7f, 0.3f));
+            }
+            if (SkillData.ResistRatio > 0f && SkillData.ResistTurns > 0)
+            {
+                effects.AddResist(SkillData.ResistRatio, SkillData.ResistTurns);
+                effects.ShowPopup("피해 감소!", new Color(0.6f, 0.85f, 1f));
+            }
+            if (SkillData.WeakenRatio > 0f && SkillData.WeakenTurns > 0)
+            {
+                effects.AddWeaken(SkillData.WeakenRatio, SkillData.WeakenTurns);
+                effects.RememberDebuff(CombatEffects.DebuffKind.Weaken, ColorOf(CombatEffects.DebuffKind.Weaken));
+                effects.ShowPopup("둔화!", ColorOf(CombatEffects.DebuffKind.Weaken));
+            }
+            if (SkillData.InvulnerableTurns > 0)
+            {
+                effects.AddInvulnerable(SkillData.InvulnerableTurns);
+                effects.ShowPopup("무적!", new Color(0.85f, 0.9f, 1f));
             }
             if (SkillData.ReflectRatio > 0f && SkillData.ReflectTurns > 0)
             {

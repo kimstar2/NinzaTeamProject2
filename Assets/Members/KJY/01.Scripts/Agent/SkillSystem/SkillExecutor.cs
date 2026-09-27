@@ -26,7 +26,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             
             if (skillData == null || skillData.SkillLogicExecutor == null)
             {
-                Debug.LogWarning($"{name}: 주사위 스킬 연결 확인해줘", this);
+                Debug.LogWarning($"{name}: 주사위 스킬 연결 확인해줘 (면: {(face != null ? face.name : "없음")}, " +
+                                 $"스킬: {(skillData != null ? skillData.name : "없음")}, 직업: {attacker.AgentData.AttackType})", this);
                 HandleEndSkill();
                 return;
             }

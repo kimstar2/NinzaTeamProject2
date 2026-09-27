@@ -22,7 +22,7 @@ MonoBehaviour:
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 2
-  <Synergy>k__BackingField: 4
+  <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 85
   <Status>k__BackingField: 0
   <StatusDamage>k__BackingField: 0
@@ -38,3 +38,5 @@ MonoBehaviour:
   suitableTypes:
   - 1
   - 2
+  <PowerUpRatio>k__BackingField: 0.3
+  <PowerUpTurns>k__BackingField: 2

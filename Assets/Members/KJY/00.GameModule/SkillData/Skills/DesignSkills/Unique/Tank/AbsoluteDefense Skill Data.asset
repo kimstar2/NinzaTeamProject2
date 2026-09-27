@@ -15,13 +15,13 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 8b6aab026c345724ab9e333de443e7fc, type: 3}
   <SkillName>k__BackingField: "절대 방어"
   <Icon>k__BackingField: {fileID: 708013953597192102, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "모든 힘을 방어에 쏟아 공격을 받아 냅니다."
+  <SkillDescription>k__BackingField: "모든 힘을 방어에 쏟아 아군 전체를 지킵니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 0
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
-  <Target>k__BackingField: 2
+  <Target>k__BackingField: 1
   <Synergy>k__BackingField: 3
   <Strength>k__BackingField: 90
   <Status>k__BackingField: 0
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 4
+  <IsArea>k__BackingField: 1
