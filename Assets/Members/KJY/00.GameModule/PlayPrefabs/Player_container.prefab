@@ -5407,7 +5407,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6736,7 +6736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2135374358600063961, guid: 5d31d2bdac21d3f44b2a3448c95efd62, type: 3}
+  m_Sprite: {fileID: -6431779081210920698, guid: 786016126cfa0554a9e9013ce30089ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
