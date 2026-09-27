@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: FrostZone Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: e74fb6eb9aaf9564f84ea6fb262a7f28, type: 3}
+  <SkillName>k__BackingField: "서리지대"
+  <Icon>k__BackingField: {fileID: -5050291110520419546, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "서리를 터뜨려 {0} 피해를 줍니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 12
+  damageCondition: 0
+  <LifeStealFraction>k__BackingField: 0
+  <Target>k__BackingField: 0
+  <Synergy>k__BackingField: 0
+  <Strength>k__BackingField: 0
