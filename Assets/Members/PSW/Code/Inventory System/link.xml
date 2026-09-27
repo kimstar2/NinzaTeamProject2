@@ -1,0 +1,9 @@
+<linker>
+  <!-- The PSW-only event adapter reads these fields in player builds. -->
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="EventManager">
+      <field name="_eventData" />
+      <field name="buttons" />
+    </type>
+  </assembly>
+</linker>
