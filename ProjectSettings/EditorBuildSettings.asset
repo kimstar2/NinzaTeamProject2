@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Members/KJY/02.RealScene/RealScene.unity
     guid: 83289704347b2cc4794d4bd500ad7a06
   - enabled: 1
-    path: Assets/Members/PSW/Scene/KJY/KJY Scene.unity
-    guid: 297aefecc65ab034e83125fc81e4df15
-  - enabled: 1
     path: Assets/Members/LYW/Scenes/RestScene.unity
     guid: 10222134971d117408d658dba67db149
   - enabled: 1

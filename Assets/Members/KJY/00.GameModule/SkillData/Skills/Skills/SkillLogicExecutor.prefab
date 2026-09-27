@@ -5123,6 +5123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4170fbea9854c9d8a1940d32949b030, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.SolarEclipse
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <LunarTweenSequencer>k__BackingField: {fileID: 4919693536955288169}
   <SolarTweenSequencer>k__BackingField: {fileID: 8855806378356000922}
   lunarTweenStep:

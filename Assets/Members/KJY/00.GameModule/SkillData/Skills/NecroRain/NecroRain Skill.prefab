@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc29790bd04ee142a26636b26e6a768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.NecroRainSkill
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <ActionSeq>k__BackingField: {fileID: 8080325107853209811}
   <ReturnSeq>k__BackingField: {fileID: 6686734784978554302}
   castPosition: {fileID: 6370741622906557838}

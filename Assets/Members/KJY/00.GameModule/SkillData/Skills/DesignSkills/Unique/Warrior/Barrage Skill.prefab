@@ -131,6 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d207c1d2ea05d9748b3dbfead09825b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.MeleeStrikeSkill
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <ActionSeq>k__BackingField: {fileID: 7908523761000819042}
   <ReturnSeq>k__BackingField: {fileID: 8477186413527035907}
   castPosition: {fileID: 523362704352491672}

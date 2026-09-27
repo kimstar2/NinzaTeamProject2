@@ -25,6 +25,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
             solarTweenStep[attackerTrmIndex].SetTransformValue(Executor.Attacker.DefaultPosition.position);
             LunarTweenSequencer.SetSteps(lunarTweenStep);
             SolarTweenSequencer.SetSteps(solarTweenStep);
+            PlaySkillSound();
             LunarTweenSequencer.Sequence();
             SolarTweenSequencer.Sequence();
         }

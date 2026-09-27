@@ -33,6 +33,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
+            PlaySkillSound();
             // 광역이면 아군 전체, 아니면 대상 한 명
             foreach (var target in Executor.GetTargets())
             {

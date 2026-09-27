@@ -241,6 +241,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
         
         public override void ApplyStat()
         {
+            PlaySkillSound();
             // 실제 전투에서는 스킬 데이터의 수치(표식·빗나감·상태이상 포함)를 사용
             if (Executor != null) { ApplyConfiguredStats(Executor.Target); return; }
             foreach (var applyStat in applyStats)

@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f72437680a445309710a74df1b8aa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.ArcaneBurstSkill
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <ActionSeq>k__BackingField: {fileID: 1022030187608124442}
   <ReturnSeq>k__BackingField: {fileID: 341171226798586969}
   castPosition: {fileID: 2844104486927756942}

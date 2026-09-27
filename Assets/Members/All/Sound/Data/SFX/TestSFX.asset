@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: TestSFX
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: cfb3f31a3e4974faab3ecce1e8eb035f, type: 3}
   isLoop: 0
   randomizePitch: 0
   randomPitchModifier: 0.1
-  volume: 1
+  volume: 0.67
   pitch: 1
   startTime: 0
-  endTime: 0
+  endTime: 0.6225404
