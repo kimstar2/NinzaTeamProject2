@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02eade3bf3f445fc9ac2587b5b5df5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Title.TitleMenu
+  btnClick: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   onMenuOpen:
     m_PersistentCalls:
       m_Calls:
@@ -1435,6 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02eade3bf3f445fc9ac2587b5b5df5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Title.TitleMenu
+  btnClick: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   onMenuOpen:
     m_PersistentCalls:
       m_Calls:
@@ -5614,6 +5616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02eade3bf3f445fc9ac2587b5b5df5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Title.TitleMenu
+  btnClick: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   onMenuOpen:
     m_PersistentCalls:
       m_Calls:
@@ -7627,6 +7630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb153ba64883441ea09175d9f4ee3519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Title.TitleDiceSetter
+  diceRotateSound: {fileID: 11400000, guid: 8630f2595aa19074c859fd616b774188, type: 2}
   startMenu: {fileID: 74732009}
   exitMenu: {fileID: 369182896}
   settingMenu: {fileID: 1649927984}
@@ -8381,6 +8385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02eade3bf3f445fc9ac2587b5b5df5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Title.TitleMenu
+  btnClick: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   onMenuOpen:
     m_PersistentCalls:
       m_Calls:
@@ -8563,6 +8568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05569a6b44693924f9f695c67a9e10af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.DiceCatalogPanel
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   panelRoot: {fileID: 478404913}
   panelGroup: {fileID: 1790013552}
   faces:
@@ -8688,6 +8694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93286d7df5462a478358cc3a72ab4a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Title.TitleFlow
+  titleBgm: {fileID: 11400000, guid: c6171a6c9e18a65418f98ec9253f531a, type: 2}
   titleDice: {fileID: 430714408}
 --- !u!4 &1699622263
 Transform:
@@ -9122,6 +9129,7 @@ GameObject:
   - component: {fileID: 1852361297}
   - component: {fileID: 1852361300}
   - component: {fileID: 1852361301}
+  - component: {fileID: 900000000000000001}
   m_Layer: 0
   m_Name: Close
   m_TagString: Untagged
@@ -15590,6 +15598,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2134024674}
   m_CullTransparentMesh: 1
+--- !u!114 &900000000000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852361295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

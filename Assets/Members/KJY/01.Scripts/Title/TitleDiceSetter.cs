@@ -1,4 +1,6 @@
 using _TevLib.Extension.DoT;
+using DevLib.ServiceLocator;
+using DevLib.SoundSystem.Runtime;
 using DG.Tweening;
 using Members.KJY._01.Scripts.Dice;
 using UnityEngine;
@@ -8,6 +10,9 @@ namespace Members.KJY._01.Scripts.Title
 {
     public class TitleDiceSetter : MonoBehaviour
     {
+        [Header("SoundClip")] 
+        [SerializeField] private SoundClipSO diceRotateSound;
+        
         [SerializeField] private TitleMenu startMenu , exitMenu, settingMenu, diceDictMenu;
         [SerializeField] private TweenStep tweenStep;
         [SerializeField] private TitleDice titleDice;
@@ -17,7 +22,11 @@ namespace Members.KJY._01.Scripts.Title
         {
             _id = transform.GetInstanceID();
         }
-        private void Start() => DestAngle = _destAngle;
+        private void Start()
+        {
+            DestAngle = _destAngle;
+        }
+
         public void RotateLeft() => DestAngle -= 90;
         public void RotateRight() => DestAngle += 90;
 
@@ -30,6 +39,7 @@ namespace Members.KJY._01.Scripts.Title
                 DOTween.Kill(_id);
                 if (Mathf.Approximately(value, 360) || Mathf.Approximately(value, -360))
                     value = 0;
+                bool angleChanged = !Mathf.Approximately(Mathf.DeltaAngle(_destAngle, value), 0f);
                 _destAngle = value;
                 titleDice.Set(_destAngle switch
                 {
@@ -39,6 +49,9 @@ namespace Members.KJY._01.Scripts.Title
                     180 or -180 => diceDictMenu,
                     _ => null
                 });
+                
+                if (angleChanged)
+                    ServiceLocator.Get<IAudioService>().Play(diceRotateSound);
                 transform.DOLocalRotate(Vector2.up * _destAngle, tweenStep.Duration).SetEase(tweenStep.EaseType).SetId(_id);
             }
         }

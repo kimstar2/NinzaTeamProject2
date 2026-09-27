@@ -15,18 +15,70 @@ namespace DevLib.ServiceLocator
         private Dictionary<int, SoundPlayer> _playerDict = new();
 
         private SoundPlayer _bgmPlayer;
+
+        private const string ResourcePath = "Audio System";
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        private static void EnsureAudioService()
+        {
+            if (ServiceLocator.TryGet<IAudioService>(out var service)
+                && service is AudioService current && current != null)
+                return;
+
+            AudioService existing = FindFirstObjectByType<AudioService>(FindObjectsInactive.Include);
+            if (existing != null)
+            {
+                existing.transform.SetParent(null);
+                existing.enabled = true;
+                existing.gameObject.SetActive(true);
+                existing.Initialize();
+                return;
+            }
+
+            GameObject prefab = Resources.Load<GameObject>(ResourcePath);
+            if (prefab == null || !prefab.TryGetComponent<AudioService>(out _))
+            {
+                Debug.LogError($"Missing AudioService prefab at Resources/{ResourcePath}.");
+                return;
+            }
+
+            GameObject instance = Instantiate(prefab);
+            instance.name = prefab.name;
+        }
         
         private void Awake()
         {
-            ServiceLocator.Register<IAudioService>(this);
-            GameObject bgmObject = Instantiate(soundPlayerPrefab, transform);
-            _bgmPlayer = bgmObject.GetComponent<SoundPlayer>();
+            Initialize();
+        }
+
+        private void Initialize()
+        {
+            if (ServiceLocator.TryGet<IAudioService>(out var service)
+                && service is AudioService current && current != null && current != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            transform.SetParent(null);
+            DontDestroyOnLoad(gameObject);
+
+            if (_bgmPlayer == null)
+            {
+                GameObject bgmObject = Instantiate(soundPlayerPrefab, transform);
+                _bgmPlayer = bgmObject.GetComponent<SoundPlayer>();
+            }
+
+            if (!ReferenceEquals(service, this))
+                ServiceLocator.Register<IAudioService>(this);
         }
 
         private void OnDestroy()
         {
-            ServiceLocator.Register<IAudioService>(new NullAudioService());
-            //ServiceLocator.UnRegister<IAudioService>();
+            // Destroying a duplicate must not replace the surviving service.
+            if (ServiceLocator.TryGet<IAudioService>(out var service)
+                && ReferenceEquals(service, this))
+                ServiceLocator.Register<IAudioService>(new NullAudioService());
         }
 
         public void Play(SoundClipSO clipData, int channel = 0)
