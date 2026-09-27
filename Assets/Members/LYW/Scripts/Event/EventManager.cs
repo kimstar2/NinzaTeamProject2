@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
+using EventType = Members.LYW.Scripts.Event.EventType;
 
 public class EventManager : MonoBehaviour
 {
@@ -84,6 +85,14 @@ public class EventManager : MonoBehaviour
                     {
                         eventer.EndEvent(_eventData.resultText[index]);
                         eventer.SetPlayerStatus(_eventData.changeStatusDatas[index]);
+                    });
+                    break;
+                case EventType.ChangeExImage:
+                    buttons[i].onClick.AddListener(()=>
+                    {
+                        eventer.EndEvent(_eventData.resultText[index]);
+                        if (_eventData.EXImage2 != null)
+                            exImage.sprite = _eventData.EXImage2;
                     });
                     break;
             }

@@ -11,7 +11,8 @@ namespace Members.LYW.Scripts.Event
         Say,
         MoveNextEvent,
         DefaultComplete,
-        ChangePlayerStatus
+        ChangePlayerStatus,
+        ChangeExImage
     }
     
     [CreateAssetMenu(fileName = "EventDataSO", menuName = "LYW/SO/EventDataSO")]
@@ -22,6 +23,7 @@ namespace Members.LYW.Scripts.Event
         public string EventExplain;
         public Sprite backgroundImage;
         public Sprite EXImage;
+        public Sprite EXImage2;
 
         [Header("Image Data")]
         public float exImageScale;
