@@ -11,6 +11,7 @@ namespace DevLib.SoundSystem.Runtime
     {
         [SerializeField] private AudioMixerGroup sfxGroup;
         [SerializeField] private AudioMixerGroup musicGroup;
+        [SerializeField] private AudioMixerGroup uiGroup;
         
         private AudioSource _audioSource;
 
@@ -29,6 +30,10 @@ namespace DevLib.SoundSystem.Runtime
             }else if (clipData.audioType == AudioType.Music)
             {
                 _audioSource.outputAudioMixerGroup = musicGroup;
+            }
+            else if (clipData.audioType == AudioType.UI)
+            {
+                _audioSource.outputAudioMixerGroup = uiGroup;
             }
             
             _audioSource.volume = clipData.volume;

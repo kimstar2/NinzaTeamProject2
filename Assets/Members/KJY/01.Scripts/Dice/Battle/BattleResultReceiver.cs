@@ -1,30 +1,198 @@
-using System;
+    using System.Collections;
+using System.Collections.Generic;
+using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
+using DevLib.ServiceLocator;
+using Members.KJY._01.Scripts.Agent.Enemy.Dice;
 using Members.KJY._01.Scripts.Events;
-using Members.KJY._01.Scripts.UI.Mono;
+using Members.KJY._01.Scripts.Service;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
 {
     public class BattleResultReceiver : MonoBehaviour
     {
         [SerializeField] private EventChannelSO eventChannel;
-        [SerializeField] private UIMonoTMP resultText;
+        [SerializeField] private EnemyDiceRollManager enemyRollManager;
+        [SerializeField] private DiceBattleManager battleManager;
+        [Header("Battle")]
+        [SerializeField] private CanvasGroup startBanner;
+        [SerializeField] private TMP_Text startTitle;
+        [SerializeField] private TMP_Text encounterText;
+        [Header("Result")]
+        [SerializeField] private CanvasGroup resultPanel;
+        [SerializeField] private RectTransform resultCard;
+        [SerializeField] private TMP_Text resultTitle;
+        [SerializeField] private TMP_Text resultDescription;
+        [SerializeField] private TMP_Text goldText;
+        [SerializeField] private GameObject rewardSection;
+        [SerializeField] private RectTransform rewardContent;
+        [SerializeField] private BattleRewardItem rewardItemPrefab;
+        [SerializeField] private TMP_Text rewardNotice;
+        [SerializeField] private Button continueButton;
+        [SerializeField] private TMP_Text continueLabel;
+        [Header("Seq")]
+        [SerializeField] private TweenSequencer bannerMotion;
+        [SerializeField] private TweenSequencer backdropInMotion;
+        [SerializeField] private TweenSequencer backdropOutMotion;
+        [SerializeField] private TweenSequencer victoryMotion;
+        [SerializeField] private TweenSequencer defeatMotion;
+        [SerializeField] private TweenSequencer closeMotion;
+        [SerializeField] private UnityEvent onResultClosed;
+
+        private BattleDataStorage _storage;
+        private BattleInventory _inventory;
+        private bool _hasResult;
+        private bool _canContinue;
+        private bool _victory;
+
+        private void Awake()
+        {
+            startBanner.alpha = 0f;
+            startBanner.blocksRaycasts = false;
+            resultPanel.alpha = 0f;
+            resultPanel.gameObject.SetActive(false);
+            continueButton.onClick.AddListener(Continue);
+        }
 
         private void OnEnable()
         {
             eventChannel.AddListener<OnBattleResult>(HandleBattleResult);
         }
 
+        private void Start()
+        {
+            _storage = ServiceLocator.Get<IBattleDataStorage>().Instance;
+            ServiceLocator.TryGet<Inventory>(out var inventory);
+            _inventory = inventory as BattleInventory;
+            if (_inventory == null)
+            {
+                Debug.LogError("BattleResultReceiver: 전투 보상 인벤토리가 필요합니다.", this);
+                enabled = false;
+                return;
+            }
+            _inventory.BeginEncounter();
+            var encounter = _storage.GetBattleData();
+            encounterText.text = $"{encounter.StageName}  ·  {encounter.EncounterLabel}";
+        }
+        
+        public void ShowPreparation()
+        {
+            if (_hasResult || !isActiveAndEnabled) return;
+            bannerMotion.Stop();
+            startTitle.text = "전투 준비";
+            startBanner.alpha = 0f;
+            bannerMotion.Sequence();
+        }
+
+        private void HandleBattleResult(OnBattleResult evt)
+        {
+            if (_hasResult) return;
+            _hasResult = true;
+            _victory = evt.BattleResult == BattleResult.PlayerWon;
+            bannerMotion.Stop();
+            startBanner.alpha = 0f;
+            StartCoroutine(ShowResult());
+        }
+
+        private IEnumerator ShowResult()
+        {
+            resultPanel.gameObject.SetActive(true);
+            resultPanel.blocksRaycasts = true;
+            resultPanel.interactable = false;
+            continueButton.interactable = false;
+            yield return null;
+            yield return new WaitUntil(() => !battleManager.IsBattle &&
+                (!_victory || enemyRollManager.AllDiceRollEnd));
+
+            _inventory.CompleteEncounter(_victory, _storage.GetBattleData().GoldReward);
+            _storage.FinishBattle(_victory);
+            resultTitle.text = _victory ? "전투 승리" : "전투 패배";
+            resultTitle.color = _victory ? new Color(0.69f, 0.87f, 0.57f) : new Color(0.93f, 0.52f, 0.5f);
+            resultDescription.text = _victory
+                ? "길을 가로막던 적을 물리쳤습니다."
+                : "잠시 숨을 고르고 다시 도전해 보세요.";
+            rewardSection.SetActive(_victory);
+            goldText.text = $"+ {_inventory.GoldEarned} G   <size=70%>보유 {_inventory.Gold} G</size>";
+            var rewardItems = new List<BattleRewardItem>();
+            foreach (var reward in _inventory.EncounterRewards)
+            {
+                var item = Instantiate(rewardItemPrefab, rewardContent);
+                item.Bind(reward);
+                rewardItems.Add(item);
+            }
+            rewardNotice.text = _inventory.SkippedRewards > 0
+                ? $"가방이 가득 차 주사위 {_inventory.SkippedRewards}개를 담지 못했습니다."
+                : _inventory.EncounterRewards.Count == 0 ? "획득한 주사위가 없습니다." : $"주사위 {_inventory.EncounterRewards.Count}개를 가방에 보관했습니다.";
+            continueLabel.text = "노드로 돌아가기";
+            if (!_victory)
+            {
+                resultCard.sizeDelta = new Vector2(resultCard.sizeDelta.x, 350f);
+                resultTitle.rectTransform.anchoredPosition = new Vector2(0, 100f);
+                resultDescription.rectTransform.anchoredPosition = new Vector2(0, 25f);
+                ((RectTransform)continueButton.transform).anchoredPosition = new Vector2(0, -95f);
+            }
+
+            TweenSequencer openMotion = _victory ? victoryMotion : defeatMotion;
+            backdropInMotion.Sequence();
+            openMotion.Sequence();
+
+            // 카드가 펼쳐지는 중에 보상이 하나씩 붙는다. 레이아웃 위치는 건드리지 않는다.
+            if (rewardItems.Count > 0)
+            {
+                yield return new WaitForSecondsRealtime(0.18f);
+                for (int i = 0; i < rewardItems.Count; i++)
+                {
+                    rewardItems[i].Reveal();
+                    if (i < rewardItems.Count - 1)
+                        yield return new WaitForSecondsRealtime(0.065f);
+                }
+            }
+            yield return new WaitUntil(() => !openMotion.HasTween && !backdropInMotion.HasTween &&
+                rewardItems.TrueForAll(item => !item.IsRevealing));
+            _canContinue = true;
+            resultPanel.interactable = true;
+            continueButton.interactable = true;
+        }
+
+        private void Continue()
+        {
+            if (!_canContinue) return;
+            _canContinue = false;
+            continueButton.interactable = false;
+            resultPanel.interactable = false;
+            StartCoroutine(CloseResult());
+        }
+
+        private IEnumerator CloseResult()
+        {
+            closeMotion.Sequence();
+            backdropOutMotion.Sequence();
+            // 접히는 모션이 끝난 뒤 다음 진행을 호출한 씬에 맡긴다.
+            yield return new WaitUntil(() => !closeMotion.HasTween && !backdropOutMotion.HasTween);
+            resultPanel.gameObject.SetActive(false);
+            onResultClosed.Invoke();
+            _storage.ReturnToMap();
+        }
+
         private void OnDisable()
         {
             eventChannel.RemoveListener<OnBattleResult>(HandleBattleResult);
+            StopAllCoroutines();
+            bannerMotion.Stop();
+            backdropInMotion.Stop();
+            backdropOutMotion.Stop();
+            victoryMotion.Stop();
+            defeatMotion.Stop();
+            closeMotion.Stop();
         }
 
-        private void HandleBattleResult(OnBattleResult obj)
+        private void OnDestroy()
         {
-            resultText.gameObject.SetActive(true);
-            resultText.SetText(obj.BattleResult.ToString());
+            if (continueButton != null) continueButton.onClick.RemoveListener(Continue);
         }
     }
 }

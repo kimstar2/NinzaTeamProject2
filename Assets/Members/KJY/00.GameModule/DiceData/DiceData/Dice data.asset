@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: Dice data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uC218\uB828\uC758 \uBA74"
+  <Description>k__BackingField: "\uC5ED\uD560\uC5D0 \uB9DE\uB294 \uAE30\uBCF8 \uACF5\uACA9\uC774\uB098
+    \uC790\uAE30 \uD68C\uBCF5\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: 240a2e14afdcd324ead28d93aacdc4f8, type: 2}
-  <Icon>k__BackingField: {fileID: -2685187325292641383, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 4271259967832690119, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: e8c6f8a6a8a1153448200910b56aff00, type: 2}

@@ -12,6 +12,7 @@ namespace Members.KJY._01.Scripts.Mono
         private Transform _from, _to;
         private Tween _fade;
         private float _width;
+        private bool _sameTeam;
 
         private void Awake()
         {
@@ -19,11 +20,12 @@ namespace Members.KJY._01.Scripts.Mono
             _width = LineRenderer.widthMultiplier;
         }
 
-        public void Connect(Transform from, Transform to, Gradient gradient, float fadeTime)
+        public void Connect(Transform from, Transform to, Gradient gradient, float fadeTime, bool sameTeam = false)
         {
             _fade?.Kill();
             _from = from;
             _to = to;
+            _sameTeam = sameTeam;
             SetGradient(gradient); // 원본 말고 복제된 선에만 색 넣음
             LineRenderer.useWorldSpace = true;
             LineRenderer.positionCount = Mathf.Max(2, pointCount);
@@ -43,11 +45,27 @@ namespace Members.KJY._01.Scripts.Mono
         private void UpdatePositions()
         {
             int count = LineRenderer.positionCount;
+            Vector3 start = _from.position, end = _to.position;
+            float reach = Mathf.Max(_width * 1.5f, arcHeight * 2f);
+            float side = Mathf.Max(start.x, end.x) + reach;
+            bool self = _from == _to;
+            if (self) end += Vector3.up * Mathf.Max(_width * 1.2f, .22f);
             for (int i = 0; i < count; i++)
             {
                 float t = i / (float)(count - 1);
-                Vector3 pos = Vector3.Lerp(_from.position, _to.position, t);
-                pos.y += Mathf.Sin(t * Mathf.PI) * arcHeight;
+                Vector3 pos;
+                if (_sameTeam)
+                {
+                    Vector3 cornerA = new(side, start.y, start.z), cornerB = new(side, end.y, end.z);
+                    pos = t < 1f / 3f ? Vector3.Lerp(start, cornerA, t * 3f) :
+                        t < 2f / 3f ? Vector3.Lerp(cornerA, cornerB, t * 3f - 1f) :
+                        Vector3.Lerp(cornerB, end, t * 3f - 2f);
+                }
+                else
+                {
+                    pos = Vector3.Lerp(start, end, t);
+                    pos.y += Mathf.Sin(t * Mathf.PI) * arcHeight;
+                }
                 LineRenderer.SetPosition(i, pos); // 중간 점이 있어야 중간 그라데이션도 보임
             }
         }

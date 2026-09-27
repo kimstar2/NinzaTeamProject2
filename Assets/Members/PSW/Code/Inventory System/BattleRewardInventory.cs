@@ -66,8 +66,7 @@ namespace Members.PSW.Code.InventorySystem
             // Keep separate entries even when multiple enemies drop the same face.
             var fragment = ScriptableObject.CreateInstance<RewardDiceFragmentSO>();
             fragment.hideFlags = HideFlags.DontSave;
-            AgentAttackType? attackType = _enemyAttackTypes.TryGetValue(evt.EnemyType, out var type) ? type : null;
-            fragment.Initialize(evt.DiceData, evt.Level, attackType);
+            fragment.Initialize(evt.DiceData, evt.Level);
             if (AddFragment(fragment))
                 _ownedRewards.Add(fragment);
             else

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: DoubleShot Face
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uC5F0\uACA9\uC758 \uBA74"
+  <Description>k__BackingField: "\uAD81\uC218\uC640 \uC804\uC0AC\uB294 \uC5F0\uC18D
+    \uACF5\uACA9, \uB9C8\uBC95\uC0AC\uB294 \uC5BC\uC74C \uD3ED\uBC1C, \uD790\uB7EC\uB294
+    \uBC18\uBCF5 \uD68C\uBCF5\uC744 \uC0AC\uC6A9\uD569\uB2C8\uB2E4."
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
   <Icon>k__BackingField: {fileID: 4411663764176024368, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:

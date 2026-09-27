@@ -13,12 +13,19 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         }
 
         protected float GetStat(ApplyStatType statType)
-            => Executor.SkillData.GetScaledStat(statType, BaseLevel);
+            => Executor.SkillData.GetScaledStat(statType, BaseLevel) * Executor.PowerMultiplier;
 
         protected void ApplyConfiguredStats(AbstractSelector target)
         {
             foreach (SkillApplyStat stat in Executor.SkillData.ApplyStats)
-                target.ApplyStat(stat.ApplyStatType, stat.GetScaledValue(BaseLevel));
+            {
+                float value = GetStat(stat.ApplyStatType);
+                if (value <= 0f) continue;
+                if (stat.ApplyStatType == ApplyStatType.Damage)
+                    value *= target.Effects.UseMark(Executor.SkillData.Synergy == SkillDataSO.SynergyType.ExploitMark);
+                target.ApplyStat(stat.ApplyStatType, value);
+            }
+            Executor.ApplySynergy();
         }
 
         public abstract void ApplyStat();

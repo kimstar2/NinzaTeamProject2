@@ -41,7 +41,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || !_isArrived || _isApplied) return;
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
+            ApplyDamage();
         }
     }
 }

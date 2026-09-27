@@ -12,7 +12,6 @@ namespace Members.KJY._01.Scripts.Agent.Player
         [field: SerializeField] public PlayerDataSO RuntimePlayerData { get; private set; }
         [field: SerializeField] public GradientSO LineColor { get; private set; }
         [field: SerializeField] public ColorSO PlayerColor {get; private set;}
-        private bool _hasTarget;
 
         public UnityEvent onSetTarget;
         public UnityEvent onDead;
@@ -23,7 +22,9 @@ namespace Members.KJY._01.Scripts.Agent.Player
         {
             RuntimePlayerData = data;
             AgentData = data;
-            
+            if (data.DiceList != null) DiceInventory.SetDiceList(data.DiceList);
+            IsDead = data.IsDead;
+            eventChannel.RaiseEvent(new OnPlayerDead(data.PlayerType, data.IsDead));
             if (data.IsDead) return;
             EnterBattle();
             IsDead = false;
@@ -44,54 +45,35 @@ namespace Members.KJY._01.Scripts.Agent.Player
         //     ValidateData();
         // }
 
-        private void OnEnable()
-        {
-            eventChannel.AddListener<OnPlayerSelect>(HandleDiceSelect);
-        }
-
-        private void OnDisable()
-        {
-            eventChannel.RemoveListener<OnPlayerSelect>(HandleDiceSelect);
-        }
+        public override void SelectToggle() => Select();
 
         protected override void Select()
         {
             if (IsDead) return;
-            if (_hasTarget)
-            {
-                UnSelect(); // 연결된 애를 다시 누르면 연결 취소
-                return;
-            }
-            IsSelect = true;
-            eventChannel.RaiseEvent(new OnPlayerSelect(this)); // 상태부터 바꿔야 받는 쪽도 선택된 걸 앎
-            onSelect?.Invoke();
+            eventChannel.RaiseEvent(new OnPlayerSelect(this));
         }
 
         protected override void UnSelect()
         {
             IsSelect = false;
-            SetHasTarget(false);
             eventChannel.RaiseEvent(new OnPlayerUnSelect(RuntimePlayerData.PlayerType));
             onUnSelect?.Invoke();
         }
 
-        private void HandleDiceSelect(OnPlayerSelect evt)
+        public void BeginSelection()
         {
-            if (evt.PlayerSelector == this || !IsSelect) return;
-            IsSelect = false; // 다른 애 선택하면 대기 표시만 끔. 이미 연결된 애는 그대로
-            onUnSelect?.Invoke();
+            IsSelect = true;
+            onSelect?.Invoke();
         }
 
         public void OnSetTarget()
         {
-            SetHasTarget(true);
             IsSelect = false;
             onSetTarget?.Invoke();
         }
         
         public void OffSetTarget()
         {
-            SetHasTarget(false);
             IsSelect = false;
             onUnSelect?.Invoke();
         }
@@ -106,7 +88,6 @@ namespace Members.KJY._01.Scripts.Agent.Player
             onDead?.Invoke();
         }
 
-        private void SetHasTarget(bool hasTarget) => _hasTarget = hasTarget;
         
         public override void OnAttackCommand() => OffSetTarget();
         
@@ -134,7 +115,8 @@ namespace Members.KJY._01.Scripts.Agent.Player
 
         public override float GetLevel()
         {
-            return playerLevel > 0f ? playerLevel : 1f;
+            float faceLevel = DiceInventory is Dice.PlayerDiceInventory inventory ? inventory.FaceLevel : 1f;
+            return Mathf.Max(1f, playerLevel) * faceLevel;
         }
 
 #if UNITY_EDITOR

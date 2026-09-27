@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: NecroRain Face
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uB9E5\uB3D9\uC758 \uBA74"
+  <Description>k__BackingField: "\uC5EC\uB7EC \uBC88 \uACF5\uACA9\uD558\uAC70\uB098
+    \uD68C\uBCF5\uD558\uC5EC \uD6A8\uACFC\uB97C \uB098\uB204\uC5B4 \uBC1C\uD718\uD569\uB2C8\uB2E4."
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: -6326363554524431381, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -8721206407534337006, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 645454e91e0eb684b8545bb6de7432b7, type: 2}

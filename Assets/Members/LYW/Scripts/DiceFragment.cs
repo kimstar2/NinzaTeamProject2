@@ -1,6 +1,8 @@
-﻿using Members.LYW.Scripts.MySystem.Events;
+﻿using Members.KJY._01.Scripts.Dice.Data;
+using Members.LYW.Scripts.MySystem.Events;
 using Members.LYW.Scripts.System;
 using Members.LYW.Scripts.System.Events;
+using Members.PSW.Code.InventorySystem;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,12 +13,12 @@ namespace Members.LYW.Scripts
     public class DiceFragment : MonoBehaviour, IPointerClickHandler
     {
         private Image _fragmentImage;
-        public DiceFragmentSO _fragment { get; private set; }
+        public RewardDiceFragmentSO _fragment { get; private set; }
         public bool isSelected { get; private set; } = false;
         public int index {get; private set;}
         public static int SelectedValue { get; private set; } = 0;
         public static void ResetSelectedValue() => SelectedValue = 0;
-        public void Init(DiceFragmentSO fragment)
+        public void Init(RewardDiceFragmentSO fragment)
         {
             _fragmentImage = GetComponent<Image>();
             _fragment = fragment;
@@ -29,6 +31,7 @@ namespace Members.LYW.Scripts
         
         public void OnPointerClick(PointerEventData eventData)
         {
+            //Debug.Log("왜 왜왜ㅑ 안되냐");
             if (!isSelected)
             {
                 if (SelectedValue >= 3) return;

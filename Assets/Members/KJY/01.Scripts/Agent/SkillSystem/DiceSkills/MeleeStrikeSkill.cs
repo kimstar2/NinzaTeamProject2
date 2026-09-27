@@ -30,7 +30,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
             PlayParticle(impactParticle, Executor.Target.MyAgent.transform.position + effectOffset);
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
+            ApplyDamage();
         }
     }
 }

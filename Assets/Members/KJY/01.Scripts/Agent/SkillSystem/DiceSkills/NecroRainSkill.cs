@@ -40,7 +40,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _applyCount >= _hitCount) return;
             _applyCount++; // 지금 들어온 타격은 적용했음
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
+            ApplyDamage();
         }
     }
 }

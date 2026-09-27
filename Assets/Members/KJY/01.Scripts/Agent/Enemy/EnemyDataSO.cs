@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using Members.KJY._01.Scripts.Util;
 using Members.KJY._01.Scripts.Dice.Data;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.Enemy
 {
+    public enum EnemyRank { Normal, Elite, Boss }
+
     [CreateAssetMenu(fileName = "Enemy data", menuName = "KJY/Agent/Enemy data", order = 0)]
     public class EnemyDataSO : AgentDataSO
     {
@@ -14,7 +16,21 @@ namespace Members.KJY._01.Scripts.Agent.Enemy
         [field: SerializeField] public ColorSO ImageColor { get; private set; }
         [field: SerializeField] public int Cost {get; private set;}
         [field: SerializeField] public DiceDataListSO DiceDataList { get; private set; }
+        [field: SerializeField] public EnemyRank Rank { get; private set; }
+        [field: SerializeField, Min(0.1f)] public float DicePower { get; private set; } = 1f;
+        [field: SerializeField, Min(0.1f)] public float HealthMultiplier { get; private set; } = 1f;
+        public float EncounterHealth => MaxHealth * HealthMultiplier;
         public event Action<EnemyDataSO> OnDead;
+
+        public EnemyDataSO CreateBattleCopy(float health, float power, EnemyRank rank)
+        {
+            var copy = Instantiate(this);
+            copy.hideFlags = HideFlags.DontSave;
+            copy.Rank = rank;
+            copy.HealthMultiplier *= health * (rank == EnemyRank.Boss ? 3f : rank == EnemyRank.Elite ? 1.5f : 1f);
+            copy.DicePower *= power * (rank == EnemyRank.Normal ? 1f : 1.1f);
+            return copy;
+        }
 
         public void Dead() => OnDead?.Invoke(this);
     }

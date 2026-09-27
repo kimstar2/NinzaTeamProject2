@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Text;
+using Members.KJY._01.Scripts.Dice.Data;
 
 namespace Members.PSW.Code.InventorySystem
 {
@@ -16,7 +17,7 @@ namespace Members.PSW.Code.InventorySystem
         [SerializeField] private TMP_Text skillDescription;
         [SerializeField] private Image skillIcon;
         private Inventory _inventory;
-        private DiceFragmentSO _shownFragment;
+        private RewardDiceFragmentSO _shownFragment;
         private Vector2 _scrollPosition;
 
         private void OnEnable()
@@ -66,7 +67,7 @@ namespace Members.PSW.Code.InventorySystem
             if (skillInfoPanel != null) skillInfoPanel.gameObject.SetActive(false);
         }
 
-        private void ShowSkillInfo(DiceFragmentSO fragment, RectTransform source)
+        private void ShowSkillInfo(RewardDiceFragmentSO fragment, RectTransform source)
         {
             if (skillInfoPanel == null || skillTitle == null || skillDescription == null || skillIcon == null)
                 return;
@@ -76,15 +77,15 @@ namespace Members.PSW.Code.InventorySystem
                 return;
             }
 
-            skillIcon.sprite = fragment.diceFragmentSprite;
+            skillIcon.sprite = fragment.DiceData.Icon;
             skillTitle.text = fragment.name;
             skillDescription.text = string.Empty;
-            if (fragment is RewardDiceFragmentSO reward)
+            if (fragment is { } reward)
             {
-                if (reward.SkillData != null)
+                if (reward.DiceData.SkillDataStructs != null)
                 {
-                    skillTitle.text = reward.SkillData.SkillName;
-                    skillDescription.text = reward.SkillData.GetDescription(reward.Level);
+                    skillTitle.text = reward.DiceData.MainName;
+                    skillDescription.text = reward.DiceData.GetDescription(reward.Level);
                 }
                 else if (reward.DiceData != null && reward.DiceData.SkillDataStructs != null)
                 {

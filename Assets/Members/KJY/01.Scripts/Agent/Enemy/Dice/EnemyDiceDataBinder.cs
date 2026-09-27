@@ -2,6 +2,7 @@
 using DevLib.CoreLib.Runtime;
 using Members.KJY._01.Scripts.Agent.Player;
 using Members.KJY._01.Scripts.Dice.Data;
+using Members.KJY._01.Scripts.Dice.Battle;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
 using Members.KJY._01.Scripts.Mono;
@@ -92,7 +93,9 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             CurrentSkillData = CurrentDiceData.GetSkillDataStruct(_enemyData.AttackType);
             if (CurrentSkillData.SkillData == null) return;
             titleTMP.SetText(CurrentSkillData.SkillData.SkillName);
-            descTMP.SetText(CurrentSkillData.SkillData.GetDescription(_level));
+            string rankInfo = _enemyData.Rank == EnemyRank.Boss
+                ? $"보스 · 라운드당 최대 {DiceBattleManager.MaxBossRetaliations}회 반격\n" : string.Empty;
+            descTMP.SetText(rankInfo + CurrentSkillData.SkillData.GetDescription(_level));
             gradeOutline.SetColor(CurrentDiceData.DiceGrade.GradeColor);
             iconImage.AsValueEnumerable().ToList().ForEach(i=>
             {

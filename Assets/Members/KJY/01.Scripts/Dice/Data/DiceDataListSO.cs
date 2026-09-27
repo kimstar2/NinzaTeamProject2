@@ -12,14 +12,21 @@ namespace Members.KJY._01.Scripts.Dice.Data
         [field: SerializeField] public DiceDataSO Right { get; private set; }
         [field: SerializeField] public DiceDataSO Top { get; private set; }
         [field: SerializeField] public DiceDataSO Bottom { get; private set; }
+        [SerializeField, HideInInspector] private float[] faceLevels = { 1f, 1f, 1f, 1f, 1f, 1f };
+
+        public float GetLevel(DiceFaceType face) => faceLevels != null && (int)face >= 0 && (int)face < faceLevels.Length
+            ? Mathf.Max(1f, faceLevels[(int)face]) : 1f;
 
         public DiceDataListSO GetRuntimeList()
         {
             return Instantiate(this);
         }
         
-        public void SetDiceData(DiceDataSO diceData, DiceFaceType faceType)
+        public void SetDiceData(DiceDataSO diceData, DiceFaceType faceType, float level = 1f)
         {
+            if ((int)faceType < 0 || (int)faceType >= 6) return;
+            if (faceLevels == null || faceLevels.Length != 6) faceLevels = new float[6];
+            faceLevels[(int)faceType] = Mathf.Max(1f, level);
             _ = faceType switch
             {
                 DiceFaceType.Front => Front = diceData,

@@ -118,6 +118,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
 
         private void HandleDead(OnPlayerDead evt)
         {
+            if (!evt.IsDead) return;
             DiceRollCheckList.Find(x => x.PlayerType == evt.PlayerType)?.OnDead();
             CheckAllRollEnd();
         }

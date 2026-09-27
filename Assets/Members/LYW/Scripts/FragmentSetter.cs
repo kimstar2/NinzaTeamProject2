@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using Members.KJY._01.Scripts.Dice.Data;
 using Members.LYW.Scripts;
+using Members.PSW.Code.InventorySystem;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +13,7 @@ public class FragmentSetter : MonoBehaviour
     [SerializeField] private bool allowSelection = true;
     [SerializeField] private RectTransform slotFramePrefab;
     private bool _hasContents;
-    public event System.Action<DiceFragmentSO, RectTransform> FragmentClicked;
+    public event System.Action<RewardDiceFragmentSO, RectTransform> FragmentClicked;
 
     private void Start()
     {
@@ -65,7 +67,7 @@ public class FragmentSetter : MonoBehaviour
         }
     }
 
-    private void CreateContent(DiceFragmentSO fragment, int index, Transform parent)
+    private void CreateContent(RewardDiceFragmentSO fragment, int index, Transform parent)
     {
         GameObject diceFragment = new GameObject("DiceFragment");
 
@@ -84,7 +86,7 @@ public class FragmentSetter : MonoBehaviour
         clickTrigger.Init(fragment);
         clickTrigger.SetIndex(index);
 
-        image.sprite = fragment.diceFragmentSprite;
+        image.sprite = fragment.DiceData.Icon;
         image.preserveAspect = true;
         clickTrigger.enabled = allowSelection;
         if (!allowSelection)

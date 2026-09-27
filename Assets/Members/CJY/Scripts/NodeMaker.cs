@@ -1,7 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using _LumenLib.PoolingSystem.Runtime;
+using Members.KJY._01.Scripts;
+using Members.KJY._01.Scripts.Service;
+using Members.KJY._01.Scripts.Agent.Enemy;
+using DevLib.ServiceLocator;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -10,6 +14,8 @@ namespace Members.CJY.Scripts
 {
     public class NodeMaker : MonoBehaviour
     {
+        private const int MapVersion = 2;
+
         [Header("Node")] 
         [SerializeField] private NodeInfoSO startNode;
         [SerializeField] private NodeInfoSO bossNode;
@@ -17,6 +23,7 @@ namespace Members.CJY.Scripts
 
         [Header("Settings")] 
         [SerializeField] private ObjectPool objectPool;
+        [SerializeField] private BattleDataStorage battleDataStorage;
         [SerializeField] private int columnCount; // start, boss 노드를 제외한 열 개수
         [SerializeField] private int minNodeCount, maxNodeCount;
 
@@ -35,7 +42,12 @@ namespace Members.CJY.Scripts
         private NodeEvent nodeEvent;
         private NodeConnect currentNode;
         private List<List<NodeConnect>> nodeConnects = new List<List<NodeConnect>>();
-        private const string saveKey = "MapSaveData";
+        private StageDataSO _stageData;
+        private int _stageIndex, _mapSeed, _lastColumn;
+        private string saveKey => $"MapSaveData.Stage{_stageIndex}";
+        public string SaveKey => saveKey;
+        public int CurrentColumn => currentNode?.column ?? 0;
+        public int LastColumn => _lastColumn;
 
         private void Awake()
         {
@@ -59,10 +71,14 @@ namespace Members.CJY.Scripts
             }
         }
 
+        private void Start() => OpenNode();
+
         private void OnDestroy()
         {
             nodeEvent.OnNodeSelected -= HandleNodeSelected;
         }
+
+        public bool CanEnter(NodeConnect node) => currentNode != null && currentNode.nextNodes.Contains(node);
 
         private void HandleNodeSelected(NodeConnect nextNode)
         {
@@ -133,7 +149,10 @@ namespace Members.CJY.Scripts
 
         public void MakeNode()
         {
+            if (!SelectStage()) return;
             DeleteNode();
+            _mapSeed = Random.Range(1, int.MaxValue);
+            _lastColumn = columnCount + 1;
 
             int[] nodeCount = NodeCount(columnCount);
             int total = nodeCount.Sum();
@@ -158,6 +177,7 @@ namespace Members.CJY.Scripts
 
         public void OpenNode()
         {
+            if (!SelectStage()) return;
             if (!LoadMap())
             {
                 MakeNode();
@@ -167,6 +187,7 @@ namespace Members.CJY.Scripts
 
         public void DeleteNode()
         {
+            StopAllCoroutines();
             ResetNode();
             nodeConnects.Clear();
         }
@@ -185,16 +206,8 @@ namespace Members.CJY.Scripts
 
                 for (int i = 0; i < count; i++)
                 {
-                    IPoolable nodeItem = objectPool.Pop("Node");
-                    Transform nodeTrm = nodeItem.GameObject.transform;
-                    nodeTrm.SetParent(groupTrm, false);
-
-                    NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-
-                    NodeConnect connect = new NodeConnect(nodeConnects.Count, i, nodeTypes[typeCount]);
-                    connect.view = bt;
+                    NodeConnect connect = CreateNode(nodeConnects.Count, i, nodeTypes[typeCount], groupTrm);
                     nodeGroups.Add(connect);
-                    bt.Init(connect, nodeEvent);
 
                     typeCount++;
                 }
@@ -210,16 +223,38 @@ namespace Members.CJY.Scripts
 
             groupTrm.SetParent(nodeParent, false);
 
-            IPoolable nodeItem = objectPool.Pop("Node");
-            Transform nodeTrm = nodeItem.GameObject.transform;
-            nodeTrm.SetParent(groupTrm, false);
+            NodeConnect connect = CreateNode(nodeConnects.Count, 0, info, groupTrm);
+            nodeConnects.Add(new List<NodeConnect> { connect });
+        }
 
-            NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
+        private bool SelectStage()
+        {
+            if (ServiceLocator.TryGet<IBattleDataStorage>(out var storage)) battleDataStorage = storage.Instance;
+            _stageData = battleDataStorage != null ? battleDataStorage.CurrentStageData : null;
+            if (_stageData == null || !_stageData.IsValid)
+            {
+                Debug.LogError("스테이지의 적 목록과 보스를 연결하세요.", this);
+                return false;
+            }
+            _stageIndex = battleDataStorage.CurrentStage;
+            return true;
+        }
 
-            NodeConnect connect = new NodeConnect(nodeConnects.Count, 0, info);
-            connect.view = bt;
-            nodeConnects.Add(new List<NodeConnect>() { connect });
-            bt.Init(connect, nodeEvent);
+        private NodeConnect CreateNode(int column, int lane, NodeInfoSO info, Transform parent)
+        {
+            var node = new NodeConnect(column, lane, info);
+            if (node.IsBattle)
+            {
+                EnemyRank rank = info.type == NodeType.Boss ? EnemyRank.Boss :
+                    info.type == NodeType.Elite ? EnemyRank.Elite : EnemyRank.Normal;
+                int seed = unchecked(_mapSeed ^ (column * 397) ^ (lane * 7919));
+                node.battleData = _stageData.CreateBattle(column, _lastColumn, seed, rank);
+            }
+            var item = objectPool.Pop(node.IsBattle ? "BattleNode" : "Node");
+            item.GameObject.transform.SetParent(parent, false);
+            node.view = item.GameObject.GetComponent<NodeBT>();
+            node.view.Init(node, nodeEvent);
+            return node;
         }
 
         // 좀 비효율적이긴 함 (나중에 다시 보기)
@@ -228,6 +263,7 @@ namespace Members.CJY.Scripts
             for (int i = nodeParent.childCount - 1; i >= 0; i--)
             {
                 Transform groupTrm = nodeParent.GetChild(i);
+                if (groupTrm == lineParent || !groupTrm.TryGetComponent<IPoolable>(out var group)) continue;
 
                 for (int j = groupTrm.childCount - 1; j >= 0; j--)
                 {
@@ -238,8 +274,7 @@ namespace Members.CJY.Scripts
                     objectPool.Push(node);
                 }
 
-                IPoolable group = groupTrm.GetComponent<IPoolable>();
-                groupTrm.SetParent(nodeParent, false);
+                groupTrm.SetParent(objectPool.transform, false);
                 objectPool.Push(group);
             }
 
@@ -288,6 +323,9 @@ namespace Members.CJY.Scripts
         private void ConnectNode()
         {
             float maxYDiff = 100f;
+            var random = new System.Random(_mapSeed);
+            // 캔버스 배율과 관계없이 UI 좌표로 높이를 비교한다.
+            float GetY(NodeConnect node) => nodeParent.InverseTransformPoint(node.view.transform.position).y;
 
             for (int i = 0; i < nodeConnects.Count - 1; i++)
             {
@@ -296,13 +334,13 @@ namespace Members.CJY.Scripts
 
                 foreach (NodeConnect next in nextColumn)
                 {
-                    float nextY = next.view.transform.position.y;
+                    float nextY = GetY(next);
 
                     List<NodeConnect> candidates = new List<NodeConnect>();
                     foreach (NodeConnect current in currentColumn)
                     {
-                        float currentY = current.view.transform.position.y;
-                        if (Mathf.Abs(currentY - nextY) <= maxYDiff)
+                        float currentY = GetY(current);
+                        if (Mathf.Abs(currentY - nextY) <= maxYDiff + 0.01f)
                         {
                             candidates.Add(current);
                         }
@@ -311,10 +349,10 @@ namespace Members.CJY.Scripts
                     if (candidates.Count == 0)
                     {
                         NodeConnect closest = currentColumn[0];
-                        float minDiff = Mathf.Abs(closest.view.transform.position.y - nextY);
+                        float minDiff = Mathf.Abs(GetY(closest) - nextY);
                         foreach (NodeConnect current in currentColumn)
                         {
-                            float diff = Mathf.Abs(current.view.transform.position.y - nextY);
+                            float diff = Mathf.Abs(GetY(current) - nextY);
                             if (diff < minDiff)
                             {
                                 closest = current;
@@ -325,7 +363,7 @@ namespace Members.CJY.Scripts
                         candidates.Add(closest);
                     }
 
-                    NodeConnect parent = candidates[Random.Range(0, candidates.Count)];
+                    NodeConnect parent = candidates[random.Next(candidates.Count)];
                     parent.nextNodes.Add(next);
                 }
 
@@ -334,13 +372,13 @@ namespace Members.CJY.Scripts
                 {
                     if (current.nextNodes.Count == 0)
                     {
-                        float currentY = current.view.transform.position.y;
+                        float currentY = GetY(current);
 
                         NodeConnect closest = nextColumn[0];
-                        float minDiff = Mathf.Abs(closest.view.transform.position.y - currentY);
+                        float minDiff = Mathf.Abs(GetY(closest) - currentY);
                         foreach (NodeConnect next in nextColumn)
                         {
-                            float diff = Mathf.Abs(next.view.transform.position.y - currentY);
+                            float diff = Mathf.Abs(GetY(next) - currentY);
                             if (diff < minDiff)
                             {
                                 closest = next;
@@ -352,43 +390,6 @@ namespace Members.CJY.Scripts
                     }
                 }
 
-                /*foreach (NodeConnect current in currentColumn)
-                {
-                    int lineCount = 1;
-
-                    for (int j = 0; j < lineCount; j++)
-                    {
-                        int nextNode = Random.Range(0, nextColumn.Count);
-                        NodeConnect target = nextColumn[nextNode];
-
-                        if (!current.nextNodes.Contains(target))
-                        {
-                            current.nextNodes.Add(target);
-                        }
-                    }
-                }
-
-                // 다음 컬럼의 노드중에 현재 컬럼과 하나도 연결되어있지 않은 노드는
-                // 다시 랜덤돌려서 현재 컬럼의 노드중 하나를 연결시켜줌
-                foreach (NodeConnect next in nextColumn)
-                {
-                    bool connected = false;
-
-                    foreach (NodeConnect current in currentColumn)
-                    {
-                        if (current.nextNodes.Contains(next))
-                        {
-                            connected = true;
-                            break;
-                        }
-                    }
-
-                    if (!connected)
-                    {
-                        int currentNode = Random.Range(0, currentColumn.Count);
-                        currentColumn[currentNode].nextNodes.Add(next);
-                    }
-                }*/
             }
         }
 
@@ -401,8 +402,9 @@ namespace Members.CJY.Scripts
                 {
                     foreach (NodeConnect next in node.nextNodes)
                     {
-                        Vector3 fromPos = node.view.transform.position;
-                        Vector3 toPos = next.view.transform.position;
+                        // 선의 길이와 위치는 같은 UI 좌표계를 사용한다.
+                        Vector3 fromPos = lineParent.InverseTransformPoint(node.view.transform.position);
+                        Vector3 toPos = lineParent.InverseTransformPoint(next.view.transform.position);
 
                         IPoolable lineItem = objectPool.Pop("Line");
                         Transform lineTrm = lineItem.GameObject.transform;
@@ -415,9 +417,9 @@ namespace Members.CJY.Scripts
                         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
                         rt.pivot = new Vector2(0f, 0.5f);
-                        rt.position = fromPos;
+                        rt.localPosition = fromPos;
                         rt.sizeDelta = new Vector2(distance, rt.sizeDelta.y);
-                        rt.rotation = Quaternion.Euler(0f, 0f, angle);
+                        rt.localRotation = Quaternion.Euler(0f, 0f, angle);
                     }
                 }
             }
@@ -476,7 +478,10 @@ namespace Members.CJY.Scripts
         {
             MapSaveData saveData = new MapSaveData
             {
-                hasData = true
+                hasData = true,
+                version = MapVersion,
+                stage = _stageIndex,
+                seed = _mapSeed
             };
 
             foreach (List<NodeConnect> column in nodeConnects)
@@ -519,7 +524,6 @@ namespace Members.CJY.Scripts
         {
             if (type == NodeType.Start) return startNode;
             if (type == NodeType.Boss) return bossNode;
-
             return nodeInfos.FirstOrDefault(x => x.type == type);
         }
 
@@ -529,7 +533,17 @@ namespace Members.CJY.Scripts
 
             string json = PlayerPrefs.GetString(saveKey);
             MapSaveData saveData = JsonUtility.FromJson<MapSaveData>(json);
-            if (!saveData.hasData) return false;
+            if (saveData == null || !saveData.hasData || saveData.version < 1 || saveData.version > MapVersion ||
+                saveData.stage != _stageIndex || saveData.nodes.Count == 0) return false;
+            _mapSeed = saveData.seed;
+            _lastColumn = saveData.nodes.Max(node => node.column);
+            bool removedShop = false;
+            foreach (var node in saveData.nodes)
+            {
+                if (node.type != NodeType.Shop) continue;
+                node.type = NodeType.Event;
+                removedShop = true;
+            }
 
             ResetNode();
             nodeConnects.Clear();
@@ -554,14 +568,7 @@ namespace Members.CJY.Scripts
 
                 NodeInfoSO info = GetInfoByType(data.type);
 
-                IPoolable nodeItem = objectPool.Pop("Node");
-                Transform nodeTrm = nodeItem.GameObject.transform;
-                nodeTrm.SetParent(groupTrm, false);
-
-                NodeBT bt = nodeItem.GameObject.GetComponent<NodeBT>();
-                NodeConnect connect = new NodeConnect(data.column, data.lane, info);
-                connect.view = bt;
-                bt.Init(connect, nodeEvent);
+                NodeConnect connect = CreateNode(data.column, data.lane, info, groupTrm);
 
                 columns[data.column].Add(connect);
                 connects[(data.column, data.lane)] = connect;
@@ -584,6 +591,16 @@ namespace Members.CJY.Scripts
             foreach (Transform groupTrm in nodeParent)
                 LayoutRebuilder.ForceRebuildLayoutImmediate(groupTrm.GetComponent<RectTransform>());
             LayoutRebuilder.ForceRebuildLayoutImmediate(nodeParent);
+
+            if (saveData.version < MapVersion)
+            {
+                // 기존 노드와 진행 위치는 유지하고 잘못 저장된 연결만 갱신한다.
+                foreach (var column in nodeConnects)
+                    foreach (var node in column) node.nextNodes.Clear();
+                ConnectNode();
+                SaveMap();
+            }
+            else if (removedShop) SaveMap();
 
             RenderLine();
             NodeVisualSetting();

@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: Fireball Face
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uACF5\uC138\uC758 \uBA74"
+  <Description>k__BackingField: "\uACF5\uACA9\uC5D0 \uD798\uC744 \uC2E3\uB294 \uBA74\uC785\uB2C8\uB2E4.
+    \uD790\uB7EC\uB294 \uBE5B\uC73C\uB85C \uACF5\uACA9\uD558\uBA70 \uC790\uC2E0\uB3C4
+    \uD68C\uBCF5\uD569\uB2C8\uB2E4."
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: -3024870396548848517, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 7222565985598036394, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 371f26b7351ab7640a54c92723275734, type: 2}

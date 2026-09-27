@@ -12,16 +12,17 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [field:SerializeField] public PoolItemSO HealParticle {get; private set;}
         [SerializeField, Min(1)] private int pulseCount = 1;
         [SerializeField, Min(0f)] private float pulseInterval = 0.25f;
+        [SerializeField] private bool emergencyHeal;
         private bool _isApplied;
 
-        protected override bool CanHit => Executor != null && Executor.Attacker != null && !Executor.Attacker.IsDead;
+        protected override bool CanHit => Executor != null && Executor.SkillData.CanTarget(Executor.Attacker, Executor.Target);
 
         protected override async UniTask AttackAsync(CancellationToken token)
         {
             for (int i = 0; i < Mathf.Max(1, pulseCount) && CanHit; i++)
             {
                 _isApplied = false;
-                PlayParticle(HealParticle, Executor.Attacker.MyAgent.transform.position + effectOffset);
+                PlayParticle(HealParticle, Executor.Target.MyAgent.transform.position + effectOffset);
                 ApplyStat();
                 if (i + 1 < pulseCount && CanHit)
                     await UniTask.Delay(TimeSpan.FromSeconds(Mathf.Max(0f, pulseInterval)), cancellationToken: token);
@@ -32,7 +33,12 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
-            Executor.Attacker.ApplyStat(ApplyStatType.Heal, GetStat(ApplyStatType.Heal)); // 지금 타겟 선택은 적 기준이라 일단 자기 회복
+            var health = Executor.Target.MyAgent.HealthModule;
+            // 정수 비율로 비교해서 정확히 35%인 체력도 Mono의 소수 오차 없이 포함한다.
+            bool isEmergency = health.CurrentHealth * 100f <= health.DefaultMaxHealth * 35f;
+            float multiplier = emergencyHeal && isEmergency ? 2f : 1f;
+            Executor.Target.ApplyStat(ApplyStatType.Heal, GetStat(ApplyStatType.Heal) * multiplier);
+            Executor.ApplySynergy();
         }
     }
 }

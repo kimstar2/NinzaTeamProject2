@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: VampiricClaw Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: e90f2b7783d1516999ec99efcdd43fae, type: 3}
+  <SkillName>k__BackingField: "흡혈 발톱"
+  <Icon>k__BackingField: {fileID: -2810561975446432488, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "발톱으로 {0} 피해를 주고 실제 피해의 35%만큼 자신을 회복합니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 21
+  damageCondition: 0
+  <LifeStealFraction>k__BackingField: 0.35

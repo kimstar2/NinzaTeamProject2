@@ -1,5 +1,6 @@
 ﻿using System;
 using Members.KJY._01.Scripts.Util;
+using Members.KJY._01.Scripts.Dice.Data;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.Player
@@ -15,6 +16,9 @@ namespace Members.KJY._01.Scripts.Agent.Player
         [field:SerializeField] public int Cost {get; private set;}
         [field: SerializeField] public float CurrentHealth { get; private set; } // 런타임
         public bool IsDead => CurrentHealth <= 0;
+        [SerializeField] private DiceDataListSO defaultDiceList;
+        private DiceDataListSO _runtimeDiceList;
+        public DiceDataListSO DiceList => _runtimeDiceList;
         
         public void TakeDamage(float damage) // 런타임
         {
@@ -30,6 +34,11 @@ namespace Members.KJY._01.Scripts.Agent.Player
         public void Init()
         {
             CurrentHealth = MaxHealth;
+            if (_runtimeDiceList != null) Destroy(_runtimeDiceList);
+            if (defaultDiceList != null) _runtimeDiceList = defaultDiceList.GetRuntimeList();
         }
+
+        public void RecoverAfterDefeat() => CurrentHealth = Mathf.Max(CurrentHealth, MaxHealth * 0.5f);
+        private void OnDestroy() { if (_runtimeDiceList != null) Destroy(_runtimeDiceList); }
     }
 }

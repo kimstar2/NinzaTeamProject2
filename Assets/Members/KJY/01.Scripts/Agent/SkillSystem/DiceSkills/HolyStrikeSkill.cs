@@ -32,7 +32,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || !_isHit || _isApplied) return;
             _isApplied = true;
-            Executor.Target.ApplyStat(ApplyStatType.Damage, GetDamage());
+            ApplyDamage();
             float heal = GetStat(ApplyStatType.Heal);
             if (heal > 0f && !Executor.Attacker.IsDead)
             {

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using Members.KJY._01.Scripts.Agent.Enemy;
 using UnityEngine;
 
