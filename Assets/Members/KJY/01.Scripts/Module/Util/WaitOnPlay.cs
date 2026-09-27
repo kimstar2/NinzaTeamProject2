@@ -16,6 +16,7 @@ namespace Members.KJY._01.Scripts.Module.Util
     public class WaitOnPlay : MonoBehaviour
     {
         [SerializeField] List<WaitOnPlayStruct> waitOnPlayStructs;
+        [SerializeField] private bool ignoreTimeScale;
         private CancellationTokenSource _cts;
 
         private void OnDisable() => KillTask();
@@ -27,7 +28,7 @@ namespace Members.KJY._01.Scripts.Module.Util
             StartThis(_cts.Token).Forget();
         }
 
-        private void KillTask()
+        public void KillTask()
         {
             if (_cts == null) return;
             _cts.Cancel();
@@ -39,7 +40,7 @@ namespace Members.KJY._01.Scripts.Module.Util
         {
             foreach (WaitOnPlayStruct waitOnP in waitOnPlayStructs)
             {
-                await UniTask.Delay(TimeSpan.FromSeconds(waitOnP.waitTime) , cancellationToken: token);
+                await UniTask.Delay(TimeSpan.FromSeconds(waitOnP.waitTime), ignoreTimeScale, cancellationToken: token);
                 waitOnP.onPlay.Invoke();
             }
         }

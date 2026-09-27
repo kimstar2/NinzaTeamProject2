@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using _TevLib.Extension.DoT;
 using DevLib.CoreLib.Runtime;
@@ -13,17 +13,16 @@ using UnityEngine.UI;
 
 namespace Members.KJY._01.Scripts.Dice.Battle
 {
-    // 전투 준비 안내와 결과 표시를 담당한다. 보상 지급은 인벤토리에 맡긴다.
     public class BattleResultReceiver : MonoBehaviour
     {
         [SerializeField] private EventChannelSO eventChannel;
         [SerializeField] private EnemyDiceRollManager enemyRollManager;
         [SerializeField] private DiceBattleManager battleManager;
-        [Header("전투 준비 · Life Cycle에서 실행")]
+        [Header("Battle")]
         [SerializeField] private CanvasGroup startBanner;
         [SerializeField] private TMP_Text startTitle;
         [SerializeField] private TMP_Text encounterText;
-        [Header("전투 결과")]
+        [Header("Result")]
         [SerializeField] private CanvasGroup resultPanel;
         [SerializeField] private RectTransform resultCard;
         [SerializeField] private TMP_Text resultTitle;
@@ -35,16 +34,14 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private TMP_Text rewardNotice;
         [SerializeField] private Button continueButton;
         [SerializeField] private TMP_Text continueLabel;
-        [Header("연출 · 속도와 반동은 각 Sequencer에서 조절")]
+        [Header("Seq")]
         [SerializeField] private TweenSequencer bannerMotion;
         [SerializeField] private TweenSequencer backdropInMotion;
         [SerializeField] private TweenSequencer backdropOutMotion;
         [SerializeField] private TweenSequencer victoryMotion;
         [SerializeField] private TweenSequencer defeatMotion;
         [SerializeField] private TweenSequencer closeMotion;
-
-        [Header("결과창을 닫은 뒤 실행")]
-        [SerializeField] private UnityEvent onResultClosed = new();
+        [SerializeField] private UnityEvent onResultClosed;
 
         private BattleDataStorage _storage;
         private BattleInventory _inventory;
@@ -81,8 +78,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             var encounter = _storage.GetBattleData();
             encounterText.text = $"{encounter.StageName}  ·  {encounter.EncounterLabel}";
         }
-
-        // 준비 안내의 실행 시점은 씬의 WaitOnPlay 순서에서 정한다.
+        
         public void ShowPreparation()
         {
             if (_hasResult || !isActiveAndEnabled) return;
@@ -104,7 +100,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         private IEnumerator ShowResult()
         {
-            // 사망 알림보다 주사위 보상 확정이 늦다. 그동안 추가 입력만 막는다.
             resultPanel.gameObject.SetActive(true);
             resultPanel.blocksRaycasts = true;
             resultPanel.interactable = false;
@@ -114,8 +109,9 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 (!_victory || enemyRollManager.AllDiceRollEnd));
 
             _inventory.CompleteEncounter(_victory, _storage.GetBattleData().GoldReward);
+            _storage.FinishBattle(_victory);
             resultTitle.text = _victory ? "전투 승리" : "전투 패배";
-            resultTitle.color = _victory ? new Color(1f, 0.83f, 0.46f) : new Color(0.93f, 0.52f, 0.5f);
+            resultTitle.color = _victory ? new Color(0.69f, 0.87f, 0.57f) : new Color(0.93f, 0.52f, 0.5f);
             resultDescription.text = _victory
                 ? "길을 가로막던 적을 물리쳤습니다."
                 : "잠시 숨을 고르고 다시 도전해 보세요.";
@@ -131,7 +127,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             rewardNotice.text = _inventory.SkippedRewards > 0
                 ? $"가방이 가득 차 주사위 {_inventory.SkippedRewards}개를 담지 못했습니다."
                 : _inventory.EncounterRewards.Count == 0 ? "획득한 주사위가 없습니다." : $"주사위 {_inventory.EncounterRewards.Count}개를 가방에 보관했습니다.";
-            continueLabel.text = "확인";
+            continueLabel.text = "노드로 돌아가기";
             if (!_victory)
             {
                 resultCard.sizeDelta = new Vector2(resultCard.sizeDelta.x, 350f);
@@ -179,6 +175,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             yield return new WaitUntil(() => !closeMotion.HasTween && !backdropOutMotion.HasTween);
             resultPanel.gameObject.SetActive(false);
             onResultClosed.Invoke();
+            _storage.ReturnToMap();
         }
 
         private void OnDisable()

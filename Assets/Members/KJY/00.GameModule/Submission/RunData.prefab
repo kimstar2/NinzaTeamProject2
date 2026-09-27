@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2194395100886956353
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5270608082063240030}
+  - component: {fileID: 1085678029921618360}
+  m_Layer: 0
+  m_Name: RunData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5270608082063240030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194395100886956353}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1085678029921618360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2194395100886956353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670d72eedf6545a6ac94aae76b08410e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Service.BattleDataStorage
+  <StageDataList>k__BackingField:
+  - {fileID: 11400000, guid: 51171eef51884fd2b55a77ba9d83023b, type: 2}
+  - {fileID: 11400000, guid: 1092961d981c418396002462ebae4de7, type: 2}
+  runTimeTanker: {fileID: 11400000, guid: 2c032ce962ff98d4f80eb99e2077c5bf, type: 2}
+  runTimeDealer: {fileID: 11400000, guid: df7f0511704826f4ca9785929acc661e, type: 2}
+  runTimeHealer: {fileID: 11400000, guid: 21e589245743362408e232e9dc6cf5aa, type: 2}
+  runTimeMage: {fileID: 11400000, guid: 76b50cc7a5b0fca498f7fa58f46da40f, type: 2}
+  battleData: {fileID: 11400000, guid: d5008a104117a194a8272267d6f95f94, type: 2}
+  battleScene: 2
+  <CurrentStage>k__BackingField: 0

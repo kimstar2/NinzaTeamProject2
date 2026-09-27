@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
   m_Name: Ambush Face
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uAE30\uC2B5\uC758 \uBA74"
+  <Description>k__BackingField: "\uCCB4\uB825\uC774 \uB192\uC740 \uC801\uC5D0\uAC8C
+    \uAC15\uD55C \uBA74\uC785\uB2C8\uB2E4. \uD790\uB7EC\uB294 \uBE5B\uC73C\uB85C
+    \uC801\uC744 \uACF5\uACA9\uD558\uACE0 \uC790\uC2E0\uC744 \uD68C\uBCF5\uD569\uB2C8\uB2E4."
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: 7960256026366805285, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 4209667872795797613, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 05798eaf56fe523b88c5c93a39517474, type: 2}

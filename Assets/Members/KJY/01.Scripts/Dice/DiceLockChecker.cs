@@ -1,15 +1,10 @@
-﻿using System;
-using System.Threading;
-using Cysharp.Threading.Tasks;
 using DevLib.CoreLib.Runtime;
 using DevLib.ModuleSystem;
-using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Agent.Player;
-using Members.KJY._01.Scripts.Dice.Data;
+using Members.KJY._01.Scripts.Agent.Player.Dice;
 using Members.KJY._01.Scripts.Events.Dice;
 using Members.KJY._01.Scripts.UI.Mono;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace Members.KJY._01.Scripts.Dice
 {
@@ -17,6 +12,7 @@ namespace Members.KJY._01.Scripts.Dice
     {
         [SerializeField] private PlayerType playerType;
         [SerializeField] private EventChannelSO eventChannel;
+        [SerializeField] private PlayerDiceRollManager rollManager;
 
         [Header("Lock Setting")] 
         [SerializeField] private UIMonoImage diceImage;
@@ -39,6 +35,7 @@ namespace Members.KJY._01.Scripts.Dice
 
         public void LockToggle()
         {
+            if (rollManager == null || !rollManager.AllDiceRollEnd) return;
             if (!IsLocked)
                 OnLock();
             else
@@ -47,6 +44,7 @@ namespace Members.KJY._01.Scripts.Dice
 
         public void OnLock()
         {
+            if (rollManager == null || !rollManager.AllDiceRollEnd) return;
             IsLocked = true;
             diceImage.SetColor(onLockColor);
             eventChannel.RaiseEvent(new OnDiceLock(IsLocked,playerType));
@@ -59,6 +57,8 @@ namespace Members.KJY._01.Scripts.Dice
             diceImage.SetColor(offLockColor);
             eventChannel.RaiseEvent(new OnDiceLock(IsLocked,playerType));
         }
+
+        public void RefreshColor() => diceImage.SetColor(IsLocked ? onLockColor : offLockColor);
         
         
         private void OnValidate()

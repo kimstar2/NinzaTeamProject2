@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
+  m_Name: Mark Face
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "\uD45C\uC2DD\uC758 \uBA74"
+  <Description>k__BackingField: "\uD45C\uC2DD\uC744 \uB0A8\uAE34 \uB4A4 \uB2E4\uB978
+    \uB3D9\uB8CC\uC758 \uACF5\uACA9\uC73C\uB85C \uC774\uC5B4 \uAC00\uC138\uC694."
+  <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
+  <Icon>k__BackingField: {fileID: -6772558390540677212, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDataStructs>k__BackingField:
+  - <AgentAttackType>k__BackingField: 0
+    <SkillData>k__BackingField: {fileID: 11400000, guid: b3f9b390d152416e8ee6a2572ac46818, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 1
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 43ab8ecc7b274b8294b77ae9700a2f5a, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 2
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 31be993fa598425a976e36c1cad1aed0, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 3
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 6efb2a2f53d54a97892f9276f84f8d1b, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0

@@ -17,6 +17,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         [SerializeField] private PlayerType playerType;
         private bool _isLocked;
         private AbstractSelector _mySelector;
+        public float FaceLevel { get; private set; } = 1f;
         
         [SerializeField] private float receiveDelay;
         private CancellationTokenSource _cts;
@@ -55,6 +56,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         {
             if (playerDiceRollData.playerType != playerType) return;
             savedDiceData = RunTimeDiceDataList.GetDiceData(playerDiceRollData.diceFaceType);
+            FaceLevel = RunTimeDiceDataList.GetLevel(playerDiceRollData.diceFaceType);
         }
 
         public override void Apply()

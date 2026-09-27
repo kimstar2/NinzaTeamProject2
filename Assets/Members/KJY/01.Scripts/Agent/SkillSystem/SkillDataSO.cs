@@ -17,6 +17,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
     [CreateAssetMenu(fileName = "Skill data", menuName = "KJY/Skill/Skill data", order = 0)]
     public class SkillDataSO : ScriptableObject
     {
+        public enum TargetType { Enemy, Ally, Self }
+        public enum SynergyType { None, Mark, ExploitMark, Guard, Empower }
         public enum DamageCondition
         {
             None,
@@ -32,8 +34,23 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [SerializeField] private List<SkillApplyStat> applyStats = new();
         [SerializeField] private DamageCondition damageCondition;
         [field: SerializeField, Range(0f, 1f)] public float LifeStealFraction { get; private set; }
+        [field: SerializeField] public TargetType Target { get; private set; }
+        [field: SerializeField] public SynergyType Synergy { get; private set; }
 
         public IReadOnlyList<SkillApplyStat> ApplyStats => applyStats;
+
+        public bool CanTarget(AbstractSelector attacker, AbstractSelector target)
+        {
+            if (attacker == null || target == null || attacker.IsDead || target.IsDead ||
+                attacker.AgentData == null || target.AgentData == null) return false;
+            bool sameTeam = (attacker.AgentData is Player.PlayerDataSO) == (target.AgentData is Player.PlayerDataSO);
+            return Target switch
+            {
+                TargetType.Ally => sameTeam,
+                TargetType.Self => attacker == target,
+                _ => !sameTeam
+            };
+        }
 
         // 조건 수치는 설명과 함께 고정한다. 기본 피해량은 기존 Apply Stats에서 조절한다.
         public float GetDamageMultiplier(float casterHealthRatio, float targetHealthRatio)
@@ -55,6 +72,20 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         }
 
         public string GetDescription(float level)
+        {
+            string target = Target == TargetType.Ally ? "[아군 선택] " : Target == TargetType.Self ? "[자신] " : "[적 선택] ";
+            string synergy = Synergy switch
+            {
+                SynergyType.Mark => "표식: 이후 받는 공격 2회의 피해가 25% 증가합니다.",
+                SynergyType.ExploitMark => "표식이 있으면 모두 소모하여 이번 타격의 피해가 50% 증가합니다.",
+                SynergyType.Guard => "보호: 이후 받는 공격 2회의 피해를 30% 줄입니다.",
+                SynergyType.Empower => "격려: 다음 공격·회복 스킬의 효과가 35% 증가합니다. 중첩되지 않습니다.",
+                _ => string.Empty
+            };
+            return target + GetStatDescription(level) + (synergy.Length > 0 ? "\n" + synergy : "");
+        }
+
+        private string GetStatDescription(float level)
         {
             if (string.IsNullOrEmpty(SkillDescription) || applyStats.Count == 0) return SkillDescription;
             object[] values = new object[applyStats.Count];

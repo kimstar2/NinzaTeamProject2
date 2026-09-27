@@ -30,6 +30,9 @@ namespace Members.KJY._01.Scripts.Agent
         [SerializeField] private HashDataSO deathHash; 
         public AgentDataSO AgentData { get; protected set; }
         public bool IsDead {get; protected set;}
+        public CombatEffects Effects { get; } = new();
+        public SkillDataSO CurrentSkill => AgentData == null ? null :
+            DiceInventory?.GetDiceData()?.GetSkillDataStruct(AgentData.AttackType).SkillData;
         public UnityEvent onSelect;
         public UnityEvent onUnSelect;
         public UnityEvent<float> onHealthChanged;
@@ -62,6 +65,7 @@ namespace Members.KJY._01.Scripts.Agent
 
         protected void EnterBattle()
         {
+            Effects.Clear();
             MyAgent.gameObject.SetActive(true);
             MyAgent.transform.position = DefaultPosition.position;
             DiceLayoutGroup.Add(DiceLayoutTarget);
@@ -92,7 +96,7 @@ namespace Members.KJY._01.Scripts.Agent
             MyAgent.HealthModule.OnHealthChanged -= HandleHealthChanged;
         }
         
-        public void SelectToggle()
+        public virtual void SelectToggle()
         {
             if (IsSelect)
                 UnSelect();
@@ -110,7 +114,7 @@ namespace Members.KJY._01.Scripts.Agent
             switch (statType)
             {
                 case ApplyStatType.Damage:
-                    ApplyDamage(value);
+                    ApplyDamage(Effects.ReduceDamage(value));
                     break;
                 case ApplyStatType.Heal:
                     ApplyHeal(value);

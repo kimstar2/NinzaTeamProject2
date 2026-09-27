@@ -24,9 +24,12 @@ public class EventManager : MonoBehaviour
     {
         _eventData = _eventDatas[Random.Range(0, _eventDatas.Count)];
         
-        foreach (var button in buttons)
+        for (int i = 0; i < buttons.Count; i++)
         {
-            button.GetComponent<CanvasGroup>().alpha = 0;
+            buttons[i].gameObject.SetActive(i < _eventData.choices);
+            var group = buttons[i].GetComponent<CanvasGroup>();
+            group.alpha = 0;
+            group.interactable = group.blocksRaycasts = false;
         }
         
         exImage.sprite = _eventData.EXImage;
@@ -96,6 +99,7 @@ public class EventManager : MonoBehaviour
     {
         foreach (var button in buttons)
         {
+            if (!button.gameObject.activeSelf) continue;
             button.onClick.RemoveListener(HideButtons);
             button.GetComponent<SetButton>().Hide();
         }

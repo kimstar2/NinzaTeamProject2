@@ -11,7 +11,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 656a7fea98d14bde9881a681178ae031, type: 3}
   m_Name: Stage 1
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
+  stageName: "\uC18D\uC0AD\uC774\uB294 \uC232"
+  backgroundPrefab: {fileID: 8019331283098920274, guid: 7905f27f91e87ed41a105f75f851c3b9, type: 3}
   enemies:
   - {fileID: 11400000, guid: 3c77a137abbfc464f91ef3a5951e3d0d, type: 2}
   - {fileID: 11400000, guid: d098143efdae1834a806d74c1fabb3fc, type: 2}

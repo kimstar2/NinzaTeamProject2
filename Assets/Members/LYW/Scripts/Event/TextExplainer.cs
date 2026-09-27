@@ -11,23 +11,18 @@ namespace Members.LYW.Scripts.Event
         
         public void StartTexting(string text)
         {
-            StartCoroutine(Texting(text));
+            StopAllCoroutines();
+            this.text.text = string.Empty;
+            StartCoroutine(Texting(text.Replace("\\n", "\n")));
         }
+
+        public float GetPrintDuration(string value) => value.Replace("\\n", "\n").Length * printTerm;
         
         IEnumerator Texting(string text)
         {
-            for (int i = 0; i < text.Length; i++)
+            foreach (char letter in text)
             {
-                if (text[i]=='\\' && text[i+1] == 'n')
-                {
-                    i += 1;
-                    this.text.text += "\n";
-                    continue;
-                }
-                else
-                {
-                    this.text.text += text[i];
-                }
+                this.text.text += letter;
                 yield return new WaitForSeconds(printTerm);
             }
         }

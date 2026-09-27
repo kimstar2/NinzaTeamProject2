@@ -2,6 +2,9 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using Members.KJY._01.Scripts.UI;
+using NaughtyAttributes;
 
 namespace Members.PSW.Code.SettingSystem
 {
@@ -13,6 +16,10 @@ namespace Members.PSW.Code.SettingSystem
         [SerializeField] private CanvasGroup windowGroup;
         [SerializeField, Min(0.01f)] private float openDuration = 0.4f;
         [SerializeField, Range(0.01f, 1f)] private float startScale = 0.15f;
+        [SerializeField, Scene] private string mainMenuScene;
+        [SerializeField] private GameObject mainMenuButton;
+        public bool IsOpen => windowRoot.activeInHierarchy;
+        public bool IsMainMenu => SceneManager.GetActiveScene().path == mainMenuScene;
 
         public event Action Arrived;
         public event Action Closing;
@@ -33,12 +40,15 @@ namespace Members.PSW.Code.SettingSystem
         {
             _controls.UI.Cancel.performed += HandleToggle;
             _controls.UI.Cancel.Enable();
+            SceneManager.sceneLoaded += HandleSceneLoaded;
+            mainMenuButton.SetActive(!IsMainMenu);
         }
 
         private void OnDisable()
         {
             _controls.UI.Cancel.performed -= HandleToggle;
             _controls.UI.Cancel.Disable();
+            SceneManager.sceneLoaded -= HandleSceneLoaded;
             _transitionTween?.Kill();
             CompleteClose();
         }
@@ -104,10 +114,26 @@ namespace Members.PSW.Code.SettingSystem
 
         private void HandleToggle(InputAction.CallbackContext context)
         {
+            if (IsMainMenu) return;
             if (windowRoot.activeSelf && !_isClosing)
                 Close();
             else
                 Open();
+        }
+
+        public void ReturnToMainMenu()
+        {
+            if (IsMainMenu) return;
+            _transitionTween?.Kill();
+            CompleteClose();
+            SceneTransition.Load(mainMenuScene);
+        }
+
+        private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            _transitionTween?.Kill();
+            CompleteClose();
+            mainMenuButton.SetActive(!IsMainMenu);
         }
     }
 }

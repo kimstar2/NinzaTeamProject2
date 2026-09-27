@@ -1,4 +1,3 @@
-using System;
 using _TevLib.Extension.DoT;
 using DG.Tweening;
 using Members.KJY._01.Scripts.Dice;
@@ -18,12 +17,16 @@ namespace Members.KJY._01.Scripts.Title
         {
             _id = transform.GetInstanceID();
         }
+        private void Start() => DestAngle = _destAngle;
+        public void RotateLeft() => DestAngle -= 90;
+        public void RotateRight() => DestAngle += 90;
 
         public float DestAngle
         {
             get => _destAngle;
             set
             {
+                if (!titleDice.CanNavigate) return;
                 DOTween.Kill(_id);
                 if (Mathf.Approximately(value, 360) || Mathf.Approximately(value, -360))
                     value = 0;
@@ -41,6 +44,7 @@ namespace Members.KJY._01.Scripts.Title
         }
         private void Update()
         {
+            if (!titleDice.CanNavigate || Keyboard.current == null) return;
             if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
                 DestAngle += 90;
             if (Keyboard.current.leftArrowKey.wasPressedThisFrame)

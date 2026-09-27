@@ -8,6 +8,8 @@ namespace Members.KJY._01.Scripts
     [CreateAssetMenu(fileName = "Stage Data", menuName = "KJY/Node/StageData", order = 0)]
     public class StageDataSO : ScriptableObject
     {
+        public string stageName;
+        public GameObject backgroundPrefab;
         [Tooltip("약한 적부터 강한 적 순서")]
         public EnemyDataSO[] enemies;
         public EnemyDataSO boss;

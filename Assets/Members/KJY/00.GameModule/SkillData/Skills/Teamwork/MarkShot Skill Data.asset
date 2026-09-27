@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
+  m_Name: MarkShot Skill Data
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
+  <SkillLogicExecutor>k__BackingField: {fileID: 5399990016092069970, guid: dfd62e822774cc6469361dfcd622b82d, type: 3}
+  <SkillName>k__BackingField: "\ucd94\uc801 \uc0ac\uaca9"
+  <Icon>k__BackingField: {fileID: -2685187325292641383, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "\ud654\uc0b4\ub85c {0} \ud53c\ud574\ub97c \uc8fc\uace0 \uc801\uc758 \uc57d\uc810\uc744 \ub4dc\ub7ec\ub0c5\ub2c8\ub2e4."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 6
+  <Target>k__BackingField: 0
+  <Synergy>k__BackingField: 1

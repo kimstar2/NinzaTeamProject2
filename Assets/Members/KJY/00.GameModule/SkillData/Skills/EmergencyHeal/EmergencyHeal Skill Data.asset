@@ -15,9 +15,10 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 30cb123508875fec9e009bce24f815ab, type: 3}
   <SkillName>k__BackingField: "긴급 치유"
   <Icon>k__BackingField: {fileID: -8721206407534337006, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "자신을 {0} 회복합니다. 자신의 체력이 35% 이하면 회복량이 두 배가 됩니다."
+  <SkillDescription>k__BackingField: "대상을 {0} 회복합니다. 대상의 체력이 35% 이하면 회복량이 두 배가 됩니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 23
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
+  <Target>k__BackingField: 1

@@ -27,7 +27,7 @@ namespace Members.KJY._01.Scripts.UI
             agentSprite.transform.localScale = _originalScale * scale;
             enemyName.text = data != null ? data.EnemyName : string.Empty;
             enemyName.color = marked ? Color.Lerp(_accent, Color.white, 0.55f) : new Color(0.85f, 0.85f, 0.85f);
-            rankLabel.text = _rank == EnemyRank.Boss ? "BOSS" : _rank == EnemyRank.Elite ? "ELITE" : string.Empty;
+            rankLabel.text = _rank == EnemyRank.Boss ? "보스" : _rank == EnemyRank.Elite ? "정예" : string.Empty;
             rankLabel.gameObject.SetActive(marked);
             rankBand.gameObject.SetActive(marked);
             rankBand.color = _accent;

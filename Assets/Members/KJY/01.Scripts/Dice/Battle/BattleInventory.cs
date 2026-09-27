@@ -4,6 +4,8 @@ using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Events.Dice.Agent.Enemy;
 using Members.KJY._01.Scripts.Agent;
 using Members.KJY._01.Scripts.Agent.Enemy;
+using Members.KJY._01.Scripts.Agent.Player;
+using Members.KJY._01.Scripts.Dice.Data;
 using Members.PSW.Code.InventorySystem;
 using UnityEngine;
 
@@ -13,18 +15,88 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     public sealed class BattleInventory : Inventory
     {
         [SerializeField] private EventChannelSO eventChannel;
+        [Header("제련")]
+        [SerializeField, Min(1)] private int forgeBaseCost = 20;
+        [SerializeField, Min(0.1f)] private float forgeLevelGain = 0.5f;
+        [SerializeField, Min(1)] private float forgeMaxLevel = 3f;
         private readonly List<RewardDiceFragmentSO> _ownedRewards = new();
         private readonly List<RewardDiceFragmentSO> _pendingRewards = new();
         private readonly List<RewardDiceFragmentSO> _encounterRewards = new();
         private readonly HashSet<EnemyType> _rewardedEnemies = new();
         private bool _isOwner;
         private bool _isCollecting;
-        private readonly Dictionary<EnemyType, AgentAttackType> _enemyAttackTypes = new();
 
         public IReadOnlyList<RewardDiceFragmentSO> EncounterRewards => _encounterRewards;
         public int Gold { get; private set; }
         public int GoldEarned { get; private set; }
         public int SkippedRewards { get; private set; }
+
+        public int GetForgeCost(float level) => Mathf.CeilToInt(Mathf.Max(1, forgeBaseCost) * Mathf.Max(1, level));
+        public float GetForgedLevel(float level) => Mathf.Max(level, Mathf.Min(forgeMaxLevel, level + Mathf.Max(0.1f, forgeLevelGain)));
+
+        public bool CanForge(IReadOnlyList<RewardDiceFragmentSO> faces, out string reason)
+        {
+            reason = "기준 면과 소모할 재료 면 2개를 선택하세요.";
+            if (faces == null || faces.Count != 3) return false;
+            if (faces[0] != null && faces[0].Level >= forgeMaxLevel)
+            {
+                reason = $"기준 면이 최대 제련 레벨(Lv.{forgeMaxLevel:0.#})에 도달했습니다.";
+                return false;
+            }
+            for (int i = 0; i < faces.Count; i++)
+            {
+                if (faces[i] == null || faces[i].DiceData == null || !DiceFragments.Contains(faces[i])) return false;
+                for (int j = 0; j < i; j++)
+                    if (faces[i] == faces[j]) return false;
+            }
+            int cost = GetForgeCost(faces[0].Level);
+            reason = Gold < cost ? $"골드가 {cost - Gold} G 부족합니다." : "재료 면 2개가 소모됩니다. 기준 면의 스킬과 등급은 유지됩니다.";
+            return Gold >= cost;
+        }
+
+        public bool TryForge(IReadOnlyList<RewardDiceFragmentSO> faces, out string reason)
+        {
+            if (!CanForge(faces, out reason)) return false;
+            var target = faces[0];
+            Gold -= GetForgeCost(target.Level);
+            target.Initialize(target.DiceData, GetForgedLevel(target.Level));
+            for (int i = 1; i < faces.Count; i++)
+            {
+                DiceFragments.Remove(faces[i]);
+                _encounterRewards.Remove(faces[i]);
+                if (_ownedRewards.Remove(faces[i])) Destroy(faces[i]);
+            }
+            // 골드와 재료가 모두 정산된 상태만 UI에 알린다.
+            NotifyChanged();
+            return true;
+        }
+
+        public bool EquipFace(PlayerDataSO player, DiceFaceType slot, RewardDiceFragmentSO reward)
+        {
+            if (player == null || player.DiceList == null || reward == null || !DiceFragments.Contains(reward) ||
+                reward.DiceData == null || reward.DiceData.GetSkillDataStruct(player.AttackType).SkillData == null) return false;
+            var previous = player.DiceList.GetDiceData(slot);
+            float previousLevel = player.DiceList.GetLevel(slot);
+            player.DiceList.SetDiceData(reward.DiceData, slot, reward.Level);
+            RemoveFragment(reward);
+            if (previous != null)
+            {
+                reward.Initialize(previous, previousLevel);
+                AddFragment(reward);
+            }
+            else Destroy(reward);
+            return true;
+        }
+
+        public void ResetRun()
+        {
+            ReleasePendingRewards();
+            foreach (var reward in new List<RewardDiceFragmentSO>(DiceFragments)) RemoveFragment(reward);
+            foreach (var reward in _ownedRewards) if (reward != null) Destroy(reward);
+            _ownedRewards.Clear();
+            _encounterRewards.Clear();
+            Gold = GoldEarned = 0;
+        }
 
         public void BeginEncounter()
         {
@@ -98,17 +170,11 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             if (!_isOwner) return;
             eventChannel.RemoveListener<OnEnemyDiceDataBind>(HandleDiceDataBind);
             eventChannel.RemoveListener<OnEnemyDataChanged>(HandleEnemyDataChanged);
-            _enemyAttackTypes.Clear();
         }
 
         private void HandleEnemyDataChanged(OnEnemyDataChanged evt)
         {
-            if (evt.EnemyData == null) _enemyAttackTypes.Remove(evt.EnemyType);
-            else
-            {
-                _enemyAttackTypes[evt.EnemyType] = evt.EnemyData.AttackType;
-                _rewardedEnemies.Remove(evt.EnemyType);
-            }
+            if (evt.EnemyData != null) _rewardedEnemies.Remove(evt.EnemyType);
         }
 
         private void HandleDiceDataBind(OnEnemyDiceDataBind evt)
@@ -119,8 +185,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             // 서로 다른 적이 같은 면을 떨어뜨리더라도 각각 하나의 보상으로 보관한다.
             var fragment = ScriptableObject.CreateInstance<RewardDiceFragmentSO>();
             fragment.hideFlags = HideFlags.DontSave;
-            AgentAttackType? attackType = _enemyAttackTypes.TryGetValue(evt.EnemyType, out var type) ? type : null;
-            fragment.Initialize(evt.DiceData, evt.Level, attackType);
+            fragment.Initialize(evt.DiceData, evt.Level);
             _pendingRewards.Add(fragment);
         }
 
