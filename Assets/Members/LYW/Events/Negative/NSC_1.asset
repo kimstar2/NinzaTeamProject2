@@ -19,11 +19,11 @@ MonoBehaviour:
     \uC218 \uC5C6\uB294 \uC544\uB984\uB2E4\uC6B4 \uBB34\uC9C0\uAC1C \uC8FC\uC0AC\uC704\uAC00
     \uC788\uC5C8\uB2E4. \uC7C1\uCDE8\uD560\uAE4C?"
   backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
-  EXImage: {fileID: 0}
-  exImageScale: 1
+  EXImage: {fileID: 7287851379897412929, guid: e41b59ad370f31e48b1ec2847fa95b1a, type: 3}
+  exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
   backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
-  exImageMaterial: {fileID: 0}
+  exImageMaterial: {fileID: 2100000, guid: 5efc627d69feea14d9693ef7b82e39c9, type: 2}
   choices: 3
   choiceText:
   - "\uC7C1\uCDE8\uD55C\uB2E4."
