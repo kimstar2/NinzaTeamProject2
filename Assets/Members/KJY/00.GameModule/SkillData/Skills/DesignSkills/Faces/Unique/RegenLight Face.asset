@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "재생의 빛"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: 3770250004973238489, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 561270323415413769, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 3
     <SkillData>k__BackingField: {fileID: 11400000, guid: 8f828038757a3c0aa1469d66bb6bd4e4, type: 2}

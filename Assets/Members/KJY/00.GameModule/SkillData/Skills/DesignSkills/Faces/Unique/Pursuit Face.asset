@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "추격"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: 6939772521941676478, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 4271259967832690119, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 1
     <SkillData>k__BackingField: {fileID: 11400000, guid: 3fd75b215a4e03211b7f9c9569f0d382, type: 2}

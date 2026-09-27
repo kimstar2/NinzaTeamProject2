@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7367117411249116541, guid: 984505f2648dce14e820e9a95f34fba3, type: 3}
   <SkillName>k__BackingField: "일식"
-  <Icon>k__BackingField: {fileID: -6326363554524431381, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 5928596237000043584, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "태양과 달을 겹쳐 일식을 완성하고, 폭발로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

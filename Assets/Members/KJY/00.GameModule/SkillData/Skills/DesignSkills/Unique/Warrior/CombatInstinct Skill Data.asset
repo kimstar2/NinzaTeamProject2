@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 4873395139033970066, guid: 0509ee34db621ae4aa5765b8c8bb8993, type: 3}
   <SkillName>k__BackingField: "전투 본능"
-  <Icon>k__BackingField: {fileID: 4411663764176024368, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "커진 검을 휘둘러 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

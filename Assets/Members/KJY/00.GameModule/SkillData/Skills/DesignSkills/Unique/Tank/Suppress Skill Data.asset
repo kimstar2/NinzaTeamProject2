@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: cd27bce5409459348e30d8fd1fdbac9d, type: 3}
   <SkillName>k__BackingField: "제압"
-  <Icon>k__BackingField: {fileID: 7222565985598036394, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -5480430519037691180, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "방패로 적 하나를 짓눌러 제압합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

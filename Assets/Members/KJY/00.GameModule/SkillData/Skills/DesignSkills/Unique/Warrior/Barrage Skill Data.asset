@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: e3801c94bbe44989b92a34bf5244f162, type: 3}
   <SkillName>k__BackingField: "난타"
-  <Icon>k__BackingField: {fileID: 6939772521941676478, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 4411663764176024368, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "세 번 연속 베어 총 {0} 피해를 줍니다. 마지막 베기가 가장 강합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

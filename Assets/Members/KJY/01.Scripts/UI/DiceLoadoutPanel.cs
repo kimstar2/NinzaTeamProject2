@@ -69,7 +69,7 @@ namespace Members.KJY._01.Scripts.UI
             _selected = null;
             _selectedItem?.SetSelected(false);
             _selectedItem = null;
-            playerName.text = index switch { 0 => "전사", 1 => "검사", 2 => "힐러", _ => "마법사" };
+            playerName.text = index switch { 0 => "탱커", 1 => "전사", 2 => "힐러", _ => "마법사" };
             for (int i = 0; i < playerHighlights.Length; i++) playerHighlights[i].SetActive(i == index);
             RefreshFaces();
             SelectSlot(0);

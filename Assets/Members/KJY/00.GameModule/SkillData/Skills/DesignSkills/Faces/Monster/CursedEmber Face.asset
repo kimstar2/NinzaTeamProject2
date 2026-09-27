@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "저주의 불씨"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: -3024870396548848517, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -8422952000524456648, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 9e669b6aed8d1d29bece34adedd41f6d, type: 2}

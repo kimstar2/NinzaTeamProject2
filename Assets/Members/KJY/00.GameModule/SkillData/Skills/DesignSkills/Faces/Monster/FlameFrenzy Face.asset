@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "화염 폭주"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: 240a2e14afdcd324ead28d93aacdc4f8, type: 2}
-  <Icon>k__BackingField: {fileID: 3770250004973238489, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -4712632139861468451, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: ed80b584756c4a0db778bd1cc5a473cc, type: 2}

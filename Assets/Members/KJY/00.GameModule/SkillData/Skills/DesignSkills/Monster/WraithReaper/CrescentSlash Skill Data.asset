@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: a33d28c1fb4a0f148a660356183cf5ba, type: 3}
   <SkillName>k__BackingField: "초승달 참격"
-  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 7923127040425207139, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "초승달 참격으로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

@@ -31,9 +31,21 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
                 if (value <= 0f) continue;
                 if (stat.ApplyStatType == ApplyStatType.Damage)
                     value *= target.Effects.UseMark(Executor.SkillData.Synergy == SkillDataSO.SynergyType.ExploitMark);
+                float healthBefore = target.MyAgent.HealthModule.CurrentHealth;
                 target.ApplyStat(stat.ApplyStatType, value);
+                if (stat.ApplyStatType == ApplyStatType.Damage)
+                    Reflect(target, healthBefore - target.MyAgent.HealthModule.CurrentHealth);
             }
             Executor.ApplySynergy();
+        }
+
+        // 반사 상태인 대상을 때리면 실제로 깎인 체력의 일부가 공격자에게 되돌아온다 (보호로 줄지 않음)
+        protected void Reflect(AbstractSelector target, float dealt)
+        {
+            var attacker = Executor.Attacker;
+            float ratio = target.Effects.ReflectRatio;
+            if (ratio <= 0f || dealt <= 0f || attacker == null || attacker == target || attacker.IsDead) return;
+            attacker.ApplyDamage(dealt * ratio);
         }
 
         public abstract void ApplyStat();

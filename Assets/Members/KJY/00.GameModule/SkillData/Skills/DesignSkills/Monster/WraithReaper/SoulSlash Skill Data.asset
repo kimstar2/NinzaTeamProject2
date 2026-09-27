@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: 3c8ccc649e666a3489693c69cf7df8ee, type: 3}
   <SkillName>k__BackingField: "영혼 베기"
-  <Icon>k__BackingField: {fileID: 7222565985598036394, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 2391641168916059325, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "영혼을 베어 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

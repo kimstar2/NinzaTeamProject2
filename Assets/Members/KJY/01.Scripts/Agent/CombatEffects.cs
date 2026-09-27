@@ -22,6 +22,28 @@ namespace Members.KJY._01.Scripts.Agent
         public bool IsStunned => StunTurns > 0;
         public event Action Changed;
 
+        // 반사: 남은 턴 동안 스킬로 받은 피해의 일부를 공격자에게 되돌린다.
+        public float ReflectRatio { get; private set; }
+        public int ReflectTurns { get; private set; }
+
+        public void AddReflect(float ratio, int turns)
+        {
+            if (turns <= 0 || ratio <= 0f) return;
+            ReflectRatio = Mathf.Max(ReflectRatio, ratio);
+            ReflectTurns = Mathf.Max(ReflectTurns, turns);
+            Changed?.Invoke();
+        }
+
+        // 해로운 효과(표식, 지속 피해, 빗나감, 행동 불가)만 지운다. 보호·격려·반사는 남는다.
+        public void ClearDebuffs()
+        {
+            MarkedHits = 0;
+            _dots.Clear();
+            MissChance = 0f;
+            MissTurns = StunTurns = 0;
+            Changed?.Invoke();
+        }
+
         public void AddStun(int turns)
         {
             if (turns <= 0) return;
@@ -78,6 +100,7 @@ namespace Members.KJY._01.Scripts.Agent
             }
             if (MissTurns > 0 && --MissTurns == 0) MissChance = 0f;
             if (StunTurns > 0) StunTurns--;
+            if (ReflectTurns > 0 && --ReflectTurns == 0) ReflectRatio = 0f;
             Changed?.Invoke();
             return damage;
         }
@@ -114,8 +137,8 @@ namespace Members.KJY._01.Scripts.Agent
         {
             MarkedHits = GuardHits = 0;
             IsEmpowered = false;
-            MissChance = 0f;
-            MissTurns = StunTurns = 0;
+            MissChance = ReflectRatio = 0f;
+            MissTurns = StunTurns = ReflectTurns = 0;
             _dots.Clear();
             Changed?.Invoke();
         }
@@ -125,7 +148,8 @@ namespace Members.KJY._01.Scripts.Agent
             get
             {
                 string text = (MarkedHits > 0 ? $"표식 {MarkedHits}  " : "") +
-                              (GuardHits > 0 ? $"보호 {GuardHits}  " : "") + (IsEmpowered ? "격려  " : "");
+                              (GuardHits > 0 ? $"보호 {GuardHits}  " : "") + (IsEmpowered ? "격려  " : "") +
+                              (ReflectTurns > 0 ? $"반사 {ReflectTurns}  " : "");
                 foreach (var pair in _dots) text += $"{StatusName(pair.Key)} {pair.Value.Turns}  ";
                 return text + (MissTurns > 0 ? $"빗나감 {MissTurns}  " : "") + (StunTurns > 0 ? $"행동 불가 {StunTurns}" : "");
             }

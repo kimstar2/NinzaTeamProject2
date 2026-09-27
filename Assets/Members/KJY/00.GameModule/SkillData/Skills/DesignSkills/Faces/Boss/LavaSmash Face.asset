@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "용암 강타"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -307060576219269120, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 94f56ea824be777fd0fb37ccc46c6089, type: 2}

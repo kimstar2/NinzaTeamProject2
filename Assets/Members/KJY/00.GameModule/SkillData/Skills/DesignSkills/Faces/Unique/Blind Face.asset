@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "실명"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: -6567654030739498224, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -6772558390540677212, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 3
     <SkillData>k__BackingField: {fileID: 11400000, guid: 896f243895f150b5f504de2682d4cb25, type: 2}

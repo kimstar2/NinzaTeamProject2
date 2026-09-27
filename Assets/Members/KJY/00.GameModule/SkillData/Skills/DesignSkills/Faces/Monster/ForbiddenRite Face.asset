@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "금기의 의식"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
-  <Icon>k__BackingField: {fileID: 3770250004973238489, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -7582703574319297184, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 1e31169284c9a5cc03edc8b3ed20b85a, type: 2}

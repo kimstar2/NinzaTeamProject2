@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: a8fa99bd5018552ab9196b70f85e6053, type: 3}
   <SkillName>k__BackingField: "투시"
-  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 827150044080213650, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "약점을 꿰뚫어 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

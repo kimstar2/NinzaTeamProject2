@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "혈기 흡수"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: 240a2e14afdcd324ead28d93aacdc4f8, type: 2}
-  <Icon>k__BackingField: {fileID: -2810561975446432488, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -1684480110966619350, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 684c35cede67b8c43ee799bfbc1e23e7, type: 2}

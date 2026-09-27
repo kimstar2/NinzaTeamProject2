@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "대지의 분노"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -6090753378815520349, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 4
     <SkillData>k__BackingField: {fileID: 11400000, guid: 54bf769abf5a3ee7d44e01b398afb447, type: 2}

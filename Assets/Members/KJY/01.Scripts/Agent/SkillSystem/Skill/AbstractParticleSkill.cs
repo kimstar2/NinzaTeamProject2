@@ -185,7 +185,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             float damage = GetDamage() * Mathf.Max(0f, scale);
             if (damage > 0f && data.BonusVsStatus != StatusType.None && Executor.Target.Effects.HasStatus(data.BonusVsStatus))
                 damage += data.BonusDamage * Mathf.Max(0f, scale);
-            if (damage > 0f) Executor.Target.ApplyStat(ApplyStatType.Damage, damage);
+            if (damage > 0f)
+            {
+                Executor.Target.ApplyStat(ApplyStatType.Damage, damage);
+                Reflect(Executor.Target, healthBefore - targetHealth.CurrentHealth);
+            }
             if (data.ExecuteThreshold > 0f && !Executor.Target.IsDead &&
                 targetHealth.CurrentHealth <= targetHealth.DefaultMaxHealth * data.ExecuteThreshold)
                 Executor.Target.ApplyDamage(targetHealth.CurrentHealth); // 보호로 줄지 않게 직접 처치

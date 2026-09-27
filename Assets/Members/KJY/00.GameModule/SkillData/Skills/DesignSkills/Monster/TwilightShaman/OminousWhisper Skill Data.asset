@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 10ac11223bbd51119af5e83d1a240dbc, type: 3}
   <SkillName>k__BackingField: "불길한 속삭임"
-  <Icon>k__BackingField: {fileID: -6326363554524431381, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 2251344158962148524, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "불길한 속삭임으로 대상을 약하게 만듭니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "생명 흡수"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: -7270913821423914708, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -4992809744156626783, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 3
     <SkillData>k__BackingField: {fileID: 11400000, guid: fb0e5d390dc54fc57135b3c4efae1ee9, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: fd0ff7aafe1f54468ddd039bd5da0ce3, type: 3}
   <SkillName>k__BackingField: "생명 흡수"
-  <Icon>k__BackingField: {fileID: -7270913821423914708, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -4992809744156626783, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "생명선을 연결해 {0} 피해를 주고, 실제 피해의 50%를 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

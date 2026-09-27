@@ -81,6 +81,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         {
             if (_synergyApplied || Target == null || Target.IsDead || IsMissed) return;
             _synergyApplied = true;
+            if (SkillData.CleanseDebuffs) Target.Effects.ClearDebuffs(); // 새 효과를 걸기 전에 먼저 정화
+            Target.Effects.AddReflect(SkillData.ReflectRatio, SkillData.ReflectTurns);
             Target.Effects.AddStatus(SkillData.Status, SkillData.StatusDamage, SkillData.StatusTurns);
             Target.Effects.AddMiss(SkillData.MissChance, SkillData.MissTurns);
             Target.Effects.AddStun(SkillData.StunTurns);

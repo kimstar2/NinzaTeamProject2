@@ -69,6 +69,9 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field: SerializeField, Min(0f)] public float HealthCost { get; private set; } // 시전자가 소모하는 체력 (죽지는 않음)
         [field: SerializeField, Range(0f, 1f)] public float ExecuteThreshold { get; private set; } // 타격 후 이 비율 이하면 즉시 처치
         [field: SerializeField, Min(0)] public int StunTurns { get; private set; } // 맞은 대상이 공격하지 못하는 턴
+        [field: SerializeField, Range(0f, 1f)] public float ReflectRatio { get; private set; } // 대상이 받은 피해 중 공격자에게 되돌릴 비율
+        [field: SerializeField, Min(0)] public int ReflectTurns { get; private set; }
+        [field: SerializeField] public bool CleanseDebuffs { get; private set; } // 대상의 디버프를 모두 제거
         [field: SerializeField] public TargetRule EnemyTargetRule { get; private set; } // 적(몬스터)이 쓸 때 대상 고르는 방식
 
         public IReadOnlyList<SkillApplyStat> ApplyStats => applyStats;
@@ -134,6 +137,10 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
                 text.Append($"\n처형: 공격 후 대상 체력이 {ExecuteThreshold * 100f:0}% 이하면 즉시 처치합니다.");
             if (StunTurns > 0)
                 text.Append($"\n행동 불가: {StunTurns}턴 동안 대상이 공격할 수 없습니다.");
+            if (ReflectRatio > 0f && ReflectTurns > 0)
+                text.Append($"\n반사: {ReflectTurns}턴 동안 받은 피해의 {ReflectRatio * 100f:0}%를 공격한 적에게 되돌립니다.");
+            if (CleanseDebuffs)
+                text.Append("\n정화: 대상에게 걸린 디버프(표식, 독·화상·낙인, 빗나감, 행동 불가)를 모두 제거합니다.");
             if (Target == TargetType.Enemy && EnemyTargetRule != TargetRule.Default)
                 text.Append(EnemyTargetRule == TargetRule.Random ? "\n(몬스터 사용 시 무작위 대상)" : "\n(몬스터 사용 시 체력이 가장 낮은 대상)");
             if (HealthCost > 0f)

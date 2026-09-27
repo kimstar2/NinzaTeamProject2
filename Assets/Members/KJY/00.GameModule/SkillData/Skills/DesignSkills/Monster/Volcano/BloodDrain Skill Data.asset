@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: e90f2b7783d1516999ec99efcdd43fae, type: 3}
   <SkillName>k__BackingField: "혈기 흡수"
-  <Icon>k__BackingField: {fileID: -2810561975446432488, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -1684480110966619350, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "피를 빨아 {0} 피해를 주고, 실제 피해만큼 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

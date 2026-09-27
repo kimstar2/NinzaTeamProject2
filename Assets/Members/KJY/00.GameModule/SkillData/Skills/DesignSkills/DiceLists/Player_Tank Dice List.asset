@@ -17,7 +17,7 @@ MonoBehaviour:
   <Left>k__BackingField: {fileID: 11400000, guid: ace37e734bd4a9b1113f1a1e9459e12d, type: 2}
   <Right>k__BackingField: {fileID: 11400000, guid: 3b19dd95eb986f2727fa7679b56cac2e, type: 2}
   <Top>k__BackingField: {fileID: 11400000, guid: 6730f2f4e2edf07ce5dcfce48490a82e, type: 2}
-  <Bottom>k__BackingField: {fileID: 11400000, guid: e26e0b07dc26c5cfa77c14cbc72d17b7, type: 2}
+  <Bottom>k__BackingField: {fileID: 11400000, guid: 4804503434de75070394eda34c559bea, type: 2}
   faceLevels:
   - 1
   - 1

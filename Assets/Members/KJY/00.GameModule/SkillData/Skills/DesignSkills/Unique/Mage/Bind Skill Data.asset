@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Bind Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 10ac11223bbd51119af5e83d1a240dbc, type: 3}
-  <SkillName>k__BackingField: "속박"
+  <SkillName>k__BackingField: "\uC18D\uBC15"
   <Icon>k__BackingField: {fileID: -6326363554524431381, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "대상의 발밑에 마법진을 새겨 묶어 둡니다."
+  <SkillDescription>k__BackingField: "\uB300\uC0C1\uC758 \uBC1C\uBC11\uC5D0 \uB9C8\uBC95\uC9C4\uC744
+    \uC0C8\uACA8 \uBB36\uC5B4 \uB461\uB2C8\uB2E4."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 0
@@ -24,6 +25,7 @@ MonoBehaviour:
   <Target>k__BackingField: 0
   <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 90
+  suitableTypes: 02000000
   <Status>k__BackingField: 0
   <StatusDamage>k__BackingField: 0
   <StatusTurns>k__BackingField: 0
@@ -35,5 +37,3 @@ MonoBehaviour:
   <ExecuteThreshold>k__BackingField: 0
   <StunTurns>k__BackingField: 1
   <EnemyTargetRule>k__BackingField: 0
-  suitableTypes:
-  - 2
