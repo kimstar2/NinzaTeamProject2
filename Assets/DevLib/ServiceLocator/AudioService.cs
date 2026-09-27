@@ -138,7 +138,8 @@ namespace DevLib.ServiceLocator
 
         public void StopBgm()
         {
-            _bgmPlayer.ForceStopSound();
+            if (_bgmPlayer != null)
+                _bgmPlayer.ForceStopSound();
         }
     }
 }
