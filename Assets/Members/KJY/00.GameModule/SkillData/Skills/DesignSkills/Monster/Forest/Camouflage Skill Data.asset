@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 8b6aab026c345724ab9e333de443e7fc, type: 3}
   <SkillName>k__BackingField: "위장"
-  <Icon>k__BackingField: {fileID: 3770250004973238489, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 566452715, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDescription>k__BackingField: "몸을 숨겨 공격을 피합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1

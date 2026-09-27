@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 4873395139033970066, guid: 0509ee34db621ae4aa5765b8c8bb8993, type: 3}
   <SkillName>k__BackingField: "전투 본능"
   <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "커진 검을 휘둘러 {0} 피해를 줍니다."
+  <SkillDescription>k__BackingField: "거대해진 검을 휘둘러 적 전체에게 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 48
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 1
+  <IsArea>k__BackingField: 1

@@ -25,7 +25,11 @@ namespace Members.KJY._01.Scripts.UI
 
         [SerializeField] private HorizontalOrVerticalLayoutGroup layoutGroup;
         [SerializeField] private List<Item> items = new();
+        [Tooltip("켜면 첫 번째 칸이 아니라 마지막 칸부터 채운다 (적 주사위를 오른쪽부터 배치)")]
+        [SerializeField] private bool fillFromEnd;
         private Vector3[] _slots;
+
+        private Vector3 SlotFor(int index) => _slots[fillFromEnd ? _slots.Length - 1 - index : index];
         private bool _layoutWasEnabled;
         private bool _layoutFrozen;
         private readonly List<Item> _activeItems = new();
@@ -133,7 +137,7 @@ namespace Members.KJY._01.Scripts.UI
             _activeItems.Add(item); // 증원은 남아 있는 유닛 뒤로 들어옴
             item.target.SetAsLastSibling();
             // 보이기 전에 위치/크기를 준비. 재배치 시퀀스가 이동과 등장을 함께 마무리함.
-            Vector3 destination = _slots[_activeItems.Count - 1];
+            Vector3 destination = SlotFor(_activeItems.Count - 1);
             item.target.localPosition = destination + item.exitOffset;
             item.target.localScale = item.scale * 0.96f;
             if (item.canvasGroup != null)
@@ -173,7 +177,7 @@ namespace Members.KJY._01.Scripts.UI
                 Vector3 dest = 
                     layoutGroup != null ?
                         item.target.localPosition :
-                        _slots[_activeItems.IndexOf(item)];
+                        SlotFor(_activeItems.IndexOf(item));
                 
                 item.target.localPosition = previous[i];
                 if (item.removing) continue;

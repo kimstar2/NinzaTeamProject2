@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 2398796357892219269, guid: 18920fc81048d8e47aaf042464f5df8b, type: 3}
   <SkillName>k__BackingField: "저주의 불씨"
   <Icon>k__BackingField: {fileID: -8422952000524456648, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
-  <SkillDescription>k__BackingField: "저주의 불씨로 {0} 피해를 줍니다."
+  <SkillDescription>k__BackingField: "저주 서린 불꽃으로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 18
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 1
   suitableTypes:
   - 2
+  <EffectColor>k__BackingField: {r: 1, g: 0.45, b: 0.45, a: 1}

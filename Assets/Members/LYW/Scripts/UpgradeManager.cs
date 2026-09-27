@@ -29,6 +29,7 @@ public class UpgradeManager : MonoBehaviour
     private readonly RewardDiceFragmentSO[] _selected = new RewardDiceFragmentSO[3];
     private readonly List<BattleRewardItem> _items = new();
     private BattleInventory _inventory;
+    [SerializeField, Tooltip("[제련 정보] 버튼과 설명창. 지도 복귀 버튼 왼쪽에 자동 배치")] private ForgeTutorial tutorialPrefab;
     private int _slot;
     private bool _busy;
     private bool _lastGradeUp;
@@ -44,6 +45,24 @@ public class UpgradeManager : MonoBehaviour
             int slot = i;
             slotButtons[i].onClick.AddListener(() => SelectSlot(slot));
         }
+        // 전투 도움말과 같은 모양의 [제련 정보] 버튼과 설명창. 제련 창이 열릴 때 같이 보인다.
+        var tutorial = tutorialPrefab != null ? tutorialPrefab : Resources.Load<ForgeTutorial>("ForgeTutorial");
+        if (tutorial != null)
+        {
+            var instance = Instantiate(tutorial, panelRoot.transform, false);
+            var mapButton = FindMapButton();
+            if (mapButton != null) instance.PlaceHelpButtonLeftOf((RectTransform)mapButton.transform);
+        }
+    }
+
+    // 제련 창 안에서 이 매니저의 Close(지도 복귀)를 부르는 버튼
+    private Button FindMapButton()
+    {
+        foreach (var button in panelRoot.GetComponentsInChildren<Button>(true))
+            for (int i = 0; i < button.onClick.GetPersistentEventCount(); i++)
+                if (button.onClick.GetPersistentTarget(i) == this && button.onClick.GetPersistentMethodName(i) == nameof(Close))
+                    return button;
+        return null;
     }
 
     public void Open()

@@ -72,6 +72,9 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field: SerializeField, Range(0f, 1f)] public float ReflectRatio { get; private set; } // 대상이 받은 피해 중 공격자에게 되돌릴 비율
         [field: SerializeField, Min(0)] public int ReflectTurns { get; private set; }
         [field: SerializeField] public bool CleanseDebuffs { get; private set; } // 대상의 디버프를 모두 제거
+        [field: SerializeField] public bool IsArea { get; private set; } // 광역: 대상 진영 전체. 플레이어는 대상을 고르지 않는다
+        [field: SerializeField, Tooltip("디버프가 걸렸을 때 문구와 캐릭터 색. 투명(알파 0)이면 종류별 기본색")]
+        public Color EffectColor { get; private set; } = Color.clear;
         [field: SerializeField] public TargetRule EnemyTargetRule { get; private set; } // 적(몬스터)이 쓸 때 대상 고르는 방식
 
         public IReadOnlyList<SkillApplyStat> ApplyStats => applyStats;
@@ -108,9 +111,13 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             return 0f;
         }
 
-        public string GetDescription(float level)
+        // usedByEnemy: 몬스터 주사위에 보여줄 때. 대상이 플레이어 입장에서 읽히도록 바꿔 쓴다.
+        public string GetDescription(float level, bool usedByEnemy = false)
         {
-            string target = Target == TargetType.Ally ? "[아군 선택] " : Target == TargetType.Self ? "[자신] " : "[적 선택] ";
+            string target = usedByEnemy ? GetEnemyTargetLabel() :
+                Target == TargetType.Self ? "[자신] " :
+                Target == TargetType.Ally ? (IsArea ? "[아군 전체] " : "[아군 선택] ") :
+                IsArea ? "[적 전체] " : "[적 선택] ";
             string synergy = Synergy switch
             {
                 SynergyType.Mark => "표식: 이후 받는 공격 2회의 피해가 25% 증가합니다.",
@@ -121,6 +128,20 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             };
             return target + GetStatDescription(level) + (synergy.Length > 0 ? "\n" + synergy : "") + GetExtraDescription();
         }
+
+        // 몬스터가 누구를 노리는지: 무작위 / 낮은 체력 / 보복(자신을 공격한 캐릭터) / 자신 / 전체
+        private string GetEnemyTargetLabel() => Target switch
+        {
+            TargetType.Self => "[자신] ",
+            TargetType.Ally => IsArea ? "[아군 전체] " : "[아군 낮은 체력] ",
+            TargetType.Enemy when IsArea => "[전체] ",
+            _ => EnemyTargetRule switch
+            {
+                TargetRule.Random => "[무작위] ",
+                TargetRule.LowestHealth => "[낮은 체력] ",
+                _ => "[보복] "
+            }
+        };
 
         private static string StatusName(StatusType status) => CombatEffects.StatusName(status);
 
@@ -136,13 +157,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             if (ExecuteThreshold > 0f)
                 text.Append($"\n처형: 공격 후 대상 체력이 {ExecuteThreshold * 100f:0}% 이하면 즉시 처치합니다.");
             if (StunTurns > 0)
-                text.Append($"\n행동 불가: {StunTurns}턴 동안 대상이 공격할 수 없습니다.");
+                text.Append($"\n행동 불가: {StunTurns}턴 동안 대상이 공격할 수 없습니다. (보스는 턴마다 공격 1회 감소)");
             if (ReflectRatio > 0f && ReflectTurns > 0)
                 text.Append($"\n반사: {ReflectTurns}턴 동안 받은 피해의 {ReflectRatio * 100f:0}%를 공격한 적에게 되돌립니다.");
             if (CleanseDebuffs)
                 text.Append("\n정화: 대상에게 걸린 디버프(표식, 독·화상·낙인, 빗나감, 행동 불가)를 모두 제거합니다.");
-            if (Target == TargetType.Enemy && EnemyTargetRule != TargetRule.Default)
-                text.Append(EnemyTargetRule == TargetRule.Random ? "\n(몬스터 사용 시 무작위 대상)" : "\n(몬스터 사용 시 체력이 가장 낮은 대상)");
             if (HealthCost > 0f)
                 text.Append($"\n시전 시 자신의 체력을 {HealthCost:0.#} 소모합니다.");
             return text.ToString();
@@ -153,7 +172,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             if (string.IsNullOrEmpty(SkillDescription) || applyStats.Count == 0) return SkillDescription;
             object[] values = new object[applyStats.Count];
             for (int i = 0; i < applyStats.Count; i++)
-                values[i] = applyStats[i].GetScaledValue(level).ToString("F1", CultureInfo.InvariantCulture);
+                values[i] = applyStats[i].GetScaledValue(level).ToString("0.#", CultureInfo.InvariantCulture);
 
             try { return string.Format(CultureInfo.InvariantCulture, SkillDescription, values); }
             catch (FormatException)

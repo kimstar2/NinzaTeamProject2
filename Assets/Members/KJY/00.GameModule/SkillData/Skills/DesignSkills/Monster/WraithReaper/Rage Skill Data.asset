@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: 3c8ccc649e666a3489693c69cf7df8ee, type: 3}
   <SkillName>k__BackingField: "분노"
   <Icon>k__BackingField: {fileID: -4359418616829939669, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
-  <SkillDescription>k__BackingField: "분노의 일격으로 {0} 피해를 줍니다."
+  <SkillDescription>k__BackingField: "격노한 일격으로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 16

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: a33d28c1fb4a0f148a660356183cf5ba, type: 3}
   <SkillName>k__BackingField: "원시림의 분노"
-  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "원시림의 힘으로 {0} 피해를 줍니다."
+  <Icon>k__BackingField: {fileID: -1812292371, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
+  <SkillDescription>k__BackingField: "숲의 힘을 끌어모아 상대 전체에게 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 24
@@ -38,3 +38,4 @@ MonoBehaviour:
   suitableTypes:
   - 1
   - 4
+  <IsArea>k__BackingField: 1

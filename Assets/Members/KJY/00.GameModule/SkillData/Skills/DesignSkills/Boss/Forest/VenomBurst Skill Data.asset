@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 9e55606da1864f00ad0d39c2a7fc3d33, type: 3}
   <SkillName>k__BackingField: "맹독 폭발"
-  <Icon>k__BackingField: {fileID: -6567654030739498224, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "맹독을 터뜨려 {0} 피해를 줍니다."
+  <Icon>k__BackingField: {fileID: 1798832751, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
+  <SkillDescription>k__BackingField: "독을 터뜨려 상대 전체에게 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 15
@@ -37,3 +37,5 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 2
+  <IsArea>k__BackingField: 1
+  <EffectColor>k__BackingField: {r: 0.45, g: 1, b: 0.45, a: 1}

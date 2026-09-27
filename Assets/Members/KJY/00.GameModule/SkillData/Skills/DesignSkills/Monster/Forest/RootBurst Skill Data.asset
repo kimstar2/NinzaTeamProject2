@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 9e55606da1864f00ad0d39c2a7fc3d33, type: 3}
   <SkillName>k__BackingField: "뿌리 폭발"
-  <Icon>k__BackingField: {fileID: -6567654030739498224, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 604180111, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDescription>k__BackingField: "가시를 날려 {0} 폭발 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

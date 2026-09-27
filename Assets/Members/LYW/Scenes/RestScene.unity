@@ -40063,6 +40063,7 @@ MonoBehaviour:
   closeMotion: {fileID: 1740610197}
   forgeMotion: {fileID: 1036573266}
   returnScene: Assets/Members/CJY/Scene/CJY.unity
+  tutorialPrefab: {fileID: 4285237113805513618, guid: fdfad6d9ebbb89fd7bf13ae417270fdb, type: 3}
 --- !u!4 &2080055727
 Transform:
   m_ObjectHideFlags: 0

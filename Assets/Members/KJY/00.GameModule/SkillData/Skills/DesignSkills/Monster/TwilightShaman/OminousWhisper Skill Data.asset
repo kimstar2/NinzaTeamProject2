@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 10ac11223bbd51119af5e83d1a240dbc, type: 3}
   <SkillName>k__BackingField: "불길한 속삭임"
   <Icon>k__BackingField: {fileID: 2251344158962148524, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
-  <SkillDescription>k__BackingField: "불길한 속삭임으로 대상을 약하게 만듭니다."
+  <SkillDescription>k__BackingField: "귓가에 저주를 속삭여 대상을 약하게 만듭니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 0
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 1
   suitableTypes:
   - 2
+  <EffectColor>k__BackingField: {r: 1, g: 0.45, b: 0.45, a: 1}

@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 2398796357892219269, guid: d305be411d7f52a3b87422ba31e4b45e, type: 3}
   <SkillName>k__BackingField: "자폭"
   <Icon>k__BackingField: {fileID: 8837457230770566210, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
-  <SkillDescription>k__BackingField: "몸을 터뜨려 {0} 피해를 줍니다."
+  <SkillDescription>k__BackingField: "몸을 터뜨려 상대 전체에게 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 28
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 1
+  <IsArea>k__BackingField: 1

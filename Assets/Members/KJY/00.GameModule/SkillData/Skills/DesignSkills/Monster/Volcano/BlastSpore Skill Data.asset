@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 1
   suitableTypes:
   - 2
+  <EffectColor>k__BackingField: {r: 1, g: 0.45, b: 0.45, a: 1}

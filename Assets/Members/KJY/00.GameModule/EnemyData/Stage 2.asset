@@ -15,12 +15,14 @@ MonoBehaviour:
   stageName: "\uC7BF\uBD88\uC758 \uD654\uC0B0"
   backgroundPrefab: {fileID: 3407162977735574216, guid: f709e9cc26879df4fa968040aeefa4d1, type: 3}
   enemies:
+  - {fileID: 11400000, guid: c609392d0d9a56e5bcd2b065c1bcb262, type: 2}
+  - {fileID: 11400000, guid: 64b5b42b60f0574c9856a68d8482be55, type: 2}
+  - {fileID: 11400000, guid: 8d0843c8f1e75c37ab26b269add4baea, type: 2}
   - {fileID: 11400000, guid: 9ae5782acbacf89469cc3e169389c9ae, type: 2}
   - {fileID: 11400000, guid: 588353a9b871316459127f5018e1a885, type: 2}
   - {fileID: 11400000, guid: c47e2ad0c33f2dc43aca6f5e06484745, type: 2}
   - {fileID: 11400000, guid: 4a57299e8e4655e3bd2773ceccc2f04a, type: 2}
   - {fileID: 11400000, guid: 76a60388f596be14e9268a5148fb235f, type: 2}
-  - {fileID: 11400000, guid: d7b08ae53746243478b9277f0b0ede35, type: 2}
   - {fileID: 11400000, guid: 39ba6767e454539384aeeecdf2b63035, type: 2}
   - {fileID: 11400000, guid: 94c7dd1e00c85f658f6cec64f37dc426, type: 2}
   - {fileID: 11400000, guid: fb082e72ed28da5468f3e763e6e79d0b, type: 2}
@@ -38,7 +40,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e105a2c9aaa1577d88a4141320e52b93, type: 2}
   - {fileID: 11400000, guid: 37f9dc96b2863a64d8dd24671bd225df, type: 2}
   - {fileID: 11400000, guid: 8f78dde7309f1bc429d2ffe597ffa384, type: 2}
-  - {fileID: 11400000, guid: 6907aebb404a65340826ce1446c0d33a, type: 2}
   - {fileID: 11400000, guid: 261326c2849954ef95baac9edd5f991d, type: 2}
   - {fileID: 11400000, guid: d1611625464f5396a0336d35a99e594d, type: 2}
   boss: {fileID: 11400000, guid: 6bfa03512da75c3eb51b2e897ac65006, type: 2}

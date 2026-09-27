@@ -76,7 +76,9 @@ namespace Members.KJY._01.Scripts.Dice.Data
                 if (roles.Count == 0) continue;
                 written.Add(skill);
                 if (description.Length > 0) description.AppendLine().AppendLine();
-                description.Append('[').Append(string.Join("·", roles)).Append("] ").AppendLine(skill.SkillName);
+                // 면 이름이 곧 스킬 이름이면 스킬 이름은 반복하지 않는다
+                if (skill.SkillName == MainName) description.Append("사용 직업: ").AppendLine(string.Join("·", roles));
+                else description.Append('[').Append(string.Join("·", roles)).Append("] ").AppendLine(skill.SkillName);
                 description.Append(skill.GetDescription(level));
             }
             return description.ToString();

@@ -163,37 +163,52 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             TryEndSkill();
         }
 
-        protected float GetDamage()
+        protected float GetDamage() => GetDamage(Executor.Target);
+
+        protected float GetDamage(AbstractSelector target)
         {
             var attackerHealth = Executor.Attacker.MyAgent.HealthModule;
-            var targetHealth = Executor.Target.MyAgent.HealthModule;
+            var targetHealth = target.MyAgent.HealthModule;
             float multiplier = Executor.SkillData.GetDamageMultiplier(
                 attackerHealth.CurrentHealth / Mathf.Max(1f, attackerHealth.DefaultMaxHealth),
                 targetHealth.CurrentHealth / Mathf.Max(1f, targetHealth.DefaultMaxHealth));
             float mark = GetStat(ApplyStatType.Damage) > 0f ?
-                Executor.Target.Effects.UseMark(Executor.SkillData.Synergy == SkillDataSO.SynergyType.ExploitMark) : 1f;
+                target.Effects.UseMark(Executor.SkillData.Synergy == SkillDataSO.SynergyType.ExploitMark) : 1f;
             return Mathf.Max(0f, GetStat(ApplyStatType.Damage)) * multiplier * mark;
         }
 
-        // scale은 다단 타격에서 타격마다 비중을 다르게 줄 때 사용
+        // scale은 다단 타격에서 타격마다 비중을 다르게 줄 때 사용. 광역이면 대상 진영 전체에 적용한다.
         protected void ApplyDamage(float scale = 1f)
         {
-            if (Executor.IsMissed) return; // 빗나감: 피해, 흡혈, 부가효과 모두 없음
+            if (Executor.IsMissed) // 빗나감: 피해, 흡혈, 부가효과 모두 없음
+            {
+                Executor.ShowMissOnce(Executor.Target);
+                return;
+            }
+            foreach (var target in Executor.GetTargets())
+                if (target != null && !target.IsDead) ApplyDamageTo(target, scale);
+        }
+
+        private void ApplyDamageTo(AbstractSelector target, float scale)
+        {
             var data = Executor.SkillData;
-            var targetHealth = Executor.Target.MyAgent.HealthModule;
+            var targetHealth = target.MyAgent.HealthModule;
             float healthBefore = targetHealth.CurrentHealth;
-            float damage = GetDamage() * Mathf.Max(0f, scale);
-            if (damage > 0f && data.BonusVsStatus != StatusType.None && Executor.Target.Effects.HasStatus(data.BonusVsStatus))
+            float damage = GetDamage(target) * Mathf.Max(0f, scale);
+            if (damage > 0f && data.BonusVsStatus != StatusType.None && target.Effects.HasStatus(data.BonusVsStatus))
                 damage += data.BonusDamage * Mathf.Max(0f, scale);
             if (damage > 0f)
             {
-                Executor.Target.ApplyStat(ApplyStatType.Damage, damage);
-                Reflect(Executor.Target, healthBefore - targetHealth.CurrentHealth);
+                target.ApplyStat(ApplyStatType.Damage, damage);
+                Reflect(target, healthBefore - targetHealth.CurrentHealth);
             }
-            if (data.ExecuteThreshold > 0f && !Executor.Target.IsDead &&
+            if (data.ExecuteThreshold > 0f && !target.IsDead &&
                 targetHealth.CurrentHealth <= targetHealth.DefaultMaxHealth * data.ExecuteThreshold)
-                Executor.Target.ApplyDamage(targetHealth.CurrentHealth); // 보호로 줄지 않게 직접 처치
-            Executor.ApplySynergy();
+            {
+                target.ApplyDamage(targetHealth.CurrentHealth); // 보호로 줄지 않게 직접 처치
+                target.Effects.ShowPopup("처형!", new Color(1f, 0.3f, 0.3f));
+            }
+            Executor.ApplySynergy(target);
 
             // 남은 체력보다 큰 피해를 줘도 실제 깎은 양만 흡수한다.
             float drainedHealth = Mathf.Max(0f, healthBefore - targetHealth.CurrentHealth) *

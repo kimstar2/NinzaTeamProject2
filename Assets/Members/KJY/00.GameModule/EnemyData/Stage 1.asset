@@ -17,16 +17,15 @@ MonoBehaviour:
   enemies:
   - {fileID: 11400000, guid: 3c77a137abbfc464f91ef3a5951e3d0d, type: 2}
   - {fileID: 11400000, guid: d098143efdae1834a806d74c1fabb3fc, type: 2}
-  - {fileID: 11400000, guid: c609392d0d9a56e5bcd2b065c1bcb262, type: 2}
   - {fileID: 11400000, guid: bb570524b0631b34c9b7207276ca8fce, type: 2}
   - {fileID: 11400000, guid: 23fa32a4e0ee10f4cb28e77de5c9acb8, type: 2}
   - {fileID: 11400000, guid: 19973749cf731814bb09b8b71ef0419e, type: 2}
-  - {fileID: 11400000, guid: 64b5b42b60f0574c9856a68d8482be55, type: 2}
   - {fileID: 11400000, guid: f9b10ef30eeab2749a4f7aa38e7a218b, type: 2}
   - {fileID: 11400000, guid: e3f86d85d1a8f4241be7d53ae2d72a10, type: 2}
   - {fileID: 11400000, guid: ace4a89387145b71a69f9e9c48592041, type: 2}
-  - {fileID: 11400000, guid: 8d0843c8f1e75c37ab26b269add4baea, type: 2}
   - {fileID: 11400000, guid: b68c47af17605cc49090643b29ec6079, type: 2}
+  - {fileID: 11400000, guid: d7b08ae53746243478b9277f0b0ede35, type: 2}
+  - {fileID: 11400000, guid: 6907aebb404a65340826ce1446c0d33a, type: 2}
   boss: {fileID: 11400000, guid: 38fdddf8438d51b18294533aca0e351e, type: 2}
   elite: {fileID: 11400000, guid: b7ecf5c948e5b4945b186d4570216b93, type: 2}
   enemyCount: {x: 2, y: 4}

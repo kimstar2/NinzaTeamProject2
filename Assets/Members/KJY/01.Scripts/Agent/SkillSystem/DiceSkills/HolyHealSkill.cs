@@ -33,12 +33,19 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
-            var health = Executor.Target.MyAgent.HealthModule;
-            // 정수 비율로 비교해서 정확히 35%인 체력도 Mono의 소수 오차 없이 포함한다.
-            bool isEmergency = health.CurrentHealth * 100f <= health.DefaultMaxHealth * 35f;
-            float multiplier = emergencyHeal && isEmergency ? 2f : 1f;
-            Executor.Target.ApplyStat(ApplyStatType.Heal, GetStat(ApplyStatType.Heal) * multiplier);
-            Executor.ApplySynergy();
+            // 광역이면 아군 전체, 아니면 대상 한 명
+            foreach (var target in Executor.GetTargets())
+            {
+                if (target == null || target.IsDead) continue;
+                if (target != Executor.Target) // 주 대상은 이미 파티클이 나옴
+                    PlayParticle(HealParticle, target.MyAgent.transform.position + effectOffset);
+                var health = target.MyAgent.HealthModule;
+                // 정수 비율로 비교해서 정확히 35%인 체력도 Mono의 소수 오차 없이 포함한다.
+                bool isEmergency = health.CurrentHealth * 100f <= health.DefaultMaxHealth * 35f;
+                float multiplier = emergencyHeal && isEmergency ? 2f : 1f;
+                target.ApplyStat(ApplyStatType.Heal, GetStat(ApplyStatType.Heal) * multiplier);
+                Executor.ApplySynergy(target);
+            }
         }
     }
 }

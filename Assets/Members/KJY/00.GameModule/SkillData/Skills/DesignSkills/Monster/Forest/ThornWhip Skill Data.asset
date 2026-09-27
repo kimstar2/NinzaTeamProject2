@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: 3c8ccc649e666a3489693c69cf7df8ee, type: 3}
   <SkillName>k__BackingField: "가시 채찍"
-  <Icon>k__BackingField: {fileID: 7222565985598036394, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "가시 채찍으로 {0} 피해를 줍니다."
+  <Icon>k__BackingField: {fileID: -1124159642, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
+  <SkillDescription>k__BackingField: "가시 돋친 덩굴을 휘둘러 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 16
@@ -38,3 +38,4 @@ MonoBehaviour:
   suitableTypes:
   - 1
   - 4
+  <EffectColor>k__BackingField: {r: 1, g: 0.45, b: 0.45, a: 1}

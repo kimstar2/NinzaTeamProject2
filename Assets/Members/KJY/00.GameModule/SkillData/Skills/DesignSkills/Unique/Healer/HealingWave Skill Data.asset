@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: b4f45a5bd2f97424abc9f15a44d1933c, type: 3}
   <SkillName>k__BackingField: "치유의 파동"
   <Icon>k__BackingField: {fileID: 3770250004973238489, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "치유의 파동으로 대상의 체력을 {0} 회복합니다."
+  <SkillDescription>k__BackingField: "초록빛 파동으로 아군 전체의 체력을 {0} 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 25
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 3
+  <IsArea>k__BackingField: 1

@@ -2,6 +2,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Members.KJY._01.Scripts.Agent;
+using Members.KJY._01.Scripts.Agent.Enemy;
 using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Command
@@ -39,10 +40,17 @@ namespace Members.KJY._01.Scripts.Command
 
         private bool TryExecuteSkill()
         {
-            // 행동 불가 상태면 이번 공격은 넘어간다
-            if (Attacker == null || TargetSelector == null || Attacker.IsDead || TargetSelector.IsDead ||
-                Attacker.Effects.IsStunned)
+            // 행동 불가 상태면 이번 공격은 넘어간다 (보스는 턴마다 1회만)
+            bool isBoss = Attacker is EnemySelector enemy && enemy.RuntimeEnemyData != null &&
+                          enemy.RuntimeEnemyData.Rank == EnemyRank.Boss;
+            if (Attacker == null || TargetSelector == null || Attacker.IsDead || TargetSelector.IsDead)
             {
+                MoveNext();
+                return true;
+            }
+            if (Attacker.Effects.TryBlockAction(isBoss))
+            {
+                Attacker.Effects.ShowPopup("행동 불가", CombatEffects.DefaultColor(CombatEffects.DebuffKind.Stun));
                 MoveNext();
                 return true;
             }

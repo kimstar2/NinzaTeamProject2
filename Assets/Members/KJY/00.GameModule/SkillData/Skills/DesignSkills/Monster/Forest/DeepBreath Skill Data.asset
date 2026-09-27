@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: b4f45a5bd2f97424abc9f15a44d1933c, type: 3}
   <SkillName>k__BackingField: "심호흡"
-  <Icon>k__BackingField: {fileID: 8553157191358818737, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -369906259, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDescription>k__BackingField: "자신의 체력을 {0} 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1

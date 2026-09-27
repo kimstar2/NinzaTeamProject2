@@ -38,3 +38,4 @@ MonoBehaviour:
   suitableTypes:
   - 1
   - 4
+  <EffectColor>k__BackingField: {r: 1, g: 0.45, b: 0.45, a: 1}

@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 8b6aab026c345724ab9e333de443e7fc, type: 3}
   <SkillName>k__BackingField: "압도"
   <Icon>k__BackingField: {fileID: 4209667872795797613, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "몸집을 키워 적을 압도합니다."
+  <SkillDescription>k__BackingField: "거대한 기세로 몸을 부풀려 공격을 버텨 냅니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 0

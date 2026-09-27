@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: e90f2b7783d1516999ec99efcdd43fae, type: 3}
   <SkillName>k__BackingField: "야수의 포식"
-  <Icon>k__BackingField: {fileID: -2810561975446432488, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 13722332, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDescription>k__BackingField: "물어뜯어 {0} 피해를 주고, 실제 피해의 50%를 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

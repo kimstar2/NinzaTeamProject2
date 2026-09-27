@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DevLib.CoreLib.Runtime;
 using DevLib.ServiceLocator;
 using DevLib.HashDataSystem;
@@ -57,8 +58,20 @@ namespace Members.KJY._01.Scripts.Agent
             TweenLayoutGroup = GetComponentInParent<TweenLayoutGroup>();
         }
 
+        // 지금 전투에 나와 있는 캐릭터·몬스터. 광역 스킬 대상 계산에 쓴다.
+        private static readonly List<AbstractSelector> _inBattle = new();
+        public static IReadOnlyList<AbstractSelector> InBattle
+        {
+            get
+            {
+                _inBattle.RemoveAll(selector => selector == null);
+                return _inBattle;
+            }
+        }
+
         public void HideFromBattle()
         {
+            _inBattle.Remove(this);
             TweenLayoutGroup.Hide(transform);
             DiceLayoutGroup.Hide(DiceLayoutTarget);
             MyAgent.gameObject.SetActive(false);
@@ -67,6 +80,7 @@ namespace Members.KJY._01.Scripts.Agent
         protected void EnterBattle()
         {
             Effects.Clear();
+            if (!_inBattle.Contains(this)) _inBattle.Add(this);
             MyAgent.gameObject.SetActive(true);
             MyAgent.transform.position = DefaultPosition.position;
             DiceLayoutGroup.Add(DiceLayoutTarget);
@@ -89,10 +103,13 @@ namespace Members.KJY._01.Scripts.Agent
             MyAgent.HealthModule.OnDead += HandleDead;
             MyAgent.HealthModule.OnHealthChanged += HandleHealthChanged;
             HandleHealthChanged(MyAgent.HealthModule.CurrentHealth, MyAgent.HealthModule.DefaultMaxHealth);
+            // 떠오르는 문구와 디버프 색은 모든 캐릭터·몬스터에 자동으로 붙인다
+            if (!TryGetComponent<CombatStatusVisual>(out _)) gameObject.AddComponent<CombatStatusVisual>().Bind(this);
         }
 
         protected virtual void OnDestroy()
         {
+            _inBattle.Remove(this);
             MyAgent.HealthModule.OnDead -= HandleDead;
             MyAgent.HealthModule.OnHealthChanged -= HandleHealthChanged;
         }

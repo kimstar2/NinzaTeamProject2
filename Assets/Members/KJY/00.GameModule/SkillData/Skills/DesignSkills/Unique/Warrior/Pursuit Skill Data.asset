@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 1795802190955455579, guid: bc73cab5e4cb60e45b3abaf783c6050b, type: 3}
   <SkillName>k__BackingField: "추격"
   <Icon>k__BackingField: {fileID: 4271259967832690119, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "적을 두 번 공격해 매번 {0} 피해를 줍니다."
+  <SkillDescription>k__BackingField: "대상을 두 번 연속 공격해 매번 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 20

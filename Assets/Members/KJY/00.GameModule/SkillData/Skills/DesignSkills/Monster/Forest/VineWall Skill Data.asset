@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 8b6aab026c345724ab9e333de443e7fc, type: 3}
   <SkillName>k__BackingField: "덩굴 장벽"
-  <Icon>k__BackingField: {fileID: 3770250004973238489, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "덩굴 장벽으로 대상을 감쌉니다."
+  <Icon>k__BackingField: {fileID: -30659361, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
+  <SkillDescription>k__BackingField: "덩굴을 둘러 아군 전체를 지킵니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 0
@@ -38,3 +38,4 @@ MonoBehaviour:
   suitableTypes:
   - 3
   - 4
+  <IsArea>k__BackingField: 1

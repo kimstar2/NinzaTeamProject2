@@ -121,9 +121,10 @@ namespace Members.KJY._01.Scripts.UI
         {
             if (face == null) return "빈 면입니다.";
             var skill = face.GetSkillDataStruct(_player.AttackType).SkillData;
+            string skillLine = skill != null && skill.SkillName != face.MainName ? skill.SkillName + "\n" : string.Empty; // 면 이름과 같으면 반복하지 않음
             string body = skill == null ? "이 캐릭터가 사용할 수 없는 면입니다." :
-                !skill.IsSuitable(_player.AttackType) ? $"{skill.SkillName}\n<color=#E57373>직업이 맞지 않아 장착할 수 없습니다. (적합: {skill.SuitableDescription})</color>" :
-                $"{skill.SkillName}\n{skill.GetDescription(level)}";
+                !skill.IsSuitable(_player.AttackType) ? $"{skillLine}<color=#E57373>직업이 맞지 않아 장착할 수 없습니다. (적합: {skill.SuitableDescription})</color>" :
+                $"{skillLine}{skill.GetDescription(level)}";
             return $"<color=#B5A5F4>{face.MainName}</color>  <size=80%>Lv.{level:0.#}</size>\n" + body;
         }
 

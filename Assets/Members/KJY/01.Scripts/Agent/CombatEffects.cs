@@ -20,6 +20,58 @@ namespace Members.KJY._01.Scripts.Agent
         // 행동 불가: 남은 턴 동안 공격 명령이 넘어간다.
         public int StunTurns { get; private set; }
         public bool IsStunned => StunTurns > 0;
+
+        // ===== 표시용: 떠오르는 문구와 디버프 색 =====
+        public enum DebuffKind { Mark, Poison, Burn, Brand, Miss, Stun }
+
+        public event Action<string, Color> Popup;
+        public event Action Cleared; // 전투 입장 등으로 모든 효과가 초기화될 때
+        private readonly List<DebuffKind> _debuffOrder = new();
+        private readonly Dictionary<DebuffKind, Color> _debuffColors = new();
+
+        public void ShowPopup(string text, Color color) => Popup?.Invoke(text, color);
+
+        public static Color DefaultColor(DebuffKind kind) => kind switch
+        {
+            DebuffKind.Poison => new Color(0.45f, 1f, 0.45f),
+            DebuffKind.Burn => new Color(1f, 0.55f, 0.25f),
+            DebuffKind.Brand => new Color(0.75f, 0.45f, 1f),
+            DebuffKind.Miss => new Color(0.65f, 0.75f, 1f),
+            DebuffKind.Stun => new Color(1f, 0.9f, 0.3f),
+            _ => new Color(1f, 0.45f, 0.45f)
+        };
+
+        public static DebuffKind ToKind(StatusType status) =>
+            status == StatusType.Burn ? DebuffKind.Burn : status == StatusType.Brand ? DebuffKind.Brand : DebuffKind.Poison;
+
+        // 디버프가 걸릴 때 색을 기록한다. 가장 최근에 걸린, 아직 남아 있는 디버프 색이 캐릭터 색이 된다.
+        public void RememberDebuff(DebuffKind kind, Color color)
+        {
+            _debuffOrder.Remove(kind);
+            _debuffOrder.Add(kind);
+            _debuffColors[kind] = color;
+            Changed?.Invoke();
+        }
+
+        private bool IsActive(DebuffKind kind) => kind switch
+        {
+            DebuffKind.Mark => MarkedHits > 0,
+            DebuffKind.Miss => MissTurns > 0,
+            DebuffKind.Stun => StunTurns > 0,
+            DebuffKind.Burn => HasStatus(StatusType.Burn),
+            DebuffKind.Brand => HasStatus(StatusType.Brand),
+            _ => HasStatus(StatusType.Poison)
+        };
+
+        public Color? CurrentTint
+        {
+            get
+            {
+                for (int i = _debuffOrder.Count - 1; i >= 0; i--)
+                    if (IsActive(_debuffOrder[i])) return _debuffColors[_debuffOrder[i]];
+                return null;
+            }
+        }
         public event Action Changed;
 
         // 반사: 남은 턴 동안 스킬로 받은 피해의 일부를 공격자에게 되돌린다.
@@ -42,6 +94,18 @@ namespace Members.KJY._01.Scripts.Agent
             MissChance = 0f;
             MissTurns = StunTurns = 0;
             Changed?.Invoke();
+        }
+
+        private bool _stunBlockedThisTurn;
+
+        // 행동 불가면 이번 행동을 막는다. 보스는 한 턴에 여러 번 공격하므로 턴마다 1회만 막는다.
+        public bool TryBlockAction(bool isBoss)
+        {
+            if (!IsStunned) return false;
+            if (!isBoss) return true;
+            if (_stunBlockedThisTurn) return false;
+            _stunBlockedThisTurn = true;
+            return true;
         }
 
         public void AddStun(int turns)
@@ -100,6 +164,7 @@ namespace Members.KJY._01.Scripts.Agent
             }
             if (MissTurns > 0 && --MissTurns == 0) MissChance = 0f;
             if (StunTurns > 0) StunTurns--;
+            _stunBlockedThisTurn = false;
             if (ReflectTurns > 0 && --ReflectTurns == 0) ReflectRatio = 0f;
             Changed?.Invoke();
             return damage;
@@ -139,7 +204,11 @@ namespace Members.KJY._01.Scripts.Agent
             IsEmpowered = false;
             MissChance = ReflectRatio = 0f;
             MissTurns = StunTurns = ReflectTurns = 0;
+            _stunBlockedThisTurn = false;
             _dots.Clear();
+            _debuffOrder.Clear();
+            _debuffColors.Clear();
+            Cleared?.Invoke();
             Changed?.Invoke();
         }
 

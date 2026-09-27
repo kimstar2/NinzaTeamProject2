@@ -15,7 +15,7 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: cd27bce5409459348e30d8fd1fdbac9d, type: 3}
   <SkillName>k__BackingField: "제압"
   <Icon>k__BackingField: {fileID: -5480430519037691180, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
-  <SkillDescription>k__BackingField: "방패로 적 하나를 짓눌러 제압합니다."
+  <SkillDescription>k__BackingField: "방패로 짓눌러 대상을 꼼짝 못 하게 만듭니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
     <Value>k__BackingField: 0
@@ -37,3 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 4
+  <EffectColor>k__BackingField: {r: 1, g: 0.9, b: 0.3, a: 1}

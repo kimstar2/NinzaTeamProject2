@@ -15,7 +15,7 @@ MonoBehaviour:
   <MainName>k__BackingField: "원시림의 분노"
   <Description>k__BackingField: 
   <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
-  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: -1812292371, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDataStructs>k__BackingField:
   - <AgentAttackType>k__BackingField: 0
     <SkillData>k__BackingField: {fileID: 11400000, guid: 1cb02c1be82980edaae523b993bb1c08, type: 2}

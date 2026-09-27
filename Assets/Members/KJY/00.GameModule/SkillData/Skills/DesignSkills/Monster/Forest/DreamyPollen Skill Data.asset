@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: e74fb6eb9aaf9564f84ea6fb262a7f28, type: 3}
   <SkillName>k__BackingField: "환상적인 꽃가루"
-  <Icon>k__BackingField: {fileID: -5050291110520419546, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <Icon>k__BackingField: {fileID: 204706177, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDescription>k__BackingField: "꽃가루를 뿌려 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0

@@ -95,7 +95,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             titleTMP.SetText(CurrentSkillData.SkillData.SkillName);
             string rankInfo = _enemyData.Rank == EnemyRank.Boss
                 ? $"보스 · 라운드당 최대 {DiceBattleManager.MaxBossRetaliations}회 반격\n" : string.Empty;
-            descTMP.SetText(rankInfo + CurrentSkillData.SkillData.GetDescription(_level));
+            descTMP.SetText(rankInfo + CurrentSkillData.SkillData.GetDescription(_level, true));
             gradeOutline.SetColor(CurrentDiceData.DiceGrade.GradeColor);
             iconImage.AsValueEnumerable().ToList().ForEach(i=>
             {
@@ -116,7 +116,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             CurrentSkillData = CurrentDiceData.GetSkillDataStruct(_enemyData.AttackType);
             if (CurrentSkillData.SkillData == null) return;
             titleTMP.SetText(CurrentSkillData.SkillData.SkillName);
-            descTMP.SetText(CurrentSkillData.SkillData.GetDescription(_level));
+            descTMP.SetText(CurrentSkillData.SkillData.GetDescription(_level, true));
             iconImage.AsValueEnumerable().ToList().ForEach(i=>i.SetImage(CurrentDiceData.GetIcon(_enemyData.AttackType)));
             rollParticle.SetParticleColor(Color.orangeRed);
             rollParticle.PlayParticle();
