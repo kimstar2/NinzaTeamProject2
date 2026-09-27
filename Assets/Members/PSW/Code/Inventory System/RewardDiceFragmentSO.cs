@@ -19,7 +19,7 @@ namespace Members.PSW.Code.InventorySystem
                 SkillData = diceData.GetSkillDataStruct(attackType.Value).SkillData;
             else if (diceData.SkillDataStructs != null && diceData.SkillDataStructs.Count == 1)
                 SkillData = diceData.SkillDataStructs[0].SkillData;
-            diceFragmentSprite = SkillData != null && SkillData.Icon != null ? SkillData.Icon : diceData.Icon;
+            //diceFragmentSprite = SkillData != null && SkillData.Icon != null ? SkillData.Icon : diceData.Icon;
             name = diceData.name;
         }
     }

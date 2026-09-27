@@ -7,6 +7,7 @@ using Members.LYW.Scripts.MySystem.Events;
 using Members.LYW.Scripts.System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public enum Job
@@ -23,15 +24,37 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI upgradeText;
     [SerializeField] private TextMeshProUGUI percentText;
     [SerializeField] private Inventory inventory;
+
+    [Header("DiceGrade")]
+    [SerializeField] private DiceGradeSO common;
+    [SerializeField] private DiceGradeSO unCommon;
+    [SerializeField] private DiceGradeSO rare;
     
     [Header("DiceFragments")]
-    [SerializeField] private List<DiceDataSO> meleeDiceFragments;
-    [SerializeField] private List<DiceDataSO> rangedDiceFragments;
-    [SerializeField] private List<DiceDataSO> magicianDiceFragments;
-    [SerializeField] private List<DiceDataSO> healerDiceFragments;
+    [SerializeField] private List<DiceDataSO> allDice;
+    [SerializeField] private List<DiceDataSO> commonDice;
+    [SerializeField] private List<DiceDataSO> unCommonDice;
+    [SerializeField] private List<DiceDataSO> rareDice;
     
     private int needyGold = 0;
     private int randNum;
+
+    private void Awake()
+    {
+        foreach (var dice in allDice)
+        {
+            if (dice.DiceGrade == common)
+                commonDice.Add(dice);
+            else  if (dice.DiceGrade == unCommon)
+                unCommonDice.Add(dice);
+            else if (dice.DiceGrade == rare)
+                rareDice.Add(dice);
+            else
+            {
+                Debug.Log("뭔등급이죠?");
+            }
+        }
+    }
 
     private void Start()
     {
@@ -70,12 +93,12 @@ public class UpgradeManager : MonoBehaviour
         if (isSuccess)
         {
             GiveDiceFragmentByJob();
-            Debug.Log("성공 (선택한 직업군 주사위 면 지급)");
+            Debug.Log("성공 (좋은 등급 나올 확률 상승)");
         }
         else
         {
             GiveRandomDiceFragment();
-            Debug.Log("실패 (선택한 직업군을 제외한 직업군 중 랜덤 직업군의 주사위 면 지급)");
+            Debug.Log("실패 (안좋은 등급 나올 확률 상승)");
         }
         
         EventBus.Publish(new UpgradeFragmentEvent());
@@ -86,36 +109,15 @@ public class UpgradeManager : MonoBehaviour
         RefreshValue();
     }
 
-    private void GiveDiceFragmentByJob()
+    private void GiveDiceFragmentByJob() // 성공
     {
-        if (jobSetter.curJob == Job.Melee)
-        {
-            // 여기에 근접 직업군에 맞는 주사위 면 지급 로직 작성
-            Debug.Log("근접 주사위 면 지급됨.");
-
-            inventory.AddFragment(DiceFragmentSetter(meleeDiceFragments));
-        }
-        if (jobSetter.curJob == Job.Ranged)
-        {
-            // 여기에 원거리 직업군에 맞는 주사위 면 지급 로직 작성
-            Debug.Log("원거리 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(rangedDiceFragments));
-        }
-        if (jobSetter.curJob == Job.Magician)
-        {
-            // 여기에 마법 직업군에 맞는 주사위 면 지급 로직 작성
-            Debug.Log("마법 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(magicianDiceFragments));
-        }
-        if (jobSetter.curJob == Job.Healer)
-        {
-            // 여기에 힐러 직업군에 맞는 주사위 면 지급 로직 작성
-            Debug.Log("힐러 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(healerDiceFragments));
-        }
+        float random =  Random.Range(0, 100);
+        if (random <= 10)
+            inventory.AddFragment(DiceFragmentSetter(rareDice));
+        else if (random <= 40)
+            inventory.AddFragment(DiceFragmentSetter(unCommonDice));
+        else
+            inventory.AddFragment(DiceFragmentSetter(commonDice));
     }
 
     DiceDataSO DiceFragmentSetter(List<DiceDataSO> diceFragments)
@@ -124,10 +126,9 @@ public class UpgradeManager : MonoBehaviour
     }
     DiceDataSO DiceFragmentSetter(List<DiceDataSO> diceFragments, bool isFailed)
     {
-        var candidates = meleeDiceFragments
-            .Concat(rangedDiceFragments)
-            .Concat(magicianDiceFragments)
-            .Concat(healerDiceFragments)
+        var candidates = commonDice
+            .Concat(unCommonDice)
+            .Concat(rareDice)
             .Where(x => !diceFragments.Contains(x))
             .ToList();
 
@@ -138,33 +139,12 @@ public class UpgradeManager : MonoBehaviour
     
     private void GiveRandomDiceFragment()
     {
-        if (jobSetter.curJob == Job.Melee)
-        {
-            // 여기에 근접 직업군을 제외한 직업군 중의 주사위 면 지급 로직 작성
-            Debug.Log("근접제외 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(meleeDiceFragments, true));
-        }
-        if (jobSetter.curJob == Job.Ranged)
-        {
-            // 여기에 원거리 직업군을 제외한 직업군 중의 주사위 면 지급 로직 작성
-            Debug.Log("원거리제외 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(rangedDiceFragments, true));
-        }
-        if (jobSetter.curJob == Job.Magician)
-        {
-            // 여기에 마법 직업군을 제외한 직업군 중의 주사위 면 지급 로직 작성
-            Debug.Log("마법제외 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(magicianDiceFragments, true));
-        }
-        if (jobSetter.curJob == Job.Healer)
-        {
-            // 여기에 힐러 직업군을 제외한 직업군 중의 주사위 면 지급 로직 작성
-            Debug.Log("힐러제외 주사위 면 지급됨.");
-            
-            inventory.AddFragment(DiceFragmentSetter(healerDiceFragments, true));
-        }
+        float random =  Random.Range(0, 100);
+        if (random <= 20)
+            inventory.AddFragment(DiceFragmentSetter(commonDice));
+        else if (random <= 50)
+            inventory.AddFragment(DiceFragmentSetter(unCommonDice));
+        else
+            inventory.AddFragment(DiceFragmentSetter(rareDice));
     }
 }

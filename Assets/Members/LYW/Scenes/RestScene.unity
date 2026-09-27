@@ -366,7 +366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 139810470}
-  - component: {fileID: 139810469}
+  - component: {fileID: 139810471}
   m_Layer: 0
   m_Name: UpgradeManager
   m_TagString: Untagged
@@ -374,28 +374,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &139810469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139810468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7d666ee3bac1dd4b8699e663814424b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
-  jobSetter: {fileID: 2075739647}
-  fragmentSetter: {fileID: 663850436}
-  upgradeText: {fileID: 1723261861}
-  percentText: {fileID: 219551431}
-  inventory: {fileID: 0}
-  meleeDiceFragments:
-  - {fileID: 0}
-  rangedDiceFragments: []
-  magicianDiceFragments: []
-  healerDiceFragments: []
 --- !u!4 &139810470
 Transform:
   m_ObjectHideFlags: 0
@@ -411,6 +389,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &139810471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139810468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d666ee3bac1dd4b8699e663814424b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeManager
+  jobSetter: {fileID: 2075739647}
+  fragmentSetter: {fileID: 663850436}
+  upgradeText: {fileID: 1723261861}
+  percentText: {fileID: 219551431}
+  inventory: {fileID: 1329364168}
+  common: {fileID: 11400000, guid: 240a2e14afdcd324ead28d93aacdc4f8, type: 2}
+  unCommon: {fileID: 11400000, guid: b0477f2aa1b0fea428e903a92d48b1ff, type: 2}
+  rare: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
+  allDice:
+  - {fileID: 11400000, guid: 7dcc08455b1204e448e985eb8817bd31, type: 2}
+  - {fileID: 11400000, guid: d5f3596e3c2071c4095df7a19fd0b16c, type: 2}
+  - {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
+  - {fileID: 11400000, guid: b2da5355826a07340838d46256e86666, type: 2}
+  - {fileID: 11400000, guid: 57e62aff62b081046bfb9a67d636bb2e, type: 2}
+  - {fileID: 11400000, guid: 1a3df9ba8af021242908e715c704674e, type: 2}
+  - {fileID: 11400000, guid: 84847e558a39f674ca3bc606ef146baa, type: 2}
+  - {fileID: 11400000, guid: 791c3876c83f4ce4590e6239b66abd09, type: 2}
+  - {fileID: 11400000, guid: 4b58944dd2658834d9886504ed43968a, type: 2}
+  - {fileID: 11400000, guid: 7a6ff4b16abde454f8912d0c92c15bdb, type: 2}
+  - {fileID: 11400000, guid: f0ca8047e44c1e04fb8431df36e1df51, type: 2}
+  - {fileID: 11400000, guid: 0dd4fc0727c6e954f8cdc69f750d95ac, type: 2}
+  - {fileID: 11400000, guid: d65baf29e9abc5b40bebcb4e4ae2ebcb, type: 2}
+  - {fileID: 11400000, guid: c740f069f5b624a4c990f47f137614ec, type: 2}
+  - {fileID: 11400000, guid: 4292233822a016b4280a0e4fa8b0b0c6, type: 2}
+  - {fileID: 11400000, guid: fd03ab00fdef0d44c9a8661e074a8ad1, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  commonDice: []
+  unCommonDice: []
+  rareDice: []
 --- !u!1 &148512977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1777,7 +1796,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 139810469}
+      - m_Target: {fileID: 139810471}
         m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: TryUpgrade
         m_Mode: 1
@@ -2608,7 +2627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2937,18 +2956,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   maxSlots: 50
   <DiceFragments>k__BackingField:
-  - {fileID: 11400000, guid: 3bb4dcb7d07555a4993584d2991ce714, type: 2}
-  - {fileID: 11400000, guid: fb95e69cb9e678548ab838b341598a6e, type: 2}
-  - {fileID: 11400000, guid: 549b6abae3c8d3b488c05d26e17077e4, type: 2}
-  - {fileID: 11400000, guid: eff77f0d465cce442ba885e89260d5b2, type: 2}
-  - {fileID: 11400000, guid: fa0e0b3c35b7ebe4b96cd3b7b9beab39, type: 2}
-  - {fileID: 11400000, guid: 550c83de777584d449aa07a3d53d685f, type: 2}
-  - {fileID: 11400000, guid: 6ed66c1bfdbacbb42af02d522a52d49a, type: 2}
-  - {fileID: 11400000, guid: a8f87eb13e4cb1b40bf3419bc6513ae0, type: 2}
-  - {fileID: 11400000, guid: a38b2b6897ef2b445848d0a22bc2f774, type: 2}
-  - {fileID: 11400000, guid: c797581d3d6a8044aa115ca54413f376, type: 2}
-  - {fileID: 11400000, guid: 8f79e8a1c7ac46b4c8851e4679bcca82, type: 2}
-  - {fileID: 11400000, guid: 2d082d7e05d1fc04c928937bf8e21c11, type: 2}
+  - {fileID: 11400000, guid: 7dcc08455b1204e448e985eb8817bd31, type: 2}
+  - {fileID: 11400000, guid: d5f3596e3c2071c4095df7a19fd0b16c, type: 2}
+  - {fileID: 11400000, guid: 9eb8a36da47b38747861958121d94324, type: 2}
+  - {fileID: 11400000, guid: b2da5355826a07340838d46256e86666, type: 2}
+  - {fileID: 11400000, guid: 57e62aff62b081046bfb9a67d636bb2e, type: 2}
+  - {fileID: 11400000, guid: 1a3df9ba8af021242908e715c704674e, type: 2}
+  - {fileID: 11400000, guid: 84847e558a39f674ca3bc606ef146baa, type: 2}
+  - {fileID: 11400000, guid: 791c3876c83f4ce4590e6239b66abd09, type: 2}
+  - {fileID: 11400000, guid: 4b58944dd2658834d9886504ed43968a, type: 2}
+  - {fileID: 11400000, guid: 7a6ff4b16abde454f8912d0c92c15bdb, type: 2}
+  - {fileID: 11400000, guid: f0ca8047e44c1e04fb8431df36e1df51, type: 2}
+  - {fileID: 11400000, guid: 0dd4fc0727c6e954f8cdc69f750d95ac, type: 2}
+  - {fileID: 11400000, guid: d65baf29e9abc5b40bebcb4e4ae2ebcb, type: 2}
+  - {fileID: 11400000, guid: c740f069f5b624a4c990f47f137614ec, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
+  - {fileID: 11400000, guid: fd03ab00fdef0d44c9a8661e074a8ad1, type: 2}
+  - {fileID: 11400000, guid: 4292233822a016b4280a0e4fa8b0b0c6, type: 2}
 --- !u!4 &1329364169
 Transform:
   m_ObjectHideFlags: 0
@@ -4935,6 +4969,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 506211324}
     m_Modifications:
+    - target: {fileID: 1067177291620389032, guid: 86e979de5636f5642b45b5a2005eabad, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2489437029154452251, guid: 86e979de5636f5642b45b5a2005eabad, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -5071,6 +5109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de01f14b49a412ea3baaaf2a6267821, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.CJY.Scripts.NodeEvent
+  nodeScenes: []
+  battleDataStorage: {fileID: 0}
 --- !u!114 &2612604728309890955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5656,6 +5696,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4709e2cebdb852d4d889c0a44b152f92, type: 2}
   - {fileID: 11400000, guid: 2c07b89ecd3ced642aa7540db17fd327, type: 2}
   objectPool: {fileID: 9108231532865382481}
+  battleDataStorage: {fileID: 0}
   columnCount: 15
   minNodeCount: 2
   maxNodeCount: 3
