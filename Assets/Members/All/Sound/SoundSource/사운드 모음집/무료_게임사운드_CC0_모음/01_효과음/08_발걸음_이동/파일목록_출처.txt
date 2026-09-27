@@ -1,0 +1,394 @@
+﻿발걸음 · 이동 — 파일 목록과 출처
+========================================================
+음원 파일 수: 35개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] footstep00.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 00
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep00.ogg
+파일 정보: OGG / 0.25초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[002] footstep01.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 01
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep01.ogg
+파일 정보: OGG / 0.28초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[003] footstep02.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 02
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep02.ogg
+파일 정보: OGG / 0.24초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[004] footstep03.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 03
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep03.ogg
+파일 정보: OGG / 0.27초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[005] footstep04.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 04
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep04.ogg
+파일 정보: OGG / 0.32초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[006] footstep05.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 05
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep05.ogg
+파일 정보: OGG / 0.28초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[007] footstep06.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 06
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep06.ogg
+파일 정보: OGG / 0.24초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[008] footstep07.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 07
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep07.ogg
+파일 정보: OGG / 0.26초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[009] footstep08.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 08
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep08.ogg
+파일 정보: OGG / 0.26초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[010] footstep09.ogg
+한국어 설명 / 추천 장면: 발걸음 · 변형 09
+작품 / 팩: RPG Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/rpg-audio
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/rpg-audio/8e99002d76-1677590336/kenney_rpg-audio.zip
+ZIP 안의 원본 경로: Audio/footstep09.ogg
+파일 정보: OGG / 0.22초 / 48000 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[011] footstep_carpet_000.ogg
+한국어 설명 / 추천 장면: 카펫 위 발걸음 · 변형 000
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_carpet_000.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[012] footstep_carpet_001.ogg
+한국어 설명 / 추천 장면: 카펫 위 발걸음 · 변형 001
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_carpet_001.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[013] footstep_carpet_002.ogg
+한국어 설명 / 추천 장면: 카펫 위 발걸음 · 변형 002
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_carpet_002.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[014] footstep_carpet_003.ogg
+한국어 설명 / 추천 장면: 카펫 위 발걸음 · 변형 003
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_carpet_003.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[015] footstep_carpet_004.ogg
+한국어 설명 / 추천 장면: 카펫 위 발걸음 · 변형 004
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_carpet_004.ogg
+파일 정보: OGG / 0.14초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[016] footstep_concrete_000.ogg
+한국어 설명 / 추천 장면: 콘크리트 위 발걸음 · 변형 000
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_concrete_000.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[017] footstep_concrete_001.ogg
+한국어 설명 / 추천 장면: 콘크리트 위 발걸음 · 변형 001
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_concrete_001.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[018] footstep_concrete_002.ogg
+한국어 설명 / 추천 장면: 콘크리트 위 발걸음 · 변형 002
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_concrete_002.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[019] footstep_concrete_003.ogg
+한국어 설명 / 추천 장면: 콘크리트 위 발걸음 · 변형 003
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_concrete_003.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[020] footstep_concrete_004.ogg
+한국어 설명 / 추천 장면: 콘크리트 위 발걸음 · 변형 004
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_concrete_004.ogg
+파일 정보: OGG / 0.11초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[021] footstep_grass_000.ogg
+한국어 설명 / 추천 장면: 풀밭 위 발걸음 · 변형 000
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_grass_000.ogg
+파일 정보: OGG / 0.78초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[022] footstep_grass_001.ogg
+한국어 설명 / 추천 장면: 풀밭 위 발걸음 · 변형 001
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_grass_001.ogg
+파일 정보: OGG / 0.67초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[023] footstep_grass_002.ogg
+한국어 설명 / 추천 장면: 풀밭 위 발걸음 · 변형 002
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_grass_002.ogg
+파일 정보: OGG / 0.69초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[024] footstep_grass_003.ogg
+한국어 설명 / 추천 장면: 풀밭 위 발걸음 · 변형 003
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_grass_003.ogg
+파일 정보: OGG / 0.67초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[025] footstep_grass_004.ogg
+한국어 설명 / 추천 장면: 풀밭 위 발걸음 · 변형 004
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_grass_004.ogg
+파일 정보: OGG / 0.59초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[026] footstep_snow_000.ogg
+한국어 설명 / 추천 장면: 눈 위 발걸음 · 변형 000
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_snow_000.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[027] footstep_snow_001.ogg
+한국어 설명 / 추천 장면: 눈 위 발걸음 · 변형 001
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_snow_001.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[028] footstep_snow_002.ogg
+한국어 설명 / 추천 장면: 눈 위 발걸음 · 변형 002
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_snow_002.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[029] footstep_snow_003.ogg
+한국어 설명 / 추천 장면: 눈 위 발걸음 · 변형 003
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_snow_003.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[030] footstep_snow_004.ogg
+한국어 설명 / 추천 장면: 눈 위 발걸음 · 변형 004
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_snow_004.ogg
+파일 정보: OGG / 0.37초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[031] footstep_wood_000.ogg
+한국어 설명 / 추천 장면: 나무 바닥 위 발걸음 · 변형 000
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_wood_000.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[032] footstep_wood_001.ogg
+한국어 설명 / 추천 장면: 나무 바닥 위 발걸음 · 변형 001
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_wood_001.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[033] footstep_wood_002.ogg
+한국어 설명 / 추천 장면: 나무 바닥 위 발걸음 · 변형 002
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_wood_002.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[034] footstep_wood_003.ogg
+한국어 설명 / 추천 장면: 나무 바닥 위 발걸음 · 변형 003
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_wood_003.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+
+[035] footstep_wood_004.ogg
+한국어 설명 / 추천 장면: 나무 바닥 위 발걸음 · 변형 004
+작품 / 팩: Impact Sounds
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/impact-sounds
+원본 다운로드 링크: https://kenney.nl/media/pages/assets/impact-sounds/87b4ddecda-1677589768/kenney_impact-sounds.zip
+ZIP 안의 원본 경로: Audio/footstep_wood_004.ogg
+파일 정보: OGG / 0.25초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)

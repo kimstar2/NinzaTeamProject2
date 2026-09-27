@@ -1,0 +1,53 @@
+﻿평온 · 마을 · 휴식 — 파일 목록과 출처
+========================================================
+음원 파일 수: 4개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] calm_theme.ogg
+한국어 설명 / 추천 장면: 평온한 마을, 쉬는 장면, 가벼운 탐험
+작품 / 팩: calm theme
+제작자: pebonius
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/calm-music-0
+원본 다운로드 링크: https://opengameart.org/sites/default/files/calm_theme.ogg
+파일 정보: OGG / 1분 57.2초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 명시 없음
+
+[002] Revelation_0.mp3
+한국어 설명 / 추천 장면: 차분한 어쿠스틱, 명상, 치유, 휴식
+작품 / 팩: Revelation
+제작자: Indieteur
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/revelation
+원본 다운로드 링크: https://opengameart.org/sites/default/files/Revelation_0.mp3
+파일 정보: MP3 / 1분 24.8초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 명시 없음
+
+[003] Tavern_0.ogg
+한국어 설명 / 추천 장면: 여관, 마을, 휴식, 잔치
+작품 / 팩: Tavern
+제작자: yd
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/tavern-0
+원본 다운로드 링크: https://opengameart.org/sites/default/files/Tavern_0.ogg
+파일 정보: OGG / 1분 1.9초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 명시 없음
+
+[004] unknown_space_bassed_0.mp3
+한국어 설명 / 추천 장면: 기타 중심, 고독한 현실 세계 탐험
+작품 / 팩: In the middle of nowhere - real world
+제작자: Centurion_of_war
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/in-the-middle-of-nowhere
+원본 다운로드 링크: https://opengameart.org/sites/default/files/unknown_space_bassed_0.mp3
+파일 정보: MP3 / 1분 36.1초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 명시 없음

@@ -1,0 +1,46 @@
+﻿명랑 · 상점 · 캐주얼 — 파일 목록과 출처
+========================================================
+음원 파일 수: 3개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] Buy Something! (Radio Edit).ogg
+한국어 설명 / 추천 장면: 보사노바, 재즈, 상점, 엘리베이터; 일반 및 라디오 버전 / 라디오 스피커 질감 버전
+작품 / 팩: Shop Theme
+제작자: Cleyton Kauffman
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/shop-theme
+원본 다운로드 링크: https://opengameart.org/sites/default/files/shop_theme.zip
+ZIP 안의 원본 경로: shop_theme/Buy Something! (Radio Edit).ogg
+파일 정보: OGG / 1분 28.0초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 루프 가능 명시
+원문에 제시된 크레딧 문구: Music by Cleyton Kauffman - https://soundcloud.com/cleytonkauffman
+
+[002] Buy Something!.ogg
+한국어 설명 / 추천 장면: 보사노바, 재즈, 상점, 엘리베이터; 일반 및 라디오 버전 / 일반 버전
+작품 / 팩: Shop Theme
+제작자: Cleyton Kauffman
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/shop-theme
+원본 다운로드 링크: https://opengameart.org/sites/default/files/shop_theme.zip
+ZIP 안의 원본 경로: shop_theme/Buy Something!.ogg
+파일 정보: OGG / 1분 28.0초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 루프 가능 명시
+원문에 제시된 크레딧 문구: Music by Cleyton Kauffman - https://soundcloud.com/cleytonkauffman
+
+[003] othercenter.ogg
+한국어 설명 / 추천 장면: 발랄하고 신비한 상점, 꾸미기 화면
+작품 / 팩: Other Center
+제작자: zesona (Chris Murphy)
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/other-center
+원본 다운로드 링크: https://opengameart.org/sites/default/files/othercenter.ogg
+파일 정보: OGG / 37.61초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 루프 명시

@@ -1,0 +1,42 @@
+﻿전투 · 긴장 · 액션 — 파일 목록과 출처
+========================================================
+음원 파일 수: 3개
+확인일: 2026-09-27
+선정 조건: 공개 출처에서 CC0로 제공하는 무료 음원
+이용: CC0 기준 상업적 이용·수정·게임 포함 배포 가능, 출처 표기 의무 없음
+CC0 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+설명·분위기 분류는 제작자 설명, 태그, 파일명을 기준으로 정리했습니다.
+루프 여부는 원문 표시를 기록했으며, 게임에 적용할 때 연결 지점을 확인하세요.
+
+[001] Battle.mp3
+한국어 설명 / 추천 장면: 긴장감 있는 오케스트라 전투, 위기
+작품 / 팩: Battle Theme
+제작자: Wolfgang_ (Theodore Kerr)
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/battle-theme-0
+원본 다운로드 링크: https://opengameart.org/sites/default/files/Battle.mp3
+파일 정보: MP3 / 1분 56.1초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 명시 없음
+
+[002] hope_orchestral_battle_music_bpm165_0.ogg
+한국어 설명 / 추천 장면: 희망적인 판타지 전투, 165 BPM
+작품 / 팩: Hope (Orchestral battle music)
+제작자: MintoDog
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/hopeorchestral-battle-music
+원본 다운로드 링크: https://opengameart.org/sites/default/files/hope_orchestral_battle_music_bpm165_0.ogg
+파일 정보: OGG / 1분 9.8초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 루프 가능 명시
+
+[003] Juhani Junkala - Epic Boss Battle [Seamlessly Looping].wav
+한국어 설명 / 추천 장면: 웅장한 오케스트라, 대형 보스전
+작품 / 팩: Boss Battle Music
+제작자: SubspaceAudio (Juhani Junkala)
+출처 사이트: OpenGameArt 제작자 게시물
+출처 페이지: https://opengameart.org/content/boss-battle-music
+원본 다운로드 링크: https://opengameart.org/sites/default/files/Juhani%20Junkala%20-%20Epic%20Boss%20Battle%20%5BSeamlessly%20Looping%5D.wav
+파일 정보: WAV / 2분 3.4초 / 44100 Hz / 2채널
+라이선스: CC0 1.0 (여러 라이선스가 표시된 자료는 CC0를 선택)
+루프 정보: 제작자 이음새 없는 루프 명시

@@ -1,5 +1,6 @@
 ﻿using System;
 using DevLib.CoreLib.Runtime;
+using DevLib.ServiceLocator;
 using DevLib.HashDataSystem;
 using DevLib.ModuleSystem;
 using Members.KJY._01.Scripts.Agent.SkillSystem;
@@ -114,6 +115,8 @@ namespace Members.KJY._01.Scripts.Agent
             switch (statType)
             {
                 case ApplyStatType.Damage:
+                    if (ServiceLocator.TryGet<IDamageModifiers>(out var modifiers))
+                        value *= modifiers.GetIncomingMultiplier(AgentData);
                     ApplyDamage(Effects.ReduceDamage(value));
                     break;
                 case ApplyStatType.Heal:

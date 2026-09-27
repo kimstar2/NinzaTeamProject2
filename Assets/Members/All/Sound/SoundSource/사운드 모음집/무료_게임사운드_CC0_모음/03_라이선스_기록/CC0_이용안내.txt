@@ -1,0 +1,9 @@
+﻿CC0 1.0 공개 음원
+
+한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+라이선스 원문: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Kenney 공식 이용 안내: https://kenney.nl/support
+
+CC0 기준 상업적 사용, 수정 및 배포가 가능하며 출처 표기는 의무가 아닙니다.
+OpenGameArt에서 복수 라이선스가 제공된 경우 이 모음은 CC0를 선택했습니다.
+각 음원의 파일목록_출처.txt에 자료의 출처와 다운로드 링크를 기록했습니다.

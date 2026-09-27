@@ -1,0 +1,158 @@
+﻿주사위 · 굴림 · 리롤 — 파일 목록과 출처
+================================================================
+음원 10개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] dice-grab-1.ogg
+추천: 1순위
+한국어 설명: 주사위 집기 · 변형 1
+기획서 사용 장면: 주사위를 집거나 리롤을 준비하는 순간
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-grab-1.ogg
+파일 정보: OGG / 0.70초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[02] dice-grab-2.ogg
+추천: 1순위
+한국어 설명: 주사위 집기 · 변형 2
+기획서 사용 장면: 주사위를 집거나 리롤을 준비하는 순간
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-grab-2.ogg
+파일 정보: OGG / 0.83초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[03] dice-shake-1.ogg
+추천: 1순위
+한국어 설명: 주사위 흔들기 · 변형 1
+기획서 사용 장면: 플레이어의 주사위 흔들기와 재굴림 준비; 한 번에 한 변형만 선택
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-shake-1.ogg
+파일 정보: OGG / 1.48초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[04] dice-shake-2.ogg
+추천: 1순위
+한국어 설명: 주사위 흔들기 · 변형 2
+기획서 사용 장면: 플레이어의 주사위 흔들기와 재굴림 준비; 한 번에 한 변형만 선택
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-shake-2.ogg
+파일 정보: OGG / 1.38초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[05] dice-shake-3.ogg
+추천: 1순위
+한국어 설명: 주사위 흔들기 · 변형 3
+기획서 사용 장면: 플레이어의 주사위 흔들기와 재굴림 준비; 한 번에 한 변형만 선택
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-shake-3.ogg
+파일 정보: OGG / 1.52초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[06] dice-throw-1.ogg
+추천: 1순위
+한국어 설명: 여러 주사위 던지기 · 변형 1
+기획서 사용 장면: 여러 직업 주사위를 함께 굴리는 순간; 주사위마다 중첩하지 않고 한 묶음에 한 번 재생
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-throw-1.ogg
+파일 정보: OGG / 0.63초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[07] dice-throw-2.ogg
+추천: 1순위
+한국어 설명: 여러 주사위 던지기 · 변형 2
+기획서 사용 장면: 여러 직업 주사위를 함께 굴리는 순간; 주사위마다 중첩하지 않고 한 묶음에 한 번 재생
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-throw-2.ogg
+파일 정보: OGG / 0.40초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[08] dice-throw-3.ogg
+추천: 1순위
+한국어 설명: 여러 주사위 던지기 · 변형 3
+기획서 사용 장면: 여러 직업 주사위를 함께 굴리는 순간; 주사위마다 중첩하지 않고 한 묶음에 한 번 재생
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/dice-throw-3.ogg
+파일 정보: OGG / 0.57초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[09] die-throw-1.ogg
+추천: 1순위
+한국어 설명: 주사위 하나 던지기 · 변형 1
+기획서 사용 장면: 보스의 고유 주사위 또는 적 사망 뒤 보상 주사위 한 개를 굴리는 순간
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/die-throw-1.ogg
+파일 정보: OGG / 0.53초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시
+
+[10] die-throw-2.ogg
+추천: 1순위
+한국어 설명: 주사위 하나 던지기 · 변형 2
+기획서 사용 장면: 보스의 고유 주사위 또는 적 사망 뒤 보상 주사위 한 개를 굴리는 순간
+작품 / 원본 팩: Casino Audio
+제작자: Kenney
+출처 사이트: Kenney 공식 사이트
+출처 페이지: https://kenney.nl/assets/casino-audio
+다운로드 링크: https://kenney.nl/media/pages/assets/casino-audio/2472606a04-1721639069/kenney_casino-audio.zip
+압축 파일 안 원본 경로: Audio/die-throw-2.ogg
+파일 정보: OGG / 0.65초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+선정 근거: 원본 파일명·제작자 분류와 기획서 동작을 대응한 추천; 청음 평가는 미실시

@@ -1,0 +1,23 @@
+﻿보스전 — 파일 목록과 출처
+================================================================
+음원 1개 | 확인일 2026-09-27
+기준: 기획서의 주사위 턴제 RPG · 숲/화산 · 4개 직업
+우선순위는 제작자 설명·태그·원본 파일명 기반 추천입니다. 청음 평가는 수행하지 않았습니다.
+원본 음원을 편집하거나 생성하지 않았습니다. 분위기·사용 장면은 이 게임에 적용하기 위한 제안입니다.
+라이선스: 출처에 명시된 CC0 1.0 선택. 상업 이용·수정·배포 가능, 출처 표기 의무 없음.
+CC0 한국어 안내: https://creativecommons.org/publicdomain/zero/1.0/deed.ko
+
+[01] Juhani Junkala - Epic Boss Battle [Seamlessly Looping].wav
+추천: 1순위
+한국어 설명: Boss Battle Music
+기획서 사용 장면: 스테이지 보스와 최종 보스의 큰 전투. 새 JRPG 팩과 동일 작곡가로 통일감을 유지
+작품 / 원본 팩: Boss Battle Music
+제작자: SubspaceAudio (Juhani Junkala)
+출처 사이트: OpenGameArt 제작자 배포 페이지
+출처 페이지: https://opengameart.org/content/boss-battle-music
+다운로드 링크: https://opengameart.org/sites/default/files/Juhani%20Junkala%20-%20Epic%20Boss%20Battle%20%5BSeamlessly%20Looping%5D.wav
+파일 정보: WAV / 2분 3.4초 / 44100 Hz / 2채널
+수집: 기존 모음에서 재선별
+라이선스: CC0 1.0
+루프 정보: 기존 공식 게시물에서 Loops seamlessly 명시
+선정 근거: 제작자 설명에 epic boss battle, orchestral 직접 명시
