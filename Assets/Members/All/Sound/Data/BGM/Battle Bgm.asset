@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Battle Bgm
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 1
-  clip: {fileID: 8300000, guid: 82f031b8ce08f0e4b85a353623a492fb, type: 3}
+  clip: {fileID: 8300000, guid: 4c053d0b843c9d040887963ef98f3091, type: 3}
   isLoop: 1
   randomizePitch: 0
   randomPitchModifier: 0.1
   volume: 0.5
   pitch: 1
   startTime: 0
-  endTime: 47
+  endTime: 115.11429

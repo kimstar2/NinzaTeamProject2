@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecd58840ec7d4811918e57d78e343885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   windowRoot: {fileID: 4000}
   windowPanel: {fileID: 2001}
   windowGroup: {fileID: 2005}
@@ -2487,6 +2488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94405051dcb947879d4076854541ca25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   modeDropdown: {fileID: 11204}
   resolutionDropdown: {fileID: 12204}
 --- !u!1 &6100

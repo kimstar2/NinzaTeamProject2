@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f93cd69d21c064a93d8a2374408c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.ArrowShotSkill
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <ActionSeq>k__BackingField: {fileID: 8307590276195672645}
   <ReturnSeq>k__BackingField: {fileID: 3320589511140510947}
   castPosition: {fileID: 2781498131626181108}

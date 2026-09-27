@@ -161,6 +161,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         
         public override void ApplyStat()
         {
+            PlaySkillSound();
             // 실제 전투에서는 스킬 데이터의 수치를 사용 (_target은 지정되지 않음)
             if (Executor != null) { ApplyConfiguredStats(Executor.Target); return; }
             foreach (var applyStat in applyStats)

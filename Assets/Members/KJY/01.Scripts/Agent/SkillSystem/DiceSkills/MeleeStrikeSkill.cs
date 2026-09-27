@@ -32,6 +32,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
+            PlaySkillSound();
             PlayParticle(impactParticle, Executor.Target.MyAgent.transform.position + effectOffset);
             ApplyDamage(_hitWeight);
         }

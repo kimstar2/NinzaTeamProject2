@@ -3,15 +3,26 @@
 namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
 {
     using DevLib.ServiceLocator;
+    using DevLib.SoundSystem.Runtime;
 
     public abstract class AbstractSkillLogic : MonoBehaviour
     {
+        [Header("Sound")]
+        [SerializeField] private SoundClipSO skillSound;
+
         public SkillLogicExecutor Executor {get; private set;}
         public float BaseLevel {get; private set;}
         public virtual void Init(SkillLogicExecutor executor , float baseLevel)
         {
             Executor = executor;
             BaseLevel = baseLevel;
+        }
+
+        // Call at the skill's cast or impact timing, or connect to a UnityEvent.
+        public void PlaySkillSound()
+        {
+            if (skillSound == null) return;
+            ServiceLocator.Get<IAudioService>().Play(skillSound);
         }
 
         protected float GetStat(ApplyStatType statType)

@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f8144a608625d4ba55ae5065c55d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.HolyStrikeSkill
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <ActionSeq>k__BackingField: {fileID: 8104565948022036194}
   <ReturnSeq>k__BackingField: {fileID: 547590135702557386}
   castPosition: {fileID: 1351643545422977396}

@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcc79b4d16f97446b14c8daca29c2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.FireballSkill
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   <ActionSeq>k__BackingField: {fileID: 127280751601313549}
   <ReturnSeq>k__BackingField: {fileID: 8576965307118141098}
   castPosition: {fileID: 7068114218579385320}

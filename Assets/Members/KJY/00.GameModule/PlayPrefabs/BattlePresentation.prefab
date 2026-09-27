@@ -615,6 +615,7 @@ GameObject:
   - component: {fileID: 7099172623647841508}
   - component: {fileID: 1513531672765694153}
   - component: {fileID: 5075854440957637654}
+  - component: {fileID: 900000000000000300}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -14998,6 +14999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb918b44b154f20880179c8a7471aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Battle.BattleResultReceiver
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   enemyRollManager: {fileID: 0}
   battleManager: {fileID: 0}
@@ -20310,3 +20312,16 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &900000000000000300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794441571089462752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}

@@ -6048,6 +6048,7 @@ GameObject:
   - component: {fileID: 182934098}
   - component: {fileID: 182934097}
   - component: {fileID: 182934096}
+  - component: {fileID: 900000000000000300}
   m_Layer: 0
   m_Name: Choose Forge
   m_TagString: Untagged
@@ -18791,6 +18792,7 @@ GameObject:
   - component: {fileID: 489854663}
   - component: {fileID: 489854662}
   - component: {fileID: 489854661}
+  - component: {fileID: 900000000000000301}
   m_Layer: 0
   m_Name: Continue
   m_TagString: Untagged
@@ -20624,6 +20626,7 @@ GameObject:
   - component: {fileID: 620672425}
   - component: {fileID: 620672422}
   - component: {fileID: 620672421}
+  - component: {fileID: 900000000000000302}
   m_Layer: 0
   m_Name: Socket 1
   m_TagString: Untagged
@@ -22174,6 +22177,7 @@ GameObject:
   - component: {fileID: 761436583}
   - component: {fileID: 761436582}
   - component: {fileID: 761436581}
+  - component: {fileID: 900000000000000303}
   m_Layer: 0
   m_Name: Choose Rest
   m_TagString: Untagged
@@ -32057,6 +32061,7 @@ GameObject:
   - component: {fileID: 1344874908}
   - component: {fileID: 1344874907}
   - component: {fileID: 1344874906}
+  - component: {fileID: 900000000000000304}
   m_Layer: 0
   m_Name: Close
   m_TagString: Untagged
@@ -33959,6 +33964,7 @@ GameObject:
   - component: {fileID: 1466031531}
   - component: {fileID: 1466031528}
   - component: {fileID: 1466031527}
+  - component: {fileID: 900000000000000305}
   m_Layer: 0
   m_Name: Forge
   m_TagString: Untagged
@@ -35548,6 +35554,7 @@ GameObject:
   - component: {fileID: 1662925064}
   - component: {fileID: 1662925061}
   - component: {fileID: 1662925060}
+  - component: {fileID: 900000000000000306}
   m_Layer: 0
   m_Name: Socket 2
   m_TagString: Untagged
@@ -37794,6 +37801,7 @@ GameObject:
   - component: {fileID: 1797050914}
   - component: {fileID: 1797050913}
   - component: {fileID: 1797050912}
+  - component: {fileID: 900000000000000307}
   m_Layer: 0
   m_Name: Close
   m_TagString: Untagged
@@ -39604,6 +39612,7 @@ GameObject:
   - component: {fileID: 2061070126}
   - component: {fileID: 2061070123}
   - component: {fileID: 2061070122}
+  - component: {fileID: 900000000000000308}
   m_Layer: 0
   m_Name: Socket 0
   m_TagString: Untagged
@@ -40962,6 +40971,7 @@ GameObject:
   - component: {fileID: 3683545211868793224}
   - component: {fileID: 3590206298979257009}
   - component: {fileID: 976345044966103000}
+  - component: {fileID: 900000000000000310}
   m_Layer: 0
   m_Name: Selected Face
   m_TagString: Untagged
@@ -48904,6 +48914,7 @@ GameObject:
   - component: {fileID: 929494438756840025}
   - component: {fileID: 1020723947094536544}
   - component: {fileID: 3635533255213607945}
+  - component: {fileID: 900000000000000309}
   m_Layer: 0
   m_Name: Forged Face
   m_TagString: Untagged
@@ -59434,6 +59445,7 @@ GameObject:
   - component: {fileID: 8891736604868649795}
   - component: {fileID: 8766720758828769402}
   - component: {fileID: 5041765675172216083}
+  - component: {fileID: 900000000000000312}
   m_Layer: 0
   m_Name: Selected Face
   m_TagString: Untagged
@@ -59795,6 +59807,7 @@ GameObject:
   - component: {fileID: 7092307480098098726}
   - component: {fileID: 6962738001568288031}
   - component: {fileID: 6701013662594420854}
+  - component: {fileID: 900000000000000311}
   m_Layer: 0
   m_Name: Selected Face
   m_TagString: Untagged
@@ -67428,6 +67441,175 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.SceneBgm
   bgm: {fileID: 11400000, guid: 2cb2179d2d5c65342ad6788d342b90b8, type: 2}
+--- !u!114 &900000000000000300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182934094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489854659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620672419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761436579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344874904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466031525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662925058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797050910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061070120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4158848830802702068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454754044116833573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6286454080102568587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635344446654447598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

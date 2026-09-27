@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6165a57f074dec9c74b87f4274cabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   targetPos: {x: 3, y: 0, z: 0}
   solar:
     obj: {fileID: 222218321184270903}

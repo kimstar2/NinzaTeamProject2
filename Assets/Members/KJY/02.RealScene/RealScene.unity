@@ -10953,6 +10953,7 @@ GameObject:
   - component: {fileID: 697007574}
   - component: {fileID: 697007577}
   - component: {fileID: 697007578}
+  - component: {fileID: 900000000000000300}
   m_Layer: 5
   m_Name: RollButton
   m_TagString: Untagged
@@ -15087,6 +15088,7 @@ GameObject:
   - component: {fileID: 1078546847}
   - component: {fileID: 1078546850}
   - component: {fileID: 1078546851}
+  - component: {fileID: 900000000000000301}
   m_Layer: 5
   m_Name: BattleStartButton
   m_TagString: Untagged
@@ -34218,6 +34220,7 @@ GameObject:
   - component: {fileID: 109811149864382699}
   - component: {fileID: 5973380768635092765}
   - component: {fileID: 8606689184299167227}
+  - component: {fileID: 900000000000000302}
   m_Layer: 5
   m_Name: Help
   m_TagString: Untagged
@@ -35171,6 +35174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb918b44b154f20880179c8a7471aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Battle.BattleResultReceiver
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!224 &1038402217227609093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35293,6 +35297,7 @@ GameObject:
   - component: {fileID: 7980198853118913408}
   - component: {fileID: 7238439437697909594}
   - component: {fileID: 7279279060635753629}
+  - component: {fileID: 900000000000000303}
   m_Layer: 5
   m_Name: Skip
   m_TagString: Untagged
@@ -35963,6 +35968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ca366ed95bf5647af36d9e9e797c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.BattleTutorial
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   rollManager: {fileID: 1819734133}
   dicePointers:
@@ -37991,6 +37997,58 @@ MonoBehaviour:
   m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.SceneBgm
   bgm: {fileID: 11400000, guid: 764e4b85c5050214d96f004ea35ce2d8, type: 2}
+--- !u!114 &900000000000000300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697007572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078546845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140129914475009598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740536732371435643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

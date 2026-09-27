@@ -16237,6 +16237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f925cbd638440c7be1d274db628331a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct.CombatInstinct
+  skillSound: {fileID: 11400000, guid: 46405b7f894a3fb49a15f8c94c2017c0, type: 2}
   attacker: {fileID: 865880950}
   target: {fileID: 361139839}
   targetCam: {fileID: 979106731}

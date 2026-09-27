@@ -69,6 +69,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             PoolingParticle particle =_pool.Pop(PoolParticle.ItemName) as PoolingParticle;
             if (particle == null) return;
+            PlaySkillSound();
             
             particle.GameObject.SetActive(true);
             particle.OnParticleEnd += ReturnToPool;
