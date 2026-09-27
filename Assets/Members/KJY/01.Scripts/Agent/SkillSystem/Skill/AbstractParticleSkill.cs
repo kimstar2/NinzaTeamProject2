@@ -175,12 +175,20 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             return Mathf.Max(0f, GetStat(ApplyStatType.Damage)) * multiplier * mark;
         }
 
-        protected void ApplyDamage()
+        // scale은 다단 타격에서 타격마다 비중을 다르게 줄 때 사용
+        protected void ApplyDamage(float scale = 1f)
         {
+            if (Executor.IsMissed) return; // 빗나감: 피해, 흡혈, 부가효과 모두 없음
+            var data = Executor.SkillData;
             var targetHealth = Executor.Target.MyAgent.HealthModule;
             float healthBefore = targetHealth.CurrentHealth;
-            float damage = GetDamage();
+            float damage = GetDamage() * Mathf.Max(0f, scale);
+            if (damage > 0f && data.BonusVsStatus != StatusType.None && Executor.Target.Effects.HasStatus(data.BonusVsStatus))
+                damage += data.BonusDamage * Mathf.Max(0f, scale);
             if (damage > 0f) Executor.Target.ApplyStat(ApplyStatType.Damage, damage);
+            if (data.ExecuteThreshold > 0f && !Executor.Target.IsDead &&
+                targetHealth.CurrentHealth <= targetHealth.DefaultMaxHealth * data.ExecuteThreshold)
+                Executor.Target.ApplyDamage(targetHealth.CurrentHealth); // 보호로 줄지 않게 직접 처치
             Executor.ApplySynergy();
 
             // 남은 체력보다 큰 피해를 줘도 실제 깎은 양만 흡수한다.

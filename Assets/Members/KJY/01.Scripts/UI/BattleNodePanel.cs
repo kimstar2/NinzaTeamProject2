@@ -53,7 +53,8 @@ namespace Members.KJY._01.Scripts.UI
             {
                 var enemy = data.enemies[i];
                 float rankHealth = i != 0 ? 1f : data.rank == EnemyRank.Boss ? 3f : data.rank == EnemyRank.Elite ? 1.5f : 1f;
-                text.AppendLine($"{enemy.EnemyName}   ·   체력 {enemy.EncounterHealth * data.healthMultiplier * rankHealth:0}");
+                float health = enemy.FixedHealth > 0f ? enemy.FixedHealth : enemy.EncounterHealth * data.healthMultiplier * rankHealth;
+                text.AppendLine($"{enemy.EnemyName}   ·   체력 {health:0}");
             }
             description.text = text.ToString();
             reward.text = $"획득 골드 {data.gold} G\n적을 처치하면 주사위 면을 획득합니다.";

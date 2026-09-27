@@ -23,6 +23,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public AbstractSelector Target { get; private set; }
         public SkillDataSO SkillData { get; private set; }
         public float PowerMultiplier { get; private set; } = 1f;
+        public bool IsMissed { get; private set; } // 빗나감 상태면 이번 시전의 피해가 전부 빗나감
         private bool _synergyApplied;
         
         public void SkillFinished() => OnSkillFinished?.Invoke();
@@ -42,7 +43,9 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             bool hasPower = skillData.GetScaledStat(ApplyStatType.Damage, 1f) > 0f ||
                 skillData.GetScaledStat(ApplyStatType.Heal, 1f) > 0f;
             PowerMultiplier = hasPower ? Attacker.Effects.UseEmpower() : 1f;
+            IsMissed = skillData.GetScaledStat(ApplyStatType.Damage, 1f) > 0f && Attacker.Effects.RollMiss();
             _synergyApplied = false;
+            PayHealthCost();
             
             Attacker.MyAgent.AnimTrigger.OnAnimFinished -= HandleAnimFinished;
             Attacker.MyAgent.AnimTrigger.OnAnimFinished += HandleAnimFinished;        
@@ -58,6 +61,14 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             OnSkillExecute?.Invoke();
         }
 
+        private void PayHealthCost()
+        {
+            if (SkillData.HealthCost <= 0f) return;
+            var health = Attacker.MyAgent.HealthModule;
+            float cost = Mathf.Min(SkillData.HealthCost, health.CurrentHealth - 1f); // 소모로 죽지는 않게 1은 남김
+            if (cost > 0f) Attacker.ApplyDamage(cost);
+        }
+
         private void HandleAttack()
         {
             Attacker.MyAgent.AnimTrigger.OnAttack -= HandleAttack;
@@ -68,8 +79,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 
         public void ApplySynergy()
         {
-            if (_synergyApplied || Target == null || Target.IsDead) return;
+            if (_synergyApplied || Target == null || Target.IsDead || IsMissed) return;
             _synergyApplied = true;
+            Target.Effects.AddStatus(SkillData.Status, SkillData.StatusDamage, SkillData.StatusTurns);
+            Target.Effects.AddMiss(SkillData.MissChance, SkillData.MissTurns);
+            Target.Effects.AddStun(SkillData.StunTurns);
             switch (SkillData.Synergy)
             {
                 case SkillDataSO.SynergyType.Mark: Target.Effects.Mark(); break;

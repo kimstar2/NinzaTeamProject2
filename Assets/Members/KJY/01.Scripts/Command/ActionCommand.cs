@@ -39,7 +39,9 @@ namespace Members.KJY._01.Scripts.Command
 
         private bool TryExecuteSkill()
         {
-            if (Attacker == null || TargetSelector == null || Attacker.IsDead || TargetSelector.IsDead)
+            // 행동 불가 상태면 이번 공격은 넘어간다
+            if (Attacker == null || TargetSelector == null || Attacker.IsDead || TargetSelector.IsDead ||
+                Attacker.Effects.IsStunned)
             {
                 MoveNext();
                 return true;

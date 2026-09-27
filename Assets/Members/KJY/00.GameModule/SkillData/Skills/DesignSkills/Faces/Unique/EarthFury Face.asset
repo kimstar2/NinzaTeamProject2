@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3a4454c82445db912f6c8c3fc0d298, type: 3}
+  m_Name: EarthFury Face
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataSO
+  <MainName>k__BackingField: "대지의 분노"
+  <Description>k__BackingField: 
+  <DiceGrade>k__BackingField: {fileID: 11400000, guid: ccb8c2c2e3f08bf4f83e08098c1a0a8a, type: 2}
+  <Icon>k__BackingField: {fileID: -1250503121960047995, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDataStructs>k__BackingField:
+  - <AgentAttackType>k__BackingField: 4
+    <SkillData>k__BackingField: {fileID: 11400000, guid: 54bf769abf5a3ee7d44e01b398afb447, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0

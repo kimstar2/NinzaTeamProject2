@@ -12,20 +12,173 @@
   <component name="ChangeListManager">
     <list default="true" id="d896f632-54cd-40b2-926d-f61571392764" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NinzaTeamProject2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/08.fonts/MaruMinyaHangul 1 SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/08.fonts/MaruMinyaHangul 1 SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/BattleNode.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/BattleNode.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Data/PoolList.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Data/PoolList.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/BattleNode.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/BattleNode.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Node.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Prefabs/Node.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scene/CJY.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/BattleNodeBT.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/BattleNodeBT.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeBT.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeBT.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeMaker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/CJY/Scripts/NodeMaker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/DiceData/Dice data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/ArcaneBurst Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/ArcaneBurst Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/ArcaneVolley Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/ArcaneVolley Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/ArrowShot Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/ArrowShot Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/DoubleShot Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/DoubleShot Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Fireball Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Fireball Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/FlameArrow Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/FlameArrow Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/FrostBurst Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/FrostBurst Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/GreaterHeal Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/GreaterHeal Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/HeavyStrike Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/HeavyStrike Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/HolyHeal Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/HolyHeal Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/HolyStrike Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/HolyStrike Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Mark Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Mark Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/MeleeStrike Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/MeleeStrike Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/NecroRain Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/NecroRain Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Ambush Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Ambush Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/BloodSiphon Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/BloodSiphon Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Emergency Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Emergency Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Execution Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Execution Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Frenzy Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Pack02/Frenzy Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/PowerShot Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/PowerShot Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/RadiantStrike Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/RadiantStrike Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Renew Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Renew Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Support Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/Support Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/TwinSlash Face.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/DiceData/SkillFaces/TwinSlash Face.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Archer Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Archer Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Armored Axeman Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Armored Axeman Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Armored Orc Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Armored Orc Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Armored Skeleton Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Armored Skeleton Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Bat Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Bat Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Elite Orc Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Elite Orc Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Greatsword Skeleton Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Greatsword Skeleton Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Knight Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Knight Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Knight Templar Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Knight Templar Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Lancer Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Lancer Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Necromancer Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Necromancer Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Orc Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Orc Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Orc rider Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Orc rider Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Black Knight_A Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Black Knight_A Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Black Knight_B Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Black Knight_B Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Black Knight_C Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Black Knight_C Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Blood Monster_A Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Blood Monster_A Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Blood Monster_B Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Blood Monster_B Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_A Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_A Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_B Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_B Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_C Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_C Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_D Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_D Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_E Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demon_E Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demoness_A Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demoness_A Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demoness_B Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Demoness_B Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Eyeball Monster Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Eyeball Monster Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Flame Golem Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Flame Golem Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Ghostfire Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Ghostfire Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Hellbat Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Hellbat Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Hellhound Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Hellhound Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Lava Slime Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Lava Slime Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Minotaur Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Minotaur Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Warlock Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Pack02/Warlock Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Priest Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Priest Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Skeleton Archer Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Skeleton Archer Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Skeleton Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Skeleton Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Slime Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Slime Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Soldier Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Soldier Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Swordsman Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Swordsman Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Werebear Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Werebear Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Werewolf Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Werewolf Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Wizard Enemy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Characters/Wizard Enemy.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Stage 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Stage 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Stage 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/EnemyData/Stage 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Dealer/Dealer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Dealer/Dealer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Healer/Healer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Healer/Healer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Mage/Mage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Mage/Mage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Tanker/Tanker.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Player/PlayerData/Tanker/Tanker.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/DesignSkills.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/DesignSkills.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/BeastFeast Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/BeastFeast Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/EmergencyRation Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/EmergencyRation Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/PrimevalWrath Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/PrimevalWrath Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/ThornArmor Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/ThornArmor Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/ToxicZone Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/ToxicZone Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/VenomBurst Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/VenomBurst Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/VineBind Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Forest/VineBind Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/CursedEmber Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/CursedEmber Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/ForbiddenRite Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/ForbiddenRite Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/HexBarrier Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/HexBarrier Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/OminousWhisper Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/OminousWhisper Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/TwilightBurst Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/TwilightBurst Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/Wound Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/TwilightShaman/Wound Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/BlastMark Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/BlastMark Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Cataclysm Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Cataclysm Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Eruption Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Eruption Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/LavaArmor Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/LavaArmor Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/LavaSmash Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/LavaSmash Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Magma Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Magma Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Overheat Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/Volcano/Overheat Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/Clairvoyance Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/Clairvoyance Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/CrescentSlash Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/CrescentSlash Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/DeathMark Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/DeathMark Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/Rage Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/Rage Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/ScytheAfterimage Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/ScytheAfterimage Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/SoulSlash Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Monster/WraithReaper/SoulSlash Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/BattleCry Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/BattleCry Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/HealingWave Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/HealingWave Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/LifeDrain Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/LifeDrain Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/RegenLight Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Healer/RegenLight Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/FrostZone Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/FrostZone Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/ManaBrand Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/ManaBrand Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/Ray Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/Ray Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/Shock Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Mage/Shock Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/AbsoluteDefense Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/AbsoluteDefense Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/EarthFury Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/EarthFury Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/Nullify Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/Nullify Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/Overwhelm Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/Overwhelm Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/Pursuit Skill Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Tank/Pursuit Skill Data.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/Barrage Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/Barrage Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/CombatInstinct Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/CombatInstinct Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/CriticalSlash Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/CriticalSlash Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/Crush Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/Crush Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/Execution Skill Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/SkillData/Skills/DesignSkills/Unique/Warrior/Execution Skill Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Submission/RunInventory.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/00.GameModule/Submission/RunInventory.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentAttackType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/AgentAttackType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/CombatEffects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/CombatEffects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Enemy/EnemyDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/Dice/PlayerDice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/Dice/PlayerDice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/Dice/PlayerDiceRollManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/Player/Dice/PlayerDiceRollManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/DiceSkills/MeleeStrikeSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/DiceSkills/MeleeStrikeSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill/AbstractParticleSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill/AbstractParticleSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill/AbstractSkillLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/Skill/AbstractSkillLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillLogicExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Agent/SkillSystem/SkillLogicExecutor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/ActionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Command/ActionCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/AbstractDice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/AbstractDice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleRewardItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/BattleRewardItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/DiceBattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Battle/DiceBattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceGradeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/Dice/Data/DiceGradeSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/StageDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/StageDataSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/BattleNodePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/BattleNodePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/DiceLoadoutPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/01.Scripts/UI/DiceLoadoutPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/KJY/02.RealScene/RealScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/LYW/Scripts/UpgradeManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/Combat Instinct/CombatInstinct.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/Combat Instinct/CombatInstinct.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/SolarEclipse/SolarEclipse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/Code/Unit_Logic/Runtime/Skill/Logics/SolarEclipse/SolarEclipse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/SolarEclipse Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Members/PSW/GameModule/Skills/SolarEclipse Data.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,29 +306,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Sunfish",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Sunfish&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.11f1\Editor\Unity.exe" />
@@ -256,7 +409,7 @@
       <workItem from="1790228882373" duration="27055000" />
       <workItem from="1790310290567" duration="12012000" />
       <workItem from="1790394335698" duration="19308000" />
-      <workItem from="1790497904585" duration="3773000" />
+      <workItem from="1790497904585" duration="5573000" />
     </task>
     <servers />
   </component>

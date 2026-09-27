@@ -5,6 +5,7 @@ namespace Members.KJY._01.Scripts.Agent
         Archer = 0,
         Melee = 1,
         Magic = 2,
-        Healer = 3
+        Healer = 3,
+        Tank = 4
     }
 }

@@ -17,8 +17,20 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField] private EventChannelSO eventChannel;
         [Header("제련")]
         [SerializeField, Min(1)] private int forgeBaseCost = 20;
+        [Tooltip("재료 2개가 모두 기준 면보다 낮은 등급일 때 오르는 레벨")]
         [SerializeField, Min(0.1f)] private float forgeLevelGain = 0.5f;
+        [Tooltip("재료 등급이 섞였거나, 등급 업 조건인데 더 올릴 등급이 없을 때 오르는 레벨")]
+        [SerializeField, Min(0.1f)] private float mixedLevelGain = 1f;
         [SerializeField, Min(1)] private float forgeMaxLevel = 3f;
+        [Header("등급 업")]
+        [Tooltip("등급 업 비용 = 제련 비용 × 이 값")]
+        [SerializeField, Min(1f)] private float gradeUpCostMultiplier = 1.35f;
+        [Tooltip("등급 업 결과로 나올 수 있는 면 목록")]
+        [SerializeField] private DiceFacePoolSO gradeUpPool;
+        [Tooltip("재료 강함도를 결과에 반영하는 폭. 작을수록 재료와 비슷한 강함도의 스킬만 나온다")]
+        [SerializeField, Range(0.05f, 1f)] private float gradeUpSpread = 0.3f;
+        private readonly List<DiceDataSO> _candidates = new();
+        private readonly List<float> _weights = new();
         private readonly List<RewardDiceFragmentSO> _ownedRewards = new();
         private readonly List<RewardDiceFragmentSO> _pendingRewards = new();
         private readonly List<RewardDiceFragmentSO> _encounterRewards = new();
@@ -54,34 +66,176 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         }
 
         public int GetForgeCost(float level) => Mathf.CeilToInt(Mathf.Max(1, forgeBaseCost) * Mathf.Max(1, level));
-        public float GetForgedLevel(float level) => Mathf.Max(level, Mathf.Min(forgeMaxLevel, level + Mathf.Max(0.1f, forgeLevelGain)));
+
+        public enum ForgeMode { None, Enhance, GradeUp }
+
+        // 기준 면(faces[0])과 재료 2개로 어떤 제련이 될지 미리 계산한 결과
+        public readonly struct ForgePlan
+        {
+            public readonly ForgeMode Mode;
+            public readonly int Cost;
+            public readonly float ResultLevel;
+            public readonly DiceGrade ResultGrade;
+            public readonly string Message;
+
+            public ForgePlan(ForgeMode mode, int cost, float resultLevel, DiceGrade resultGrade, string message)
+            {
+                Mode = mode;
+                Cost = cost;
+                ResultLevel = resultLevel;
+                ResultGrade = resultGrade;
+                Message = message;
+            }
+
+            public static ForgePlan Invalid(string message) => new(ForgeMode.None, 0, 0f, DiceGrade.Common, message);
+        }
+
+        private static DiceGrade GradeOf(DiceDataSO face) =>
+            face != null && face.DiceGrade != null ? face.DiceGrade.Grade : DiceGrade.Common;
+
+        // 재료 2개가 모두 낮은 등급이면 강화, 모두 같거나 높은 등급이면 등급 업, 섞이면 크게 강화
+        public ForgePlan GetForgePlan(IReadOnlyList<RewardDiceFragmentSO> faces)
+        {
+            const string selectMessage = "기준 면과 소모할 재료 면 2개를 선택하세요.";
+            if (faces == null || faces.Count != 3) return ForgePlan.Invalid(selectMessage);
+            for (int i = 0; i < faces.Count; i++)
+            {
+                if (faces[i] == null || faces[i].DiceData == null || !DiceFragments.Contains(faces[i]))
+                    return ForgePlan.Invalid(selectMessage);
+                for (int j = 0; j < i; j++)
+                    if (faces[i] == faces[j]) return ForgePlan.Invalid(selectMessage);
+            }
+
+            var target = faces[0];
+            DiceGrade baseGrade = GradeOf(target.DiceData);
+            int lowerCount = 0;
+            for (int i = 1; i < faces.Count; i++)
+                if (GradeOf(faces[i].DiceData) < baseGrade) lowerCount++;
+
+            if (lowerCount == 2) return Enhance(target, forgeLevelGain, "재료 면 2개가 소모되고 레벨이 오릅니다.");
+            if (lowerCount == 1) return Enhance(target, mixedLevelGain, "재료 등급이 섞여 있어 레벨이 더 많이 오릅니다.");
+            if (baseGrade == DiceGrade.Rare) return Enhance(target, mixedLevelGain, "전설 면은 더 올릴 등급이 없어 레벨이 오릅니다.");
+
+            DiceGrade nextGrade = baseGrade + 1;
+            if (GetGradeUpCandidates(target.DiceData, nextGrade).Count == 0)
+                return Enhance(target, mixedLevelGain, "올라갈 수 있는 상위 등급 스킬이 없어 레벨이 오릅니다.");
+            int cost = Mathf.CeilToInt(GetForgeCost(target.Level) * gradeUpCostMultiplier);
+            return new ForgePlan(ForgeMode.GradeUp, cost, 1f, nextGrade,
+                $"재료 면 2개가 소모되고 {DiceGradeSO.GetName(nextGrade)} 등급 스킬로 바뀝니다.");
+        }
+
+        private ForgePlan Enhance(RewardDiceFragmentSO target, float gain, string message)
+        {
+            if (target.Level >= forgeMaxLevel)
+                return ForgePlan.Invalid($"기준 면이 최대 제련 레벨(Lv.{forgeMaxLevel:0.#})에 도달했습니다.");
+            float level = Mathf.Min(forgeMaxLevel, target.Level + Mathf.Max(0.1f, gain));
+            return new ForgePlan(ForgeMode.Enhance, GetForgeCost(target.Level), level, GradeOf(target.DiceData),
+                $"{message} (Lv.{target.Level:0.#} → Lv.{level:0.#})");
+        }
+
+        // 기준 면을 쓸 수 있던 직업을 모두 유지하는 스킬을 우선, 없으면 한 직업이라도 겹치는 스킬
+        private List<DiceDataSO> GetGradeUpCandidates(DiceDataSO baseFace, DiceGrade grade)
+        {
+            _candidates.Clear();
+            if (gradeUpPool == null) return _candidates;
+            var baseTypes = baseFace.GetUsableTypes();
+            for (int pass = 0; pass < 2 && _candidates.Count == 0; pass++)
+            {
+                foreach (var face in gradeUpPool.Faces)
+                {
+                    if (face == null || face == baseFace || GradeOf(face) != grade) continue;
+                    var types = face.GetUsableTypes();
+                    if (types.Count == 0) continue;
+                    bool keep = pass == 0 ? baseTypes.TrueForAll(types.Contains) : baseTypes.Exists(types.Contains);
+                    if (keep) _candidates.Add(face);
+                }
+            }
+            return _candidates;
+        }
+
+        // 재료가 좋을수록(자기 등급 안에서 강함도가 높거나, 기준보다 높은 등급일수록) 강함도 높은 스킬이 잘 나온다
+        private DiceDataSO PickGradeUpResult(IReadOnlyList<RewardDiceFragmentSO> faces, DiceGrade grade)
+        {
+            var candidates = GetGradeUpCandidates(faces[0].DiceData, grade);
+            if (candidates.Count == 0) return null;
+
+            DiceGrade baseGrade = GradeOf(faces[0].DiceData);
+            float score = 0f;
+            for (int i = 1; i < faces.Count; i++)
+            {
+                var material = faces[i].DiceData;
+                score += GradeOf(material) > baseGrade ? 1f : GetStrengthPercentile(material.Strength, GradeOf(material));
+            }
+            score /= faces.Count - 1;
+
+            int min = int.MaxValue, max = int.MinValue;
+            foreach (var face in candidates)
+            {
+                min = Mathf.Min(min, face.Strength);
+                max = Mathf.Max(max, face.Strength);
+            }
+
+            float total = 0f;
+            _weights.Clear();
+            foreach (var face in candidates)
+            {
+                float percentile = max > min ? (face.Strength - min) / (float)(max - min) : 0.5f;
+                float diff = (percentile - score) / Mathf.Max(0.05f, gradeUpSpread);
+                float weight = Mathf.Exp(-diff * diff) + 0.02f; // 멀리 떨어진 강함도도 아주 낮은 확률로는 나온다
+                _weights.Add(weight);
+                total += weight;
+            }
+
+            float pick = Random.value * total;
+            for (int i = 0; i < candidates.Count; i++)
+            {
+                pick -= _weights[i];
+                if (pick < 0f) return candidates[i];
+            }
+            return candidates[candidates.Count - 1];
+        }
+
+        // 같은 등급의 면들 사이에서 이 강함도가 어느 위치인지 (0 = 가장 약함, 1 = 가장 강함)
+        private float GetStrengthPercentile(int strength, DiceGrade grade)
+        {
+            int min = int.MaxValue, max = int.MinValue;
+            if (gradeUpPool != null)
+                foreach (var face in gradeUpPool.Faces)
+                {
+                    if (face == null || GradeOf(face) != grade) continue;
+                    min = Mathf.Min(min, face.Strength);
+                    max = Mathf.Max(max, face.Strength);
+                }
+            return min < max ? Mathf.Clamp01((strength - min) / (float)(max - min)) : 0.5f;
+        }
 
         public bool CanForge(IReadOnlyList<RewardDiceFragmentSO> faces, out string reason)
         {
-            reason = "기준 면과 소모할 재료 면 2개를 선택하세요.";
-            if (faces == null || faces.Count != 3) return false;
-            if (faces[0] != null && faces[0].Level >= forgeMaxLevel)
-            {
-                reason = $"기준 면이 최대 제련 레벨(Lv.{forgeMaxLevel:0.#})에 도달했습니다.";
-                return false;
-            }
-            for (int i = 0; i < faces.Count; i++)
-            {
-                if (faces[i] == null || faces[i].DiceData == null || !DiceFragments.Contains(faces[i])) return false;
-                for (int j = 0; j < i; j++)
-                    if (faces[i] == faces[j]) return false;
-            }
-            int cost = GetForgeCost(faces[0].Level);
-            reason = Gold < cost ? $"골드가 {cost - Gold} G 부족합니다." : "재료 면 2개가 소모됩니다. 기준 면의 스킬과 등급은 유지됩니다.";
-            return Gold >= cost;
+            var plan = GetForgePlan(faces);
+            reason = plan.Message;
+            if (plan.Mode == ForgeMode.None) return false;
+            if (Gold >= plan.Cost) return true;
+            reason = $"골드가 {plan.Cost - Gold} G 부족합니다.";
+            return false;
         }
 
         public bool TryForge(IReadOnlyList<RewardDiceFragmentSO> faces, out string reason)
         {
             if (!CanForge(faces, out reason)) return false;
+            var plan = GetForgePlan(faces);
             var target = faces[0];
-            Gold -= GetForgeCost(target.Level);
-            target.Initialize(target.DiceData, GetForgedLevel(target.Level));
+            var resultFace = target.DiceData;
+            if (plan.Mode == ForgeMode.GradeUp)
+            {
+                resultFace = PickGradeUpResult(faces, plan.ResultGrade);
+                if (resultFace == null)
+                {
+                    reason = "올라갈 수 있는 상위 등급 스킬이 없습니다.";
+                    return false;
+                }
+            }
+            Gold -= plan.Cost;
+            target.Initialize(resultFace, plan.ResultLevel);
             for (int i = 1; i < faces.Count; i++)
             {
                 DiceFragments.Remove(faces[i]);
@@ -96,7 +250,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public bool EquipFace(PlayerDataSO player, DiceFaceType slot, RewardDiceFragmentSO reward)
         {
             if (player == null || player.DiceList == null || reward == null || !DiceFragments.Contains(reward) ||
-                reward.DiceData == null || reward.DiceData.GetSkillDataStruct(player.AttackType).SkillData == null) return false;
+                reward.DiceData == null || !reward.DiceData.CanUse(player.AttackType)) return false;
             var previous = player.DiceList.GetDiceData(slot);
             float previousLevel = player.DiceList.GetLevel(slot);
             player.DiceList.SetDiceData(reward.DiceData, slot, reward.Level);

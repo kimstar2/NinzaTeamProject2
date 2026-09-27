@@ -27,26 +27,56 @@ namespace Members.KJY._01.Scripts.Dice.Data
             return default;
         }
 
+        // 이 직업이 이 면을 장착·사용할 수 있는지 (스킬이 있고 적합 직업일 때)
+        public bool CanUse(AgentAttackType attackType)
+        {
+            var skill = GetSkillDataStruct(attackType).SkillData;
+            return skill != null && skill.IsSuitable(attackType);
+        }
+
+        // 이 면을 사용할 수 있는 직업 목록
+        public List<AgentAttackType> GetUsableTypes()
+        {
+            var types = new List<AgentAttackType>();
+            if (SkillDataStructs == null) return types;
+            foreach (var entry in SkillDataStructs)
+                if (!types.Contains(entry.AgentAttackType) && CanUse(entry.AgentAttackType)) types.Add(entry.AgentAttackType);
+            return types;
+        }
+
+        // 면의 강함도 (사용 가능한 스킬 중 가장 높은 값). 플레이어에게는 보이지 않는 확률 보정용
+        public int Strength
+        {
+            get
+            {
+                int strength = 0;
+                if (SkillDataStructs == null) return strength;
+                foreach (var entry in SkillDataStructs)
+                    if (entry.SkillData != null && entry.SkillData.IsSuitable(entry.AgentAttackType))
+                        strength = Mathf.Max(strength, entry.SkillData.Strength);
+                return strength;
+            }
+        }
+
         public string GetDescription(float level)
         {
             var description = new StringBuilder(Description);
             if (SkillDataStructs == null) return description.ToString();
 
+            // 같은 스킬을 여러 직업이 공유하면 한 번만 쓰고 직업을 묶어서 표시
+            var written = new List<SkillDataSO>();
             foreach (var entry in SkillDataStructs)
             {
                 var skill = entry.SkillData;
-                if (skill == null) continue;
+                if (skill == null || written.Contains(skill)) continue;
+                var roles = new List<string>();
+                foreach (var other in SkillDataStructs)
+                    if (other.SkillData == skill && skill.IsSuitable(other.AgentAttackType))
+                        roles.Add(SkillDataSO.RoleName(other.AgentAttackType));
+                if (roles.Count == 0) continue;
+                written.Add(skill);
                 if (description.Length > 0) description.AppendLine().AppendLine();
-
-                string role = entry.AgentAttackType switch
-                {
-                    AgentAttackType.Archer => "궁수",
-                    AgentAttackType.Melee => "전사",
-                    AgentAttackType.Magic => "마법사",
-                    AgentAttackType.Healer => "힐러",
-                    _ => entry.AgentAttackType.ToString()
-                };
-                description.Append('[').Append(role).Append("] ").AppendLine(skill.SkillName);
+                description.Append('[').Append(string.Join("·", roles)).Append("] ").AppendLine(skill.SkillName);
                 description.Append(skill.GetDescription(level));
             }
             return description.ToString();

@@ -17,6 +17,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
 
         protected void ApplyConfiguredStats(AbstractSelector target)
         {
+            if (Executor.IsMissed) return;
             foreach (SkillApplyStat stat in Executor.SkillData.ApplyStats)
             {
                 float value = GetStat(stat.ApplyStatType);

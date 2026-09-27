@@ -26,6 +26,10 @@ MonoBehaviour:
     <SkillData>k__BackingField: {fileID: 11400000, guid: fecb28fa4e0e6734f85078cca273ef12, type: 2}
     <SkillLevel>k__BackingField: 1
     <BaseDamage>k__BackingField: 0
+  - <AgentAttackType>k__BackingField: 4
+    <SkillData>k__BackingField: {fileID: 11400000, guid: fecb28fa4e0e6734f85078cca273ef12, type: 2}
+    <SkillLevel>k__BackingField: 1
+    <BaseDamage>k__BackingField: 0
   - <AgentAttackType>k__BackingField: 2
     <SkillData>k__BackingField: {fileID: 11400000, guid: 05bfbdbf27004339b5e98f3d76208233, type: 2}
     <SkillLevel>k__BackingField: 1

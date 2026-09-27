@@ -16,7 +16,6 @@ MonoBehaviour:
   backgroundPrefab: {fileID: 3407162977735574216, guid: f709e9cc26879df4fa968040aeefa4d1, type: 3}
   enemies:
   - {fileID: 11400000, guid: 9ae5782acbacf89469cc3e169389c9ae, type: 2}
-  - {fileID: 11400000, guid: 65fea951c2b65a8892ba3ea81837933a, type: 2}
   - {fileID: 11400000, guid: 588353a9b871316459127f5018e1a885, type: 2}
   - {fileID: 11400000, guid: c47e2ad0c33f2dc43aca6f5e06484745, type: 2}
   - {fileID: 11400000, guid: 4a57299e8e4655e3bd2773ceccc2f04a, type: 2}
@@ -24,7 +23,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d7b08ae53746243478b9277f0b0ede35, type: 2}
   - {fileID: 11400000, guid: 39ba6767e454539384aeeecdf2b63035, type: 2}
   - {fileID: 11400000, guid: 94c7dd1e00c85f658f6cec64f37dc426, type: 2}
-  - {fileID: 11400000, guid: b7ecf5c948e5b4945b186d4570216b93, type: 2}
   - {fileID: 11400000, guid: fb082e72ed28da5468f3e763e6e79d0b, type: 2}
   - {fileID: 11400000, guid: 74c9aa7626785f74ada659b97ba25b72, type: 2}
   - {fileID: 11400000, guid: 2e9f0c773fff5890a2c9fb737a4768a9, type: 2}
@@ -44,6 +42,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 261326c2849954ef95baac9edd5f991d, type: 2}
   - {fileID: 11400000, guid: d1611625464f5396a0336d35a99e594d, type: 2}
   boss: {fileID: 11400000, guid: 6bfa03512da75c3eb51b2e897ac65006, type: 2}
+  elite: {fileID: 11400000, guid: 65fea951c2b65a8892ba3ea81837933a, type: 2}
   enemyCount: {x: 2, y: 4}
   healthMultiplier: {x: 1, y: 1.3}
   dicePower: {x: 1, y: 1.15}

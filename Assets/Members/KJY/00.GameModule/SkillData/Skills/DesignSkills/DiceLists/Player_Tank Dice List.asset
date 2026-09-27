@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a46c18d5cdfe4a6d8948c5e0d8eca9d0, type: 3}
+  m_Name: Player_Tank Dice List
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Data.DiceDataListSO
+  <Front>k__BackingField: {fileID: 11400000, guid: e26e0b07dc26c5cfa77c14cbc72d17b7, type: 2}
+  <Back>k__BackingField: {fileID: 11400000, guid: 11df99c2bb8b042086a2e9fc10e1db7f, type: 2}
+  <Left>k__BackingField: {fileID: 11400000, guid: ace37e734bd4a9b1113f1a1e9459e12d, type: 2}
+  <Right>k__BackingField: {fileID: 11400000, guid: 3b19dd95eb986f2727fa7679b56cac2e, type: 2}
+  <Top>k__BackingField: {fileID: 11400000, guid: 6730f2f4e2edf07ce5dcfce48490a82e, type: 2}
+  <Bottom>k__BackingField: {fileID: 11400000, guid: e26e0b07dc26c5cfa77c14cbc72d17b7, type: 2}
+  faceLevels:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1

@@ -12,7 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fabf4aea31b64756bd586e78ce90e384, type: 3}
   m_Name: SolarEclipse Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
-  <SkillAnim>k__BackingField: {fileID: 11400000, guid: 91d36da68c6a3ae49951a1069be8d4d5, type: 2}
   <SkillLogicExecutor>k__BackingField: {fileID: 7367117411249116541, guid: 984505f2648dce14e820e9a95f34fba3, type: 3}
-  <SkillName>k__BackingField: "\uC77C\uC2DD"
-  <SkillDescription>k__BackingField: "\uB9C8\uBC95\uC0AC\uC758 \uACE0\uC720 \uC2A4\uD0AC"
+  <SkillName>k__BackingField: "일식"
+  <Icon>k__BackingField: {fileID: -6326363554524431381, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
+  <SkillDescription>k__BackingField: "태양과 달을 겹쳐 일식을 완성하고, 폭발로 {0} 피해를 줍니다."
+  applyStats:
+  - <ApplyStatType>k__BackingField: 0
+    <Value>k__BackingField: 46
+  damageCondition: 0
+  <LifeStealFraction>k__BackingField: 0
+  <Target>k__BackingField: 0
+  <Synergy>k__BackingField: 0
+  <Strength>k__BackingField: 100
+  suitableTypes:
+  - 2

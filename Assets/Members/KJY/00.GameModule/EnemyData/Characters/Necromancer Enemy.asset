@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.Enemy.EnemyDataSO
   <MaxHealth>k__BackingField: 54
   <AttackType>k__BackingField: 2
-  <EnemyName>k__BackingField: "\uAC15\uB839\uC220\uC0AC"
+  <EnemyName>k__BackingField: "황혼 주술사"
   <EnemyAc>k__BackingField: {fileID: 22100000, guid: c765b445c73177142872d5a1dbe713ed, type: 2}
   <EnemyImage>k__BackingField: {fileID: -5252879251821265602, guid: 802d4eeec6b48c4409c2520647ae44f9, type: 3}
   <ImageColor>k__BackingField: {fileID: 11400000, guid: acac2c0f58354864ead9cf1bcac508c6, type: 2}
   <Cost>k__BackingField: 3
-  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 74283312f4e707048bc293d6b28a9429, type: 2}
+  <DiceDataList>k__BackingField: {fileID: 11400000, guid: 91baa97a8c47ec74366aa40e35ad064a, type: 2}
+  <Rank>k__BackingField: 1
+  <FixedHealth>k__BackingField: 300
