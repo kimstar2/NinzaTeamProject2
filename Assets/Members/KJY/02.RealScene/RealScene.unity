@@ -2464,6 +2464,10 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6326442000188082076, guid: 222b036fadb5db148a893abf2f1a36d9, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6832353197826273192, guid: 222b036fadb5db148a893abf2f1a36d9, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4290817189
@@ -4984,6 +4988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 11211643}
   label: {fileID: 386730998}
+  showLabel: 0
 --- !u!223 &269726005
 Canvas:
   m_ObjectHideFlags: 0
@@ -5701,6 +5706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 1420168233}
   label: {fileID: 1209417790}
+  showLabel: 0
 --- !u!223 &347888852
 Canvas:
   m_ObjectHideFlags: 0
@@ -6774,6 +6780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 392244290}
   label: {fileID: 1795036334}
+  showLabel: 0
 --- !u!223 &475174905
 Canvas:
   m_ObjectHideFlags: 0
@@ -11331,6 +11338,7 @@ GameObject:
   - component: {fileID: 713869174}
   - component: {fileID: 713869177}
   - component: {fileID: 713869178}
+  - component: {fileID: 890000000000000000}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11540,7 +11548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.TweenLayoutGroup
   layoutGroup: {fileID: 0}
-  fillFromEnd: 1
   items:
   - target: {fileID: 1645797480}
     exitSequence: {fileID: 2710478575334238011}
@@ -11562,6 +11569,7 @@ MonoBehaviour:
     reflowSequence: {fileID: 1790691957}
     canvasGroup: {fileID: 0}
     exitOffset: {x: 0, y: -0.6, z: 0}
+  fillFromEnd: 1
 --- !u!114 &728162428 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1114260980001786297, guid: e2788b6186939d647adf856fef153983, type: 3}
@@ -12056,6 +12064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 738364965}
   label: {fileID: 1699532759}
+  showLabel: 0
 --- !u!223 &789905817
 Canvas:
   m_ObjectHideFlags: 0
@@ -12513,7 +12522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: -325}
+  m_AnchoredPosition: {x: 0, y: -324.99997}
   m_SizeDelta: {x: 0, y: 185}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!1 &838024796
@@ -13856,6 +13865,7 @@ GameObject:
   - component: {fileID: 913881914}
   - component: {fileID: 913881916}
   - component: {fileID: 913881915}
+  - component: {fileID: 890000000000000001}
   m_Layer: 0
   m_Name: BackUI Camera
   m_TagString: Untagged
@@ -14735,6 +14745,7 @@ MonoBehaviour:
     reflowSequence: {fileID: 104374047}
     canvasGroup: {fileID: 104374049}
     exitOffset: {x: 24, y: -6, z: 0}
+  fillFromEnd: 0
 --- !u!1 &1034862695
 GameObject:
   m_ObjectHideFlags: 0
@@ -15538,6 +15549,7 @@ MonoBehaviour:
     reflowSequence: {fileID: 884484646}
     canvasGroup: {fileID: 0}
     exitOffset: {x: 0, y: -0.6, z: 0}
+  fillFromEnd: 0
 --- !u!1 &1091700765
 GameObject:
   m_ObjectHideFlags: 0
@@ -16511,7 +16523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 225}
+  m_AnchoredPosition: {x: 0, y: 225.00003}
   m_SizeDelta: {x: 1200, y: 129.81}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &1139369158
@@ -16616,7 +16628,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -18140,6 +18152,7 @@ MonoBehaviour:
     reflowSequence: {fileID: 1232624102}
     canvasGroup: {fileID: 1232624101}
     exitOffset: {x: 24, y: -6, z: 0}
+  fillFromEnd: 0
 --- !u!1001 &1232624099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19160,6 +19173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 2027717616}
   label: {fileID: 1690456275}
+  showLabel: 0
 --- !u!223 &1288754359
 Canvas:
   m_ObjectHideFlags: 0
@@ -20567,6 +20581,7 @@ GameObject:
   - component: {fileID: 1510094921}
   - component: {fileID: 1510094923}
   - component: {fileID: 1510094922}
+  - component: {fileID: 890000000000000002}
   m_Layer: 0
   m_Name: UI Camera
   m_TagString: Untagged
@@ -24906,6 +24921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 939662676}
   label: {fileID: 2004880974}
+  showLabel: 0
 --- !u!223 &1790013553
 Canvas:
   m_ObjectHideFlags: 0
@@ -25582,6 +25598,7 @@ GameObject:
   - component: {fileID: 1830543060}
   - component: {fileID: 1830543059}
   - component: {fileID: 1830543057}
+  - component: {fileID: 890000000000000003}
   m_Layer: 0
   m_Name: Dice Camera
   m_TagString: Untagged
@@ -25928,6 +25945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 728162428}
   label: {fileID: 1677688101}
+  showLabel: 0
 --- !u!223 &1852361298
 Canvas:
   m_ObjectHideFlags: 0
@@ -27549,7 +27567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -325, y: -240}
+  m_AnchoredPosition: {x: -325, y: -240.00003}
   m_SizeDelta: {x: 500, y: 165}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1983470332
@@ -33533,6 +33551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.AgentEffectsView
   selector: {fileID: 699830161}
   label: {fileID: 1957292124}
+  showLabel: 0
 --- !u!223 &2085370913
 Canvas:
   m_ObjectHideFlags: 0
@@ -35175,6 +35194,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb918b44b154f20880179c8a7471aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Dice.Battle.BattleResultReceiver
+--- !u!1 &900000000000000101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900000000000000102}
+  - component: {fileID: 900000000000000103}
+  m_Layer: 0
+  m_Name: Battle BGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &900000000000000102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900000000000000101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &900000000000000103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900000000000000101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd5ab26c9f6459c85e4272bd361ed7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.SceneBgm
+  bgm: {fileID: 11400000, guid: 764e4b85c5050214d96f004ea35ce2d8, type: 2}
+--- !u!114 &900000000000000300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697007572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078546845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140129914475009598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &900000000000000303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740536732371435643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
   clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!224 &1038402217227609093
 RectTransform:
@@ -35805,7 +35920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -320}
+  m_AnchoredPosition: {x: 0, y: -319.99997}
   m_SizeDelta: {x: 700, y: 258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3773764209212120169
@@ -35969,7 +36084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ca366ed95bf5647af36d9e9e797c53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.BattleTutorial
-  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
   eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
   rollManager: {fileID: 1819734133}
   dicePointers:
@@ -36017,6 +36131,7 @@ MonoBehaviour:
       \uC2A4\uD0AC\uC744 \uBA3C\uC800 \uC5F0\uACB0\uD558\uBA74 \uB3C4\uC6C0\uC774
       \uB3FC\uC694."
     advanceOn: 4
+  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!114 &4420231373429336873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37953,103 +38068,72 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &900000000000000101
-GameObject:
+--- !u!114 &890000000000000000
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 900000000000000102}
-  - component: {fileID: 900000000000000103}
-  m_Layer: 0
-  m_Name: Battle BGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &900000000000000102
-Transform:
+  m_GameObject: {fileID: 713869173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17154f15590242699fe59d6a00d5983a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &890000000000000001
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900000000000000101}
+  m_GameObject: {fileID: 913881913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17154f15590242699fe59d6a00d5983a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &890000000000000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510094920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17154f15590242699fe59d6a00d5983a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &890000000000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830543054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17154f15590242699fe59d6a00d5983a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!1001 &890000000000000004
+PrefabInstance:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &900000000000000103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07116b61335544a4a63101d1934c348d, type: 3}
+--- !u!224 &890000000000000005 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1001, guid: 07116b61335544a4a63101d1934c348d, type: 3}
+  m_PrefabInstance: {fileID: 890000000000000004}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900000000000000101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dd5ab26c9f6459c85e4272bd361ed7f, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.SceneBgm
-  bgm: {fileID: 11400000, guid: 764e4b85c5050214d96f004ea35ce2d8, type: 2}
---- !u!114 &900000000000000300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697007572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
-  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
---- !u!114 &900000000000000301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078546845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
-  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
---- !u!114 &900000000000000302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140129914475009598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
-  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
---- !u!114 &900000000000000303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740536732371435643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a62725d61e7e44e1b93817b706953a2b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
-  clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -38065,3 +38149,4 @@ SceneRoots:
   - {fileID: 84676378}
   - {fileID: 686719758}
   - {fileID: 251190856}
+  - {fileID: 890000000000000005}

@@ -86,7 +86,7 @@ namespace Members.KJY._01.Scripts.Agent
             Bounds bounds = body.bounds;
             Vector3 screen = cam.WorldToScreenPoint(new Vector3(bounds.center.x, bounds.max.y, bounds.center.z));
             if (screen.z < 0f) return;
-            float scale = Screen.height / 1080f;
+            float scale = cam.pixelHeight / 1080f;
 
             var go = new GameObject("CombatPopup", typeof(RectTransform));
             go.transform.SetParent(PopupCanvas.transform, false);
