@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.EventDataSO
   EventTitle: "\uC640..?"
   EventExplain: "\uC545\uC218\uB97C \uD574\uC57C \uD560 \uAC83 \uAC19\uB2E4."
-  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
-  EXImage: {fileID: 0}
+  backgroundImage: {fileID: -5417455839076313926, guid: 3138a091c704bfc4f8249a5bbe4db59d, type: 3}
+  EXImage: {fileID: -4359532155552511353, guid: 3c5997d27283eb446896983351a5e7b5, type: 3}
+  EXImage2: {fileID: 0}
   exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
   backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
