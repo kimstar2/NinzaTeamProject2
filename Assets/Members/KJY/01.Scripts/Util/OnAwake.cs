@@ -8,7 +8,7 @@ namespace Members.KJY._01.Scripts.Util
     public class OnAwake : MonoBehaviour
     {
         [field: SerializeField] public UnityEvent OnAwakeRaise { get; private set; }
-        [SerializeField] private bool waitSceneTransition; // 씬 전환 커튼이 다 열린 뒤 실행
+        [SerializeField] private bool waitSceneTransition; // 커튼 열린 뒤 실행
 
         private void Awake()
         {

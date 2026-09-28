@@ -54,7 +54,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             _ => type.ToString()
         };
 
-        public string SuitableDescription => SelfDestruct ? "장착 불가 (몬스터 전용)" : suitableTypes.Count == 0 ? "모든 직업" :
+        public string SuitableDescription => suitableTypes.Count == 0 ? "모든 직업" :
             string.Join(", ", suitableTypes.ConvertAll(RoleName));
 
         [field: Header("Status")]
