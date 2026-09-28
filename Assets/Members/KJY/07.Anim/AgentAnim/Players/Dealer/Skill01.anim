@@ -98,6 +98,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.3
+    functionName: PlayAnimationSound
+    data:
+    objectReferenceParameter: {fileID: 11400000, guid: 78655f1a2aba4c0b83a94bfec3d48c14, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.69
     functionName: AnimFinishedEnd
     data: 

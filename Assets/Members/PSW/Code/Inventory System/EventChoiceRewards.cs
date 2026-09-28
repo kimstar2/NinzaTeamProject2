@@ -28,11 +28,20 @@ namespace Members.PSW.Code.InventorySystem
         [SerializeField] private List<HealthChoice> healthChoices = new();
         [SerializeField] private List<GoldChoice> goldChoices = new();
         [SerializeField] private List<DamageChoice> damageChoices = new();
+        [SerializeField] private List<BattleChoice> battleChoices = new();
+        [SerializeField] private EventBattleTransition battleTransition;
         [SerializeField] private EventChannelSO eventChannel;
         [SerializeField] private string resetScenePath;
         private readonly EventDamageModifiers _damageModifiers = new();
         private bool _hasCompletedBattle;
         private int _completedBattleScene;
+
+        [Serializable]
+        private sealed class BattleChoice
+        {
+            public EventDataSO eventData;
+            public int choiceIndex;
+        }
 
         [Serializable]
         private sealed class DamageChoice
@@ -157,14 +166,16 @@ namespace Members.PSW.Code.InventorySystem
                 _pendingManagers.RemoveAt(pendingIndex);
                 if (source != sourceEvent && !healthChoices.Exists(effect => effect.eventData == source) &&
                     !goldChoices.Exists(effect => effect.eventData == source) &&
-                    !damageChoices.Exists(effect => effect.eventData == source)) continue;
+                    !damageChoices.Exists(effect => effect.eventData == source) &&
+                    !battleChoices.Exists(effect => effect.eventData == source)) continue;
                 var buttons = ButtonsField.GetValue(manager) as List<Button>;
                 if (buttons == null || buttons.Count < source.choices ||
                     source.resultText.Count < source.choices || source.choiceEvent.Count < source.choices ||
                     buttons.GetRange(0, source.choices).Exists(button => button == null) ||
-                    source.choiceEvent.Exists(type => type != EventType.DefaultComplete))
+                    source.choiceEvent.Exists(type => type != EventType.DefaultComplete &&
+                        type != EventType.ChangeExImage))
                 {
-                    Debug.LogError("Event rewards expect valid choice buttons using DefaultComplete.", manager);
+                    Debug.LogError($"Event rewards for '{source.name}' expect valid choice buttons using DefaultComplete or ChangeExImage.", manager);
                     continue;
                 }
 
@@ -190,6 +201,13 @@ namespace Members.PSW.Code.InventorySystem
             if (binding.Claimed) return;
             binding.Claimed = true;
             // The existing completion listener reads this text after this callback returns.
+            if (battleChoices.Exists(entry => entry.eventData == binding.Source && entry.choiceIndex == index))
+            {
+                string failure = "이벤트 전투 연결이 설정되지 않았습니다.";
+                if (battleTransition == null || !battleTransition.TryPrepare(binding.Manager.gameObject.scene, out failure))
+                    binding.Data.resultText[index] = failure;
+                return;
+            }
             if (binding.Source == sourceEvent && index == 0)
                 binding.Data.resultText[index] = GrantReward();
             else
