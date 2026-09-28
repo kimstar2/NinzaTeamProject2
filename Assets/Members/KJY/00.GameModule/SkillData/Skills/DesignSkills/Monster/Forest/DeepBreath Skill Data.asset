@@ -15,13 +15,13 @@ MonoBehaviour:
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: b4f45a5bd2f97424abc9f15a44d1933c, type: 3}
   <SkillName>k__BackingField: "심호흡"
   <Icon>k__BackingField: {fileID: -369906259, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
-  <SkillDescription>k__BackingField: "자신의 체력을 {0} 회복합니다."
+  <SkillDescription>k__BackingField: "숨을 고르며 아군 하나의 체력을 {0} 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 1
     <Value>k__BackingField: 20
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
-  <Target>k__BackingField: 2
+  <Target>k__BackingField: 1
   <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 50
   <Status>k__BackingField: 0

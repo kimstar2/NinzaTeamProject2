@@ -247,6 +247,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 
         public void PlayAnim()
         {
+            if (SkillData != null && SkillData.NoCastMotion) return;
             if (SkillAnimHash != null && SkillAnimHash.HashValue != NoneHash.Value)
                 Attacker.MyAgent.AnimCompo.RenderClipIfNotPlaying(SkillAnimHash.HashValue);
         }

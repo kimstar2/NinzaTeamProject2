@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "저주 서린 불꽃으로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 18
+    <Value>k__BackingField: 20
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0

@@ -37,3 +37,5 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 4
+  <NoCastMotion>k__BackingField: 1
+  <CleanseDebuffs>k__BackingField: 1

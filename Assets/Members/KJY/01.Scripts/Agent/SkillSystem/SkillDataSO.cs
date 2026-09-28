@@ -54,7 +54,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             _ => type.ToString()
         };
 
-        public string SuitableDescription => suitableTypes.Count == 0 ? "모든 직업" :
+        public string SuitableDescription => SelfDestruct ? "장착 불가 (몬스터 전용)" : suitableTypes.Count == 0 ? "모든 직업" :
             string.Join(", ", suitableTypes.ConvertAll(RoleName));
 
         [field: Header("Status")]
@@ -82,6 +82,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field: SerializeField, Range(0f, 2f)] public float PowerUpRatio { get; private set; }
         [field: SerializeField, Min(0)] public int PowerUpTurns { get; private set; }
         [field: SerializeField] public bool SelfDestruct { get; private set; }
+        [field: SerializeField] public bool NoCastMotion { get; private set; } // 모션 없이 즉시 적용
 
         // 레벨당 +25%
         public float GetHealRatio(float level) => HealMaxHealthRatio * (1f + Mathf.Max(0f, level - 1f) * 0.25f);

@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "물어뜯어 {0} 피해를 주고, 실제 피해의 50%를 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 30
+    <Value>k__BackingField: 24
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0.5
   <Target>k__BackingField: 0

@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "방패를 땅에 내리꽂아 적 전체에게 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 20
+    <Value>k__BackingField: 16
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0

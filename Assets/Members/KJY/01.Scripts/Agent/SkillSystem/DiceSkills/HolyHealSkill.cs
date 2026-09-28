@@ -45,7 +45,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
                 float multiplier = emergencyHeal && isEmergency ? 2f : 1f;
                 float heal = GetStat(ApplyStatType.Heal) * multiplier +
                              health.DefaultMaxHealth * Executor.SkillData.GetHealRatio(BaseLevel) * Executor.PowerMultiplier;
-                if (heal > 0f) target.ApplyStat(ApplyStatType.Heal, heal);
+                if (heal > 0f)
+                {
+                    target.ApplyStat(ApplyStatType.Heal, heal);
+                    target.Effects.ShowPopup("치유!", CombatEffects.HealColor);
+                }
                 Executor.ApplySynergy(target);
             }
         }

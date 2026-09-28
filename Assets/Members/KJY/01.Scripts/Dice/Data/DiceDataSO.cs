@@ -30,7 +30,7 @@ namespace Members.KJY._01.Scripts.Dice.Data
         public bool CanUse(AgentAttackType attackType)
         {
             var skill = GetSkillDataStruct(attackType).SkillData;
-            return skill != null && skill.IsSuitable(attackType);
+            return skill != null && !skill.SelfDestruct && skill.IsSuitable(attackType); // 자폭: 몬스터 전용
         }
 
         public List<AgentAttackType> GetUsableTypes()

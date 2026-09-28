@@ -24,9 +24,9 @@ MonoBehaviour:
   <Target>k__BackingField: 0
   <Synergy>k__BackingField: 1
   <Strength>k__BackingField: 65
-  <Status>k__BackingField: 0
-  <StatusDamage>k__BackingField: 0
-  <StatusTurns>k__BackingField: 0
+  <Status>k__BackingField: 3
+  <StatusDamage>k__BackingField: 4
+  <StatusTurns>k__BackingField: 2
   <BonusVsStatus>k__BackingField: 0
   <BonusDamage>k__BackingField: 0
   <MissChance>k__BackingField: 0

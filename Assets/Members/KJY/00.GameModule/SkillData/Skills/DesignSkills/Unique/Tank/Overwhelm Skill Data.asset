@@ -40,3 +40,4 @@ MonoBehaviour:
   <TauntTurns>k__BackingField: 2
   <ResistRatio>k__BackingField: 0.2
   <ResistTurns>k__BackingField: 2
+  <NoCastMotion>k__BackingField: 1

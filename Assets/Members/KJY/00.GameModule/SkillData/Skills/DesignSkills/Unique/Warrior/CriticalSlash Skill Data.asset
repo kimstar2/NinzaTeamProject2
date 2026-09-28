@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "날카로운 검기를 날려 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 28
+    <Value>k__BackingField: 25
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0

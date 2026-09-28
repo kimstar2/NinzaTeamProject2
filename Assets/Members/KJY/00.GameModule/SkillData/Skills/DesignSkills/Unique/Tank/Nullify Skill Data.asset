@@ -38,3 +38,4 @@ MonoBehaviour:
   suitableTypes:
   - 4
   <InvulnerableTurns>k__BackingField: 1
+  <NoCastMotion>k__BackingField: 1

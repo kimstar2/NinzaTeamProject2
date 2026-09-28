@@ -28,6 +28,8 @@ namespace Members.KJY._01.Scripts.Agent
 
         public void ShowPopup(string text, Color color) => Popup?.Invoke(text, color);
 
+        public static readonly Color HealColor = new(0.45f, 1f, 0.55f);
+
         public static Color DefaultColor(DebuffKind kind) => kind switch
         {
             DebuffKind.Poison => new Color(0.45f, 1f, 0.45f),

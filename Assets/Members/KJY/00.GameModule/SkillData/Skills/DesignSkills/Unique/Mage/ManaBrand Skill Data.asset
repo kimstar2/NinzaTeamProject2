@@ -18,14 +18,14 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "마법 문양을 새겨 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 14
+    <Value>k__BackingField: 11
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0
   <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 65
   <Status>k__BackingField: 3
-  <StatusDamage>k__BackingField: 4
+  <StatusDamage>k__BackingField: 5
   <StatusTurns>k__BackingField: 3
   <BonusVsStatus>k__BackingField: 0
   <BonusDamage>k__BackingField: 0

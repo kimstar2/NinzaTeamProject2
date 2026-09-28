@@ -24,8 +24,9 @@ MonoBehaviour:
   <Target>k__BackingField: 2
   <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 70
-  <ReflectRatio>k__BackingField: 0.5
+  <ReflectRatio>k__BackingField: 0.4
   <ReflectTurns>k__BackingField: 1
   <CleanseDebuffs>k__BackingField: 0
   suitableTypes:
   - 4
+  <NoCastMotion>k__BackingField: 1

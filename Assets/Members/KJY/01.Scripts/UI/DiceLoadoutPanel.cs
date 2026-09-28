@@ -123,6 +123,7 @@ namespace Members.KJY._01.Scripts.UI
             var skill = face.GetSkillDataStruct(_player.AttackType).SkillData;
             string skillLine = skill != null && skill.SkillName != face.MainName ? skill.SkillName + "\n" : string.Empty;
             string body = skill == null ? "이 캐릭터가 사용할 수 없는 면입니다." :
+                skill.SelfDestruct ? $"{skillLine}<color=#E57373>몬스터 전용 스킬이라 장착할 수 없습니다. 재련 재료로 쓸 수 있습니다.</color>" :
                 !skill.IsSuitable(_player.AttackType) ? $"{skillLine}<color=#E57373>직업이 맞지 않아 장착할 수 없습니다. (적합: {skill.SuitableDescription})</color>" :
                 $"{skillLine}{skill.GetDescription(level)}";
             return $"<color=#B5A5F4>{face.MainName}</color>  <size=80%>Lv.{level:0.#}</size>\n" + body;

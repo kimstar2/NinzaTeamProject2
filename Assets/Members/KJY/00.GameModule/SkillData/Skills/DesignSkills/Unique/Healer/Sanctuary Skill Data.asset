@@ -29,3 +29,4 @@ MonoBehaviour:
   <CleanseDebuffs>k__BackingField: 1
   suitableTypes:
   - 3
+  <HealMaxHealthRatio>k__BackingField: 0.1
