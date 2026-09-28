@@ -12,7 +12,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [SerializeField] private PoolItemSO impactParticle;
         [SerializeField, Min(1)] private int hitCount = 1;
         [SerializeField, Min(0f)] private float hitInterval = 0.18f;
-        [SerializeField] private float[] hitWeights; // 타격별 피해 배율. 비어 있으면 모두 1
+        [SerializeField] private float[] hitWeights;
         private bool _isApplied;
         private float _hitWeight = 1f;
 

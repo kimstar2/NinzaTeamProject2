@@ -54,7 +54,6 @@ namespace Members.KJY._01.Scripts.Dice
             return diceFaces[currenRan].Range;
         }
 
-        // 면마다 가중치로 뽑는다. 기본은 모두 1이라 균등 확률
         private int PickFace()
         {
             float total = 0f;

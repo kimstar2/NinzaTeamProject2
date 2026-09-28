@@ -38,7 +38,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         [field: SerializeField, Range(0f, 1f)] public float LifeStealFraction { get; private set; }
         [field: SerializeField] public TargetType Target { get; private set; }
         [field: SerializeField] public SynergyType Synergy { get; private set; }
-        // 플레이어에게 보이지 않는 확률 보정용 수치. 행운이 오를수록 높은 스킬이 잘 나온다.
         [field: SerializeField, Min(0)] public int Strength { get; private set; }
         [Tooltip("이 스킬 면을 장착할 수 있는 직업. 비우면 모든 직업 가능")]
         [SerializeField] private List<AgentAttackType> suitableTypes = new();
@@ -59,36 +58,36 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             string.Join(", ", suitableTypes.ConvertAll(RoleName));
 
         [field: Header("Status")]
-        [field: SerializeField] public StatusType Status { get; private set; } // 맞은 대상에게 거는 지속 피해
+        [field: SerializeField] public StatusType Status { get; private set; }
         [field: SerializeField, Min(0f)] public float StatusDamage { get; private set; }
         [field: SerializeField, Min(0)] public int StatusTurns { get; private set; }
-        [field: SerializeField] public StatusType BonusVsStatus { get; private set; } // 이 상태인 대상에게 추가 피해
+        [field: SerializeField] public StatusType BonusVsStatus { get; private set; }
         [field: SerializeField, Min(0f)] public float BonusDamage { get; private set; }
-        [field: SerializeField, Range(0f, 1f)] public float MissChance { get; private set; } // 맞은 대상의 공격이 빗나갈 확률
+        [field: SerializeField, Range(0f, 1f)] public float MissChance { get; private set; }
         [field: SerializeField, Min(0)] public int MissTurns { get; private set; }
-        [field: SerializeField, Min(0f)] public float HealthCost { get; private set; } // 시전자가 소모하는 체력 (죽지는 않음)
-        [field: SerializeField, Range(0f, 1f)] public float ExecuteThreshold { get; private set; } // 타격 후 이 비율 이하면 즉시 처치
-        [field: SerializeField, Min(0)] public int StunTurns { get; private set; } // 맞은 대상이 공격하지 못하는 턴
-        [field: SerializeField, Range(0f, 1f)] public float ReflectRatio { get; private set; } // 대상이 받은 피해 중 공격자에게 되돌릴 비율
+        [field: SerializeField, Min(0f)] public float HealthCost { get; private set; }
+        [field: SerializeField, Range(0f, 1f)] public float ExecuteThreshold { get; private set; }
+        [field: SerializeField, Min(0)] public int StunTurns { get; private set; }
+        [field: SerializeField, Range(0f, 1f)] public float ReflectRatio { get; private set; }
         [field: SerializeField, Min(0)] public int ReflectTurns { get; private set; }
-        [field: SerializeField] public bool CleanseDebuffs { get; private set; } // 대상의 디버프를 모두 제거
-        [field: SerializeField] public bool IsArea { get; private set; } // 광역: 대상 진영 전체. 플레이어는 대상을 고르지 않는다
-        [field: SerializeField, Min(0)] public int InvulnerableTurns { get; private set; } // 대상이 스킬 공격 피해를 모두 무시하는 턴
-        [field: SerializeField, Range(0f, 1f)] public float HealMaxHealthRatio { get; private set; } // 대상 최대 체력의 이 비율만큼 추가 회복
-        [field: SerializeField, Min(0)] public int TauntTurns { get; private set; } // 대상에게 거는 도발: 상대의 단일 공격을 끌어옴
-        [field: SerializeField, Range(0f, 1f)] public float ResistRatio { get; private set; } // 대상이 받는 공격 피해 감소 비율
+        [field: SerializeField] public bool CleanseDebuffs { get; private set; }
+        [field: SerializeField] public bool IsArea { get; private set; }
+        [field: SerializeField, Min(0)] public int InvulnerableTurns { get; private set; }
+        [field: SerializeField, Range(0f, 1f)] public float HealMaxHealthRatio { get; private set; }
+        [field: SerializeField, Min(0)] public int TauntTurns { get; private set; }
+        [field: SerializeField, Range(0f, 1f)] public float ResistRatio { get; private set; }
         [field: SerializeField, Min(0)] public int ResistTurns { get; private set; }
-        [field: SerializeField, Range(0f, 1f)] public float WeakenRatio { get; private set; } // 둔화: 대상이 주는 피해 감소 비율
+        [field: SerializeField, Range(0f, 1f)] public float WeakenRatio { get; private set; }
         [field: SerializeField, Min(0)] public int WeakenTurns { get; private set; }
-        [field: SerializeField, Range(0f, 2f)] public float PowerUpRatio { get; private set; } // 공격력 증가: 대상이 주는 피해 증가 비율
+        [field: SerializeField, Range(0f, 2f)] public float PowerUpRatio { get; private set; }
         [field: SerializeField, Min(0)] public int PowerUpTurns { get; private set; }
-        [field: SerializeField] public bool SelfDestruct { get; private set; } // 스킬을 쓰고 나면 시전자가 쓰러짐
+        [field: SerializeField] public bool SelfDestruct { get; private set; }
 
-        // 최대 체력 % 회복량. 제련 레벨 1당 +25%씩 (Lv.3이면 1.5배)
+        // 레벨당 +25%
         public float GetHealRatio(float level) => HealMaxHealthRatio * (1f + Mathf.Max(0f, level - 1f) * 0.25f);
         [field: SerializeField, Tooltip("디버프가 걸렸을 때 문구와 캐릭터 색. 투명(알파 0)이면 종류별 기본색")]
         public Color EffectColor { get; private set; } = Color.clear;
-        [field: SerializeField] public TargetRule EnemyTargetRule { get; private set; } // 적(몬스터)이 쓸 때 대상 고르는 방식
+        [field: SerializeField] public TargetRule EnemyTargetRule { get; private set; }
 
         public IReadOnlyList<SkillApplyStat> ApplyStats => applyStats;
 
@@ -124,7 +123,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             return 0f;
         }
 
-        // usedByEnemy: 몬스터 주사위에 보여줄 때. 대상이 플레이어 입장에서 읽히도록 바꿔 쓴다.
         public string GetDescription(float level, bool usedByEnemy = false)
         {
             string target = usedByEnemy ? GetEnemyTargetLabel() :
@@ -142,7 +140,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             return target + GetStatDescription(level) + (synergy.Length > 0 ? "\n" + synergy : "") + GetExtraDescription(level);
         }
 
-        // 몬스터가 누구를 노리는지: 무작위 / 낮은 체력 / 보복(자신을 공격한 캐릭터) / 자신 / 전체
         private string GetEnemyTargetLabel() => Target switch
         {
             TargetType.Self => "[자신] ",

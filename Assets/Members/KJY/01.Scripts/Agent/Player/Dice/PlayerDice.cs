@@ -66,7 +66,6 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
             isLock = obj.IsLock;
         }
         
-        // 행운이 0이면 모두 1(균등). 행운이 오를수록 강함도 높은 면의 가중치가 커진다.
         protected override float GetFaceWeight(DiceFaceType faceType)
         {
             if (_playerData == null || _playerData.DiceList == null ||

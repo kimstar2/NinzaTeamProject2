@@ -58,7 +58,6 @@ namespace Members.KJY._01.Scripts.Agent
             TweenLayoutGroup = GetComponentInParent<TweenLayoutGroup>();
         }
 
-        // 지금 전투에 나와 있는 캐릭터·몬스터. 광역 스킬 대상 계산에 쓴다.
         private static readonly List<AbstractSelector> _inBattle = new();
         public static IReadOnlyList<AbstractSelector> InBattle
         {
@@ -103,7 +102,6 @@ namespace Members.KJY._01.Scripts.Agent
             MyAgent.HealthModule.OnDead += HandleDead;
             MyAgent.HealthModule.OnHealthChanged += HandleHealthChanged;
             HandleHealthChanged(MyAgent.HealthModule.CurrentHealth, MyAgent.HealthModule.DefaultMaxHealth);
-            // 떠오르는 문구와 디버프 색은 모든 캐릭터·몬스터에 자동으로 붙인다
             if (!TryGetComponent<CombatStatusVisual>(out _)) gameObject.AddComponent<CombatStatusVisual>().Bind(this);
         }
 

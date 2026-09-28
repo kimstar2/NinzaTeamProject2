@@ -15,7 +15,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
     public sealed class BattleInventory : Inventory
     {
         [SerializeField] private EventChannelSO eventChannel;
-        [Header("제련")]
+        [Header("재련")]
         [SerializeField, Min(1)] private int forgeBaseCost = 20;
         [Tooltip("재료 2개가 모두 기준 면보다 낮은 등급일 때 오르는 레벨")]
         [SerializeField, Min(0.1f)] private float forgeLevelGain = 0.5f;
@@ -23,7 +23,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         [SerializeField, Min(0.1f)] private float mixedLevelGain = 1f;
         [SerializeField, Min(1)] private float forgeMaxLevel = 3f;
         [Header("등급 업")]
-        [Tooltip("등급 업 비용 = 제련 비용 × 이 값")]
+        [Tooltip("등급 업 비용 = 재련 비용 × 이 값")]
         [SerializeField, Min(1f)] private float gradeUpCostMultiplier = 1.35f;
         [Tooltip("등급 업 결과로 나올 수 있는 면 목록")]
         [SerializeField] private DiceFacePoolSO gradeUpPool;
@@ -69,7 +69,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
 
         public enum ForgeMode { None, Enhance, GradeUp }
 
-        // 기준 면(faces[0])과 재료 2개로 어떤 제련이 될지 미리 계산한 결과
         public readonly struct ForgePlan
         {
             public readonly ForgeMode Mode;
@@ -93,7 +92,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private static DiceGrade GradeOf(DiceDataSO face) =>
             face != null && face.DiceGrade != null ? face.DiceGrade.Grade : DiceGrade.Common;
 
-        // 재료 2개가 모두 낮은 등급이면 강화, 모두 같거나 높은 등급이면 등급 업, 섞이면 크게 강화
+        // 낮음 2: 강화 / 섞임: 크게 강화 / 같거나 높음: 등급 업
         public ForgePlan GetForgePlan(IReadOnlyList<RewardDiceFragmentSO> faces)
         {
             const string selectMessage = "기준 면과 소모할 재료 면 2개를 선택하세요.";
@@ -127,13 +126,12 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private ForgePlan Enhance(RewardDiceFragmentSO target, float gain, string message)
         {
             if (target.Level >= forgeMaxLevel)
-                return ForgePlan.Invalid($"기준 면이 최대 제련 레벨(Lv.{forgeMaxLevel:0.#})에 도달했습니다.");
+                return ForgePlan.Invalid($"기준 면이 최대 재련 레벨(Lv.{forgeMaxLevel:0.#})에 도달했습니다.");
             float level = Mathf.Min(forgeMaxLevel, target.Level + Mathf.Max(0.1f, gain));
             return new ForgePlan(ForgeMode.Enhance, GetForgeCost(target.Level), level, GradeOf(target.DiceData),
                 $"{message} (Lv.{target.Level:0.#} → Lv.{level:0.#})");
         }
 
-        // 기준 면을 쓸 수 있던 직업을 모두 유지하는 스킬을 우선, 없으면 한 직업이라도 겹치는 스킬
         private List<DiceDataSO> GetGradeUpCandidates(DiceDataSO baseFace, DiceGrade grade)
         {
             _candidates.Clear();
@@ -153,7 +151,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             return _candidates;
         }
 
-        // 재료가 좋을수록(자기 등급 안에서 강함도가 높거나, 기준보다 높은 등급일수록) 강함도 높은 스킬이 잘 나온다
         private DiceDataSO PickGradeUpResult(IReadOnlyList<RewardDiceFragmentSO> faces, DiceGrade grade)
         {
             var candidates = GetGradeUpCandidates(faces[0].DiceData, grade);
@@ -181,7 +178,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             {
                 float percentile = max > min ? (face.Strength - min) / (float)(max - min) : 0.5f;
                 float diff = (percentile - score) / Mathf.Max(0.05f, gradeUpSpread);
-                float weight = Mathf.Exp(-diff * diff) + 0.02f; // 멀리 떨어진 강함도도 아주 낮은 확률로는 나온다
+                float weight = Mathf.Exp(-diff * diff) + 0.02f;
                 _weights.Add(weight);
                 total += weight;
             }
@@ -195,7 +192,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             return candidates[candidates.Count - 1];
         }
 
-        // 같은 등급의 면들 사이에서 이 강함도가 어느 위치인지 (0 = 가장 약함, 1 = 가장 강함)
         private float GetStrengthPercentile(int strength, DiceGrade grade)
         {
             int min = int.MaxValue, max = int.MinValue;
@@ -236,7 +232,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             }
             Gold -= plan.Cost;
             target.Initialize(resultFace, plan.ResultLevel);
-            DiceCatalogProgress.Discover(resultFace); // 등급 상승으로 새로 얻은 면
+            DiceCatalogProgress.Discover(resultFace);
             for (int i = 1; i < faces.Count; i++)
             {
                 DiceFragments.Remove(faces[i]);

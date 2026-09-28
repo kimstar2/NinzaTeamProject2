@@ -18,7 +18,7 @@ public class Inventory : MonoBehaviour
     {
         if (fragment == null || DiceFragments.Count >= MaxSlots) return false;
         DiceFragments.Add(fragment);
-        DiceCatalogProgress.Discover(fragment.DiceData); // 주사위 도감 기록
+        DiceCatalogProgress.Discover(fragment.DiceData);
         Changed?.Invoke();
         return true;
     }

@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Util
 {
-    // 바닥에 퍼지는 타원 파동. 프리팹 없이 LineRenderer로 만들고 끝나면 스스로 사라진다.
     public class GroundWaveEffect : MonoBehaviour
     {
         private const int Segments = 48;
@@ -16,7 +15,6 @@ namespace Members.KJY._01.Scripts.Util
         private float _delay;
         private float _time;
 
-        // reference: 머티리얼과 정렬 순서를 빌려올 렌더러 (보통 시전자 스프라이트)
         public static GroundWaveEffect Spawn(Vector3 center, Color color, float radius, float duration,
             float width, Renderer reference, float delay = 0f, float flatten = 0.35f)
         {
@@ -32,7 +30,7 @@ namespace Members.KJY._01.Scripts.Util
             {
                 line.sharedMaterial = reference.sharedMaterial;
                 line.sortingLayerID = reference.sortingLayerID;
-                line.sortingOrder = reference.sortingOrder - 1; // 캐릭터 발밑에 깔리게
+                line.sortingOrder = reference.sortingOrder - 1;
             }
 
             var wave = go.AddComponent<GroundWaveEffect>();
@@ -56,7 +54,7 @@ namespace Members.KJY._01.Scripts.Util
 
             _time += Time.deltaTime;
             float t = Mathf.Clamp01(_time / _duration);
-            float eased = 1f - (1f - t) * (1f - t) * (1f - t); // 처음엔 빠르게, 끝에서 느려짐
+            float eased = 1f - (1f - t) * (1f - t) * (1f - t);
             float radius = Mathf.Lerp(0.2f, _radius, eased);
             for (int i = 0; i < Segments; i++)
             {

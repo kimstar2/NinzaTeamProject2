@@ -25,7 +25,7 @@ namespace Members.KJY._01.Scripts.UI
         private void Awake()
         {
             panelRoot.SetActive(false);
-            // 전체 목록은 씬이 아니라 Resources/DiceCatalog 에셋에서 받는다 (씬 저장 상태와 상관없이 항상 최신)
+            // Resources 목록 우선
             _catalog = Resources.Load<DiceCatalogSO>(DiceCatalogSO.ResourcePath);
             if (_catalog != null && _catalog.Faces != null && _catalog.Faces.Length > 0) faces = _catalog.Faces;
         }
@@ -45,7 +45,6 @@ namespace Members.KJY._01.Scripts.UI
                 }
             }
 
-            // 열 때마다 획득 기록을 다시 반영한다
             int found = 0;
             for (int i = 0, f = 0; i < faces.Length; i++)
             {
@@ -66,7 +65,7 @@ namespace Members.KJY._01.Scripts.UI
             _scrollTop = StartCoroutine(KeepScrollTop());
         }
 
-        // 열림 연출과 아이템 연출이 도는 동안 레이아웃이 다시 잡히며 스크롤이 내려가므로, 끝날 때까지 맨 위에 고정한다.
+        // 열림 연출 중 스크롤 고정
         private Coroutine _scrollTop;
         private IEnumerator KeepScrollTop()
         {
@@ -77,13 +76,12 @@ namespace Members.KJY._01.Scripts.UI
             {
                 LayoutRebuilder.ForceRebuildLayoutImmediate(rect);
                 if (scroll != null) scroll.StopMovement();
-                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, 0f); // Content 피벗이 위쪽이라 y=0이 맨 위
+                rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, 0f); // 피벗 위쪽
                 yield return null;
             } while (openMotion.HasTween || Time.unscaledTime < until);
             _scrollTop = null;
         }
 
-        // 플레이어 기본 주사위 면은 처음부터 해금
         private bool IsUnlocked(DiceDataSO face) =>
             _catalog != null ? _catalog.IsUnlocked(face) : DiceCatalogProgress.IsDiscovered(face);
 

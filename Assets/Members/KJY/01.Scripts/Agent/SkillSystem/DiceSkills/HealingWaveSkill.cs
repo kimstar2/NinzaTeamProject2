@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
 {
-    // 치유의 파동: 시전자 발밑에서 초록 파동이 여러 겹 퍼진 뒤 아군 전체를 회복한다.
     public class HealingWaveSkill : HolyHealSkill
     {
         [Header("Wave")]
@@ -25,7 +24,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
                 GroundWaveEffect.Spawn(caster.transform.position, waveColor, waveRadius, waveDuration, waveWidth,
                     reference, i * waveGap);
 
-            // 첫 파동이 아군에게 닿을 즈음 회복
             await UniTask.Delay(TimeSpan.FromSeconds(waveDuration * 0.4f), cancellationToken: token);
             await base.AttackAsync(token);
         }

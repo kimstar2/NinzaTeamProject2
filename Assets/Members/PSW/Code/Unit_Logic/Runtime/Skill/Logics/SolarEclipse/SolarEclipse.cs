@@ -23,7 +23,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         [SerializeField] private SkillItem boomLight;
         public List<SkillApplyStat> applyStats;
         [Header("Timing")]
-        [SerializeField, Range(0.2f, 1f)] private float durationScale = 0.5f; // 1이면 원래 길이(약 6.5초)
+        [SerializeField, Range(0.2f, 1f)] private float durationScale = 0.5f; // 1 = 원래 속도
         
         public UnityEvent onSkillFinished;
 
@@ -162,7 +162,6 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
         public override void ApplyStat()
         {
             PlaySkillSound();
-            // 실제 전투에서는 스킬 데이터의 수치를 사용 (_target은 지정되지 않음)
             if (Executor != null) { ApplyConfiguredStats(Executor.Target); return; }
             foreach (var applyStat in applyStats)
             {
@@ -204,7 +203,7 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.SolarEclipse
             
             seq.AppendCallback(() =>
             {
-                onSkillFinished?.Invoke(); // 프리팹에서 Executor.SkillFinished 연결됨
+                onSkillFinished?.Invoke();
                 Executor.Remove();
             });
         }

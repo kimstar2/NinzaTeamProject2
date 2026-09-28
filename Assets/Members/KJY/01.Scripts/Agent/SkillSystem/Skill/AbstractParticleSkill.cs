@@ -177,10 +177,9 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             return Mathf.Max(0f, GetStat(ApplyStatType.Damage)) * multiplier * mark;
         }
 
-        // scale은 다단 타격에서 타격마다 비중을 다르게 줄 때 사용. 광역이면 대상 진영 전체에 적용한다.
         protected void ApplyDamage(float scale = 1f)
         {
-            if (Executor.IsMissed) // 빗나감: 피해, 흡혈, 부가효과 모두 없음
+            if (Executor.IsMissed)
             {
                 Executor.ShowMissOnce(Executor.Target);
                 return;
@@ -205,7 +204,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             if (data.ExecuteThreshold > 0f && !target.IsDead &&
                 targetHealth.CurrentHealth <= targetHealth.DefaultMaxHealth * data.ExecuteThreshold)
             {
-                target.ApplyDamage(targetHealth.CurrentHealth); // 보호로 줄지 않게 직접 처치
+                target.ApplyDamage(targetHealth.CurrentHealth); // 보호 무시
                 target.Effects.ShowPopup("처형!", new Color(1f, 0.3f, 0.3f));
             }
             Executor.ApplySynergy(target);

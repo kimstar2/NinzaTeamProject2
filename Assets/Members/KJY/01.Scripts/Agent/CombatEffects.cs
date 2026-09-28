@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent
 {
-    // 턴이 끝날 때마다 피해를 주는 상태. 값 순서는 에셋에 저장되므로 뒤에만 추가할 것
+    // 에셋 저장값: 뒤에만 추가
     public enum StatusType { None, Poison, Burn, Brand }
 
     public class CombatEffects
@@ -14,18 +14,15 @@ namespace Members.KJY._01.Scripts.Agent
         public int MarkedHits { get; private set; }
         public int GuardHits { get; private set; }
         public bool IsEmpowered { get; private set; }
-        // 빗나감은 이 대상이 공격할 때 확률로 피해가 들어가지 않는다.
         public float MissChance { get; private set; }
         public int MissTurns { get; private set; }
-        // 행동 불가: 남은 턴 동안 공격 명령이 넘어간다.
         public int StunTurns { get; private set; }
         public bool IsStunned => StunTurns > 0;
 
-        // ===== 표시용: 떠오르는 문구와 디버프 색 =====
         public enum DebuffKind { Mark, Poison, Burn, Brand, Miss, Stun, Weaken }
 
         public event Action<string, Color> Popup;
-        public event Action Cleared; // 전투 입장 등으로 모든 효과가 초기화될 때
+        public event Action Cleared;
         private readonly List<DebuffKind> _debuffOrder = new();
         private readonly Dictionary<DebuffKind, Color> _debuffColors = new();
 
@@ -45,7 +42,6 @@ namespace Members.KJY._01.Scripts.Agent
         public static DebuffKind ToKind(StatusType status) =>
             status == StatusType.Burn ? DebuffKind.Burn : status == StatusType.Brand ? DebuffKind.Brand : DebuffKind.Poison;
 
-        // 디버프가 걸릴 때 색을 기록한다. 가장 최근에 걸린, 아직 남아 있는 디버프 색이 캐릭터 색이 된다.
         public void RememberDebuff(DebuffKind kind, Color color)
         {
             _debuffOrder.Remove(kind);
@@ -76,15 +72,11 @@ namespace Members.KJY._01.Scripts.Agent
         }
         public event Action Changed;
 
-        // 도발: 남은 턴 동안 상대의 단일 공격이 이 대상에게 향한다
         public int TauntTurns { get; private set; }
-        // 피해 감소: 남은 턴 동안 받는 공격 피해를 비율만큼 줄인다 (보호와 별개로 곱해짐)
         public float ResistRatio { get; private set; }
         public int ResistTurns { get; private set; }
-        // 둔화: 남은 턴 동안 이 대상이 주는 피해가 비율만큼 줄어든다
         public float WeakenRatio { get; private set; }
         public int WeakenTurns { get; private set; }
-        // 공격력 증가: 남은 턴 동안 이 대상이 주는 피해가 비율만큼 늘어난다
         public float PowerUpRatio { get; private set; }
         public int PowerUpTurns { get; private set; }
         public float OutgoingMultiplier =>
@@ -121,7 +113,6 @@ namespace Members.KJY._01.Scripts.Agent
             Changed?.Invoke();
         }
 
-        // 무적: 남은 턴 동안 스킬 공격 피해를 모두 무시한다 (지속 피해는 들어감)
         public int InvulnerableTurns { get; private set; }
 
         public void AddInvulnerable(int turns)
@@ -131,7 +122,6 @@ namespace Members.KJY._01.Scripts.Agent
             Changed?.Invoke();
         }
 
-        // 반사: 남은 턴 동안 스킬로 받은 피해의 일부를 공격자에게 되돌린다.
         public float ReflectRatio { get; private set; }
         public int ReflectTurns { get; private set; }
 
@@ -143,7 +133,6 @@ namespace Members.KJY._01.Scripts.Agent
             Changed?.Invoke();
         }
 
-        // 해로운 효과(표식, 지속 피해, 빗나감, 행동 불가)만 지운다. 보호·격려·반사는 남는다.
         public void ClearDebuffs()
         {
             MarkedHits = 0;
@@ -155,7 +144,7 @@ namespace Members.KJY._01.Scripts.Agent
 
         private bool _stunBlockedThisTurn;
 
-        // 행동 불가면 이번 행동을 막는다. 보스는 한 턴에 여러 번 공격하므로 턴마다 1회만 막는다.
+        // 보스는 턴당 1회만 막음
         public bool TryBlockAction(bool isBoss)
         {
             if (!IsStunned) return false;
@@ -185,7 +174,6 @@ namespace Members.KJY._01.Scripts.Agent
 
         public bool HasStatus(StatusType status) => _dots.TryGetValue(status, out var dot) && dot.Turns > 0;
 
-        // 같은 상태가 다시 걸리면 더 센 쪽, 더 긴 쪽으로 갱신한다.
         public void AddStatus(StatusType status, float damage, int turns)
         {
             if (status == StatusType.None || turns <= 0 || damage <= 0f) return;
@@ -206,7 +194,6 @@ namespace Members.KJY._01.Scripts.Agent
 
         public bool RollMiss() => MissTurns > 0 && UnityEngine.Random.value < MissChance;
 
-        // 턴 종료 시 한 번 호출. 이번 턴에 받을 지속 피해 총량을 돌려주고 남은 턴을 줄인다.
         public float TickTurn()
         {
             float damage = 0f;

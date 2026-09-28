@@ -1,6 +1,6 @@
 # 기획 스킬 세팅
 
-기획서 스킬을 SkillDataSO로 옮기고 주사위·몬스터·제련에 연결한 것. 수치는 레벨 1 기준 (실제 값 = 수치 × 레벨).
+기획서 스킬을 SkillDataSO로 옮기고 주사위·몬스터·재련에 연결한 것. 수치는 레벨 1 기준 (실제 값 = 수치 × 레벨).
 
 ## 폴더
 
@@ -12,9 +12,9 @@
 | `Monster/TwilightShaman`, `Monster/WraithReaper` | 1스테이지 / 2스테이지 정예 스킬 |
 | `Faces/Unique`, `Faces/Boss`, `Faces/Monster` | 스킬 하나당 주사위 면 1개 |
 | `DiceLists` | 6면 주사위. `Player_*`는 PlayerData의 defaultDiceList, 나머지는 EnemyData의 DiceDataList |
-| `Forge Grade Up Pool` | 제련 등급 업 결과로 나올 수 있는 면 목록 |
+| `Forge Grade Up Pool` | 재련 등급 업 결과로 나올 수 있는 면 목록 |
 
-- 아이콘은 **스킬 데이터와 면 둘 다** 넣는다. 전투 주사위는 스킬 아이콘, 가방·제련·보상 카드는 면 아이콘을 쓴다.
+- 아이콘은 **스킬 데이터와 면 둘 다** 넣는다. 전투 주사위는 스킬 아이콘, 가방·재련·보상 카드는 면 아이콘을 쓴다.
 - 플레이어 아이콘: `06.Sprite/SkillSpriteSheet` (행: 탱커 → 전사 → 힐러 → 마법사, 행 안은 기획 목록 순서). 단, 추격은 `SkillSpriteSheet_14`.
 - 몬스터 아이콘: `06.Sprite/monster_skills_2` (행: 2스테이지 일반 9 → 2스테이지 보스 7 → 1스테이지 정예 6 → 2스테이지 정예 6). 1스테이지는 `06.Sprite/monster_skills_1` (1행 일반 12: 맹독 분사, 독 폭발, 가시 채찍, 뿌리 폭발, 환상적인 꽃가루, 가시 갑옷, 야수의 포효, 위장, 덩굴 속박, 덩굴 장벽, 레이더, 심호흡 / 2행 보스 7: 맹독 폭발, 독성 지대, 비상 식량, 가시 갑주, 거대 덩굴 속박, 원시림의 분노, 야수의 포식 — 그림 기준 순서).
 
@@ -47,7 +47,7 @@
 | suitableTypes | 이 면을 장착할 수 있는 직업. 비우면 모두. 몬스터 사용에는 영향 없음 |
 | IsArea | 광역. 대상 진영 전체(적 전체 / 아군 전체)에 적용. 플레이어는 대상을 고르지 않고 바로 연결 |
 | InvulnerableTurns | 대상이 그 턴 동안 스킬 공격 피해를 모두 무시 (무력화). 지속 피해는 들어감 |
-| HealMaxHealthRatio | 대상 최대 체력의 비율만큼 추가 회복 (재생의 빛 30%). 제련 레벨 1당 +25% |
+| HealMaxHealthRatio | 대상 최대 체력의 비율만큼 추가 회복 (재생의 빛 30%). 재련 레벨 1당 +25% |
 | TauntTurns | 도발: 그 턴 수 동안 상대의 단일 공격이 대상에게 향함 (압도 2턴) |
 | ResistRatio / ResistTurns | 받는 공격 피해 N% 감소 (압도 20%·2턴). 보호와 별개로 곱해짐 |
 | WeakenRatio / WeakenTurns | 둔화: 대상이 주는 피해 N% 감소 (서리지대 15%·2턴). 정화로 제거됨 |
@@ -92,7 +92,7 @@ AgentAttackType: Archer 0, Melee 1(전사), Magic 2, Healer 3, Tank 4.
 - StageDataSO `elite`: 정예 노드 전투에서 반드시 등장, 나머지는 일반 몹. 두 정예는 일반 목록에서 뺐다.
 - EnemyDataSO `FixedHealth`: 0보다 크면 스테이지·등급 배율 없이 고정 체력.
 
-## 제련 (BattleInventory)
+## 재련 (BattleInventory)
 
 기준 면 1개 + 재료 면 2개. 재료 등급을 기준 면 등급과 비교한다.
 
@@ -106,7 +106,7 @@ AgentAttackType: Archer 0, Melee 1(전사), Magic 2, Healer 3, Tank 4.
 - 기본 비용 = 20G × 기준 면 레벨. 최대 레벨 3 (등급 업은 레벨과 무관).
 - 등급 업 후보: 풀 에셋의 다음 등급 면 중 기준 면을 쓸 수 있던 직업을 모두 유지하는 스킬 → 없으면 한 직업이라도 겹치는 스킬.
 - 재료가 자기 등급 안에서 강함도가 높을수록(기준보다 높은 등급 재료는 최고로 취급) 강함도 높은 스킬이 잘 나온다. 폭은 `gradeUpSpread`.
-- 제련 안내: `BattleAssist/Resources/ForgeTutorial` (전투 도움말 프리팹 복제). UpgradeManager가 제련 창 안에 생성한다. 문구는 프리팹의 pages에서 수정.
+- 재련 안내: `BattleAssist/Resources/ForgeTutorial` (전투 도움말 프리팹 복제). UpgradeManager가 재련 창 안에 생성한다. 문구는 프리팹의 pages에서 수정.
 - 새 면을 만들면 풀 에셋에도 넣어야 한다. 힐러 전용 일반 스킬(심호흡)은 힐러용 희귀 스킬이 없어 레벨 +1이 된다.
 
 ## 연출

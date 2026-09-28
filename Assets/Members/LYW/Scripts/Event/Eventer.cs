@@ -34,7 +34,8 @@ namespace Members.LYW.Scripts.Event
             foreach (var player in storage.Instance.GetRunTimePlayerData())
             {
                 if (changeStatusData.health > 0) player.Heal(changeStatusData.health);
-                else player.TakeDamage(-changeStatusData.health);
+                else if (changeStatusData.health < 0) player.TakeDamage(-changeStatusData.health);
+                if (changeStatusData.healMaxHealthRatio > 0f) player.Heal(player.MaxHealth * changeStatusData.healMaxHealthRatio);
             }
         }
     }

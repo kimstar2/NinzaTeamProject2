@@ -29,7 +29,7 @@ public class UpgradeManager : MonoBehaviour
     private readonly RewardDiceFragmentSO[] _selected = new RewardDiceFragmentSO[3];
     private readonly List<BattleRewardItem> _items = new();
     private BattleInventory _inventory;
-    [SerializeField, Tooltip("[제련 정보] 버튼과 설명창. 지도 복귀 버튼 왼쪽에 자동 배치")] private ForgeTutorial tutorialPrefab;
+    [SerializeField, Tooltip("[재련 정보] 버튼과 설명창. 지도 복귀 버튼 왼쪽에 자동 배치")] private ForgeTutorial tutorialPrefab;
     private int _slot;
     private bool _busy;
     private bool _lastGradeUp;
@@ -45,7 +45,6 @@ public class UpgradeManager : MonoBehaviour
             int slot = i;
             slotButtons[i].onClick.AddListener(() => SelectSlot(slot));
         }
-        // 전투 도움말과 같은 모양의 [제련 정보] 버튼과 설명창. 제련 창이 열릴 때 같이 보인다.
         var tutorial = tutorialPrefab != null ? tutorialPrefab : Resources.Load<ForgeTutorial>("ForgeTutorial");
         if (tutorial != null)
         {
@@ -55,7 +54,6 @@ public class UpgradeManager : MonoBehaviour
         }
     }
 
-    // 제련 창 안에서 이 매니저의 Close(지도 복귀)를 부르는 버튼
     private Button FindMapButton()
     {
         foreach (var button in panelRoot.GetComponentsInChildren<Button>(true))
@@ -147,8 +145,8 @@ public class UpgradeManager : MonoBehaviour
         bool gradeUp = plan.Mode == BattleInventory.ForgeMode.GradeUp;
         float resultLevel = plan.Mode == BattleInventory.ForgeMode.Enhance ? plan.ResultLevel : hasTarget ? target.Level : 1f;
         bool revealResult = !resultCard.gameObject.activeSelf;
-        resultCard.gameObject.SetActive(hasTarget && !gradeUp); // 등급 업 결과는 무작위라 카드 대신 설명만 보여준다
-        resultTitle.text = gradeUp ? "등급 상승" : "제련 후";
+        resultCard.gameObject.SetActive(hasTarget && !gradeUp);
+        resultTitle.text = gradeUp ? "등급 상승" : "재련 후";
         currentDescription.text = hasTarget ? Describe(target, target.Level) : "기준 면을 고르세요.\n\n재료 면의 등급에 따라 레벨이 오르거나 등급이 오릅니다.";
         resultDescription.text = !hasTarget ? "강화 후의 스킬 수치를\n여기서 비교할 수 있습니다." :
             gradeUp ? $"{DiceGradeSO.GetName(plan.ResultGrade)} 등급 스킬로 바뀝니다.\n\n적합 직업은 유지되고 Lv.1부터 시작합니다.\n좋은 재료를 넣을수록 강한 스킬이 나오기 쉽습니다." :
@@ -159,7 +157,7 @@ public class UpgradeManager : MonoBehaviour
             if (revealResult) resultCard.Reveal();
         }
         goldText.text = _inventory != null ? $"보유 골드  {_inventory.Gold} G" : "모험을 시작한 뒤 이용할 수 있습니다.";
-        string action = gradeUp ? "등급 상승" : "제련하기";
+        string action = gradeUp ? "등급 상승" : "재련하기";
         int cost = plan.Mode != BattleInventory.ForgeMode.None ? plan.Cost : hasTarget ? _inventory.GetForgeCost(target.Level) : 0;
         costText.text = hasTarget ? $"{action}  ·  {cost} G" : action;
         string reason = "전투에서 획득한 면 3개가 필요합니다.";
@@ -199,11 +197,11 @@ public class UpgradeManager : MonoBehaviour
         resultCard.Bind(_selected[0]);
         resultCard.Reveal();
         var face = _selected[0].DiceData;
-        resultTitle.text = _lastGradeUp ? "등급 상승 완료" : "제련 완료";
+        resultTitle.text = _lastGradeUp ? "등급 상승 완료" : "재련 완료";
         resultDescription.text = Describe(_selected[0], _selected[0].Level);
         notice.text = _lastGradeUp
             ? $"{face.MainName} ({(face.DiceGrade != null ? face.DiceGrade.DisplayName : "일반")}) 스킬로 바뀌었습니다. 면공방에서 장착할 수 있습니다."
-            : $"{face.MainName} · Lv.{_selected[0].Level:0.#} 제련 완료. 면공방에서 장착할 수 있습니다.";
+            : $"{face.MainName} · Lv.{_selected[0].Level:0.#} 재련 완료. 면공방에서 장착할 수 있습니다.";
     }
 
     public void Close() { if (!_busy) StartCoroutine(Leave()); }

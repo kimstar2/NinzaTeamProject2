@@ -24,6 +24,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         [SerializeField] private MonoParticle rollParticle;
         private EnemyDataSO _enemyData;
         private float _level = 1f;
+        private bool _revealed;
         public UnityEvent onDiceDataBind;
         public SkillDataStruct CurrentSkillData { get; private set; }
         public DiceDataSO CurrentDiceData { get; private set; }
@@ -61,6 +62,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             CurrentDiceData = null;
             CurrentSkillData = default;
             _level = 1f;
+            _revealed = false;
             titleTMP.SetText(string.Empty);
             descTMP.SetText(string.Empty);
             // foreach (var icon in iconImage) icon.SetColor(new Color(46f,46f,46f));
@@ -71,6 +73,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         private void HandleDiceDataBind(OnEnemyDiceDataBind evt)
         {
             if (evt.EnemyType != enemyType) return;
+            if (evt.RollType == EnemyRollType.Refresh && evt.DiceData != CurrentDiceData) return;
             CurrentDiceData = evt.DiceData;
             _level = evt.Level;
 
@@ -82,7 +85,20 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
                 case EnemyRollType.Roll:
                     DataBind();
                     break;
+                case EnemyRollType.Refresh:
+                    RefreshDescription();
+                    break;
             }
+        }
+
+        private void RefreshDescription()
+        {
+            if (!_revealed || _enemyData == null || CurrentDiceData == null) return;
+            CurrentSkillData = CurrentDiceData.GetSkillDataStruct(_enemyData.AttackType);
+            if (CurrentSkillData.SkillData == null) return;
+            string rankInfo = _enemyData.Rank == EnemyRank.Boss
+                ? $"보스 · 라운드당 최대 {DiceBattleManager.MaxBossRetaliations}회 반격\n" : string.Empty;
+            descTMP.SetText(rankInfo + CurrentSkillData.SkillData.GetDescription(_level, true));
         }
 
         private void DataBind()
@@ -104,6 +120,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
             });
             
             rollParticle.SetParticleColor(CurrentDiceData.DiceGrade.GradeColor);
+            _revealed = true;
             rollParticle.PlayParticle();
             
             onDiceDataBind?.Invoke();

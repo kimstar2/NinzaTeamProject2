@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 namespace Members.KJY._01.Scripts.UI
 {
-    // 전투 도움말(BattleTutorial)과 같은 UI로 제련 설명을 보여준다.
-    // 전투 도움말은 직접 조작해야 넘어가지만, 이쪽은 [다음] 버튼으로 페이지를 넘긴다.
     public class ForgeTutorial : MonoBehaviour
     {
         private const string SeenKey = "OverRoll.ForgeTutorial.v1";
@@ -30,7 +28,7 @@ namespace Members.KJY._01.Scripts.UI
 
         private void OnEnable()
         {
-            if (helpButton != null) helpButton.interactable = true; // 원본 프리팹은 꺼진 상태로 저장돼 있음
+            if (helpButton != null) helpButton.interactable = true; // 프리팹 기본 비활성
             if (showOnFirstVisit && !_open && !PlayerPrefs.HasKey(SeenKey)) Show();
         }
 
@@ -52,7 +50,6 @@ namespace Members.KJY._01.Scripts.UI
             openMotion.Sequence();
         }
 
-        // [제련 정보] 버튼을 기준 버튼(지도 복귀) 왼쪽에 같은 크기로 옮긴다
         public void PlaceHelpButtonLeftOf(RectTransform neighbor, float spacing = 12f)
         {
             if (helpButton == null || neighbor == null) return;
@@ -73,7 +70,6 @@ namespace Members.KJY._01.Scripts.UI
             }
         }
 
-        // 설명창의 버튼. 마지막 페이지에서는 닫는다.
         public void Next()
         {
             if (!_open) return;
@@ -94,7 +90,7 @@ namespace Members.KJY._01.Scripts.UI
         {
             heading.text = pages[_page].title;
             description.text = pages[_page].description;
-            progress.text = $"제련 안내  {_page + 1} / {pages.Length}";
+            progress.text = $"재련 안내  {_page + 1} / {pages.Length}";
             if (nextLabel != null) nextLabel.text = _page + 1 >= pages.Length ? "닫기" : "다음";
             pageMotion.Sequence();
         }

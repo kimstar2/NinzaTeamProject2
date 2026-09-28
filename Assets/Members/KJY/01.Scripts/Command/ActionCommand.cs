@@ -40,7 +40,6 @@ namespace Members.KJY._01.Scripts.Command
 
         private bool TryExecuteSkill()
         {
-            // 행동 불가 상태면 이번 공격은 넘어간다 (보스는 턴마다 1회만)
             bool isBoss = Attacker is EnemySelector enemy && enemy.RuntimeEnemyData != null &&
                           enemy.RuntimeEnemyData.Rank == EnemyRank.Boss;
             if (Attacker == null || TargetSelector == null || Attacker.IsDead || TargetSelector.IsDead)

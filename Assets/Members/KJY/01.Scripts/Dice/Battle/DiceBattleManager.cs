@@ -73,7 +73,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         private void ConnectLine(PlayerSelector getSelector)
         {
             if (!TryGetValue(getSelector , out AbstractSelector targetSelector)) return;
-            // 자신·광역 스킬(자기에게 연결)은 연결선을 그리지 않는다
             if (targetSelector == getSelector)
             {
                 RemoveLine(getSelector);
@@ -119,7 +118,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             clicked.BeginSelection();
             var skill = clicked.CurrentSkill;
             if (skill?.Target == SkillDataSO.TargetType.Self) TryConnectTarget(clicked);
-            else if (skill != null && skill.IsArea) TryConnectTarget(clicked); // 광역은 자신 스킬처럼 대상을 고르지 않음
+            else if (skill != null && skill.IsArea) TryConnectTarget(clicked);
         }
 
         private void HandleTargetSelected(OnEnemySelect evt) => TryConnectTarget(evt.EnemySelector);
@@ -129,7 +128,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             if (IsBattle || !pRollManager.AllDiceRollEnd || CurrentPlayerSelector == null || !CurrentPlayerSelector.IsSelect ||
                 CurrentPlayerSelector.CurrentSkill == null) return false;
             var skill = CurrentPlayerSelector.CurrentSkill;
-            // 광역은 자기 자신에게 연결해 두고, 실제 대상은 실행할 때 정한다
             bool areaSelf = skill.IsArea && target == CurrentPlayerSelector;
             if (!areaSelf && !skill.CanTarget(CurrentPlayerSelector, target)) return false;
             AddOrMoveToLast(CurrentPlayerSelector, target);
@@ -229,7 +227,7 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         }
         
         
-        // 스킬의 대상 규칙에 따라 살아 있는 플레이어 중 하나를 고른다. Default면 null(기존 방식 사용)
+        // Default: null
         private PlayerSelector PickPlayerTarget(TargetRule rule)
         {
             if (rule == TargetRule.Default) return null;
@@ -287,7 +285,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                         target = _players.FirstOrDefault(player => player != null && !player.IsDead);
                 }
                 if (target == null) continue;
-                // 보스 연속 행동은 단일 대상 공격에만. 광역은 한 번만 쓴다.
                 int actions = enemy.RuntimeEnemyData.Rank == EnemyRank.Boss && !enemy.CurrentSkill.IsArea &&
                     enemy.CurrentSkill.Target == SkillDataSO.TargetType.Enemy ? MaxBossRetaliations : 1;
                 for (int i = 0; i < actions; i++) commands.Add(new ActionCommand(enemy, target));

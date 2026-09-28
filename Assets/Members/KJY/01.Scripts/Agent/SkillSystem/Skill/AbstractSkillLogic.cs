@@ -30,11 +30,10 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             float value = Executor.SkillData.GetScaledStat(statType, BaseLevel) * Executor.PowerMultiplier;
             if (statType == ApplyStatType.Damage && ServiceLocator.TryGet<IDamageModifiers>(out var modifiers))
                 value *= modifiers.GetOutgoingMultiplier(Executor.Attacker.AgentData);
-            if (statType == ApplyStatType.Damage) value *= Executor.Attacker.Effects.OutgoingMultiplier; // 둔화
+            if (statType == ApplyStatType.Damage) value *= Executor.Attacker.Effects.OutgoingMultiplier; // 둔화·공격력 증가
             return value;
         }
 
-        // 광역이면 대상 진영 전체, 아니면 받은 대상 한 명에게 적용
         protected void ApplyConfiguredStats(AbstractSelector target)
         {
             if (Executor.IsMissed)
@@ -67,7 +66,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             Executor.ApplySynergy(target);
         }
 
-        // 반사 상태인 대상을 때리면 실제로 깎인 체력의 일부가 공격자에게 되돌아온다 (보호로 줄지 않음)
         protected void Reflect(AbstractSelector target, float dealt)
         {
             var attacker = Executor.Attacker;

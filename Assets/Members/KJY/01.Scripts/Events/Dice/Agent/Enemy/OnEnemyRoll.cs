@@ -6,7 +6,8 @@ namespace Members.KJY._01.Scripts.Events.Dice.Agent.Enemy
     public enum EnemyRollType
     {
         DeadRoll,
-        Roll
+        Roll,
+        Refresh // 수치만 갱신
     }
     public class OnEnemyRoll : GameEvent
     {

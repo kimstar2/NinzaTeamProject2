@@ -54,7 +54,6 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
                 i.SetColor(Color.white);
             });
             lockChecker.RefreshColor();
-            // 고정된 주사위는 다른 주사위를 굴려도 면이 그대로라 갱신 연출을 다시 틀지 않는다
             if (lockChecker != null && lockChecker.IsLocked) return;
             rollParticle.SetParticleColor(diceData.DiceGrade.GradeColor);
             rollParticle.PlayParticle();

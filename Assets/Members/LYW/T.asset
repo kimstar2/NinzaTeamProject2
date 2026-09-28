@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20d44d966534a0fb2396561971898c5, type: 3}
   m_Name: T
   m_EditorClassIdentifier: Assembly-CSharp::Members.LYW.Scripts.Event.ChangeStatusDataSO
-  health: 10
+  health: 0
+  healMaxHealthRatio: 0.5

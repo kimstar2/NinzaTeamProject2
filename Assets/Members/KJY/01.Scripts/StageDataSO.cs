@@ -37,7 +37,7 @@ namespace Members.KJY._01.Scripts
             int first = Mathf.RoundToInt(progress * (enemies.Length - width));
             var candidates = new List<EnemyDataSO>();
             bool hasElite = rank == EnemyRank.Elite && elite != null;
-            if (hasElite) picked[0] = elite; // 정예가 앞에 서고 나머지는 일반 적으로 채움
+            if (hasElite) picked[0] = elite;
             for (int i = hasElite ? 1 : 0; i < count; i++)
             {
                 if (rank == EnemyRank.Boss) { picked[i] = boss; break; }

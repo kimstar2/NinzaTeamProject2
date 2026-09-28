@@ -106,8 +106,7 @@ namespace Members.KJY._01.Scripts.Agent.Enemy.Dice
         private void HandleRiskPenaltyChanged(OnRiskPenaltyChanged obj)
         {
             if (_mySelector.IsDead || savedDiceData == null) return;
-            eventChannel.RaiseEvent(new OnEnemyDiceDataBind(savedDiceData, enemyType, EnemyRollType.Roll, _mySelector.GetLevel()));
-            onRollReceived?.Invoke();
+            eventChannel.RaiseEvent(new OnEnemyDiceDataBind(savedDiceData, enemyType, EnemyRollType.Refresh, _mySelector.GetLevel()));
         }
 
         private void KillApply()

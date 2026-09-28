@@ -6,7 +6,6 @@ using Members.KJY._01.Scripts.Agent;
 
 namespace Members.KJY._01.Scripts.Command
 {
-    // 턴의 모든 행동이 끝난 뒤 독·화상 피해를 주고 상태 턴을 줄인다.
     public class StatusTickCommand : ICommand
     {
         private const float TickDelay = 0.4f;
@@ -28,7 +27,7 @@ namespace Members.KJY._01.Scripts.Command
                 if (selector == null || selector.IsDead || selector.AgentData == null) continue;
                 float damage = selector.Effects.TickTurn();
                 if (damage <= 0f) continue;
-                selector.ApplyDamage(damage); // 지속 피해는 보호로 줄지 않음
+                selector.ApplyDamage(damage); // 보호 무시
                 anyDamage = true;
             }
             if (anyDamage)

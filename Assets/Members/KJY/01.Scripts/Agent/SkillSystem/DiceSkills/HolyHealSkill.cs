@@ -34,17 +34,15 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
             PlaySkillSound();
-            // 광역이면 아군 전체, 아니면 대상 한 명
             foreach (var target in Executor.GetTargets())
             {
                 if (target == null || target.IsDead) continue;
-                if (target != Executor.Target) // 주 대상은 이미 파티클이 나옴
+                if (target != Executor.Target)
                     PlayParticle(HealParticle, target.MyAgent.transform.position + effectOffset);
                 var health = target.MyAgent.HealthModule;
-                // 정수 비율로 비교해서 정확히 35%인 체력도 Mono의 소수 오차 없이 포함한다.
+                // 35% 경계 오차 방지
                 bool isEmergency = health.CurrentHealth * 100f <= health.DefaultMaxHealth * 35f;
                 float multiplier = emergencyHeal && isEmergency ? 2f : 1f;
-                // 고정 회복량 + 대상 최대 체력 % 회복
                 float heal = GetStat(ApplyStatType.Heal) * multiplier +
                              health.DefaultMaxHealth * Executor.SkillData.GetHealRatio(BaseLevel) * Executor.PowerMultiplier;
                 if (heal > 0f) target.ApplyStat(ApplyStatType.Heal, heal);

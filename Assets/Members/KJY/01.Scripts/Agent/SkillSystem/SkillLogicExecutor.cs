@@ -23,14 +23,13 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         public AbstractSelector Target { get; private set; }
         public SkillDataSO SkillData { get; private set; }
         public float PowerMultiplier { get; private set; } = 1f;
-        public bool IsMissed { get; private set; } // 빗나감 상태면 이번 시전의 피해가 전부 빗나감
+        public bool IsMissed { get; private set; }
         private readonly HashSet<AbstractSelector> _effectApplied = new();
         private readonly List<AbstractSelector> _targets = new();
         private bool _missShown;
         
         public void SkillFinished()
         {
-            // 자폭: 공격이 모두 끝난 뒤 시전자가 쓰러진다
             if (_executed && SkillData != null && SkillData.SelfDestruct && Attacker != null && !Attacker.IsDead)
             {
                 Attacker.Effects.ShowPopup("자폭!", new Color(1f, 0.45f, 0.3f));
@@ -40,14 +39,13 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             OnSkillFinished?.Invoke();
         }
 
-        private bool _executed; // 대상이 없어 바로 끝난 경우에는 자폭하지 않음
+        private bool _executed; // 즉시 종료 시 자폭 안 함
         public void SkillExecute(AbstractSelector attacker, AbstractSelector target, AgentType agentType, SkillDataSO skillData)
         {
-            // 광역 공격은 연출이 향할 대상을 상대 진영 가운데로 정한다 (피해는 전체)
             if (skillData.IsArea && skillData.Target == SkillDataSO.TargetType.Enemy)
                 target = FindAreaCenter(attacker, skillData) ?? target;
             else if (skillData.Target == SkillDataSO.TargetType.Enemy)
-                target = FindTaunter(attacker, skillData) ?? target; // 도발 중인 상대가 있으면 단일 공격은 그쪽으로
+                target = FindTaunter(attacker, skillData) ?? target;
             Target = target;
             Attacker = attacker;
             AgentType = agentType;
@@ -86,7 +84,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         {
             if (SkillData.HealthCost <= 0f) return;
             var health = Attacker.MyAgent.HealthModule;
-            float cost = Mathf.Min(SkillData.HealthCost, health.CurrentHealth - 1f); // 소모로 죽지는 않게 1은 남김
+            float cost = Mathf.Min(SkillData.HealthCost, health.CurrentHealth - 1f); // 최소 1 남김
             if (cost > 0f) Attacker.ApplyDamage(cost);
         }
 
@@ -106,7 +104,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             return null;
         }
 
-        // 살아 있는 상대를 위에서부터 줄 세웠을 때 가운데. 짝수면 가운데 두 명 중 위쪽.
+        // 가운데, 짝수면 위쪽
         private static AbstractSelector FindAreaCenter(AbstractSelector attacker, SkillDataSO skillData)
         {
             var candidates = new List<AbstractSelector>();
@@ -121,7 +119,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             return candidates[(candidates.Count - 1) / 2];
         }
 
-        // 광역이면 대상 진영 전체, 아니면 지정한 대상 한 명
         public List<AbstractSelector> GetTargets()
         {
             _targets.Clear();
@@ -136,7 +133,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             return _targets;
         }
 
-        // 빗나감 문구는 한 번 시전에 한 번만 띄운다
         public void ShowMissOnce(AbstractSelector target)
         {
             if (_missShown || target == null) return;
@@ -146,7 +142,6 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 
         public void ApplySynergy() => ApplySynergy(Target);
 
-        // 대상마다 한 번씩 부가효과(정화, 반사, 상태이상, 빗나감, 행동 불가, 시너지)를 건다
         public void ApplySynergy(AbstractSelector target)
         {
             if (target == null || target.IsDead || IsMissed || !_effectApplied.Add(target)) return;
@@ -156,7 +151,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
 
             if (SkillData.CleanseDebuffs)
             {
-                effects.ClearDebuffs(); // 새 효과를 걸기 전에 먼저 정화
+                effects.ClearDebuffs();
                 effects.ShowPopup("정화!", new Color(0.6f, 1f, 1f));
             }
             if (SkillData.PowerUpRatio > 0f && SkillData.PowerUpTurns > 0)
@@ -188,7 +183,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
             if (SkillData.ReflectRatio > 0f && SkillData.ReflectTurns > 0)
             {
                 effects.AddReflect(SkillData.ReflectRatio, SkillData.ReflectTurns);
-                effects.ShowPopup("반사 태세", new Color(0.85f, 0.9f, 1f)); // "반사!"는 실제로 되돌려줄 때 뜬다
+                effects.ShowPopup("반사 태세", new Color(0.85f, 0.9f, 1f));
             }
             if (SkillData.Status != StatusType.None && SkillData.StatusDamage > 0f && SkillData.StatusTurns > 0)
             {

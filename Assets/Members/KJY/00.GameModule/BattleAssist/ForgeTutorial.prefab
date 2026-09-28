@@ -243,7 +243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC81C\uB828 \uC548\uB0B4  1 / 5"
+  m_text: "\uC7AC\uB828 \uC548\uB0B4  1 / 5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6d7a2a91b6ebd46aee11a58156a25a, type: 2}
   m_sharedMaterial: {fileID: 44029733490205967, guid: bf6d7a2a91b6ebd46aee11a58156a25a, type: 2}
@@ -378,11 +378,11 @@ MonoBehaviour:
   pageMotion: {fileID: 823904784186145214}
   showOnFirstVisit: 1
   pages:
-  - title: "\uC81C\uB828\uC774\uB780?"
+  - title: "\uC7AC\uB828\uC774\uB780?"
     description: "\uC804\uD22C\uC5D0\uC11C \uC5BB\uC740 \uC8FC\uC0AC\uC704 \uBA74\uC744
       \uAC15\uD654\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n\uCCAB \uBC88\uC9F8 \uCE78\uC5D0\uB294
       \uAC15\uD654\uD560 \uBA74,\n\uB098\uBA38\uC9C0 \uB450 \uCE78\uC5D0\uB294 \uC18C\uBAA8\uD560
-      \uC7AC\uB8CC \uBA74\uC744 \uB123\uC2B5\uB2C8\uB2E4.\n\uC81C\uB828\uC5D0\uB294
+      \uC7AC\uB8CC \uBA74\uC744 \uB123\uC2B5\uB2C8\uB2E4.\n\uC7AC\uB828\uC5D0\uB294
       \uACE8\uB4DC\uAC00 \uC18C\uBAA8\uB429\uB2C8\uB2E4."
   - title: "\uC2A4\uD0AC \uB4F1\uAE09"
     description: "\uB4F1\uAE09\uC740 \uC77C\uBC18 < \uD76C\uADC0 < \uC804\uC124\n\uC88B\uC740
@@ -1602,7 +1602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC81C\uB828 \uC815\uBCF4"
+  m_text: "\uC7AC\uB828 \uC815\uBCF4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf6d7a2a91b6ebd46aee11a58156a25a, type: 2}
   m_sharedMaterial: {fileID: 44029733490205967, guid: bf6d7a2a91b6ebd46aee11a58156a25a, type: 2}

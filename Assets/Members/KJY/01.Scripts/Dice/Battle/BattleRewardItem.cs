@@ -44,7 +44,6 @@ namespace Members.KJY._01.Scripts.Dice.Battle
             icon.color = Color.white;
         }
 
-        // 도감에서 아직 얻지 못한 면: 아이콘 실루엣만 진한 회색으로 보여주고 정보는 가린다.
         public void BindLocked(DiceDataSO face)
         {
             icon.sprite = face != null ? face.Icon : null;

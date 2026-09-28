@@ -8,14 +8,11 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Agent
 {
-    // 캐릭터 머리 위에 "독!", "빗나감" 같은 문구를 띄우고, 디버프가 걸려 있는 동안 캐릭터 색을 바꾼다.
-    // AbstractSelector가 자동으로 붙이므로 씬에 따로 배치할 필요 없다.
     public class CombatStatusVisual : MonoBehaviour
     {
-        // 한글이 나오는 폰트. AgentEffectsView가 자기 글자의 폰트를 등록한다.
         public static TMP_FontAsset PopupFont { get; set; }
 
-        private const float PopupInterval = 0.18f; // 문구 여러 개가 겹치지 않게 순서대로 띄움
+        private const float PopupInterval = 0.18f;
         private const float PopupDuration = 0.9f;
         private const float TintStrength = 0.5f;
 
@@ -65,7 +62,7 @@ namespace Members.KJY._01.Scripts.Agent
             _popupRoutine = null;
         }
 
-        // 전투 중 내려오는 패널 등 모든 UI보다 위에 그리도록 최상단 오버레이 캔버스에 띄운다
+        // 최상단 오버레이
         private static Canvas _popupCanvas;
 
         private static Canvas PopupCanvas
@@ -139,7 +136,7 @@ namespace Members.KJY._01.Scripts.Agent
             if (tint == _appliedTint) return;
             _appliedTint = tint;
             ApplyTint();
-            // 피격 깜빡임이 끝나면서 색을 덮어쓸 수 있어서 잠시 뒤 한 번 더 적용
+            // 피격 깜빡임 후 재적용
             _reapplyTween?.Kill();
             _reapplyTween = DOVirtual.DelayedCall(0.25f, ApplyTint);
         }
@@ -154,7 +151,6 @@ namespace Members.KJY._01.Scripts.Agent
             body.color = color;
         }
 
-        // 전투 입장 등으로 효과가 초기화되면 색은 캐릭터 데이터가 다시 칠하므로 기록만 지운다
         private void ForgetTint()
         {
             _reapplyTween?.Kill();

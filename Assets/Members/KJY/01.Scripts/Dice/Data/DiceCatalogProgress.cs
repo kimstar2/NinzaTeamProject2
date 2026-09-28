@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.Dice.Data
 {
-    // 한 번이라도 얻은 면을 기억한다. 런이 끝나도 남아야 해서 PlayerPrefs에 저장.
     public static class DiceCatalogProgress
     {
         private const string Key = "DiceCatalog.Discovered.v2";
@@ -23,7 +22,7 @@ namespace Members.KJY._01.Scripts.Dice.Data
             }
         }
 
-        // 에셋 이름이 같은 면이 있어서(예: 처형 / 마무리의 면 둘 다 Execution Face) 표시 이름까지 붙여 구분한다
+        // 에셋 이름 중복 대비
         private static string Id(DiceDataSO face) => face.name + "#" + face.MainName;
 
         public static bool IsDiscovered(DiceDataSO face) => face != null && Discovered.Contains(Id(face));

@@ -27,14 +27,12 @@ namespace Members.KJY._01.Scripts.Dice.Data
             return default;
         }
 
-        // 이 직업이 이 면을 장착·사용할 수 있는지 (스킬이 있고 적합 직업일 때)
         public bool CanUse(AgentAttackType attackType)
         {
             var skill = GetSkillDataStruct(attackType).SkillData;
             return skill != null && skill.IsSuitable(attackType);
         }
 
-        // 이 면을 사용할 수 있는 직업 목록
         public List<AgentAttackType> GetUsableTypes()
         {
             var types = new List<AgentAttackType>();
@@ -44,7 +42,6 @@ namespace Members.KJY._01.Scripts.Dice.Data
             return types;
         }
 
-        // 면의 강함도 (사용 가능한 스킬 중 가장 높은 값). 플레이어에게는 보이지 않는 확률 보정용
         public int Strength
         {
             get
@@ -63,7 +60,6 @@ namespace Members.KJY._01.Scripts.Dice.Data
             var description = new StringBuilder(Description);
             if (SkillDataStructs == null) return description.ToString();
 
-            // 같은 스킬을 여러 직업이 공유하면 한 번만 쓰고 직업을 묶어서 표시
             var written = new List<SkillDataSO>();
             foreach (var entry in SkillDataStructs)
             {
@@ -76,7 +72,6 @@ namespace Members.KJY._01.Scripts.Dice.Data
                 if (roles.Count == 0) continue;
                 written.Add(skill);
                 if (description.Length > 0) description.AppendLine().AppendLine();
-                // 면 이름이 곧 스킬 이름이면 스킬 이름은 반복하지 않는다
                 if (skill.SkillName == MainName) description.Append("사용 직업: ").AppendLine(string.Join("·", roles));
                 else description.Append('[').Append(string.Join("·", roles)).Append("] ").AppendLine(skill.SkillName);
                 description.Append(skill.GetDescription(level));
