@@ -328,6 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cf276579edaa4af72d7f5982e5af5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.EarthFurySkill
+  skillSound: {fileID: 11400000, guid: d596e68fe5671d74ea685b435d534c30, type: 2}
   <ActionSeq>k__BackingField: {fileID: 1100933919568529571}
   <ReturnSeq>k__BackingField: {fileID: 2086400290503767042}
   castPosition: {fileID: 1074923161155690128}

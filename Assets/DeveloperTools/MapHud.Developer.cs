@@ -1,4 +1,3 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using Members.CJY.Scripts;
 
 namespace Members.KJY._01.Scripts.UI
@@ -11,4 +10,3 @@ namespace Members.KJY._01.Scripts.UI
         }
     }
 }
-#endif

@@ -1,4 +1,3 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using System;
 using System.Collections.Generic;
 using TMPro;
@@ -30,7 +29,7 @@ namespace DeveloperTools
 
         internal bool IsSearchFocused => _search.isFocused;
 
-        internal NodeDeveloperToolsView(GameObject template, Transform owner, Action close, Action<int> tabChanged)
+        internal NodeDeveloperToolsView(GameObject template, Transform owner, Action close, Action<int> tabChanged, Action grantCoins)
         {
             _root = new GameObject("Developer Tools Canvas", typeof(RectTransform));
             _root.SetActive(false);
@@ -71,7 +70,7 @@ namespace DeveloperTools
             title.color = Color.white;
             title.raycastTarget = false;
             Position(title.rectTransform, 32, 22, 460, 48);
-            Position(Text(_window, "노드 이동과 주사위 면 지급", 19, Muted).rectTransform, 34, 72, 650, 30);
+            Position(Text(_window, "노드 이동 · 주사위 면 지급 · 코인 지급", 19, Muted).rectTransform, 34, 72, 650, 30);
             Position(Text(_window, "DEVELOPMENT", 16, Purple).rectTransform, 34, 110, 240, 24);
             var closeButton = Button(_window, "닫기  ×", close, false);
             closeButton.GetComponent<RectTransform>().anchorMin = closeButton.GetComponent<RectTransform>().anchorMax = Vector2.one;
@@ -91,6 +90,8 @@ namespace DeveloperTools
                 }, false);
                 Position((RectTransform)_tabs[i].transform, 32 + i * 254, 150, 244, 50);
             }
+            var coinButton = Button(_window, "코인 +100 지급", grantCoins, true);
+            Position((RectTransform)coinButton.transform, 540, 150, 244, 50);
 
             var inputImage = Image(_window, "Search", new Color32(14, 19, 38, 255));
             TopStretch(inputImage.rectTransform, 32, 32, 218, 56);
@@ -330,4 +331,3 @@ namespace DeveloperTools
         public void Dispose() => Object.Destroy(_root);
     }
 }
-#endif

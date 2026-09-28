@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Hit Sound
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 8300000, guid: cfb3f31a3e4974faab3ecce1e8eb035f, type: 3}
+  clip: {fileID: 8300000, guid: 8f1e7b5908b75e348b9f7f42225f5fa0, type: 3}
   isLoop: 0
   randomizePitch: 0
   randomPitchModifier: 0.1
-  volume: 0.67
+  volume: 0.284
   pitch: 1
-  startTime: 0
-  endTime: 0.6225404
+  startTime: 0.17329471
+  endTime: 0.8094686

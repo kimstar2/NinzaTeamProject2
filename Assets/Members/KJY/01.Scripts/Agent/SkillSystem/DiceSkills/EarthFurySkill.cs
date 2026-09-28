@@ -61,6 +61,7 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         {
             if (!CanApplyStat || _isApplied) return;
             _isApplied = true;
+            PlaySkillSound();
             foreach (var target in Executor.GetTargets())
                 if (target != null && !target.IsDead)
                     PlayParticle(impactParticle, target.MyAgent.transform.position + effectOffset);

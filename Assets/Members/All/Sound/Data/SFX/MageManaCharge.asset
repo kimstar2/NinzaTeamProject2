@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: MageManaCharge
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 8300000, guid: 3eef450af9120234281c27e1da34d525, type: 3}
+  clip: {fileID: 8300000, guid: f8a117847466173429029467435e592a, type: 3}
   isLoop: 0
   randomizePitch: 0
   randomPitchModifier: 0.06
-  volume: 0.35
+  volume: 0.267
   pitch: 1
   startTime: 0
-  endTime: 0.44481775
+  endTime: 0.52497286

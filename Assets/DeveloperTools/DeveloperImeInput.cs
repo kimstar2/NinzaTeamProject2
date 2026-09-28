@@ -1,4 +1,3 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -58,4 +57,3 @@ namespace DeveloperTools
         protected override void OnDisable() { ReleaseKeyboard(); base.OnDisable(); }
     }
 }
-#endif

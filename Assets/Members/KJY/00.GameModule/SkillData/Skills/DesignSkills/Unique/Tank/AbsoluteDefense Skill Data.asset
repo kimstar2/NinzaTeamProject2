@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AbsoluteDefense Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 9170883273196856993, guid: 8b6aab026c345724ab9e333de443e7fc, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: d596e68fe5671d74ea685b435d534c30, type: 2}
   <SkillName>k__BackingField: "절대 방어"
   <Icon>k__BackingField: {fileID: 708013953597192102, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "모든 힘을 방어에 쏟아 아군 전체를 지킵니다."
