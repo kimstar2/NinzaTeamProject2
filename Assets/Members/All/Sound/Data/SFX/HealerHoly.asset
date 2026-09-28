@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: HealerHoly
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 8300000, guid: 368a40e727bab044bb5cdbb15f33327c, type: 3}
+  clip: {fileID: 8300000, guid: 545a11268f645814fa6d9c1d7453599f, type: 3}
   isLoop: 0
   randomizePitch: 1
   randomPitchModifier: 0.015
-  volume: 0.127
+  volume: 0.239
   pitch: 1
   startTime: 0
-  endTime: 0.99316627
+  endTime: 1.2897393

@@ -1,10 +1,10 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using DevLib.ServiceLocator;
 using Members.CJY.Scripts;
 using Members.KJY._01.Scripts.Agent.SkillSystem;
+using Members.KJY._01.Scripts.Dice.Battle;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.PSW.Code.InventorySystem;
 using UnityEngine;
@@ -33,7 +33,7 @@ namespace DeveloperTools
         {
             // Supports entering Play mode with domain/scene reload disabled.
             if (FindFirstObjectByType<NodeDeveloperTools>() != null) return;
-            var root = new GameObject("[Development Only] Node Tools");
+            var root = new GameObject("[Developer Tools] Node Tools");
             root.AddComponent<NodeDeveloperTools>();
             DontDestroyOnLoad(root);
         }
@@ -111,7 +111,7 @@ namespace DeveloperTools
                 {
                     _tab = tab;
                     PopulateRows();
-                });
+                }, GrantCoins);
             }
             _open = true;
             // Prevent clicks and keyboard navigation from reaching the map behind this modal.
@@ -180,6 +180,22 @@ namespace DeveloperTools
             }
         }
 
+        private void GrantCoins()
+        {
+            if (!ServiceLocator.TryGet<Inventory>(out var inventory) ||
+                inventory is not BattleInventory battleInventory || battleInventory == null)
+            {
+                _view.SetStatus("코인 인벤토리가 없습니다. 모험을 시작한 뒤 이용하세요.");
+                return;
+            }
+            int added = battleInventory.AddGold(100);
+            foreach (var hud in FindObjectsByType<Members.KJY._01.Scripts.UI.MapHud>(FindObjectsSortMode.None))
+                hud.DeveloperRefresh(_map);
+            _view.SetStatus(added == 100
+                ? $"코인 100개 지급 완료 · 보유 코인 {battleInventory.Gold:N0}개"
+                : $"보유 한도에 도달했습니다. {added}개 지급 · 보유 코인 {battleInventory.Gold:N0}개");
+        }
+
         private void Grant(DiceDataSO face)
         {
             if (!ServiceLocator.TryGet<Inventory>(out var inventory) || inventory == null)
@@ -219,4 +235,3 @@ namespace DeveloperTools
         }
     }
 }
-#endif

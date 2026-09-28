@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: TankerSound
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 8300000, guid: 368a40e727bab044bb5cdbb15f33327c, type: 3}
+  clip: {fileID: 8300000, guid: d671f20b0cb8d874d980bc366884c700, type: 3}
   isLoop: 0
   randomizePitch: 1
   randomPitchModifier: 0.015
   volume: 0.127
   pitch: 1
   startTime: 0
-  endTime: 0.99316627
+  endTime: 0.888

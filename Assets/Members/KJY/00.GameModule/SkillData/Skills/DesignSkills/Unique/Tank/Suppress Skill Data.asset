@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Suppress Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: cd27bce5409459348e30d8fd1fdbac9d, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: d596e68fe5671d74ea685b435d534c30, type: 2}
   <SkillName>k__BackingField: "제압"
   <Icon>k__BackingField: {fileID: -5480430519037691180, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "방패로 짓눌러 대상을 꼼짝 못 하게 만듭니다."

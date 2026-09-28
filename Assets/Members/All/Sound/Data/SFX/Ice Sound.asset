@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Ice Sound
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 8300000, guid: 368a40e727bab044bb5cdbb15f33327c, type: 3}
+  clip: {fileID: 8300000, guid: c1d2ade37ab32e448b9097513f97d795, type: 3}
   isLoop: 0
   randomizePitch: 0
   randomPitchModifier: 0.015
   volume: 0.127
   pitch: 1
   startTime: 0
-  endTime: 0.99316627
+  endTime: 8.04

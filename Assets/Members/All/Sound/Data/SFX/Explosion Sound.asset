@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Explosion Sound
   m_EditorClassIdentifier: SoundSystem_assembly::DevLib.SoundSystem.Runtime.SoundClipSO
   audioType: 0
-  clip: {fileID: 8300000, guid: 38a976763210c044b8a83b635c84cd44, type: 3}
+  clip: {fileID: 8300000, guid: 8518cc6233a21074b8008b3c7ce8a32d, type: 3}
   isLoop: 0
   randomizePitch: 1
   randomPitchModifier: 0.015
   volume: 0.127
   pitch: 1
   startTime: 0
-  endTime: 0.05
+  endTime: 2.16

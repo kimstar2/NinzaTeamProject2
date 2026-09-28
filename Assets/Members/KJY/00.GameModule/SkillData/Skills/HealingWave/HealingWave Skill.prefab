@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df7a227ed0e83f29ee37ab56e327352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills.HealingWaveSkill
+  skillSound: {fileID: 11400000, guid: 62c0cfe6dd164f15aabe4ebacbb2c274, type: 2}
   <ActionSeq>k__BackingField: {fileID: 7227542207265891081}
   <ReturnSeq>k__BackingField: {fileID: 7541012104427931188}
   castPosition: {fileID: 7435914405709250229}

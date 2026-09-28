@@ -1,4 +1,3 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using System.Collections.Generic;
 
 namespace Members.CJY.Scripts
@@ -31,4 +30,3 @@ namespace Members.CJY.Scripts
         }
     }
 }
-#endif

@@ -1,4 +1,3 @@
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
 using DevLib.ServiceLocator;
 using Members.KJY._01.Scripts.Service;
 
@@ -30,4 +29,3 @@ namespace Members.CJY.Scripts
         }
     }
 }
-#endif
