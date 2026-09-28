@@ -5,5 +5,8 @@
       <field name="_eventData" />
       <field name="buttons" />
     </type>
+    <type fullname="CompleteUI">
+      <field name="returnScene" />
+    </type>
   </assembly>
 </linker>

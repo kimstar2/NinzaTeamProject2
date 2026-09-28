@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 11400000}
+  - component: {fileID: 11400001}
   m_Layer: 0
   m_Name: EventChoiceRewards
   m_TagString: Untagged
@@ -146,3 +147,29 @@ MonoBehaviour:
     incomingPercent: 10
     battles: 5
     resultText: "환마의 숲에서 기침이 멎지 않습니다.\n다음 5번의 전투 동안 모든 아군이 받는 피해가 10% 증가합니다."
+  battleTransition: {fileID: 11400001}
+  battleChoices:
+  - eventData: {fileID: 11400000, guid: 7f70defdd9aa39d4388a4f672e480389, type: 2}
+    choiceIndex: 2
+  - eventData: {fileID: 11400000, guid: 7a084699b146b2e43808ad4305a626c6, type: 2}
+    choiceIndex: 2
+  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
+    choiceIndex: 0
+  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
+    choiceIndex: 2
+  - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
+    choiceIndex: 2
+--- !u!114 &11400001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d5811046ed4c9590e2086f24f264b6, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::Members.PSW.Code.InventorySystem.EventBattleTransition
+  eventScenePath: Assets/Members/LYW/Scenes/EventScene.unity
+  battleScenePath: Assets/Members/KJY/02.RealScene/RealScene.unity

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using Members.KJY._01.Scripts.Agent;
@@ -76,178 +76,169 @@ namespace Members.PSW.Code.Unit_Logic.Runtime.Skill.Logics.Combat_Instinct
 
         private Vector3 _startPos;
         private Vector3 _endPos;
+        private Transform _body;
+        private Transform _victim;
+        private Sequence _sequence;
         private bool _showLine;
-        private AbstractSelector _target;
+        private bool _impactApplied;
+        private int _cameraPriority;
+        private float _cameraSize;
+        private Transform _cameraTarget;
 
-        public override void Init(SkillLogicExecutor executor,float baseLevel)
+        public override void Init(SkillLogicExecutor executor, float baseLevel)
         {
-            base.Init(executor,baseLevel);
-
-            _startPos = executor.Attacker.DefaultPosition.position;
-            
-            vignette.alpha = 0;
-            
-            mainLine.SetPosition(0, Vector3.zero);
-            mainLine.SetPosition(1, Vector3.zero);
-            subLine1.SetPosition(0, Vector3.right * lineDistant.sub1Start + Vector3.up * lineDistant.upSubLine);
-            subLine1.SetPosition(1, Vector3.right * lineDistant.sub1Start + Vector3.up * lineDistant.upSubLine);
-            subLine2.SetPosition(0, Vector3.right * lineDistant.sub2Start + Vector3.up * lineDistant.downSubLine);
-            subLine2.SetPosition(1, Vector3.right * lineDistant.sub2Start + Vector3.up * lineDistant.downSubLine);
-            
-            Vector2 dir = executor.Target.DefaultPosition.position - executor.Attacker.DefaultPosition.position;
-            dir *= endLength;
-            _endPos = executor.Attacker.DefaultPosition.position + (Vector3)dir;
+            base.Init(executor, baseLevel);
+            Prepare(executor.Attacker.MyAgent.transform, executor.Target.MyAgent.transform);
         }
 
-        private void Update()
+        private void Prepare(Transform body, Transform victim)
         {
-            if (_showLine)
+            _sequence?.Kill();
+            _body = body;
+            _victim = victim;
+            _startPos = body.position;
+            Vector3 direction = victim.position - _startPos;
+            _endPos = _startPos + direction * endLength;
+            _impactApplied = false;
+            vignette.alpha = 0f;
+            lineParent.localScale = Vector3.one;
+            lineParent.position = _startPos + Vector3.up * 0.45f;
+            foreach (var line in new[] { mainLine, subLine1, subLine2 })
             {
-                // 실제 전투에서는 Executor의 공격자를, 테스트에서는 attacker를 따라감
-                Vector3 current = Executor != null ? Executor.Attacker.DefaultPosition.position : attacker.transform.position;
-                Vector3 dir = _startPos - current;
-                
-                mainLine.SetPosition(0, dir); //나중에 Executor.Attacker로 변경
-                subLine1.SetPosition(0, dir + Vector3.right * lineDistant.sub1Start + Vector3.up * lineDistant.upSubLine);
-                subLine2.SetPosition(0, dir + Vector3.right * lineDistant.sub2Start + Vector3.up * lineDistant.downSubLine);
+                line.useWorldSpace = true;
+                line.startColor = line.endColor = Color.white;
+                line.SetPosition(0, lineParent.position);
+                line.SetPosition(1, lineParent.position);
             }
+            if (targetCam != null)
+            {
+                _cameraPriority = targetCam.Priority;
+                _cameraSize = targetCam.Lens.OrthographicSize;
+                _cameraTarget = targetCam.Target.TrackingTarget;
+            }
+        }
+
+        private void LateUpdate()
+        {
+            if (!_showLine || _body == null) return;
+            Vector3 from = _startPos + Vector3.up * 0.45f;
+            Vector3 to = _body.position + Vector3.up * 0.45f;
+            mainLine.SetPosition(0, from);
+            mainLine.SetPosition(1, to);
+            subLine1.SetPosition(0, from + Vector3.up * lineDistant.upSubLine);
+            subLine1.SetPosition(1, to + Vector3.up * lineDistant.upSubLine);
+            subLine2.SetPosition(0, from + Vector3.up * lineDistant.downSubLine);
+            subLine2.SetPosition(1, to + Vector3.up * lineDistant.downSubLine);
         }
 
         [ContextMenu("Test Init")]
         public void TestInit()
         {
-            _startPos = attacker.transform.position;
-
-            vignette.alpha = 0;
-            
-            mainLine.SetPosition(0, Vector3.zero);
-            mainLine.SetPosition(1, Vector3.zero);
-            subLine1.SetPosition(0, Vector3.right * lineDistant.sub1Start + Vector3.up * lineDistant.upSubLine);
-            subLine1.SetPosition(1, Vector3.right * lineDistant.sub1Start + Vector3.up * lineDistant.upSubLine);
-            subLine2.SetPosition(0, Vector3.right * lineDistant.sub2Start + Vector3.up * lineDistant.downSubLine);
-            subLine2.SetPosition(1, Vector3.right * lineDistant.sub2Start + Vector3.up * lineDistant.downSubLine);
-            
-            Vector2 dir = target.transform.position - _startPos;
-            dir *= endLength;
-            _endPos = _startPos + (Vector3)dir;
+            if (attacker != null && target != null) Prepare(attacker.transform, target.transform);
         }
-        
+
         [ContextMenu("Test Skill")]
         public void TestSkill()
         {
-            _showLine = true;
-            Sequence seq = DOTween.Sequence();
-
-            seq.AppendInterval(timeSet.attackWaitDuration);
-            seq.AppendCallback(() => effectEvent.onLineStart?.Invoke());
-            seq.Append(attacker.transform.DOMove(_endPos, timeSet.attackerMoveDuration));
-            seq.AppendInterval(timeSet.waitFadeLineTime);
-            
-            seq.AppendCallback(() =>
-            {
-                targetCam.Target.TrackingTarget = target.transform;
-                targetCam.Priority = 15;
-            });
-            LineFadeOut(seq);
-
-            seq.AppendCallback(() => effect.transform.position = target.transform.position);
-            seq.AppendCallback(() => shinyEffect.transform.position = target.transform.position);
-            seq.Append(vignette.DOFade(1, 1f));
-            seq.AppendCallback(() => effectEvent.onEffectStart?.Invoke());
-            
-            seq.AppendInterval(timeSet.effectDuration/2);
-            seq.AppendCallback(() =>
-            {
-                effectEvent.onEffectImpact?.Invoke();
-                targetCam.Lens.OrthographicSize = 5;
-            });
-            seq.AppendCallback(() => ApplyStat());
-            seq.AppendInterval(timeSet.effectDuration/2);
-            
-            seq.AppendCallback(() => effectEvent.onEffectEnd?.Invoke());
-            seq.AppendCallback(() =>
-            {
-                targetCam.Priority = 0;
-            });
-            seq.Append(vignette.DOFade(0, 1f));
-            seq.Append(attacker.transform.DOMove(_startPos, 1f));
-            seq.AppendCallback(() => onSkillFinished?.Invoke());
+            TestInit();
+            if (_body != null && _victim != null) Execute();
         }
-        
+
         public override void Execute()
         {
+            _sequence?.Kill();
             _showLine = true;
-            Sequence seq = DOTween.Sequence();
-
-            seq.AppendInterval(timeSet.attackWaitDuration);
-            seq.AppendCallback(() => effectEvent.onLineStart?.Invoke());
-            seq.Append(Executor.Attacker.DefaultPosition.DOMove(_endPos, timeSet.attackerMoveDuration));
-            seq.AppendInterval(timeSet.waitFadeLineTime);
-            
-            seq.AppendCallback(() =>
+            if (Executor != null) Executor.PlayAnim();
+            _sequence = DOTween.Sequence();
+            _sequence.Append(vignette.DOFade(0.22f, timeSet.attackWaitDuration));
+            _sequence.AppendCallback(() =>
             {
-                if (targetCam == null) return;
-                targetCam.Target.TrackingTarget = Executor.Target.DefaultPosition;
-                targetCam.Priority = 15;
+                effectEvent.onLineStart?.Invoke();
             });
-            LineFadeOut(seq);
-
-            seq.AppendCallback(() => effect.transform.position = Executor.Target.DefaultPosition.position);
-            seq.AppendCallback(() => shinyEffect.transform.position = Executor.Target.DefaultPosition.position);
-            seq.Append(vignette.DOFade(1, 1f));
-            seq.AppendCallback(() => effectEvent.onEffectStart?.Invoke());
-            
-            seq.AppendInterval(timeSet.effectDuration/2);
-            seq.AppendCallback(() =>
+            // 이동 기준점은 고정하고 실제 캐릭터만 움직인다.
+            _sequence.Append(_body.DOMove(_endPos, timeSet.attackerMoveDuration).SetEase(Ease.OutCubic));
+            _sequence.AppendInterval(timeSet.waitFadeLineTime);
+            _sequence.AppendCallback(() =>
+            {
+                if (targetCam != null)
+                {
+                    targetCam.Target.TrackingTarget = _victim;
+                    targetCam.Priority = 15;
+                }
+                Vector3 center = _victim.position + Vector3.up * 0.5f;
+                float span = 3f;
+                if (Executor != null && Executor.SkillData.IsArea)
+                {
+                    var targets = Executor.GetTargets();
+                    Bounds bounds = new Bounds(center, Vector3.zero);
+                    foreach (var candidate in targets)
+                        bounds.Encapsulate(candidate.MyAgent.transform.position + Vector3.up * 0.5f);
+                    center = bounds.center;
+                    span = Mathf.Clamp(bounds.size.y + 2.5f, 3f, 8f);
+                }
+                effect.transform.position = center;
+                shinyEffect.transform.position = center;
+                // 저장된 파티클의 크기 비율을 유지하면서 적 진형 전체를 덮는다.
+                effect.transform.localScale = Vector3.one * (span / 5f);
+                shinyEffect.transform.localScale = Vector3.one * (span / 5f);
+                effectEvent.onEffectStart?.Invoke();
+            });
+            LineFadeOut(_sequence);
+            _sequence.AppendInterval(timeSet.effectDuration * 0.3f);
+            _sequence.AppendCallback(() =>
             {
                 effectEvent.onEffectImpact?.Invoke();
-                if (targetCam != null) targetCam.Lens.OrthographicSize = 5;
+                ApplyStat();
             });
-            seq.AppendCallback(() => ApplyStat());
-            seq.AppendInterval(timeSet.effectDuration/2);
-
-            seq.AppendCallback(() => effectEvent.onEffectEnd?.Invoke());
-            seq.AppendCallback(() =>
+            _sequence.AppendInterval(timeSet.effectDuration * 0.7f);
+            _sequence.AppendCallback(() =>
             {
-                if (targetCam != null) targetCam.Priority = 0;
+                effectEvent.onEffectEnd?.Invoke();
+                RestoreCamera();
+                if (Executor != null) Executor.PlayIdleAnim();
             });
-            seq.Append(vignette.DOFade(0, 1f));
-            seq.Append(Executor.Attacker.DefaultPosition.DOMove(_startPos, 1f));
-            seq.AppendCallback(() =>
+            _sequence.Append(vignette.DOFade(0f, 0.18f));
+            _sequence.Join(_body.DOMove(_startPos, 0.25f).SetEase(Ease.InOutSine));
+            _sequence.AppendCallback(() =>
             {
                 _showLine = false;
-                onSkillFinished?.Invoke(); // 프리팹에서 Executor.SkillFinished 연결됨
-                Executor.Remove();
+                onSkillFinished?.Invoke();
+                if (Executor != null) Executor.Remove();
             });
         }
 
-        private void LineFadeOut(Sequence seq)
+        private void LineFadeOut(Sequence sequence)
         {
-            seq.AppendCallback(() =>
-                mainLine.DOColor(new Color2( new Color(1, 1, 1, 1), new Color(1, 1, 1, 1)),
-                    new Color2(new Color(1, 1, 1, 0), new Color(1, 1, 1, 0)), timeSet.lineFadeDuration)
-            );
-            seq.AppendCallback(() =>
-                subLine1.DOColor(new Color2( new Color(1, 1, 1, 1), new Color(1, 1, 1, 1)),
-                    new Color2(new Color(1, 1, 1, 0), new Color(1, 1, 1, 0)), timeSet.lineFadeDuration)
-            );
-            seq.AppendCallback(() =>
-                subLine2.DOColor(new Color2( new Color(1, 1, 1, 1), new Color(1, 1, 1, 1)),
-                    new Color2(new Color(1, 1, 1, 0), new Color(1, 1, 1, 0)), timeSet.lineFadeDuration)
-            );
-            seq.AppendCallback(() => effectEvent.onLineEnd?.Invoke());
-            seq.Append(lineParent.DOScaleY(0, timeSet.lineFadeDuration));
+            var visible = new Color2(Color.white, Color.white);
+            var hidden = new Color2(new Color(1, 1, 1, 0), new Color(1, 1, 1, 0));
+            sequence.Append(mainLine.DOColor(visible, hidden, timeSet.lineFadeDuration));
+            sequence.Join(subLine1.DOColor(visible, hidden, timeSet.lineFadeDuration));
+            sequence.Join(subLine2.DOColor(visible, hidden, timeSet.lineFadeDuration));
+            sequence.AppendCallback(() => effectEvent.onLineEnd?.Invoke());
         }
-        
+
         public override void ApplyStat()
         {
+            if (_impactApplied) return;
+            _impactApplied = true;
             PlaySkillSound();
-            // 실제 전투에서는 스킬 데이터의 수치(표식·빗나감·상태이상 포함)를 사용
-            if (Executor != null) { ApplyConfiguredStats(Executor.Target); return; }
-            foreach (var applyStat in applyStats)
-            {
-                _target.ApplyStat(applyStat.ApplyStatType, applyStat.Value);
-            }
+            if (Executor != null) ApplyConfiguredStats(Executor.Target);
+        }
+
+        private void RestoreCamera()
+        {
+            if (targetCam == null) return;
+            targetCam.Priority = _cameraPriority;
+            targetCam.Lens.OrthographicSize = _cameraSize;
+            targetCam.Target.TrackingTarget = _cameraTarget;
+        }
+
+        private void OnDestroy()
+        {
+            _sequence?.Kill();
+            _showLine = false;
+            if (_body != null) _body.position = _startPos;
+            RestoreCamera();
         }
     }
 }
