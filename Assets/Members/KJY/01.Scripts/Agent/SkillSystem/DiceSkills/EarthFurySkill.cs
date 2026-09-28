@@ -17,10 +17,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
         [SerializeField, Min(0f)] private float jumpForward = 0.8f;
         [SerializeField, Min(0.05f)] private float jumpDuration = 0.42f;
         [Header("Earthquake")]
-        [SerializeField, Min(0f)] private float shakeForce = 120f;
-        [SerializeField, Min(1)] private int shakeCount = 6;
-        [SerializeField, Min(0.01f)] private float shakeInterval = 0.07f;
-        [SerializeField, Range(0f, 1f)] private float shakeDecay = 0.75f;
+        [SerializeField, Min(0f)] private float slamAmplitude = 0.9f;
+        [SerializeField, Min(0f)] private float rumbleAmplitude = 0.45f;
+        [SerializeField, Min(1)] private int rumbleCount = 10;
+        [SerializeField, Min(0.01f)] private float rumbleInterval = 0.06f;
+        [SerializeField, Range(0f, 1f)] private float rumbleDecay = 0.8f;
         private bool _isApplied;
 
         protected override async UniTask AttackAsync(CancellationToken token)
@@ -41,14 +42,18 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.DiceSkills
             if (!CanHit) return;
 
             ApplyStat();
+            // ImpulseGenerator 상한(0.18) 우회
             var impulse = Executor.Attacker.MyAgent.GetComponentInChildren<ImpulseGenerator>();
-            if (impulse == null) return;
-            float force = shakeForce;
-            for (int i = 0; i < shakeCount; i++)
+            var source = impulse != null ? impulse.Cis : null;
+            if (source == null) return;
+            source.GenerateImpulseWithVelocity(Vector3.down * slamAmplitude);
+            float amplitude = rumbleAmplitude;
+            for (int i = 0; i < rumbleCount; i++)
             {
-                impulse.GenerateWithForce(force);
-                force *= shakeDecay;
-                await UniTask.Delay(TimeSpan.FromSeconds(shakeInterval), cancellationToken: token);
+                await UniTask.Delay(TimeSpan.FromSeconds(rumbleInterval), cancellationToken: token);
+                var dir = new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), 0f).normalized;
+                source.GenerateImpulseWithVelocity(dir * amplitude);
+                amplitude *= rumbleDecay;
             }
         }
 

@@ -71,6 +71,43 @@ namespace DevLib.SoundSystem.Runtime
             OnSoundFinished?.Invoke(this);
         }
 
+        public AudioClip CurrentClip => _audioSource != null ? _audioSource.clip : null;
+        public bool IsPlaying => _audioSource != null && _audioSource.isPlaying;
+
+        private Coroutine _fadeRoutine;
+
+        // unscaled 시간 기준
+        public void FadeTo(float target, float duration)
+        {
+            if (_audioSource == null) return;
+            if (_fadeRoutine != null) StopCoroutine(_fadeRoutine);
+            if (duration <= 0f || !isActiveAndEnabled)
+            {
+                _audioSource.volume = target;
+                _fadeRoutine = null;
+                return;
+            }
+            _fadeRoutine = StartCoroutine(Fade(target, duration));
+        }
+
+        public void SetVolume(float volume)
+        {
+            if (_fadeRoutine != null) { StopCoroutine(_fadeRoutine); _fadeRoutine = null; }
+            if (_audioSource != null) _audioSource.volume = volume;
+        }
+
+        private IEnumerator Fade(float target, float duration)
+        {
+            float start = _audioSource.volume;
+            for (float t = 0f; t < duration; t += Time.unscaledDeltaTime)
+            {
+                _audioSource.volume = Mathf.Lerp(start, target, t / duration);
+                yield return null;
+            }
+            _audioSource.volume = target;
+            _fadeRoutine = null;
+        }
+
         private void OnDisable() => ForceStopSound();
         
         public void ForceStopSound()

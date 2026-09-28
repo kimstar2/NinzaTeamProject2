@@ -46,10 +46,5 @@ namespace Members.KJY._01.Scripts.Dice.Data
             PlayerPrefs.DeleteKey(Key);
             PlayerPrefs.Save();
         }
-
-#if UNITY_EDITOR
-        [UnityEditor.MenuItem("KJY/주사위 도감 기록 초기화")]
-        private static void ResetFromMenu() => ResetAll();
-#endif
     }
 }

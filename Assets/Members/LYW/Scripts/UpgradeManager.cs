@@ -29,7 +29,9 @@ public class UpgradeManager : MonoBehaviour
     private readonly RewardDiceFragmentSO[] _selected = new RewardDiceFragmentSO[3];
     private readonly List<BattleRewardItem> _items = new();
     private BattleInventory _inventory;
-    [SerializeField, Tooltip("[재련 정보] 버튼과 설명창. 지도 복귀 버튼 왼쪽에 자동 배치")] private ForgeTutorial tutorialPrefab;
+    [SerializeField, Tooltip("[도움말] 버튼과 설명창. 가방 버튼 왼쪽에 자동 배치")] private ForgeTutorial tutorialPrefab;
+    [SerializeField, Tooltip("가방(면 교체) 창 프리팹. 재련 창에 [가방] 버튼으로 연다")] private DiceLoadoutPanel loadoutPrefab;
+    private DiceLoadoutPanel _loadout;
     private int _slot;
     private bool _busy;
     private bool _lastGradeUp;
@@ -45,13 +47,35 @@ public class UpgradeManager : MonoBehaviour
             int slot = i;
             slotButtons[i].onClick.AddListener(() => SelectSlot(slot));
         }
+        var mapButton = FindMapButton();
+        // [도움말] [가방] [지도 복귀]
+        var helpNeighbor = mapButton;
+        if (loadoutPrefab != null && mapButton != null) helpNeighbor = CreateLoadoutButton(mapButton);
         var tutorial = tutorialPrefab != null ? tutorialPrefab : Resources.Load<ForgeTutorial>("ForgeTutorial");
         if (tutorial != null)
         {
             var instance = Instantiate(tutorial, panelRoot.transform, false);
-            var mapButton = FindMapButton();
-            if (mapButton != null) instance.PlaceHelpButtonLeftOf((RectTransform)mapButton.transform);
+            if (helpNeighbor != null) instance.PlaceHelpButtonLeftOf((RectTransform)helpNeighbor.transform);
         }
+    }
+
+    private Button CreateLoadoutButton(Button mapButton)
+    {
+        var canvas = panelRoot.GetComponentInParent<Canvas>().rootCanvas;
+        var root = Instantiate(loadoutPrefab.transform.root.gameObject, canvas.transform, false); // 창이 형제 오브젝트라 루트째 생성
+        root.transform.SetAsLastSibling();
+        _loadout = root.GetComponentInChildren<DiceLoadoutPanel>(true);
+
+        var button = Instantiate(mapButton, mapButton.transform.parent, false);
+        button.name = "Loadout Button";
+        button.onClick = new Button.ButtonClickedEvent();
+        button.onClick.AddListener(_loadout.Open);
+        var label = button.GetComponentInChildren<TMP_Text>(true);
+        if (label != null) label.text = "가방";
+        var map = (RectTransform)mapButton.transform;
+        ((RectTransform)button.transform).anchoredPosition =
+            map.anchoredPosition - new Vector2(map.rect.width + 12f, 0f);
+        return button;
     }
 
     private Button FindMapButton()
