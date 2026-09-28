@@ -162,9 +162,10 @@ namespace Members.PSW.Code.InventorySystem
                 if (buttons == null || buttons.Count < source.choices ||
                     source.resultText.Count < source.choices || source.choiceEvent.Count < source.choices ||
                     buttons.GetRange(0, source.choices).Exists(button => button == null) ||
-                    source.choiceEvent.Exists(type => type != EventType.DefaultComplete))
+                    source.choiceEvent.Exists(type => type != EventType.DefaultComplete &&
+                        type != EventType.ChangeExImage))
                 {
-                    Debug.LogError("Event rewards expect valid choice buttons using DefaultComplete.", manager);
+                    Debug.LogError($"Event rewards for '{source.name}' expect valid choice buttons using DefaultComplete or ChangeExImage.", manager);
                     continue;
                 }
 
