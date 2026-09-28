@@ -11,6 +11,7 @@ using UnityEditor;
 using UnityEditor.Events;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -44,7 +45,14 @@ namespace Members.PSW.Code.SkillTest.Editor
                 camera.rect = new Rect(0f, 0f, 0.65f, 1f);
                 camera.backgroundColor = new Color(0.08f, 0.1f, 0.16f);
                 camera.clearFlags = CameraClearFlags.SolidColor;
-                camera.gameObject.AddComponent<UniversalAdditionalCameraData>();
+                camera.allowHDR = true;
+                var cameraData = camera.gameObject.AddComponent<UniversalAdditionalCameraData>();
+                cameraData.renderPostProcessing = true;
+                cameraData.volumeLayerMask = 1;
+                var volume = new GameObject("Global Volume").AddComponent<Volume>();
+                volume.isGlobal = true;
+                volume.sharedProfile = AssetDatabase.LoadAssetAtPath<VolumeProfile>(
+                    "Assets/Members/PSW/Scene/SkillTestScene/Global Volume Profile.asset");
                 var light = new GameObject("Battle Light 2D").AddComponent<Light2D>();
                 light.lightType = Light2D.LightType.Point;
                 light.pointLightOuterRadius = 100f;

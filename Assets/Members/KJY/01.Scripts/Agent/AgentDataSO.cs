@@ -9,5 +9,12 @@ namespace Members.KJY._01.Scripts.Agent
     {
         [field: SerializeField] public float MaxHealth { get; private set; }
         [field:SerializeField] public AgentAttackType AttackType {get; private set;}
+
+        // Runtime copies only. Changing the cap does not heal the unit.
+        public void SetMaxHealth(float value)
+        {
+            if (float.IsNaN(value) || float.IsInfinity(value) || value <= 0f) return;
+            MaxHealth = value;
+        }
     }
 }

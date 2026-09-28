@@ -16,6 +16,14 @@ namespace Members.PSW.Code.InventorySystem
         }
 
         private readonly List<Effect> _effects = new();
+        public event Action Changed;
+
+        // Return value copies so UI cannot modify combat state.
+        public IEnumerable<(float outgoingPercent, float incomingPercent, int remainingBattles)> GetEffects()
+        {
+            foreach (var effect in _effects)
+                yield return (effect.OutgoingPercent, effect.IncomingPercent, effect.RemainingBattles);
+        }
 
         // -1 lasts until a new adventure. Positive durations count completed battles.
         public bool TryAdd(float outgoingPercent, float incomingPercent, int battles)
@@ -30,6 +38,7 @@ namespace Members.PSW.Code.InventorySystem
                 IncomingPercent = incomingPercent,
                 RemainingBattles = battles
             });
+            Changed?.Invoke();
             return true;
         }
 
@@ -49,14 +58,22 @@ namespace Members.PSW.Code.InventorySystem
 
         public void CompleteBattle()
         {
+            bool changed = false;
             for (int i = _effects.Count - 1; i >= 0; i--)
             {
                 var effect = _effects[i];
                 if (effect.RemainingBattles == -1) continue;
+                changed = true;
                 if (--effect.RemainingBattles == 0) _effects.RemoveAt(i);
             }
+            if (changed) Changed?.Invoke();
         }
 
-        public void Clear() => _effects.Clear();
+        public void Clear()
+        {
+            if (_effects.Count == 0) return;
+            _effects.Clear();
+            Changed?.Invoke();
+        }
     }
 }

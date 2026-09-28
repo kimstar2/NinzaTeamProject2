@@ -62,6 +62,7 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         [SerializeField] private float riskLevelIncrease;
         private float _maxRiskPenalty;
         private float _riskLevel;
+        private float _eventRiskPerReroll;
         private int _rollCount;
         private BattleDataStorage _battleDataStorage;
         
@@ -138,22 +139,36 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         }
 
         private bool _isFirstRoll = true;
+        private int _turnsStarted;
+        public bool IsEventRerollLocked { get; private set; }
+        public event Action EventRerollLockChanged;
+        public void LockFirstTurnReroll()
+        {
+            IsEventRerollLocked = _turnsStarted <= 1;
+            EventRerollLockChanged?.Invoke();
+        }
         private bool _canRoll = false;
         public void Roll(bool isStartRoll)
         {
+            if (!isStartRoll && IsEventRerollLocked) return;
             if (isStartRoll)
                 _canRoll = true;
             else if (!_canRoll) return;
             
             if (DiceRollCheckList.TrueForAll(x => x.IsDead) ||
                 DiceRollCheckList.Exists(x => !x.IsDead && x.IsRolling)) return;
+            if (isStartRoll && ++_turnsStarted > 1 && IsEventRerollLocked)
+            {
+                IsEventRerollLocked = false;
+                EventRerollLockChanged?.Invoke();
+            }
             RollLogic();
             if (_isFirstRoll)
             {
                 _isFirstRoll = false;
                 return;
             }
-            CalcRisk();
+            CalcRisk(!isStartRoll);
         }
 
         protected override void RollLogic()
@@ -170,14 +185,14 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         }
 
         private bool _reachMaxRisk;
-        private void CalcRisk()
+        private void CalcRisk(bool isReroll)
         {
             _rollCount++;
             float countRisk = DiceRollCheckList.AsValueEnumerable().Count(s => !s.IsDead) * _rollCount * 0.25f;;
             float riskLevel = riskLevelIncreaseMulti * riskLevelIncrease + _riskLevel;
             
             _riskLevel = Mathf.Min
-                (maxRiskLevel,countRisk + riskLevel);
+                (maxRiskLevel,countRisk + riskLevel + (isReroll ? _eventRiskPerReroll : 0f));
             onRiskLevelChanged?.Invoke(_riskLevel / maxRiskLevel);
             if (_reachMaxRisk)
                 onReachMaxRisk?.Invoke();
@@ -194,5 +209,19 @@ namespace Members.KJY._01.Scripts.Agent.Player.Dice
         }
 
         public void ResetRollCount() => _rollCount = 0;
+
+        // Called after Start by the event integration; percentages are gauge percentage points.
+        public bool ApplyEventRisk(float startingPercent, float rerollPercent)
+        {
+            if (maxRiskLevel <= 0f || float.IsNaN(startingPercent) || float.IsInfinity(startingPercent) ||
+                float.IsNaN(rerollPercent) || float.IsInfinity(rerollPercent) ||
+                startingPercent < 0f || rerollPercent < 0f) return false;
+            _eventRiskPerReroll = maxRiskLevel * Mathf.Clamp01(rerollPercent / 100f);
+            _riskLevel = Mathf.Min(maxRiskLevel, _riskLevel + maxRiskLevel * Mathf.Clamp01(startingPercent / 100f));
+            _reachMaxRisk = _riskLevel >= maxRiskLevel;
+            onRiskLevelChanged?.Invoke(_riskLevel / maxRiskLevel);
+            eventChannel.RaiseEvent(new OnRiskPenaltyChanged(GetRiskPenalty()));
+            return true;
+        }
     }
 }
