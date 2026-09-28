@@ -32,7 +32,6 @@ namespace Members.PSW.Code.InventorySystem
         [SerializeField] private List<DamageChoice> damageChoices = new();
         [SerializeField] private List<BattleChoice> battleChoices = new();
         [SerializeField] private List<RiskChoice> riskChoices = new();
-        [SerializeField] private List<ResultCopy> resultCopies = new();
         [SerializeField] private List<BattleRewardChoice> battleRewardChoices = new();
         private readonly EventGoldModifiers _goldModifiers = new();
         private BattleInventory _goldInventory;
@@ -65,7 +64,6 @@ namespace Members.PSW.Code.InventorySystem
             public int battles = -1;
             public float healthCostRatio;
             public float maxHealthBonusRatio;
-            [TextArea] public string resultText;
         }
 
         [Serializable]
@@ -75,7 +73,6 @@ namespace Members.PSW.Code.InventorySystem
             public int choiceIndex;
             public float startingPercent;
             public float rerollPercent;
-            [TextArea] public string resultText;
         }
 
         [Serializable]
@@ -87,14 +84,6 @@ namespace Members.PSW.Code.InventorySystem
         }
 
         [Serializable]
-        private sealed class ResultCopy
-        {
-            public EventDataSO eventData;
-            public int choiceIndex;
-            [TextArea] public string resultText;
-        }
-
-        [Serializable]
         private sealed class BattleRewardChoice
         {
             public EventDataSO eventData;
@@ -103,7 +92,6 @@ namespace Members.PSW.Code.InventorySystem
             public int battles = -1;
             public float maxHealthBonus;
             public bool lockFirstTurn;
-            [TextArea] public string resultText;
         }
 
         [Serializable]
@@ -113,7 +101,6 @@ namespace Members.PSW.Code.InventorySystem
             public int choiceIndex;
             public PlayerType target = PlayerType.All;
             public int health;
-            [TextArea] public string resultText;
         }
 
         private const BindingFlags Fields = BindingFlags.Instance | BindingFlags.NonPublic;
@@ -230,7 +217,6 @@ namespace Members.PSW.Code.InventorySystem
                     !goldChoices.Exists(effect => effect.eventData == source) &&
                     !damageChoices.Exists(effect => effect.eventData == source) &&
                     !riskChoices.Exists(effect => effect.eventData == source) &&
-                    !resultCopies.Exists(copy => copy.eventData == source) &&
                     !battleRewardChoices.Exists(effect => effect.eventData == source) &&
                     !battleChoices.Exists(effect => effect.eventData == source)) continue;
                 var buttons = ButtonsField.GetValue(manager) as List<Button>;
@@ -246,10 +232,6 @@ namespace Members.PSW.Code.InventorySystem
 
                 var data = Instantiate(source);
                 data.hideFlags = HideFlags.DontSave;
-                foreach (var copy in resultCopies)
-                    if (copy.eventData == source && copy.choiceIndex >= 0 && copy.choiceIndex < data.resultText.Count)
-                        data.resultText[copy.choiceIndex] = copy.resultText;
-                if (source == sourceEvent) data.resultText[0] = "보상으로 무작위 주사위 면 1개를 획득합니다.";
                 EventField.SetValue(manager, data);
                 var binding = new Binding { Manager = manager, Source = source, Data = data };
                 for (int i = 0; i < source.choices; i++)
@@ -268,69 +250,62 @@ namespace Members.PSW.Code.InventorySystem
         {
             if (binding.Claimed) return;
             binding.Claimed = true;
-            // The existing completion listener reads this text after this callback returns.
+            // Keep the original EventDataSO result copy. Reward failures go to the console.
             if (battleChoices.Exists(entry => entry.eventData == binding.Source && entry.choiceIndex == index))
             {
                 string failure = "이벤트 전투 연결이 설정되지 않았습니다.";
                 if (battleTransition == null || !battleTransition.TryPrepare(binding.Manager.gameObject.scene, out failure))
-                    binding.Data.resultText[index] = failure;
+                    ReportRewardFailure(failure);
                 return;
             }
             if (binding.Source == sourceEvent && index == 0)
-                binding.Data.resultText[index] = GrantReward();
-            else
             {
-                var effect = healthChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
-                var battleReward = battleRewardChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
-                if (battleReward != null)
+                ReportRewardFailure(GrantReward());
+                return;
+            }
+            var battleReward = battleRewardChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
+            if (battleReward != null)
+            {
+                ReportRewardFailure(ApplyBattleReward(battleReward));
+                return;
+            }
+            var risk = riskChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
+            if (risk != null)
+            {
+                if (!ServiceLocator.TryGet<IBattleDataStorage>(out var storage) || storage.Instance == null)
                 {
-                    binding.Data.resultText[index] = ApplyBattleReward(battleReward);
+                    ReportRewardFailure("모험 정보가 없어 위험도 효과를 적용하지 못했습니다.");
                     return;
                 }
-                var gold = goldChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
-                var damage = damageChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
-                var risk = riskChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
-                if (risk != null)
+                _pendingStartRisk = Mathf.Clamp(_pendingStartRisk + risk.startingPercent, 0f, 100f);
+                _pendingRerollRisk = Mathf.Clamp(_pendingRerollRisk + risk.rerollPercent, 0f, 100f);
+            }
+            var health = healthChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
+            var gold = goldChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
+            var damage = damageChoices.Find(entry => entry.eventData == binding.Source && entry.choiceIndex == index);
+            BattleInventory inventory = null;
+            if (gold != null)
+            {
+                ServiceLocator.TryGet<Inventory>(out var registered);
+                inventory = registered as BattleInventory;
+                if (inventory == null)
                 {
-                    if (!ServiceLocator.TryGet<IBattleDataStorage>(out var riskStorage) || riskStorage.Instance == null)
-                    {
-                        binding.Data.resultText[index] = "모험 정보가 없어 위험도 효과를 적용하지 못했습니다.";
-                        return;
-                    }
-                    _pendingStartRisk = Mathf.Clamp(_pendingStartRisk + risk.startingPercent, 0f, 100f);
-                    _pendingRerollRisk = Mathf.Clamp(_pendingRerollRisk + risk.rerollPercent, 0f, 100f);
-                    binding.Data.resultText[index] = risk.resultText;
-                }
-                BattleInventory inventory = null;
-                if (gold != null)
-                {
-                    ServiceLocator.TryGet<Inventory>(out var registered);
-                    inventory = registered as BattleInventory;
-                    if (inventory == null)
-                    {
-                        binding.Data.resultText[index] = "골드 인벤토리가 없어 보상을 적용하지 못했습니다. 모험을 시작한 뒤 이용해 주세요.";
-                        return;
-                    }
-                }
-                string result = null;
-                if (effect != null)
-                {
-                    result = ApplyHealthChoice(effect, out bool applied);
-                    binding.Data.resultText[index] = result;
-                    if (!applied) return;
-                }
-                if (gold != null)
-                {
-                    string goldResult = ApplyGoldChoice(gold, inventory);
-                    result = result == null ? goldResult : result + "\n" + goldResult;
-                    binding.Data.resultText[index] = result;
-                }
-                if (damage != null)
-                {
-                    string damageResult = ApplyDamageChoice(damage);
-                    binding.Data.resultText[index] = result == null ? damageResult : result + "\n" + damageResult;
+                    ReportRewardFailure("골드 인벤토리가 없어 보상을 적용하지 못했습니다.");
+                    return;
                 }
             }
+            if (health != null)
+            {
+                ReportRewardFailure(ApplyHealthChoice(health, out bool applied));
+                if (!applied) return;
+            }
+            if (gold != null) ApplyGoldChoice(gold, inventory);
+            if (damage != null) ReportRewardFailure(ApplyDamageChoice(damage));
+        }
+
+        private void ReportRewardFailure(string message)
+        {
+            if (!string.IsNullOrEmpty(message)) Debug.LogWarning(message, this);
         }
 
         private string ApplyDamageChoice(DamageChoice effect)
@@ -350,7 +325,7 @@ namespace Members.PSW.Code.InventorySystem
                     player.SetMaxHealth(previousMax * (1f + effect.maxHealthBonusRatio));
                 }
             }
-            return effect.resultText;
+            return null;
         }
 
         private IEnumerator ApplyPendingRisk(Scene scene)
@@ -402,21 +377,13 @@ namespace Members.PSW.Code.InventorySystem
                     if (!_originalMaxHealth.ContainsKey(player)) _originalMaxHealth.Add(player, player.MaxHealth);
                     player.SetMaxHealth(player.MaxHealth + choice.maxHealthBonus);
                 }
-            return choice.resultText;
+            return null;
         }
 
-        private static string ApplyGoldChoice(GoldChoice effect, BattleInventory inventory)
+        private static void ApplyGoldChoice(GoldChoice effect, BattleInventory inventory)
         {
-            if (effect.gold >= 0)
-            {
-                int added = inventory.AddGold(effect.gold);
-                return $"{added}골드를 획득했습니다. (보유 {inventory.Gold} G)";
-            }
-            int amount = effect.gold == int.MinValue ? int.MaxValue : -effect.gold;
-            int removed = inventory.RemoveGold(amount);
-            return removed < amount
-                ? $"보유 골드가 부족하여 {removed}골드만 잃었습니다. (보유 {inventory.Gold} G)"
-                : $"{removed}골드를 잃었습니다. (보유 {inventory.Gold} G)";
+            if (effect.gold >= 0) inventory.AddGold(effect.gold);
+            else inventory.RemoveGold(effect.gold == int.MinValue ? int.MaxValue : -effect.gold);
         }
 
         private string ApplyHealthChoice(HealthChoice effect, out bool applied)
@@ -432,29 +399,17 @@ namespace Members.PSW.Code.InventorySystem
                 ? storage.GetRunTimePlayerData()
                 : new[] { storage.GetRunTimePlayerData(effect.target) };
             bool found = false;
-            var changes = new List<string>();
             foreach (var player in targets)
             {
                 if (player == null) continue;
                 found = true;
                 if (player.IsDead) continue;
-                float before = player.CurrentHealth;
                 if (effect.health > 0) player.Heal(effect.health);
                 else if (effect.health < 0)
                     player.TakeDamage(Mathf.Min(-(float)effect.health, player.CurrentHealth));
-                float delta = player.CurrentHealth - before;
-                if (delta == 0f) continue;
-                string name = player.PlayerType switch
-                {
-                    PlayerType.Tanker => "탱커", PlayerType.Dealer => "딜러",
-                    PlayerType.Healer => "힐러", PlayerType.Mage => "마법사", _ => "아군"
-                };
-                changes.Add($"{name} {delta:+0.##;-0.##} HP");
             }
             applied = found;
-            return found ? effect.resultText + "\n" + (changes.Count > 0
-                ? string.Join(", ", changes) : "변경된 HP가 없습니다.")
-                : "체력을 변경할 대상이 없어 효과를 적용하지 못했습니다.";
+            return found ? null : "체력을 변경할 대상이 없어 효과를 적용하지 못했습니다.";
         }
 
         private string GrantReward()
@@ -488,7 +443,7 @@ namespace Members.PSW.Code.InventorySystem
             }
             // BattleInventory owns its battle drops only; this integration owns event drops.
             _rewards.Add(new OwnedReward { Inventory = inventory, Fragment = reward });
-            return $"보상으로 주사위 면 [{faceData.MainName}] 1개를 획득했습니다! (Lv.1)";
+            return null;
         }
 
         private void HandleSceneUnloaded(Scene scene)

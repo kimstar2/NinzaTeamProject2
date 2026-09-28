@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LavaSpout Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 2398796357892219269, guid: d305be411d7f52a3b87422ba31e4b45e, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: d5d47af307b5e0c4e9fad02005623d5f, type: 2}
   <SkillName>k__BackingField: "용암 분출"
   <Icon>k__BackingField: {fileID: -1773628282421929552, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "용암을 분출해 {0} 피해를 줍니다."

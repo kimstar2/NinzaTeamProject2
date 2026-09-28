@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Hellfire Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 2398796357892219269, guid: d305be411d7f52a3b87422ba31e4b45e, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: d5d47af307b5e0c4e9fad02005623d5f, type: 2}
   <SkillName>k__BackingField: "불굴의 지옥불"
   <Icon>k__BackingField: {fileID: -3024870396548848517, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "화염탄으로 {0} 피해를 줍니다. 자신의 체력이 50% 이하면 피해가 50% 증가합니다."

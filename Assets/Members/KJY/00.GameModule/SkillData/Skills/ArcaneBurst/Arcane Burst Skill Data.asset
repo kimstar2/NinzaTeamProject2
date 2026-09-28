@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Arcane Burst Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 9e55606da1864f00ad0d39c2a7fc3d33, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: ef84d91aa204d69448850fef7bbf7758, type: 2}
   <SkillName>k__BackingField: "\ub9c8\ub825 \ud3ed\ubc1c"
   <Icon>k__BackingField: {fileID: -6567654030739498224, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "\uB9C8\uB825\uC744 \uD130\uB728\uB824 \uC801\uC5D0\uAC8C

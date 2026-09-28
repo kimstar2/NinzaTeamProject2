@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PoisonSpray Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 8499836435451648999, guid: 9e55606da1864f00ad0d39c2a7fc3d33, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: 3f7250d823fa53e4c8c528ee43016774, type: 2}
   <SkillName>k__BackingField: "맹독 분사"
   <Icon>k__BackingField: {fileID: -7016657825750730627, guid: dde9f6819b3405043b15a8c8bc344724, type: 3}
   <SkillDescription>k__BackingField: "독액을 뿜어 {0} 피해를 줍니다."

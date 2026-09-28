@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LavaSmash Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 7830593078137803777, guid: a33d28c1fb4a0f148a660356183cf5ba, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: d5d47af307b5e0c4e9fad02005623d5f, type: 2}
   <SkillName>k__BackingField: "용암 강타"
   <Icon>k__BackingField: {fileID: -307060576219269120, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "용암 주먹으로 {0} 피해를 줍니다."

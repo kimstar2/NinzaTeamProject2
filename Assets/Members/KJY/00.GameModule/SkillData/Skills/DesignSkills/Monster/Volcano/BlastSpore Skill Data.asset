@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BlastSpore Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 2398796357892219269, guid: 18920fc81048d8e47aaf042464f5df8b, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: ef84d91aa204d69448850fef7bbf7758, type: 2}
   <SkillName>k__BackingField: "폭발 포자"
   <Icon>k__BackingField: {fileID: -899342832201320805, guid: 9bb8a778097aaf84bad5156aadab0766, type: 3}
   <SkillDescription>k__BackingField: "포자를 터뜨려 {0} 피해를 줍니다."

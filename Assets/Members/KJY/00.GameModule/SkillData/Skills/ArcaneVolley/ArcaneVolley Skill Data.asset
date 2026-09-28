@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ArcaneVolley Skill Data
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.Agent.SkillSystem.SkillDataSO
   <SkillLogicExecutor>k__BackingField: {fileID: 3385855866850025558, guid: e6c60868d662f0445a71336335f6b93a, type: 3}
+  <SkillSound>k__BackingField: {fileID: 11400000, guid: ef84d91aa204d69448850fef7bbf7758, type: 2}
   <SkillName>k__BackingField: "\uB9C8\uB825 \uC5F0\uD0C0"
   <Icon>k__BackingField: {fileID: -8687731574678683240, guid: b3c797f2d256a3c4c8206cec7a7fd82c, type: 3}
   <SkillDescription>k__BackingField: "\uB9C8\uB825 \uD3ED\uBC1C\uC744 \uC138 \uBC88

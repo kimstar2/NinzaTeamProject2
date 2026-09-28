@@ -70,119 +70,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fd03ab00fdef0d44c9a8661e074a8ad1, type: 2}
   - {fileID: 11400000, guid: a3892e0f862c4ea98ba5e258ba2d37d0, type: 2}
   - {fileID: 11400000, guid: 8f6ecd60796836c40b025b8ac37f00ab, type: 2}
-  resultCopies:
-  - eventData: {fileID: 11400000, guid: 7f70defdd9aa39d4388a4f672e480389, type: 2}
-    choiceIndex: 0
-    resultText: "“미래가 매우 밝구먼.”\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 7f70defdd9aa39d4388a4f672e480389, type: 2}
-    choiceIndex: 1
-    resultText: "“안타깝게 됐네.”\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 7f70defdd9aa39d4388a4f672e480389, type: 2}
-    choiceIndex: 2
-    resultText: "점술가와 시비가 붙었습니다.\n전투를 시작합니다."
-  - eventData: {fileID: 11400000, guid: 7a084699b146b2e43808ad4305a626c6, type: 2}
-    choiceIndex: 1
-    resultText: "용병을 지나쳤습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 7a084699b146b2e43808ad4305a626c6, type: 2}
-    choiceIndex: 2
-    resultText: "절도를 시도하다 들켰습니다.\n전투를 시작합니다."
-  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
-    choiceIndex: 0
-    resultText: "기사를 도와 몬스터와 싸웁니다.\n전투를 시작합니다."
-  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
-    choiceIndex: 1
-    resultText: "기사를 지나쳤습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
-    choiceIndex: 2
-    resultText: "공격을 선택했습니다.\n전투를 시작합니다."
-  - eventData: {fileID: 11400000, guid: ff20e64031f4c7746b28e34b70927f05, type: 2}
-    choiceIndex: 1
-    resultText: "훈련장을 지나쳤습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: ff20e64031f4c7746b28e34b70927f05, type: 2}
-    choiceIndex: 2
-    resultText: "가져가려던 훈련 도구가 부서졌습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 62cf2e35f4f765f4ba0715e125482f15, type: 2}
-    choiceIndex: 0
-    resultText: "도박을 시작합니다."
-  - eventData: {fileID: 11400000, guid: 62cf2e35f4f765f4ba0715e125482f15, type: 2}
-    choiceIndex: 1
-    resultText: "도박을 하지 않고 떠났습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: ed1cac952ba71de46b4eddc0222569aa, type: 2}
-    choiceIndex: 1
-    resultText: "제비를 두고 자리를 떠났습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 7a9775dbc60b3224682fa694eea34675, type: 2}
-    choiceIndex: 1
-    resultText: "여자아이의 부탁을 거절했습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
-    choiceIndex: 2
-    resultText: "개복치를 공격하려 하자 전투가 벌어졌습니다.\n전투를 시작합니다."
-  - eventData: {fileID: 11400000, guid: a5f6f0ea77a879a4a935de9895ffbe14, type: 2}
-    choiceIndex: 1
-    resultText: "봉인을 돕기 어렵다고 답했습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 68b8a27b6fa44a44aae6d7389da3820f, type: 2}
-    choiceIndex: 0
-    resultText: "남자가 순순히 길을 비켜주었습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 6817e6a28724c564eb17c3097602a877, type: 2}
-    choiceIndex: 2
-    resultText: "고함을 치자 환마들이 도망갔습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 934fe12868e6a7d4382f793d03340ba9, type: 2}
-    choiceIndex: 1
-    resultText: "지나가던 암상인이 마을로 가는 길을 알려주었습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 667045a0b13fe2f4a9b4081d2e900e03, type: 2}
-    choiceIndex: 1
-    resultText: "이상하게도 갈증이 가셨습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 3f0328bfe7c67904195d9722d3eb744a, type: 2}
-    choiceIndex: 1
-    resultText: "소리의 영압이 사라졌습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 8b01e082a5d4d7a4fb74d5a70de39651, type: 2}
-    choiceIndex: 1
-    resultText: "사과를 던지자 어떤 마법사가 채 갔습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 00c4d81d937a9fa4dae607a696deecd5, type: 2}
-    choiceIndex: 0
-    resultText: "해골과 악수하자 정체불명의 방귀 소리가 났습니다.\n“나랑 악수하는 건 완전 악수였네!”\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: ed3d375a489376342b8d3c4f80861da7, type: 2}
-    choiceIndex: 0
-    resultText: "해골에게 악수를 권하며 이야기를 나누었습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: ed3d375a489376342b8d3c4f80861da7, type: 2}
-    choiceIndex: 1
-    resultText: "해골에게 악수를 피하는 이유를 물었습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: ed3d375a489376342b8d3c4f80861da7, type: 2}
-    choiceIndex: 2
-    resultText: "악수는 한 번쯤 해도 괜찮다며 해골을 설득했습니다.\n보상이나 능력치 변화는 없습니다."
-  - eventData: {fileID: 11400000, guid: 3bbd99ec40e0cea4b95b3e62208f03ea, type: 2}
-    choiceIndex: 1
-    resultText: "꽃을 꺾지 않고 감상했습니다.\n보상이나 능력치 변화는 없습니다."
   healthChoices:
   - eventData: {fileID: 11400000, guid: a5f6f0ea77a879a4a935de9895ffbe14, type: 2}
     choiceIndex: 0
     target: 3
     health: -10
-    resultText: "마물의 봉인을 도왔습니다."
   - eventData: {fileID: 11400000, guid: 6817e6a28724c564eb17c3097602a877, type: 2}
     choiceIndex: 1
     target: 5
     health: -20
-    resultText: "숲을 가로지르다 나뭇가지에 찔리고 베였습니다."
   - eventData: {fileID: 11400000, guid: 667045a0b13fe2f4a9b4081d2e900e03, type: 2}
     choiceIndex: 0
     target: 5
     health: -20
-    resultText: "갈증이 더 심해지고 머리가 어지럽습니다."
   - eventData: {fileID: 11400000, guid: 667045a0b13fe2f4a9b4081d2e900e03, type: 2}
     choiceIndex: 2
     target: 5
     health: -10
-    resultText: "짠물을 너무 많이 마셨습니다."
   - eventData: {fileID: 11400000, guid: 3f0328bfe7c67904195d9722d3eb744a, type: 2}
     choiceIndex: 0
     target: 5
     health: -10
-    resultText: "귀를 막은 사이 기습을 당했습니다."
   - eventData: {fileID: 11400000, guid: 3bbd99ec40e0cea4b95b3e62208f03ea, type: 2}
     choiceIndex: 0
     target: 5
     health: -5
-    resultText: "꽃을 꺾자 금어초가 퍼뜨린 연기에 휘말렸습니다."
   goldChoices:
   - eventData: {fileID: 11400000, guid: e4cd1ea18ac8b604398b8ad0dd99aacb, type: 2}
     choiceIndex: 0
@@ -209,63 +121,53 @@ MonoBehaviour:
     battles: -1
     maxHealthBonus: 10
     lockFirstTurn: 0
-    resultText: "여자아이를 마을까지 데려다주고 축복을 받았습니다.\n이번 모험 동안 전투 승리 골드 +20%, 모든 아군의 최대 HP +10.\n현재 HP는 회복되지 않습니다."
   - eventData: {fileID: 11400000, guid: 8b01e082a5d4d7a4fb74d5a70de39651, type: 2}
     choiceIndex: 0
     goldPercent: -25
     battles: 5
     maxHealthBonus: 0
     lockFirstTurn: 0
-    resultText: "사과를 먹자 불길한 예감이 들었습니다.\n다음 5번의 전투 동안 승리 골드가 25% 감소합니다.\n승패와 관계없이 전투 종료 시 1회 차감됩니다."
   - eventData: {fileID: 11400000, guid: 0d9c65e9e7443ed42ac68e6cbb3c252e, type: 2}
     choiceIndex: 0
     goldPercent: 0
     battles: 1
     maxHealthBonus: 0
     lockFirstTurn: 1
-    resultText: "달리고 또 달려도 음악에서 벗어날 수 없습니다.\n다음 전투 첫 턴에는 리롤할 수 없습니다.\n첫 자동 굴림은 가능하며, 두 번째 턴부터 리롤 제한이 해제됩니다."
   - eventData: {fileID: 11400000, guid: 0d9c65e9e7443ed42ac68e6cbb3c252e, type: 2}
     choiceIndex: 1
     goldPercent: 0
     battles: 1
     maxHealthBonus: 0
     lockFirstTurn: 1
-    resultText: "달리고 또 달려도 음악에서 벗어날 수 없습니다.\n다음 전투 첫 턴에는 리롤할 수 없습니다.\n첫 자동 굴림은 가능하며, 두 번째 턴부터 리롤 제한이 해제됩니다."
   - eventData: {fileID: 11400000, guid: 0d9c65e9e7443ed42ac68e6cbb3c252e, type: 2}
     choiceIndex: 2
     goldPercent: 0
     battles: 1
     maxHealthBonus: 0
     lockFirstTurn: 1
-    resultText: "달리고 또 달려도 음악에서 벗어날 수 없습니다.\n다음 전투 첫 턴에는 리롤할 수 없습니다.\n첫 자동 굴림은 가능하며, 두 번째 턴부터 리롤 제한이 해제됩니다."
   - eventData: {fileID: 11400000, guid: 0d9c65e9e7443ed42ac68e6cbb3c252e, type: 2}
     choiceIndex: 3
     goldPercent: 0
     battles: 1
     maxHealthBonus: 0
     lockFirstTurn: 1
-    resultText: "달리고 또 달려도 음악에서 벗어날 수 없습니다.\n다음 전투 첫 턴에는 리롤할 수 없습니다.\n첫 자동 굴림은 가능하며, 두 번째 턴부터 리롤 제한이 해제됩니다."
   riskChoices:
   - eventData: {fileID: 11400000, guid: 934fe12868e6a7d4382f793d03340ba9, type: 2}
     choiceIndex: 0
     startingPercent: 10
     rerollPercent: 0
-    resultText: "앞으로 걷다가 가까스로 길을 찾았습니다.\n다음 전투의 시작 위험도가 10%p 증가합니다."
   - eventData: {fileID: 11400000, guid: 934fe12868e6a7d4382f793d03340ba9, type: 2}
     choiceIndex: 2
     startingPercent: 20
     rerollPercent: 0
-    resultText: "주사위를 따라가다 길을 크게 돌아왔습니다.\n다음 전투의 시작 위험도가 20%p 증가합니다."
   - eventData: {fileID: 11400000, guid: 00c4d81d937a9fa4dae607a696deecd5, type: 2}
     choiceIndex: 1
     startingPercent: 0
     rerollPercent: 10
-    resultText: "해골을 무시하고 지나치자 불길한 기운이 따라붙었습니다.\n다음 전투에서 리롤할 때마다 위험도가 10%p 추가로 증가합니다."
   - eventData: {fileID: 11400000, guid: ed3d375a489376342b8d3c4f80861da7, type: 2}
     choiceIndex: 3
     startingPercent: 0
     rerollPercent: 10
-    resultText: "해골과 악수한 순간 불길한 기운이 손을 타고 올라왔습니다.\n다음 전투에서 리롤할 때마다 위험도가 10%p 추가로 증가합니다."
   damageChoices:
   - eventData: {fileID: 11400000, guid: ff20e64031f4c7746b28e34b70927f05, type: 2}
     choiceIndex: 0
@@ -274,35 +176,27 @@ MonoBehaviour:
     battles: -1
     healthCostRatio: 0.1
     maxHealthBonusRatio: 0.2
-    resultText: "훈련을 마쳤습니다.\n살아 있는 아군의 현재 HP가 훈련 전 최대 HP의 10%만큼 감소합니다(최소 0).\n이후 최대 HP만 20% 증가하며 현재 HP는 회복되지 않습니다.\n이번 모험 동안 가하는 피해가 10% 증가합니다."
   - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
     choiceIndex: 0
     outgoingPercent: 0
     incomingPercent: -20
     battles: -1
-    resultText: "개복치를 바닷가로 데려다주었습니다.\n이번 모험 동안 모든 아군이 받는 피해가 20% 감소합니다."
   - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
     choiceIndex: 1
     outgoingPercent: 0
     incomingPercent: 20
     battles: -1
-    resultText: "개복치를 무시했습니다.\n이번 모험 동안 모든 아군이 받는 피해가 20% 증가합니다."
   - eventData: {fileID: 11400000, guid: 6817e6a28724c564eb17c3097602a877, type: 2}
     choiceIndex: 0
     outgoingPercent: 0
     incomingPercent: 10
     battles: 5
-    resultText: "주사위를 향해 들어간 곳은 환마의 숲이었습니다.\n다음 5번의 전투 동안 모든 아군이 받는 피해가 10% 증가합니다.\n승패와 관계없이 전투 종료 시 1회 차감됩니다."
   battleTransition: {fileID: 11400001}
   buffView: {fileID: 11400002}
   battleChoices:
   - eventData: {fileID: 11400000, guid: 7f70defdd9aa39d4388a4f672e480389, type: 2}
     choiceIndex: 2
   - eventData: {fileID: 11400000, guid: 7a084699b146b2e43808ad4305a626c6, type: 2}
-    choiceIndex: 2
-  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
-    choiceIndex: 0
-  - eventData: {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
     choiceIndex: 2
   - eventData: {fileID: 11400000, guid: 074ec0ddb796ceb419a080d7ae31d21f, type: 2}
     choiceIndex: 2
@@ -335,6 +229,9 @@ MonoBehaviour:
   battleScenePath: Assets/Members/KJY/02.RealScene/RealScene.unity
   panel: {fileID: 100200}
   label: {fileID: 114300}
+  eventChannel: {fileID: 11400000, guid: 255dbbb0fc4fa004db455d8bf5ffff4b, type: 2}
+  panelGroup: {fileID: 225200}
+  fadeDuration: 0.3
 --- !u!1 &100100
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +318,7 @@ GameObject:
   - component: {fileID: 224200}
   - component: {fileID: 222200}
   - component: {fileID: 114200}
+  - component: {fileID: 225200}
   m_Layer: 5
   m_Name: Event Effects Panel
   m_TagString: Untagged
@@ -607,3 +505,15 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!225 &225200
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100200}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0

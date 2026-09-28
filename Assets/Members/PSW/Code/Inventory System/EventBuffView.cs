@@ -4,6 +4,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Members.KJY._01.Scripts.Agent.Player.Dice;
+using DevLib.CoreLib.Runtime;
+using Members.KJY._01.Scripts.Events.Dice.Agent.Player;
+using Members.KJY._01.Scripts.Events.Dice;
+using DG.Tweening;
 
 namespace Members.PSW.Code.InventorySystem
 {
@@ -13,6 +17,11 @@ namespace Members.PSW.Code.InventorySystem
         [SerializeField] private string battleScenePath;
         [SerializeField] private GameObject panel;
         [SerializeField] private TMP_Text label;
+        [SerializeField] private EventChannelSO eventChannel;
+        [SerializeField] private CanvasGroup panelGroup;
+        [SerializeField, Min(0f)] private float fadeDuration = 0.3f;
+        private bool _entranceStarted;
+        private Tween _entranceTween;
         private EventDamageModifiers _effects;
         private EventGoldModifiers _gold;
         private PlayerDiceRollManager _rollManager;
@@ -39,6 +48,9 @@ namespace Members.PSW.Code.InventorySystem
 
         private void OnEnable()
         {
+            ResetEntrance();
+            if (eventChannel != null) eventChannel.AddListener<OnPlayerRoll>(HandleFirstRoll);
+            if (eventChannel != null) eventChannel.AddListener<OnStartBattle>(HandleAttackStarted);
             SceneManager.activeSceneChanged += HandleSceneChanged;
             if (_effects != null)
             {
@@ -50,13 +62,44 @@ namespace Members.PSW.Code.InventorySystem
 
         private void OnDisable()
         {
+            if (eventChannel != null) eventChannel.RemoveListener<OnPlayerRoll>(HandleFirstRoll);
+            if (eventChannel != null) eventChannel.RemoveListener<OnStartBattle>(HandleAttackStarted);
+            ResetEntrance();
             BindRewards(null, null);
             SceneManager.activeSceneChanged -= HandleSceneChanged;
             if (_effects != null) _effects.Changed -= Refresh;
             if (panel != null) panel.SetActive(false);
         }
 
-        private void HandleSceneChanged(Scene previous, Scene next) => Refresh();
+        private void HandleSceneChanged(Scene previous, Scene next)
+        {
+            ResetEntrance();
+            Refresh();
+        }
+
+        private void ResetEntrance()
+        {
+            _entranceTween?.Kill();
+            _entranceTween = null;
+            _entranceStarted = false;
+            if (panelGroup != null) panelGroup.alpha = 0f;
+        }
+
+        private void HandleFirstRoll(OnPlayerRoll evt)
+        {
+            if (_entranceStarted || SceneManager.GetActiveScene().path != battleScenePath) return;
+            // The battle's opening sequence rolls dice and reveals the party UI in the same step.
+            _entranceStarted = true;
+            Refresh();
+            if (panelGroup != null)
+                _entranceTween = panelGroup.DOFade(1f, fadeDuration).SetEase(Ease.OutQuad);
+        }
+
+        private void HandleAttackStarted(OnStartBattle evt)
+        {
+            ResetEntrance();
+            Refresh();
+        }
 
         private void Refresh()
         {
@@ -76,7 +119,7 @@ namespace Members.PSW.Code.InventorySystem
                 if (_rollManager != null && _rollManager.IsEventRerollLocked)
                     _text.Append("<color=#FF9A9A>쇼타임! · 첫 턴 리롤 불가</color>\n");
             }
-            panel.SetActive(_text.Length > 0);
+            panel.SetActive(_entranceStarted && _text.Length > 0);
             // This pixel font's bold weight closes the gaps in small Hangul glyphs.
             if (_text.Length > 0) _text.Length--; // Remove the last empty line.
             label.text = _text.Length > 0

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using DevLib.SoundSystem.Runtime;
 
 namespace Members.KJY._01.Scripts.Agent.SkillSystem
 {
@@ -30,6 +31,8 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem
         }
 
         [field: SerializeField] public SkillLogicExecutor SkillLogicExecutor { get; private set; }
+        [field: SerializeField, Tooltip("지정하면 실행 프리팹의 기본 효과음 대신 타격 시 재생합니다.")]
+        public SoundClipSO SkillSound { get; private set; }
         [field: SerializeField] public string SkillName {get; private set;}
         [field: SerializeField] public Sprite Icon {get; private set;}
         [field: SerializeField,TextArea] public string SkillDescription {get; private set;}

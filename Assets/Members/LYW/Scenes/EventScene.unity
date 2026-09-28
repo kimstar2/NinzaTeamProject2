@@ -3371,7 +3371,6 @@ MonoBehaviour:
   _eventDatas:
   - {fileID: 11400000, guid: 7f70defdd9aa39d4388a4f672e480389, type: 2}
   - {fileID: 11400000, guid: 7a084699b146b2e43808ad4305a626c6, type: 2}
-  - {fileID: 11400000, guid: 4308a9be968420445a11c1f797c564f1, type: 2}
   - {fileID: 11400000, guid: ff20e64031f4c7746b28e34b70927f05, type: 2}
   - {fileID: 11400000, guid: 62cf2e35f4f765f4ba0715e125482f15, type: 2}
   - {fileID: 11400000, guid: ed1cac952ba71de46b4eddc0222569aa, type: 2}

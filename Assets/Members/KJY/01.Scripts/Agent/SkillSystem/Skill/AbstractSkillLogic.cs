@@ -21,8 +21,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
         // Call at the skill's cast or impact timing, or connect to a UnityEvent.
         public void PlaySkillSound()
         {
-            if (skillSound == null) return;
-            ServiceLocator.Get<IAudioService>().Play(skillSound);
+            var sound = Executor != null && Executor.SkillData != null && Executor.SkillData.SkillSound != null
+                ? Executor.SkillData.SkillSound
+                : skillSound;
+            if (sound == null) return;
+            ServiceLocator.Get<IAudioService>().Play(sound);
         }
 
         protected float GetStat(ApplyStatType statType)

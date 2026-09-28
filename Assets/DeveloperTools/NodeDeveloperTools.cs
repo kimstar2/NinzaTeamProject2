@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DevLib.ServiceLocator;
 using Members.CJY.Scripts;
+using Members.KJY._01.Scripts.Agent.SkillSystem;
 using Members.KJY._01.Scripts.Dice.Data;
 using Members.PSW.Code.InventorySystem;
 using UnityEngine;
@@ -24,10 +25,8 @@ namespace DeveloperTools
         private NodeEvent _nodeEvent;
         private bool _open, _chordHeld;
         private int _tab;
-        private string _search = "", _message = "";
-        private Vector2 _scroll;
         private NodeConnect _enterRequest;
-        private Font _font;
+        private NodeDeveloperToolsView _view;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Create()
@@ -59,10 +58,12 @@ namespace DeveloperTools
                 else Open();
             }
             _chordHeld = chord;
-            if (_open && (_map == null || !_map.isActiveAndEnabled || keyboard?.escapeKey.wasPressedThisFrame == true))
+            if (_open && (_map == null || !_map.isActiveAndEnabled ||
+                (keyboard?.escapeKey.wasPressedThisFrame == true && !_view.IsSearchFocused)))
                 Close();
+            if (_open) _view.Resize();
 
-            // Execute scene changes outside an IMGUI layout/repaint event.
+            // Execute scene changes after the UI event that requested them.
             if (_enterRequest != null)
             {
                 var node = _enterRequest;
@@ -71,7 +72,7 @@ namespace DeveloperTools
                 if (_nodeEvent == null || !_nodeEvent.DeveloperEnter(node))
                 {
                     Open();
-                    _message = "진입 실패: 전투 확인창을 닫거나 노드/전투 데이터를 확인하세요.";
+                    _view?.SetStatus("진입 실패: 전투 확인창을 닫거나 노드/전투 데이터를 확인하세요.");
                 }
             }
             for (int i = _rewards.Count - 1; i >= 0; i--)
@@ -98,7 +99,20 @@ namespace DeveloperTools
             _faces = catalog == null || catalog.Faces == null ? Array.Empty<DiceDataSO>()
                 : catalog.Faces.Where(face => face != null && face.GetUsableTypes().Count > 0)
                     .Distinct().OrderBy(face => face.MainName).ToArray();
-            _message = "이동은 맵 위치만 변경합니다. 진입은 해당 전투/이벤트를 시작합니다.";
+            if (_view == null)
+            {
+                var template = Resources.Load<GameObject>("DeveloperToolsPanel");
+                if (template == null)
+                {
+                    Debug.LogError("DeveloperToolsPanel 프리팹이 없습니다.", this);
+                    return;
+                }
+                _view = new NodeDeveloperToolsView(template, transform, Close, tab =>
+                {
+                    _tab = tab;
+                    PopulateRows();
+                });
+            }
             _open = true;
             // Prevent clicks and keyboard navigation from reaching the map behind this modal.
             foreach (var input in FindObjectsByType<EventSystem>(FindObjectsSortMode.None))
@@ -107,75 +121,62 @@ namespace DeveloperTools
                 _suspendedInput.Add(input);
                 input.enabled = false;
             }
-            if (_font == null) _font = Font.CreateDynamicFontFromOSFont(new[] { "Malgun Gothic", "Arial" }, 16);
+            _view.Show();
+            PopulateRows();
         }
 
         private void Close()
         {
             _open = false;
+            _view?.Hide();
             foreach (var input in _suspendedInput)
                 if (input != null) input.enabled = true;
             _suspendedInput.Clear();
         }
 
-        private void OnGUI()
+        private void PopulateRows()
         {
-            if (!_open || _map == null) return;
-            var oldFont = GUI.skin.font;
-            if (_font != null) GUI.skin.font = _font;
-            float width = Mathf.Min(820, Screen.width - 20);
-            float height = Mathf.Min(700, Screen.height - 20);
-            GUILayout.BeginArea(new Rect((Screen.width - width) / 2, (Screen.height - height) / 2, width, height), GUI.skin.box);
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("개발자 툴 · Ctrl + Shift + Space + T", GUILayout.Height(28));
-            bool close = GUILayout.Button("닫기 (Esc)", GUILayout.Width(100));
-            GUILayout.EndHorizontal();
-            int tab = GUILayout.Toolbar(_tab, new[] { "노드 이동 / 진입", "스킬 가져오기" });
-            if (tab != _tab) { _tab = tab; _scroll = Vector2.zero; _search = ""; }
-            GUILayout.Label("검색 (노드 종류 / 좌표 / 스킬 이름)");
-            _search = GUILayout.TextField(_search);
-            GUILayout.Label(_message, GUI.skin.box, GUILayout.Height(55));
-            _scroll = GUILayout.BeginScrollView(_scroll);
-            if (_tab == 0) DrawNodes();
-            else DrawSkills();
-            GUILayout.EndScrollView();
-            GUILayout.Label("변경 사항은 실제 진행에 적용됩니다. 스킬은 Lv.1 주사위 조각으로 배낭에 추가됩니다.");
-            GUILayout.EndArea();
-            GUI.skin.font = oldFont;
-            if (close) Close();
+            _view.ClearRows();
+            if (_tab == 0) AddNodes();
+            else AddFaces();
+            _view.SetStatus(_tab == 0
+                ? "이동은 맵 위치만 변경합니다. 진입은 해당 전투·이벤트를 시작합니다."
+                : "Lv.1 주사위 조각을 배낭에 지급합니다. 지급 후 배낭에서 장착하세요.");
+            _view.ApplyFilter();
         }
 
-        private bool Matches(string value) => string.IsNullOrWhiteSpace(_search)
-            || (value ?? "").IndexOf(_search, StringComparison.OrdinalIgnoreCase) >= 0;
-
-        private void DrawNodes()
+        private void AddNodes()
         {
             foreach (var node in _nodes)
             {
-                string label = $"열 {node.column} / 칸 {node.lane} · {node.info.typeName} ({node.info.type})";
-                if (!Matches(label)) continue;
-                GUILayout.BeginHorizontal(GUI.skin.box);
-                GUILayout.Label(label);
-                if (GUILayout.Button("이동", GUILayout.Width(65)))
-                    _message = _map.DeveloperMoveTo(node) ? $"이동 완료: {label}" : "이동 실패: 전투 확인창을 닫고 다시 시도하세요.";
-                if (GUILayout.Button("진입", GUILayout.Width(65))) _enterRequest = node;
-                GUILayout.EndHorizontal();
+                string kind = node.info.type switch
+                {
+                    NodeType.Start => "시작", NodeType.Battle => "전투", NodeType.Elite => "정예",
+                    NodeType.Boss => "보스", NodeType.Event => "이벤트", NodeType.Rest => "휴식",
+                    NodeType.Shop => "상점", _ => node.info.typeName
+                };
+                string position = $"열 {node.column} / 칸 {node.lane}";
+                _view.AddRow(node.info.icon, kind, position, new Color32(153, 130, 245, 255),
+                    $"{kind} {node.info.typeName} {node.info.type} {position}", "진입",
+                    () => _enterRequest = node,
+                    () => _view.SetStatus(_map.DeveloperMoveTo(node)
+                        ? $"이동 완료: {kind} · {position}" : "이동 실패: 전투 확인창을 닫고 다시 시도하세요."));
             }
         }
 
-        private void DrawSkills()
+        private void AddFaces()
         {
-            if (_faces.Length == 0) GUILayout.Label("사용 가능한 스킬이 없습니다. Resources/DiceCatalog를 확인하세요.");
             foreach (var face in _faces)
             {
+                string name = string.IsNullOrWhiteSpace(face.MainName) ? face.name : face.MainName;
                 string skills = string.Join(" / ", face.SkillDataStructs.Where(entry => entry.SkillData != null)
                     .Select(entry => entry.SkillData.SkillName).Distinct());
-                string label = $"{face.MainName} · {skills}";
-                if (!Matches(label)) continue;
-                GUILayout.BeginHorizontal(GUI.skin.box);
-                GUILayout.Label(label);
-                if (GUILayout.Button("가져오기", GUILayout.Width(90))) Grant(face);
-                GUILayout.EndHorizontal();
+                string roles = string.Join(" · ", face.GetUsableTypes().Select(SkillDataSO.RoleName));
+                string grade = face.DiceGrade != null ? face.DiceGrade.DisplayName : "일반";
+                Color gradeColor = face.DiceGrade != null ? face.DiceGrade.GradeColor : Color.white;
+                var icon = face.Icon != null ? face.Icon : face.GetIcon(face.GetUsableTypes()[0]);
+                _view.AddRow(icon, name, $"{grade} · Lv.1 · {roles}\n{skills}", gradeColor,
+                    $"{name} {skills} {roles} {grade}", "지급하기", () => Grant(face));
             }
         }
 
@@ -183,12 +184,12 @@ namespace DeveloperTools
         {
             if (!ServiceLocator.TryGet<Inventory>(out var inventory) || inventory == null)
             {
-                _message = "인벤토리가 없습니다. 모험을 시작한 뒤 이용하세요.";
+                _view.SetStatus("인벤토리가 없습니다. 모험을 시작한 뒤 이용하세요.");
                 return;
             }
             if (inventory.DiceFragments.Count >= inventory.MaxSlots)
             {
-                _message = $"배낭이 가득 찼습니다. ({inventory.MaxSlots}칸)";
+                _view.SetStatus($"배낭이 가득 찼습니다. ({inventory.MaxSlots}칸)");
                 return;
             }
             var fragment = ScriptableObject.CreateInstance<RewardDiceFragmentSO>();
@@ -197,12 +198,12 @@ namespace DeveloperTools
             if (inventory.AddFragment(fragment))
             {
                 _rewards.Add((inventory, fragment));
-                _message = $"{face.MainName} 획득 완료 ({inventory.DiceFragments.Count}/{inventory.MaxSlots})";
+                _view.SetStatus($"{face.MainName} 지급 완료 ({inventory.DiceFragments.Count}/{inventory.MaxSlots})");
             }
             else
             {
                 Destroy(fragment);
-                _message = "스킬을 추가하지 못했습니다.";
+                _view.SetStatus("주사위 면을 추가하지 못했습니다.");
             }
         }
 
@@ -214,7 +215,7 @@ namespace DeveloperTools
                 if (reward.inventory != null) reward.inventory.RemoveFragment(reward.fragment);
                 if (reward.fragment != null) Destroy(reward.fragment);
             }
-            if (_font != null) Destroy(_font);
+            _view?.Dispose();
         }
     }
 }
