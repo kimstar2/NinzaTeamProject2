@@ -219,10 +219,10 @@ TextureImporter:
       name: SkillSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 255
-        width: 66
-        height: 66
+        x: 16
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: SkillSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 95
-        y: 255
-        width: 66
-        height: 66
+        x: 96
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,10 +263,10 @@ TextureImporter:
       name: SkillSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 255
-        width: 66
-        height: 66
+        x: 176
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: SkillSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 255
-        y: 255
-        width: 66
-        height: 66
+        x: 256
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,10 +307,10 @@ TextureImporter:
       name: SkillSpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 335
-        y: 255
-        width: 66
-        height: 66
+        x: 336
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,10 +329,10 @@ TextureImporter:
       name: SkillSpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 415
-        y: 255
-        width: 66
-        height: 66
+        x: 416
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -351,10 +351,10 @@ TextureImporter:
       name: SkillSpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 495
-        y: 255
-        width: 66
-        height: 66
+        x: 496
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       name: SkillSpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 575
-        y: 255
-        width: 66
-        height: 66
+        x: 576
+        y: 256
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,10 +395,10 @@ TextureImporter:
       name: SkillSpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 15
-        y: 175
-        width: 66
-        height: 66
+        x: 16
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,10 +417,10 @@ TextureImporter:
       name: SkillSpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 95
-        y: 175
-        width: 66
-        height: 66
+        x: 96
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,10 +439,10 @@ TextureImporter:
       name: SkillSpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 175
-        y: 175
-        width: 66
-        height: 66
+        x: 176
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -461,10 +461,10 @@ TextureImporter:
       name: SkillSpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 255
-        y: 175
-        width: 66
-        height: 66
+        x: 256
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +483,10 @@ TextureImporter:
       name: SkillSpriteSheet_12
       rect:
         serializedVersion: 2
-        x: 335
-        y: 175
-        width: 66
-        height: 66
+        x: 336
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -505,10 +505,10 @@ TextureImporter:
       name: SkillSpriteSheet_13
       rect:
         serializedVersion: 2
-        x: 415
-        y: 175
-        width: 66
-        height: 66
+        x: 416
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -527,10 +527,10 @@ TextureImporter:
       name: SkillSpriteSheet_14
       rect:
         serializedVersion: 2
-        x: 495
-        y: 175
-        width: 66
-        height: 66
+        x: 496
+        y: 176
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,10 +549,10 @@ TextureImporter:
       name: SkillSpriteSheet_15
       rect:
         serializedVersion: 2
-        x: 655
-        y: 95
-        width: 66
-        height: 66
+        x: 656
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -571,10 +571,10 @@ TextureImporter:
       name: SkillSpriteSheet_16
       rect:
         serializedVersion: 2
-        x: 15
-        y: 95
-        width: 66
-        height: 66
+        x: 16
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,10 +593,10 @@ TextureImporter:
       name: SkillSpriteSheet_17
       rect:
         serializedVersion: 2
-        x: 95
-        y: 95
-        width: 66
-        height: 66
+        x: 96
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,10 +615,10 @@ TextureImporter:
       name: SkillSpriteSheet_18
       rect:
         serializedVersion: 2
-        x: 175
-        y: 95
-        width: 66
-        height: 66
+        x: 176
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -637,10 +637,10 @@ TextureImporter:
       name: SkillSpriteSheet_19
       rect:
         serializedVersion: 2
-        x: 255
-        y: 95
-        width: 66
-        height: 66
+        x: 256
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -659,10 +659,10 @@ TextureImporter:
       name: SkillSpriteSheet_20
       rect:
         serializedVersion: 2
-        x: 335
-        y: 95
-        width: 66
-        height: 66
+        x: 336
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -681,10 +681,10 @@ TextureImporter:
       name: SkillSpriteSheet_21
       rect:
         serializedVersion: 2
-        x: 415
-        y: 95
-        width: 66
-        height: 66
+        x: 416
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,10 +703,10 @@ TextureImporter:
       name: SkillSpriteSheet_22
       rect:
         serializedVersion: 2
-        x: 495
-        y: 95
-        width: 66
-        height: 66
+        x: 496
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -725,10 +725,10 @@ TextureImporter:
       name: SkillSpriteSheet_23
       rect:
         serializedVersion: 2
-        x: 575
-        y: 95
-        width: 66
-        height: 66
+        x: 576
+        y: 96
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -747,10 +747,10 @@ TextureImporter:
       name: SkillSpriteSheet_24
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 66
-        height: 66
+        x: 16
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -769,10 +769,10 @@ TextureImporter:
       name: SkillSpriteSheet_25
       rect:
         serializedVersion: 2
-        x: 95
-        y: 15
-        width: 66
-        height: 66
+        x: 96
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -791,10 +791,10 @@ TextureImporter:
       name: SkillSpriteSheet_26
       rect:
         serializedVersion: 2
-        x: 175
-        y: 15
-        width: 66
-        height: 66
+        x: 176
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -813,10 +813,10 @@ TextureImporter:
       name: SkillSpriteSheet_27
       rect:
         serializedVersion: 2
-        x: 255
-        y: 15
-        width: 66
-        height: 66
+        x: 256
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -835,10 +835,10 @@ TextureImporter:
       name: SkillSpriteSheet_28
       rect:
         serializedVersion: 2
-        x: 335
-        y: 15
-        width: 66
-        height: 66
+        x: 336
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -857,10 +857,10 @@ TextureImporter:
       name: SkillSpriteSheet_29
       rect:
         serializedVersion: 2
-        x: 415
-        y: 15
-        width: 66
-        height: 66
+        x: 416
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -879,10 +879,10 @@ TextureImporter:
       name: SkillSpriteSheet_30
       rect:
         serializedVersion: 2
-        x: 495
-        y: 15
-        width: 66
-        height: 66
+        x: 496
+        y: 16
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

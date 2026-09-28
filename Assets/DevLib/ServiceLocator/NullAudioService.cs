@@ -23,7 +23,15 @@ namespace DevLib.ServiceLocator
 
         public void StopBgm()
         {
-            
+
+        }
+
+        public void PlayBgm(SoundClipSO clipData, float fadeIn)
+        {
+        }
+
+        public void FadeOutBgm(float duration)
+        {
         }
     }
 }

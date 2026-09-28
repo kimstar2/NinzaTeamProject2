@@ -4,13 +4,10 @@ using UnityEngine;
 
 namespace Members.KJY._01.Scripts.UI
 {
+    // 페이드 아웃은 SceneTransition 담당
     public sealed class SceneBgm : MonoBehaviour
     {
         [SerializeField] private SoundClipSO bgm;
-        private IAudioService _audioService;
-        private bool _playing;
-
-        private void OnEnable() => SceneTransition.BeforeSceneLoad += StopBgm;
 
         private void Start()
         {
@@ -20,22 +17,7 @@ namespace Members.KJY._01.Scripts.UI
                 return;
             }
 
-            _audioService = ServiceLocator.Get<IAudioService>();
-            _audioService.Play(bgm);
-            _playing = true;
-        }
-
-        private void OnDisable()
-        {
-            SceneTransition.BeforeSceneLoad -= StopBgm;
-            StopBgm();
-        }
-
-        private void StopBgm()
-        {
-            if (!_playing) return;
-            _playing = false;
-            _audioService.StopBgm();
+            ServiceLocator.Get<IAudioService>().PlayBgm(bgm, SceneTransition.BgmFadeIn);
         }
     }
 }

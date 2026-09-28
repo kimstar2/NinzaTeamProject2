@@ -28,7 +28,6 @@ namespace Members.KJY._01.Scripts.Title
             if (ServiceLocator.TryGet<IBattleDataStorage>(out var storage)) storage.Instance.ResetRun();
             if (ServiceLocator.TryGet<Inventory>(out var inventory) && inventory is BattleInventory battleInventory)
                 battleInventory.ResetRun();
-            ServiceLocator.Get<IAudioService>().StopBgm();
             
             SceneTransition.Load("Assets/Members/CJY/Scene/CJY.unity");
         }

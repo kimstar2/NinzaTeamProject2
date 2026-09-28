@@ -19181,12 +19181,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -40072,6 +40072,7 @@ MonoBehaviour:
   forgeMotion: {fileID: 1036573266}
   returnScene: Assets/Members/CJY/Scene/CJY.unity
   tutorialPrefab: {fileID: 4285237113805513618, guid: fdfad6d9ebbb89fd7bf13ae417270fdb, type: 3}
+  loadoutPrefab: {fileID: 1227488422, guid: f5e9a263c9b8852ae6ba7604c66aaaff, type: 3}
 --- !u!4 &2080055727
 Transform:
   m_ObjectHideFlags: 0

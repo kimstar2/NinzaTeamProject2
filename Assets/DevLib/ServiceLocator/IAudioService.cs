@@ -8,5 +8,7 @@ namespace DevLib.ServiceLocator
         void StopSfx(int channel);
 
         void StopBgm();
+        void PlayBgm(SoundClipSO clipData, float fadeIn);
+        void FadeOutBgm(float duration);
     }
 }

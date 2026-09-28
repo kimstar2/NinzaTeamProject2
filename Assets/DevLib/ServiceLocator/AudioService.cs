@@ -91,8 +91,7 @@ namespace DevLib.ServiceLocator
 
             if (clipData.audioType == AudioType.Music)
             {
-                _bgmPlayer.ForceStopSound();
-                _bgmPlayer.PlaySound(clipData);
+                PlayBgm(clipData, DefaultBgmFade);
                 return;
             }
 
@@ -140,6 +139,28 @@ namespace DevLib.ServiceLocator
         {
             if (_bgmPlayer != null)
                 _bgmPlayer.ForceStopSound();
+        }
+
+        private const float DefaultBgmFade = 0.8f;
+
+        // 같은 곡이면 이어 재생
+        public void PlayBgm(SoundClipSO clipData, float fadeIn)
+        {
+            if (clipData == null || clipData.clip == null || _bgmPlayer == null) return;
+            if (_bgmPlayer.IsPlaying && _bgmPlayer.CurrentClip == clipData.clip)
+            {
+                _bgmPlayer.FadeTo(clipData.volume, fadeIn);
+                return;
+            }
+            _bgmPlayer.PlaySound(clipData);
+            _bgmPlayer.SetVolume(0f);
+            _bgmPlayer.FadeTo(clipData.volume, fadeIn);
+        }
+
+        // 정지 없이 볼륨만 0
+        public void FadeOutBgm(float duration)
+        {
+            if (_bgmPlayer != null && _bgmPlayer.IsPlaying) _bgmPlayer.FadeTo(0f, duration);
         }
     }
 }

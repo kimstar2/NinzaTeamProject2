@@ -115,12 +115,14 @@ namespace Members.PSW.Code.SettingSystem
         private void ApplySelectedSettings()
         {
             Vector2Int size = _resolutions[resolutionDropdown.value];
-            FullScreenMode mode = modeDropdown.value switch
+            if (modeDropdown.value == 1)
             {
-                0 => FullScreenMode.Windowed,
-                2 => FullScreenMode.ExclusiveFullScreen,
-                _ => FullScreenMode.FullScreenWindow
-            };
+                // 제목 표시줄 있는 창 최대화
+                Screen.SetResolution(Display.main.systemWidth, Display.main.systemHeight, FullScreenMode.Windowed);
+                WindowMaximizer.MaximizeNextFrame();
+                return;
+            }
+            FullScreenMode mode = modeDropdown.value == 0 ? FullScreenMode.Windowed : FullScreenMode.ExclusiveFullScreen;
             // Apply both together; fullScreenMode changes take effect at frame end.
             Screen.SetResolution(size.x, size.y, mode);
         }
