@@ -37,11 +37,6 @@ namespace Members.PSW.Editor
                 var echoMain = echo.main; echoMain.startDelay = .08f;
                 var flash = Particle("Impact Ring", logic.transform, ring, .55f, 1, 5, 5, 0);
                 SizeCurve(flash, new AnimationCurve(new Keyframe(0, .08f), new Keyframe(.3f, .7f), new Keyframe(1, 1.4f)));
-                var shards = Particle("Radial Shards", flash.transform, spark, .5f, 32, .7f, .12f, 0);
-                var main = shards.main; main.startSpeed = new ParticleSystem.MinMaxCurve(3f, 9f);
-                main.startLifetime = new ParticleSystem.MinMaxCurve(.2f, .55f);
-                main.startRotation = new ParticleSystem.MinMaxCurve(0, Mathf.PI * 2);
-                var shape = shards.shape; shape.enabled = true; shape.shapeType = ParticleSystemShapeType.Circle; shape.radius = .15f;
                 var trails = Particle("Dash Wisps", charge.transform, spark, .3f, 10, .7f, .08f, 0);
                 var trailShape = trails.shape; trailShape.enabled = true; trailShape.shapeType = ParticleSystemShapeType.Circle; trailShape.radius = .6f;
                 Set(serialized, "effect", blade); Set(serialized, "shinyEffect", flash);

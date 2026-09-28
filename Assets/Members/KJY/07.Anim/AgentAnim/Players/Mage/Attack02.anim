@@ -97,6 +97,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlayAnimationSound
+    data:
+    objectReferenceParameter: {fileID: 11400000, guid: 3e632761a0f647a286a52675a486b0db, type: 2}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.5
     functionName: AnimOnAttack
     data: 

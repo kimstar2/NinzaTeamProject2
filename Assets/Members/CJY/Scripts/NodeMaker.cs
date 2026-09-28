@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 
 namespace Members.CJY.Scripts
 {
-    public class NodeMaker : MonoBehaviour
+    public partial class NodeMaker : MonoBehaviour
     {
         private const int MapVersion = 2;
 
