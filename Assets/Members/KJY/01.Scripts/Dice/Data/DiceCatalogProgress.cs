@@ -39,12 +39,5 @@ namespace Members.KJY._01.Scripts.Dice.Data
             if (list == null) return;
             for (int i = 0; i < 6; i++) Discover(list.GetDiceData((DiceFaceType)i));
         }
-
-        public static void ResetAll()
-        {
-            Discovered.Clear();
-            PlayerPrefs.DeleteKey(Key);
-            PlayerPrefs.Save();
-        }
     }
 }
