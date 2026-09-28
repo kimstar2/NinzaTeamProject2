@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 namespace Members.CJY.Scripts
 {
-    public class NodeEvent : MonoBehaviour
+    public partial class NodeEvent : MonoBehaviour
     {
         [Serializable]
         private struct NodeScene

@@ -42,6 +42,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
         public int Gold { get; private set; }
         public int GoldEarned { get; private set; }
         public int SkippedRewards { get; private set; }
+        private System.Func<int, int> _victoryGoldModifier;
+        public void SetVictoryGoldModifier(System.Func<int, int> modifier) => _victoryGoldModifier = modifier;
 
         // Returns the amount actually added. Non-positive amounts do nothing.
         public int AddGold(int amount)
@@ -306,7 +308,8 @@ namespace Members.KJY._01.Scripts.Dice.Battle
                 }
             }
             _pendingRewards.Clear();
-            GoldEarned = Mathf.Max(0, gold);
+            GoldEarned = Mathf.Min(int.MaxValue - Gold,
+                Mathf.Max(0, _victoryGoldModifier?.Invoke(gold) ?? gold));
             Gold += GoldEarned;
         }
 

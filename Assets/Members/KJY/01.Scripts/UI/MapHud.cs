@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Members.KJY._01.Scripts.UI
 {
     [DefaultExecutionOrder(100)]
-    public class MapHud : MonoBehaviour
+    public partial class MapHud : MonoBehaviour
     {
         [SerializeField] private NodeMaker nodeMaker;
         [SerializeField] private NodeEvent nodeEvent;
