@@ -16,8 +16,9 @@ MonoBehaviour:
   EventExplain: "\uC5B4\uB290 \uB9C8\uC744\uC758 \uC815\uC6D0\uC5D0 \uAE08\uC5B4\uCD08\uAC00
     \uD53C\uC5B4\uC788\uB294 \uAC70\uB97C \uBC1C\uACAC\uD588\uB2E4. \uB108\uBB34
     \uC608\uC058\uB2E4. \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
-  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
-  EXImage: {fileID: 0}
+  backgroundImage: {fileID: 6797492307790039047, guid: 50535f85aca69b948972b06b6c801da9, type: 3}
+  EXImage: {fileID: 7381086055424374737, guid: b6dceda46f4da7f46a776f134f6d4229, type: 3}
+  EXImage2: {fileID: 0}
   exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
   backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}

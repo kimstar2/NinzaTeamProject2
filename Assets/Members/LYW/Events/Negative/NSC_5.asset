@@ -16,7 +16,7 @@ MonoBehaviour:
   EventExplain: "\uADD3\uC18D\uC5D0\uC11C \uC54C\uC218 \uC5C6\uB294 \uC18C\uB9AC\uAC00
     \uB9F4\uB3CC\uACE0 \uC788\uB2E4.\\n\u201D\uADF8\uB9CC\uD574\u2026 \uC81C\uBC1C
     \uADF8\uB9CC\uD574\u2026\u201D \u2026 \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
-  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
+  backgroundImage: {fileID: -1492104568791065826, guid: 1ee0a5b0e36096942ac02c1859b7fb6e, type: 3}
   EXImage: {fileID: 910542462643320782, guid: 92f146e63e8fc254a936e9e92cd065fd, type: 3}
   EXImage2: {fileID: 1485009031226228988, guid: d6351bc19ddc34242bc7c393a3627fcd, type: 3}
   exImageScale: 9.7

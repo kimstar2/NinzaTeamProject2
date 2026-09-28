@@ -18,8 +18,9 @@ MonoBehaviour:
     \uC774 \uB0A8\uC790\uB294, \uADF8\uC800 \uC544\uBB34\uB9D0\uB3C4 \uC5C6\uC774
     \uC6B0\uB9AC\uC758 \uC55E\uC744 \uAC00\uB85C\uB9C9\uACE0 \uC788\uB2E4.\\n\uC5B4\uB5BB\uAC8C
     \uD560\uAE4C?"
-  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
+  backgroundImage: {fileID: 8617204535262242898, guid: 565d267813c6ec44fa66842088971179, type: 3}
   EXImage: {fileID: 3204147835556456072, guid: b6c40a740e03a294b9b02137909b5210, type: 3}
+  EXImage2: {fileID: 0}
   exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
   backGroundImageColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 1}

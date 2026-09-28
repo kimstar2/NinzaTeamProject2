@@ -18,7 +18,7 @@ MonoBehaviour:
     \uCDA4\uCD94\uBA70 \uD0EC\uBC84\uB9B0! \uC5D0\uC77C\uB9AC\uC5B8 \uC2E0\uB098\uAC8C
     \uB0A0\uC544\uBD10~ \uBF55\uC9DD \uB9AC\uB4EC \uBAB8\uC5D0 \uB9E1\uACA8~ \uACE0\uC18D\uB3C4\uB85C
     \uC704\uB97C \uB2EC\uB824!\u201D \uAC00 \uBC18\uBCF5\uB418\uACE0 \uC788\uB2E4."
-  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
+  backgroundImage: {fileID: -4284855071606703238, guid: 078f87ccc4341174f9a243d380ffd99d, type: 3}
   EXImage: {fileID: -8225945209946972164, guid: 2c5976a6a2793f243917bf70903575c4, type: 3}
   EXImage2: {fileID: 0}
   exImageScale: 9.7
