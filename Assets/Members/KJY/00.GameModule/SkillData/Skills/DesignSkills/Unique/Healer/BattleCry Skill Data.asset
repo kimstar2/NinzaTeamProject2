@@ -39,5 +39,5 @@ MonoBehaviour:
   - 3
   <IsArea>k__BackingField: 1
   <HealMaxHealthRatio>k__BackingField: 0.05
-  <PowerUpRatio>k__BackingField: 0.2
+  <PowerUpRatio>k__BackingField: 0.15
   <PowerUpTurns>k__BackingField: 2

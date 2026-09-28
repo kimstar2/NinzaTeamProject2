@@ -25,6 +25,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6907aebb404a65340826ce1446c0d33a, type: 2}
   - {fileID: 11400000, guid: fb082e72ed28da5468f3e763e6e79d0b, type: 2}
   - {fileID: 11400000, guid: 9ae5782acbacf89469cc3e169389c9ae, type: 2}
-  maxRiskPenalty: 0.65
+  maxRiskPenalty: 0.9
   riskLevelIncrease: 2
   riskLevelIncreaseMulti: 1.15

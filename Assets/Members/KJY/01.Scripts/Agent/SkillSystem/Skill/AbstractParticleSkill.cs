@@ -93,6 +93,11 @@ namespace Members.KJY._01.Scripts.Agent.SkillSystem.Skill
             _animCts = new CancellationTokenSource();
             WaitAnimEnd(_animCts.Token).Forget();
             onCast?.Invoke();
+            if (Executor.SkillData.NoCastMotion)
+            {
+                Attack();
+                AnimEnd();
+            }
         }
 
         public override void Attack() // 애니메이션 OnAttack은 얘한테 들어옴

@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "피를 빨아 {0} 피해를 주고, 실제 피해만큼 회복합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 14
+    <Value>k__BackingField: 16
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 1
   <Target>k__BackingField: 0

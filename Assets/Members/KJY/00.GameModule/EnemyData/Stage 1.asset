@@ -29,6 +29,6 @@ MonoBehaviour:
   boss: {fileID: 11400000, guid: 38fdddf8438d51b18294533aca0e351e, type: 2}
   elite: {fileID: 11400000, guid: b7ecf5c948e5b4945b186d4570216b93, type: 2}
   enemyCount: {x: 2, y: 4}
-  healthMultiplier: {x: 1, y: 1.25}
-  dicePower: {x: 1, y: 1.12}
+  healthMultiplier: {x: 1.3, y: 1.6}
+  dicePower: {x: 1.15, y: 1.3}
   gold: {x: 18, y: 48}

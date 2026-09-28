@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "세 번 연속 베어 총 {0} 피해를 줍니다. 마지막 베기가 가장 강합니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 46
+    <Value>k__BackingField: 28
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0

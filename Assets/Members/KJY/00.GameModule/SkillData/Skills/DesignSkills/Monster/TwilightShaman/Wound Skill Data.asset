@@ -18,15 +18,15 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "주술로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 5
+    <Value>k__BackingField: 12
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0
   <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 55
-  <Status>k__BackingField: 0
-  <StatusDamage>k__BackingField: 0
-  <StatusTurns>k__BackingField: 0
+  <Status>k__BackingField: 3
+  <StatusDamage>k__BackingField: 3
+  <StatusTurns>k__BackingField: 2
   <BonusVsStatus>k__BackingField: 0
   <BonusDamage>k__BackingField: 0
   <MissChance>k__BackingField: 0

@@ -37,4 +37,4 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 3
-  <HealMaxHealthRatio>k__BackingField: 0.3
+  <HealMaxHealthRatio>k__BackingField: 0.25

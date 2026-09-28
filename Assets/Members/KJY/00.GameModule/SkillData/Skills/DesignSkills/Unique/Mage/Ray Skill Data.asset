@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "빛줄기를 쏘아 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 32
+    <Value>k__BackingField: 20
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0

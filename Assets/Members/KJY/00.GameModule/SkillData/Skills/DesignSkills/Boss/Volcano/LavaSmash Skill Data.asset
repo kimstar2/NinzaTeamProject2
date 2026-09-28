@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "용암 주먹으로 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 32
+    <Value>k__BackingField: 24
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0

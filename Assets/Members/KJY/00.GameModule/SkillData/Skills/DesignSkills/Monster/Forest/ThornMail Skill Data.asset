@@ -37,3 +37,6 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 4
+  <NoCastMotion>k__BackingField: 1
+  <ReflectRatio>k__BackingField: 0.3
+  <ReflectTurns>k__BackingField: 1

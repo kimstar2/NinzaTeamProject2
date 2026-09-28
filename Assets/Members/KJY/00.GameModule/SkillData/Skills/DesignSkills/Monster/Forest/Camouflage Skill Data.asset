@@ -22,7 +22,7 @@ MonoBehaviour:
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 2
-  <Synergy>k__BackingField: 3
+  <Synergy>k__BackingField: 0
   <Strength>k__BackingField: 50
   <Status>k__BackingField: 0
   <StatusDamage>k__BackingField: 0
@@ -37,3 +37,6 @@ MonoBehaviour:
   <EnemyTargetRule>k__BackingField: 0
   suitableTypes:
   - 4
+  <NoCastMotion>k__BackingField: 1
+  <ResistRatio>k__BackingField: 0.5
+  <ResistTurns>k__BackingField: 1

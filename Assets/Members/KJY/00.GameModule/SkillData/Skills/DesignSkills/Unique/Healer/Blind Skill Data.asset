@@ -29,7 +29,7 @@ MonoBehaviour:
   <StatusTurns>k__BackingField: 0
   <BonusVsStatus>k__BackingField: 0
   <BonusDamage>k__BackingField: 0
-  <MissChance>k__BackingField: 0.75
+  <MissChance>k__BackingField: 0.5
   <MissTurns>k__BackingField: 2
   <HealthCost>k__BackingField: 0
   <ExecuteThreshold>k__BackingField: 0

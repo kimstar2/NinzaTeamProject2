@@ -18,7 +18,7 @@ MonoBehaviour:
   <SkillDescription>k__BackingField: "대상을 두 번 연속 공격해 매번 {0} 피해를 줍니다."
   applyStats:
   - <ApplyStatType>k__BackingField: 0
-    <Value>k__BackingField: 20
+    <Value>k__BackingField: 13
   damageCondition: 0
   <LifeStealFraction>k__BackingField: 0
   <Target>k__BackingField: 0
