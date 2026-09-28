@@ -553,11 +553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -818,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 959935904}
+    - target: {fileID: 2456542796528500410, guid: 697dbcccc48cc864d8507f793c9c06cc, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4434177614733703169, guid: 697dbcccc48cc864d8507f793c9c06cc, type: 3}
       propertyPath: m_Name
       value: SceneTransition
@@ -4150,7 +4154,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -4233,6 +4237,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  waitSceneTransition: 0
 --- !u!1 &890368166
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,6 +4612,7 @@ GameObject:
   - component: {fileID: 959935904}
   - component: {fileID: 959935903}
   - component: {fileID: 959935906}
+  - component: {fileID: 890000000000000000}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15668,6 +15674,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Members.KJY._01.Scripts.UI.UIButtonSound
   clickSound: {fileID: 11400000, guid: 74d889e407c37354eb01577141250b71, type: 2}
+--- !u!114 &890000000000000000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959935902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17154f15590242699fe59d6a00d5983a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!1001 &890000000000000001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07116b61335544a4a63101d1934c348d, type: 3}
+--- !u!224 &890000000000000002 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1001, guid: 07116b61335544a4a63101d1934c348d, type: 3}
+  m_PrefabInstance: {fileID: 890000000000000001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -15683,3 +15719,4 @@ SceneRoots:
   - {fileID: 273014325}
   - {fileID: 1464330873}
   - {fileID: 1247012577}
+  - {fileID: 890000000000000002}

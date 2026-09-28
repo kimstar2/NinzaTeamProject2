@@ -15,11 +15,12 @@ MonoBehaviour:
   EventTitle: "\uB098\uC05C \uC0AC\uACFC"
   EventExplain: "\uAE38\uC744 \uAC00\uB358\uC911, \uC544\uC8FC \u201C\uB098\uC05C
     \uC0AC\uACFC\u201D \uB97C \uBC1C\uACAC\uD588\uB2E4. \uC5B4\uB5BB\uAC8C \uD560\uAE4C?"
-  backgroundImage: {fileID: -1011441080542184327, guid: f0c8af97afc18cd4abd8e6e5636c0a6e, type: 3}
-  EXImage: {fileID: 0}
+  backgroundImage: {fileID: 4098784062477968208, guid: 711a56050c35a4a4f9f275e8980374cb, type: 3}
+  EXImage: {fileID: 8560354226557482032, guid: 762d4514a66b5924aa6b7af4d6e12af6, type: 3}
+  EXImage2: {fileID: 0}
   exImageScale: 9.7
   exImageColor: {r: 1, g: 1, b: 1, a: 1}
-  backGroundImageColor: {r: 0.23270428, g: 0.23270428, b: 0.23270428, a: 1}
+  backGroundImageColor: {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 1}
   exImageMaterial: {fileID: 0}
   choices: 2
   choiceText:
